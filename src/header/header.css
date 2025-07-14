@@ -360,6 +360,13 @@
   .mainribbonb {
     margin-top: 35px !important;
   }
+  .anidiv {
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    flex-flow: column;
+    display: flex;
+    margin: 0px auto;
+}
 
   .counterba .countba {
     font-size: 2.5rem !important;
@@ -3937,7 +3944,7 @@ div.et_pb_section.et_pb_section_0 {
   .minhg {
     position: relative !important;
     z-index: 1 !important;
-    min-height: 280px !important;
+    min-height: 335px !important;
   }
 
   .hf1 {

@@ -1485,7 +1485,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       {isButtonVisible && (
 
         <div className="CousellingButton stickyenq" style={{ background: "#393838f0" }} onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{ padding: "10px 35px", borderRadius:"0px", background:"linear-gradient(101deg, #ec242d, #ca484d)" }}>Enquire now</a></div>)}
-      <div className="App">
+      {/* <div className="App">
         <ReactWhatsappButton
           countryCode="91"
           phoneNumber="8977945705"
@@ -1493,7 +1493,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
           className="whatsappsivak"
         />
 
-      </div>
+      </div> */}
     </>
   )
 }

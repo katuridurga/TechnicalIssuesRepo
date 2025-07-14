@@ -55,7 +55,7 @@ function Awards() {
                                                 loading="lazy"
                                                 style={{
                                                     display: 'block',
-                                                    width: '150px',
+                                                    width: '100%',
                                                     height: '136px',
                                                     objectFit: 'cover',
                                                     objectPosition: 'bottom',
@@ -82,10 +82,10 @@ function Awards() {
                                                 loading="lazy"
                                                 style={{
                                                     display: 'block',
-                                                    width: '150px',
+                                                    width: '100%',
                                                     height: '136px',
                                                     objectFit: 'cover',
-                                                    objectPosition: 'bottom',
+                                                    objectPosition: 'center',
                                                     borderRadius: '18px',
                                                     padding: '7px',
                                                     background: 'none',
@@ -109,7 +109,7 @@ function Awards() {
                                                 loading="lazy"
                                                 style={{
                                                     display: 'block',
-                                                    width: '150px',
+                                                    width: '100%',
                                                     height: '136px',
                                                     objectFit: 'cover',
                                                     objectPosition: 'bottom',
@@ -136,10 +136,10 @@ function Awards() {
                                                 loading="lazy"
                                                 style={{
                                                     display: 'block',
-                                                    width: '150px',
+                                                    width: '100%',
                                                     height: '136px',
                                                     objectFit: 'cover',
-                                                    objectPosition: 'bottom',
+                                                    objectPosition: 'center',
                                                     borderRadius: '18px',
                                                     padding: '7px',
                                                     background: 'none',
@@ -163,7 +163,7 @@ function Awards() {
                                                 loading="lazy"
                                                 style={{
                                                     display: 'block',
-                                                    width: '150px',
+                                                    width: '100%',
                                                     height: '136px',
                                                     objectFit: 'cover',
                                                     objectPosition: 'bottom',
@@ -191,7 +191,7 @@ function Awards() {
                                                 loading="lazy"
                                                 style={{
                                                     display: 'block',
-                                                    width: '150px',
+                                                    width: '100%',
                                                     height: '136px',
                                                     objectFit: 'cover',
                                                     objectPosition: 'bottom',
@@ -218,7 +218,7 @@ function Awards() {
                                                 loading="lazy"
                                                 style={{
                                                     display: 'block',
-                                                    width: '150px',
+                                                    width: '100%',
                                                     height: '136px',
                                                     objectFit: 'cover',
                                                     objectPosition: 'bottom',
@@ -245,7 +245,7 @@ function Awards() {
                                                 loading="lazy"
                                                 style={{
                                                     display: 'block',
-                                                    width: '150px',
+                                                    width: '100%',
                                                     height: '136px',
                                                     objectFit: 'cover',
                                                     objectPosition: 'bottom',

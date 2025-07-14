@@ -735,7 +735,7 @@ function Menu(props) {
 
             </React.Fragment>  
         <BachelorsNewLandingPage />
-        {/* <Footer /> */}
+        <Footer />
         <ScrollToTop
         smooth
         top={100}

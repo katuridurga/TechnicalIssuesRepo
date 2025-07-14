@@ -93,7 +93,7 @@
   margin-left: calc(1rem * -1);
 }
 .embla__slideb {
-  flex: 0 0 50% !important;
+  flex: 0 0 33% !important;
   min-width: 0;
   padding-left: 1rem;
 }
@@ -116,7 +116,7 @@
   cursor: pointer;
   object-position: center; /* Ensure the image zooms from the center */
   display: block;
-  height: 19rem;
+  height: 22rem;
   width: 100%;
 }
 

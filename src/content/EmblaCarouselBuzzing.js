@@ -44,11 +44,11 @@ const EmblaCarousel = (props) => {
     onNextButtonClick
   } = usePrevNextButtons(emblaApi)
 
-  const setTweenNodes = useCallback((emblaApi) => {
-    tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
-      return slideNode.querySelector('.embla__parallax__layerb')
-    })
-  }, [])
+  // const setTweenNodes = useCallback((emblaApi) => {
+  //   tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
+  //     return slideNode.querySelector('.embla__parallax__layerb')
+  //   })
+  // }, [])
 
   const setTweenFactor = useCallback((emblaApi) => {
     tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
@@ -91,20 +91,20 @@ const EmblaCarousel = (props) => {
     })
   }, [])
 
-  useEffect(() => {
-    if (!emblaApi) return
+  // useEffect(() => {
+  //   if (!emblaApi) return
 
-    setTweenNodes(emblaApi)
-    setTweenFactor(emblaApi)
-    tweenParallax(emblaApi)
+  //   setTweenNodes(emblaApi)
+  //   setTweenFactor(emblaApi)
+  //   tweenParallax(emblaApi)
 
-    emblaApi
-      .on('reInit', setTweenNodes)
-      .on('reInit', setTweenFactor)
-      .on('reInit', tweenParallax)
-      .on('scroll', tweenParallax)
-      .on('slideFocus', tweenParallax)
-  }, [emblaApi, setTweenFactor, setTweenNodes, tweenParallax])
+  //   emblaApi
+  //     .on('reInit', setTweenNodes)
+  //     .on('reInit', setTweenFactor)
+  //     .on('reInit', tweenParallax)
+  //     .on('scroll', tweenParallax)
+  //     .on('slideFocus', tweenParallax)
+  // }, [emblaApi, setTweenFactor, setTweenNodes, tweenParallax])
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
     shallowEqual

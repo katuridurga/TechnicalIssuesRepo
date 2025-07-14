@@ -85,7 +85,7 @@ function Main({ active, props }) {
     const timer = setTimeout(() => {
       setShowPreloader(false);
       setLoading(false);
-    }, 3000); // adjust as needed
+    }, 1000); // adjust as needed
     return () => clearTimeout(timer);
   }, []);
 
@@ -185,7 +185,7 @@ function Main({ active, props }) {
           <Footer />
         </div>
       </>
-      {showPreloader && (
+      {/* {showPreloader && (
         <CustomPreloader customLoading={loading} background="#000000">
           <video
             autoPlay
@@ -202,7 +202,7 @@ function Main({ active, props }) {
           </video>
           
         </CustomPreloader>
-      )}
+      )} */}
 
 
       
