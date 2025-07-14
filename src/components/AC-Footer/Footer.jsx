@@ -216,7 +216,7 @@ const handleClose = (event, reason) => {
                       <ReactWhatsappButton
                         countryCode="91"
                         phoneNumber="8008002795"
-                        style={{ right: "2rem" }}
+                        style={{ right: "2rem", display: window.location.pathname === "/landingpage/bachelors-degree-courses-in-gaming/" ? "none" : "block" }}
                         className="whatsappsivak"
                       />
                       </div>
