@@ -415,7 +415,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   />
 
                   <h1 className="titleb white-txt b-animated">You too can create a realistic and immersive game!</h1>
-                  <div className="video-overlay" />
+                
                   <video
                     ref={videoRef}
                     autoPlay
@@ -448,8 +448,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                     Don't miss a chance to be a part of top game studios across the globe.
                   </p>
                 </AnimatedText>
-                <div className="anidiv" onClick={scrollToBottom} style={{ display: isMobileState ? "none" : "block" }}>
-                  <a href="" className="anidivli fullwidthinline">
+                <div className="anidiv" onClick={scrollToBottom}>
+                  <a href="#CounsellingOnGamingCareer" className="anidivli fullwidthinline">
                     <div className="listbtntext listbatchnumber">Enquire Now</div>
 
                   </a>
@@ -469,8 +469,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       <div className="counterba">
                         <div className="countba">
 
-                          <div> 15</div></div>
-                        <p>Years of Academic excellence </p>
+                        <div> 15 Years</div></div>
+                        <p>Academic Excellence </p>
                       </div>
                     </AnimatedText>
                     <AnimatedText direction="up" delay={0.2}>
@@ -506,8 +506,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       <div className="counterba">
                         <div className="countba">
 
-                          <div> 15</div></div>
-                        <p>Years of Academic excellence </p>
+                          <div> 15 Years</div></div>
+                        <p>Academic Excellence </p>
                       </div>
                     </AnimatedText>
                     <AnimatedText direction="up" delay={0.2}>
@@ -547,7 +547,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               <div className='whychooseb'>
                 <ul>
 
-                  <AnimatedText direction="right" delay={0.2}>
+                  <AnimatedText direction="left" delay={0.2}>
                     <li>
 
                       <div className=''>
@@ -562,7 +562,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                     </li>
                   </AnimatedText>
-                  <AnimatedText direction="left" delay={0.2}>
+                  <AnimatedText direction="up" delay={0.2}>
                     <li>
 
 
@@ -594,7 +594,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                     </li>
                   </AnimatedText>
-                  <AnimatedText direction="right" delay={0.2}>
+                  <AnimatedText direction="left" delay={0.2}>
                     <li>
 
 
@@ -647,8 +647,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               </div>
             </section>
             <section className='mainanidiv'><div className="anidiv">
-              <a href="test" className="anidivli fullwidthinline">
-                <div className="listbtntext listbatchnumber">
+              <a href="#CounsellingOnGamingCareer" className="anidivli fullwidthinline">
+                <div className="listbtntext listbatchnumber" onClick={scrollToBottom}>
                   Enquire Now
                 </div>
 
@@ -852,7 +852,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                             onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")} />
                         </div>
                       </AnimatedText>
-                      <AnimatedText direction="right" delay={0.2}>
+                      <AnimatedText direction="left" delay={0.2}>
                         <div className="gallery-item">
                           <img className="gallery-image1" src={artad2} alt="art22" height="470"
                             width="372" style={{
@@ -862,7 +862,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                             onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")} />
                         </div>
                       </AnimatedText>
-                      <AnimatedText direction="right" delay={0.2}>
+                      <AnimatedText direction="up" delay={0.2}>
                         <div className="gallery-item">
                           <img className="gallery-image1" src={artad3} alt="art22" height="470"
                             width="372" style={{
@@ -1043,7 +1043,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
             </section>
             <section className='mainanidiv'><div className="anidiv" onClick={scrollToBottom}>
-              <a href="" className="anidivli fullwidthinline">
+              <a href="#CounsellingOnGamingCareer" className="anidivli fullwidthinline">
                 <div className="listbtntext listbatchnumber">
                   Enquire Now
                 </div>
@@ -1476,9 +1476,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               </div>
             </section>
 
-            <div className="footerin" style={{ height: "160px", padding: isMobileState ? "0px" : "10px 0px 0px 0px" }}>
-              <div className="text-center foot-content fadeInUp anime-delay2" style={{ display: 'flex', alignItems: "center", justifyContent: "center", color: "#fff" }}>© A Subsidiary of PVR Memorial Educational Society 2025. All Rights Reserved</div>
-            </div>
           </div>
 
 
@@ -1487,7 +1484,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       </div>
       {isButtonVisible && (
 
-        <div className="CousellingButton stickyenq" style={{ background: "#393838f0" }} onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{ padding: "10px 35px" }}>Enquire now</a></div>)}
+        <div className="CousellingButton stickyenq" style={{ background: "#393838f0" }} onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{ padding: "10px 35px", borderRadius:"0px", background:"linear-gradient(101deg, #ec242d, #ca484d)" }}>Enquire now</a></div>)}
       <div className="App">
         <ReactWhatsappButton
           countryCode="91"
