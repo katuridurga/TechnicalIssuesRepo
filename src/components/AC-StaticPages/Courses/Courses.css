@@ -1,0 +1,376 @@
+.courses-container {
+    width: 90%;
+    margin: 0 auto;
+}
+.courseBanner{
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #020202;
+}
+.courseBanner img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+h3.courses-title {
+    text-align: center;
+    font-size: 48px;
+    margin: 0px 0 40px 0;
+    font-weight: 600;
+    position: relative;
+    align-self: center;
+    font-family: 'Montserrat', sans-serif;
+    color:#fff;
+}
+
+
+
+.courses-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+}
+
+.courses-subtitle{
+    font-size: 20px;
+    font-weight: 500;
+}
+.courses-wrapper-inner{
+    text-align: center;
+}
+.quote-link{
+    font-style: italic;
+    font-size: 15px;
+    color : #c91b2b;
+}
+@media only screen and (max-width: 720px) {
+    .courses-container {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 992px) {
+    .courses-container {
+        width: 90%;
+    }
+}
+
+.infinite-scroll-component {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    width: 100%;
+    padding: 3px !important;
+}
+.footercard {
+    z-index: 1;
+    position: absolute;
+    height: 180px;
+    width: 100%;
+    bottom: 0;
+}
+
+.card {
+    border-radius: 8px;
+    height: 450px;
+    width: 400px;   
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 50px -10px black;
+    overflow: hidden;
+}
+
+.card-blur {
+    position: absolute;
+    height: 100%;
+    width: calc(100% + 1px);
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+}
+
+.card:hover .card-blur {
+    opacity: 0.6;
+    filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+
+
+svg#curve {
+    position: absolute;
+    fill: white;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    height: 450px;
+}
+
+.connections {
+    height: 180px;
+    width: 400px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    margin: auto;
+}
+
+.connection {
+    display: inline-block;
+    padding: 5px;
+    margin-right: 25px;
+    transform: translateY(200px);
+    
+    transition: transform 1s cubic-bezier(.46, 1.48, .18, .81);
+}
+
+.card:hover .connection {
+    transform: translateY(0px);
+}
+
+.info {
+    padding-left: 20px;
+    transform: translateY(250px);
+    background: #fff;
+    transition: transform 1s cubic-bezier(.31,1.21,.64,1.02);
+}
+
+.card:hover .info {
+    transform: translateY(0px);
+}
+
+.name {
+    font-weight: bolder;
+    padding-top: 5px;
+}
+
+.job {
+    margin-top: 10px;
+}
+
+.connection.facebook {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 20px;
+    padding: 0px;
+    overflow: hidden;
+    color: #fff;
+    font-weight: 600;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+.connection.facebook a {
+    color: #fff;
+}
+.connection.twitter {
+    transition-delay: 0.06s;
+    height: auto;
+    width: 90%;
+    margin-left: 20px;
+    padding: 0px;
+    overflow: hidden;
+    color: #fff;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.connection.behance {
+    transition-delay: 0.12s;
+}
+
+.connection.facebook .icon {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+}
+
+.connection.twitter .icon {
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    margin-left: 4px;
+    background-position: center;
+    background-size: cover;
+}
+
+.connection.behance .icon {
+    height: 18px;
+    width: 18px;
+    margin-top: 3px;
+    margin-left: 4px;
+    background-position: center;
+    background-size: cover;
+}
+@media only screen and (max-width: 1020px) and (min-width: 320px) {
+    .site-content {
+        width: 100% !important;
+        margin: auto;
+        padding: 0 0px !important;
+    }
+    .mainCourse {
+        flex-direction: column;
+    }
+    .mainCourseLeft {
+        width: 100% !important;
+        height: 176px !important;
+    }
+    .mainCourseRight {
+        width: 100% !important;
+        padding-left: 0% !important;
+        height: auto !important;
+    }
+    .mainCourseRight h2 {
+        font-size: 19px !important;
+        line-height: 32px !important;
+        width: 100% !important;
+        margin-top: 20px !important;
+    }
+    .mainCourseRight p {
+        width: 100% !important;
+    }
+    .courses-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0px !important;
+    }
+}
+
+.card {
+    background-image: url("https://www.backstagepass.co.in/zgast/studentWorks/2d/12.webp")
+}
+.site-content {
+	width:100%;
+	margin:auto;
+	padding:0 10px;
+}
+
+.row:first-child {
+  margin-top: 50px;
+}
+
+.col-sm-4 {
+/*   outline: 2px dotted blue;  */
+  height: 250px; 
+  margin-bottom: 10px;
+  float: left;
+  margin-right: 26px;
+}
+.col-sm-8 {
+/*   outline: 2px dotted yellow;  */
+  height: 250px; 
+  margin-bottom: 10px; 
+  
+}
+
+.col-sm-8 > div.description {
+  display: table-cell; 
+  height: 250px; 
+  vertical-align: middle;
+  color:#fff;
+}
+.col-sm-8 > div.description p{
+   font-size: 16px;
+
+}
+.col-sm-8 > div.description h2{
+    font-size: 22px;
+    font-weight: 700;
+ }
+.col-sm-4 > img {
+  display: block; 
+  margin: auto;
+  height: 250px;
+  width: 250px;
+}
+.mainCourse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #222;
+    border: 1px solid rgba(86, 61, 124, .2);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.mainCourse:hover .CourseLink{
+    background: #333;
+    color: #ed1923;
+}
+.mainCourse:hover .CourseHead{
+    color: #ed1923;
+}
+.mainCourseLeft{
+    width: 32%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainCourseLeft img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.mainCourseRight{
+    width: 68%;
+    height: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 3%;
+    flex-direction: column;
+}
+.mainCourseRight h2{
+    color: #fff;
+    font-size: 27px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    line-height: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.mainCourseRight p{
+    color: #fff;
+    font-size: 16px;
+    text-transform: math-auto;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    width: 90%;
+}
+.CourseLink{
+    color: #fff;
+    margin: 20px 0px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none !important;
+    font-size: 16px;
+}
+.CourseLink:hover{
+    color: #ed1923;
+    text-decoration: underline;
+}
+.CourseLink svg{
+    margin-left: 7px
+}

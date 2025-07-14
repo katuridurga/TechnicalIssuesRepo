@@ -1,0 +1,359 @@
+.suprts {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.gll {
+  margin: 0px auto;
+  --_size: 80px; /* width and heigh of iamges */
+  --_grid-cols: repeat(3, 1fr);
+  --_grid-areas: "large large large" "large large large" "large large large"
+    "thumb-1 thumb-2 thumb-3" "thumb-4 thumb-5 thumb-6"
+    "thumb-7 thumb-8 thumb-9";
+  --_gap: 0.5rem;
+  --_info-top: 0;
+  --_info-bottom: auto;
+  --_info-translate: -100px;
+
+  width: 100%;
+  max-width: 77%;
+  min-width: 66%;
+  display: grid;
+  grid-template-columns: var(--_grid-cols);
+  grid-template-areas: var(--_grid-areas);
+
+  gap: var(--_gap);
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 720px) {
+  .gll {
+    --_size: 346px;
+    --_grid-cols: repeat(3, 0.3fr) !important;
+    --_grid-areas: "thumb-1 thumb-2 thumb-3 large large large"
+      "thumb-4 thumb-5 thumb-6 large large large"
+      "thumb-7 thumb-8 thumb-9 large large large";
+    --_info-top: auto;
+    --_info-bottom: 0;
+    --_info-translate: 100px;
+  }
+}
+
+.gll > .g1 {
+  cursor: pointer;
+  height: var(--_size);
+  aspect-ratio: 1;
+}
+.gll > .g1:nth-child(1) {
+  grid-area: thumb-1;
+}
+.gll > .g1:nth-child(2) {
+  grid-area: thumb-2;
+}
+.gll > .g1:nth-child(3) {
+  grid-area: thumb-3;
+}
+.gll > .g1:nth-child(4) {
+  grid-area: thumb-4;
+}
+.gll > .g1:nth-child(5) {
+  grid-area: thumb-5;
+}
+.gll > .g1:nth-child(6) {
+  grid-area: thumb-6;
+}
+.gll > .g1:nth-child(7) {
+  grid-area: thumb-7;
+}
+.gll > .g1:nth-child(8) {
+  grid-area: thumb-8;
+}
+.gll > .g1:nth-child(9) {
+  grid-area: thumb-9;
+}
+
+.gll > .g1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 500ms ease-in-out;
+  object-position: center;
+}
+.gll > .g1 > div {
+  position: absolute;
+  right: 0;
+  top: var(--_info-top);
+  bottom: var(--_info-bottom);
+  width: calc((var(--_size) * 3) + var(--_gap) * 2);
+  z-index: 10;
+  background-color: #00000099;
+  padding: 1rem;
+  font-size: 0.85rem;
+  font-weight: 300;
+  opacity: 0;
+  translate: 0 var(--_info-translate);
+  transition: 300ms ease-in-out;
+}
+.gll > .g1 > div h2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.gll > .g1 > div a {
+  color: white;
+  transition: scale 300ms;
+  display: inline-block;
+  transform-origin: bottom left;
+}
+.gll > .g1 > div a:hover {
+  scale: 1.25;
+}
+
+
+.gll > .g1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc((var(--_size) * 3) + var(--_gap) * 2);
+  height: calc((var(--_size) * 3) + var(--_gap) * 2);
+  aspect-ratio: 1;
+  background-image: var(--bg-img);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.lngimg{
+  height: 760px !important;
+}
+.imgwid{
+  width:750px !important;
+}
+.videomain{
+  margin: 0 auto;
+  width: 700px;
+  margin-bottom: 30px;
+}
+.maimg{
+  margin-top: 384px;
+}
+.imgp{
+  min-width: 30%;
+  padding: 8px;
+}
+@media only screen and (max-width : 1024px){
+  .containergaward {
+    display: flex !important;
+    width: 100% !important;
+    margin: 0px auto;
+    overflow: hidden;
+    flex-direction: column;
+  }
+
+  .cardsgaward {
+    position: relative;
+    background-color: #cce0f5;
+    border: 1px solid #000;
+    border-radius: 20px;
+    overflow: hidden;
+    /* height: 150px; */
+    min-width: 100%;
+  }
+  .cardsgaward img{
+  height: 100%;
+    object-fit: cover;
+    display: block;
+    width: 100% !important;
+  }
+  .CourseesOverViewsh {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 0px !important;
+  }
+.suprts {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 30px;
+}
+.mbimg1{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  /* position: relative;
+  height: 660.062px; */
+
+}
+.mbimg1 img{
+  width: 100%;
+  margin-bottom: 24px;
+  border: 1px solid #8c8383;
+}
+}
+.courseover1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.msgallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 15px;
+}
+
+.large-image {
+  grid-row: span 2;
+}
+
+.large-image img,
+.msgallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.small-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+.highlight {
+  grid-column: span 2;
+}
+
+.portrait {
+  width: 48%;
+  float: left;
+}
+.top-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  margin: 1rem 1rem;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 30%;
+}
+
+.left-column img,
+.right-main img,
+.bottom-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.right-main {
+  width: 70%;
+}
+
+.bottom-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.CourseesOverViewsh {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.containergaward {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+width: 80%;
+  margin:0px auto;
+}
+
+.cardsgaward {
+  position: relative;
+  background-color: #cce0f5;
+  border: 1px solid #000;
+  border-radius: 20px;
+  overflow: hidden;
+  /* height: 150px; */
+}
+
+.cardsgaward img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlaysaward {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(12 5 5 / 84%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  transition: bottom 1s ease;
+  flex-direction: column;
+}
+.overlaysaward h3 {
+  font-size: 20px;
+  font-weight: 900;
+}
+.overlaysaward p{
+  font-size: 15px;
+  font-weight: 900;
+}
+.cardsgaward:hover{
+  transform: scale(1.05);
+}
+.cardsgaward:hover .overlaysaward {
+  bottom: 0;
+}

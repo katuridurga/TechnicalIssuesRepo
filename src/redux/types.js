@@ -1,0 +1,4 @@
+
+export const IS_MOBILE_CHECK = "IS_MOBILE_CHECK";
+export const SELECTED_QUOTE = "SELECTED_QUOTE";
+export const SELECTED_TAB = "SELECTED_TAB";

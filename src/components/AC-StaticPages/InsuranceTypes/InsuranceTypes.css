@@ -1,0 +1,190 @@
+.seguros-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h3.seguros-title {
+    text-align: center;
+    font-size: 25px;
+    margin: 30px 0 50px 0;
+    font-weight: 600;
+    position: relative;
+}
+
+h3.seguros-title::after {
+    content: "";
+    width: 120%;
+    height: 2px;
+    border-bottom: 2px dotted #c91b2b;
+    bottom: -15px;
+    transition: .5s width ease;
+    position: absolute;
+    left: -10%;
+    right: -10%;
+    margin: 0 auto;
+    animation-name: growIn;
+    animation-duration: .45s;
+    animation-fill-mode: both;
+    animation-delay: .7s;
+}
+
+.seguros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 0 0;
+}
+
+.seguros-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.seguros-wrapper * {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.seguros-item {
+    flex-basis: calc(100% * (1/3) - 10px);
+    margin: 45px 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 4px #cdcdcd;
+    border-radius: 3px;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seguros-item:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.54);
+    background-color: #dbf4fd;
+}
+
+.seguros-img {
+    height: 80px;
+    width: 80px;
+    max-width: 100%;
+    padding: 5px;
+    box-shadow: 0 0 4px #cdcdcd;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    left: calc(50% - 40px);
+    background: #fff;
+}
+
+.seguros-item:hover .seguros-img {
+    transform: scale(1.1);
+    filter: brightness(110%);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.54);
+}
+
+.seguros-title-item {
+    margin-top: 45px;
+    margin-bottom: 0;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.seguros-text {
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 10px;
+    font-family: 'Montserrat', sans-serif;
+    /* min-height: 172px; */
+    margin: 0;
+}
+
+.seguros-btn {
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    padding: 8px 15px;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+
+/* Temp css */
+
+.PrivateTabIndicator-colorPrimary-68, .PrivateTabIndicator-colorPrimary-76, .MuiTabs-indicator {
+    background-color: #c91b2b;
+    display: none;
+}
+
+.MuiTabs-scroller {
+    display: flex;
+    justify-content: center;
+}
+
+.MuiTabs-flexContainer {
+    border: 1px solid #c91b2b;
+    border-radius: 4px;
+}
+
+.MuiTab-fullWidth:hover {
+    background-color: #c91b2b;
+    color: #fff
+}
+.MuiTab-textColorPrimary.Mui-selected {
+    background-color: #c91b2b;
+    color: #fff
+}
+
+@media only screen and (max-width: 720px) {
+    .seguros-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .seguros-item {
+        flex-basis: calc(100%);
+    }
+    .seguros-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    h3.seguros-title {
+        font-size: 20px;
+    }
+    .seguros-title-item {
+        font-size: 18px;
+    }
+    .MuiTab-wrapper {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 992px) {
+    .seguros-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .seguros-item {
+        flex-basis: calc(100% * (1/2) - 10px);
+        margin: 45px 5px;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 4px #cdcdcd;
+        border-radius: 3px;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+    }
+    h3.seguros-title {
+        font-size: 20px;
+    }
+    .seguros-title-item {
+        font-size: 18px;
+    }
+}

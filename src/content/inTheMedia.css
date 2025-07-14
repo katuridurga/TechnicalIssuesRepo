@@ -1,0 +1,242 @@
+.content-block {
+    background-attachment: fixed;
+    background-position: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.content-block9 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background: #fff;
+  padding: 0rem 0;
+}
+.content-block9::before {
+  position: absolute;
+  content: '';
+  content: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.content-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.mb60{
+  margin-bottom: 4rem;
+}
+.mt60{
+  margin-top: 4rem;
+}
+.section-title9 {
+  text-align: center;
+  margin: 0px 0px;
+}
+
+.section-title9 .title {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.4;
+  word-break: break-word;
+  color: #000;
+  text-transform: uppercase;
+  /* font-family: "Roboto"; */
+  letter-spacing: 0px;
+  text-shadow: 0 0 BLACK;
+}
+
+
+
+
+
+
+.embla__parallax__layerbaM p{
+    color: #000;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 10px 30px;
+}
+
+
+
+
+.embla__button--prevbaM {
+  left: 10px;
+  position: absolute;
+}
+
+.embla__button--nextbaM {
+  right: -30px;
+  position: absolute;
+}
+
+@media only screen and (max-width: 1020px) and (min-width: 320px) {
+  .embla__button--nextbaM {
+    right: 0px !important;
+    position: absolute;
+  }
+  .incontent {
+    background: #222;
+    color: #000;
+    height: 100px !important;
+}
+.embla__parallax__layerbaM p {
+  padding: 0px 30px !important;
+}
+}
+
+.emblabaM {
+  max-width: 100%;
+  margin: auto;
+  --slide-height: 19rem !important;
+  --slide-spacing: 1rem;
+  --slide-size: 30%;
+  position: relative;
+}
+.embla__viewportbaM {
+  overflow: visible;
+}
+.embla__containerbaM {
+  backface-visibility: hidden;
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(1rem * -1);
+}
+.embla__slidebaM {
+  flex: 0 0 30% !important;
+  min-width: 0;
+  padding-left: 1rem;
+}
+.embla__slide__imgbaM {
+  border-radius: 0rem;
+  display: block;
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+}
+.embla__controlsbaM {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+}
+.embla__buttonsbaM {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.embla__buttonsbaM {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+  position: absolute;
+  z-index: 99;
+  top: 46.2%;
+  width: 97%;
+  left: 0px;
+  margin: 0 auto;
+}
+.embla__buttonbaM {
+  
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+ 
+  width: 3.6rem;
+  height: 3.6rem;
+  z-index: 1;
+  border-radius: 50%;
+  color: var(--text-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.embla__buttonbaM:disabled {
+  
+}
+.embla__button__svgbaM {
+  width: 65%;
+  height: 65%;
+  color: #fff;
+}
+.embla__dotsbaM {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+}
+.embla__dotbaM {
+  
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.embla__dotbaM:after {
+ 
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  content: '';
+}
+
+.embla__parallaxbaM {
+  border-radius: 0rem;
+  height: 100%;
+}
+.embla__parallax__layerbaM {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    background: #fff;
+}
+.embla__parallax__imgbaM {
+  max-width: none;
+  flex: 0 0 calc(115%);
+  object-fit: cover !important;
+  object-position: top;
+  
+}
+
+.pd-m {
+  padding-top: 10px !important;
+}

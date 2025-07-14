@@ -1,0 +1,243 @@
+.content-block {
+    background-attachment: fixed;
+    background-position: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.content-block9 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background: #fff;
+  padding: 0rem 0;
+}
+.content-block9::before {
+  position: absolute;
+  content: '';
+  content: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.content-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.mb60{
+  margin-bottom: 4rem;
+}
+.mt60{
+  margin-top: 4rem;
+}
+.section-title9 {
+  text-align: center;
+  margin: 0px 0px;
+}
+
+.section-title9 .title {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.4;
+  word-break: break-word;
+  color: #000;
+  text-transform: uppercase;
+  /* font-family: "Roboto"; */
+  letter-spacing: 0px;
+  text-shadow: 0 0 BLACK;
+}
+
+
+
+
+
+
+
+
+
+
+
+.embla__button--prevb {
+  left: 30px;
+  position: absolute;
+}
+
+.embla__button--nextb {
+  right: 0px;
+  position: absolute;
+}
+
+
+
+.emblab {
+  max-width: 100%;
+  margin: auto;
+  --slide-height: 19rem !important;
+  --slide-spacing: 1rem;
+  --slide-size: 50%;
+}
+.embla__viewportb {
+  overflow: hidden;
+}
+.embla__containerb {
+  backface-visibility: hidden;
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(1rem * -1);
+}
+.embla__slideb {
+  flex: 0 0 50% !important;
+  min-width: 0;
+  padding-left: 1rem;
+}
+
+@media only screen and (max-width: 1020px) and (min-width: 320px) {
+.embla__slideb{
+  flex: 0 0 100% !important;
+}
+}
+
+/* .embla__slide__imgb {
+  border-radius: 0rem;
+  display: block;
+  height: 19rem;
+  width: 100%;
+  object-fit: cover;
+} */
+.embla__slide__imgb {
+  transition: transform 0.3s ease, filter 0.3s ease, object-position 0.3s ease;
+  cursor: pointer;
+  object-position: center; /* Ensure the image zooms from the center */
+  display: block;
+  height: 19rem;
+  width: 100%;
+}
+
+.embla__slide__imgb:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  object-position: center; /* Keeps the focus centered */
+}
+.embla__controlsb {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+}
+.embla__buttonsb {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.embla__buttonsb {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+  position: absolute;
+  z-index: 99;
+  top: 46.2%;
+  width: 97%;
+  left: 0px;
+  margin: 0 auto;
+}
+.embla__buttonb {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  width: 3.6rem;
+  height: 3.6rem;
+  z-index: 1;
+  border-radius: 50%;
+  color: var(--text-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.embla__buttonb:disabled {
+  color: var(--detail-high-contrast);
+}
+.embla__button__svgb {
+  width: 65%;
+  height: 65%;
+}
+.embla__dotsb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+}
+.embla__dotb {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.embla__dotb:after {
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  content: '';
+}
+.embla__dotb--selected:after {
+  box-shadow: inset 0 0 0 0.2rem var(--text-body);
+}
+.embla__parallaxb {
+  border-radius: 0rem;
+  height: 100%;
+  overflow: hidden;
+}
+.embla__parallax__layerb {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  bottom: -1px;
+}
+.embla__parallax__imgb {
+  max-width: none;
+  flex: 0 0 calc(115%);
+  object-fit: cover;
+  
+}
+
+.pd-m {
+  padding-top: 10px !important;
+}

@@ -1,0 +1,202 @@
+
+.suprt{
+width: 65%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+div.courses-title {
+    text-align: center;
+    font-size: 48px;
+    margin: 24px 0 24px 0;
+    font-weight: 600;
+    position: relative;
+    align-self: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+#thing {
+    position: relative;
+    background-color:#272626;
+    background-size: cover;
+    background-position: center;
+    padding-top: 1px;
+    padding-bottom: 62px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: center;
+    color: white;
+    > p { width: 65%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        color: #fff;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;}
+    > svg { position: absolute; left: 0; bottom: 0px; }
+  }
+  
+.sp1{
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.askuss{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  border: 1px solid #fff;
+  margin: 0px auto;
+  margin-bottom: 30px;
+
+}
+.askuss li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-radius: 10px; */
+  padding: 10px 20px;
+  margin-right: 0px;
+}
+.askuss li img{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.askuss li p a{
+  font-weight: 500;
+    font-size: 19px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.askuss svg {
+  color: #fff;
+  font-size: 29px;
+  margin-right: 10px;
+}
+  .hexagon {
+    aspect-ratio: cos(0deg);
+    clip-path: polygon(50% 50%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background-color: #272626;
+    width: 100%;
+  
+    color: white;
+    height: 645px;
+    margin-top:-300px
+}
+  .hexagon-1 p {
+    margin-block: 0;
+    padding: 1rem;
+    height: 47%;
+    position: relative;
+    top: 46%;
+    overflow: hidden;
+  }
+
+  
+.recuitersList{
+  
+}
+.recuitersList img {
+  width: 220px;
+  object-fit: contain;
+  height: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+  object-fit: contain;
+  object-position: center center;
+}
+.rfm-child {
+  transform: perspective(300px) translate3d(0, 0, 0);
+  background: none;
+  margin-right: 15px;
+  margin-left: 15px;
+  height: auto;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 8px;
+}
+@media only screen and (max-width : 1024px){
+  .suprt {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: #fff;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+}
+div.courses-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 24px 0 24px 0;
+  font-weight: 600;
+  position: relative;
+  align-self: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+#thing {
+  > p {
+  width: 100%;
+
+  color: #fff;
+  text-align: justify;
+  font-size: 16px;
+  font-weight: 500;
+}
+}
+.hexagon {
+  aspect-ratio: cos(0deg);
+  clip-path: none!important;
+  background-color: #272626;
+  width: 100%;
+  color: white;
+  height: 556px;
+  margin-top: -309px;
+}
+#thing {
+  position: relative;
+  background-color: #272626;
+  background-size: cover;
+  background-position: center;
+  padding-top: 1px;
+  padding-bottom: 0px;
+  padding-left: 39px;
+  padding-right: 32px;
+  text-align: center;
+  color: white;
+}
+.ply{
+  display: none;
+}
+}
+.askuss li:hover{
+  color:#fff;
+  background: #ec1925;
+}
+@media only screen and (max-width : 1024px){
+div.courses-title {
+    text-align: center;
+    font-size: 19px !important;
+    margin: 24px 0 24px 0;
+    font-weight: 600;
+    position: relative;
+    align-self: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    line-height: inherit;
+}
+}
