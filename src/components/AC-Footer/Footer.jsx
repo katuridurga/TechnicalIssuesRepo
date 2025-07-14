@@ -228,7 +228,7 @@ const handleClose = (event, reason) => {
                         countryCode="91"
                         aria-label="Chat with us on WhatsApp"
                         phoneNumber="8008002795"
-                        style={{ right: "2rem" }}
+                        style={{ right: "2rem", display: window.location.pathname === "/landingpage/bachelors-degree-courses-in-gaming/" ? "none" : "block" }}
                         className="whatsappsivak"
                       />
                    

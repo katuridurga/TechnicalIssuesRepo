@@ -357,6 +357,11 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .counterba p {
+    font-size: 1.7rem !important;
+    font-weight: 700;
+    color: #fff;
+}
   .mainribbonb {
     margin-top: 35px !important;
   }
