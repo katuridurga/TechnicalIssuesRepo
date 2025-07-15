@@ -150,7 +150,7 @@ function ContactUs(props) {
                 <div id='chapternew'>
 
                     <div style={{ position: "relative", height: isMobileState ? "auto" : "860px" }}>
-                        <div id="pointerr" style={{ margin: "24px 0" }} className={isActive1 ? 'classNameBasedOnCondition' : ' '}>
+                        <div id="pointerr" className={isActive1 ? 'classNameBasedOnCondition' : ' '}>
                             <div className='plucon'>
                                 <p>What is the duration of the Advanced Diploma and Diploma courses?</p>
                                 <div className='pluin' onClick={() => setIsActive1(!isActive1)}> {!isActive1 ? <CiCirclePlus /> : <CiCircleMinus />}</div>

@@ -357,6 +357,17 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .courseUpdatess ul li {
+    border: 2px solid #222;
+    height: auto !important;
+    background: #222;
+    color: #fff;
+    border-radius: 15px;
+    width: 90% !important;
+    padding: 20px;
+    box-shadow: 0 0 10px -10px #bfb8b8;
+    margin: 0 auto 0 3% !important;
+}
   .counterba p {
     font-size: 1.7rem !important;
     font-weight: 700;
@@ -2934,12 +2945,63 @@ div.et_pb_section.et_pb_section_0 {
   background-image: url(./../assets/img/banners/startandgamesd.webp) !important;
   height: 630px;
   background-size: cover !important;
+  position: relative;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
 }
+
+.starng::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* black overlay with 50% opacity */
+  z-index: 0;
+}
+
+.starng h1 {
+  position: relative;
+  z-index: 2;
+}
+
 
 .staw {
   background-image: url(./../assets/img/banners/stawardd.webp) !important;
   height: 630px;
   background-size: cover !important;
+  position: relative;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.staw::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* black overlay with 50% opacity */
+  z-index: 0;
+}
+
+.staw h1 {
+  position: relative;
+  z-index: 2;
 }
 
 .Diploma-in-Game-Design-Production {

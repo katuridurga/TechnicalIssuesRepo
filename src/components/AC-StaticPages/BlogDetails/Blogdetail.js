@@ -438,13 +438,13 @@ function BlogDetail({ match }) {
 </div>
 </div>
 </div> */}
-      <div className="scroll-progress-container">
+      {/* <div className="scroll-progress-container">
         <div
           className="scroll-progress-bar"
           style={{ width: `${scrollPercentage}%`, height: "4px", backgroundColor: "#ed1b24" }}
         ></div>
-        {/* <div className="pr1">{`${scrollPercentage}%`}</div> */}
-      </div>
+        <div className="pr1">{`${scrollPercentage}%`}</div>
+      </div> */}
       <div className="breadcrumbs">
         <div className="container">
           <ul className="breadcrumbs__list">

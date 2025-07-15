@@ -230,12 +230,12 @@ export default function MenuCore() {
 
 
 
-                        <div className="mainc"><Link to={"/about-us/our-story/"} style={{ paddingLeft: "0px", paddingRight: "0px", color: "#fff" }}>Our story</Link></div>
+                        <div className="mainc"><Link to={"/about-us/our-story/"} style={{ color: "#fff" }}>Our story</Link></div>
 
-                        <div className="mainc"><Link to={"/about-us/affiliation-collaboration/"} style={{ paddingLeft: "0px", paddingRight: "0px", color: "#fff" }}>Affiliation</Link></div>
+                        <div className="mainc"><Link to={"/about-us/affiliation-collaboration/"} style={{  color: "#fff" }}>Affiliation</Link></div>
 
                         {/* <div className="mainc"><Link to={"/about-us/our-mentors/"} style={{ paddingLeft: "0px", paddingRight: "0px", color: "#fff" }}>Our mentors</Link></div> */}
-                        <div className="mainc"><Link to={"/about-us/placement-support/"} style={{ paddingLeft: "0px", paddingRight: "0px", color: "#fff" }}>Placement Support</Link></div>
+                        <div className="mainc"><Link to={"/about-us/placement-support/"} style={{ color: "#fff" }}>Placement Support</Link></div>
 
 
                       </ul>
@@ -247,11 +247,11 @@ export default function MenuCore() {
                       <ul style={{ width: "350px" }}>
 
 
-                        <div className="mainc"><Link to={"/admissions/admission-process/"} style={{ paddingLeft: "0px", paddingRight: "0px", color: "#fff" }}>Admission Process</Link></div>
+                        <div className="mainc"><Link to={"/admissions/admission-process/"} style={{color: "#fff" }}>Admission Process</Link></div>
 
                         {/* < div className="mainc"><Link to={"/admissions/financial-assistance-and-scholarship/"} style={{ paddingLeft: "0px", paddingRight: "0px", color: "#fff", pointerEvents: "none" }}>Financial Assistance</Link></ div> */}
 
-                        < div className="mainc"><Link to={"/admissions/financial-assistance-and-scholarship/"} style={{ paddingLeft: "0px", paddingRight: "0px", color: "#fff" }}>Financial Assistance</Link></ div>
+                        < div className="mainc"><Link to={"/admissions/financial-assistance-and-scholarship/"} style={{  color: "#fff" }}>Financial Assistance</Link></ div>
 
                         {/* < div className="mainc"><Link to={"/scholarships/"} style={{paddingLeft: "0px", paddingRight: "0px", color: "#fff"}}>Scholarships</Link></ div> */}
 
@@ -265,10 +265,10 @@ export default function MenuCore() {
                       <ul style={{ width: "350px" }}>
 
 
-                        <div className="mainc"><Link to={"/life-at-bsp/alumni-success/"} style={{ paddingLeft: "0px", paddingRight: "0px", color: "#fff" }}>Alumni Success</Link></div>
-                        < div className="mainc"><Link to={"/life-at-bsp/student-artwork-and-games/"} style={{ paddingLeft: "0px", paddingRight: "0px", color: "#fff" }}>Student Art works & games</Link></ div>
+                        <div className="mainc"><Link to={"/life-at-bsp/alumni-success/"} style={{  color: "#fff" }}>Alumni Success</Link></div>
+                        < div className="mainc"><Link to={"/life-at-bsp/student-artwork-and-games/"} style={{ color: "#fff" }}>Student Art works & games</Link></ div>
 
-                        < div className="mainc"><Link to={"/life-at-bsp/student-awards/"} style={{ paddingLeft: "0px", paddingRight: "0px", color: "#fff" }}>Student Awards</Link></ div>
+                        < div className="mainc"><Link to={"/life-at-bsp/student-awards/"} style={{ color: "#fff" }}>Student Awards</Link></ div>
                         {/* <Accordion expanded={expanded === 'panels'} onChange={handleChange('panels')}>
         <AccordionSummary aria-controls="panel4ds-content" id="panel4ds-header">
           <Typography><div className="mainc" style={{fontSize:"13.5px"}}><Link to={"/life-at-bsp/student-awards/"} style={{ paddingLeft: "0px", paddingRight: "0px", color: "#fff" }}>Student Showcase</Link></div></Typography>
@@ -283,10 +283,10 @@ export default function MenuCore() {
           </Typography>
         </AccordionDetails>
       </Accordion> */}
-                        < div className="mainc"><Link to={"/life-at-bsp/accelerator-program/"} style={{ paddingLeft: "0px", paddingRight: "0px", color: "#fff" }}>Accelerator Program</Link></ div>
+                        < div className="mainc"><Link to={"/life-at-bsp/accelerator-program/"} style={{  color: "#fff" }}>Accelerator Program</Link></ div>
 
                         {/* < div className="mainc"><Link to={"/life-at-bsp/events-workshops/"} style={{ paddingLeft: "0px", paddingRight: "0px", color: "#fff" }}>Events & Workshops</Link></ div>  */}
-                        < div className="mainc"><Link to={"/life-at-bsp/facilities/"} style={{ paddingLeft: "0px", paddingRight: "0px", color: "#fff" }}>Hostel Facilities</Link></ div>
+                        < div className="mainc"><Link to={"/life-at-bsp/facilities/"} style={{ color: "#fff" }}>Hostel Facilities</Link></ div>
 
                       </ul>
 

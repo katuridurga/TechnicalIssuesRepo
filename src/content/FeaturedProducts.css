@@ -556,7 +556,7 @@ transform-style: preserve-3d;
 }
 .testimonial-content-wrap {
 width: 100%;
-min-height: 460px;
+min-height: 510px;
 align-items: center;
 padding: 25px 25px 25px 25px;
 display: flex;
