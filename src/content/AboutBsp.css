@@ -109,6 +109,7 @@
   position: relative;
   margin-top: 0rem;
   background: #222;
+  z-index: 1;
 }
 .counter-wrapper1{
   display: grid;

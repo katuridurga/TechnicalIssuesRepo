@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import CountUp from 'react-countup'; // For easy count-up animations
-import job from '../../../assets/img/11.webp';
-import ins from '../../../assets/img/12.webp';
-import awd from '../../../assets/img/13.webp';
-import grad from '../../../assets/img/14.webp';
-import clock from '../../../assets/img/15.webp';
+import job from '../../../assets/img/11m.webp';
+import ins from '../../../assets/img/12m.webp';
+import awd from '../../../assets/img/13m.webp';
+import grad from '../../../assets/img/14m.webp';
+import clock from '../../../assets/img/15m.webp';
 
 const ScrollTriggerCountUp = () => {
   const [isInView, setIsInView] = useState(false);
