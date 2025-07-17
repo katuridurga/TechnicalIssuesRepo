@@ -383,37 +383,84 @@ function BlogDetail({ match }) {
             "datePublished": formatDateToDMY(event.event_s_dt) // Ensure this returns a valid ISO or date string
           })}
         </script>
-        {event.event_id == 70 && (
-          <script type="application/ld+json">
-            {JSON.stringify({
+        {event.event_id === 70 && (
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the average game developer salary in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "₹6–12 LPA depending on experience and skills."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you earn ₹1 crore in game development in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, especially in senior roles or international studios, some professionals earn ₹1 crore+ annually."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is game development a good career in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely! With rising demand and growing salaries, its one of the most exciting creative tech careers today. Backstage Pass graduates are building their careers at leading game studios like Ubisoft, Rockstar Games, EA, and Zynga with high-paying roles right after college. If you have a passion for games, then it is the best time to start developing a game."
+          }
+        }
+      ]
+    })}
+  </script>
+)}
 
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [{
-                "@type": "Question",
-                "name": "What is the average game developer salary in India?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "₹6–12 LPA depending on experience and skills."
-                }
-              }, {
-                "@type": "Question",
-                "name": "Can you earn ₹1 crore in game development in India?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, especially in senior roles or international studios, some professionals earn ₹1 crore+ annually."
-                }
-              }, {
-                "@type": "Question",
-                "name": "Is game development a good career in India?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Absolutely! With rising demand and growing salaries, its one of the most exciting creative tech careers today. Backstage Pass graduates are building their careers at leading game studios like Ubisoft, Rockstar Games, EA, and Zynga with high-paying roles right after college. If you have a passion for games, then it is the best time to start developing a game."
-                }
-              }]
-            })}
-          </script>
-        )}
+{event.event_id === 75 && (
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are there creative courses after 12th that offer high salaries?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, absolutely. Creative fields like Game Art & Design, Animation, UI/UX Design, Visual Communication, and even Content Creation can lead to high-paying careers. These industries value originality and hands-on skills, and with the rise of digital platforms, there’s growing demand (and pay!) for talented creators."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can arts students pursue high-paying careers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, arts students can build successful and high-paying careers too. Courses in Design, Psychology, Digital Marketing, Law, Mass Communication, and even Entrepreneurship are in high demand. With the right skills and specialization, you can earn just as much as science or commerce graduates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do high-salary careers require engineering or medical degrees only?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not anymore. While engineering and medical are still valuable, high-paying careers today also come from fields like Data Science, Game Development, AI, Law, Design, Finance, and Business. What matters more is your skill, passion, and how much you’re willing to learn and grow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is game development a good career choice after 12th?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, game development is a fantastic choice if youre passionate about games, art, or coding. The gaming industry is booming globally and in India, offering both creative satisfaction and high salaries. With the right education and portfolio, you can work on games enjoyed by millions and build a rewarding global career."
+          }
+        }
+      ]
+    })}
+  </script>
+)}
+
 
 
         <title>{event.meta_tittle}</title>
