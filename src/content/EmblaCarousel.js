@@ -121,8 +121,8 @@ useEffect(() => {
     src={newbanF}
     alt="Home Banner"
     width={1526}
-    height={450}
-    loading="lazy"
+    height={450}    
+    fetchpriority="high"     
     decoding="async"
     style={{ width: "100%" }}
   />
@@ -144,8 +144,9 @@ useEffect(() => {
     alt="Home Banner"
     width={1526}
     height={450}
-    loading="lazy"  // ✅ Native lazy loading
-    style={{ width: "100%", margin: "0 auto" }}
+    decoding="async"
+    fetchpriority="high"
+    style={{ width: "100%", margin: "0 auto", height: "auto" }}
   />
 </picture>
               {/* <img
