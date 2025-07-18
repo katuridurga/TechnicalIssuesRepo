@@ -8045,6 +8045,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 0px;
+  margin-top: 10px;
 }
 
 .whychooseb ul {
@@ -8085,6 +8087,8 @@ margin: 0px auto;
 .whychooseb ul li p {
   font-weight: 700;
   color:#000;
+   margin-bottom: 0px;
+  margin-top: 10px;
 }
 
 .faq-itemb {

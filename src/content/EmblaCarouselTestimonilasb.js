@@ -86,11 +86,29 @@ const testimonials = [
 const Testimonials = () => {
   const scrollRef = useRef();
   const [activePage, setActivePage] = useState(0);
-  const cardsPerPage = 3;
-  const scrollWidth = 330 * 3 + 20 * 2; // width of visible area
-  const totalPages = Math.floor(testimonials.length / cardsPerPage); // only full pages
-
+  const [cardsPerPage, setCardsPerPage] = useState(3);
+  const [scrollWidth, setScrollWidth] = useState(0);
   const [expandedCards, setExpandedCards] = useState({});
+
+  const updateLayout = () => {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth < 768) {
+      setCardsPerPage(1);
+      setScrollWidth(screenWidth);
+    } else {
+      setCardsPerPage(3);
+      setScrollWidth(330 * 3 + 20 * 2);
+    }
+  };
+
+  useEffect(() => {
+    updateLayout();
+    window.addEventListener("resize", updateLayout);
+    return () => window.removeEventListener("resize", updateLayout);
+  }, []);
+
+  const totalPages = Math.ceil(testimonials.length / cardsPerPage);
 
   const toggleExpand = (index) => {
     setExpandedCards((prev) => ({
@@ -118,14 +136,13 @@ const Testimonials = () => {
     return () => container.removeEventListener("scroll", handleScroll);
   }, [scrollWidth]);
 
-  // Drag & swipe state refs
+  // Swipe support
   const isDragging = useRef(false);
   const startX = useRef(0);
   const scrollLeft = useRef(0);
   const startTime = useRef(0);
   const lastX = useRef(0);
 
-  // Pointer down (mouse or touch start)
   const onPointerDown = (xPos) => {
     isDragging.current = true;
     startX.current = xPos - scrollRef.current.offsetLeft;
@@ -135,42 +152,34 @@ const Testimonials = () => {
     scrollRef.current.style.cursor = "grabbing";
   };
 
-  // Pointer move (mouse move or touch move)
   const onPointerMove = (xPos) => {
     if (!isDragging.current) return;
-    const walk = (xPos - startX.current) * 1.5; // scroll speed multiplier
+    const walk = (xPos - startX.current) * 1.5;
     scrollRef.current.scrollLeft = scrollLeft.current - walk;
     lastX.current = xPos;
   };
 
-  // Pointer up (mouse up, mouse leave, or touch end)
   const onPointerUp = () => {
     if (!isDragging.current) return;
     isDragging.current = false;
     scrollRef.current.style.cursor = "grab";
 
-    const endTime = Date.now();
-    const deltaTime = endTime - startTime.current;
+    const deltaTime = Date.now() - startTime.current;
     const deltaX = lastX.current - startX.current;
-
     const velocity = deltaX / deltaTime;
 
     const currentScroll = scrollRef.current.scrollLeft;
     const currentPage = Math.round(currentScroll / scrollWidth);
 
     if (velocity > 0.3) {
-      // Swipe right — go to previous page
       scrollToPage(Math.max(currentPage - 1, 0));
     } else if (velocity < -0.3) {
-      // Swipe left — go to next page
       scrollToPage(Math.min(currentPage + 1, totalPages - 1));
     } else {
-      // Snap to closest page
       scrollToPage(currentPage);
     }
   };
 
-  // Mouse event handlers
   const onMouseDown = (e) => onPointerDown(e.pageX);
   const onMouseMove = (e) => {
     if (!isDragging.current) return;
@@ -179,8 +188,6 @@ const Testimonials = () => {
   };
   const onMouseUp = () => onPointerUp();
   const onMouseLeave = () => onPointerUp();
-
-  // Touch event handlers
   const onTouchStart = (e) => onPointerDown(e.touches[0].pageX);
   const onTouchMove = (e) => {
     if (!isDragging.current) return;
@@ -188,7 +195,6 @@ const Testimonials = () => {
   };
   const onTouchEnd = () => onPointerUp();
 
-  // Only full pages (groups of 3 cards)
   const fullPagesOnly = testimonials.slice(0, totalPages * cardsPerPage);
 
   return (
@@ -217,15 +223,19 @@ const Testimonials = () => {
               const isExpanded = expandedCards[index] || false;
               return (
                 <AnimatedText direction="up" delay={0.2} key={index}>
-                  <div className="testimonial-card">
+                  <div
+                    className="testimonial-card"
+                    style={{
+                      flex: `0 0 ${100 / cardsPerPage}%`,
+                      maxWidth: `${100 / cardsPerPage}%`,
+                    }}
+                  >
                     <h4>
                       {item.title} <span>”</span>
                     </h4>
-
                     <p className={`testimonial-text ${isExpanded ? "expanded" : ""}`}>
                       {item.text}
                     </p>
-
                     {item.text.split(" ").length > 30 && (
                       <button
                         className="show-more-btn"
@@ -234,7 +244,6 @@ const Testimonials = () => {
                         {isExpanded ? "Show Less" : "Show More"}
                       </button>
                     )}
-
                     <div className="testimonial-profile">
                       <img src={item.avatar} alt={item.name} />
                       <div>
@@ -264,3 +273,5 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
+
