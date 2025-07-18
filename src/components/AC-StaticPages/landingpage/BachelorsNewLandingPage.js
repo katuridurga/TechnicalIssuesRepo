@@ -7,9 +7,7 @@ import ReactWhatsappButton from "react-whatsapp-button";
 import Marquee from "react-fast-marquee";
 import FeaturedProductsb from "../../../content/FeaturedProductsb.js";
 import r1 from "../../../assets/img/partners/r1.png";
-import artad2 from "../../../assets/img/art/Frame36.png"
 import artad1 from "../../../assets/img/art/art1.webp"
-import artad3 from "../../../assets/img/art/pratik-baidya-render-1.webp"
 import bachg from "../../../assets/img/mobilebanner/bgeneric.webp";
 import r2 from "../../../assets/img/partners/r2.png";
 import r4 from "../../../assets/img/partners/r4.png";
@@ -26,12 +24,14 @@ import lc7 from "../../../assets/img/logos/Pac-man.webp";
 import lc8 from "../../../assets/img/logos/Forza7.webp";
 import lc9 from "../../../assets/img/logos/Thetexaschainsawmassacre.webp";
 import art11 from "../../../assets/img/art/Vishnusai.webp"
-import art22 from "../../../assets/img/art/SuryaShankha.webp"
 import art33 from "../../../assets/img/art/VijaySivatej1.webp"
 import art44 from "../../../assets/img/art/SuryaShankha2.webp"
 import art55 from "../../../assets/img/art/AbhiAstu1.webp"
 import art66 from "../../../assets/img/art/Frame37.webp"
 import art77 from "../../../assets/img/art/Frame19.webp"
+import artad2 from "../../../assets/img/art/render027.webp"
+import art22 from "../../../assets/img/art/Frame28.png"
+import artad3 from "../../../assets/img/art/VijaySivatejMareedu.png"
 
 import { Helmet } from "react-helmet";
 
@@ -361,8 +361,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
   return (
     <>
       <Helmet>
-        <title>Build Your Career in Game Art</title>
-        <meta name="description" content="Learn 3D modeling, character design, and more. Start from scratch and master game art to create stunning game worlds and characters." />
+        <title>Bachelor's Degree Courses in Gaming | Backstage Pass</title>
+        <meta name="description" content="Explore our Bachelor's degree courses in gaming to kickstart your career in game design, development, and animation. Learn from industry experts with hands-on training and placement assistance." />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
       <a href="#ribbon" className='mainribbonb'>
@@ -539,9 +539,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               }
             </section>
 
-            <section style={{ background: "#222", padding: "1px", overflow: "hidden" }}>
+            <section style={{ background: "#fff", padding: "1px", overflow: "hidden" }}>
               <AnimatedText direction="up" delay={0.2}>
-                <h2 className='mainHeadingTotall-2'>Why Choose BSP?
+                <h2 className='mainHeadingTotall-2' style={{color:"#000"}}>Why Choose Backstage Pass?
                 </h2>
               </AnimatedText>
               <div className='whychooseb'>
@@ -551,7 +551,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                     <li>
 
                       <div className=''>
-                        <div className=''>
+                        <div className='imgmb'>
                           <img src={wc3} alt="wc3" height={isMobileState ? "30" : "50"}
                             width={isMobileState ? "30" : "50"} />
                         </div>
@@ -567,7 +567,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
                       <div className=''>
-                        <div className=''>
+                        <div className='imgmb'>
                           <img src={wc4} alt="wc4" height={isMobileState ? "30" : "50"}
                             width={isMobileState ? "30" : "50"} />
                         </div>
@@ -583,7 +583,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
                       <div className=''>
-                        <div className=''>
+                        <div className='imgmb'>
                           <img src={wc5} alt="wc5" height={isMobileState ? "30" : "50"}
                             width={isMobileState ? "30" : "50"} />
                         </div>
@@ -599,7 +599,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
                       <div className=''>
-                        <div className=''>
+                        <div className='imgmb'>
                           <img src={wc6} alt="wc6" height={isMobileState ? "30" : "50"}
                             width={isMobileState ? "30" : "50"} />
                         </div>
@@ -616,7 +616,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
                       <div className=''>
-                        <div className=''>
+                        <div className='imgmb'>
                           <img src={wc8} alt="wc8" height={isMobileState ? "30" : "50"}
                             width={isMobileState ? "30" : "50"} />
                         </div>
@@ -632,7 +632,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
                       <div className=''>
-                        <div className=''>
+                        <div className='imgmb'>
                           <img src={wc9} alt="wc9" height={isMobileState ? "30" : "50"}
                             width={isMobileState ? "30" : "50"} />
                         </div>
@@ -901,7 +901,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
                       <div className=''>
-                        <div className=''>
+                        <div className='imgmb'>
                           <img src={cc1} alt="ic7" height={isMobileState ? "30" : "50"}
                             width={isMobileState ? "30" : "50"} />
                         </div>
@@ -917,7 +917,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
                       <div className=''>
-                        <div className=''>
+                        <div className='imgmb'>
                           <img src={cc2} alt="ic13" height={isMobileState ? "30" : "50"}
                             width={isMobileState ? "30" : "50"} />
                         </div>
@@ -933,7 +933,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
                       <div className=''>
-                        <div className=''>
+                        <div className='imgmb'>
                           <img src={cc3} alt="ic9" height={isMobileState ? "30" : "50"}
                             width={isMobileState ? "30" : "50"} />
                         </div>
@@ -950,7 +950,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
                       <div className=''>
-                        <div className=''>
+                        <div className='imgmb'>
                           <img src={cc4} alt="ic8" height={isMobileState ? "30" : "50"}
                             width={isMobileState ? "30" : "50"} />
                         </div>
@@ -967,7 +967,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
                       <div className=''>
-                        <div className=''>
+                        <div className='imgmb'>
                           <img src={cc5} alt="GAIMG5" height={isMobileState ? "30" : "50"}
                             width={isMobileState ? "30" : "50"} />
                         </div>
@@ -984,7 +984,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
                       <div className=''>
-                        <div className=''>
+                        <div className='imgmb'>
                           <img src={cc6} alt="ic11" height={isMobileState ? "30" : "50"}
                             width={isMobileState ? "30" : "50"} />
                         </div>
@@ -1001,7 +1001,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
                       <div className=''>
-                        <div className=''>
+                        <div className='imgmb'>
                           <img src={cc7} alt="ic10" height={isMobileState ? "30" : "50"}
                             width={isMobileState ? "30" : "50"} />
                         </div>
@@ -1018,7 +1018,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                     <li>
 
                       <div className=''>
-                        <div className=''>
+                        <div className='imgmb'>
                           <img src={cc8} alt="ic12" height={isMobileState ? "30" : "50"}
                             width={isMobileState ? "30" : "50"} />
                         </div>
@@ -1489,7 +1489,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
         <ReactWhatsappButton
           countryCode="91"
           phoneNumber="8977945705"
-          style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-7rem" : "10rem", zIndex: "11111" }}
+          style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-7rem" : "-1rem", zIndex: "11111" }}
           className="whatsappsivak"
         />
 

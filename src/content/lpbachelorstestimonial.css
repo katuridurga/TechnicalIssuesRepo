@@ -57,6 +57,13 @@
   width: 100%;
   overflow-x: scroll;
   scroll-behavior: smooth;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+
+  /* Prevent vertical drag scroll */
+  touch-action: pan-x;
+
 }
 
 .testimonial-slider::-webkit-scrollbar {
@@ -342,7 +349,7 @@
 
 @media (min-width: 1200px) {
   .video-element {
-    height: 800px;
+    height: 700px;
     /* adjust as needed */
     object-fit: cover;
   }
