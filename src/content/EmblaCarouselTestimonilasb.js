@@ -89,6 +89,24 @@ const Testimonials = () => {
   const [cardsPerPage, setCardsPerPage] = useState(3);
   const [scrollWidth, setScrollWidth] = useState(0);
   const [expandedCards, setExpandedCards] = useState({});
+const maxVisibleDots = 4;
+
+const getVisibleDotRange = () => {
+  if (window.innerWidth >= 768) {
+    // Desktop: show all dots
+    return Array.from({ length: totalPages }, (_, i) => i);
+  }
+  
+  let start = Math.max(0, activePage - Math.floor(maxVisibleDots / 2));
+  let end = start + maxVisibleDots;
+  
+  if (end > totalPages) {
+    end = totalPages;
+    start = Math.max(0, end - maxVisibleDots);
+  }
+  
+  return Array.from({ length: end - start }, (_, i) => start + i);
+};
 
   const updateLayout = () => {
     const screenWidth = window.innerWidth;
@@ -195,7 +213,7 @@ const Testimonials = () => {
   };
   const onTouchEnd = () => onPointerUp();
 
-  const fullPagesOnly = testimonials.slice(0, totalPages * cardsPerPage);
+  const fullPagesOnly = testimonials;
 
   return (
     <section className="testimonial-section">
@@ -258,15 +276,37 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="dots">
-          {Array.from({ length: totalPages }).map((_, i) => (
-            <span
-              key={i}
-              className={`dot ${activePage === i ? "active" : ""}`}
-              onClick={() => scrollToPage(i)}
-            ></span>
-          ))}
-        </div>
+     <div className="dots">
+  {Array.from({ length: totalPages }, (_, i) => {
+    const isMobile = window.innerWidth < 768;
+
+    if (!isMobile) {
+      // Show all dots on desktop
+      return (
+        <span
+          key={i}
+          className={`dot ${activePage === i ? "active" : ""}`}
+          onClick={() => scrollToPage(i)}
+        ></span>
+      );
+    }
+
+    // Show max 4 dots on mobile
+    const visibleStart = Math.max(0, Math.min(totalPages - 4, activePage - 1));
+    const isVisible = i >= visibleStart && i < visibleStart + 4;
+
+    return isVisible ? (
+      <span
+        key={i}
+        className={`dot ${activePage === i ? "active" : ""}`}
+        onClick={() => scrollToPage(i)}
+      ></span>
+    ) : null;
+  })}
+</div>
+
+
+
       </div>
     </section>
   );

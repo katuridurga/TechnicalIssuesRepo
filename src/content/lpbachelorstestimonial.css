@@ -271,6 +271,23 @@
 
 /* 💡 Responsive Tweaks for Mobile */
 @media (max-width: 768px) {
+   .testimonial-card {
+    flex: 0 0 100% !important;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    margin-right: 0px !important;
+  }
+
+  .testimonial-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+  }
+  .testimonial-slider-inner::after {
+    content: "";
+    flex: 0 0 100% !important; /* gives space for last card to center */
+  }
   .dots {
    display: flex;
   overflow-x: auto;
@@ -280,6 +297,9 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
   }
   .dots::-webkit-scrollbar {
     display: none;
