@@ -89,42 +89,48 @@ const Testimonials = () => {
   const [cardsPerPage, setCardsPerPage] = useState(3);
   const [scrollWidth, setScrollWidth] = useState(0);
   const [expandedCards, setExpandedCards] = useState({});
-const maxVisibleDots = 4;
+  const maxVisibleDots = 4;
 
-const getVisibleDotRange = () => {
-  if (window.innerWidth >= 768) {
-    // Desktop: show all dots
-    return Array.from({ length: totalPages }, (_, i) => i);
+  const getVisibleDotRange = () => {
+    if (window.innerWidth >= 768) {
+      // Desktop: show all dots
+      return Array.from({ length: totalPages }, (_, i) => i);
+    }
+
+    let start = Math.max(0, activePage - Math.floor(maxVisibleDots / 2));
+    let end = start + maxVisibleDots;
+    if (end > totalPages) {
+      end = totalPages;
+      start = Math.max(0, end - maxVisibleDots);
+    }
+
+    return Array.from({ length: end - start }, (_, i) => start + i);
+  };
+  const updateLayout = () => {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth < 768) {
+    setCardsPerPage(1); // ✅ Only 1 card per page on mobile
+    setScrollWidth(screenWidth); // ✅ Set scroll width exactly as the viewport
+  } else {
+    setCardsPerPage(3);
+    setScrollWidth(330 * 3 + 20 * 2); // You can fine-tune this for desktop spacing
   }
-  
-  let start = Math.max(0, activePage - Math.floor(maxVisibleDots / 2));
-  let end = start + maxVisibleDots;
-  
-  if (end > totalPages) {
-    end = totalPages;
-    start = Math.max(0, end - maxVisibleDots);
-  }
-  
-  return Array.from({ length: end - start }, (_, i) => start + i);
 };
 
-  const updateLayout = () => {
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth < 768) {
-      setCardsPerPage(1);
-      setScrollWidth(screenWidth);
-    } else {
-      setCardsPerPage(3);
-      setScrollWidth(330 * 3 + 20 * 2);
-    }
-  };
 
   useEffect(() => {
-    updateLayout();
-    window.addEventListener("resize", updateLayout);
-    return () => window.removeEventListener("resize", updateLayout);
-  }, []);
+  updateLayout();
+  window.addEventListener("resize", updateLayout);
+
+  // Reset to first page
+  if (scrollRef.current) {
+    scrollRef.current.scrollLeft = 0;
+  }
+
+  return () => window.removeEventListener("resize", updateLayout);
+}, []);
+
 
   const totalPages = Math.ceil(testimonials.length / cardsPerPage);
 
@@ -276,36 +282,15 @@ const getVisibleDotRange = () => {
           </div>
         </div>
 
-     <div className="dots">
-  {Array.from({ length: totalPages }, (_, i) => {
-    const isMobile = window.innerWidth < 768;
-
-    if (!isMobile) {
-      // Show all dots on desktop
-      return (
-        <span
-          key={i}
-          className={`dot ${activePage === i ? "active" : ""}`}
-          onClick={() => scrollToPage(i)}
-        ></span>
-      );
-    }
-
-    // Show max 4 dots on mobile
-    const visibleStart = Math.max(0, Math.min(totalPages - 4, activePage - 1));
-    const isVisible = i >= visibleStart && i < visibleStart + 4;
-
-    return isVisible ? (
-      <span
-        key={i}
-        className={`dot ${activePage === i ? "active" : ""}`}
-        onClick={() => scrollToPage(i)}
-      ></span>
-    ) : null;
-  })}
-</div>
-
-
+        <div className="dots">
+          {getVisibleDotRange().map((i) => (
+            <span
+              key={i}
+              className={`dot ${activePage === i ? "active" : ""}`}
+              onClick={() => scrollToPage(i)}
+            ></span>
+          ))}
+        </div>
 
       </div>
     </section>

@@ -276,13 +276,14 @@
     scroll-snap-align: center;
     scroll-snap-stop: always;
     margin-right: 0px !important;
+    margin-left: 6%;
   }
 
   .testimonial-slider {
     display: flex;
-    align-items: center;
+    /* align-items: center;
     justify-content: center;
-    margin: 0px auto;
+    margin: 0px auto; */
   }
   .testimonial-slider-inner::after {
     content: "";
