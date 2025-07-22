@@ -20,7 +20,7 @@ const ResponsiveGallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
+  const galleryRef = useRef(null);
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -79,12 +79,18 @@ const ResponsiveGallery = () => {
       </div>
 
       {/* Dots */}
-      <div className="dotsbn">
+    {/* Dots */}
+<div className="dotsbn">
         {Array.from({ length: pageCount }).map((_, idx) => (
           <span
             key={idx}
             className={`dot ${currentIndex === idx ? "active" : ""}`}
-            onClick={() => setCurrentIndex(idx)}
+            onClick={() => {
+              setCurrentIndex(idx);
+              if (galleryRef.current) {
+                galleryRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            }}
           ></span>
         ))}
       </div>

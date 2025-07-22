@@ -472,14 +472,14 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       <div className="counterba">
                         <div className="countba">
                           <div> 30+ </div></div>
-                        <p>Awards won</p>
+                        <p>Awards Won</p>
                       </div>
                     </AnimatedText>
                     <AnimatedText direction="up" delay={0.2}>
                       <div className="counterba">
                         <div className="countba">
                           <div> 100% </div></div>
-                        <p>Placement support
+                        <p>Placement Support
                         </p>
                       </div>
                     </AnimatedText>
@@ -488,7 +488,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                         <div className="countba">
 
                           <div> 4.3  <FaStar style={{ fontSize: "20px", color: "#f59d41" }} /></div></div>
-                        <p>student rating</p>
+                        <p>Student Rating</p>
                       </div>
                     </AnimatedText>
 
