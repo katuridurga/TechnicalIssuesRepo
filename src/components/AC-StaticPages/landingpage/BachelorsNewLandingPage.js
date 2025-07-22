@@ -5,9 +5,11 @@ import { FaStar } from "react-icons/fa";
 import PropTypes from 'prop-types';
 import ReactWhatsappButton from "react-whatsapp-button";
 import Marquee from "react-fast-marquee";
+import { CiPhone } from "react-icons/ci";
 import FeaturedProductsb from "../../../content/FeaturedProductsb.js";
+import StudentArtGalleryS from "../../../content/StudentArtGalleryScroll.js";
+
 import r1 from "../../../assets/img/partners/r1.png";
-import artad1 from "../../../assets/img/art/art1.webp"
 import bachg from "../../../assets/img/mobilebanner/bgeneric.webp";
 import r2 from "../../../assets/img/partners/r2.png";
 import r4 from "../../../assets/img/partners/r4.png";
@@ -23,15 +25,7 @@ import lc6 from "../../../assets/img/logos/crackdown3.webp";
 import lc7 from "../../../assets/img/logos/Pac-man.webp";
 import lc8 from "../../../assets/img/logos/Forza7.webp";
 import lc9 from "../../../assets/img/logos/Thetexaschainsawmassacre.webp";
-import art11 from "../../../assets/img/art/Vishnusai.webp"
-import art33 from "../../../assets/img/art/VijaySivatej1.webp"
-import art44 from "../../../assets/img/art/SuryaShankha2.webp"
-import art55 from "../../../assets/img/art/AbhiAstu1.webp"
-import art66 from "../../../assets/img/art/Frame37.webp"
-import art77 from "../../../assets/img/art/Frame19.webp"
-import artad2 from "../../../assets/img/art/render027.webp"
-import art22 from "../../../assets/img/art/Frame28.png"
-import artad3 from "../../../assets/img/art/VijaySivatejMareedu.png"
+
 
 import { Helmet } from "react-helmet";
 
@@ -374,6 +368,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
             </div>
+          
           </div>
 
         </div>
@@ -544,107 +539,76 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <h2 className='mainHeadingTotall-2' style={{color:"#000"}}>Why Choose Backstage Pass?
                 </h2>
               </AnimatedText>
-              <div className='whychooseb'>
-                <ul>
+             <div className='whychooseb'>
+  <ul>
+    <AnimatedText direction={isMobileState ? "up" : "left"} delay={0.2}>
+      <li>
+        <div className=''>
+          <div className='imgmb'>
+            <img src={wc3} alt="wc3" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+          </div>
+          <p className='lsh'>Industry-Aligned Curriculum</p>
+        </div>
+      </li>
+    </AnimatedText>
 
-                  <AnimatedText direction="left" delay={0.2}>
-                    <li>
+    <AnimatedText direction="up" delay={0.2}>
+      <li>
+        <div className=''>
+          <div className='imgmb'>
+            <img src={wc4} alt="wc4" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+          </div>
+          <p className='lsh'>Taught by Industry Experienced Professionals</p>
+        </div>
+      </li>
+    </AnimatedText>
 
-                      <div className=''>
-                        <div className='imgmb'>
-                          <img src={wc3} alt="wc3" height={isMobileState ? "30" : "50"}
-                            width={isMobileState ? "30" : "50"} />
-                        </div>
-                        <p className='lsh'>Industry-Aligned Curriculum</p>
+    <AnimatedText direction="up" delay={0.2}>
+      <li>
+        <div className=''>
+          <div className='imgmb'>
+            <img src={wc5} alt="wc5" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+          </div>
+          <p className='lsh'>Hands-on Training</p>
+        </div>
+      </li>
+    </AnimatedText>
 
-                      </div>
+    <AnimatedText direction={isMobileState ? "up" : "left"} delay={0.2}>
+      <li>
+        <div className=''>
+          <div className='imgmb'>
+            <img src={wc6} alt="wc6" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+          </div>
+          <p className='lsh'>Strong Industry Connections</p>
+        </div>
+      </li>
+    </AnimatedText>
 
+    <AnimatedText direction="up" delay={0.2}>
+      <li>
+        <div className=''>
+          <div className='imgmb'>
+            <img src={wc8} alt="wc8" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+          </div>
+          <p className='lsh'>Access to Free Webinars/Workshops</p>
+        </div>
+      </li>
+    </AnimatedText>
 
-                    </li>
-                  </AnimatedText>
-                  <AnimatedText direction="up" delay={0.2}>
-                    <li>
+    <AnimatedText direction={isMobileState ? "up" : "right"} delay={0.2}>
+      <li>
+        <div className=''>
+          <div className='imgmb'>
+            <img src={wc9} alt="wc9" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+          </div>
+          <p className='lsh'>Global Alumni Community</p>
+        </div>
+      </li>
+    </AnimatedText>
+  </ul>
+</div>
 
-
-                      <div className=''>
-                        <div className='imgmb'>
-                          <img src={wc4} alt="wc4" height={isMobileState ? "30" : "50"}
-                            width={isMobileState ? "30" : "50"} />
-                        </div>
-                        <p className='lsh'>Taught by Industry Experienced Professionals</p>
-
-                      </div>
-
-
-                    </li>
-                  </AnimatedText>
-                  <AnimatedText direction="up" delay={0.2}>
-                    <li>
-
-
-                      <div className=''>
-                        <div className='imgmb'>
-                          <img src={wc5} alt="wc5" height={isMobileState ? "30" : "50"}
-                            width={isMobileState ? "30" : "50"} />
-                        </div>
-                        <p className='lsh'>Hands-on Training</p>
-
-                      </div>
-
-
-                    </li>
-                  </AnimatedText>
-                  <AnimatedText direction="left" delay={0.2}>
-                    <li>
-
-
-                      <div className=''>
-                        <div className='imgmb'>
-                          <img src={wc6} alt="wc6" height={isMobileState ? "30" : "50"}
-                            width={isMobileState ? "30" : "50"} />
-                        </div>
-                        <p className='lsh'>Strong Industry Connections</p>
-
-                      </div>
-
-
-                    </li>
-                  </AnimatedText>
-
-                  <AnimatedText direction="up" delay={0.2}>
-                    <li>
-
-
-                      <div className=''>
-                        <div className='imgmb'>
-                          <img src={wc8} alt="wc8" height={isMobileState ? "30" : "50"}
-                            width={isMobileState ? "30" : "50"} />
-                        </div>
-                        <p className='lsh'>Access to Free Webinars/Workshops</p>
-
-                      </div>
-
-
-                    </li>
-                  </AnimatedText>
-                  <AnimatedText direction="right" delay={0.2}>
-                    <li>
-
-
-                      <div className=''>
-                        <div className='imgmb'>
-                          <img src={wc9} alt="wc9" height={isMobileState ? "30" : "50"}
-                            width={isMobileState ? "30" : "50"} />
-                        </div>
-                        <p className='lsh'>Global Alumni Community</p>
-
-                      </div>
-
-
-                    </li>
-                  </AnimatedText>
-                </ul>
-              </div>
             </section>
             <section className='mainanidiv'><div className="anidiv">
               <a href="#CounsellingOnGamingCareer" className="anidivli fullwidthinline">
@@ -663,7 +627,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 <div className='main-blgba'>
                   <Link to={`/courses/bachelors-in-computer-science-and-game-development/`} >
-                    <AnimatedText direction="left" delay={0.2}>
+                    <AnimatedText direction={isMobileState ? "up" : "left"} delay={0.2}>
 
                       <div className="maindba">
                         <div className="blogba">
@@ -718,7 +682,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 <div className='main-blgba'>
                   <Link to={`/courses/bachelors-in-augmented-reality-and-virtual-reality/`} >
-                    <AnimatedText direction="right" delay={0.2}>
+                    <AnimatedText direction={isMobileState ? "up" : "right"} delay={0.2}>
 
                       <div className="maindba">
                         <div className="blogba">
@@ -752,140 +716,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <AnimatedText direction="up" delay={0.2}>
                   <h2 className="mainHeadingTotall-2">Student Artwork</h2>
                 </AnimatedText>
-                {isMobileState ? <div>
-                  <div>
-                    <AnimatedText>
-                      <ul className='mbimg1g'>
-                        <AnimatedText direction="up" delay={0.2}>
-                          <li><img src={art77} alt="art11" style={{ width: "100%", height: "100%" }} /></li></AnimatedText>
-                        <AnimatedText direction="up" delay={0.2}>
-                          <li className="hover-zoom"><img src={art33} alt="art33" style={{ width: "100%", height: "100%" }} /></li></AnimatedText>
-                        <AnimatedText direction="up" delay={0.2}>
-                          <li className="hover-zoom"><img src={art55} alt="art22" style={{ width: "100%", height: "100%" }} /></li></AnimatedText>
-                        <AnimatedText direction="up" delay={0.2}>
-                          <li className="hover-zoom"><img src={art44} alt="art44" style={{ width: "100%", height: "100%" }} /></li></AnimatedText>
-                        <AnimatedText direction="up" delay={0.2}>
-                          <li className="hover-zoom"><img src={art66} alt="art55" style={{ width: "100%", height: "100%", background: "none", boxShadow: "none" }} /></li></AnimatedText>
-                        <AnimatedText direction="up" delay={0.2}>
-                          <li className="hover-zoom"><img src={art22} alt="art66" style={{
-                            width: "100%", height: "100%", background: "none", boxShadow: "none"
-                          }} /></li></AnimatedText>
-                        <AnimatedText direction="up" delay={0.2}>
-                          <li className="hover-zoom"><img src={artad2} alt="art66" style={{
-                            width: "100%", height: "100%", background: "none", boxShadow: "none"
-                          }} /></li></AnimatedText>   <AnimatedText direction="up" delay={0.2}>
-                          <li className="hover-zoom"><img src={artad1} alt="art66" style={{
-                            width: "100%", height: "100%", background: "none", boxShadow: "none"
-                          }} /></li></AnimatedText>   <AnimatedText direction="up" delay={0.2}>
-                          <li className="hover-zoom"><img src={artad3} alt="art66" style={{
-                            width: "100%", height: "100%", background: "none", boxShadow: "none"
-                          }} /></li></AnimatedText>
-
-                      </ul>
-                    </AnimatedText>
-                  </div>
-                </div> :
-
-                  <div className="containerg">
-
-
-                    <div className="gallery">
-                      <AnimatedText direction="left" delay={0.2}>
-                        <div className="gallery-item">
-
-                          <img className="gallery-image1" src={art77} alt="art77" height="209"
-                            width="372" style={{
-                              transition: "transform 0.3s ease-in-out",
-                            }}
-                            onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
-                            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")} />
-
-                        </div>
-                      </AnimatedText>
-                      <AnimatedText direction="up" delay={0.2}>
-                        <div className="gallery-item">
-                          <img className="gallery-image1" src={art33} alt="art33" height="209"
-                            width="372" style={{
-                              transition: "transform 0.3s ease-in-out",
-                            }}
-                            onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
-                            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")} />
-                        </div>
-                      </AnimatedText>
-                      <AnimatedText direction="right" delay={0.2}>
-                        <div className="gallery-item">
-                          <img className="gallery-image1" src={art55} alt="art55" height="209"
-                            width="372" style={{
-                              transition: "transform 0.3s ease-in-out",
-                            }}
-                            onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
-                            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")} />
-                        </div>
-                      </AnimatedText>
-                      <AnimatedText direction="left" delay={0.2}>
-                        <div className="gallery-item" style={{ background: "none", boxShadow: "none" }} >
-                          <img className="gallery-image1" src={art44} alt="art44" height="470"
-                            width="372" style={{
-                              transition: "transform 0.3s ease-in-out",
-                            }}
-                            onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
-                            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")} />
-                        </div>
-                      </AnimatedText>
-                      <AnimatedText direction="up" delay={0.2}>
-                        <div className="gallery-item" style={{ background: "none", boxShadow: "none" }} >
-                          <img className="gallery-image1" src={art66} alt="art66" height="470"
-                            width="372" style={{
-                              transition: "transform 0.3s ease-in-out",
-                            }}
-                            onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
-                            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")} />
-                        </div>
-                      </AnimatedText>
-                      <AnimatedText direction="right" delay={0.2}>
-                        <div className="gallery-item">
-                          <img className="gallery-image1" src={artad1} alt="art22" height="470"
-                            width="372" style={{
-                              transition: "transform 0.3s ease-in-out",
-                            }}
-                            onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
-                            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")} />
-                        </div>
-                      </AnimatedText>
-                      <AnimatedText direction="left" delay={0.2}>
-                        <div className="gallery-item">
-                          <img className="gallery-image1" src={artad2} alt="art22" height="470"
-                            width="372" style={{
-                              transition: "transform 0.3s ease-in-out",
-                            }}
-                            onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
-                            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")} />
-                        </div>
-                      </AnimatedText>
-                      <AnimatedText direction="up" delay={0.2}>
-                        <div className="gallery-item">
-                          <img className="gallery-image1" src={artad3} alt="art22" height="470"
-                            width="372" style={{
-                              transition: "transform 0.3s ease-in-out",
-                            }}
-                            onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
-                            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")} />
-                        </div>
-                      </AnimatedText>
-                      <AnimatedText direction="right" delay={0.2}>
-                        <div className="gallery-item">
-                          <img className="gallery-image1" src={art22} alt="art22" height="470"
-                            width="372" style={{
-                              transition: "transform 0.3s ease-in-out",
-                            }}
-                            onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
-                            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")} />
-                        </div>
-                      </AnimatedText>
-
-                    </div>
-
-                  </div>}
+                 <StudentArtGalleryS/>
 
               </div>
             </section>
@@ -893,146 +724,98 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               <AnimatedText direction="up" delay={0.2}>
                 <h2 className="mainHeadingTotall-2" style={{ color: "#000" }}>Career Options</h2>
               </AnimatedText>
-              <div className='whychooseb1'>
-                <ul>
+             <div className='whychooseb1'>
+  <ul>
+    <AnimatedText direction={isMobileState ? "up" : "left"} delay={0.2}>
+      <li>
+        <div className=''>
+          <div className='imgmb'>
+            <img src={cc1} alt="ic7" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+          </div>
+          <p className='lsh'>Game Developer (Unity, Unreal, Mobile & Console)</p>
+        </div>
+      </li>
+    </AnimatedText>
 
-                  <AnimatedText direction="left" delay={0.2}>
-                    <li>
+    <AnimatedText direction="up" delay={0.2}>
+      <li>
+        <div className=''>
+          <div className='imgmb'>
+            <img src={cc2} alt="ic13" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+          </div>
+          <p className='lsh'>Gameplay Programmer</p>
+        </div>
+      </li>
+    </AnimatedText>
 
+    <AnimatedText direction={isMobileState ? "up" : "right"} delay={0.2}>
+      <li>
+        <div className=''>
+          <div className='imgmb'>
+            <img src={cc3} alt="ic9" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+          </div>
+          <p className='lsh'>Game Designer (Level, Systems, Mechanics)</p>
+        </div>
+      </li>
+    </AnimatedText>
 
-                      <div className=''>
-                        <div className='imgmb'>
-                          <img src={cc1} alt="ic7" height={isMobileState ? "30" : "50"}
-                            width={isMobileState ? "30" : "50"} />
-                        </div>
-                        <p className='lsh'>Game Developer (Unity, Unreal, Mobile & Console)
-                        </p>
+    <AnimatedText direction={isMobileState ? "up" : "left"} delay={0.2}>
+      <li>
+        <div className=''>
+          <div className='imgmb'>
+            <img src={cc4} alt="ic8" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+          </div>
+          <p className='lsh'>3D Environment Artist</p>
+        </div>
+      </li>
+    </AnimatedText>
 
-                      </div>
+    <AnimatedText direction="up" delay={0.2}>
+      <li>
+        <div className=''>
+          <div className='imgmb'>
+            <img src={cc5} alt="GAIMG5" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+          </div>
+          <p className='lsh'>Character Artist / Animator</p>
+        </div>
+      </li>
+    </AnimatedText>
 
-                    </li>
-                  </AnimatedText>
-                  <AnimatedText direction="up" delay={0.2}>
-                    <li>
+    <AnimatedText direction={isMobileState ? "up" : "right"} delay={0.2}>
+      <li>
+        <div className=''>
+          <div className='imgmb'>
+            <img src={cc6} alt="ic11" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+          </div>
+          <p className='lsh'>UI/UX Designer for Games</p>
+        </div>
+      </li>
+    </AnimatedText>
 
+    <AnimatedText direction={isMobileState ? "up" : "left"} delay={0.2}>
+      <li>
+        <div className=''>
+          <div className='imgmb'>
+            <img src={cc7} alt="ic10" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+          </div>
+          <p className='lsh'>Technical Artist</p>
+        </div>
+      </li>
+    </AnimatedText>
 
-                      <div className=''>
-                        <div className='imgmb'>
-                          <img src={cc2} alt="ic13" height={isMobileState ? "30" : "50"}
-                            width={isMobileState ? "30" : "50"} />
-                        </div>
-                        <p className='lsh'>Gameplay Programmer
-                        </p>
+    <AnimatedText direction="up" delay={0.2}>
+      <li>
+        <div className=''>
+          <div className='imgmb'>
+            <img src={cc8} alt="ic12" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+          </div>
+          <p className='lsh'>AR/VR Developer / Designer</p>
+        </div>
+      </li>
+    </AnimatedText>
+  </ul>
+</div>
 
-                      </div>
-                    </li>
-
-                  </AnimatedText>
-                  <AnimatedText direction="right" delay={0.2}>
-                    <li>
-
-
-                      <div className=''>
-                        <div className='imgmb'>
-                          <img src={cc3} alt="ic9" height={isMobileState ? "30" : "50"}
-                            width={isMobileState ? "30" : "50"} />
-                        </div>
-                        <p className='lsh'>Game Designer (Level, Systems, Mechanics)
-                        </p>
-
-                      </div>
-
-                    </li>
-
-                  </AnimatedText>
-                  <AnimatedText direction="left" delay={0.2}>
-                    <li>
-
-
-                      <div className=''>
-                        <div className='imgmb'>
-                          <img src={cc4} alt="ic8" height={isMobileState ? "30" : "50"}
-                            width={isMobileState ? "30" : "50"} />
-                        </div>
-                        <p className='lsh'>3D Environment Artist
-                        </p>
-
-                      </div>
-
-
-                    </li>
-                  </AnimatedText>
-                  <AnimatedText direction="up" delay={0.2}>
-                    <li>
-
-
-                      <div className=''>
-                        <div className='imgmb'>
-                          <img src={cc5} alt="GAIMG5" height={isMobileState ? "30" : "50"}
-                            width={isMobileState ? "30" : "50"} />
-                        </div>
-                        <p className='lsh'>Character Artist / Animator
-                        </p>
-
-                      </div>
-
-
-                    </li>
-                  </AnimatedText>
-                  <AnimatedText direction="right" delay={0.2}>
-                    <li>
-
-
-                      <div className=''>
-                        <div className='imgmb'>
-                          <img src={cc6} alt="ic11" height={isMobileState ? "30" : "50"}
-                            width={isMobileState ? "30" : "50"} />
-                        </div>
-                        <p className='lsh'>UI/UX Designer for Games
-                        </p>
-
-                      </div>
-
-
-                    </li>
-                  </AnimatedText>
-                  <AnimatedText direction="left" delay={0.2}>
-                    <li>
-
-
-                      <div className=''>
-                        <div className='imgmb'>
-                          <img src={cc7} alt="ic10" height={isMobileState ? "30" : "50"}
-                            width={isMobileState ? "30" : "50"} />
-                        </div>
-                        <p className='lsh'>Technical Artist
-                        </p>
-
-                      </div>
-
-
-                    </li>
-                  </AnimatedText>
-                  <AnimatedText direction="up" delay={0.2}>
-
-                    <li>
-
-                      <div className=''>
-                        <div className='imgmb'>
-                          <img src={cc8} alt="ic12" height={isMobileState ? "30" : "50"}
-                            width={isMobileState ? "30" : "50"} />
-                        </div>
-                        <p className='lsh'>AR/VR Developer / Designer
-
-                        </p>
-
-                      </div>
-
-
-                    </li>
-                  </AnimatedText>
-                </ul>
-              </div>
             </section>
 
             <section style={{ overflow: "hidden" }}>
@@ -1301,6 +1084,39 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       </div>
                     </AnimatedText>
                   </div>
+                                      <AnimatedText direction="left" delay={0.2}>
+
+                    <div className="foot-itembn fadeInUp anime-delay3">
+                       <div className="leftcb">
+                                    <p>Contact Info</p></div>
+                                    <div className="contact-wrapperbn">
+                                    <div className="cont1">
+                                      <div className="contact-wrapper-innerbn">
+            
+                                       
+            
+                                          <CiPhone className="iconsmain" />
+                                          <div><p> <a href="tel:8008002794" className="phone-number" rel="noopener noreferrer"> +91-8008002794</a></p>
+                                          </div>
+                                      </div>
+                                      </div>
+                                      <div className="cont1">
+                                      <div className="contact-wrapper-innerbn">
+            
+                                       
+                                          <CiPhone className="iconsmain" />
+                                          <div>
+                                          <p> <a href="tel:8008002795" className="phone-number" rel="noopener noreferrer"> +91-8008002795</a></p>
+                                          </div>
+            
+                                        
+                                      </div>
+                                      </div>
+            
+                                    </div>
+                                  
+                                  </div>
+                                     </AnimatedText>
                 </div>
                 <AnimatedText direction="up" delay={0.2}>
                   <div className="rightcb">
@@ -1474,6 +1290,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   </div>
                 </AnimatedText>
               </div>
+                <AnimatedText direction="up" delay={0.2}>
+                 <div className="text-center foot-content fadeInUp anime-delay2" id="pvrnm" style={{color:"#fff",height:"136px",display:"flex",alignItems:"center",justifyContent:"center"}}>© A Subsidiary of PVR Memorial Educational Society 2025. All Rights Reserved</div>
+                 </AnimatedText>
             </section>
 
           </div>

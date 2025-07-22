@@ -278,6 +278,12 @@
     margin-right: 0px !important;
     margin-left: 6%;
   }
+  #pvrnm{
+    display: none !important;
+  }
+  .foot-itembn {
+    display :none !important;
+}
 
   .testimonial-slider {
     display: flex;
@@ -438,4 +444,38 @@
     z-index: 1;
     border-radius: 8px;
   }
+}
+.foot-itembn {
+    margin-left: 0px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10%;
+}
+.contact-wrapperbn {
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+}
+.contact-wrapper-innerbn {
+    display: flex;
+    align-items: center;
+}
+.contact-wrapper-innerbn .iconsmain, .contact-wrapper-innerbn a {
+    color: rgb(255, 255, 255);
+}
+.foot-itembn p {
+    margin: 7px 0px;
+}
+.contact-wrapper-innerbn p a {
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: 500;
+}
+.contact-wrapper-innerbn svg {
+    font-size: 30px;
+    margin-right: 10px;
 }

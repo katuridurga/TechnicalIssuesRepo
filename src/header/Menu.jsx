@@ -15,6 +15,7 @@ import Fade from '@mui/material/Fade';
 import { Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 import ScrollToTop from "react-scroll-to-top";
 
+import { useSelector, shallowEqual } from "react-redux";
 
 
 
@@ -229,10 +230,10 @@ function Menu(props) {
 
   
 
-  // const isMobileState = useSelector(
-  //   state => state.mainReducer.isMobile,
-  //   shallowEqual
-  // );
+  const isMobileState = useSelector(
+    state => state.mainReducer.isMobile,
+    shallowEqual
+  );
 
   const toolbarStyle = {
     minHeight: '80px',
@@ -735,7 +736,7 @@ function Menu(props) {
 
             </React.Fragment>  
         <BachelorsNewLandingPage />
-        <Footer />
+       {isMobileState && <Footer />}
         <ScrollToTop
         smooth
         top={100}
