@@ -10,6 +10,8 @@ import r4 from "../../../assets/img/partners/r4.png";
 import r5 from "../../../assets/img/partners/r5.png";
 import r6 from "../../../assets/img/partners/r6.svg";
 import r7 from "../../../assets/img/partners/r7.png";
+import artad1 from "../../../assets/img/art/art1.webp";
+import MscGameTechnology3d from "../../../assets/img/Courses/3dgameartandgamedesign.webp"
 import GAIMG from "../../../assets/img/partners/Icons/3DModelingenthusiast.webp";
 import GAIMG1 from "../../../assets/img/partners/Icons/AFineArtsstudent.webp";
 import GAIMG2 from "../../../assets/img/partners/Icons/AnArtEnthusiast.webp";
@@ -702,10 +704,13 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 >
                   <Tab style={{ color: "#fff", fontSize: isMobileState ? "11px" : "15px", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center", width: isMobileState ? "23%" : "auto" }} label="Bachelor's" />
-
+<Tab style={{ color: "#fff", fontSize: isMobileState ? "11px" : "15px", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center" }} label="Master's" />
                   <Tab style={{ color: "#fff", fontSize: isMobileState ? "11px" : "15px", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center" }} label="Advanced Diploma Courses" />
                   <Tab style={{ color: "#fff", fontSize: isMobileState ? "11px" : "15px", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center" }} label="Diploma Courses" />
+                    
                 </Tabs>
+               
+           
 
                 <TabPanel value={value1} index={0} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
                   <div className='courseUpdatesl'>
@@ -735,8 +740,34 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 </TabPanel>
 
+ <TabPanel value={value1} index={1} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
+                  <div className='courseUpdatesl'>
+                    <ul>
+                      <li><img src={m1} alt="Duration icon" />
+                        <span>Duration: 2 Years</span></li>
+                      <li><img src={m2} alt="Eligibility icon" />
+                        <span>Eligibility: Any Graduation</span></li>
 
-                <TabPanel value={value1} index={1} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
+
+                    </ul>
+                  </div>
+                  <Link to={"/courses/masters-in-3d-game-art-design/"}>
+                    <div className="mainCourse1" style={{ marginBottom: "-14px" }}>
+                      <div className="mainCourseLeft1">
+                        <img src={MscGameTechnology3d} alt="MASTER’Sin3DGameArt&GameDesign" className="img-circle" />
+                      </div>
+                      <div className="mainCourseRight1">
+                        <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>MASTER’S in 3D Game Art & Game Design </h2>
+                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>Looking for a master's degree in game design? If you're passionate about 3D modeling, texturing, and animation, this course is perfect for turning your artistic skills into a successful career in the gaming industry. From sketching concepts to creating game-ready assets, you’ll develop both creative and technical skills to work in top gaming studios. Learn to create meaningful and engaging gameplay experiences through hands-on projects and industry-standard tools.
+                        </p>
+
+                      </div>
+                    </div>
+                  </Link>
+
+
+                </TabPanel>
+                <TabPanel value={value1} index={2} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
                   <div className='courseUpdatesl'>
                     <ul>
                       <li><img src={m1} alt="Duration icon" />
@@ -764,7 +795,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 </TabPanel>
 
-                <TabPanel value={value1} index={2} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
+                <TabPanel value={value1} index={3} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
                   <div className='courseUpdatesl'>
                     <ul>
                       <li><img src={m1} alt="Duration icon" />
@@ -791,6 +822,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
                 </TabPanel>
+ 
 
                 <div className='toolsa'>
                   <h2 className='mainHeadingTotall-2'>Essential concepts you’ll explore:
@@ -889,7 +921,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   <ul className='mbimg1g'>
                     <li><img src={art11} alt="art11" style={{ width: "100%", height: "100%" }} /></li>
                     <li><img src={art33} alt="art33" style={{ width: "100%", height: "100%" }} /></li>
-                    <li><img src={art22} alt="art22" style={{ width: "100%", height: "100%" }} /></li>
+                    <li><img src={artad1} alt="artad1" style={{ width: "100%", height: "100%" }} /></li>
                     <li><img src={art44} alt="art44" style={{ width: "100%", height: "100%" }} /></li>
                     <li><img src={art55} alt="art55" style={{ width: "100%", height: "100%" }} /></li>
                     <li><img src={art66} alt="art66" style={{ width: "100%", height: "100%" }} /></li>
@@ -930,7 +962,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                     </div>
 
                     <div className="gallery-item">
-                      <img className="gallery-image" src={art22} alt="art22" height="470"
+                      <img className="gallery-image" src={artad1} alt="artad1" height="470"
                         width="372" />
                     </div>
 
@@ -1280,7 +1312,15 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
 
+   <div className="App">
+        <ReactWhatsappButton
+          countryCode="91"
+          phoneNumber="8977945705"
+          style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-1rem" : "-1rem", zIndex: "11111" }}
+          className="whatsappsivak"
+        />
 
+      </div>
             <div className="footerin" style={{ height: "160px", padding: "30px" }}>
               <div className="text-center foot-content fadeInUp anime-delay2" style={{ display: 'flex', alignItems: "center", justifyContent: "center", color: "#fff" }}>© A Subsidiary of PVR Memorial Educational Society 2025. All Rights Reserved</div>
             </div>
@@ -1292,15 +1332,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       </div>
       {isButtonVisible && (
         <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>)}
- <div className="App">
-                      <ReactWhatsappButton
-                        countryCode="91"
-                        phoneNumber="8977945705"
-                        style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-10rem" : "5rem", zIndex:"11111" }}
-                        className="whatsappsivak"
-                      />
-                      
-                  </div>
+
     </>
   )
 }

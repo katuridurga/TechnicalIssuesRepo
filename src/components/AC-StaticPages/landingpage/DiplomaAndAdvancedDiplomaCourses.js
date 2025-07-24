@@ -9,6 +9,7 @@ import { Helmet } from "react-helmet";
 
 import axios from 'axios';
 import { BsDot } from "react-icons/bs";
+import ReactWhatsappButton from "react-whatsapp-button";
 import FeaturedProducts1 from "../../../content/FeaturedProducts1.js";
 import { useSelector, shallowEqual } from "react-redux";
 import StickyBox from "react-sticky-box";
@@ -938,7 +939,15 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
         </div>
       </div>
+<div className="App">
+        <ReactWhatsappButton
+          countryCode="91"
+          phoneNumber="8977945705"
+          style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-7rem" : "-1rem", zIndex: "11111" }}
+          className="whatsappsivak"
+        />
 
+      </div>
 
     </>
   )

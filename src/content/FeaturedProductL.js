@@ -26,14 +26,7 @@ function Testimonials() {
 
 
 
-
-
-            <h2 className="mainHeadingTotall-2">What Our Alumni Say</h2>
-            <div className="v-c-p700 text-shadow-dp500 text-txt60">
-
-            </div>
-
-            <div className="container-full">
+            <div className="">
 
               <EmblaCarouselTestimonilasLanding slides={SLIDES} options={OPTIONS} />
             </div>

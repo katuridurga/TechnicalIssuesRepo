@@ -4,16 +4,11 @@ import rajath from '../assets/img/test/rajatojha.webp'
 import sridar from '../assets/img/test/.webp'
 import navin from '../assets/img/test/navinmandal.webp'
 import kash from '../assets/img/test/kashyapreddy.webp'
-import satish from '../assets/img/test/SatishChandra.webp'
-import harshni from '../assets/img/test/HarshiniIsvi.webp'
 import asar from '../assets/img/test/Asar.webp'
 import anshul from '../assets/img/test/AnshulSoni.webp'
 import jithin from '../assets/img/test/JithinPeter.webp'
 import sushil from '../assets/img/test/SushilGeorge.webp'
 import anand from '../assets/img/test/AnandDhwale.webp'
-import piyush from '../assets/img/test/PiyushSain.webp'
-import shubham from '../assets/img/test/ShubhamNandwani.webp'
-import kesav from '../assets/img/test/kesav.webp'
 
 import {
   NextButton,
@@ -204,30 +199,7 @@ const EmblaCarousel = (props) => {
               </div>
             </div>
           </div>
-          <div className="embla__slidet" key={13}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><img src={piyush} width="150" height="150" className="testimonial-image" alt="piyush" /></div>
-                      <div className="ribbon1 ribbon-new1"><span>Student</span></div>
-                      <div className="tcontent">
-                      <h4 className="author-name">Piyush Sain
-                      </h4>
-                      <h6 className='author-designation'>2D Artist, Ubisoft, Pune
-
-</h6>
-                        <p className="testimonial-paragraph">"Backstage Pass with the support from their highly experienced faculties, gave me the opportunity of collaborating with an actual multidisciplinary game development project. From stages of concept and game design through production, every lesson taught was worth it."</p>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      
           <div className="embla__slidet" key={11}>
             <div className="embla__slide__number">
               <div className="testimonial-slide w-slide">
@@ -252,34 +224,7 @@ const EmblaCarousel = (props) => {
               </div>
             </div>
           </div>
-          <div className="embla__slidet" key={14}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><img src={shubham} width="150" height="150" className="testimonial-image" alt="subham" /></div>
-                      <div className="ribbon1 ribbon-new1"><span>Student</span></div>
-
-                      <div className="tcontent">
-                      <h4 className="author-name">Keshav Sharma
-
-
-                      </h4>
-                      <h6 className='author-designation'>Unity Programmer, Gamitronics
-
-
-
-</h6>
-                        <p className="testimonial-paragraph">"My experience at Backstage Pass has been great. During my PG Diploma course, I learned under the guidance of the finest out there in the industry. There were challenges in everyday tasks that made my mind think of overcoming them by seeing them with a new perspective. All this has been possible due to the intensive work with hands-on experience in every aspect that was introduced. The course, my instructors, and in all, Backstage Pass has fully prepared me for the industry. Thank you for this wonderful opportunity."</p>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      
           <div className="embla__slidet" key={3}>
             <div className="embla__slide__number">
               <div className="testimonial-slide w-slide">
@@ -349,49 +294,9 @@ const EmblaCarousel = (props) => {
             </div>
           </div>
 
-          <div className="embla__slidet" key={5}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><img src={satish} width="150" height="150" className="testimonial-image" alt="satish" /></div>
-                      <div className="ribbon1 ribbon-new1"><span>Student</span></div>
-
-                      <div className="tcontent">
-                      <h4 className="author-name">Satish Chandra</h4>
-                      <h6 className='author-designation'>CEO & Founder, TeaPot Games</h6>
-                        <p className="testimonial-paragraph">"Backstage Pass really helped me in my transition to become a Game Developer. It helped me a lot with the concepts of game engines, game programming concepts, game design etc. by industry experts."</p>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+         
           
-          <div className="embla__slidet" key={6}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><img src={harshni} width="150" height="150" className="testimonial-image" alt="harshni" /></div>
-                      <div className="ribbon1 ribbon-new1"><span>Student</span></div>
-
-                      <div className="tcontent">
-                      <h4 className="author-name">Harshini Isvi</h4>
-                      <h6 className='author-designation'>Concept Artist, Ivy Comptech, Hyderabad</h6>
-                        <p className="testimonial-paragraph">"Being a girl in this industry was challenging but Backstage Pass helped me grow into it with highly experienced mentors and with its contacts in the industry, helped to build a portfolio that suits the industry requirements."</p>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    
           
           {/* <div className="embla__slidet" key={7}>
             <div className="embla__slide__number">

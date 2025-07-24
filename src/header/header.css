@@ -357,6 +357,10 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .mainrec22 img{
+    width:100%;
+   
+  }
   .courseUpdatess ul li {
     border: 2px solid #222;
     height: auto !important;
@@ -3136,10 +3140,6 @@ div.et_pb_section.et_pb_section_0 {
   height: 430px;
 }
 
-.bscadv {
-  background-image: url(./../assets/img/banners/adv-dipolma.webp) !important;
-  height: 600px;
-}
 
 .lga {
   background-image: url(./../assets/img/banners/Game-Art.webp) !important;
@@ -3331,11 +3331,74 @@ div.et_pb_section.et_pb_section_0 {
 }
 
 
-.Unreal-Developer {
+/* .Unreal-Developer {
   background-image: url(./../assets/img/banners/Unreal-Developer.webp) !important;
   height: 600px;
   background-size: cover !important;
+} */
+ /* Default desktop style (1366px and above) */
+.Unreal-Developer {
+  background-image: url(./../assets/img/banners/Unreal-Developer.webp) !important;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100% !important;
 }
+.bscadv {
+  background-image: url(./../assets/img/banners/adv-dipolma.webp) !important;
+  height: 600px;
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100% !important;
+}
+.masterd1 {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 100%, #0a0a0a 100%), url(./../assets/img/banners/masterd.webp) !important;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100% !important;
+}
+
+/* For large desktops: 1920x1080 and up */
+@media screen and (min-width: 1600px) {
+  .bscadv {
+  background-image: url(./../assets/img/banners/adv-dipolma.webp) !important;
+  height: 800px;
+  background-size:none !important;
+}
+.masterd1 {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 100%, #0a0a0a 100%), url(./../assets/img/banners/masterd.webp) !important;
+   height: 800px;
+  background-size:none !important;
+}
+  .Unreal-Developer {
+    height: 1000px;
+    background-size:none !important;
+  }
+
+}
+
+/* For 1440px to 1599px */
+@media screen and (min-width: 1440px) and (max-width: 1599px) {
+  .Unreal-Developer {
+    height: 700px;
+  }
+}
+
+/* For 1366x768 */
+@media screen and (min-width: 1366px) and (max-width: 1439px) {
+  .Unreal-Developer {
+    height: 600px;
+  }
+}
+
+/* For smaller desktop (1024px to 1365px) */
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+  .Unreal-Developer {
+    height: 500px;
+  }
+}
+
 
 .Unreal-Developerm {
   background-image: url(./../assets/img/banners/Unreal-Developerm.webp) !important;
@@ -3546,11 +3609,6 @@ div.et_pb_section.et_pb_section_0 {
 
 }
 
-.masterd1 {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 100%, #0a0a0a 100%), url(./../assets/img/banners/masterd.webp) !important;
-  height: 600px;
-  background-size: contain !important;
-}
 
 .ribbon {
   position: absolute;
@@ -5026,6 +5084,10 @@ video {
 
 .mainrec22g {
   margin-top: 9px;
+}
+.mainrec22g img{
+ width: 100%;
+ height: auto;
 }
 
 .mainrec22s {
@@ -8589,3 +8651,7 @@ td p {
     font-size: 14px;
   }
 }
+ .mainrec22 img{
+    width:100%;
+   height: auto;
+  }

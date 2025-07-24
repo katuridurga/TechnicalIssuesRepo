@@ -1,377 +1,251 @@
-import React, { useCallback, useEffect, useRef } from 'react'
-import { useSelector, shallowEqual } from "react-redux";
-import useEmblaCarousel from 'embla-carousel-react'
-import satish from '../assets/img/test/SatishChandra.webp'
-import harshni from '../assets/img/test/HarshiniIsvi.webp'
-import asar from '../assets/img/test/Asar.webp'
-import jithin from '../assets/img/test/JithinPeter.webp'
-import sushil from '../assets/img/test/SushilGeorge.webp'
-import anand from '../assets/img/test/AnandDhwale.webp'
-import piyush from '../assets/img/test/PiyushSain.webp'
-import shubham from '../assets/img/test/ShubhamNandwani.webp'
+import React, { useState, useRef, useEffect } from "react";
+import "./testimonialslidersmall.css";
+import AnimatedText from "../components/AC-StaticPages/landingpage/AnimatedText";
 
-import {
-  NextButton,
-  PrevButton,
-  usePrevNextButtons
-} from './EmblaCarouselArrowButtonsTest'
-import { useDotButton } from './EmblaCarouselDotButton'
+const testimonials = [
+  {
+    text: "From being a student in the first batch of Backstage Pass to being a mentor later, I have seen BSP grow from a small ambitious game development & game design institute to a full-fledged gaming college. With the game industry's continued growth and future potential, I'm certain they're on the right track to impart the right knowledge and skills to produce competent professionals.",
+    name: "Sushil George",
+    role: "Sr. Game Developer, Product Madness, London, UK",
+    avatar: "https://www.backstagepass.co.in/SushilGeorge-028c91ea.webp?img=1",
+  },
+
+  {
+    text: "Backstage Pass brings the like-minded under a single roof. Our courses related to game development & game design were custom- tailored to meet the requirements of the game industry and I feel it is the right place to start for a successful career in the game industry.",
+    name: "Jithin Peter",
+    role: "Sr. Game Programmer, sumo digital, Bangalore",
+    avatar: "https://www.backstagepass.co.in/JithinPeter-bd2017d7.webp?img=4",
+  },
+  {
+    text: "One of the best aspects of Backstage Pass is that it gives you the option to interact with a lot of individuals who have a strong interest in game development and the freedom to work together with students from other streams, such as design or art, to create incredible outcomes.",
+    name: "Anand Dhavle",
+    role: "Gameplay Programmer, Tarsier Studios, Sweden",
+    avatar: "https://www.backstagepass.co.in/AnandDhwale-da6efb8f.webp?img=5",
+  },
+ 
+
+  {
+    text: "While doing my Graduation at Backstage Pass, I started my own Game studio Seven Summits with the help of this gaming college. We learned concepts related to Game Art, Game Design, Level design, etc. from Industry Experts. In order to mark your footprint in the game industry, Backstage Pass is the best place to start.",
+    name: "Asar Dhandala",
+    role: "Founder/ Game Designer/ Producer, Seven Summits",
+    avatar: "https://backstagepass.co.in/Asar-268f6887.webp?img=9",
+  },
+
+ 
+];
+
+const Testimonials = () => {
+  const scrollRef = useRef();
+  const [activePage, setActivePage] = useState(0);
+  const [cardsPerPage, setCardsPerPage] = useState(2);
+  const [scrollWidth, setScrollWidth] = useState(0);
+  const [expandedCards, setExpandedCards] = useState({});
+  const maxVisibleDots = 4;
+
+  const getVisibleDotRange = () => {
+    if (window.innerWidth >= 768) {
+      // Desktop: show all dots
+      return Array.from({ length: totalPages }, (_, i) => i);
+    }
+
+    let start = Math.max(0, activePage - Math.floor(maxVisibleDots / 2));
+    let end = start + maxVisibleDots;
+    if (end > totalPages) {
+      end = totalPages;
+      start = Math.max(0, end - maxVisibleDots);
+    }
+
+    return Array.from({ length: end - start }, (_, i) => start + i);
+  };
+  const updateLayout = () => {
+  const screenWidth = window.innerWidth;
+
+   if (screenWidth < 768) {
+    setCardsPerPage(1); // ✅ Only 1 card per page on mobile
+    setScrollWidth(screenWidth); // ✅ Set scroll width exactly as the viewport
+  } else {
+    setCardsPerPage(2);
+    setScrollWidth(500 * 2 + 20 * 2); // You can fine-tune this for desktop spacing
+  }
 
 
-const TWEEN_FACTOR_BASE = 0.00
+};
 
-const numberWithinRange = (number, min, max) =>
-  Math.min(Math.max(number, min), max)
-
-const EmblaCarousel = (props) => {
-  const { options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
-  const tweenFactor = useRef(0)
-  const tweenNodes = useRef([])
-
-  const { } =
-    useDotButton(emblaApi)
-
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick
-  } = usePrevNextButtons(emblaApi)
-
-  const setTweenNodes = useCallback((emblaApi) => {
-    tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
-      return slideNode.querySelector('.embla__slide__number')
-    })
-  }, [])
-
-  const setTweenFactor = useCallback((emblaApi) => {
-    tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
-  }, [])
-
-  const tweenScale = useCallback((emblaApi, eventName) => {
-    const engine = emblaApi.internalEngine()
-    const scrollProgress = emblaApi.scrollProgress()
-    const slidesInView = emblaApi.slidesInView()
-    const isScrollEvent = eventName === 'scroll'
-
-    emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
-      let diffToTarget = scrollSnap - scrollProgress
-      const slidesInSnap = engine.slideRegistry[snapIndex]
-
-      slidesInSnap.forEach((slideIndex) => {
-        if (isScrollEvent && !slidesInView.includes(slideIndex)) return
-
-        if (engine.options.loop) {
-          engine.slideLooper.loopPoints.forEach((loopItem) => {
-            const target = loopItem.target()
-
-            if (slideIndex === loopItem.index && target !== 0) {
-              const sign = Math.sign(target)
-
-              if (sign === -1) {
-                diffToTarget = scrollSnap - (1 + scrollProgress)
-              }
-              if (sign === 1) {
-                diffToTarget = scrollSnap + (1 - scrollProgress)
-              }
-            }
-          })
-        }
-
-        const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current)
-        const scale = numberWithinRange(tweenValue, 0, 1).toString()
-        const tweenNode = tweenNodes.current[slideIndex]
-        tweenNode.style.transform = `scale(${scale})`
-      })
-    })
-  }, [])
 
   useEffect(() => {
-    if (!emblaApi) return
+  updateLayout();
+  window.addEventListener("resize", updateLayout);
 
-    setTweenNodes(emblaApi)
-    setTweenFactor(emblaApi)
-    tweenScale(emblaApi)
+  // Reset to first page
+  if (scrollRef.current) {
+    scrollRef.current.scrollLeft = 0;
+  }
 
-    emblaApi
-      .on('reInit', setTweenNodes)
-      .on('reInit', setTweenFactor)
-      .on('reInit', tweenScale)
-      .on('scroll', tweenScale)
-      .on('slideFocus', tweenScale)
-  }, [emblaApi, setTweenFactor, setTweenNodes, tweenScale])
+  return () => window.removeEventListener("resize", updateLayout);
+}, []);
 
-  const isMobileState = useSelector(
-    state => state.mainReducer.isMobile,
-    shallowEqual
-  );
+
+  const totalPages = Math.ceil(testimonials.length / cardsPerPage);
+
+  const toggleExpand = (index) => {
+    setExpandedCards((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
+  const scrollToPage = (pageIndex) => {
+    const container = scrollRef.current;
+    container.scrollTo({
+      left: pageIndex * scrollWidth,
+      behavior: "smooth",
+    });
+    setActivePage(pageIndex);
+  };
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    const handleScroll = () => {
+      const index = Math.round(container.scrollLeft / scrollWidth);
+      setActivePage(index);
+    };
+    container.addEventListener("scroll", handleScroll);
+    return () => container.removeEventListener("scroll", handleScroll);
+  }, [scrollWidth]);
+
+  // Swipe support
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
+  const startTime = useRef(0);
+  const lastX = useRef(0);
+
+  const onPointerDown = (xPos) => {
+    isDragging.current = true;
+    startX.current = xPos - scrollRef.current.offsetLeft;
+    scrollLeft.current = scrollRef.current.scrollLeft;
+    startTime.current = Date.now();
+    lastX.current = xPos;
+    scrollRef.current.style.cursor = "grabbing";
+  };
+
+  const onPointerMove = (xPos) => {
+    if (!isDragging.current) return;
+    const walk = (xPos - startX.current) * 1.5;
+    scrollRef.current.scrollLeft = scrollLeft.current - walk;
+    lastX.current = xPos;
+  };
+
+  const onPointerUp = () => {
+    if (!isDragging.current) return;
+    isDragging.current = false;
+    scrollRef.current.style.cursor = "grab";
+
+    const deltaTime = Date.now() - startTime.current;
+    const deltaX = lastX.current - startX.current;
+    const velocity = deltaX / deltaTime;
+
+    const currentScroll = scrollRef.current.scrollLeft;
+    const currentPage = Math.round(currentScroll / scrollWidth);
+
+    if (velocity > 0.3) {
+      scrollToPage(Math.max(currentPage - 1, 0));
+    } else if (velocity < -0.3) {
+      scrollToPage(Math.min(currentPage + 1, totalPages - 1));
+    } else {
+      scrollToPage(currentPage);
+    }
+  };
+
+  const onMouseDown = (e) => onPointerDown(e.pageX);
+  const onMouseMove = (e) => {
+    if (!isDragging.current) return;
+    e.preventDefault();
+    onPointerMove(e.pageX);
+  };
+  const onMouseUp = () => onPointerUp();
+  const onMouseLeave = () => onPointerUp();
+  const onTouchStart = (e) => onPointerDown(e.touches[0].pageX);
+  const onTouchMove = (e) => {
+    if (!isDragging.current) return;
+    onPointerMove(e.touches[0].pageX);
+  };
+  const onTouchEnd = () => onPointerUp();
+
+  const fullPagesOnly = testimonials;
+
   return (
-    <div className="embla3" style={{ maxWidth: isMobileState ? '100%' : '100%' }}>
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
+    <section className="testimonial-sectiontn">
+     
 
-          <div className="embla__slidetL" key={14}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block lefthd">
-                      <div className='left lefth'>
-                        <div className="tnameh"><img src={shubham} width="300" height="300" className="testimonial-imageh" alt="subham" /></div></div>
-
-                      <div className='right'>
-                        <div className="tcontenth">
-
-                          <p className="testimonial-paragraphs">"My experience at Backstage Pass has been great. During my PG Diploma course, I learned under the guidance of the finest out there in the industry. There were challenges in everyday tasks that made my mind think of overcoming them by seeing them with a new perspective. All this has been possible due to the intensive work with hands-on experience in every aspect that was introduced. The course, my instructors, and in all, Backstage Pass has fully prepared me for the industry. Thank you for this wonderful opportunity."     <h4 className="author-names">Keshav Sharma
-
-
-                          </h4>
-                            <h6 className='author-designations'>Unity Programmer, Gamitronics
-
-
-
-                            </h6></p>
-
-                        </div>
+      <div className="testimonial-slider-wrappertn">
+        <div
+          className="testimonial-slidertn"
+          ref={scrollRef}
+          style={{ cursor: "grab" }}
+          onMouseDown={onMouseDown}
+          onMouseMove={onMouseMove}
+          onMouseUp={onMouseUp}
+          onMouseLeave={onMouseLeave}
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
+          <div className="testimonial-slider-innertn">
+            {fullPagesOnly.map((item, index) => {
+              const isExpanded = expandedCards[index] || false;
+              return (
+                <AnimatedText direction="up" delay={0.2} key={index}>
+                  <div
+                    className="testimonial-cardtn"
+                    style={{
+                      flex: `0 0 ${100 / cardsPerPage}%`,
+                      maxWidth: `${100 / cardsPerPage}%`,
+                    }}
+                  >
+                    <h4>
+                      {item.title} <span>”</span>
+                    </h4>
+                    <p className={`testimonial-text ${isExpanded ? "expanded" : ""}`}>
+                      {item.text}
+                    </p>
+                    {item.text.split(" ").length > 30 && (
+                      <button
+                        className="show-more-btn"
+                        onClick={() => toggleExpand(index)}
+                      >
+                        {isExpanded ? "Show Less" : "Show More"}
+                      </button>
+                    )}
+                    <div className="testimonial-profile">
+                      <img src={item.avatar} alt={item.name} />
+                      <div>
+                        <strong>{item.name}</strong>
+                        <p>{item.role}</p>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
+                </AnimatedText>
+              );
+            })}
           </div>
-
-
-          <div className="embla__slidetL" key={10}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block lefthd">
-                      <div className='left lefth'>
-                        <div className="tnameh"><img src={jithin} width="300" height="300" className="testimonial-imageh" alt="jithin" /></div></div>
-                      <div className='right'>
-                        <div className='right'>
-                          <div className="tcontenth">
-
-                            <p className="testimonial-paragraphs">"Backstage Pass brings the like-minded under a single roof. Our courses related to game development & game design were custom- tailored to meet the requirements of the game industry and I feel it is the right place to start for a successful career in the game industry."        <h4 className="author-names">Jithin Peter</h4>
-                              <h6 className='author-designations'>Sr. Game Programmer, Sumo Video Games, Bangalore
-
-                              </h6></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="embla__slidetL" key={12}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block lefthd">
-                      <div className='left lefth'>
-                        <div className="tnameh"><img src={anand} width="300" height="300" className="testimonial-imageh" alt="anand" /></div></div>
-
-                      <div className='right'>
-                        <div className="tcontenth">
-
-                          <p className="testimonial-paragraphs">"One of the best aspects of Backstage Pass is that it gives you the option to interact with a lot of individuals who have a strong interest in game development and the freedom to work together with students from other streams, such as design or art, to create incredible outcomes." <h4 className="author-names">Anand Dhavle
-                          </h4>
-                            <h6 className='author-designation'>Gameplay Programmer, Tarsier Studios, Sweden
-
-                            </h6></p>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="embla__slidetL" key={13}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block lefthd">
-                      <div className='left lefth'>
-                        <div className="tnameh"><img src={piyush} width="300" height="300" className="testimonial-imageh" alt="piyush" /></div></div>
-
-                      <div className='right'>
-                        <div className="tcontenth">
-
-                          <p className="testimonial-paragraphs">"Backstage Pass with the support from their highly experienced faculties, gave me the opportunity of collaborating with an actual multidisciplinary game development project. From stages of concept and game design through production, every lesson taught was worth it." <h4 className="author-names">Piyush Sain
-                          </h4>
-                            <h6 className='author-designations'>2D Artist, Ubisoft, Pune
-
-                            </h6></p>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="embla__slidetL" key={11}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block lefthd">
-                      <div className='left lefth'>
-                        <div className="tnameh"><img src={sushil} width="300" height="300" className="testimonial-imageh" alt="sushil" /></div></div>
-
-                      <div className='right'>
-                        <div className="tcontenth">
-
-                          <p className="testimonial-paragraphs">"From being a student in the first batch of Backstage Pass to being a mentor later, I have seen BSP grow from a small ambitious game development & game design institute to a full-fledged gaming college. With the game industry's continued growth and future potential, I'm certain they're on the right track to impart the right knowledge and skills to produce competent professionals." <h4 className="author-names">Sushil George
-                          </h4>
-                            <h6 className='author-designations'>Sr. Game Developer, Product Madness, London, UK
-
-                            </h6></p>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div className="embla__slidetL" key={9}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block lefthd">
-                      <div className='left lefth'>
-                        <div className="tnameh"><img src={asar} width="300" height="300" className="testimonial-imageh" alt="Asar" /></div></div>
-
-
-                      <div className='right'>
-                        <div className="tcontenth">
-
-                          <p className="testimonial-paragraphs">"While doing my Graduation at Backstage Pass, I started my own Game studio Seven Summits with the help of this gaming college. We learned concepts related to Game Art, Game Design, Level design, etc. from Industry Experts. In order to mark your footprint in the game industry, Backstage Pass is the best place to start." <h4 className="author-names">Asar Dhandala
-
-                          </h4>
-                            <h6 className='author-designations'>Founder/ Game Designer/ Producer, Seven Summits
-
-                            </h6></p>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div className="embla__slidetL" key={5}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block lefthd">
-                      <div className='left lefth'>
-                        <div className="tnameh"><img src={satish} width="300" height="300" className="testimonial-imageh" alt="satish" /></div></div>
-
-                      <div className='right'>
-                        <div className="tcontenth">
-
-                          <p className="testimonial-paragraphs">"Backstage Pass really helped me in my transition to become a Game Developer. It helped me a lot with the concepts of game engines, game programming concepts, game design etc. by industry experts."  <h4 className="author-names">Satish Chandra</h4>
-                            <h6 className='author-designations'>CEO & Founder, TeaPot Games</h6></p>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="embla__slidetL" key={6}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block lefthd">
-                      <div className='left lefth'>
-                        <div className="tnameh"><img src={harshni} width="300" height="300" className="testimonial-imageh" alt="harshni" /></div></div>
-
-
-                      <div className='right'>
-                        <div className="tcontenth">
-
-                          <p className="testimonial-paragraphs">"Being a girl in this industry was challenging but Backstage Pass helped me grow into it with highly experienced mentors and with its contacts in the industry, helped to build a portfolio that suits the industry requirements." <h4 className="author-names">Harshini Isvi</h4>
-                            <h6 className='author-designations'>Concept Artist, Ivy Comptech, Hyderabad</h6></p>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* <div className="embla__slidetL" key={7}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-                  <div className="testimonial-content-wrap">
-                  <div className="testimonial-content-block lefthd">
-                  <div className='left lefth'>
-                      <div className="tnameh"><img src={anshul} width="300" height="300" className="testimonial-imageh" alt="anshul" /></div></div>
-                     
-
-                      <div className='right'>
-                      <div className="tcontenth">
-                                        
-                        <p className="testimonial-paragraphs">"Backstage Pass is the first of its kind of gaming college in India with some great industry experts. I had the joy of learning from the people who work in the game industry and was taught about the working of the game industry that helped me a lot while working at EA Sports. So, Backstage Pass was a life-changing experience."       <h4 className="author-names">Anshul Soni
-                      </h4>
-                      <h6 className='author-designations'>Software Engineer, EA Sports, Seattle, USA
-
-</h6></p>
-                        
-                      </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-
-        </div>
-      </div>
-
-      <div className="embla__controlssL">
-        <div className="embla__buttonss">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
 
+        <div className="dots">
+          {getVisibleDotRange().map((i) => (
+            <span
+              key={i}
+              className={`dot ${activePage === i ? "active" : ""}`}
+              onClick={() => scrollToPage(i)}
+            ></span>
+          ))}
+        </div>
 
       </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
-export default EmblaCarousel
+export default Testimonials;
+
+

@@ -54,45 +54,45 @@ function Awards() {
                                 <ol className="ps-timeline">
                                     <li style={{ marginLeft: isMobileState ? "auto" : "17px" }}>
                                         <div className="img-handler-top">
-                                                                   <picture>
-  <source 
-    srcSet={aw515} 
-    media="(max-width: 600px)" 
-    sizes="150px" 
-  />
-  <source 
-    srcSet={aw530} 
-    media="(min-width: 601px)" 
-    sizes="300px" 
-  />
-  <img
-    src={aw530}
-    srcSet={`${aw515} 150w, ${aw530} 300w`}
-    sizes="(max-width: 600px) 150px, 300px"
-    alt="award-aw5"
-    width={150}
-    height={136}
-    loading="lazy"
-    decoding="async"
-    style={{
-      display: 'block',
-      width: '150px',
-      height: '136px',
-      objectFit: 'cover',
-      objectPosition: 'bottom',
-      borderRadius: '18px',
-      padding: '7px',
-      background: 'none',
-      margin: '0 auto'
-    }}
-  />
-</picture>
+                                            <picture>
+                                                <source
+                                                    srcSet={aw515}
+                                                    media="(max-width: 600px)"
+                                                    sizes="150px"
+                                                />
+                                                <source
+                                                    srcSet={aw530}
+                                                    media="(min-width: 601px)"
+                                                    sizes="300px"
+                                                />
+                                                <img
+                                                    src={aw530}
+                                                    srcSet={`${aw515} 150w, ${aw530} 300w`}
+                                                    sizes="(max-width: 600px) 150px, 300px"
+                                                    alt="award-aw5"
+                                                    width={150}
+                                                    height={136}
+                                                    loading="lazy"
+                                                    decoding="async"
+                                                    style={{
+                                                        display: 'block',
+                                                        width: '100%',
+                                                        height: '136px',
+                                                        objectFit: 'cover',
+                                                        objectPosition: 'bottom',
+                                                        borderRadius: '18px',
+                                                        padding: '7px',
+                                                        background: 'none',
+                                                        margin: '0 auto'
+                                                    }}
+                                                />
+                                            </picture>
 
                                         </div>
 
                                         <span className="ps-sp-top">2018</span>
                                     </li>
-                                       <li>
+                                    <li>
                                         <div className="img-handler-bot">
                                             <img
                                                 src={aw2}
@@ -142,7 +142,7 @@ function Awards() {
                                                     decoding="async"
                                                     style={{
                                                         display: 'block',
-                                                        width: '150px',
+                                                        width: '100%',
                                                         height: '136px',
                                                         objectFit: 'cover',
                                                         objectPosition: 'bottom',
@@ -162,38 +162,38 @@ function Awards() {
                                     </li>
                                     <li>
                                         <div className="img-handler-bot">
-                                        <picture>
-  <source 
-    srcSet={aw615} 
-    media="(max-width: 600px)" 
-    sizes="150px" 
-  />
-  <source 
-    srcSet={aw630} 
-    media="(min-width: 601px)" 
-    sizes="300px" 
-  />
-  <img
-    src={aw630}
-    srcSet={`${aw615} 150w, ${aw630} 300w`}
-    sizes="(max-width: 600px) 150px, 300px"
-    alt="award-aw4"
-    width={150}
-    height={136}
-    loading="lazy"
-    decoding="async"
-    style={{
-      display: 'block',
-      objectFit: 'cover',
-      objectPosition: 'bottom',
-      borderRadius: '18px',
-      padding: '7px',
-      background: 'none',
-      margin: '0 auto',
-     
-    }}
-  />
-</picture>
+                                            <picture>
+                                                <source
+                                                    srcSet={aw615}
+                                                    media="(max-width: 600px)"
+                                                    sizes="150px"
+                                                />
+                                                <source
+                                                    srcSet={aw630}
+                                                    media="(min-width: 601px)"
+                                                    sizes="300px"
+                                                />
+                                                <img
+                                                    src={aw630}
+                                                    srcSet={`${aw615} 150w, ${aw630} 300w`}
+                                                    sizes="(max-width: 600px) 150px, 300px"
+                                                    alt="award-aw4"
+                                                    width={150}
+                                                    height={136}
+                                                    loading="lazy"
+                                                    decoding="async"
+                                                    style={{
+                                                        display: 'block',
+                                                        objectFit: 'cover',
+                                                        objectPosition: 'bottom',
+                                                        borderRadius: '18px',
+                                                        padding: '7px',
+                                                        background: 'none',
+                                                        margin: '0 auto',
+
+                                                    }}
+                                                />
+                                            </picture>
 
                                         </div>
 
@@ -201,39 +201,39 @@ function Awards() {
                                     </li>
                                     <li>
                                         <div className="img-handler-top">
-                                        <picture>
-  <source 
-    srcSet={aw315} 
-    media="(max-width: 600px)" 
-    sizes="150px" 
-  />
-  <source 
-    srcSet={aw330} 
-    media="(min-width: 601px)" 
-    sizes="300px" 
-  />
-  <img
-    src={aw330}
-    srcSet={`${aw315} 150w, ${aw330} 300w`}
-    sizes="(max-width: 600px) 150px, 300px"
-    alt="award-five"
-    width={150}
-    height={136}
-    loading="lazy"
-    decoding="async"
-    style={{
-      display: 'block',
-      width: '150px',
-      height: '136px',
-      objectFit: 'cover',
-      objectPosition: 'bottom',
-      borderRadius: '18px',
-      padding: '7px',
-      background: 'none',
-      margin: '0 auto'
-    }}
-  />
-</picture>
+                                            <picture>
+                                                <source
+                                                    srcSet={aw315}
+                                                    media="(max-width: 600px)"
+                                                    sizes="150px"
+                                                />
+                                                <source
+                                                    srcSet={aw330}
+                                                    media="(min-width: 601px)"
+                                                    sizes="300px"
+                                                />
+                                                <img
+                                                    src={aw330}
+                                                    srcSet={`${aw315} 150w, ${aw330} 300w`}
+                                                    sizes="(max-width: 600px) 150px, 300px"
+                                                    alt="award-five"
+                                                    width={150}
+                                                    height={136}
+                                                    loading="lazy"
+                                                    decoding="async"
+                                                    style={{
+                                                        display: 'block',
+                                                        width: '100%',
+                                                        height: '136px',
+                                                        objectFit: 'cover',
+                                                        objectPosition: 'center',
+                                                        borderRadius: '18px',
+                                                        padding: '7px',
+                                                        background: 'none',
+                                                        margin: '0 auto'
+                                                    }}
+                                                />
+                                            </picture>
 
 
                                         </div>
@@ -243,37 +243,37 @@ function Awards() {
                                     <li>
                                         <div className="img-handler-bot">
 
-                                        <picture>
-  <source 
-    srcSet={aw815} 
-    media="(max-width: 600px)" 
-    sizes="150px" 
-  />
-  <source 
-    srcSet={aw830} 
-    media="(min-width: 601px)" 
-    sizes="300px" 
-  />
-  <img
-    src={aw830}
-    srcSet={`${aw815} 150w, ${aw830} 300w`}
-    sizes="(max-width: 600px) 150px, 300px"
-    alt="award-aw8"
-    width={150}
-    height={136}
-    loading="lazy"
-    decoding="async"
-    style={{
-      display: 'block',
-      objectFit: 'cover',
-      objectPosition: 'bottom',
-      borderRadius: '18px',
-      padding: '7px',
-      background: 'none',
-      margin: '0 auto',
-    }}
-  />
-</picture>
+                                            <picture>
+                                                <source
+                                                    srcSet={aw815}
+                                                    media="(max-width: 600px)"
+                                                    sizes="150px"
+                                                />
+                                                <source
+                                                    srcSet={aw830}
+                                                    media="(min-width: 601px)"
+                                                    sizes="300px"
+                                                />
+                                                <img
+                                                    src={aw830}
+                                                    srcSet={`${aw815} 150w, ${aw830} 300w`}
+                                                    sizes="(max-width: 600px) 150px, 300px"
+                                                    alt="award-aw8"
+                                                    width={150}
+                                                    height={136}
+                                                    loading="lazy"
+                                                    decoding="async"
+                                                    style={{
+                                                        display: 'block',
+                                                        objectFit: 'cover',
+                                                        objectPosition: 'bottom',
+                                                        borderRadius: '18px',
+                                                        padding: '7px',
+                                                        background: 'none',
+                                                        margin: '0 auto',
+                                                    }}
+                                                />
+                                            </picture>
 
                                         </div>
 
@@ -292,7 +292,7 @@ function Awards() {
                                                 loading="lazy"
                                                 style={{
                                                     display: 'block',
-                                                    width: '150px',
+                                                    width: '100%',
                                                     height: '136px',
                                                     objectFit: 'cover',
                                                     objectPosition: 'bottom',

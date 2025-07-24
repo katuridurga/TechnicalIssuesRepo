@@ -152,9 +152,9 @@ function Main({ active, props }) {
             <section id="there's-still-time-to-apply-for-2024" className="banner siva">
 
               <div className="container1">
-                <div className="heading heading--white banner__heading">
+                <h1 className="heading heading--white banner__heading">
                   Trailblazers of gaming education in India since 2010
-                </div>
+                </h1>
               </div>
             </section>
           </div>

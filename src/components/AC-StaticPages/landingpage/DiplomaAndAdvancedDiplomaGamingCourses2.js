@@ -37,6 +37,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import recimg from '../../../assets/img/banners/Times-Award.webp';
 import Typography from '@mui/material/Typography';
+import MscGameTechnology3d from "../../../assets/img/Courses/3dgameartandgamedesign.webp";
 
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 import { Link } from "react-router-dom";
@@ -65,6 +66,7 @@ import icg from '../../../assets/img/logos/console.webp';
 import csgd from "../../../assets/img/Courses/csgdc.webp"
 import GameArtDesign from "../../../assets/img/Courses/GameArt&Design.webp"
 import AugmentedRealityandVirtualReality from "../../../assets/img/Courses/AugmentedRealityandVirtualReality.webp"
+import ReactWhatsappButton from "react-whatsapp-button";
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -149,9 +151,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     state => state.mainReducer.isMobile,
     shallowEqual
   );
-  
+
   const theme = useTheme();
- 
+
 
 
   const [isButtonVisible, setIsButtonVisible] = useState(true);
@@ -224,28 +226,30 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     email: '',
     city: '',
     qualification: '',
-    course:'',
-    specialization:'',
+    course: '',
+    specialization: '',
     comments: '',
     url: window.location.href,
     course_ttl: 3,// Initialize URL in state
   });
 
-const options = {
-  bachelor: [
-    { value: "csgameDevelopment", label: "Computer Science & Game Development" },
-    { value: "gameArtDesign", label: "Game Art & Design" },
-    { value: "arvr", label: "AR & VR" }
-  ],
-  masters: [
-    { value: "msc", label: "Master’s Game Technology" }
-  ]
-};
+  const options = {
+    bachelor: [
+      { value: "csgameDevelopment", label: "Computer Science & Game Development" },
+      { value: "gameArtDesign", label: "Game Art & Design" },
+      { value: "arvr", label: "AR & VR" }
+    ],
+    masters: [
+      { value: "msc", label: "Master’s Game Technology" },
+      { value: "msc3d", label: "Master’s 3D Game Art & Game Design" }
+
+    ]
+  };
 
 
   const handleMainCategoryChange = (event) => {
     const selectedCategory = event.target.value;
-   
+
     setMainCategory(selectedCategory);
     setSubOptions(options[selectedCategory] || []);
     setFormData((prevData) => ({
@@ -269,8 +273,8 @@ const options = {
     }));
     if (name === "PhoneNumber" && /^[0-9]{10}$/.test(value)) {
       try {
-const response = await fetch(`https://www.backstagepass.co.in/reactapi/checklandingpagemobile.php?contactNumber=${value}`);
-             
+        const response = await fetch(`https://www.backstagepass.co.in/reactapi/checklandingpagemobile.php?contactNumber=${value}`);
+
         if (response.status === 200) {
           alert('This mobile number is already registered with in the last 3 months our team will get back to you.');
           setFormData((prevData) => ({
@@ -412,7 +416,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
             </div>
 
             <div className="mainrec2">
-              <img src={recimg} alt="recimg" style={{ width: "100%", height:"100%"  }} />
+              <img src={recimg} alt="recimg" style={{ width: "100%", height: "100%" }} />
 
             </div>
 
@@ -445,21 +449,10 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                 </div></li>
             </ul>
 
-            {/* <div className='chapters' id="chapters1" style={{height:isMobileState ? '1140px':'480px' }}>
 
-                
 
-                <FeaturedProducts />
+            <FeaturedProductL />
 
-              </div> */}
-
-            <div className='chapterL' id="chapter100">
-              <div className="bg-c-gradient300 absolute w-full h-[101%] -top-[1px] -bottom-[1px] left-0"></div>
-              <FeaturedProductL />
-              {/* <Awards /> */}
-
-              {/* <div className="CousellingButton1 tetstL1" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div> */}
-            </div>
 
 
             <h2 className='mainHeadingTotall-2'>In the Media</h2>
@@ -637,7 +630,19 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                       </div>
                     </div>
                   </Link>
+<Link to={"/courses/masters-in-3d-game-art-design/"}>
+                    <div className="mainCourse1" style={{ marginBottom: "-14px" }}>
+                      <div className="mainCourseLeft1">
+                        <img src={MscGameTechnology3d} alt="MASTER’Sin3DGameArt&GameDesign" className="img-circle" />
+                      </div>
+                      <div className="mainCourseRight1">
+                        <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>MASTER’S in 3D Game Art & Game Design </h2>
+                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>Looking for a master's degree in game design? If you're passionate about 3D modeling, texturing, and animation, this course is perfect for turning your artistic skills into a successful career in the gaming industry. From sketching concepts to creating game-ready assets, you’ll develop both creative and technical skills to work in top gaming studios. Learn to create meaningful and engaging gameplay experiences through hands-on projects and industry-standard tools.
+                        </p>
 
+                      </div>
+                    </div>
+                  </Link>
 
                 </TabPanel>
 
@@ -658,21 +663,21 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
             <div style={{ margin: '0px auto' }}>
               <ul className='CountryLogos'>
-                <li><img src={Flag1}  style={{width:"100%", height:isMobileState ?"100%":"130px"}} alt="Flag1" />
+                <li><img src={Flag1} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag1" />
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United States</div>}</li>
 
-                <li><img src={Flag2}  style={{width:"100%", height:isMobileState ?"100%":"130px"}} alt="Flag2" />
+                <li><img src={Flag2} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag2" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United Kingdom</div>}</li>
 
-                <li><img src={Flag3}  style={{width:"100%", height:isMobileState ?"100%":"130px"}} alt="Flag3"/>
+                <li><img src={Flag3} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag3" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Canada</div>}</li>
 
-                <li><img src={Flag4}  style={{width:"100%", height:isMobileState ?"100%":"130px"}} alt="Flag4" />
+                <li><img src={Flag4} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag4" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Sweden</div>}</li>
@@ -705,7 +710,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                   </div>
 
                   <div className={`faq-answer ${activeIndex === index ? 'open' : 'closed'}`}>
-                    {faq.id === "2" ? <div className='faq2'>
+                    {faq.id === 2 ? <div className='faq2'>
                       <ul>
                         <li>
                           To apply for Bachelor's or Master's programs at Backstage Pass, complete the online application, clear the entrance exam (Bachelor’s only), attend counseling, submit documents, and enroll after payment.</li>
@@ -714,7 +719,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
                     </div> : null}
 
-                    {faq.id === "4" ? <div className='faq2'>
+                    {faq.id === 4 ? <div className='faq2'>
 
                       <p> At Backstage Pass, admission to Bachelor's courses requires an entrance exam, whereas Master's courses do not.</p>
 
@@ -723,7 +728,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                     </div> : null}
 
 
-                    {faq.id === "5" ? <div className='faq2'>
+                    {faq.id === 5 ? <div className='faq2'>
 
                       <p> Backstage Pass Institute’s diploma courses open career paths in game design, development, and 3D art, with roles like game designer, Unity developer, and 3D environment artist.</p>
 
@@ -796,7 +801,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                     </div>
                     <div className="">
                       <label className="" for="qualification">Qualification</label>
-                      <select className="input-gray" name="qualification" id="qualification" value={formData.qualification} onChange={handleInputChange} required style={{marginBottom:"10px"}}>
+                      <select className="input-gray" name="qualification" id="qualification" value={formData.qualification} onChange={handleInputChange} required style={{ marginBottom: "10px" }}>
                         <option value="">Qualification</option>
                         <option value="10th">10th Pass</option>
                         <option value="12th">12th Pursuing</option>
@@ -806,50 +811,50 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                         <option value="others">Others</option>
                       </select>
                     </div>
-                    
 
- 
+
+
                   </div>
                   <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
-                 
+
                     <div className="">
-                  <label className="" for="course">Course <span style={{color:"red", marginLeft:"4px", marginTop:"2px"}}>*</span></label>
-      <select onChange={handleMainCategoryChange} name="course" id="course" value={formData.course}  style={{marginBottom:"10px"}} required>
-        <option value="" disabled>Select Course</option>
-        <option value="bachelor">Bachelor's</option>
-        <option value="masters">Master's</option>
-      </select>
+                      <label className="" for="course">Course <span style={{ color: "red", marginLeft: "4px", marginTop: "2px" }}>*</span></label>
+                      <select onChange={handleMainCategoryChange} name="course" id="course" value={formData.course} style={{ marginBottom: "10px" }} required>
+                        <option value="" disabled>Select Course</option>
+                        <option value="bachelor">Bachelor's</option>
+                        <option value="masters">Master's</option>
+                      </select>
 
-      {subOptions.length > 0 && (
-        <>
-          <label>Specialization</label>
-          <select onChange={handleSubCategoryChange}  value={formData.specialization}name="specialization" id="specialization" required>
-            <option value="">Select Specialization</option>
-            {subOptions.map((sub) => (
-              <option key={sub.value} value={sub.value}>{sub.label}</option>
-            ))}
-          </select>
-        </>
-      )}
-    </div>
-    <div className="" style={{ width: isMobileState ? "100%" : "100%" }}>
-                    <label className="" for="comments">Comments</label>
-                    <textarea
-                      className="input-gray"
-                      name="comments"
-                      id="comments"
-                      placeholder="Enter your comments here..."
-                      value={formData.comments}
-                      onChange={handleInputChange}
+                      {subOptions.length > 0 && (
+                        <>
+                          <label>Specialization</label>
+                          <select onChange={handleSubCategoryChange} value={formData.specialization} name="specialization" id="specialization" required>
+                            <option value="">Select Specialization</option>
+                            {subOptions.map((sub) => (
+                              <option key={sub.value} value={sub.value}>{sub.label}</option>
+                            ))}
+                          </select>
+                        </>
+                      )}
+                    </div>
+                    <div className="" style={{ width: isMobileState ? "100%" : "100%" }}>
+                      <label className="" for="comments">Comments</label>
+                      <textarea
+                        className="input-gray"
+                        name="comments"
+                        id="comments"
+                        placeholder="Enter your comments here..."
+                        value={formData.comments}
+                        onChange={handleInputChange}
 
-                      rows="6"
-                      maxLength={40}
-                      style={{ color: 'white' }}
-                      title="max 40 characters allowed"
-                    ></textarea>
-                    <small style={{ color: '#888', fontSize: '12px' }}>Allow maximum 40 characters</small>
+                        rows="6"
+                        maxLength={40}
+                        style={{ color: 'white' }}
+                        title="max 40 characters allowed"
+                      ></textarea>
+                      <small style={{ color: '#888', fontSize: '12px' }}>Allow maximum 40 characters</small>
+                    </div>
                   </div>
-    </div>
 
                   <div style={{ padding: "20px" }}>
                     <button className=" three button brand size200 w-full sm:w-auto" data-form-id="need-guidance" data-form="step1-button-continue" type="submit">
@@ -891,8 +896,17 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
         </div>
       </div>
+      <div className="App">
+              <ReactWhatsappButton
+                countryCode="91"
+                phoneNumber="8977945705"
+                style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-1rem" : "-1rem", zIndex: "11111" }}
+                className="whatsappsivak"
+              />
+      
+            </div>
       {isButtonVisible && (
-        <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{zIndex:"1" }}>Get a Counselling Session on Gaming Career</a></div>)}
+        <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{ zIndex: "1" }}>Get a Counselling Session on Gaming Career</a></div>)}
 
     </>
   )

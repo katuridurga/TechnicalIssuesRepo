@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import "./DiplomaAndAdvancedDiplomaCourses.css";
 import PropTypes from 'prop-types';
 
+import ReactWhatsappButton from "react-whatsapp-button";
 
 import Marquee from "react-fast-marquee";
 import r1 from "../../../assets/img/partners/r1.png";
@@ -457,8 +458,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
               </div> */}
 
-            <div className='chapterL' id="chapter100">
-              <div className="bg-c-gradient300 absolute w-full h-[101%] -top-[1px] -bottom-[1px] left-0"></div>
+            <div className='' id="">
               <FeaturedProductL />
               {/* <Awards /> */}
 
@@ -853,7 +853,15 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
       </div>
       {isButtonVisible && (
         <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>)}
+<div className="App">
+        <ReactWhatsappButton
+          countryCode="91"
+          phoneNumber="8977945705"
+          style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-1rem" : "-1rem", zIndex: "11111" }}
+          className="whatsappsivak"
+        />
 
+      </div>
     </>
   )
 }

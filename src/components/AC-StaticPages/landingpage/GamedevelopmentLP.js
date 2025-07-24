@@ -18,17 +18,13 @@ import { Helmet } from "react-helmet";
 
 import StudentGamesList from "../../../content/StudentGamesList";
 import MIntheMedia from "../../../content/MIntheMedia";
-
+import ReactWhatsappButton from "react-whatsapp-button";
 import Flag1 from "../../../assets/img/banners/usa.webp";
 import Flag2 from "../../../assets/img/banners/uk.webp";
 import Flag3 from "../../../assets/img/banners/canada.webp";
 import Flag4 from "../../../assets/img/banners/sweden.webp";
 import advdip1v from '../../../assets/img/banners/advdip1.webp';
 import Marquee from "react-fast-marquee";
-
-
-
-
 import axios from 'axios';
 import { useSelector, shallowEqual } from "react-redux";
 import { useTheme } from '@mui/material/styles';
@@ -1259,7 +1255,15 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
       </div>
       {isButtonVisible && (
         <div className="CousellingButton" style={{display:"flex", justifyContent:isMobileState ? "center" : "center"}} onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>)}
+<div className="App">
+        <ReactWhatsappButton
+          countryCode="91"
+          phoneNumber="8977945705"
+          style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-1rem" : "-1rem", zIndex: "11111" }}
+          className="whatsappsivak"
+        />
 
+      </div>
     </>
   )
 }

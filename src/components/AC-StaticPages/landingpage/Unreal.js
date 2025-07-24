@@ -56,6 +56,7 @@ import ic12 from '../../../assets/img/Icons/WEBSITE-ICON/hands-on.webp';
 import ic13 from '../../../assets/img/Icons/WEBSITE-ICON/short-term.webp';
 import ic14 from '../../../assets/img/Icons/WEBSITE-ICON/actually-fun.webp';
 import icg from '../../../assets/img/logos/console.webp';
+import ReactWhatsappButton from "react-whatsapp-button";
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -364,7 +365,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             </div></a>
 
             <div className="mainrec22">
-              <img src={recimg} alt="recimg" height={isMobileState ? "166" : "611"}
+              <img src={recimg} alt="recimg" style={{marginTop:"10px"}} height={isMobileState ? "166" : "611"}
                 width={isMobileState ? "414" : "1526"} />
 
             </div>
@@ -418,8 +419,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
               </div> */}
 
-            <div className='chapterL' id="chapter100">
-              <div className="bg-c-gradient300 absolute w-full h-[101%] -top-[1px] -bottom-[1px] left-0"></div>
+            <div className='' id="">
               <FeaturedProductL />
               {/* <Awards /> */}
 
@@ -830,7 +830,15 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       </div>
       {isButtonVisible && (
         <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>)}
+<div className="App">
+        <ReactWhatsappButton
+          countryCode="91"
+          phoneNumber="8977945705"
+          style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-1rem" : "-1rem", zIndex: "11111" }}
+          className="whatsappsivak"
+        />
 
+      </div>
     </>
   )
 }

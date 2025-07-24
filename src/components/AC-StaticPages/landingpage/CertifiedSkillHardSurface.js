@@ -346,7 +346,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 </div></li>
             </ul>
 
-            <div className='chapterL' id="chapter100">
+            <div >
               <div className="bg-c-gradient300 absolute w-full h-[101%] -top-[1px] -bottom-[1px] left-0"></div>
               <FeaturedProductL />
               {/* <Awards /> */}

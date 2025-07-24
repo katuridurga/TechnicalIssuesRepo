@@ -11,7 +11,8 @@ import FeaturedProducts1 from "../../../content/FeaturedProducts1.js";
 import { useSelector, shallowEqual } from "react-redux";
 import StickyBox from "react-sticky-box";
 import { useTheme } from '@mui/material/styles';
-import MscGameTechnology from "../../../assets/img/Courses/MscGameTechnology.webp"
+import MscGameTechnology from "../../../assets/img/Courses/MscGameTechnology.webp";
+import MscGameTechnology3d from "../../../assets/img/Courses/3dgameartandgamedesign.webp";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -47,6 +48,7 @@ import advdip from '../../../assets/img/banners/advdip.webp';
 import csgd from "../../../assets/img/Courses/csgdc.webp"
 import GameArtDesign from "../../../assets/img/Courses/GameArt&Design.webp"
 import AugmentedRealityandVirtualReality from "../../../assets/img/Courses/AugmentedRealityandVirtualReality.webp"
+import ReactWhatsappButton from "react-whatsapp-button";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -237,7 +239,8 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
       { value: "arvr", label: "AR & VR" }
     ],
     masters: [
-      { value: "msc", label: "Master’s Game Technology" }
+      { value: "msc", label: "Master’s Game Technology" },
+     { value: "msc3d", label: "Master’s 3D Game Art & Game Design" }
     ]
 
   };
@@ -394,11 +397,23 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
                       </div>
                     </div>
                   </Link>
+ <Link to={"/courses/masters-in-3d-game-art-design/"}>
+                    <div className="mainCourse1" style={{ marginBottom: "-14px" }}>
+                      <div className="mainCourseLeft1">
+                        <img src={MscGameTechnology3d} alt="MASTER’Sin3DGameArt&GameDesign" className="img-circle" />
+                      </div>
+                      <div className="mainCourseRight1">
+                        <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>MASTER’S in 3D Game Art & Game Design </h2>
+                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>Looking for a master's degree in game design? If you're passionate about 3D modeling, texturing, and animation, this course is perfect for turning your artistic skills into a successful career in the gaming industry. From sketching concepts to creating game-ready assets, you’ll develop both creative and technical skills to work in top gaming studios. Learn to create meaningful and engaging gameplay experiences through hands-on projects and industry-standard tools.
+                        </p>
 
+                      </div>
+                    </div>
+                  </Link>
 
                 </TabPanel>
 
-
+ 
 
               </Box>
 
@@ -850,8 +865,8 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
                           <label className="" for="course">Course <span style={{ color: "red", marginLeft: "4px", marginTop: "2px" }}>*</span></label>
                           <select onChange={handleMainCategoryChange} name="course" id="course" value={formData.course} style={{ marginBottom: "10px" }} required>
                             <option value="" disabled>Select Course</option>
-                            <option value="Bachelors">Bachelor’s</option>
-                            <option value="Masters">Master’s</option>
+                            <option value="bachelor">Bachelor’s</option>
+                            <option value="masters">Master’s</option>
                           </select>
 
                           {subOptions.length > 0 && (
@@ -924,7 +939,15 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
         </div>
       </div>
 
+<div className="App">
+        <ReactWhatsappButton
+          countryCode="91"
+          phoneNumber="8977945705"
+          style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-7rem" : "-1rem", zIndex: "11111" }}
+          className="whatsappsivak"
+        />
 
+      </div>
     </>
   )
 }

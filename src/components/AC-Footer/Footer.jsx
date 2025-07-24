@@ -29,7 +29,21 @@ function Footer() {
  const isLandingPage = window.location.pathname.includes("/landingpage");
  const isLandingPageb = window.location.pathname.includes("/landingpage/bachelors-degree-courses-in-gaming/");
   
- 
+ const hiddenPaths = [
+  "/landingpage/bachelors-degree-courses-in-gaming/",
+  "/landingpage/game-art-programs/",
+  "/landingpage/game-development-with-unreal-programs/",
+  "/landingpage/masters-and-bachelors-programs/",
+  "/landingpage/masters-and-bachelors-game-development-courses/",
+  "/landingpage/diploma-and-advanced-diploma-courses/",
+  "/landingpage/diploma-and-advanced-diploma-game-development-courses/",
+  "/landingpage/game-art-programs/",
+  "/landingpage/game-development-programs/",
+  "/landingpage/game-development-with-unity-programs/",
+  "landingpage/game-development-with-unreal-programs/",
+];
+
+
 const [formData, setFormData] = useState({
     name: '',PhoneNumber: '', email: '', url: window.location.href
   });
@@ -216,7 +230,7 @@ const handleClose = (event, reason) => {
                       <ReactWhatsappButton
                         countryCode="91"
                         phoneNumber="8008002795"
-                        style={{ right: "2rem", display: window.location.pathname === "/landingpage/bachelors-degree-courses-in-gaming/" ? "none" : "flex" }}
+                        style={{ right: "2rem",  display: hiddenPaths.includes(window.location.pathname) ? "none" : "flex" }}
                         className="whatsappsivak"
                       />
                       </div>
@@ -228,7 +242,7 @@ const handleClose = (event, reason) => {
                         countryCode="91"
                         aria-label="Chat with us on WhatsApp"
                         phoneNumber="8008002795"
-                        style={{ right: "2rem", display: window.location.pathname === "/landingpage/bachelors-degree-courses-in-gaming/" ? "none" : "flex" }}
+                        style={{ right: "2rem",  display: hiddenPaths.includes(window.location.pathname) ? "none" : "flex"}}
                         className="whatsappsivak"
                       />
                    
