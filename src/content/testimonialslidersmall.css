@@ -86,7 +86,7 @@
   background-color: #2a2929;
   padding: 20px;
   border-radius: 10px;
-  min-width: 460px;
+  min-width: 437px;
   flex-shrink: 0;
   margin-right: 20px;
   height: 100%;
@@ -307,7 +307,7 @@
 
 @media screen and (max-width: 1440px) {
   .testimonial-cardtn {
-    min-width: 414px; 
+    min-width: 397px; 
 
   }
 }

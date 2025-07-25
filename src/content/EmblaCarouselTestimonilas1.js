@@ -195,7 +195,7 @@ const Testimonials = () => {
             {fullPagesOnly.map((item, index) => {
               const isExpanded = expandedCards[index] || false;
               return (
-                <AnimatedText direction="up" delay={0.2} key={index}>
+               
                   <div
                     className="testimonial-cardtn"
                     style={{
@@ -225,7 +225,7 @@ const Testimonials = () => {
                       </div>
                     </div>
                   </div>
-                </AnimatedText>
+            
               );
             })}
           </div>

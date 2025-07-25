@@ -967,7 +967,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
         <ReactWhatsappButton
           countryCode="91"
           phoneNumber="8977945705"
-          style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-1rem" : "-1rem", zIndex: "11111" }}
+          style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "4rem" : "-1rem", zIndex: "11111" }}
           className="whatsappsivak"
         />
 

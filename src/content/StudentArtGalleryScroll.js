@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import AnimatedText from "../components/AC-StaticPages/landingpage/AnimatedText"; // Update if needed
-import "./StudentArtGalleryScroll.css"
+import "./StudentArtGalleryScroll.css";
 
 // Image imports
 import art33 from "../assets/img/art/VijaySivatej1.webp";
@@ -15,12 +15,14 @@ import artad1 from "../assets/img/art/art1.webp";
 import artadb from "../assets/img/art/indratanu-bhattacharya.webp";
 import artadb2 from "../assets/img/art/lakshminadh-singh-1.webp";
 import artadb3 from "../assets/img/art/sreedhar-hredner2.webp";
+
 const ResponsiveGallery = () => {
   const images = [art77, art33, art55, art44, art66, artad1, artad2, artad3, art22, artadb, artadb2, artadb3];
   const [currentIndex, setCurrentIndex] = useState(0);
   const touchStartX = useRef(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const galleryRef = useRef(null);
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -39,11 +41,18 @@ const ResponsiveGallery = () => {
   const handleTouchEnd = (e) => {
     const touchEndX = e.changedTouches[0].clientX;
     const diff = touchStartX.current - touchEndX;
-    if (diff > 50 && currentIndex < pageCount - 1) {
-      setCurrentIndex(currentIndex + 1);
-    } else if (diff < -50 && currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
+
+    if (diff > 50) {
+      // Swipe left (next)
+      setCurrentIndex((prev) => (prev + 1) % pageCount);
+    } else if (diff < -50) {
+      // Swipe right (previous)
+      setCurrentIndex((prev) => (prev - 1 + pageCount) % pageCount);
     }
+  };
+
+  const handleTouchMove = (e) => {
+    e.preventDefault(); // Prevent vertical scroll while swiping
   };
 
   const getImagesForCurrentPage = () => {
@@ -54,8 +63,10 @@ const ResponsiveGallery = () => {
   return (
     <div
       className="containergbn responsive-gallery"
+      ref={galleryRef}
       onTouchStart={isMobile ? handleTouchStart : undefined}
       onTouchEnd={isMobile ? handleTouchEnd : undefined}
+      onTouchMove={isMobile ? handleTouchMove : undefined}
     >
       <div className={`gallery-grid ${isMobile ? "mobile" : "desktop"}`}>
         {getImagesForCurrentPage().map((imgSrc, idx) => (
@@ -79,18 +90,15 @@ const ResponsiveGallery = () => {
       </div>
 
       {/* Dots */}
-    {/* Dots */}
-<div className="dotsbn">
+      <div className="dotsbn">
         {Array.from({ length: pageCount }).map((_, idx) => (
           <span
             key={idx}
             className={`dot ${currentIndex === idx ? "active" : ""}`}
-            onClick={() => {
-              setCurrentIndex(idx);
-              if (galleryRef.current) {
-                galleryRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-              }
-            }}
+          onClick={() => {
+  setCurrentIndex(idx);
+}}
+
           ></span>
         ))}
       </div>

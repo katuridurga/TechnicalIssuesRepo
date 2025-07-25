@@ -637,7 +637,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       </div>
                       <div className="mainCourseRight1">
                         <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>MASTER’S in 3D Game Art & Game Design </h2>
-                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>Looking for a master's degree in game design? If you're passionate about 3D modeling, texturing, and animation, this course is perfect for turning your artistic skills into a successful career in the gaming industry. From sketching concepts to creating game-ready assets, you’ll develop both creative and technical skills to work in top gaming studios. Learn to create meaningful and engaging gameplay experiences through hands-on projects and industry-standard tools.
+                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>Looking for a master's degree in game design? If you're passionate about 3D modeling, texturing, and animation, this course is perfect for turning your artistic skills into a successful career in the gaming industry. 
                         </p>
 
                       </div>
@@ -900,7 +900,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               <ReactWhatsappButton
                 countryCode="91"
                 phoneNumber="8977945705"
-                style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-1rem" : "-1rem", zIndex: "11111" }}
+                style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "4rem" : "-1rem", zIndex: "11111" }}
                 className="whatsappsivak"
               />
       

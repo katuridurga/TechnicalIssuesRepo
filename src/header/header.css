@@ -3873,7 +3873,7 @@ div.et_pb_section.et_pb_section_0 {
   .scroll-to-top {
     background: #ed1923 !important;
     right: 2rem !important;
-    bottom: 16rem !important;
+    bottom: 20rem !important;
     position: fixed;
     z-index: 99 !important;
     cursor: pointer;
@@ -4202,7 +4202,7 @@ div.et_pb_section.et_pb_section_0 {
   }
 
   .CountryLogos img {
-    width: 100% !important;
+    width: 95% !important;
     height: 100% !important;
     object-fit: cover !important;
 

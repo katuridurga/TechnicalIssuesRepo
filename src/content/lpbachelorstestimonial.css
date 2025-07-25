@@ -88,6 +88,7 @@
 .testimonial-slider-inner {
   display: flex;
   flex-wrap: nowrap;
+  
 }
 
 .testimonial-card {
@@ -295,6 +296,10 @@
     content: "";
     flex: 0 0 100% !important; /* gives space for last card to center */
   }
+    .testimonial-slider-inner{
+  scroll-snap-align: start;
+    }
+
   .dots {
    display: flex;
   overflow-x: auto;

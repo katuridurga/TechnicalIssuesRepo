@@ -56,5 +56,7 @@
     max-width: 83rem;
     margin: 0 auto;
     padding: 0 1rem 0rem !important;
+      touch-action: pan-x; /* Only horizontal swipes allowed */
+  overflow: hidden;
 }
 }
