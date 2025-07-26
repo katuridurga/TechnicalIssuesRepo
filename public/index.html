@@ -61,7 +61,7 @@
     fb.async = true;
     fb.src = 'https://connect.facebook.net/en_US/fbevents.js';
     fb.onload = () => {
-      fbq('init', '8236983926348899'); // ✅ Your Pixel ID
+      fbq('init', '8236983926348899'); 
       fbq('track', 'PageView');
     };
     document.head.appendChild(fb);
@@ -72,7 +72,16 @@
   <img height="1" width="1" style="display:none"
        src="https://www.facebook.com/tr?id=8236983926348899&ev=PageView&noscript=1" />
 </noscript>
-
+<!-- Matomo Tag Manager -->
+<script>
+  var _mtm = window._mtm = window._mtm || [];
+  _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+  (function() {
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='https://cdn.matomo.cloud/backstagepass.matomo.cloud/container_Fa2LaVPH.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Tag Manager -->
 </head>
 
 <body>
