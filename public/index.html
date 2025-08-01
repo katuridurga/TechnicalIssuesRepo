@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,19 +12,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" /></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" media="print"
+    onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" />
+  </noscript>
 
   <link rel="preload" as="image" href="/src/assets/img/banners/NewCampus.webp" fetchpriority="high" />
 
   <!-- Defer GTM -->
   <script>
     window.addEventListener('load', () => {
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-P8SQ3BS');
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-P8SQ3BS');
     });
   </script>
 
@@ -31,10 +38,10 @@
   <script>
     if ('requestIdleCallback' in window) {
       requestIdleCallback(() => {
-        (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        (function (c, l, a, r, i, t, y) {
+          c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+          t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+          y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "mo8baddgve");
       });
     }
@@ -42,53 +49,55 @@
 
   <!-- ... Clarity Script ... -->
 
-<!-- Facebook Pixel Script -->
-<script>
-  // Define fbq function safely
-  window.fbq = function () {
-    window.fbq.callMethod
-      ? window.fbq.callMethod.apply(window.fbq, arguments)
-      : window.fbq.queue.push(arguments);
-  };
-  window.fbq.push = window.fbq;
-  window.fbq.loaded = true;
-  window.fbq.version = '2.0';
-  window.fbq.queue = [];
-
-  // Lazy-load the FB Pixel script
-  window.addEventListener('load', () => {
-    const fb = document.createElement('script');
-    fb.async = true;
-    fb.src = 'https://connect.facebook.net/en_US/fbevents.js';
-    fb.onload = () => {
-      fbq('init', '8236983926348899'); 
-      fbq('track', 'PageView');
+  <!-- Facebook Pixel Script -->
+  <script>
+    // Define fbq function safely
+    window.fbq = function () {
+      window.fbq.callMethod
+        ? window.fbq.callMethod.apply(window.fbq, arguments)
+        : window.fbq.queue.push(arguments);
     };
-    document.head.appendChild(fb);
-  });
-</script>
+    window.fbq.push = window.fbq;
+    window.fbq.loaded = true;
+    window.fbq.version = '2.0';
+    window.fbq.queue = [];
 
-<noscript>
-  <img height="1" width="1" style="display:none"
-       src="https://www.facebook.com/tr?id=8236983926348899&ev=PageView&noscript=1" />
-</noscript>
-<!-- Matomo Tag Manager -->
-<script>
-  var _mtm = window._mtm = window._mtm || [];
-  _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
-  (function() {
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src='https://cdn.matomo.cloud/backstagepass.matomo.cloud/container_Fa2LaVPH.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Matomo Tag Manager -->
+    // Lazy-load the FB Pixel script
+    window.addEventListener('load', () => {
+      const fb = document.createElement('script');
+      fb.async = true;
+      fb.src = 'https://connect.facebook.net/en_US/fbevents.js';
+      fb.onload = () => {
+        fbq('init', '8236983926348899');
+        fbq('track', 'PageView');
+      };
+      document.head.appendChild(fb);
+    });
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=8236983926348899&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- Matomo Tag Manager -->
+  <script>
+    var _mtm = window._mtm = window._mtm || [];
+    _mtm.push({ 'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start' });
+    (function () {
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.async = true; g.src = 'https://cdn.matomo.cloud/backstagepass.matomo.cloud/container_Fa2LaVPH.js'; s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+  <!-- End Matomo Tag Manager -->
 </head>
 
 <body>
   <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8SQ3BS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8SQ3BS" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
   </noscript>
 
   <div id="root"></div>
 </body>
+
 </html>

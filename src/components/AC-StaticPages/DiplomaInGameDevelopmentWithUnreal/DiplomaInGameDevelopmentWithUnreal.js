@@ -135,41 +135,41 @@ function Courses(props) {
           <script type="application/ld+json">
             {`
               {
-                "@context": "https://schema.org/", 
-                "@type": "BreadcrumbList", 
-                "itemListElement": [{
-                  "@type": "ListItem", 
-                  "position": 1, 
-                  "name": "India’s Best Game Development college | Backstage Pass Institute of Gaming",
-                  "item": "https://www.backstagepass.co.in/"  
-                },{
-                  "@type": "ListItem", 
-                  "position": 2, 
-                  "name": "Best Game Development Diploma Courses with Backstage Pass Institute of Gaming",
-                  "item": "https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unreal/"  
-                }]
-              }
+  "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "India’s Best Game Development college | Backstage Pass Institute of Gaming",
+    "item": "https://www.backstagepass.co.in/"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "est Game Development with Unreal Course in India - Backstage Pass college",
+    "item": "https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unreal/"  
+  }]
+}
                 `}
           </script>
           <script type="application/ld+json">
             {`
             {
-              "@context": "https://schema.org/",
-              "@type": "WebSite",
-              "name": "Backstage Pass Institute of Gaming",
-              "url": "https://www.backstagepass.co.in/",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unreal/{search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "name": "Backstage Pass Institute of Gaming",
+  "url": "https://www.backstagepass.co.in/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unreal/{search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
               `}
           </script>
 
-          <title>Best Game Development Diploma Courses with Backstage Pass Institute of Gaming</title>
-          <meta name="description" content="Unity game development in 6 months. Start a game development journey with the best Unity courses at Backstage Pass Institute, Hyderabad, India. Learn C#, game design, and build immersive experiences" />
-          <meta name="keywords" content="Unity Game Development Diploma India, Game Development with Unity Course Hyderabad, Unity 3D Game Development Diploma India, Diploma in Game Development using Unity Hyderabad, Unity Training for Game Development India, Unity Programming Diploma India, Unity Scripting Diploma, 2D Game Development with Unity Diploma, 3D Game Development with Unity Diploma, Mobile Game Development with Unity Diploma, Indie Game Development with Unity Diploma, Career in Unity Game Development India, Portfolio Building Unity Course, Game Development Fundamentals with Unity Diploma​" />
+          <title>Best Game Development with Unreal Course in India - Backstage Pass college</title>
+          <meta name="description" content="Learn game development with Unreal Engine Diploma by Backstage Pass. Master C++, Blueprints, AI, level design, ⁠Game systems, Gameplay Programming. 6-month diploma. Online & offline modes." />
+          <meta name="keywords" content="unreal engine course, game development course, unreal game development training, learn unreal engine, game development with unreal, best unreal engine course in India, how to become unreal engine developer, career in unreal engine game development, game development course with placement, unreal engine certification course​" />
           <link rel="canonical" href="https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unreal/" />
         </Helmet>
 
