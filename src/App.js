@@ -111,6 +111,16 @@ export default function App() {
                     <Menu {...routeProps} component="DiplomaInGameDevelopmentWithUnity" />
                   )}
                 />
+
+                <Route
+                  exact
+                  path={"/courses/diploma-in-game-development-with-unreal/"}
+                  render={routeProps => (
+                    <Menu {...routeProps} component="DiplomaInGameDevelopmentWithUnreal" />
+                  )}
+                />
+
+                
                 <Route
                   exact
                   path={"/courses/diploma-in-3d-environment-art-creation-for-games/"}

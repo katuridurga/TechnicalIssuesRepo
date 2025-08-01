@@ -194,6 +194,7 @@ export default function MenuCore() {
                               <div className="accordion-content">
                                 <Link to={"/courses/diploma-in-game-design-production/"} style={{ fontSize: "13.5px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif" }}>Game Design & Production</Link>
                                 <Link to={"/courses/diploma-in-game-development-with-unity/"} style={{ fontSize: "13.5px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif" }}>Game Development with Unity</Link>
+                                <Link to={"/courses/diploma-in-game-development-with-unreal/"} style={{ fontSize: "13.5px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif" }}>Game Development with Unreal</Link>
                                 <Link to={"/courses/diploma-in-3d-environment-art-creation-for-games/"} style={{ fontSize: "13.5px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif" }}>3D Environment Art For Games</Link>
                               </div>
                             </Typography>
@@ -408,6 +409,8 @@ export default function MenuCore() {
                               <div className="accordion-content">
                                 <Link onClick={toggleDrawer(false)} to={"/courses/diploma-in-game-design-production/"} style={{ fontSize: "12px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#fff", marginLeft: "0px", textTransform: "uppercase", marginBottom: "10px", display: "flex", paddingLeft: "40px" }}>Game Design & Production</Link>
                                 <Link onClick={toggleDrawer(false)} to={"/courses/diploma-in-game-development-with-unity/"} style={{ fontSize: "12px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#fff", marginLeft: "0px", textTransform: "uppercase", marginBottom: "10px", display: "flex", paddingLeft: "40px" }}>Game Development with Unity</Link>
+
+                                <Link onClick={toggleDrawer(false)} to={"/courses/diploma-in-game-development-with-unreal/"} style={{ fontSize: "12px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#fff", marginLeft: "0px", textTransform: "uppercase", marginBottom: "10px", display: "flex", paddingLeft: "40px" }}>Game Development with Unreal</Link>
                                 <Link onClick={toggleDrawer(false)} to={"/courses/diploma-in-3d-environment-art-creation-for-games/"} style={{ fontSize: "12px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#fff", marginLeft: "0px", textTransform: "uppercase", marginBottom: "0px", display: "flex", paddingLeft: "40px" }}>3D Environment Art For Games</Link>
                               </div>
                             </Typography>

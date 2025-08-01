@@ -120,6 +120,8 @@ const DiplomainGameDesignProduction = () => < Async load={import("../components/
 
 const DiplomaInGameDevelopmentWithUnity = () => < Async load={import("../components/AC-StaticPages/DiplomaInGameDevelopmentWithUnity/DiplomaInGameDevelopmentWithUnity")} />;
 
+const DiplomaInGameDevelopmentWithUnreal = () => < Async load={import("../components/AC-StaticPages/DiplomaInGameDevelopmentWithUnreal/DiplomaInGameDevelopmentWithUnreal")} />;
+
 const AdvancedDiplomainTraditionalDigitalConceptArt = () => < Async load={import("../components/AC-StaticPages/AdvancedDiplomainTraditionalDigitalConceptArt/AdvancedDiplomainTraditionalDigitalConceptArt")} />;
 
 
@@ -1033,6 +1035,36 @@ function Menu(props) {
 
             </React.Fragment>  
         <DiplomaInGameDevelopmentWithUnity />
+        <Footer />
+        <ScrollToTop
+        smooth
+        top={100}
+        />
+      </>
+    );
+  }
+
+  else if (props.component === "DiplomaInGameDevelopmentWithUnreal") {
+    return (
+      <>
+       
+       <React.Fragment>
+              <CssBaseline />
+              <ThemeProvider theme={darkTheme}>
+                <ElevationScroll  {...props}>
+
+                  <AppBar>
+                    <Toolbar style={toolbarStyle}>
+                      <MenuCore />
+                    </Toolbar>
+                  </AppBar>
+
+                </ElevationScroll >
+              </ThemeProvider>
+              <Toolbar />
+
+            </React.Fragment>  
+        <DiplomaInGameDevelopmentWithUnreal />
         <Footer />
         <ScrollToTop
         smooth

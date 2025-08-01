@@ -3043,7 +3043,18 @@ div.et_pb_section.et_pb_section_0 {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #0a0a0a 100%), url(./../assets/img/banners/Diploma-in-Game-Development-with-Unity.webp) !important;
 }
 
+.Diploma-in-Game-Development-with-Unreal {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #0a0a0a 100%), url(./../assets/img/banners/Diploma_in_Game_Development_with_Unreal.webp) !important;
+}
+
 .Diploma-in-Game-Development-with-Unitymm {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, #0a0a0a 100%), url(./../assets/img/mobilebanner/Diploma_in_Game_Development_with_Unreal_mobile.webp) !important;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+}
+
+.Diploma-in-Game-Development-with-Unrealmm {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, #0a0a0a 100%), url(./../assets/img/mobilebanner/Diploma-in-Game-Development-with-Unitym.webp) !important;
   height: 500px;
   background-position: center;
