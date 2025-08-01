@@ -145,8 +145,8 @@ function Courses(props) {
                 },{
                   "@type": "ListItem", 
                   "position": 2, 
-                  "name": "Best Unity Game Development Diploma Courses with Backstage Pass Institute of Gaming",
-                  "item": "https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unity/"  
+                  "name": "Best Game Development Diploma Courses with Backstage Pass Institute of Gaming",
+                  "item": "https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unreal/"  
                 }]
               }
                 `}
@@ -160,17 +160,17 @@ function Courses(props) {
               "url": "https://www.backstagepass.co.in/",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unity/{search_term_string}",
+                "target": "https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unreal/{search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             }
               `}
           </script>
 
-          <title>Best Unity Game Development Diploma Courses with Backstage Pass Institute of Gaming</title>
+          <title>Best Game Development Diploma Courses with Backstage Pass Institute of Gaming</title>
           <meta name="description" content="Unity game development in 6 months. Start a game development journey with the best Unity courses at Backstage Pass Institute, Hyderabad, India. Learn C#, game design, and build immersive experiences" />
           <meta name="keywords" content="Unity Game Development Diploma India, Game Development with Unity Course Hyderabad, Unity 3D Game Development Diploma India, Diploma in Game Development using Unity Hyderabad, Unity Training for Game Development India, Unity Programming Diploma India, Unity Scripting Diploma, 2D Game Development with Unity Diploma, 3D Game Development with Unity Diploma, Mobile Game Development with Unity Diploma, Indie Game Development with Unity Diploma, Career in Unity Game Development India, Portfolio Building Unity Course, Game Development Fundamentals with Unity Diploma​" />
-          <link rel="canonical" href="https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unity/" />
+          <link rel="canonical" href="https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unreal/" />
         </Helmet>
 
         <div className="courses-wrapper">
