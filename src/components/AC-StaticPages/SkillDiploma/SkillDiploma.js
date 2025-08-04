@@ -93,7 +93,7 @@ function Courses(props) {
       <div className="courses-container">
         <Helmet>
           <title>Short Courses Form</title>
-          <meta name="description" content="Short Courses Form" />
+          <meta  property="og:description" content="Short Courses Form" />
           <link rel="canonical" href="https://www.backstagepass.co.in/admissions/admission-process/" />
 
         </Helmet>

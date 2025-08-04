@@ -172,7 +172,10 @@ function Courses(props) {
   `}
           </script>
           <title>Bachelor's in Augmented & Virtual Reality (AR/VR) | Backstage Pass Institute of Gaming</title>
-          <meta name="description" content="Learn AR/VR game development and interactive design through Backstage Pass Bachelor’s program. Create interactive Games & Designs with Augmented and Virtual reality" />
+
+          <meta property="og:title" content="Bachelor's in Augmented & Virtual Reality (AR/VR) | Backstage Pass Institute of Gaming" />
+          <meta property="og:description" content="Learn AR/VR game development and interactive design through Backstage Pass Bachelor’s program. Create interactive Games & Designs with Augmented and Virtual reality" />
+          <meta property="og:url" content="https://www.backstagepass.co.in/courses/bachelors-in-augmented-reality-and-virtual-reality/" />
           <meta name="keywords" content="augmented reality vs virtual reality, ar vr courses, augmented reality courses, ar and vr course, ar and vr courses, augmented reality and virtual reality courses​, ar vr courses in hyderabad, ar vr courses in india, augmented and virtual reality courses​, ar and vr courses in india, ar & vr courses, ar vr design courses, ar vr training course, best ar vr courses in india​" />
 
           <link rel="canonical" href="https://www.backstagepass.co.in/courses/bachelors-in-augmented-reality-and-virtual-reality/" />
@@ -476,7 +479,7 @@ function Courses(props) {
                         <ul>
                           <li>
                             <div className='BeyondLeft'>
-                              <img src={m5} alt="m5"/>
+                              <img src={m5} alt="m5" />
                             </div>
                             <div className='BeyondRight'>
                               <p className='lsh'>Studio Visits</p>
@@ -486,7 +489,7 @@ function Courses(props) {
                           </li>
                           <li>
                             <div className='BeyondLeft'>
-                              <img src={m6} alt="m6"/>
+                              <img src={m6} alt="m6" />
                             </div>
                             <div className='BeyondRight'>
                               <p className='lsh'>Jams & Conferences</p>
@@ -511,7 +514,7 @@ function Courses(props) {
 
                           <li>
                             <div className='BeyondLeft'>
-                              <img src={m7} alt="m7"/>
+                              <img src={m7} alt="m7" />
                             </div>
                             <div className='BeyondRight'>
                               <p className='lsh'>Make Your Own Game</p>

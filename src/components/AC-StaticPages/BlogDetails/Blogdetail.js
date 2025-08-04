@@ -464,7 +464,7 @@ function BlogDetail({ match }) {
 
 
         <title>{event.meta_tittle}</title>
-        <meta name="description" content={event.meta_des} />
+        <meta  property="og:description" content={event.meta_des} />
         <link rel="canonical" href={window.location.href} />
       </Helmet>
       {/* <div className='courseBanner'>

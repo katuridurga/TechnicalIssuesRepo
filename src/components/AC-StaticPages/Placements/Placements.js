@@ -37,7 +37,7 @@ function Placementsupport(props) {
         </div>
       </div>
       <Helmet>
-          <script type="application/ld+json">
+        <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org/", 
@@ -55,9 +55,9 @@ function Placementsupport(props) {
               }]
             }
               `}
-            </script>
-         <script type="application/ld+json">
-         {`
+        </script>
+        <script type="application/ld+json">
+          {`
             {
               "@context": "https://schema.org/",
               "@type": "WebSite",
@@ -70,9 +70,13 @@ function Placementsupport(props) {
               }
             }
               `}
-            </script>
+        </script>
         <title>Placement Support for Gaming Jobs & Internships | Backstage Pass Institute of Gaming</title>
-        <meta name="description" content="Backstage Pass Institute of Gaming offers 100% placement support. Get mentorship, portfolio-building guidance, and direct access to top gaming companies and studios for internships and job placements." />
+
+
+        <meta property="og:title" content="Placement Support for Gaming Jobs & Internships | Backstage Pass Institute of Gaming" />
+        <meta property="og:description" content="Backstage Pass Institute of Gaming offers 100% placement support. Get mentorship, portfolio-building guidance, and direct access to top gaming companies and studios for internships and job placements." />
+        <meta property="og:url" content="https://www.backstagepass.co.in/about-us/placement-support/" />
         <link rel="canonical" href="https://www.backstagepass.co.in/about-us/placement-support/" />
       </Helmet>
       {/* <div className='courseBanner'><img alt="Courses Banner" title='Courses Banner' src={courseBanner} /></div> */}
@@ -81,9 +85,9 @@ function Placementsupport(props) {
         <h2 className="mainHeadingTotal fadeInUp anime-delay">PLACEMENT RECORD
         </h2>
 
-        <p className='suprt' style={{ width: "86%", marginBottom:isMobileState ? "20px" : "50px" }}>At Backstage Pass, we provide 100% placement support. With a placement record of 90%, our students get placed at top-notch companies.
+        <p className='suprt' style={{ width: "86%", marginBottom: isMobileState ? "20px" : "50px" }}>At Backstage Pass, we provide 100% placement support. With a placement record of 90%, our students get placed at top-notch companies.
         </p>
-        <Marquee speed={100} style={{ Padding: "0px 20px", marginBottom:isMobileState ? "50px" : "10px" }} className='recuitersList'>
+        <Marquee speed={100} style={{ Padding: "0px 20px", marginBottom: isMobileState ? "50px" : "10px" }} className='recuitersList'>
           <img alt="rec1" src={r1} width={"300"} height={"81"} />
           <img alt="rec2" src={r2} width={"300"} height={"81"} />
           {/* <img alt="rec3" src={r3} width={"300"} height={"81"} /> */}
@@ -93,13 +97,13 @@ function Placementsupport(props) {
           <img alt="rec10" src={r7} width={"300"} height={"81"} />
 
         </Marquee>
-        <p className='suprt sp1' style={{marginBottom: isMobileState ? "10px" : "50px"}}>All students who submit their portfolios are eligible for placement opportunities. Students in their 3rd year, 2nd semester can apply for internships. The college provides opportunities to connect students with leading companies.
+        <p className='suprt sp1' style={{ marginBottom: isMobileState ? "10px" : "50px" }}>All students who submit their portfolios are eligible for placement opportunities. Students in their 3rd year, 2nd semester can apply for internships. The college provides opportunities to connect students with leading companies.
         </p>
 
       </div>
-      
-      <h2 className="mainHeadingTotal fadeInUp anime-delay" style={{marginBottom:isMobileState ? "20px" : "95px"}}>INTERNSHIP/PLACEMENT SUPPORT</h2>
-    
+
+      <h2 className="mainHeadingTotal fadeInUp anime-delay" style={{ marginBottom: isMobileState ? "20px" : "95px" }}>INTERNSHIP/PLACEMENT SUPPORT</h2>
+
 
       <div className='hexagon hexagon-1'>
 

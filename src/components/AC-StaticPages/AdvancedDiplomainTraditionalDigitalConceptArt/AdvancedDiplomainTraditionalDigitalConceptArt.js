@@ -174,7 +174,8 @@ function Courses(props) {
               `}
             </script>
           <title>Learn Digital & Traditional Art with our Advanced Diploma in Traditional & Digital Concept Art </title>
-          <meta name="description" content="Join Backstage Pass in Hyderabad for an Advanced Diploma in Digital & Traditional Art. Level up essential skills like illustration, concept art, stunning characters, environments, and creatures for the gaming industry." />
+          <meta property="og:title" content="Learn Digital & Traditional Art with our Advanced Diploma in Traditional & Digital Concept Art" />
+          <meta  property="og:description" content="Join Backstage Pass in Hyderabad for an Advanced Diploma in Digital & Traditional Art. Level up essential skills like illustration, concept art, stunning characters, environments, and creatures for the gaming industry." />
           <meta name="keywords" content="Traditional and Digital Art Diploma Hyderabad, Game Concept Art Course Advanced India, Illustration Diploma Advanced India, Advanced Character Concept Art Diploma, Concept Art for Games Diploma Advanced, Advanced Traditional Art Skills Diploma​"/>
           <link rel="canonical" href="https://www.backstagepass.co.in/courses/advanced-diploma-in-traditional-digital-art/" />
         </Helmet>

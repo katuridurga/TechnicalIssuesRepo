@@ -30,8 +30,8 @@ function Aboutus(props) {
     return (
         <>
             <Helmet>
-                 <script type="application/ld+json">
-                 {`
+                <script type="application/ld+json">
+                    {`
                     {
                     "@context": "https://schema.org/", 
                     "@type": "BreadcrumbList", 
@@ -48,9 +48,9 @@ function Aboutus(props) {
                     }]
                     }
                     `}
-                    </script>
+                </script>
                 <script type="application/ld+json">
-                {`
+                    {`
                     {
                     "@context": "https://schema.org/",
                     "@type": "WebSite",
@@ -63,10 +63,12 @@ function Aboutus(props) {
                     }
                     }
                     `}
-                    </script>
+                </script>
                 <title>Backstage Pass Institute of Gaming , India's #1 College for Game Development & Design
                 </title>
-                <meta name="description" content="Experience hands-on game development and design education at Backstage Pass, India's leading gaming college. Get mentored by experts and build your future." />
+                <meta property="og:title" content="Backstage Pass Institute of Gaming , India's #1 College for Game Development & Design" />
+                <meta property="og:description" content="Experience hands-on game development and design education at Backstage Pass, India's leading gaming college. Get mentored by experts and build your future." />
+                <meta property="og:url" content="https://www.backstagepass.co.in/about-us/our-story/" />
                 <link rel="canonical" href="https://www.backstagepass.co.in/about-us/our-story/" />
             </Helmet>
             <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'MobileClassb' : 'StoryB'}`}>
@@ -135,19 +137,19 @@ function Aboutus(props) {
                 </div>
             </div>
             <div className='courses-container'>
-           
-            <h3 className="mainHeadingTotal" style={{ marginTop: "-30px!important" }}>Kyodai Gameworks
-            </h3>
-           <p className="text">
-           Kyodai Gameworks is a full-fledged game development studio dedicated to crafting immersive, innovative, and genre-defining gaming experiences. From concept to launch, the studio is involved in every aspect of game creation — including development, design, and publishing.
-           </p>
-           <p className="text">
-           Affiliated with the Backstage Pass Institute of Gaming, Kyodai Gameworks blends academic insight with industry expertise, pushing boundaries to deliver games that are not only fun and engaging but also refreshingly original. With a passion for storytelling and gameplay innovation, the studio continually explores new twists on familiar genres, setting the stage for the next generation of interactive entertainment.
-           </p>
-           <p className="text">
-           Kyodai Gameworks, a Game development studio, focused on creating Fun and Engaging Gaming experiences, has released it's first title: <a href="https://play.google.com/store/apps/details?id=com.KyodaiGameworks.Slunkey" className="slu" target='_blank'>Slunkey</a>,where you play as a cheeky monkey who, in a wild quest for bananas, accidentally plunges into a mysterious toxic vat inside a banana factory. What happens next? Mutation! You’ve transformed into a gooey, stretchy, banana-powered slime creature with extraordinary abilities. Now, your only mission is to escape this dangerously absurd factory using slingshot mechanics, puzzle-solving skills, and pure reflex-driven chaos!
-           </p>
-           </div>
+
+                <h3 className="mainHeadingTotal" style={{ marginTop: "-30px!important" }}>Kyodai Gameworks
+                </h3>
+                <p className="text">
+                    Kyodai Gameworks is a full-fledged game development studio dedicated to crafting immersive, innovative, and genre-defining gaming experiences. From concept to launch, the studio is involved in every aspect of game creation — including development, design, and publishing.
+                </p>
+                <p className="text">
+                    Affiliated with the Backstage Pass Institute of Gaming, Kyodai Gameworks blends academic insight with industry expertise, pushing boundaries to deliver games that are not only fun and engaging but also refreshingly original. With a passion for storytelling and gameplay innovation, the studio continually explores new twists on familiar genres, setting the stage for the next generation of interactive entertainment.
+                </p>
+                <p className="text">
+                    Kyodai Gameworks, a Game development studio, focused on creating Fun and Engaging Gaming experiences, has released it's first title: <a href="https://play.google.com/store/apps/details?id=com.KyodaiGameworks.Slunkey" className="slu" target='_blank'>Slunkey</a>,where you play as a cheeky monkey who, in a wild quest for bananas, accidentally plunges into a mysterious toxic vat inside a banana factory. What happens next? Mutation! You’ve transformed into a gooey, stretchy, banana-powered slime creature with extraordinary abilities. Now, your only mission is to escape this dangerously absurd factory using slingshot mechanics, puzzle-solving skills, and pure reflex-driven chaos!
+                </p>
+            </div>
             <div id='chapter12'>
                 <div className="mid-title">
 

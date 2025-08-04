@@ -387,8 +387,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
   return (
     <>
       <Helmet>
-      <script type="application/ld+json">
-      {`
+        <script type="application/ld+json">
+          {`
 {
   "@context": "https://schema.org/", 
   "@type": "BreadcrumbList", 
@@ -405,11 +405,14 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
   }]
 }
 `}
-</script>
+        </script>
 
         <title>Build Your Career in Game Art</title>
-        <meta name="description" content="Learn 3D modeling, character design, and more. Start from scratch and master game art to create stunning game worlds and characters." />
-        <link rel="canonical" href="https://www.backstagepass.co.in/" />
+
+        <meta property="og:title" content="Build Your Career in Game Art" />
+        <meta property="og:description" content="Learn 3D modeling, character design, and more. Start from scratch and master game art to create stunning game worlds and characters." />
+        <meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/student-awards/" />
+        <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/student-awards/" />
       </Helmet>
       <div className="row mb0" id="scroll-container" >
         <div className="mainPanel1">
@@ -418,151 +421,151 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             {/* <a onClick={scrollToBottom} href="#CounsellingOnGamingCareer"> <div className={`et_pb_section bgimage et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? '' : ''}`}>
               {isMobileState ? <div className="CousellingButton10" style={{ position: "absolute", bottom: "-50px", left: "auto", marginBottom: "0px" }} onClick={scrollToBottom}><a style={{ padding: "12px 30px", width: "363px" }} href="#CounsellingOnGamingCareer">Enroll Now</a></div> : null}
             </div></a> */}
-            <div style={{background:"#000",color:"#fff"}}>
-             <h1 style={{ textTransform: "capitalize" }} className='maintext'>Transform Your Love for Games into a Game Art Career
+            <div style={{ background: "#000", color: "#fff" }}>
+              <h1 style={{ textTransform: "capitalize" }} className='maintext'>Transform Your Love for Games into a Game Art Career
               </h1>
               <p className='undhd'>Get ready to create Immersive Gaming experiences and Pursue Your Dream </p>
-              </div>
+            </div>
             <div className="maincls">
               <div className='mainv'>
-            <div className='MainVideoSection1'>
-             
-              <div className="videomain21g">
-                <video ref={videoRef} controls loop>
-                  <source src="https://www.backstagepass.co.in/landingpage/game-artv.mp4" type="video/mp4" />
+                <div className='MainVideoSection1'>
 
-                </video>
+                  <div className="videomain21g">
+                    <video ref={videoRef} controls loop>
+                      <source src="https://www.backstagepass.co.in/landingpage/game-artv.mp4" type="video/mp4" />
 
-
-                {!isPlaying && (
-                  <img
-                    src={advdip}
-                    style={{objectFit: isMobileState ? "null":"contain"}}
-                    className="overlay-image2-1g"
-                    alt="advdip"
-                    onClick={handlePlayMain} // Handle the click to play the video
-                  />
-                )}
-              </div>
-            </div> 
-            </div>
-            <div>
-            <div className='fom-ad-21' id="CounsellingOnGamingCareer">
+                    </video>
 
 
-<div className='containers-21'>
-
-
-
-
-
-  <form onSubmit={handleSubmit} className="formMain">
-
-    <p className="suprtsMobiless">Get <b>a Counselling</b> Session on Gaming Career</p>
-    <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
-
-
-      <div className="">
-        <label className="" for="firstname">First Name</label>
-        <input className="" placeholder="First Name" id="firstname" name="firstname" type="text" value={formData.firstname} onChange={handleInputChange} required />
-      </div>
-      <input type="hidden" name="url" value={formData.url} />
-      <input type="hidden" name="course_ttl" value={formData.course_ttl} />
-
-      <div className="">
-        <label className="" for="lastname">Last Name</label>
-        <input className="" placeholder="Last Name" id="lastname" name="lastname" type="text" value={formData.lastname} onChange={handleInputChange} required />
-      </div>
-
-    </div>
-    <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
-      <div className="">
-        <label className="" for="Phone Number">Phone Number</label>
-        <input className="" placeholder="Phone Number" id="PhoneNumber" name="PhoneNumber" type="tel" pattern="[6-9][0-9]{9}" minlength="10" maxlength="10" value={formData.PhoneNumber} onChange={handleInputChange} required />
-      </div>
-      <div className="">
-        <label className="" for="Phone Number">City</label>
-        <input className="" placeholder="City" id="city" name="city" type="text" value={formData.city} onChange={handleInputChange} required />
-      </div>
-    </div>
-    <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
-      <div className="">
-        <label className="" for="Phone Number">Email</label>
-        <input className="" placeholder="Email" id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} required />
-      </div>
-      <div className="">
-        <label className="" for="email">Qualification</label>
-        <select className="input-gray" name="qualification" id="qualification" value={formData.qualification} onChange={handleInputChange} required>
-          <option value="">Qualification</option>
-          <option value="10th">10th Pass</option>
-          <option value="12th">12th Pursuing</option>
-          <option value="12pass">12th Pass</option>
-          <option value="ugraduate">Undergraduate</option>
-          <option value="graduate">Graduate</option>
-          <option value="others">Others</option>
-        </select>
-      </div>
-     
-    </div>
-    <div className="formGrid-c" data-form-id="need-guidance" data-form="step1-container">
-<div className="" data-form-id="need-guidance" data-form="step1-container">
-                  <div className="" style={{ width: isMobileState ? "100%" : "100%" }}>
-                    <label className="" for="comments">Comments</label>
-                    <textarea
-                      className="input-gray text1a"
-                      name="comments"
-                      id="comments"
-                      placeholder="Enter your comments here..."
-                      value={formData.comments}
-                      onChange={handleInputChange}
-
-                      rows="6"
-                      maxLength={40}
-                      style={{ color: 'white'}}
-                      title="max 40 characters allowed"
-                    ></textarea>
-                    <small style={{ color: '#888', fontSize: '12px' }}>Allow maximum 40 characters</small>
+                    {!isPlaying && (
+                      <img
+                        src={advdip}
+                        style={{ objectFit: isMobileState ? "null" : "contain" }}
+                        className="overlay-image2-1g"
+                        alt="advdip"
+                        onClick={handlePlayMain} // Handle the click to play the video
+                      />
+                    )}
                   </div>
                 </div>
-</div>
-    <div style={{ padding: "20px" }}>
-      <button className=" three button brand size200 w-full sm:w-auto" data-form-id="need-guidance" data-form="step1-button-continue" type="submit">
-        Submit
-      </button>
+              </div>
+              <div>
+                <div className='fom-ad-21' id="CounsellingOnGamingCareer">
 
-    </div>
-  </form>
-  <React.Fragment>
 
-    <Dialog
-      open={open}
-      TransitionComponent={Transition}
-      keepMounted
-      onClose={handleClose}
-      aria-describedby="alert-dialog-slide-description"
-    >
-      <DialogTitle style={{ fontSize: "21px", fontWeight: "600", fontFamily: "'Montserrat', sans-serif" }}>{"Thank you for reaching out to us"}</DialogTitle>
-      <DialogContent>
-        <DialogContentText id="alert-dialog-slide-description" style={{ fontSize: "19px", fontWeight: "500", fontFamily: "'Montserrat', sans-serif" }}>
-          We appreciate your interest and will get in touch with you soon.
-
-        </DialogContentText>
-      </DialogContent>
-      <DialogActions>
-        <Button onClick={handleClose} style={{ fontSize: "21px", fontWeight: "600", fontFamily: "'Montserrat', sans-serif" }}>Close</Button>
-      </DialogActions>
-    </Dialog>
-  </React.Fragment>
+                  <div className='containers-21'>
 
 
 
-</div>
-</div>
-</div>
-</div>
+
+
+                    <form onSubmit={handleSubmit} className="formMain">
+
+                      <p className="suprtsMobiless">Get <b>a Counselling</b> Session on Gaming Career</p>
+                      <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
+
+
+                        <div className="">
+                          <label className="" for="firstname">First Name</label>
+                          <input className="" placeholder="First Name" id="firstname" name="firstname" type="text" value={formData.firstname} onChange={handleInputChange} required />
+                        </div>
+                        <input type="hidden" name="url" value={formData.url} />
+                        <input type="hidden" name="course_ttl" value={formData.course_ttl} />
+
+                        <div className="">
+                          <label className="" for="lastname">Last Name</label>
+                          <input className="" placeholder="Last Name" id="lastname" name="lastname" type="text" value={formData.lastname} onChange={handleInputChange} required />
+                        </div>
+
+                      </div>
+                      <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
+                        <div className="">
+                          <label className="" for="Phone Number">Phone Number</label>
+                          <input className="" placeholder="Phone Number" id="PhoneNumber" name="PhoneNumber" type="tel" pattern="[6-9][0-9]{9}" minlength="10" maxlength="10" value={formData.PhoneNumber} onChange={handleInputChange} required />
+                        </div>
+                        <div className="">
+                          <label className="" for="Phone Number">City</label>
+                          <input className="" placeholder="City" id="city" name="city" type="text" value={formData.city} onChange={handleInputChange} required />
+                        </div>
+                      </div>
+                      <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
+                        <div className="">
+                          <label className="" for="Phone Number">Email</label>
+                          <input className="" placeholder="Email" id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} required />
+                        </div>
+                        <div className="">
+                          <label className="" for="email">Qualification</label>
+                          <select className="input-gray" name="qualification" id="qualification" value={formData.qualification} onChange={handleInputChange} required>
+                            <option value="">Qualification</option>
+                            <option value="10th">10th Pass</option>
+                            <option value="12th">12th Pursuing</option>
+                            <option value="12pass">12th Pass</option>
+                            <option value="ugraduate">Undergraduate</option>
+                            <option value="graduate">Graduate</option>
+                            <option value="others">Others</option>
+                          </select>
+                        </div>
+
+                      </div>
+                      <div className="formGrid-c" data-form-id="need-guidance" data-form="step1-container">
+                        <div className="" data-form-id="need-guidance" data-form="step1-container">
+                          <div className="" style={{ width: isMobileState ? "100%" : "100%" }}>
+                            <label className="" for="comments">Comments</label>
+                            <textarea
+                              className="input-gray text1a"
+                              name="comments"
+                              id="comments"
+                              placeholder="Enter your comments here..."
+                              value={formData.comments}
+                              onChange={handleInputChange}
+
+                              rows="6"
+                              maxLength={40}
+                              style={{ color: 'white' }}
+                              title="max 40 characters allowed"
+                            ></textarea>
+                            <small style={{ color: '#888', fontSize: '12px' }}>Allow maximum 40 characters</small>
+                          </div>
+                        </div>
+                      </div>
+                      <div style={{ padding: "20px" }}>
+                        <button className=" three button brand size200 w-full sm:w-auto" data-form-id="need-guidance" data-form="step1-button-continue" type="submit">
+                          Submit
+                        </button>
+
+                      </div>
+                    </form>
+                    <React.Fragment>
+
+                      <Dialog
+                        open={open}
+                        TransitionComponent={Transition}
+                        keepMounted
+                        onClose={handleClose}
+                        aria-describedby="alert-dialog-slide-description"
+                      >
+                        <DialogTitle style={{ fontSize: "21px", fontWeight: "600", fontFamily: "'Montserrat', sans-serif" }}>{"Thank you for reaching out to us"}</DialogTitle>
+                        <DialogContent>
+                          <DialogContentText id="alert-dialog-slide-description" style={{ fontSize: "19px", fontWeight: "500", fontFamily: "'Montserrat', sans-serif" }}>
+                            We appreciate your interest and will get in touch with you soon.
+
+                          </DialogContentText>
+                        </DialogContent>
+                        <DialogActions>
+                          <Button onClick={handleClose} style={{ fontSize: "21px", fontWeight: "600", fontFamily: "'Montserrat', sans-serif" }}>Close</Button>
+                        </DialogActions>
+                      </Dialog>
+                    </React.Fragment>
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div className="mainrec22g">
-              <img src={recimg} alt="recimg" style={{ width: "100%", height:"100%" }} />
+              <img src={recimg} alt="recimg" style={{ width: "100%", height: "100%" }} />
 
             </div>
 
@@ -597,24 +600,24 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <div className='featuresscon2'>Looking to switch careers
 
                 </div></li>
-                <li><img src={GAIMG3} alt="ic1" />
+              <li><img src={GAIMG3} alt="ic1" />
 
-<div className='featuresscon2'>Animation & VFX enthusiast
-
-
-</div></li>
-<li><img src={GAIMG} alt="GAIMG" />
-
-<div className='featuresscon2'>3D Modeling enthusiast
+                <div className='featuresscon2'>Animation & VFX enthusiast
 
 
-</div></li>
-<li><img src={GAIMG6} alt="GAIMG" />
+                </div></li>
+              <li><img src={GAIMG} alt="GAIMG" />
 
-<div className='featuresscon2'>Passionate to create immersive game worlds
+                <div className='featuresscon2'>3D Modeling enthusiast
 
 
-</div></li>
+                </div></li>
+              <li><img src={GAIMG6} alt="GAIMG" />
+
+                <div className='featuresscon2'>Passionate to create immersive game worlds
+
+
+                </div></li>
             </ul>
 
             {/* <div className='chapters' id="chapters1" style={{height:isMobileState ? '1140px':'480px' }}>
@@ -624,7 +627,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <FeaturedProducts />
 
               </div> */}
- <div id="Career-Opportunitiesl" backgroundColor="brown" height="auto">
+            <div id="Career-Opportunitiesl" backgroundColor="brown" height="auto">
               <h2 className='mainHeadingTotall-2'>Explore our Game Art program options
               </h2>
 
@@ -641,7 +644,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 >
                   <Tab style={{ color: "#fff", fontSize: isMobileState ? "11px" : "15px", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center", width: isMobileState ? "23%" : "auto" }} label="Bachelor's" />
-                  
+
                   <Tab style={{ color: "#fff", fontSize: isMobileState ? "11px" : "15px", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center" }} label="Advanced Diploma Courses" />
                   <Tab style={{ color: "#fff", fontSize: isMobileState ? "11px" : "15px", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center" }} label="Diploma Courses" />
                 </Tabs>
@@ -651,15 +654,15 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                     <ul>
                       <li><img src={m1} alt="Duration icon" />
                         <span>Duration: 4 Years</span></li>
-                      <li><img src={m2} alt="Eligibility icon"/>
+                      <li><img src={m2} alt="Eligibility icon" />
                         <span>Eligibility: 10+2 or Equivalent *</span></li>
 
                     </ul>
                     {/* <p style={{ color: "#fff", textAlign: "center" }}>*The eligibility criteria for each Bachelor's course varies based the curriculum. Please check the criteria for the course you want to opt for before applying.</p> */}
                   </div>
-                 
+
                   <Link to={"/courses/bachelors-in-game-art-and-design/"}>
-                    <div className="mainCourse1" style={{marginBottom:"-14px"}}>
+                    <div className="mainCourse1" style={{ marginBottom: "-14px" }}>
                       <div className="mainCourseLeft1">
                         <img src={GameArtDesign} alt="B.A (Hons) in Game Art & Design" className="img-circle" />
                       </div>
@@ -671,24 +674,24 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       </div>
                     </div>
                   </Link>
-                 
+
                 </TabPanel>
 
-               
+
                 <TabPanel value={value1} index={1} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
                   <div className='courseUpdatesl'>
                     <ul>
                       <li><img src={m1} alt="Duration icon" />
                         <span>Duration: 1 Year</span></li>
-                      <li><img src={m2} alt="Eligibility icon"  />
+                      <li><img src={m2} alt="Eligibility icon" />
                         <span>Eligibility: 10+2 or Equivalent</span></li>
 
 
                     </ul>
                   </div>
-              
+
                   <Link to={"/courses/advanced-diploma-in-3d-game-art-digital-sculpting/"}>
-                    <div className="mainCourse1" style={{marginBottom:"-14px"}}>
+                    <div className="mainCourse1" style={{ marginBottom: "-14px" }}>
                       <div className="mainCourseLeft1">
                         <img src={AdvancedDiplomain3DGameArtDigitalSculpting} alt="Advanced Diploma in 3D Game Art & Digital Sculpting" className="img-circle" />
                       </div>
@@ -699,14 +702,14 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       </div>
                     </div>
                   </Link>
-                  
+
 
                 </TabPanel>
 
                 <TabPanel value={value1} index={2} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
                   <div className='courseUpdatesl'>
                     <ul>
-                      <li><img src={m1} alt="Duration icon"/>
+                      <li><img src={m1} alt="Duration icon" />
                         <span>Duration: 6 months</span></li>
                       <li><img src={m2} alt="Eligibility icon" />
                         <span>Eligibility: 10+2 or Equivalent</span></li>
@@ -715,7 +718,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                     </ul>
                   </div>
                   <Link to={"/courses/diploma-in-game-design-production/"}>
-                    <div className="mainCourse1" style={{marginBottom:"-14px"}}>
+                    <div className="mainCourse1" style={{ marginBottom: "-14px" }}>
                       <div className="mainCourseLeft1">
                         <img src={DiplomainGameDesignProduction} alt="Diploma in Game Design & Production" className="img-circle" />
                       </div>
@@ -727,81 +730,81 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       </div>
                     </div>
                   </Link>
-              
-                
+
+
                 </TabPanel>
 
-   <div className='toolsa'>
-                <h2 className='mainHeadingTotall-2'>Essential concepts you’ll explore:
+                <div className='toolsa'>
+                  <h2 className='mainHeadingTotall-2'>Essential concepts you’ll explore:
                   </h2>
-                <ul className='featuress3'>
-                  
-              <li style={{paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null}}><img src={ic7} alt="ic1" />
+                  <ul className='featuress3'>
 
-                <div className='featuresscon22'>Traditional and digital art techniques
+                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={ic7} alt="ic1" />
 
-
-                </div></li>
-              <li style={{paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null}}><img src={ic13} alt="ic1" />
-                <div className='featuresscon22'>3D Modeling & Texturing Techniques
+                      <div className='featuresscon22'>Traditional and digital art techniques
 
 
-                </div></li>
-              <li style={{paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null}}><img src={ic9} alt="ic1" />
-
-                <div className='featuresscon22'>Environment Art & Optimization
-
-
-                </div></li>
-                <li style={{paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null}}><img src={GAIMG4} alt="ic1" />
-
-                <div className='featuresscon22'>Character Art & Digital Sculpting
-
-                </div></li>
-              <li style={{paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null}}><img src={ic8} alt="ic1" />
-                <div className='featuresscon22'>Lighting and Shading Fundamentals
-
-                </div></li>
-
-              <li style={{paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null}}><img src={ic10} alt="ic1" />
-
-                <div className='featuresscon22'>Industry-standard tools like Maya, ZBrush, Substance Painter, Marmoset toolbag, Photoshop, Unreal Engine etc.
+                      </div></li>
+                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={ic13} alt="ic1" />
+                      <div className='featuresscon22'>3D Modeling & Texturing Techniques
 
 
+                      </div></li>
+                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={ic9} alt="ic1" />
 
-                </div></li>
-         
-               
-            </ul>
-            <div className="featuress31" style={{ margin: '0px auto',display:"flex",alignItems:"center", padding: isMobileState ? "20px" : null }}>
-              <ul className='CountryLogos21g' style={{width: isMobileState ? "100%":"55%" ,margin: '0px auto',display:"flex",alignItems:"center",justifyContent:"center" }}>
-                <li><img src={"https://tse2.mm.bing.net/th?id=OIP.atSrendp8pQnMsT3wdwedgAAAA&pid=Api&P=0&h=220"} />
-
-                </li>
-
-                <li><img src={flag7} />
+                      <div className='featuresscon22'>Environment Art & Optimization
 
 
-                  </li>
+                      </div></li>
+                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={GAIMG4} alt="ic1" />
 
-                <li><img src={flag8} />
+                      <div className='featuresscon22'>Character Art & Digital Sculpting
+
+                      </div></li>
+                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={ic8} alt="ic1" />
+                      <div className='featuresscon22'>Lighting and Shading Fundamentals
+
+                      </div></li>
+
+                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={ic10} alt="ic1" />
+
+                      <div className='featuresscon22'>Industry-standard tools like Maya, ZBrush, Substance Painter, Marmoset toolbag, Photoshop, Unreal Engine etc.
 
 
-                  </li>
 
-                <li><img src={flag9} />
-
-
-                  </li>
-                  <li><img src={flag10} />
-                  </li>
-<li><img src={flag11}  style={{background:"#cccc",padding:"4px"}}/>
+                      </div></li>
 
 
-</li>
-              </ul>
-            </div>
-            </div>
+                  </ul>
+                  <div className="featuress31" style={{ margin: '0px auto', display: "flex", alignItems: "center", padding: isMobileState ? "20px" : null }}>
+                    <ul className='CountryLogos21g' style={{ width: isMobileState ? "100%" : "55%", margin: '0px auto', display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <li><img src={"https://tse2.mm.bing.net/th?id=OIP.atSrendp8pQnMsT3wdwedgAAAA&pid=Api&P=0&h=220"} />
+
+                      </li>
+
+                      <li><img src={flag7} />
+
+
+                      </li>
+
+                      <li><img src={flag8} />
+
+
+                      </li>
+
+                      <li><img src={flag9} />
+
+
+                      </li>
+                      <li><img src={flag10} />
+                      </li>
+                      <li><img src={flag11} style={{ background: "#cccc", padding: "4px" }} />
+
+
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </Box>
 
               {/* <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
@@ -809,148 +812,148 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       </div> */}
 
             </div>
-        <div className="" style={{flexDirection:"column",marginTop: isMobileState ? "-22px":"0px"}}>
-   
-            <h2 className="mainHeadingTotall-2">Student Artwork</h2>
+            <div className="" style={{ flexDirection: "column", marginTop: isMobileState ? "-22px" : "0px" }}>
 
-{isMobileState ? <div>
-  <div>
-    <ul className='mbimg1g'>
-      <li><img src={art11} alt="art" /></li>
-      <li><img src={art33} alt="art" /></li>
-      <li><img src={art22} alt="art" /></li>
-      <li><img src={art44} alt="art" /></li>
-      <li><img src={art55} alt="art" /></li>
-      <li><img src={art66} alt="art" /></li>
-      <li><img src={art77} alt="art" /></li>
-      <li><img src={art88} alt="art" /></li>
-    </ul>
-  </div>
-</div> :
+              <h2 className="mainHeadingTotall-2">Student Artwork</h2>
 
-            // <div className='artwork'>
-            // <div className='left'>
-            // <ul>
-            // <li className="">
-            //   <img src={art77} alt="artimg"/>
-            //   </li>
-            //   <li className="">
-            //      <img src={art44} alt="artimg" />
-            // </li>
-            //  <li className="">
-            //      <img src={art33} alt="artimg"  />
-            // </li>
-            // </ul>
-            // </div>
-            // <div className='center'>
-            // <div className="">
-            //   <img src={art88} alt="artimg"/>
-            //   </div>
-            //   <div className="">
-            //   <img src={art11} alt="artimg"/>
-            //   </div>
-            //        <div className="">
-            //   <img src={art55} alt="artimg"/>
-            //   </div>
-            // </div>
-            // <div className='right'>
-            //    <div className="">
-            //   <img src={art22} alt="artimg"/>
-            //   </div>
-            //      <div className="">
-            //   <img src={art66} alt="artimg"/>
-            //   </div>
-            // </div>
-            // </div>
-            <div className="containerg">
+              {isMobileState ? <div>
+                <div>
+                  <ul className='mbimg1g'>
+                    <li><img src={art11} alt="art" /></li>
+                    <li><img src={art33} alt="art" /></li>
+                    <li><img src={art22} alt="art" /></li>
+                    <li><img src={art44} alt="art" /></li>
+                    <li><img src={art55} alt="art" /></li>
+                    <li><img src={art66} alt="art" /></li>
+                    <li><img src={art77} alt="art" /></li>
+                    <li><img src={art88} alt="art" /></li>
+                  </ul>
+                </div>
+              </div> :
+
+                // <div className='artwork'>
+                // <div className='left'>
+                // <ul>
+                // <li className="">
+                //   <img src={art77} alt="artimg"/>
+                //   </li>
+                //   <li className="">
+                //      <img src={art44} alt="artimg" />
+                // </li>
+                //  <li className="">
+                //      <img src={art33} alt="artimg"  />
+                // </li>
+                // </ul>
+                // </div>
+                // <div className='center'>
+                // <div className="">
+                //   <img src={art88} alt="artimg"/>
+                //   </div>
+                //   <div className="">
+                //   <img src={art11} alt="artimg"/>
+                //   </div>
+                //        <div className="">
+                //   <img src={art55} alt="artimg"/>
+                //   </div>
+                // </div>
+                // <div className='right'>
+                //    <div className="">
+                //   <img src={art22} alt="artimg"/>
+                //   </div>
+                //      <div className="">
+                //   <img src={art66} alt="artimg"/>
+                //   </div>
+                // </div>
+                // </div>
+                <div className="containerg">
 
 
-	<div className="gallery">
+                  <div className="gallery">
 
-		<div className="gallery-item">
-			<img className="gallery-image" src={art77}/>
-		</div>
+                    <div className="gallery-item">
+                      <img className="gallery-image" src={art77} />
+                    </div>
 
-		<div className="gallery-item">
-			<img className="gallery-image"  src={art33}/>
-		</div>
+                    <div className="gallery-item">
+                      <img className="gallery-image" src={art33} />
+                    </div>
 
-		<div className="gallery-item">
-			<img className="gallery-image" src={art55}/>
-		</div>
+                    <div className="gallery-item">
+                      <img className="gallery-image" src={art55} />
+                    </div>
 
-		<div className="gallery-item">
-			<img className="gallery-image"  src={art44}/>
-		</div>
+                    <div className="gallery-item">
+                      <img className="gallery-image" src={art44} />
+                    </div>
 
-		<div className="gallery-item">
-			<img className="gallery-image"  src={art66}/>
-		</div>
+                    <div className="gallery-item">
+                      <img className="gallery-image" src={art66} />
+                    </div>
 
-		<div className="gallery-item">
-			<img className="gallery-image" src={art22}/>
-		</div>
-  
-	</div>
+                    <div className="gallery-item">
+                      <img className="gallery-image" src={art22} />
+                    </div>
 
-</div>}
+                  </div>
 
-</div>
+                </div>}
+
+            </div>
             <h2 className='mainHeadingTotall-2'>What Our Alumni And Game Companies Say</h2>
 
-              <div className='maincls'>
+            <div className='maincls'>
               <div className='mainv'>
-            <div className='MainVideoSection1'>
-             
-              <div className="videomain21">
-              <video ref={videoRefI} controls loop style={{width:"100%",height:"auto"}}>
-                  <source src="https://www.backstagepass.co.in/landingpage/industryv.mp4" type="video/mp4" />
+                <div className='MainVideoSection1'>
 
-                </video>
+                  <div className="videomain21">
+                    <video ref={videoRefI} controls loop style={{ width: "100%", height: "auto" }}>
+                      <source src="https://www.backstagepass.co.in/landingpage/industryv.mp4" type="video/mp4" />
+
+                    </video>
 
 
-                {!isPlayingI && (
-                  <img
-                    src={advdip1v}
-                    style={{objectFit: isMobileState ? "fill":"contain",position:isMobileState ?"absolute":"absolute",width:"100%", height:isMobileState ? "100%":"100%"}}
-                    className="overlay-image2-1gs"
-                    alt="advdip"
-                    onClick={handlePlayIndustry} // Handle the click to play the video
-                  />
-                )}
+                    {!isPlayingI && (
+                      <img
+                        src={advdip1v}
+                        style={{ objectFit: isMobileState ? "fill" : "contain", position: isMobileState ? "absolute" : "absolute", width: "100%", height: isMobileState ? "100%" : "100%" }}
+                        className="overlay-image2-1gs"
+                        alt="advdip"
+                        onClick={handlePlayIndustry} // Handle the click to play the video
+                      />
+                    )}
+                  </div>
+                </div>
               </div>
-            </div> 
+              <div className='mainv'>
+                <div className='MainVideoSection1'>
+
+                  <div className="videomain21">
+
+                    <video ref={videoRefS} controls loop style={{ width: "100%", height: "auto" }}>
+                      <source src="https://www.backstagepass.co.in/landingpage/industrys.mp4" type="video/mp4" />
+
+                    </video>
+
+
+                    {!isPlayingS && (
+                      <img
+                        src={advdip2s}
+                        style={{ objectFit: isMobileState ? "fill" : "contain", position: isMobileState ? "absolute" : "absolute" }}
+                        className="overlay-image2-1gs"
+                        alt="advdip"
+                        onClick={handlePlayStudent} // Handle the click to play the video
+                      />
+                    )}
+                  </div>
+                </div>
+              </div>
+
             </div>
-            <div className='mainv'>
-            <div className='MainVideoSection1'>
-             
-              <div className="videomain21">
-               
-              <video ref={videoRefS} controls loop style={{width:"100%",height:"auto"}}>
-                  <source src="https://www.backstagepass.co.in/landingpage/industrys.mp4" type="video/mp4" />
-
-                </video>
+            {/* <FeaturedProductL /> */}
+            {/* <Awards /> */}
 
 
-                {!isPlayingS && (
-                  <img
-                    src={advdip2s}
-                    style={{objectFit: isMobileState ? "fill":"contain", position:isMobileState ?"absolute":"absolute"}}
-                    className="overlay-image2-1gs"
-                    alt="advdip"
-                    onClick={handlePlayStudent} // Handle the click to play the video
-                  />
-                )}
-              </div>
-            </div> 
-            </div>
-            
-              </div>
-              {/* <FeaturedProductL /> */}
-              {/* <Awards /> */}
 
-             
-           
 
 
             <h2 className='mainHeadingTotall-2'>In the Media</h2>
@@ -997,24 +1000,24 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <div className='featuresscon2'>3D Character Artist
                 </div></li>
 
-              
-             
-<li><img src={GAIMG5} alt="ic1" />
+
+
+              <li><img src={GAIMG5} alt="ic1" />
 
                 <div className='featuresscon2'>Hard Surface Modeler
 
 
                 </div></li>
-                
+
               <li><img src={ic11} alt="ic1" />
                 <div className='featuresscon2'>Digital Sculptor
 
                 </div></li>
-                <li><img src={ic10} alt="ic1" />
+              <li><img src={ic10} alt="ic1" />
 
-<div className='featuresscon2'>Character Designer
+                <div className='featuresscon2'>Character Designer
 
-</div></li>
+                </div></li>
               <li><img src={ic12} alt="ic1" />
 
                 <div className='featuresscon2'>Game Designer
@@ -1032,7 +1035,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
 
-           
+
 
             <h2 className='mainHeadingTotall-2'>Our Alumni Work Worldwide, Including
 
@@ -1058,10 +1061,10 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Sweden</div>}</li>
-                  <li><img src={Flag5} />
+                <li><img src={Flag5} />
 
 
-{isMobileState ? '' : <div className='CountryLogos-2'>Germany</div>}</li>
+                  {isMobileState ? '' : <div className='CountryLogos-2'>Germany</div>}</li>
               </ul>
             </div>
             <h2 className='mainHeadingTotall-2'>Our Alumni Work At Leading Companies Like</h2>
@@ -1076,7 +1079,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
             </Marquee>
 
-     
+
             <h2 className='mainHeadingTotall-2'>Why Choose Backstage Pass?
             </h2>
 
@@ -1097,38 +1100,38 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <div className='featuresscon2'>Taught by Industry Experienced Professionals
                 </div></li>
 
-              
-             
-<li><img src={wc5} alt="ic1" />
+
+
+              <li><img src={wc5} alt="ic1" />
 
                 <div className='featuresscon2'>Hands-on Training
 
 
                 </div></li>
-                
+
               <li><img src={wc6} alt="ic1" />
                 <div className='featuresscon2'>Strong Industry Connections
 
                 </div></li>
-                <li><img src={wc7} alt="ic1" />
+              <li><img src={wc7} alt="ic1" />
 
-<div className='featuresscon2'>100% Placement Assistance
+                <div className='featuresscon2'>100% Placement Assistance
 
-</div></li>
+                </div></li>
               <li><img src={wc8} alt="ic1" />
 
                 <div className='featuresscon2'>Access to Free Webinars/Workshops
 
 
                 </div></li>
-                <li><img src={wc9} alt="ic1" />
+              <li><img src={wc9} alt="ic1" />
 
-<div className='featuresscon2'>Global Alumni Community
+                <div className='featuresscon2'>Global Alumni Community
 
 
-</div></li>
+                </div></li>
             </ul>
-            <h2 className='mainHeadingTotall-2' style={{display: "none"}}>FAQ's</h2>
+            <h2 className='mainHeadingTotall-2' style={{ display: "none" }}>FAQ's</h2>
 
             <div className="faq-containerlg">
               {faqData.map((faq, index) => (
@@ -1144,7 +1147,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                     {faq.id == "2" ? <div className='faq2'>
                       <ul>
                         <li>
-                        Environment artists create the backgrounds, landscapes, and worlds that players explore. They design everything from terrain to buildings and other in-game structures.</li>
+                          Environment artists create the backgrounds, landscapes, and worlds that players explore. They design everything from terrain to buildings and other in-game structures.</li>
 
                       </ul>
 
@@ -1180,19 +1183,19 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                     {faq.id == "8" ? <div className='faq2'>
 
-<p> Salaries range from ₹3,00,000 to ₹8,00,000 annually, depending on experience, location, and the studio's size.</p>
+                      <p> Salaries range from ₹3,00,000 to ₹8,00,000 annually, depending on experience, location, and the studio's size.</p>
 
 
 
-</div> : null}
+                    </div> : null}
 
-{faq.id == "9" ? <div className='faq2'>
+                    {faq.id == "9" ? <div className='faq2'>
 
-<p> Salaries range from ₹3,00,000 to ₹8,00,000 annually, depending on experience, location, and the studio's size.</p>
+                      <p> Salaries range from ₹3,00,000 to ₹8,00,000 annually, depending on experience, location, and the studio's size.</p>
 
 
 
-</div> : null}
+                    </div> : null}
                   </div>
                 </div>
               ))}
@@ -1203,14 +1206,14 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
 
-         <div className="footerin" style={{height:"160px", padding:"30px"}}>
-            <div className="text-center foot-content fadeInUp anime-delay2" style={{display:'flex',alignItems:"center",justifyContent:"center",color:"#fff"}}>© 2025 All Rights Reserved</div>
+            <div className="footerin" style={{ height: "160px", padding: "30px" }}>
+              <div className="text-center foot-content fadeInUp anime-delay2" style={{ display: 'flex', alignItems: "center", justifyContent: "center", color: "#fff" }}>© 2025 All Rights Reserved</div>
             </div>
           </div>
 
 
         </div>
-       
+
       </div>
       {isButtonVisible && (
         <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>)}

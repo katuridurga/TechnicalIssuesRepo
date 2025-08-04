@@ -427,7 +427,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
     <>
       <Helmet>
         <title> Become a Game Developer</title>
-        <meta name="description" content="Kickstart your career in game development. Learn programming, 3D modeling, AR/VR, and more with expert training and hands-on experience." />
+        <meta  property="og:description" content="Kickstart your career in game development. Learn programming, 3D modeling, AR/VR, and more with expert training and hands-on experience." />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
       <div className="row mb0" id="scroll-container" >

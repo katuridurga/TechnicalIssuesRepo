@@ -57,8 +57,8 @@ function Courses(props) {
       {/* <div className='courseBanner'><img alt="Courses Banner" title='Courses Banner' src={courseBanner} /></div> */}
       <div className="courses-container">
         <Helmet>
-        <script type="application/ld+json">
-        {`
+          <script type="application/ld+json">
+            {`
           {
             "@context": "https://schema.org/",
             "@type": "WebSite",
@@ -72,8 +72,8 @@ function Courses(props) {
           }
             `}
           </script>
-         <script type="application/ld+json">
-         {`
+          <script type="application/ld+json">
+            {`
             {
               "@context": "https://schema.org/", 
               "@type": "BreadcrumbList", 
@@ -90,9 +90,12 @@ function Courses(props) {
               }]
             }
               `}
-            </script>
+          </script>
           <title>Enroll Now | Top Gaming College in Hyderabad, India - Backstage Pass institute of Gaming </title>
-          <meta name="description" content="Gain game development skills at Backstage Pass Institute of Gaming, Hyderabad's leading gaming college. Get practical training, expert guidance, and career support. Admissions open" />
+
+          <meta property="og:title" content="Enroll Now | Top Gaming College in Hyderabad, India - Backstage Pass Institute of Gaming" />
+          <meta property="og:description" content="Gain game development skills at Backstage Pass Institute of Gaming, Hyderabad's leading gaming college. Get practical training, expert guidance, and career support. Admissions open." />
+          <meta property="og:url" content="https://www.backstagepass.co.in/admissions/admission-process/" />
           <link rel="canonical" href="https://www.backstagepass.co.in/admissions/admission-process/" />
 
         </Helmet>

@@ -503,7 +503,7 @@ function SkillDiplomaCourses({ active, props }) {
     <>
       <Helmet>
         <title>Skill Diploma Course</title>
-        <meta name="description" content="Learn 3D modeling, character design, and more. Start from scratch and master game art to create stunning game worlds and characters." />
+        <meta  property="og:description" content="Learn 3D modeling, character design, and more. Start from scratch and master game art to create stunning game worlds and characters." />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
       <div className="row mb0" id="scroll-container" >

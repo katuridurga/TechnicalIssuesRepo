@@ -167,7 +167,11 @@ function Courses(props) {
   `}
           </script>
           <title>Master’s in 3D Game Art and Game Design | Backstage Pass Institute of Gaming</title>
-          <meta name="description" content="Master the 3D game art and design in sculpting, modeling, texturing, & more. Build worlds and design characters with Unreal blueprints and engine integration. You will learn from experts, create a professional portfolio, and confidently step into the game industry." />
+
+          <meta property="og:title" content="Master’s in Game Technology | Advanced Game Development & Design" />
+          <meta property="og:description" content="Master the 3D game art and design in sculpting, modeling, texturing, & more. Build worlds and design characters with Unreal blueprints and engine integration. You will learn from experts, create a professional portfolio, and confidently step into the game industry." />
+          <meta property="og:url" content="https://www.backstagepass.co.in/courses/masters-in-3d-game-art-design/" />
+
           <meta name="keywords" content="Master’s in 3D Game Art, Master’s in Game Design, 3D Game Art and Design course, Game Art and Design degree, Game Design Master’s program, Master’s degree in 3D game art and game design in India, masters in 3D game art & design​" />
           <link rel="canonical" href="https://backstagepass.co.in/courses/masters-in-3d-game-art-design/" />
         </Helmet>
@@ -276,7 +280,7 @@ function Courses(props) {
                             </p></p></li>
                           <li><img src={m3} alt="Mode icon" />
                             <p>Mode  <p className='innerhd'>Offline</p></p></li>
-                          <li><img src={m4} alt="m4"/>
+                          <li><img src={m4} alt="m4" />
                             <p>Affiliated <p className='innerhd'>JNAFAU</p></p></li>
                         </ul>
                       </div>
@@ -414,7 +418,7 @@ function Courses(props) {
                         <ul>
                           <li>
                             <div className='BeyondLeft'>
-                              <img src={m5} alt="m5"/>
+                              <img src={m5} alt="m5" />
                             </div>
                             <div className='BeyondRight'>
                               <p className='lsh'>Final Game Project</p>

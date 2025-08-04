@@ -31,8 +31,8 @@ function Courses(props) {
       </div>
       <div className="courses-container">
         <Helmet>
-        <script type="application/ld+json">
-        {`
+          <script type="application/ld+json">
+            {`
             {
               "@context": "https://schema.org/", 
               "@type": "BreadcrumbList", 
@@ -49,9 +49,9 @@ function Courses(props) {
               }]
             }
               `}
-            </script>
-        <script type="application/ld+json">
-        {`
+          </script>
+          <script type="application/ld+json">
+            {`
               {
                 "@context": "https://schema.org/",
                 "@type": "WebSite",
@@ -64,10 +64,12 @@ function Courses(props) {
                 }
               }
                 `}
-              </script>
+          </script>
           <title>Backstage Pass Institute of Gaming, college hostel facilities </title>
-          <meta name="description" content="Live close to campus with our student-friendly hostel facilities. Spacious AC & Non-AC rooms, meals included, and a secure environment for a hassle-free stay." />
-          <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/facilities/" />
+          <meta property="og:title" content="Backstage Pass Institute of Gaming, College Hostel Facilities" />
+          <meta property="og:description" content="Live close to campus with our student-friendly hostel facilities. Spacious AC & Non-AC rooms, meals included, and a secure environment for a hassle-free stay." />
+          <meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/facilities/" />
+          <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/facilities/" />
         </Helmet>
 
         <p className='suprtsF'>We provide comfortable and secure hostel accommodations. This facility is currently only available for male students. Our hostels are designed to ensure a conducive environment for both study and relaxation.
@@ -76,7 +78,7 @@ function Courses(props) {
         <div className="courses-wrapper">
           <h2 className="mainHeadingTotal">ACCOMMODATION & FEES
           </h2>
-          <p className='suprtsF'><a href="https://www.google.com/maps/place/Backstage+Pass+Institute+of+Gaming/@17.44016,78.392541,13z/data=!4m6!3m5!1s0x3bcb915c849c2fc5:0x8cde844cfd7d651e!8m2!3d17.4401601!4d78.3925411!16s%2Fg%2F1hjhgw81m?hl=en&entry=ttu&g_ep=EgoyMDI0MTExMi4wIKXMDSoASAFQAw%3D%3D" target='_blanck' style={{display:"contents", color:"#fff"}}><img src={location} alt="Location" /> <p>Plot No: 3-978, Road No: 49, Ayyappa Society, Madhapur, <br /> Hyderabad - 500081 </p></a>
+          <p className='suprtsF'><a href="https://www.google.com/maps/place/Backstage+Pass+Institute+of+Gaming/@17.44016,78.392541,13z/data=!4m6!3m5!1s0x3bcb915c849c2fc5:0x8cde844cfd7d651e!8m2!3d17.4401601!4d78.3925411!16s%2Fg%2F1hjhgw81m?hl=en&entry=ttu&g_ep=EgoyMDI0MTExMi4wIKXMDSoASAFQAw%3D%3D" target='_blanck' style={{ display: "contents", color: "#fff" }}><img src={location} alt="Location" /> <p>Plot No: 3-978, Road No: 49, Ayyappa Society, Madhapur, <br /> Hyderabad - 500081 </p></a>
           </p>
 
           {isMobileState ? <div>
@@ -165,13 +167,13 @@ function Courses(props) {
               <div className="contact-wrapper">
                 <div className="cont1">
                   <div className="contact-wrapper-inner">
-                  <CiPhone className="iconsmain" />
-                  <div>
-                    <p><a href="tel:9490310390"> +91-9490310390</a></p>
+                    <CiPhone className="iconsmain" />
+                    <div>
+                      <p><a href="tel:9490310390"> +91-9490310390</a></p>
                     </div></div></div></div>
 
-                
-       
+
+
             </div>
 
 

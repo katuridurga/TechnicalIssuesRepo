@@ -268,7 +268,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
         </title>
-        <meta name="description" content="Master 3D hard surface modeling & texturing for games with our certified skill diploma. Learn industry-standard techniques, optimize game assets, and build a professional portfolio. Enroll now!
+        <meta  property="og:description" content="Master 3D hard surface modeling & texturing for games with our certified skill diploma. Learn industry-standard techniques, optimize game assets, and build a professional portfolio. Enroll now!
 " />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>

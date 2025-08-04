@@ -236,7 +236,7 @@ function Courses(props) {
       <div className="courses-container">
         <Helmet>
           <title>Financial Assistance</title>
-          <meta name="description" content="Financial Assistance" />
+          <meta  property="og:description" content="Financial Assistance" />
           <link rel="canonical" href="https://www.backstagepass.co.in/admissions/financial-assistance-and-scholarship/" />
 
 

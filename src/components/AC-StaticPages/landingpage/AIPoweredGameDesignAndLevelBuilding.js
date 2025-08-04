@@ -251,7 +251,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       <Helmet>
         <title>AI-Powered Game Design and Level Building | Backstage Pass
         </title>
-        <meta name="description" content="AI-Powered Game Design and Level Building" />
+        <meta  property="og:description" content="AI-Powered Game Design and Level Building" />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
       <div className="row mb0" id="scroll-container" >

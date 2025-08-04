@@ -356,7 +356,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     <>
       <Helmet>
         <title>Bachelor's Degree Courses in Gaming | Backstage Pass</title>
-        <meta name="description" content="Explore our Bachelor's degree courses in gaming to kickstart your career in game design, development, and animation. Learn from industry experts with hands-on training and placement assistance." />
+        <meta  property="og:description" content="Explore our Bachelor's degree courses in gaming to kickstart your career in game design, development, and animation. Learn from industry experts with hands-on training and placement assistance." />
         <link rel="canonical" href="https://www.backstagepass.co.in/landingpage/bachelors-degree-courses-in-gaming/" />
       </Helmet>
       <a href="#ribbon" className='mainribbonb'>

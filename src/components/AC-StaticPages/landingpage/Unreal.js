@@ -352,7 +352,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     <>
       <Helmet>
         <title>Unreal Engine Development</title>
-        <meta name="description" content="Learn Unreal Engine development, level design, C++, and more. Build immersive, high-quality games with expert training from scratch." />
+        <meta  property="og:description" content="Learn Unreal Engine development, level design, C++, and more. Build immersive, high-quality games with expert training from scratch." />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
       <div className="row mb0" id="scroll-container" >

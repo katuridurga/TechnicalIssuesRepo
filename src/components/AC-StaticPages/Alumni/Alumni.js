@@ -131,8 +131,8 @@ function Alumni() {
       </div>
       <div className="courses-container">
         <Helmet>
-      <script type="application/ld+json">
-      {`
+          <script type="application/ld+json">
+            {`
         {
           "@context": "https://schema.org/", 
           "@type": "BreadcrumbList", 
@@ -149,9 +149,9 @@ function Alumni() {
           }]
         }
           `}
-        </script>
-        <script type="application/ld+json">
-        {`
+          </script>
+          <script type="application/ld+json">
+            {`
           {
             "@context": "https://schema.org/",
             "@type": "WebSite",
@@ -166,13 +166,15 @@ function Alumni() {
             `}
           </script>
           <title>Alumni Success | Backstage Pass Institute of Gaming</title>
-          <meta name="description" content="Backstage Pass graduates are making an impact in the gaming industry. Explore inspiring success stories and connect with our alumni network for career growth." />
+          <meta property="og:title" content="Alumni Success | Backstage Pass Institute of Gaming" />
+          <meta property="og:description" content="Backstage Pass graduates are making an impact in the gaming industry. Explore inspiring success stories and connect with our alumni network for career growth." />
+          <meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/alumni-success/" />
           <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/alumni-success/" />
         </Helmet>
 
         <div className="courses-wrapper">
           <div className="CourseesOverViewA">
-            <p className="suprts mar-t" style={{marginTop: isMobileState ? "20px" : "30px"}}>Backstage Pass is leaving its mark not only across India but across the globe. Some of the top companies that our alumni are currently working at are:</p>
+            <p className="suprts mar-t" style={{ marginTop: isMobileState ? "20px" : "30px" }}>Backstage Pass is leaving its mark not only across India but across the globe. Some of the top companies that our alumni are currently working at are:</p>
 
 
             <Marquee speed={100} style={{ Padding: "0px 20px" }} className='recuitersList'>
@@ -187,263 +189,263 @@ function Alumni() {
             </Marquee>
             <h2 className="mainHeadingTotal">WHAT ARE THEY WORKING AS?</h2>
             {isMobileState ?
-            <div id="Featured-Mentorsd" backgroundColor="brown" height="150vh">
+              <div id="Featured-Mentorsd" backgroundColor="brown" height="150vh">
 
 
-<div className="maincoll clear-fix">
-<div className="cardss maincolltwo">
-    <figure className="figures">
-      <img src={logo1} alt="logo" />
-      <figcaptions>
+                <div className="maincoll clear-fix">
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo1} alt="logo" />
+                      <figcaptions>
 
 
-        <div className="mainggameing"><p>Sikander Manshahia</p><div>Core Systems Programmer @ Creative Assembly</div></div>
-      </figcaptions>
-    </figure>
-  </div>
-  <div className="cardss maincolltwo">
-    <figure className="figures">
-      <img src={logo2} alt="logo" />
-      <figcaptions>
-        <div className="mainggameing"><p>Aakash Parameswaran</p><div>Founder / Creative Director @ Fable Fox</div></div>
+                        <div className="mainggameing"><p>Sikander Manshahia</p><div>Core Systems Programmer @ Creative Assembly</div></div>
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo2} alt="logo" />
+                      <figcaptions>
+                        <div className="mainggameing"><p>Aakash Parameswaran</p><div>Founder / Creative Director @ Fable Fox</div></div>
 
-      </figcaptions>
-    </figure>
-  </div>
-  <div className="cardss maincolltwo">
-    <figure className="figures">
-      <img src={logo3} alt="logo" />
-      <figcaptions>
-        <div className="mainggameing"><p>Rishi Prakaash S M</p><div>Software Developer I @ MobilityWare</div></div>
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo3} alt="logo" />
+                      <figcaptions>
+                        <div className="mainggameing"><p>Rishi Prakaash S M</p><div>Software Developer I @ MobilityWare</div></div>
 
-      </figcaptions>
-    </figure>
-  </div>
-  <div className="cardss maincolltwo">
-    <figure className="figures">
-      <img src={logo4} alt="logo" />
-      <figcaptions>
-
-
-        <div className="mainggameing"><p>Nani Surya Teja Sreerama</p><div>Software Engineer II @ East Side Games</div></div>
-      </figcaptions>
-    </figure>
-  </div>
-  <div className="cardss maincolltwo">
-    <figure className="figures">
-      <img src={logo5} alt="logo" />
-      <figcaptions>
-        <div className="mainggameing"><p>Tarun Reddi</p><div>Project Manager @ Pidgin</div></div>
-
-      </figcaptions>
-    </figure>
-  </div>
-  <div className="cardss maincolltwo">
-    <figure className="figures">
-      <img src={logo6} alt="logo" />
-      <figcaptions>
-        <div className="mainggameing"><p>Sri Ram Kaushik Karnati</p><div>Programming Analyst @ Cognizant</div></div>
-
-      </figcaptions>
-    </figure>
-  </div>
-  <div className="cardss maincolltwo">
-    <figure className="figures">
-      <img src={logo7} alt="logo" />
-      <figcaptions>
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo4} alt="logo" />
+                      <figcaptions>
 
 
-        <div className="mainggameing"><p>Rohit Lalwani</p><div>System Engineer @ Unasys</div></div>
-      </figcaptions>
-    </figure>
-  </div>
-  <div className="cardss maincolltwo">
-    <figure className="figures">
-      <img src={logo8} alt="logo" />
-      <figcaptions>
-        <div className="mainggameing"><p>Nagnath Chippa</p><div>Senior Developer @ Imagination Technologies</div></div>
+                        <div className="mainggameing"><p>Nani Surya Teja Sreerama</p><div>Software Engineer II @ East Side Games</div></div>
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo5} alt="logo" />
+                      <figcaptions>
+                        <div className="mainggameing"><p>Tarun Reddi</p><div>Project Manager @ Pidgin</div></div>
 
-      </figcaptions>
-    </figure>
-  </div>
-  <div className="cardss maincolltwo">
-    <figure className="figures">
-      <img src={logo9} alt="logo" />
-      <figcaptions>
-        <div className="mainggameing"><p>Dennchen Lama</p><div>Game Designer @ MyWhoosh</div></div>
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo6} alt="logo" />
+                      <figcaptions>
+                        <div className="mainggameing"><p>Sri Ram Kaushik Karnati</p><div>Programming Analyst @ Cognizant</div></div>
 
-      </figcaptions>
-    </figure>
-  </div>
-
-  <div className="cardss maincolltwo">
-    <figure className="figures">
-      <img src={logo10} alt="logo" />
-      <figcaptions>
-
-
-        <div className="mainggameing"><p>Agnibha Goswami</p><div>Business Analyst @ Labaiik</div></div>
-      </figcaptions>
-    </figure>
-  </div>
-  <div className="cardss maincolltwo">
-    <figure className="figures">
-      <img src={logo11} alt="logo" />
-      <figcaptions>
-        <div className="mainggameing"><p>Fasi Uddin Mir</p><div>Game Design Intern @ Sports Media Inc</div></div>
-
-      </figcaptions>
-    </figure>
-  </div>
-  <div className="cardss maincolltwo">
-    <figure className="figures">
-      <img src={logo12} alt="logo" />
-      <figcaptions>
-        <div className="mainggameing"><p>Kedar Chandulur</p><div>Game Programmer @ Games For Love</div></div>
-
-      </figcaptions>
-    </figure>
-  </div>
-
-</div>
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo7} alt="logo" />
+                      <figcaptions>
 
 
-</div> :
+                        <div className="mainggameing"><p>Rohit Lalwani</p><div>System Engineer @ Unasys</div></div>
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo8} alt="logo" />
+                      <figcaptions>
+                        <div className="mainggameing"><p>Nagnath Chippa</p><div>Senior Developer @ Imagination Technologies</div></div>
+
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo9} alt="logo" />
+                      <figcaptions>
+                        <div className="mainggameing"><p>Dennchen Lama</p><div>Game Designer @ MyWhoosh</div></div>
+
+                      </figcaptions>
+                    </figure>
+                  </div>
+
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo10} alt="logo" />
+                      <figcaptions>
 
 
-            <div id="Featured-Mentorsd" backgroundColor="brown" height="150vh">
+                        <div className="mainggameing"><p>Agnibha Goswami</p><div>Business Analyst @ Labaiik</div></div>
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo11} alt="logo" />
+                      <figcaptions>
+                        <div className="mainggameing"><p>Fasi Uddin Mir</p><div>Game Design Intern @ Sports Media Inc</div></div>
 
-              <div className="maincoll clear-fix">
-                <div className="cardss maincolltwo">
-                  <figure className="figures">
-                    <img src={logo1} alt="logo" />
-                    <figcaptions>
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo12} alt="logo" />
+                      <figcaptions>
+                        <div className="mainggameing"><p>Kedar Chandulur</p><div>Game Programmer @ Games For Love</div></div>
 
+                      </figcaptions>
+                    </figure>
+                  </div>
 
-                      <div className="mainggameing"><p>Sikander Manshahia</p><div>Core Systems Programmer @ Creative Assembly</div></div>
-                    </figcaptions>
-                  </figure>
-                </div>
-                <div className="cardss maincolltwo">
-                  <figure className="figures">
-                    <img src={logo2} alt="logo" />
-                    <figcaptions>
-                      <div className="mainggameing"><p>Aakash Parameswaran</p><div>Founder / Creative Director @ Fable Fox</div></div>
-
-                    </figcaptions>
-                  </figure>
-                </div>
-                <div className="cardss maincolltwo">
-                  <figure className="figures">
-                    <img src={logo3} alt="logo" />
-                    <figcaptions>
-                      <div className="mainggameing"><p>Rishi Prakaash S M</p><div>Software Developer I @ MobilityWare</div></div>
-
-                    </figcaptions>
-                  </figure>
                 </div>
 
 
-              </div>
-              <div className="maincoll clear-fix">
-                <div className="cardss maincolltwo">
-                  <figure className="figures">
-                    <img src={logo4} alt="logo" />
-                    <figcaptions>
+              </div> :
 
 
-                      <div className="mainggameing"><p>Nani Surya Teja Sreerama</p><div>Software Engineer II @ East Side Games</div></div>
-                    </figcaptions>
-                  </figure>
+              <div id="Featured-Mentorsd" backgroundColor="brown" height="150vh">
+
+                <div className="maincoll clear-fix">
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo1} alt="logo" />
+                      <figcaptions>
+
+
+                        <div className="mainggameing"><p>Sikander Manshahia</p><div>Core Systems Programmer @ Creative Assembly</div></div>
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo2} alt="logo" />
+                      <figcaptions>
+                        <div className="mainggameing"><p>Aakash Parameswaran</p><div>Founder / Creative Director @ Fable Fox</div></div>
+
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo3} alt="logo" />
+                      <figcaptions>
+                        <div className="mainggameing"><p>Rishi Prakaash S M</p><div>Software Developer I @ MobilityWare</div></div>
+
+                      </figcaptions>
+                    </figure>
+                  </div>
+
+
                 </div>
-                <div className="cardss maincolltwo">
-                  <figure className="figures">
-                    <img src={logo5} alt="logo" />
-                    <figcaptions>
-                      <div className="mainggameing"><p>Tarun Reddi</p><div>Project Manager @ Pidgin</div></div>
+                <div className="maincoll clear-fix">
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo4} alt="logo" />
+                      <figcaptions>
 
-                    </figcaptions>
-                  </figure>
+
+                        <div className="mainggameing"><p>Nani Surya Teja Sreerama</p><div>Software Engineer II @ East Side Games</div></div>
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo5} alt="logo" />
+                      <figcaptions>
+                        <div className="mainggameing"><p>Tarun Reddi</p><div>Project Manager @ Pidgin</div></div>
+
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo6} alt="logo" />
+                      <figcaptions>
+                        <div className="mainggameing"><p>Sri Ram Kaushik Karnati</p><div>Programming Analyst @ Cognizant</div></div>
+
+                      </figcaptions>
+                    </figure>
+                  </div>
+
+
                 </div>
-                <div className="cardss maincolltwo">
-                  <figure className="figures">
-                    <img src={logo6} alt="logo" />
-                    <figcaptions>
-                      <div className="mainggameing"><p>Sri Ram Kaushik Karnati</p><div>Programming Analyst @ Cognizant</div></div>
+                <div className="maincoll clear-fix">
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo7} alt="logo" />
+                      <figcaptions>
 
-                    </figcaptions>
-                  </figure>
+
+                        <div className="mainggameing"><p>Rohit Lalwani</p><div>System Engineer @ Unasys</div></div>
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo8} alt="logo" />
+                      <figcaptions>
+                        <div className="mainggameing"><p>Nagnath Chippa</p><div>Senior Developer @ Imagination Technologies</div></div>
+
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo9} alt="logo" />
+                      <figcaptions>
+                        <div className="mainggameing"><p>Dennchen Lama</p><div>Game Designer @ MyWhoosh</div></div>
+
+                      </figcaptions>
+                    </figure>
+                  </div>
+
+
+
                 </div>
+                <div className="maincoll clear-fix">
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo10} alt="logo" />
+                      <figcaptions>
 
 
-              </div>
-              <div className="maincoll clear-fix">
-                <div className="cardss maincolltwo">
-                  <figure className="figures">
-                    <img src={logo7} alt="logo" />
-                    <figcaptions>
+                        <div className="mainggameing"><p>Agnibha Goswami</p><div>Business Analyst @ Labaiik</div></div>
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo11} alt="logo" />
+                      <figcaptions>
+                        <div className="mainggameing"><p>Fasi Uddin Mir</p><div>Game Design Intern @ Sports Media Inc</div></div>
+
+                      </figcaptions>
+                    </figure>
+                  </div>
+                  <div className="cardss maincolltwo">
+                    <figure className="figures">
+                      <img src={logo12} alt="logo" />
+                      <figcaptions>
+                        <div className="mainggameing"><p>Kedar Chandulur</p><div>Game Programmer @ Games For Love</div></div>
+
+                      </figcaptions>
+                    </figure>
+                  </div>
 
 
-                      <div className="mainggameing"><p>Rohit Lalwani</p><div>System Engineer @ Unasys</div></div>
-                    </figcaptions>
-                  </figure>
+
                 </div>
-                <div className="cardss maincolltwo">
-                  <figure className="figures">
-                    <img src={logo8} alt="logo" />
-                    <figcaptions>
-                      <div className="mainggameing"><p>Nagnath Chippa</p><div>Senior Developer @ Imagination Technologies</div></div>
-
-                    </figcaptions>
-                  </figure>
-                </div>
-                <div className="cardss maincolltwo">
-                  <figure className="figures">
-                    <img src={logo9} alt="logo" />
-                    <figcaptions>
-                      <div className="mainggameing"><p>Dennchen Lama</p><div>Game Designer @ MyWhoosh</div></div>
-
-                    </figcaptions>
-                  </figure>
-                </div>
-
-
-
-              </div>
-              <div className="maincoll clear-fix">
-                <div className="cardss maincolltwo">
-                  <figure className="figures">
-                    <img src={logo10} alt="logo" />
-                    <figcaptions>
-
-
-                      <div className="mainggameing"><p>Agnibha Goswami</p><div>Business Analyst @ Labaiik</div></div>
-                    </figcaptions>
-                  </figure>
-                </div>
-                <div className="cardss maincolltwo">
-                  <figure className="figures">
-                    <img src={logo11} alt="logo" />
-                    <figcaptions>
-                      <div className="mainggameing"><p>Fasi Uddin Mir</p><div>Game Design Intern @ Sports Media Inc</div></div>
-
-                    </figcaptions>
-                  </figure>
-                </div>
-                <div className="cardss maincolltwo">
-                  <figure className="figures">
-                    <img src={logo12} alt="logo" />
-                    <figcaptions>
-                      <div className="mainggameing"><p>Kedar Chandulur</p><div>Game Programmer @ Games For Love</div></div>
-
-                    </figcaptions>
-                  </figure>
-                </div>
-
-
-
-              </div>
-            </div> }
+              </div>}
 
             <h2 className="mainHeadingTotal mobilehead">GET IN TOUCH WITH US</h2>
 

@@ -120,7 +120,7 @@ function StudentResult(props) {
       
           <title>Telangana Intermediate Results 2025 | backstage Pass Institute of Gaming
           </title>
-          <meta name="description" content="Get the results of Intermediate Public Examinations I & II Year (General) 2025 Results & Vocational Results with marks and Intermediate Public Examinations II Year (General) 2024 Results & Vocational Results with marks."/>
+          <meta  property="og:description" content="Get the results of Intermediate Public Examinations I & II Year (General) 2025 Results & Vocational Results with marks and Intermediate Public Examinations II Year (General) 2024 Results & Vocational Results with marks."/>
           <link rel="canonical" href="https://www.backstagepass.co.in/intermediate-board-results/"/>
         </Helmet>
      

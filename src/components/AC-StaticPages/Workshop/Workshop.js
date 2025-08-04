@@ -72,7 +72,7 @@ function Workshop(props) {
       <div className="courses-container">
         <Helmet>
           <title>Alumni</title>
-          <meta name="description" content="Alumni" />
+          <meta  property="og:description" content="Alumni" />
         </Helmet>
 
         <div className="courses-wrapper">

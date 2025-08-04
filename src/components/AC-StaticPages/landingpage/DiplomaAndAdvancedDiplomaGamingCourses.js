@@ -406,7 +406,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
     <>
       <Helmet>
         <title>Best Game Development College In India</title>
-        <meta name="description" content="Join the top game design and development college in Hyderabad. Explore game development courses & game design courses to kickstart your gaming career." />
+        <meta  property="og:description" content="Join the top game design and development college in Hyderabad. Explore game development courses & game design courses to kickstart your gaming career." />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
       <div className="row mb0" id="scroll-container" >

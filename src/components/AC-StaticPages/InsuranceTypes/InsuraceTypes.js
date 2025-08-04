@@ -107,7 +107,7 @@ function InsuraceTypes() {
     <div className="seguros-container seguros">
       <Helmet>
         <title>Tipos de Seguros</title>
-        <meta name="description" content="Tipos de Seguros" />
+        <meta  property="og:description" content="Tipos de Seguros" />
       </Helmet>
       <h3 className="seguros-title fadeInUp anime-delay">Seleccione un Seguro</h3>
       <div className={classes.root} style={{ width: '100%' }}>

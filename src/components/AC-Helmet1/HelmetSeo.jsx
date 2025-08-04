@@ -8,7 +8,7 @@ const HelmetSeo = ({ title = "", desc = "", cid = "" }) => {
   return (
     <Helmet>
       <title>{title}</title>
-      <meta name="description" content={desc} />
+      <meta  property="og:description" content={desc} />
     </Helmet>
   );
 };

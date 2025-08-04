@@ -251,7 +251,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       <Helmet>
         <title> Certificate Program in Essentials of Game Design | Backstage Pass
         </title>
-        <meta name="description" content="Certificate Program in Essentials of Game Design" />
+        <meta  property="og:description" content="Certificate Program in Essentials of Game Design" />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
       <div className="row mb0" id="scroll-container" >

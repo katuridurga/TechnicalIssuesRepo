@@ -299,7 +299,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
         <title> Certified Skill Diploma in Game Development with Unreal | Learn Unreal Engine
 
         </title>
-        <meta name="description" content="Develop games with Unreal Engine in Hyderabad, Telangana. Industry-standard skills & portfolio building. Certified Skill Diploma at Backstage Pass.
+        <meta  property="og:description" content="Develop games with Unreal Engine in Hyderabad, Telangana. Industry-standard skills & portfolio building. Certified Skill Diploma at Backstage Pass.
 
 " />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />

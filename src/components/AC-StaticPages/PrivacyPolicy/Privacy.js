@@ -52,7 +52,7 @@ function Courses(props) {
         <Helmet>
           <title>Privacy Policy | Backstage Pass Institute of Gaming
           </title>
-          <meta name="description" content="Learn how Backstage Pass Institute of Gaming collects, uses, and protects your data. Read our privacy practices for complete transparency and trust." />
+          <meta  property="og:description" content="Learn how Backstage Pass Institute of Gaming collects, uses, and protects your data. Read our privacy practices for complete transparency and trust." />
           <link rel="canonical" href="https://www.backstagepass.co.in/privacy-policy/"/>
 
         </Helmet>

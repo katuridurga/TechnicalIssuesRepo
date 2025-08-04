@@ -116,7 +116,7 @@ function Courses(props) {
     shallowEqual
   );
 
- 
+
 
   const handleScroll = (id) => {
     const el = document.getElementById(id);
@@ -139,8 +139,8 @@ function Courses(props) {
       </div>
       <div className="courses-container">
         <Helmet>
-     <script type="application/ld+json">
-                  {`
+          <script type="application/ld+json">
+            {`
           {
             "@context": "https://schema.org/", 
             "@type": "BreadcrumbList", 
@@ -158,9 +158,9 @@ function Courses(props) {
           }
             `}
           </script>
- 	
+
           <script type="application/ld+json">
-          {`
+            {`
           {
             "@context": "https://schema.org/",
             "@type": "WebSite",
@@ -176,8 +176,12 @@ function Courses(props) {
           </script>
 
           <title>Bachelor's Degree in Computer Science & Game Development | Backstage Pass Institute Gaming, Hyderabad,  India.</title>
-          <meta name="description" content="Backstage Pass Institute of Gaming is offering a Bachelor's Degree in Computer Science & Game Development. Master game design, game programming, and top game engines like Unity & Unreal. Enroll Now & Build a Career in Gaming!" />
-          <meta name="keywords" content="game development courses, game development colleges in india, game development courses in india, Computer Science in Gaming, game programming courses, bsc game design and development, game development degree, game development degree in india, game developer courses in india, video game developer course​, video game development courses​, video game development courses in india​"/>
+
+
+          <meta property="og:title" content="Bachelor's Degree in Computer Science & Game Development | Backstage Pass Institute of Gaming, Hyderabad, India" />
+          <meta property="og:description" content="Backstage Pass Institute of Gaming is offering a Bachelor's Degree in Computer Science & Game Development. Master game design, game programming, and top game engines like Unity & Unreal. Enroll Now & Build a Career in Gaming!" />
+          <meta property="og:url" content="https://www.backstagepass.co.in/courses/bachelors-in-computer-science-game-development/" />
+          <meta name="keywords" content="game development courses, game development colleges in india, game development courses in india, Computer Science in Gaming, game programming courses, bsc game design and development, game development degree, game development degree in india, game developer courses in india, video game developer course​, video game development courses​, video game development courses in india​" />
           <link rel="canonical" href="https://www.backstagepass.co.in/courses/bachelors-in-computer-science-and-game-development/" />
 
         </Helmet>
@@ -191,55 +195,55 @@ function Courses(props) {
 
           <div className="CourseesOverView">
             {isMobileState ? null : <StickyBox offsetTop={isMobileState ? 0 : 90} offsetBottom={0} style={{ position: isMobileState ? "initial" : "sticky", width: isMobileState ? '100%' : '24%', marginRight: isMobileState ? "0%" : "3%" }}>
-            <div className="sidebarview">
-      <Scrollspy
-        items={sections}
-        currentClassName="active"
-        offset={-100}
-        componentTag="ul"
-      >
-        {sections.map((section) => (
-          <li key={section}>
-            <div
-              className="ss-item-demo-2"
-              onClick={() => handleScroll(section)}
-            >
-              {section.replace(/-/g, " ")}
-            </div>
-          </li>
-        ))}
-        <li className="t-c1">
-          <button
-            className="three button brand size200 w-full sm:w-auto"
-            style={{ width: "auto", fontSize: "14.5px" }}
-            type="button"
-          >
-            <a
-              href="https://backstagepass.co.in/enquiry-now/"
-              style={{ color: "#fff" }}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Enquire Now
-            </a>
-          </button>
-        </li>
-      </Scrollspy>
-    </div>
-    <div className="applybottom"><button
-                                        className="three button brand size200 w-full sm:w-auto"
-                                        style={{ width: "180px", fontSize: "14.5px" }}
-                                        type="button"
-                                      >
-                                        <a
-                                          href="https://backstagepass.co.in/application-form/"
-                                          style={{ color: "#fff" }}
-                                          target="_blank"
-                                          rel="noopener noreferrer"
-                                        >
-                                          Apply Now
-                                        </a>
-                                      </button></div>
+              <div className="sidebarview">
+                <Scrollspy
+                  items={sections}
+                  currentClassName="active"
+                  offset={-100}
+                  componentTag="ul"
+                >
+                  {sections.map((section) => (
+                    <li key={section}>
+                      <div
+                        className="ss-item-demo-2"
+                        onClick={() => handleScroll(section)}
+                      >
+                        {section.replace(/-/g, " ")}
+                      </div>
+                    </li>
+                  ))}
+                  <li className="t-c1">
+                    <button
+                      className="three button brand size200 w-full sm:w-auto"
+                      style={{ width: "auto", fontSize: "14.5px" }}
+                      type="button"
+                    >
+                      <a
+                        href="https://backstagepass.co.in/enquiry-now/"
+                        style={{ color: "#fff" }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Enquire Now
+                      </a>
+                    </button>
+                  </li>
+                </Scrollspy>
+              </div>
+              <div className="applybottom"><button
+                className="three button brand size200 w-full sm:w-auto"
+                style={{ width: "180px", fontSize: "14.5px" }}
+                type="button"
+              >
+                <a
+                  href="https://backstagepass.co.in/application-form/"
+                  style={{ color: "#fff" }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Apply Now
+                </a>
+              </button></div>
             </StickyBox>}
             <div style={{ width: isMobileState ? "100%" : "70%" }}>
               {!isMobileState ? <div role="presentation">
@@ -281,14 +285,14 @@ function Courses(props) {
                         <ul>
                           <li><img src={m1} alt="Duration icon" />
                             <p>Duration <p className='innerhd'> 4 Years</p></p></li>
-                          <li><img src={m2} alt="Eligibility icon"  />
+                          <li><img src={m2} alt="Eligibility icon" />
                             <p>Eligibility<p className='innerhd'>10+2 or Equivalent
                               with Maths
                             </p></p></li>
                           <li><img src={m3} alt="Mode icon" />
                             <p>Mode  <p className='innerhd'>Offline</p></p></li>
                           <li><img src={m4} alt="JNAFAU" />
-                             <p>Affiliated <p className='innerhd'>JNAFAU</p></p></li>
+                            <p>Affiliated <p className='innerhd'>JNAFAU</p></p></li>
                         </ul>
                       </div>
                       <p className='normaltext'>The B.Sc (Hons) - Computer Science & Game Development program blends Computer Science, Game Design, and Game Programming skills. This course provides students with a strong foundation in core computer science topics, including software development and programming, while also focusing on game design and game development principles. Students will gain both theoretical knowledge and practical experience, preparing them for careers in both the IT and Game Development industries.</p>

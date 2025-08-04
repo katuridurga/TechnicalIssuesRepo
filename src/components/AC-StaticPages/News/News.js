@@ -11,7 +11,7 @@ function News(props) {
             <div className="news-container">
                 <Helmet>
                     <title>Sabías que</title>
-                    <meta name="description" content="Sabías que" />
+                    <meta  property="og:description" content="Sabías que" />
                 </Helmet>
                 <div className="news-wrapper">
                     <h3 className="news-title fadeInUp anime-delay">Sabías que</h3>

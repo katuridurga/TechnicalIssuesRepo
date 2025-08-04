@@ -121,20 +121,20 @@ function Courses(props) {
 
   return (
     <>
-     
+
       <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'Advanced-Diploma-in-Game-Developmentm' : 'Advanced-Diploma-in-Game-Development'}`}>
         <div className="et_pb_row et_pb_row_0">
           <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
             <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">Advanced Diploma in <br/>Game Development</h1></div>
+              <div className="et_pb_text_inner"><h1 className="title white-txt">Advanced Diploma in <br />Game Development</h1></div>
             </div>
           </div>
         </div>
       </div>
       <div className="courses-container">
         <Helmet>
-     <script type="application/ld+json">
-     {`
+          <script type="application/ld+json">
+            {`
       {
         "@context": "https://schema.org/", 
         "@type": "BreadcrumbList", 
@@ -151,9 +151,9 @@ function Courses(props) {
         }]
       }
         `}
-      </script>
-         <script type="application/ld+json">
-         {`
+          </script>
+          <script type="application/ld+json">
+            {`
             {
               "@context": "https://schema.org/",
               "@type": "WebSite",
@@ -166,13 +166,16 @@ function Courses(props) {
               }
             }
               `}
-            </script>
+          </script>
           <title>Advanced Diploma in Game Development | Backstage Pass Institute of Gaming
 
           </title>
-          <meta name="description" content="Launch your game development career in India with Backstage Pass Institute of Gaming. Our 1-Year Advanced Diploma covers design, art, programming & more. Apply  now!" />
-          <meta name="keywords" content="Advanced diploma in game development, Game development courses in advanced diploma, Advanced Game Development Diploma India, Game Development Course Advanced Hyderabad, Professional Game Development Training India, Advanced Game Programming Courses India, Advanced Level Game Development Training, Learn Advanced Game Development Hyderabad, Game Development with C++ Advanced India​"/>
-          <link rel="canonical" href="https://www.backstagepass.co.in/courses/advanced-diploma-in-game-development/" />
+
+          <meta property="og:title" content="Advanced Diploma in Game Development | Backstage Pass Institute of Gaming" />
+          <meta property="og:description" content="Launch your game development career in India with Backstage Pass Institute of Gaming. Our 1-Year Advanced Diploma covers design, art, programming & more. Apply  now!" />
+          <meta property="og:url" content="https://www.backstagepass.co.in/courses/advanced-diploma-in-game-development/" />
+          <meta name="keywords" content="Advanced diploma in game development, Game development courses in advanced diploma, Advanced Game Development Diploma India, Game Development Course Advanced Hyderabad, Professional Game Development Training India, Advanced Game Programming Courses India, Advanced Level Game Development Training, Learn Advanced Game Development Hyderabad, Game Development with C++ Advanced India​" />
+          <link rel="canonical" href="https://www.backstagepass.co.in/courses/advanced-diploma-in-game-development/" />
         </Helmet>
 
         <div className="courses-wrapper">
@@ -183,75 +186,75 @@ function Courses(props) {
 
 
           <div className="CourseesOverView">
-          {isMobileState ? null : <StickyBox offsetTop={isMobileState ? 0 : 90} offsetBottom={20} style={{ position: isMobileState ? "initial" : "sticky", width: isMobileState ? '100%' : '24%', marginRight: isMobileState ? "0%" : "3%" }}>
+            {isMobileState ? null : <StickyBox offsetTop={isMobileState ? 0 : 90} offsetBottom={20} style={{ position: isMobileState ? "initial" : "sticky", width: isMobileState ? '100%' : '24%', marginRight: isMobileState ? "0%" : "3%" }}>
               <div className="sidebarview">
-                                               <Scrollspy
-                                                 items={sections}
-                                                 currentClassName="active"
-                                                 offset={-100}
-                                                 componentTag="ul"
-                                               >
-                                                 {sections.map((section) => (
-                                                   <li key={section}>
-                                                     <div
-                                                       className="ss-item-demo-2"
-                                                       onClick={() => handleScroll(section)}
-                                                     >
-                                                       {section.replace(/-/g, " ")}
-                                                     </div>
-                                                   </li>
-                                                 ))}
-                                                 <li className="t-c1">
-                                                   <button
-                                                     className="three button brand size200 w-full sm:w-auto"
-                                                     style={{ width: "auto", fontSize: "14.5px" }}
-                                                     type="button"
-                                                   >
-                                                     <a
-                                                       href="https://backstagepass.co.in/enquire-now/"
-                                                       style={{ color: "#fff" }}
-                                                       target="_blank"
-                                                       rel="noopener noreferrer"
-                                                     >
-                                                       Enquire Now
-                                                     </a>
-                                                   </button>
-                                                 </li>
-                                               </Scrollspy>
-                                             </div>
-                                             <div className="applybottom"><button
-                                        className="three button brand size200 w-full sm:w-auto"
-                                        style={{ width: "180px", fontSize: "14.5px" }}
-                                        type="button"
-                                      >
-                                        <a
-                                          href="https://backstagepass.co.in/application-form/"
-                                          style={{ color: "#fff" }}
-                                          target="_blank"
-                                          rel="noopener noreferrer"
-                                        >
-                                          Apply Now
-                                        </a>
-                                      </button></div>
-            </StickyBox>} 
-            <div style={{ width: isMobileState? "100%" : "70%" }}>
-            {!isMobileState ? <div role="presentation">
+                <Scrollspy
+                  items={sections}
+                  currentClassName="active"
+                  offset={-100}
+                  componentTag="ul"
+                >
+                  {sections.map((section) => (
+                    <li key={section}>
+                      <div
+                        className="ss-item-demo-2"
+                        onClick={() => handleScroll(section)}
+                      >
+                        {section.replace(/-/g, " ")}
+                      </div>
+                    </li>
+                  ))}
+                  <li className="t-c1">
+                    <button
+                      className="three button brand size200 w-full sm:w-auto"
+                      style={{ width: "auto", fontSize: "14.5px" }}
+                      type="button"
+                    >
+                      <a
+                        href="https://backstagepass.co.in/enquire-now/"
+                        style={{ color: "#fff" }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Enquire Now
+                      </a>
+                    </button>
+                  </li>
+                </Scrollspy>
+              </div>
+              <div className="applybottom"><button
+                className="three button brand size200 w-full sm:w-auto"
+                style={{ width: "180px", fontSize: "14.5px" }}
+                type="button"
+              >
+                <a
+                  href="https://backstagepass.co.in/application-form/"
+                  style={{ color: "#fff" }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Apply Now
+                </a>
+              </button></div>
+            </StickyBox>}
+            <div style={{ width: isMobileState ? "100%" : "70%" }}>
+              {!isMobileState ? <div role="presentation">
                 <Breadcrumbs aria-label="breadcrumb" style={{ background: "none", color: "#fff" }}>
                   <StyledBreadcrumb
-                    style={{ cursor: "pointer", background: "none", color: "#fff", fontFamily: "Montserrat, sans-serif", border: "1px solid #fff"}}
+                    style={{ cursor: "pointer", background: "none", color: "#fff", fontFamily: "Montserrat, sans-serif", border: "1px solid #fff" }}
                     component="a"
                     href="/"
                     label="Home"
                     icon={<HomeIcon fontSize="small" />}
                   />
-                  <StyledBreadcrumb style={{ cursor: "pointer", background: "none", color: "#fff", fontFamily: "Montserrat, sans-serif", border: "1px solid #fff"}} component="a" href="/courses/" label="Courses" />
+                  <StyledBreadcrumb style={{ cursor: "pointer", background: "none", color: "#fff", fontFamily: "Montserrat, sans-serif", border: "1px solid #fff" }} component="a" href="/courses/" label="Courses" />
                   <StyledBreadcrumb
-                  style={{ background: "none", color: "#fff", fontFamily: "Montserrat, sans-serif", border: "1px solid #fff"}}
+                    style={{ background: "none", color: "#fff", fontFamily: "Montserrat, sans-serif", border: "1px solid #fff" }}
                     label="Advanced Diploma in Game Development"
-                   // component="a" href="/"
+                  // component="a" href="/"
                   />
                 </Breadcrumbs>
-              </div> : null }
+              </div> : null}
 
               <div className="">
                 <div
@@ -279,11 +282,11 @@ function Courses(props) {
                             </p></p></li>
                           <li><img src={m3} alt="Mode icon" />
                             <p>Mode  <p className='innerhd'>Offline & Online</p></p></li>
-                          <li><img src="https://www.plic.edu.np/sites/default/files/styles/large/public/images/pages/lincoln-uni-logo.gif?itok=qSZr65aP"  alt="Lincoln university logo" style={{width:"200px"}}  />
+                          <li><img src="https://www.plic.edu.np/sites/default/files/styles/large/public/images/pages/lincoln-uni-logo.gif?itok=qSZr65aP" alt="Lincoln university logo" style={{ width: "200px" }} />
                             <p>Affiliated <p className='innerhd'>Lincoln</p></p></li>
                         </ul>
                       </div>
-                      <p className='normaltext'>The Advanced Diploma in Game Development at <a href="https://www.backstagepass.co.in/" style={{color:"#ec1923",fontWeight:"500"}}> Backstage Pass Institute of Gaming </a> is a comprehensive program designed to equip students with the essential skills and knowledge required to excel in the gaming industry.
+                      <p className='normaltext'>The Advanced Diploma in Game Development at <a href="https://www.backstagepass.co.in/" style={{ color: "#ec1923", fontWeight: "500" }}> Backstage Pass Institute of Gaming </a> is a comprehensive program designed to equip students with the essential skills and knowledge required to excel in the gaming industry.
 
                       </p>
                       <p className='normaltext'>The curriculum covers foundational programming, advanced game engine programming, graphics programming, and portfolio development, ensuring that students are well-prepared to create and optimize games across various platforms.
@@ -295,25 +298,25 @@ function Courses(props) {
                       <h2 className='courseHeading' style={{ marginTop: "0px" }}>Course Objectives</h2>
 
                       <ul className='Objectives'>
-                      
-                     
-<li>Develop proficiency in C++ and C#, focusing on object-oriented programming, advanced concepts, and the essential features required for game development.</li>
 
-<li>Learn both basic and advanced aspects of Unity and Unreal game engines including UI components, animation systems, physics, AI navigation, optimization techniques, etc.</li>
 
-<li>Master version management strategies for efficient project tracking, ensuring smooth development processes and the ability to manage multiple game versions effectively.</li>
+                        <li>Develop proficiency in C++ and C#, focusing on object-oriented programming, advanced concepts, and the essential features required for game development.</li>
 
-<li>Engage in practical, hands-on projects that mimic real-world game development scenarios, enhancing your problem-solving abilities.</li>
+                        <li>Learn both basic and advanced aspects of Unity and Unreal game engines including UI components, animation systems, physics, AI navigation, optimization techniques, etc.</li>
 
-<li>Stay ahead of the curve by mastering cutting edge technologies like AI programming, graphic programming with OpenGL, and game optimization techniques.</li>
+                        <li>Master version management strategies for efficient project tracking, ensuring smooth development processes and the ability to manage multiple game versions effectively.</li>
 
-<li>Apply your skills by developing games on topics of your choice thus creating an impressive portfolio for the job market.</li>
+                        <li>Engage in practical, hands-on projects that mimic real-world game development scenarios, enhancing your problem-solving abilities.</li>
 
-<li>Learn and apply optimization techniques to enhance game performance, and understand the end-to-end processes of developing a game.</li>
+                        <li>Stay ahead of the curve by mastering cutting edge technologies like AI programming, graphic programming with OpenGL, and game optimization techniques.</li>
 
-<li>Learn from industry experts and build a professional network that will support your career growth and development.</li>
+                        <li>Apply your skills by developing games on topics of your choice thus creating an impressive portfolio for the job market.</li>
 
-<li>Build a strong portfolio showcasing your unique style and technical skills, making you a competitive candidate in the job market.</li>
+                        <li>Learn and apply optimization techniques to enhance game performance, and understand the end-to-end processes of developing a game.</li>
+
+                        <li>Learn from industry experts and build a professional network that will support your career growth and development.</li>
+
+                        <li>Build a strong portfolio showcasing your unique style and technical skills, making you a competitive candidate in the job market.</li>
 
                       </ul>
 
@@ -327,51 +330,51 @@ function Courses(props) {
 
                       <Box>
                         <Tabs
-TabIndicatorProps={{style: {background:'#ed1923'}}}
+                          TabIndicatorProps={{ style: { background: '#ed1923' } }}
                           value={value}
                           onChange={handleChange}
                           variant="scrollable"
                           scrollButtons="auto"
                           aria-label="scrollable auto tabs example"
-                          style={{ background: "#222", color: "#fff", width:"auto" }}
+                          style={{ background: "#222", color: "#fff", width: "auto" }}
                         >
                           <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="CS & Game Programming" />
                           <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label={
-    <span>
-      ADD-ON
-      <span style={{ color: "red" }}>*</span>
-    </span>
-  } />
-                          
+                            <span>
+                              ADD-ON
+                              <span style={{ color: "red" }}>*</span>
+                            </span>
+                          } />
+
                         </Tabs>
 
                         <TabPanel value={value} index={0} dir={theme.direction}>
                           <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
 
-                        
-<li>C++ | Adv C++ & STL</li>
-<li>Unity 3D Game Engine – Basic & Advanced</li>
-<li>Unreal Game Engine -  Blue Prints & Programming with C++</li>
-<li>Graphic Programming with OpenGL</li>
-<li>AI Programming</li>
-<li>Game Networking+</li>
-<li>Gameplay Programming</li>
-<li>Code Optimization</li>
-</ul>
+
+                            <li>C++ | Adv C++ & STL</li>
+                            <li>Unity 3D Game Engine – Basic & Advanced</li>
+                            <li>Unreal Game Engine -  Blue Prints & Programming with C++</li>
+                            <li>Graphic Programming with OpenGL</li>
+                            <li>AI Programming</li>
+                            <li>Game Networking+</li>
+                            <li>Gameplay Programming</li>
+                            <li>Code Optimization</li>
+                          </ul>
                         </TabPanel>
                         <TabPanel value={value} index={1} dir={theme.direction}>
-                          <p style={{ color: "#fff", fontSize: "17px", fontWeight: "500", fontFamily: "Montserrat, sans-serif" }} >*Free 50 teaching hours of Fundamentals Of Game Design & Production add-on 
+                          <p style={{ color: "#fff", fontSize: "17px", fontWeight: "500", fontFamily: "Montserrat, sans-serif" }} >*Free 50 teaching hours of Fundamentals Of Game Design & Production add-on
                           </p>
                           <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                          
-<li>History of Games & Genres</li>
-<li>Game Analysis & Deconstruction</li>
-<li>Conceptualization & Design thinking</li>
-<li>Pitch Deck & Presentation</li>
-<li>Design & Production Pipeline</li>
-</ul>
+
+                            <li>History of Games & Genres</li>
+                            <li>Game Analysis & Deconstruction</li>
+                            <li>Conceptualization & Design thinking</li>
+                            <li>Pitch Deck & Presentation</li>
+                            <li>Design & Production Pipeline</li>
+                          </ul>
                         </TabPanel>
-                        
+
 
                       </Box>
 
@@ -386,19 +389,19 @@ TabIndicatorProps={{style: {background:'#ed1923'}}}
 
                       <div className='courseUpdates1'>
                         <ul>
-                          <li> 
+                          <li>
                             <div className='BeyondLeft'>
-                              <img src={m5}  alt="m5" />
+                              <img src={m5} alt="m5" />
                             </div>
                             <div className='BeyondRight'>
-                               <p className='lsh'>Studio Visits</p>
+                              <p className='lsh'>Studio Visits</p>
                               <p>An annual visit to game studios allow students to witness how a game company truly works
                               </p>
                             </div>
                           </li>
                           <li>
                             <div className='BeyondLeft'>
-                              <img src={m6}  alt="m6" />
+                              <img src={m6} alt="m6" />
                             </div>
                             <div className='BeyondRight'>
                               <p className='lsh'>Jams & Conferences</p>
@@ -411,7 +414,7 @@ TabIndicatorProps={{style: {background:'#ed1923'}}}
 
                           <li>
                             <div className='BeyondLeft'>
-                              <img src={m8}  alt="m8" />
+                              <img src={m8} alt="m8" />
                             </div>
                             <div className='BeyondRight'>
                               <p className='lsh'>Networking Opportunities</p>
@@ -423,7 +426,7 @@ TabIndicatorProps={{style: {background:'#ed1923'}}}
 
                           <li>
                             <div className='BeyondLeft'>
-                              <img src={m7}  alt="m7" />
+                              <img src={m7} alt="m7" />
                             </div>
                             <div className='BeyondRight'>
                               <p className='lsh'>Make Your Own Game</p>
@@ -445,7 +448,7 @@ TabIndicatorProps={{style: {background:'#ed1923'}}}
 
                       <Box >
                         <Tabs
-TabIndicatorProps={{style: {background:'#ed1923'}}}
+                          TabIndicatorProps={{ style: { background: '#ed1923' } }}
                           value={value1}
                           onChange={handleChange1}
                           variant="scrollable"
@@ -459,27 +462,27 @@ TabIndicatorProps={{style: {background:'#ed1923'}}}
                         </Tabs>
 
                         <TabPanel value={value1} index={0} dir={theme.direction}>
-                        <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                        
-                       
-                        <li>Game Programmer</li>
-                        <li>Unity Developer</li>
-                        <li>Unreal Developer</li>
-                        <li>Gameplay Programmer</li>
-                        <li>Graphic Programmer</li>
-                        <li>AI Programmer</li>
-                        <li>Game Engine Programmer</li>
-                        <li>AR-VR Developer</li>
-                        <li>Game Designer</li>
-                        </ul>
+                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
+
+
+                            <li>Game Programmer</li>
+                            <li>Unity Developer</li>
+                            <li>Unreal Developer</li>
+                            <li>Gameplay Programmer</li>
+                            <li>Graphic Programmer</li>
+                            <li>AI Programmer</li>
+                            <li>Game Engine Programmer</li>
+                            <li>AR-VR Developer</li>
+                            <li>Game Designer</li>
+                          </ul>
                         </TabPanel>
-                        
+
 
 
 
                       </Box>
-                          
-                       
+
+
 
                       {/* <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                         <button className=" three button brand size200 w-full sm:w-auto" data-form-id="need-guidance" data-form="step1-button-continue" type="button" fdprocessedid="6qkh5h" style={{ width: "400px", fontSize: "17px" }}>DOWNLOAD CAREER GUIDE</button>
