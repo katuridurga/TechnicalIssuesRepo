@@ -460,6 +460,40 @@ function BlogDetail({ match }) {
     })}
   </script>
 )}
+{event.event_id === 76 && (
+   <script type="application/ld+json">
+    {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can one person be both a designer and a developer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Especially in small indie game teams, one person may handle both design and development. However, in bigger studios, these roles are often separate to focus on specialised skills."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to know how to code to become a game designer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not always. While coding helps, many game designers work more on ideas, storylines, and gameplay mechanics. Basic knowledge of game engines or scripting can definitely give you an edge."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What skills do I need to become a game developer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You’ll need strong programming skills (like C++, C#, Python), logical thinking, problem-solving abilities, and experience using game engines like Unity or Unreal."
+            }
+          }
+        ]
+      })}
+  </script>
+)}
 
 
 
