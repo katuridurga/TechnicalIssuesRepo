@@ -7,6 +7,8 @@
   <meta name="theme-color" content="#000000" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Backstage Pass</title>
+  <meta property="og:image" content="https://backstagepass.co.in/logo-16c7e4db.webp" />
+
 
   <!-- Font Optimization -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -89,6 +91,30 @@
     })();
   </script>
   <!-- End Matomo Tag Manager -->
+   
+  <!-- ✅ Defer all chunk CSS files to fix LCP -->
+<script>
+  window.addEventListener('load', () => {
+    document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && href.includes('.chunk.css')) {
+        const preload = document.createElement('link');
+        preload.rel = 'preload';
+        preload.as = 'style';
+        preload.href = href;
+        preload.onload = () => {
+          preload.rel = 'stylesheet';
+        };
+        document.head.appendChild(preload);
+      }
+    });
+  });
+</script>
+
+
+
+ 
+
 </head>
 
 <body>

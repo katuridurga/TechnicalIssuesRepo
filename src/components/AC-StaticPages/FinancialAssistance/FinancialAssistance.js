@@ -235,8 +235,11 @@ function Courses(props) {
       {/* <div className='courseBanner'><img alt="Courses Banner" title='Courses Banner' src={courseBanner} /></div> */}
       <div className="courses-container">
         <Helmet>
-          <title>Financial Assistance</title>
-          <meta  property="og:description" content="Financial Assistance" />
+          <title> Financial Assistance & Scholarships | Backstage Pass Institute of Gaming</title>
+           <meta property="og:title" content=" Financial Assistance & Scholarships | Backstage Pass Institute of Gaming" />
+          <meta  property="og:description" content="Make your gaming education affordable with student loan options, scholarships, and financial aid from Backstage Pass Institute of Gaming. Our program features 0% interest and quick processing." />
+           <meta property="og:url" content="https://www.backstagepass.co.in/admissions/financial-assistance-and-scholarship/" />
+       
           <link rel="canonical" href="https://www.backstagepass.co.in/admissions/financial-assistance-and-scholarship/" />
 
 

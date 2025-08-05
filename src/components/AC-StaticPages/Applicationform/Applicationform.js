@@ -3,6 +3,7 @@ import { Container, Tabs, Tab, Box, TextField, MenuItem, Avatar, IconButton, But
 import { useSelector, shallowEqual } from "react-redux";
 import { useForm, Controller } from 'react-hook-form';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Helmet } from "react-helmet";
 
 import axios from 'axios';
 import Slide from '@mui/material/Slide';
@@ -702,7 +703,17 @@ if(program === 'advancedDiploma'){
   
 
   return (
+    <>
+ <Helmet>
+          <title> Apply Now for Game Development Courses | Backstage Pass</title>
+           <meta property="og:title" content="Apply Now for Game Development Courses | Backstage Pass" />
+          <meta  property="og:description" content=" Applying to Backstage Pass is simple and fast. Fill out our online application form to get started with your game development education today." />
+           <meta property="og:url" content="https://www.backstagepass.co.in/Application-form/" />
+       
+          <link rel="canonical" href="https://www.backstagepass.co.in/Application-form/" />
 
+
+        </Helmet>
     <ThemeProvider theme={theme}>
       <Container
         maxWidth="xl" // Controls container width based on screen size
@@ -3179,6 +3190,7 @@ Choose the Batch you want to join In:
         </Modal>
       </Container>
     </ThemeProvider>
+    </>
   );
 }
 
