@@ -91,10 +91,9 @@
     })();
   </script>
   <!-- End Matomo Tag Manager -->
-   
-  <!-- ✅ Defer all chunk CSS files to fix LCP -->
-<script>
-  window.addEventListener('load', () => {
+
+  <script>
+    // Immediately replace chunk stylesheet with preload hack before render
     document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
       const href = link.getAttribute('href');
       if (href && href.includes('.chunk.css')) {
@@ -102,18 +101,22 @@
         preload.rel = 'preload';
         preload.as = 'style';
         preload.href = href;
-        preload.onload = () => {
-          preload.rel = 'stylesheet';
+        preload.onload = function () {
+          this.rel = 'stylesheet';
         };
+        preload.onerror = function () {
+          this.rel = 'stylesheet';
+        };
+        link.remove(); // Remove old blocking stylesheet
         document.head.appendChild(preload);
       }
     });
-  });
-</script>
+  </script>
 
 
 
- 
+
+
 
 </head>
 
