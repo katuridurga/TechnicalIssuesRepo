@@ -377,7 +377,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
     <>
       <Helmet>
         <title> Master Unity Game Development </title>
-        <meta  property="og:description" content="Learn Unity game programming, AI, AR/VR, and more. From beginner to expert, build games using industry-leading Unity engine skills.
+        <meta  name="description" content="Learn Unity game programming, AI, AR/VR, and more. From beginner to expert, build games using industry-leading Unity engine skills.
 " />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>

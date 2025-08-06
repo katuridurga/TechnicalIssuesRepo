@@ -51,7 +51,7 @@ function Mentors(props) {
       <div className="courses-container">
         <Helmet>
           <title>Mentors</title>
-          <meta  property="og:description" content="Mentors" />
+          <meta  name="description" content="Mentors" />
         </Helmet>
 
         <div className="courses-wrapper">

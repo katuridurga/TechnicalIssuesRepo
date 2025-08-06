@@ -79,7 +79,7 @@ function ContactUs(props) {
                 <title>Contact Backstage Pass Institute of Gaming | Get in Touch for Gaming College Admissions & Queries</title>
 
                 <meta property="og:title" content="Contact Backstage Pass Institute of Gaming | Get in Touch for Gaming College Admissions & Queries" />
-                <meta property="og:description" content="Have questions about game development courses, admissions, or placements? Call, fill out the form, email, or visit us at Backstage Pass Institute of Gaming Hyderabad, India. Talk to our team today!" />
+                <meta name="description" content="Have questions about game development courses, admissions, or placements? Call, fill out the form, email, or visit us at Backstage Pass Institute of Gaming Hyderabad, India. Talk to our team today!" />
                 <meta property="og:url" content="https://www.backstagepass.co.in/contactus/" />
                 <link rel="canonical" href="https://www.backstagepass.co.in/contactus/" />
 

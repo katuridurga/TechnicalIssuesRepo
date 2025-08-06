@@ -707,7 +707,7 @@ if(program === 'advancedDiploma'){
  <Helmet>
           <title> Apply Now for Game Development Courses | Backstage Pass</title>
            <meta property="og:title" content="Apply Now for Game Development Courses | Backstage Pass" />
-          <meta  property="og:description" content=" Applying to Backstage Pass is simple and fast. Fill out our online application form to get started with your game development education today." />
+          <meta  name="description" content=" Applying to Backstage Pass is simple and fast. Fill out our online application form to get started with your game development education today." />
            <meta property="og:url" content="https://www.backstagepass.co.in/Application-form/" />
        
           <link rel="canonical" href="https://www.backstagepass.co.in/Application-form/" />

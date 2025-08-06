@@ -23,7 +23,7 @@ function Courses(props) {
       <div className="courses-container">
         <Helmet>
           <title>Return/Refund Policy</title>
-          <meta  property="og:description" content="Accelerator Program" />
+          <meta  name="description" content="Accelerator Program" />
           <link rel="canonical" href="https://www.backstagepass.co.in/refund-policy-test/"/>
 
         </Helmet>

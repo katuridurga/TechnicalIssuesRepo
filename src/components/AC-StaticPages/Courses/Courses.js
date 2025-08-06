@@ -94,7 +94,7 @@ function Courses(props) {
   <title>Backstage Pass College offers Online & Offline Video Game Development & Design Courses</title>
  
   <meta property="og:title" content="Backstage Pass College offers Online & Offline Video Game Development & Design Courses" />
-<meta property="og:description" content="Join career-building programs in Bachelor’s, Master’s, Advanced Diploma & Certified Skill Courses. Browse our Game Design, Game Art, 3D Art, Game Programming, & AR/VR courses. Upskill with our eLearning and Offline Programs." />
+<meta name="description" content="Join career-building programs in Bachelor’s, Master’s, Advanced Diploma & Certified Skill Courses. Browse our Game Design, Game Art, 3D Art, Game Programming, & AR/VR courses. Upskill with our eLearning and Offline Programs." />
 <meta property="og:url" content="https://www.backstagepass.co.in/courses/" />
   <meta name="keywords" content="game development courses near me, game design courses in india, video game college courses, game development college courses, course for game design and art, gaming courses after 12th, gaming courses in india, game development courses in india"/>
 

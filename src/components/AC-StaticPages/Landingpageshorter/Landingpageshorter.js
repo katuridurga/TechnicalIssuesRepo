@@ -30,7 +30,7 @@ function Aboutus(props) {
         <>
  <Helmet>
           <title>about us page</title>
-          <meta  property="og:description" content="about us description" />
+          <meta  name="description" content="about us description" />
           <link rel="canonical" href="https://www.backstagepass.co.in/about-us/our-story/" />
         </Helmet>
     <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'MobileClassb' : 'StoryB'}`}>

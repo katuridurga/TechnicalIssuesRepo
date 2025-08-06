@@ -13,7 +13,7 @@ function Courses(props) {
             <div className="courses-container">
                 <Helmet>
                     <title>BlogDetail</title>
-                    <meta  property="og:description" content="BlogDetail" />
+                    <meta  name="description" content="BlogDetail" />
                 </Helmet>
 
                 <div className="courses-wrapper">

@@ -353,7 +353,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       <Helmet>
         <title> Short Course on Game Development with Unity | Certified Skills | Backstage Pass
         </title>
-        <meta  property="og:description" content="Learn to develop games with Unity. Gain industry-relevant skills and build a portfolio. Earn your Skill Diploma at Backstage Pass Institute.
+        <meta  name="description" content="Learn to develop games with Unity. Gain industry-relevant skills and build a portfolio. Earn your Skill Diploma at Backstage Pass Institute.
 " />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>

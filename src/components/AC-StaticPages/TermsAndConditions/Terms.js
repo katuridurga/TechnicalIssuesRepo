@@ -24,7 +24,7 @@ function Courses(props) {
         <Helmet>
           <title>Terms & Conditions | Backstage Pass Institute of Gaming
           </title>
-          <meta  property="og:description" content="Review the terms and conditions for using the Backstage Pass website and services. Understand your rights and responsibilities as a user." />
+          <meta  name="description" content="Review the terms and conditions for using the Backstage Pass website and services. Understand your rights and responsibilities as a user." />
           <link rel="canonical" href="https://www.backstagepass.co.in/terms-and-conditions/" />
 
         </Helmet>

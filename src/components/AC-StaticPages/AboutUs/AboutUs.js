@@ -67,7 +67,7 @@ function Aboutus(props) {
                 <title>Backstage Pass Institute of Gaming , India's #1 College for Game Development & Design
                 </title>
                 <meta property="og:title" content="Backstage Pass Institute of Gaming , India's #1 College for Game Development & Design" />
-                <meta property="og:description" content="Experience hands-on game development and design education at Backstage Pass, India's leading gaming college. Get mentored by experts and build your future." />
+                <meta name="description" content="Experience hands-on game development and design education at Backstage Pass, India's leading gaming college. Get mentored by experts and build your future." />
                 <meta property="og:url" content="https://www.backstagepass.co.in/about-us/our-story/" />
                 <link rel="canonical" href="https://www.backstagepass.co.in/about-us/our-story/" />
             </Helmet>

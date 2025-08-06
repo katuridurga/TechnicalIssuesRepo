@@ -169,7 +169,7 @@ function Courses(props) {
           <title>Master’s in 3D Game Art and Game Design | Backstage Pass Institute of Gaming</title>
 
           <meta property="og:title" content="Master’s in Game Technology | Advanced Game Development & Design" />
-          <meta property="og:description" content="Master the 3D game art and design in sculpting, modeling, texturing, & more. Build worlds and design characters with Unreal blueprints and engine integration. You will learn from experts, create a professional portfolio, and confidently step into the game industry." />
+          <meta name="description" content="Master the 3D game art and design in sculpting, modeling, texturing, & more. Build worlds and design characters with Unreal blueprints and engine integration. You will learn from experts, create a professional portfolio, and confidently step into the game industry." />
           <meta property="og:url" content="https://www.backstagepass.co.in/courses/masters-in-3d-game-art-design/" />
 
           <meta name="keywords" content="Master’s in 3D Game Art, Master’s in Game Design, 3D Game Art and Design course, Game Art and Design degree, Game Design Master’s program, Master’s degree in 3D game art and game design in India, masters in 3D game art & design​" />

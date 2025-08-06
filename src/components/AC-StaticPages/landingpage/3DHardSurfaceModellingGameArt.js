@@ -254,7 +254,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       <Helmet>
         <title> 3D Hard Surface Modelling (Game Art)	 | Backstage Pass
         </title>
-        <meta  property="og:description" content="3D Hard Surface Modelling (Game Art)	" />
+        <meta  name="description" content="3D Hard Surface Modelling (Game Art)	" />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
       <div className="row mb0" id="scroll-container" >

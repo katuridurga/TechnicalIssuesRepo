@@ -175,7 +175,7 @@ function Courses(props) {
           <title>Become a 3D Game Artist with our Advanced Diploma in 3D Game Art & Digital Sculpting</title>
 
           <meta property="og:title" content="Become a 3D Game Artist with our Advanced Diploma in 3D Game Art & Digital Sculpting" />
-          <meta property="og:description" content="Learn 3D modeling, character sculpting, environment art & texturing for video games. Backstage Pass's Advanced Diploma offers comprehensive training" />
+          <meta name="description" content="Learn 3D modeling, character sculpting, environment art & texturing for video games. Backstage Pass's Advanced Diploma offers comprehensive training" />
           <meta property="og:url" content="https://www.backstagepass.co.in/courses/advanced-diploma-in-3d-game-art-digital-sculpting/" />
 
           <meta name="keywords" content="Advanced 3D Game Art Diploma India, Digital Sculpting Diploma India, 3D Character Art Diploma Hyderabad, Advanced Game Art Courses Hyderabad, Advanced Digital Sculpting Training India, Advanced 3D Modeling Diploma India, Game Character Design Diploma India, Advanced Texturing for Games Diploma​" />

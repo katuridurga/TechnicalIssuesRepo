@@ -172,7 +172,7 @@ function Courses(props) {
           </title>
 
           <meta property="og:title" content="Advanced Diploma in Game Development | Backstage Pass Institute of Gaming" />
-          <meta property="og:description" content="Launch your game development career in India with Backstage Pass Institute of Gaming. Our 1-Year Advanced Diploma covers design, art, programming & more. Apply  now!" />
+          <meta name="description" content="Launch your game development career in India with Backstage Pass Institute of Gaming. Our 1-Year Advanced Diploma covers design, art, programming & more. Apply  now!" />
           <meta property="og:url" content="https://www.backstagepass.co.in/courses/advanced-diploma-in-game-development/" />
           <meta name="keywords" content="Advanced diploma in game development, Game development courses in advanced diploma, Advanced Game Development Diploma India, Game Development Course Advanced Hyderabad, Professional Game Development Training India, Advanced Game Programming Courses India, Advanced Level Game Development Training, Learn Advanced Game Development Hyderabad, Game Development with C++ Advanced India​" />
           <link rel="canonical" href="https://www.backstagepass.co.in/courses/advanced-diploma-in-game-development/" />

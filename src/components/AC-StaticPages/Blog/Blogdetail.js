@@ -69,7 +69,7 @@ function BlogDetail({ match }) {
       <div className="courses-container">
         <Helmet>
           <title>BlogDetail</title>
-          <meta  property="og:description" content="BlogDetail" />
+          <meta  name="description" content="BlogDetail" />
           <link rel="canonical" href="https://www.backstagepass.co.in/blogs/" />
         </Helmet>
 

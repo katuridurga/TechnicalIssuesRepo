@@ -388,7 +388,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     <>
       <Helmet>
         <title>Build Your Career in Game Art</title>
-        <meta  property="og:description" content="Learn 3D modeling, character design, and more. Start from scratch and master game art to create stunning game worlds and characters." />
+        <meta  name="description" content="Learn 3D modeling, character design, and more. Start from scratch and master game art to create stunning game worlds and characters." />
         <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/student-awards/" />
       </Helmet>
       <div className="row mb0" id="scroll-container" >

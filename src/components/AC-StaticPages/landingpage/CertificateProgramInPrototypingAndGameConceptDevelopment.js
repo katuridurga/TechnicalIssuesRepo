@@ -248,7 +248,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       <Helmet>
         <title> Certificate Program in Prototyping & Game Concept Development | Backstage Pass
         </title>
-        <meta  property="og:description" content="Certificate Program in Prototyping & Game Concept Development" />
+        <meta  name="description" content="Certificate Program in Prototyping & Game Concept Development" />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
       <div className="row mb0" id="scroll-container" >
