@@ -343,6 +343,13 @@ height: 250px;
  text-decoration: underline;
 }
 @media only screen and (max-width : 1024px){
+  .blog-content {
+padding: 10px 15px 20px 15px;
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+height: auto !important;
+}
   .suprts1 p {
     font-size: 17px!important;
     font-weight: 400;

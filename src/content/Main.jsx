@@ -97,8 +97,8 @@ function Main({ active, props }) {
               <div className='stripd'>
                 <div className='adopen'><p>Admissions Open! </p></div>
                 <div className='mainhdb'>
-                  <p><b>Bachelor's/Master's Programs :</b> <strong> Apply now for 2025 intake!</strong><strong style={{ fontWeight: "700" }}> (Limited seats, Last Date: 15 July 2025)</strong></p><br />
-                  <p><b>Diploma/Advanced Diploma Programs :</b> <strong> Limited seats for the July and August 2025 batches. Apply now!</strong> </p>
+                  <p><b>Bachelor's/Master's Programs :</b> <strong> Apply now for 2025 intake!</strong><strong style={{ fontWeight: "700" }}> (Limited seats)</strong></p><br />
+                  <p><b>Diploma/Advanced Diploma Programs :</b> <strong> Limited seats. Apply now!</strong> </p>
                 </div>
               </div>
             </div>
