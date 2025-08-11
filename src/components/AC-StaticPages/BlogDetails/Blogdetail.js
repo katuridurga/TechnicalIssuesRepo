@@ -383,7 +383,8 @@ function BlogDetail({ match }) {
             "datePublished": formatDateToDMY(event.event_s_dt) // Ensure this returns a valid ISO or date string
           })}
         </script>
-        {event.event_id === 70 && (
+      
+        {Number(event.event_id) === 70 && (
   <script type="application/ld+json">
     {JSON.stringify({
       "@context": "https://schema.org",
@@ -418,7 +419,7 @@ function BlogDetail({ match }) {
   </script>
 )}
 
-{event.event_id === 75 && (
+{Number(event.event_id) === 75 && (
   <script type="application/ld+json">
     {JSON.stringify({
       "@context": "https://schema.org",
@@ -460,7 +461,7 @@ function BlogDetail({ match }) {
     })}
   </script>
 )}
-{event.event_id === 76 && (
+{Number(event.event_id) === 76 && (
    <script type="application/ld+json">
     {JSON.stringify({
         "@context": "https://schema.org",
