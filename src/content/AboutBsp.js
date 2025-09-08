@@ -51,8 +51,8 @@ function HomeContent() {
 
                     end={15}
                     duration={5}
-                  />}+</div></div>
-                <p>Years of Exp</p>
+                  />}</div></div>
+                <p>Years of Academic Excellence</p>
               </div>
               </ScrollTrigger>
               <ScrollTrigger onEnter={() => setCounterState(true)} onExit={() => setCounterState(false)}><div className="counter">

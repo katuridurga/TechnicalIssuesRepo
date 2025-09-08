@@ -87,15 +87,14 @@ const ScrollTriggerCountUp = () => {
     }}>
       <CountUp
         start={0}
-        end={14}
+        end={15}
         duration={3}
         separator=","
         style={{ fontSize: "40px", fontWeight: "900", color: "#fff" }}
       />
-      <span style={{ fontSize: "40px", fontWeight: "900", color: "#fff" }}>+</span>
     </div>
     <p style={{ fontSize: "20px", fontWeight: "900", color: "#fff" }}>
-      Years of Exp
+      Years of <br/> Academic <br/> Excellence
     </p>
   </div>
 </div>

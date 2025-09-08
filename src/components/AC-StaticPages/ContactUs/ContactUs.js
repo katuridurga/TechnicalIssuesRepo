@@ -111,12 +111,12 @@ function ContactUs(props) {
                     <li>
                         <p style={{ color: "#fff" }}>
                             <p class="text-center  enqhd">HEAD OFFICE</p>
-                            #2-46/2/8/L/21, Backstage Pass Institute of Gaming, Near Metro Pillar No. C1725, Beside Runee Homes, Madhapur, Hyderabad - 500081
+                            Plot No. 72, beside Spring Board, Jubilee Enclave, HITEC City, Hyderabad, Telangana 500081
                         </p>
                         <div className='mainbtn'>
                             {/* <button className="lc"><a target='_blank' href="https://www.google.com/maps/place/Backstage+Pass+Institute+of+Gaming/@17.440162,78.392406,15z/data=!4m6!3m5!1s0x3bcb915c849c2fc5:0x8cde844cfd7d651e!8m2!3d17.4401621!4d78.3924059!16s%2Fg%2F1hjhgw81m?hl=en&entry=ttu&g_ep=EgoyMDI0MDgyMC4xIKXMDSoASAFQAw%3D%3D">MAPS Directions</a></button> */}
-
-                            <iframe title="Contact Us Google Map Location" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15225.633128789017!2d78.392406!3d17.440162!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb915c849c2fc5%3A0x8cde844cfd7d651e!2sBackstage%20Pass%20Institute%20of%20Gaming!5e0!3m2!1sen!2sin!4v1724395529987!5m2!1sen!2sin" width={isMobileState ? "100%" : "547"} height="150" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.0933141003975!2d78.37267337493633!3d17.455247283443597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb915c849c2fc5%3A0x8cde844cfd7d651e!2sBackstage%20Pass%20Institute%20of%20Gaming!5e0!3m2!1sen!2sin!4v1757322480056!5m2!1sen!2sin" width={isMobileState ? "100%" : "547"} height="150" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            
                         </div>
                     </li>
                     {/* <li>
