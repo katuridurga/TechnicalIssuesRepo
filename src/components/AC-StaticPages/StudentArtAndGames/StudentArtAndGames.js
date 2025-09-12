@@ -28,6 +28,8 @@ import b9 from "../../../assets/img/games/9.webp";
 import b10 from "../../../assets/img/games/10.webp";
 import b11 from "../../../assets/img/games/11.webp";
 import b12 from "../../../assets/img/games/12.webp";
+import orbit from "../../../assets/img/games/orbital.webp";
+
 
 import  {useSelector, shallowEqual}  from "react-redux";
 
@@ -196,7 +198,7 @@ function Courses(props) {
       <img src= {b5} alt="b5"/>
       <div class="overlaysg">
         <h3>Slunkey</h3>
-        <p>Step into the shoes of a stretchy monkey and escape a hazardous factory filled with quirky puzzles and banana challenges!</p>
+        <p>Play as a cheeky monkey turned into slime in Slunkey. a fun slingshot puzzle platformer packed with quirky banana escape challenges</p>
       </div>
     </div>
     <div class="cardsg">
@@ -247,6 +249,13 @@ function Courses(props) {
       <div class="overlaysg">
         <h3>blur maniac</h3>
         <p>Dive into the world of portals, wrecking, and high-speed racing! What else do you need to know?</p>
+      </div>
+    </div>
+     <div class="cardsg">
+      <img src= {orbit} alt="b12"/>
+      <div class="overlaysg">
+        <h3>orbital outbreak</h3>
+        <p>Dive into Orbital Outbreak, a chaotic roguelite top-down shooter where alien swarms test your reflexes in nonstop action.</p>
       </div>
     </div>
   </div>

@@ -146,10 +146,10 @@ function ContactUs(props) {
                 </ul>
             </div>
 
-            <div id="chapter122">
-                <h2 className="mainHeadingTotal">Don’t Wish To Talk Or Type?</h2>
+            <div id="chapter122" style={{ background: "#fff" }}>
+                <h2 className="mainHeadingTotal" style={{color:"#000"}}>Don’t Wish To Talk Or Type?</h2>
 
-                <p className='faqsC' style={{ color: "#fff" }}>Find answers to some Frequently Asked Questions below!</p>
+                <p className='faqsC' style={{ color: "#000" }}>Find answers to some Frequently Asked Questions below!</p>
                 <div id='chapternew'>
 
                     <div style={{ position: "relative", height: isMobileState ? "auto" : "860px" }}>

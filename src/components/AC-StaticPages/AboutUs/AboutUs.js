@@ -147,36 +147,38 @@ function Aboutus(props) {
                     Affiliated with the Backstage Pass Institute of Gaming, Kyodai Gameworks blends academic insight with industry expertise, pushing boundaries to deliver games that are not only fun and engaging but also refreshingly original. With a passion for storytelling and gameplay innovation, the studio continually explores new twists on familiar genres, setting the stage for the next generation of interactive entertainment.
                 </p>
                 <p className="text">
-                    Kyodai Gameworks, a Game development studio, focused on creating Fun and Engaging Gaming experiences, has released it's first title: <a href="https://play.google.com/store/apps/details?id=com.KyodaiGameworks.Slunkey" className="slu" target='_blank'>Slunkey</a>,where you play as a cheeky monkey who, in a wild quest for bananas, accidentally plunges into a mysterious toxic vat inside a banana factory. What happens next? Mutation! You’ve transformed into a gooey, stretchy, banana-powered slime creature with extraordinary abilities. Now, your only mission is to escape this dangerously absurd factory using slingshot mechanics, puzzle-solving skills, and pure reflex-driven chaos!
+                    <a href="https://play.google.com/store/apps/details?id=com.KyodaiGameworks.Slunkey" className="slu" target='_blank'>Slunkey</a> is the first game launched by Kyodai Gameworks. It is a fun slime puzzle adventure where a cheeky monkey mutates into a gooey character, and it tries to escape the crazy banana factory using slingshot mechanics. If you love puzzle games, quirky platformers, or are searching for the best puzzle games for Android and iPhone, this monkey puzzle escape is packed with challenge and fun.
+
+                    Kyodai Gameworks’ 2nd game, Orbital Outbreak, is a chaotic roguelite shooter set on spinning planets. Packed with nonstop action, this offline top-down shooter delivers survival chaos and ranks among the best shooting games for Android and iPhone
                 </p>
             </div>
-            <div id='chapter12'>
+            <div id='chapter12' style={{background:"#fff"}} >
                 <div className="mid-title">
 
 
                 </div>
                 <div className="sec-title" id="">
-                    <h3 className="mainHeadingTotal fadeInUp anime-delay">What Makes BSP Tick</h3>
+                    <h3 className="mainHeadingTotal fadeInUp anime-delay" style={{color:"#000"}}>What Makes BSP Tick</h3>
 
                 </div>
                 {isMobileState ? <div>
                     <div>
                         <ul className='mbimg12'>
                             <li>
-                                <h3>Passion For Gaming
+                                <h3 style={{color:"#fff"}}>Passion For Gaming
                                 </h3>
                                 <p>At Backstage Pass, we pride ourselves on hosting students from across India with different cultures, backgrounds, and mindsets and uniting them through their passion for gaming</p></li>
                             <li>
-                                <h3>Hands-on Experience
+                                <h3 style={{color:"#fff"}}>Hands-on Experience
 
                                 </h3>
                                 <p>One of the most important things about making a kickass game is actually making it. That's where our workshops and various curricular programs come into picture for practical learning.</p></li>
                             <li>
-                                <h3>Industry Veterans
+                                <h3 style={{color:"#fff"}}>Industry Veterans
                                 </h3>
                                 <p>Our students are continuously guided by industry veterans who have spent 12 to 20 years working in and for the industry. Thus, our students get firsthand knowledge of the goods and bads of the industry.</p></li>
                             <li>
-                                <h3>Industry Connections
+                                <h3 style={{color:"#fff"}}>Industry Connections
                                 </h3>
                                 <p>Since its inception, Backstage Pass has strong connections and exposure to the industry. Be it top gaming studios in India or our web of talented alumni spread across the globe...</p>
 
@@ -188,9 +190,9 @@ function Aboutus(props) {
                 </div> :
 
                     <div style={{ position: "relative", height: "618px" }}>
-                        <div id="pointer" className={isActive ? 'aboutHeaderPoint' : ' '} >
+                        <div id="pointerabut" className={isActive ? 'aboutHeaderPoint' : ' '} >
                             <div className='plu1'>
-                                <p>Passion For Gaming
+                                <p style={{color:"#fff"}}>Passion For Gaming
                                 </p>
                                 <div className='pluin' onClick={() => setIsActive(!isActive)}></div>
                             </div>
@@ -198,27 +200,27 @@ function Aboutus(props) {
                         </div>
 
 
-                        <div id="pointer1" className={isActives ? 'aboutHeaderPoint' : ' '} >
+                        <div id="pointerabut1" className={isActives ? 'aboutHeaderPoint' : ' '} >
                             <div className='plu1'>
-                                <p>Hands-on Experience
+                                <p style={{color:"#fff"}}>Hands-on Experience
                                 </p>
                                 <div className='pluin' onClick={() => setIsActives(!isActives)}> </div>
                             </div>
                             {isActives && <div className="Faqs" id="HiddenText3" style={{ display: isActives ? "block" : "none" }}><p>One of the most important things about making a kickass game is actually making it. That's where our workshops and various curricular programs come into picture for practical learning.</p></div>}
                         </div>
 
-                        <div id="pointer2" className={isActivess ? 'aboutHeaderPoint' : ' '} >
+                        <div id="pointerabut2" className={isActivess ? 'aboutHeaderPoint' : ' '} >
                             <div className='plu1'>
-                                <p>Industry Veterans
+                                <p style={{color:"#fff"}}>Industry Veterans
                                 </p>
                                 <div className='pluin' onClick={() => setIsActivess(!isActivess)}></div>
                             </div>
                             {isActivess && <div className="Faqs" style={{ display: isActivess ? "block" : "block" }}><p>Our students are continuously guided by industry veterans who have spent 12 to 20 years working in and for the industry. Thus, our students get firsthand knowledge of the goods and bads of the industry.</p></div>}
                         </div>
 
-                        <div id="pointer3" className={isActivesss ? 'aboutHeaderPoint' : ' '} >
+                        <div id="pointerabut3" className={isActivesss ? 'aboutHeaderPoint' : ' '} >
                             <div className='plu1'>
-                                <p>Industry Connections
+                                <p style={{color:"#fff"}}>Industry Connections
                                 </p>
                                 <div className='pluin' onClick={() => setIsActivesss(!isActivesss)}></div>
                             </div>
