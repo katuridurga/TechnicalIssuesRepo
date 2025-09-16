@@ -149,7 +149,7 @@ function Aboutus(props) {
                 <p className="text">
                     <a href="https://play.google.com/store/apps/details?id=com.KyodaiGameworks.Slunkey" className="slu" target='_blank'>Slunkey</a> is the first game launched by Kyodai Gameworks. It is a fun slime puzzle adventure where a cheeky monkey mutates into a gooey character, and it tries to escape the crazy banana factory using slingshot mechanics. If you love puzzle games, quirky platformers, or are searching for the best puzzle games for Android and iPhone, this monkey puzzle escape is packed with challenge and fun.
 
-                    Kyodai Gameworks’ 2nd game, Orbital Outbreak, is a chaotic roguelite shooter set on spinning planets. Packed with nonstop action, this offline top-down shooter delivers survival chaos and ranks among the best shooting games for Android and iPhone
+                    Kyodai Gameworks’ 2nd game, <a href="https://play.google.com/store/apps/details?id=com.orbital.kyodaigameworks" className="slu" target='_blank'>Orbital Outbreak</a>, is a chaotic roguelite shooter set on spinning planets. Packed with nonstop action, this offline top-down shooter delivers survival chaos and ranks among the best shooting games for Android and iPhone
                 </p>
             </div>
             <div id='chapter12' style={{background:"#fff"}} >

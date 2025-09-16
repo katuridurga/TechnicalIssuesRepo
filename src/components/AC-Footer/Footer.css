@@ -42,7 +42,7 @@
     justify-content: space-between;
     padding: 40px 0px 40px 0px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.6rem;
 }
 .contact-wrapper-inner img{

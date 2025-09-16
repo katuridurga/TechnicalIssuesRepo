@@ -77,6 +77,24 @@ const [formData, setFormData] = useState({
       }
     }
   };
+  const [isOpenM, setIsOpenM] = useState(false);
+  
+    const [isButtonVisible, setIsButtonVisible] = useState(true);
+  
+    // Function to scroll to the bottom of the container
+    const scrollToBottom = () => {
+      const container = document.getElementById('scroll-container');
+      if (container) {
+        container.scrollTo({
+          top: container.scrollHeight,
+          behavior: 'smooth',
+        });
+  
+      }
+      // Hide the button after clicking
+      setIsButtonVisible(true);
+    };
+  
 const [open, setOpen] = React.useState(false);
 const handleClose = (event, reason) => {
   if (reason === 'clickaway') return;
@@ -435,7 +453,7 @@ const handleClose = (event, reason) => {
                       </div>
                     </LazyLoad>
                   </div>} 
-{/*                              
+                             
                   {window.location.pathname === "/landingpage/diploma-and-advanced-diploma-courses/" || window.location.pathname === "/landingpage/diploma-and-advanced-diploma-game-development-courses/"  || window.location.pathname === "/landingpage/game-development-with-unreal-programs/" || 
             window.location.pathname === "/landingpage/3DHard-surface-modelling-game-art/" ||  window.location.pathname === "/landingpage/game-design-with-unreal-blue-prints/" || window.location.pathname === "/landingpage/game-development-with-unity/" || window.location.pathname === "/landingpage/game-development-with-unreal/" ||  window.location.pathname === "/landingpage/ai-powered-game-design-and-level-building/"  || window.location.pathname === "/landingpage/game-development-with-unity-programs/"  || window.location.pathname === "/landingpage/game-development-programs/" || window.location.pathname === "/landingpage/certified-diploma-unity-game-development/" || window.location.pathname === "/landingpage/masters-and-bachelors-game-development-courses/"  || window.location.pathname === "/landingpage/certificate-program-in-essentials-of-game-design/"  || window.location.pathname === "/landingpage/certificate-program-in-3DGame-development-with-unity/"  || window.location.pathname === "/landingpage/certificate-program-in-game-development-for-VR/"  || window.location.pathname === "/landingpage/certificate-program-in-prototyping-and-game-concept-development/"  || window.location.pathname === "/landingpage/certificate-program-in-storytelling-and-design-documentation-for-games/"  || window.location.pathname === "/landingpage/masters-and-bachelors-programs/" ||  window.location.pathname === "/landingpage/certified-diploma-3d-hard-surface-modeling-texturing/"  ||
             window.location.pathname === "/intermediate-board-results/" ||  window.location.pathname === "/landingpage/certified-diploma-game-design-with-unreal-blueprints/" ||  window.location.pathname === "/landingpage/certified-diploma-unreal-game-development/" ||window.location.pathname === "/landingpage/game-art-programs/" || window.location.pathname === "/landingpage/top-game-development-programs/" || window.location.pathname === "/landingpage/best-gaming-courses-in-india/" ? null :
@@ -452,7 +470,7 @@ const handleClose = (event, reason) => {
 
   </div>
 </LazyLoad>
-</div>} */}
+</div>}
   {window.location.pathname === "/landingpage/diploma-and-advanced-diploma-courses/" || window.location.pathname === "/landingpage/diploma-and-advanced-diploma-game-development-courses/" || window.location.pathname === "/landingpage/bachelors-degree-courses-in-gaming/"  || 
             window.location.pathname === "/landingpage/3DHard-surface-modelling-game-art/" ||  window.location.pathname === "/landingpage/game-design-with-unreal-blue-prints/" || window.location.pathname === "/landingpage/game-development-with-unity/" || window.location.pathname === "/landingpage/game-development-with-unreal/" ||  window.location.pathname === "/landingpage/ai-powered-game-design-and-level-building/"  || window.location.pathname === "/landingpage/game-development-with-unreal-programs/" || window.location.pathname === "/landingpage/game-development-with-unity-programs/" || window.location.pathname === "/landingpage/game-development-programs/" || window.location.pathname === "/landingpage/masters-and-bachelors-game-development-courses/" || window.location.pathname === "/landingpage/certificate-program-in-essentials-of-game-design/"  || window.location.pathname === "/landingpage/certificate-program-in-3DGame-development-with-unity/"  || window.location.pathname === "/landingpage/certificate-program-in-game-development-for-VR/"  || window.location.pathname === "/landingpage/certificate-program-in-prototyping-and-game-concept-development/"  || window.location.pathname === "/landingpage/certificate-program-in-storytelling-and-design-documentation-for-games/"  || window.location.pathname === "/landingpage/masters-and-bachelors-programs/" ||window.location.pathname === "/landingpage/game-art-programs/" || window.location.pathname === "/landingpage/certified-diploma-unity-game-development/" || window.location.pathname === "/landingpage/top-game-development-programs/" || window.location.pathname === "/landingpage/best-gaming-courses-in-india/" ||  window.location.pathname === "/landingpage/certified-diploma-3d-hard-surface-modeling-texturing/" ||
                   window.location.pathname === "/landingpage/diploma-and-advanced-diploma-courses/" ||  window.location.pathname === "/landingpage/certified-diploma-unreal-game-development/"||  window.location.pathname === "/landingpage/certified-diploma-game-design-with-unreal-blueprints/"  || window.location.pathname === "/landingpage/diploma-and-advanced-diploma-game-development-courses/" || window.location.pathname === "/landingpage/game-development-with-unreal-programs/" || window.location.pathname === "/landingpage/game-development-with-unity-programs/" || window.location.pathname === "/landingpage/game-development-programs/"  ||
