@@ -587,7 +587,9 @@ figure {
   flex-basis: calc(115%);
   object-fit: inherit !important;
 }
-
+.slu, .slu:hover {
+    color: #f22;
+}
 .hides {
   display: none;
   position: absolute;
@@ -899,12 +901,35 @@ figure {
   border-top: 100px solid transparent;
   border-bottom: 100px solid transparent;
 }
+.wtmakesbsp{
+  background: #222;
+  position: relative;
+}
 
 
+.wtmakesbsp .bg-image {
+  width: 45%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0; /* push background behind content */
+   background-image: url("../../../assets/img/banners/make-different-img.webp"); 
+}
 
-
-
-
+.wtmakesbsp .bg-image:after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: rgb(50 51 53 / 78%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0; /* keep overlay behind content */
+}
 #pointerabut3 {
   width: 600px;
   height: 200px;
@@ -1104,7 +1129,48 @@ justify-content: center;
 }
 
 @media only screen and (max-width : 1024px){
- 
+  .wtmakesbsp {
+    margin-top: 30px;
+}
+   .inner > :last-child {
+    margin-bottom: 20px; /* adjust as needed */
+  }
+  .wtmakesbsp .left .q-mark {
+    width: 60px !important;
+    height: 60px !important;
+    margin-bottom: 22px;
+    font-family: sans-serif;
+    font-size: 34px !important;
+    line-height: 90px;
+    background: #ff9600;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+    color: #fff;
+}
+  .wtmakesbsp .right {
+    flex: 0 0 60%;
+    max-width: 60%;
+    padding: 0px 0 0 24px !important;
+}
+ul.makes-different-list li {
+    margin-bottom: 0px !important;
+}
+ .wtmakesbsp .bg-image {
+    width: 100% !important;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-position: center, top !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    background-image: url(/make-different-img-d4c663ce.jpg);
+}
   .mabanimg img{
     width:185px;
   }
@@ -1208,15 +1274,80 @@ color: #fff;
     text-align: center;
 }
 }
-.mainbans{
-  background: none;
+.wtmakesbsp .custom-row {
+  display: flex;
+  align-items: center;
 }
-.tg1{
-  margin-bottom: 40px;
+
+.wtmakesbsp .left {
+  flex: 0 0 40%;  /* exactly 40% */
+  max-width: 40%;
+  padding: 20px;
 }
-.slu{
-  color:#ff2222;
+
+.wtmakesbsp .left .q-mark {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 22px;
+    font-family: sans-serif;
+    font-size: 60px;
+    line-height: 90px;
+    background: #ff9600;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+    color: #fff;
 }
-.slu:hover {
- color: #ff2222;
+
+.wtmakesbsp .right {
+  flex: 0 0 60%;  /* exactly 60% */
+  max-width: 60%;
+  padding: 47px 0 0 120px;
+}
+ul.makes-different-list li h3 {
+    padding: 0px 0 0px 0;
+    padding-bottom: 0px;
+    font-size: 18px;
+    text-transform: inherit;
+    color: #fff;
+    font-weight: 900;
+    margin: 10px 0px;
+}
+ul.makes-different-list li p {
+    font-size: 14px;
+    line-height: 22px;
+    color: #e7e7e7;
+    font-weight: 600;
+}
+ul.makes-different-list li {
+    margin-bottom: 47px;
+}
+.wtmakesbsp .makes-different-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row desktop */
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.wtmakesbsp .container{
+  margin: 0px auto;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 991px) {
+  .wtmakesbsp .custom-row {
+    flex-direction: column;
+  }
+  .wtmakesbsp .left,
+  .wtmakesbsp .right {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .wtmakesbsp .makes-different-list {
+    grid-template-columns: 1fr; /* mobile 1 per row */
+  }
 }

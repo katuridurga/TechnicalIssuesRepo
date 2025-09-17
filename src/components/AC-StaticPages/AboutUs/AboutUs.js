@@ -10,7 +10,10 @@ import n1 from "../../../assets/img/banners/nemonics.webp";
 import hwst from "../../../assets/img/test/howstrt.webp";
 import suryasir from "../../../assets/img/test/suryasir.webp";
 import { Helmet } from "react-helmet";
-
+import m1 from "../../../assets/img/Icons/passion.webp";
+import m2 from "../../../assets/img/Icons/veterans.webp";
+import m3 from "../../../assets/img/Icons/connections.webp";
+import m5 from "../../../assets/img/Icons/experience.webp";
 
 
 
@@ -152,7 +155,62 @@ function Aboutus(props) {
                     Kyodai Gameworks’ 2nd game, <a href="https://play.google.com/store/apps/details?id=com.orbital.kyodaigameworks" className="slu" target='_blank'>Orbital Outbreak</a>, is a chaotic roguelite shooter set on spinning planets. Packed with nonstop action, this offline top-down shooter delivers survival chaos and ranks among the best shooting games for Android and iPhone
                 </p>
             </div>
-            <div id='chapter12' style={{background:"#fff"}} >
+          
+       
+  <section className="wtmakesbsp">
+  {/* Background image */}
+  <div
+    className="bg-image"
+   
+  ></div>
+
+  <div className="container">
+    <div className="custom-row">
+      {/* Left section */}
+      <div className="left">
+        <div className="q-mark">?</div>
+        <h2 className="mainHeadingTotal" style={{lineHeight:"4rem", marginBottom:isMobileState? "8px" : "30px", marginTop:isMobileState? "8px" : "30px"}}>What Makes BSP Tick ?</h2>
+        
+      </div>
+
+      {/* Right section */}
+      <div className="right">
+        <ul className="makes-different-list">
+          <li>
+            <div className="inner">
+              <img src={m1} alt="Malleable Study Time" width={64} height={64} />
+              <h3>Passion For Gaming</h3>
+              <p>At Backstage Pass, we pride ourselves on hosting students from across India with different cultures, backgrounds, and mindsets and uniting them through their passion for gaming</p>
+            </div>
+          </li>
+          <li>
+            <div className="inner">
+              <img src={m5} alt="Flexible Classes" width={64} height={64} />
+              <h3>Hands-on Experience</h3>
+              <p>One of the most important things about making a kickass game is actually making it. That's where our workshops and various curricular programs come into picture for practical learning</p>
+            </div>
+          </li>
+          <li>
+            <div className="inner">
+              <img src={m2} alt="Easy to Access" width={64} height={64} />
+              <h3>Industry Veterans</h3>
+              <p>Our students are continuously guided by industry veterans who have spent 12 to 20 years working in and for the industry. Thus, our students get firsthand knowledge of the goods and bads of the industry.</p>
+            </div>
+          </li>
+          <li>
+            <div className="inner">
+              <img src={m3} alt="Study on the go" width={64} height={64} />
+              <h3>Industry Connections</h3>
+              <p>Since its inception, Backstage Pass has strong connections and exposure to the industry. Be it top gaming studios in India or our web of talented alumni spread across the globe</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+            {/* <div id='chapter12' style={{background:"#fff"}} >
                 <div className="mid-title">
 
 
@@ -182,7 +240,7 @@ function Aboutus(props) {
                                 </h3>
                                 <p>Since its inception, Backstage Pass has strong connections and exposure to the industry. Be it top gaming studios in India or our web of talented alumni spread across the globe...</p>
 
-                                {/* <p>Since its inception, Backstage Pass has strong connections and exposure to the industry. Be it top gaming studios in India or our web of talented alumni spread across the globe, the management at Backstage Pass personally looks into proper industry exposure for the students.</p> */}
+                                <p>Since its inception, Backstage Pass has strong connections and exposure to the industry. Be it top gaming studios in India or our web of talented alumni spread across the globe, the management at Backstage Pass personally looks into proper industry exposure for the students.</p>
                             </li>
 
                         </ul>
@@ -228,7 +286,7 @@ function Aboutus(props) {
                         </div>
 
                     </div>}
-            </div>
+            </div> */}
             <Ourawards />
             <InTheMedia />
             <HomeContentForm />

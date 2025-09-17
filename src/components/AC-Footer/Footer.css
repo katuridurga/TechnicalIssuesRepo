@@ -69,6 +69,8 @@
 
 .foot-details {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .contact-wrapper-inner p a{
     color: #fff;
@@ -448,5 +450,5 @@
   .brchrbtn{
     display:flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
   }

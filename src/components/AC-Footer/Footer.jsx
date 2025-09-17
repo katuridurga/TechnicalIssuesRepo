@@ -582,7 +582,7 @@ const handleClose = (event, reason) => {
                     </div>}
                     {window.location.pathname === "/intermediate-board-results/" ? null :
                   <LazyLoad height={76} offset={100} fadein={true}>
-                    <div className="text-center foot-content fadeInUp anime-delay2">© A Subsidiary of PVR Memorial Educational Society 2025. All Rights Reserved</div>
+                    <div className="text-center foot-content fadeInUp anime-delay2" style={{marginBottom:isMobileState ? "5rem" :"0rem"}}>© A Subsidiary of PVR Memorial Educational Society 2025. All Rights Reserved</div>
                   </LazyLoad>}
                 </div>
               </LazyLoad>

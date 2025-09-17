@@ -272,7 +272,7 @@ function Alumni() {
                     <figure className="figures">
                       <img src={logo9} alt="logo" />
                       <figcaptions>
-                        <div className="mainggameing"><p>Dennchen Lama</p><div>Game Designer @ MyWhoosh</div></div>
+                        <div className="mainggameing"><p>Dennchen Lama</p><div>Game Designer @ Ubisoft in Abu Dhabi</div></div>
 
                       </figcaptions>
                     </figure>
@@ -403,7 +403,7 @@ function Alumni() {
                     <figure className="figures">
                       <img src={logo9} alt="logo" />
                       <figcaptions>
-                        <div className="mainggameing"><p>Dennchen Lama</p><div>Game Designer @ MyWhoosh</div></div>
+                        <div className="mainggameing"><p>Dennchen Lama</p><div>Game Designer @ Ubisoft in Abu Dhabi</div></div>
 
                       </figcaptions>
                     </figure>
