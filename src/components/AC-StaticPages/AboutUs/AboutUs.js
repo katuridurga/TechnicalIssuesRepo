@@ -158,7 +158,7 @@ function Aboutus(props) {
           
        
   <section className="wtmakesbsp">
-  {/* Background image */}
+ 
   <div
     className="bg-image"
    
@@ -178,31 +178,32 @@ function Aboutus(props) {
         <ul className="makes-different-list">
           <li>
             <div className="inner">
-              <img src={m1} alt="Malleable Study Time" width={64} height={64} />
+              <img src={m1} alt="Malleable Study Time" width={40} height={40} style={{marginLeft:"-8px"}}/>
               <h3>Passion For Gaming</h3>
+            </div>
+            
               <p>At Backstage Pass, we pride ourselves on hosting students from across India with different cultures, backgrounds, and mindsets and uniting them through their passion for gaming</p>
-            </div>
           </li>
           <li>
             <div className="inner">
-              <img src={m5} alt="Flexible Classes" width={64} height={64} />
+              <img src={m5} alt="Flexible Classes" width={40} height={40} />
               <h3>Hands-on Experience</h3>
-              <p>One of the most important things about making a kickass game is actually making it. That's where our workshops and various curricular programs come into picture for practical learning</p>
             </div>
+            <p>One of the most important things about making a kickass game is actually making it. That's where our workshops and various curricular programs come into picture for practical learning</p>
           </li>
           <li>
             <div className="inner">
-              <img src={m2} alt="Easy to Access" width={64} height={64} />
+              <img src={m2} alt="Easy to Access" width={40} height={40} />
               <h3>Industry Veterans</h3>
-              <p>Our students are continuously guided by industry veterans who have spent 12 to 20 years working in and for the industry. Thus, our students get firsthand knowledge of the goods and bads of the industry.</p>
             </div>
+              <p>Our students are continuously guided by industry veterans who have spent 12 to 20 years working in and for the industry. Thus, our students get firsthand knowledge of the goods and bads of the industry.</p>
           </li>
           <li>
             <div className="inner">
-              <img src={m3} alt="Study on the go" width={64} height={64} />
+              <img src={m3} alt="Study on the go" width={40} height={40} />
               <h3>Industry Connections</h3>
-              <p>Since its inception, Backstage Pass has strong connections and exposure to the industry. Be it top gaming studios in India or our web of talented alumni spread across the globe</p>
             </div>
+            <p>Since its inception, Backstage Pass has strong connections and exposure to the industry. Be it top gaming studios in India or our web of talented alumni spread across the globe</p>
           </li>
         </ul>
       </div>

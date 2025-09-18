@@ -904,6 +904,7 @@ figure {
 .wtmakesbsp{
   background: #222;
   position: relative;
+  margin-top: 30px;
 }
 
 
@@ -1159,6 +1160,7 @@ justify-content: center;
 ul.makes-different-list li {
     margin-bottom: 0px !important;
 }
+
  .wtmakesbsp .bg-image {
     width: 100% !important;
     height: 100%;
@@ -1323,7 +1325,7 @@ ul.makes-different-list li p {
     font-weight: 600;
 }
 ul.makes-different-list li {
-    margin-bottom: 47px;
+    margin-bottom: 25px;
 }
 .wtmakesbsp .makes-different-list {
   display: grid;
@@ -1350,4 +1352,19 @@ ul.makes-different-list li {
   .wtmakesbsp .makes-different-list {
     grid-template-columns: 1fr; /* mobile 1 per row */
   }
+}
+.makes-different-list .inner {
+  display: flex;
+  align-items: center;   /* vertically center img + h3 */
+  gap: 12px;             /* spacing between img and h3 */
+  margin-bottom: 8px;    /* little spacing before <p> */
+}
+
+.makes-different-list .inner img {
+  flex-shrink: 0;        /* keep image size fixed */
+}
+
+.makes-different-list .inner h3 {
+  margin: 0;             /* remove default margin */
+  font-size: 1.25rem;    /* adjust as needed */
 }
