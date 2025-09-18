@@ -918,7 +918,7 @@ figure {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 0; /* push background behind content */
-   background-image: url("../../../assets/img/banners/make-different-img.webp"); 
+   /* background-image: url("../../../assets/img/banners/make-different-img.webp");  */
 }
 
 .wtmakesbsp .bg-image:after {

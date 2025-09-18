@@ -4,7 +4,7 @@ import HomeContentForm from "../../../content/HomeContentFrom";
 import Ourawards from "../../../content/ourawards";
 import InTheMedia from "../../../content/inTheMedia";
 import { useSelector, shallowEqual } from "react-redux";
-
+import bgImage from "../../../assets/img/banners/make-different-img.webp";
 
 import n1 from "../../../assets/img/banners/nemonics.webp";
 import hwst from "../../../assets/img/test/howstrt.webp";
@@ -159,10 +159,8 @@ function Aboutus(props) {
        
   <section className="wtmakesbsp">
  
-  <div
-    className="bg-image"
-   
-  ></div>
+  <div className="bg-image" style={{ backgroundImage: `url(${bgImage})` }}></div>
+
 
   <div className="container">
     <div className="custom-row">
