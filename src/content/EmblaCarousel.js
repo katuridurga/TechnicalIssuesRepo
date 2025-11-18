@@ -6,19 +6,18 @@ import {
   usePrevNextButtons
 } from './EmblaCarouselArrowButtons'
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import thumbnail from "../assets/img/thumbnail.webp";
 
 import newbanF from "../assets/img/banners/NewCampus.webp";
 
 
 
 
-import newban1 from "../assets/img/banners/gaming.webp";
+import newban1 from "../assets/img/banners/igdcb.webp";
 import newbang from "../assets/img/banners/gaming1.webp";
 // import newban2 from "../assets/img/banners/learning.webp";
 import newban3 from "../assets/img/banners/alumni.webp";
 import mbnewbang from "../assets/img/mobilebanner/homepagebanner/gemawards.webp";
-import mbnewban0 from "../assets/img/mobilebanner/homepagebanner/gaming.webp";
+import mbnewban0 from "../assets/img/mobilebanner/homepagebanner/igdcbm.webp";
 import mbnewbanF from "../assets/img/mobilebanner/homepagebanner/NewCampus.webp";
 // import mbnewban2 from "../assets/img/mobilebanner/homepagebanner/learning.webp";
 import mbnewban3 from "../assets/img/mobilebanner/homepagebanner/alumni.webp";

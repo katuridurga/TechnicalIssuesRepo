@@ -130,6 +130,13 @@ export default function App() {
                 />
                 <Route
                   exact
+                  path={"/courses/diploma-in-vr-application-development/"}
+                  render={routeProps => (
+                    <Menu {...routeProps} component="DiplomaInVrApllication" />
+                  )}
+                />
+                <Route
+                  exact
                   path={"/about-us/our-story/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="AboutUs" />
@@ -456,13 +463,13 @@ export default function App() {
                     <Menu {...routeProps} component="StudentResult" />
                   )}
                 />
-                {/* <Route
+                <Route
                   exact
                   path={"/about-us/our-mentors/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="Mentors" />
                   )}
-                /> */}
+                />
                 {/* <Route
                   exact
                   path={"/BlogDetails/"}

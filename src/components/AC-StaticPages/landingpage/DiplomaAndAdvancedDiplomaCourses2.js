@@ -35,8 +35,8 @@ import choose5 from '../../../assets/img/banners/business-man.png';
 import recimg from '../../../assets/img/banners/Times-Award.webp';
 import Typography from '@mui/material/Typography';
 import { Link } from "react-router-dom";
-import m1 from "../../../assets/img/test/1.webp";
-import m2 from "../../../assets/img/test/2.webp";
+import m3 from "../../../assets/img/test/d1.webp";
+import m4 from "../../../assets/img/test/eli.webp";
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -303,7 +303,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
             </div>
 
             <div id="Career-Opportunitiesl" backgroundColor="brown" height="auto">
-              <h2 className='mainHeadingTotall'>COURSES OVERVIEW</h2>
+              <h2 className='mainHeadingTotall-2'>COURSES OVERVIEW</h2>
 
               <Box >
                 <Tabs
@@ -324,10 +324,10 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
                 <TabPanel value={value1} index={0} dir={theme.direction}>
                   <div className='courseUpdatesl'>
                     <ul>
-                      <li><img src={m1} alt="Duration icon" />
-                        <span>Duration : 4 years</span></li>
-                      <li><img src={m2} alt="Eligibility icon" />
-                        <span>Eligibility : 10+2 or Equivalent</span></li>
+                      <li><img src={m3} alt="Duration icon" />
+                        <span style={{color:"#000"}}>Duration : 4 years</span></li>
+                      <li><img src={m4} alt="Eligibility icon" />
+                        <span style={{color:"#000"}}>Eligibility : 10+2 or Equivalent</span></li>
 
 
                     </ul>
@@ -374,10 +374,10 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
                 <TabPanel value={value1} index={1} dir={theme.direction}>
                   <div className='courseUpdatesl'>
                     <ul>
-                      <li><img src={m1} alt="Duration icon" />
-                        <span>Duration :2 Years</span></li>
-                      <li><img src={m2} alt="Graduation*" />
-                        <span>Eligibility : Graduation*
+                      <li><img src={m3} alt="Duration icon" />
+                        <span style={{color:"#000"}}>Duration :2 Years</span></li>
+                      <li><img src={m4} alt="Graduation*" />
+                        <span style={{color:"#000"}}>Eligibility : Graduation*
 
 
                         </span></li>
@@ -423,8 +423,8 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
             <div className="mainrec">
               <img src={infog} alt="infog" style={{ width: "100%", height: "100%" }} />
             </div>
-            <div style={{ background: "#000", padding: "20px" }}>
-              <h2 className='mainHeadingTotall mt-top'>YOU SHOULD TAKE THIS COURSE IF </h2>
+            <div style={{ background: "#ffffff", padding: "20px" }}>
+              <h2 className='mainHeadingTotall-2 mt-top'>YOU SHOULD TAKE THIS COURSE IF </h2>
 
               {isMobileState ? <div>
                 <div>
@@ -517,7 +517,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
                 <img src={recimg} alt="recimg" style={{ width: "100%", height: "100%" }} />
               </div>
               <div className="show-grid">
-                <h2 className="mainHeadingTotall">
+                <h2 className="mainHeadingTotall-2">
                   Why choose us?
                 </h2>
                 <div className="maind">
@@ -591,7 +591,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
                 </div>
               </div>
             </div>
-            <h2 className='mainHeadingTotall'>Student Showcase</h2>
+            <h2 className='mainHeadingTotall-2'>Student Showcase</h2>
 
 
             <div className="">
@@ -659,7 +659,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
 
                   <form onSubmit={handleSubmit} className="formMain">
 
-                    <p className="suprtsMobiless">Get a Counselling Session on Gaming Career</p>
+                    <p className="mainHeadingTotall-2" style={{color:"#000"}}>Get a Counselling Session on Gaming Career</p>
                     <div className="formGrid1" data-form-id="need-guidance" data-form="step1-container">
 
 
@@ -736,7 +736,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
 
                           rows="6"
                           maxLength={40}
-                          style={{ color: 'white' }}
+                          style={{ color: '#000' }}
                           title="max 40 characters allowed"
                         ></textarea>
                         <small style={{ color: '#888', fontSize: '12px' }}>Allow maximum 40 characters</small>
@@ -816,7 +816,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
 
                     <form onSubmit={handleSubmit} className="formMain">
 
-                      <p className="suprtsMobiless">Get <b>a Counselling</b> Session on Gaming Career</p>
+                      <p className="suprtsMobiless" style={{color:"#fff"}}>Get <b>a Counselling</b> Session on Gaming Career</p>
                       <div className="formGrid1" data-form-id="need-guidance" data-form="step1-container">
 
 
@@ -943,7 +943,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
         <ReactWhatsappButton
           countryCode="91"
           phoneNumber="8977945705"
-          style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-7rem" : "-1rem", zIndex: "11111" }}
+          style={{ right: isMobileState ? "1.5rem" : "1rem", marginBottom: isMobileState ? "-7rem" : "9rem", zIndex: "11111" }}
           className="whatsappsivak"
         />
 

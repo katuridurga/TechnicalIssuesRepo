@@ -9,20 +9,24 @@ import r4 from "../../../assets/img/partners/r4.webp";
 import r5 from "../../../assets/img/partners/r5.webp";
 import r6 from "../../../assets/img/partners/r6.webp";
 import r7 from "../../../assets/img/partners/r7.webp";
+import partner1 from "../../../assets/img/partners/Edufin.webp";
+import partner2 from "../../../assets/img/partners/Feemonk.webp";
 import insurance from "../../../assets/img/security.webp";
 import cash from "../../../assets/img/coin.webp";
 import time from "../../../assets/img/timing.webp";
-import love from "../../../assets/img/checked.webp";
+
 import { FiArrowRight } from "react-icons/fi";
 import { CiPhone, CiMail } from "react-icons/ci";
 import { useSelector, shallowEqual } from "react-redux";
 import Autocomplete from '@mui/material/Autocomplete';
-
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { TextField } from '@mui/material';
 import styled from 'styled-components';
 import axios from 'axios';
-
-
+import zero from "../../../assets/img/Icons/ZeroPercent.webp";
+import cost from "../../../assets/img/Icons/NoCostEMI.webp";
+import charge from "../../../assets/img/Icons/NohiddenCharge.webp";
+import collat from "../../../assets/img/Icons/NoCollateral.webp";
 
 
 import { Helmet } from "react-helmet";
@@ -102,6 +106,7 @@ function Courses(props) {
   };
 
   const [courses, setCourses] = useState([]);
+  const [isOpen, setIsOpen] = useState(true);
 
   // Function to scroll to the bottom of the container
 
@@ -236,25 +241,25 @@ function Courses(props) {
       <div className="courses-container">
         <Helmet>
           <title> Financial Assistance & Scholarships | Backstage Pass Institute of Gaming</title>
-           <meta property="og:title" content=" Financial Assistance & Scholarships | Backstage Pass Institute of Gaming" />
-          <meta  name="description" content="Make your gaming education affordable with student loan options, scholarships, and financial aid from Backstage Pass Institute of Gaming. Our program features 0% interest and quick processing." />
-           <meta property="og:url" content="https://www.backstagepass.co.in/admissions/financial-assistance-and-scholarship/" />
-       
+          <meta property="og:title" content=" Financial Assistance & Scholarships | Backstage Pass Institute of Gaming" />
+          <meta name="description" content="Make your gaming education affordable with student loan options, scholarships, and financial aid from Backstage Pass Institute of Gaming. Our program features 0% interest and quick processing." />
+          <meta property="og:url" content="https://www.backstagepass.co.in/admissions/financial-assistance-and-scholarship/" />
+
           <link rel="canonical" href="https://www.backstagepass.co.in/admissions/financial-assistance-and-scholarship/" />
 
 
         </Helmet>
 
-        <div className="courses-wrapper">
+        <div className="">
           <h2 className="mainHeadingTotal fadeInUp anime-delay">Financial Assistance</h2>
 
-          <p className='adminissionPTag1'>Financing your education shouldn't hold you back from achieving your dreams. At Backstage Pass, we're dedicated to providing accessible and affordable student loan options to empower your academic journey.
+          <p className='adminissionPTag1' style={{marginBottom:"20px"}}>Financing your education shouldn't hold you back from achieving your dreams. At Backstage Pass, we're dedicated to providing accessible and affordable student loan options to empower your academic journey.
           </p>
 
 
 
 
-          <h2 className="mainHeadingTotal fadeInUp anime-delay">Our Partners</h2>
+
         </div>
 
 
@@ -264,82 +269,109 @@ function Courses(props) {
 
       </div>
 
-      <Marquee speed={100} style={{ Padding: "0px 20px" }} className='recuitersList'>
-        <img alt="r1" src={r1} width={"300"} height={"81"} />
-        <img alt="r2" src={r2} width={"300"} height={"81"} />
-        <img alt="r3" src={r3} width={"300"} height={"81"} />
-        <img alt="r4" src={r4} width={"300"} height={"81"} />
-        <img alt="r5" src={r5} width={"300"} height={"81"} />
-        <img alt="r6" src={r6} width={"300"} height={"81"} />
-        <img alt="r7" src={r7} width={"300"} height={"81"} />
-
-      </Marquee>
+<div className="mainbenfits">
       <h2 className="mainHeadingTotal fadeInUp anime-delay">Benefits</h2>
 
 
       <div className='courseUpdates3'>
 
         <ul>
-          <li><img alt="Zero Interest Rate" src={love} />
-            <p style={{ color: "#fff" }}>Zero<br />Interest Rate</p></li>
-          <li><img alt="No Collateral Required" src={love} />
-            <p style={{ color: "#fff" }}>No Collateral<br />Required</p></li>
-          <li><img alt="No Hidden Charges" src={love} />
-            <p style={{ color: "#fff" }}>No Hidden<br />Charges</p></li>
-          <li><img alt="No Cost EMIs" src={love} />
-            <p style={{ color: "#fff" }}>No Cost<br />EMIs</p></li>
+          <li><div className="bgicofin"><img alt="Zero Interest Rate" src={zero} /></div>
+            <p style={{ color: "#000" }}>Zero<br />Interest Rate</p></li>
+          <li><div className="bgicofin"><img alt="No Collateral Required" src={collat} /></div>
+            <p style={{ color: "#000" }}>No Collateral<br />Required</p></li>
+          <li><div className="bgicofin"><img alt="No Hidden Charges" src={charge} /></div>
+            <p style={{ color: "#000" }}>No Hidden<br />Charges</p></li>
+          <li><div className="bgicofin"><img alt="No Cost EMIs" src={cost} /></div>
+            <p style={{ color: "#000" }}>No Cost<br />EMIs</p></li>
 
         </ul>
       </div>
-
+</div>
       <div className="courses-container">
 
         <div className="courses-wrapper">
-          <h2 className="mainHeadingTotal fadeInUp anime-delay">What’s More?</h2>
-          <div className='whtsmain'>
-            <div style={{ width: isMobileState ? '100%' : '455px' }}>
-              <p style={{ color: "#fff", fontSize: "18px" }}>Apart from the above,
-                our strategic partnership
-                with these leading
-                financial institutions let you
-                Enjoy many exclusive benefits!
+                <h2
+        className="mainHeadingTotal fadeInUp anime-delay"
+      
+      ><span>
+        What’s More?</span>
+      
+      </h2>
 
+      {isOpen && (
+        <>
+          <div className="whtsmain">
+            <div
+              style={{
+                width: isMobileState ? "100%" : "50%",
+                margin: "0px auto",
+                textAlign: "center",
+                marginBottom: isMobileState ? "0px" : "30px",
+              }}
+            >
+              <p style={{ color: "#000", fontSize: "16px", marginTop: "0px" }}>
+                Apart from the above, our strategic partnership with these leading
+                financial institutions lets you enjoy many exclusive benefits!
               </p>
             </div>
+
             <div>
-              <ul className='benfits'>
-                <li><div className='benfitIcon'><img src={insurance} alt="accidental insurance icon" /></div> <div className='benfitContent'>Accidental insurance coverage of INR 5L
-                </div></li>
-                <li><div className='benfitIcon'><img src={cash} alt="vochuer icon" /></div> <div className='benfitContent'>Voucher worth INR 10,000
-
-                </div></li>
-                <li><div className='benfitIcon'><img src={time} alt="Quick loan icon" /></div> <div className='benfitContent'>Quick loan processing within 24 hours
-
-                </div></li>
-
-
+              <ul className="benfits">
+                <li>
+                
+                  <div className="benfitContent">
+                      <div className="benfitIcon">
+                    <img src={insurance} alt="accidental insurance icon" />
+                  </div>
+                    Accidental insurance coverage of INR 5L
+                  </div>
+                </li>
+                <li>
+                 
+                  <div className="benfitContent">
+                     <div className="benfitIcon">
+                    <img src={cash} alt="voucher icon" />
+                  </div>
+                    Voucher worth INR 10,000</div>
+                </li>
+                <li>
+               
+                  <div className="benfitContent">
+                       <div className="benfitIcon">
+                    <img src={time} alt="Quick loan icon" />
+                  </div>
+                    Quick loan processing within 24 hours
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
+
           <br />
 
-          <p className='adminissionPTag1'>For those who prefer to apply student loan through nationalized banks in India, we'll provide necessary documents to ensure a seamless application process.</p>
-
+          <p className="adminissionPTag1">
+            For those who prefer to apply for a student loan through nationalized banks
+            in India, we'll provide necessary documents to ensure a seamless
+            application process.
+          </p>
+  </>
+      )}
           <h2 className="mainHeadingTotal fadeInUp anime-delay">Loan Application Process</h2>
 
           <ul className="process">
-            {/* <li className="process__item">
-              <div id="infinity"><span className="process__number">01</span></div>
+            {/* <li className="process__itemf">
+              <div id="infinity"><span className="process__numberfinance">01</span></div>
 
-              <span className="process__title">Fill
+              <span className="process__titlef">Fill
               </span>
-              <span className="process__subtitle">the Loan <b><a style={{textDecoration:"underline",color:"#fff",fontSize:"17px"}}>Application Form</a></b> </span>
+              <span className="process__subtitlef">the Loan <b><a style={{textDecoration:"underline",color:"#fff",fontSize:"17px"}}>Application Form</a></b> </span>
             </li> */}
 
-            <li className="process__item">
-              <div id="infinity"><span className="process__number">01</span></div>
-              <span className="process__title">Upload</span>
-              <span className="process__subtitle" style={{ textAlign: "left" }}>
+            <li className="process__itemf">
+              <div id="infinity"><span className="process__numberfinance">01</span></div>
+              <span className="process__titlef">Upload</span>
+              <span className="process__subtitlef" style={{ textAlign: "left" }}>
                 the required documents:
                 <ul style={{ margin: "20px 0px" }}>
                   <li style={{ marginBottom: "7px" }}><FiArrowRight /> 6 months' bank statement</li>
@@ -351,33 +383,50 @@ function Courses(props) {
               </span>
             </li>
 
-            <li className="process__item">
-              <div id="infinity"><span className="process__number">02</span></div>
-              <span className="process__title">Processing</span>
-              <span className="process__subtitle">of the loan amount will be done within maximum 24 working hours</span>
+            <li className="process__itemf">
+              <div id="infinity"><span className="process__numberfinance">02</span></div>
+              <span className="process__titlef">Processing</span>
+              <span className="process__subtitlef">of the loan amount will be done within maximum 24 working hours</span>
             </li>
 
-            <li className="process__item">
-              <div id="infinity"><span className="process__number">03</span></div>
-              <span className="process__title">Disbursement</span>
-              <span className="process__subtitle">Of the loan will take another 24 working hours after approval
+            <li className="process__itemf">
+              <div id="infinity"><span className="process__numberfinance">03</span></div>
+              <span className="process__titlef">Disbursement</span>
+              <span className="process__subtitlef">Of the loan will take another 24 working hours after approval
               </span>
             </li>
           </ul>
 
-          <p className='adminissionPTag1'>Take the first step towards securing your academic future. Apply now and let us help you achieve your goals!</p>
+          <p className='adminissionPTag1' style={{marginTop:isMobileState?"20px":"0px", marginBottom:"0px"}}>Take the first step towards securing your academic future. Apply now and let us help you achieve your goals!</p>
 
           {/* <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}><button className=" three button brand size200 w-full sm:w-auto" style={{ width: "320px", fontSize: "17px" }}>APPLY FOR LOAN NOW</button></div> */}
 
+ <h2 className="mainHeadingTotal fadeInUp anime-delay">Financial Assistance Partners
+</h2>
+
+          <ul className="processpartner">
+           
+            <li className="process__itempartner">
+          
+           <img src={partner1} alt="partner1"/>
+            </li>
+
+            <li className="process__itempartner">
+           
+           <img src={partner2} alt="partner2"/>
+            </li>
+
+          
+          </ul>
 
           <h2 className="mainHeadingTotal fadeInUp anime-delay">Got Questions? Ask Us</h2>
 
           <ul className="askus callmaindiv">
-            <li><p className="callu"><a href="tel:9014226199"><CiPhone /> Call Us</a></p></li>
+            <li><p className="callu"><a href="tel:+91-9014226199"><CiPhone /> Call Us</a></p></li>
             <li><p className="callu"><a href="mailto:admin@backstagepass.co.in"><CiMail /> Mail Us</a></p></li>
           </ul>
         </div>
-        <form onSubmit={handleSubmit} className="formMain" style={{ background: "#222" }}>
+        <form onSubmit={handleSubmit} className="formMain" style={{ background: "#f9fafb", boxShadow:"0 2px 15px 0px rgba(0, 0, 0, 0.1)" }}>
           <div className="formGridfs mgrid" data-form-id="need-guidance" data-form="step1-container">
 
 
@@ -474,25 +523,43 @@ function Courses(props) {
                 loading={loading}
                 loadingText="Loading cities..."
                 renderInput={(params) => (
-                  <StyledTextField
-                    {...params}
-                    required
-                    variant="outlined"
-                    placeholder="City"
-                    InputLabelProps={{
-                      sx: {
-                        color: 'white',
-                        background: '#222222',
-                        px: 1,
-                        '& .MuiInputLabel-asterisk': {
-                          color: 'red',
-                          fontSize: '21px',
-                        },
-                      },
-                    }}
-                  />
-                )}
-              />
+                 <StyledTextField
+        {...params}
+        required
+        variant="outlined"
+        placeholder="City"
+        InputLabelProps={{
+          sx: {
+            color: "#5a555a",              
+            "&.Mui-focused": { color: "#5a555a" }, 
+            "& .MuiInputLabel-asterisk": {
+              color: "red",
+              fontSize: "21px",
+            },
+          },
+        }}
+        InputProps={{
+          ...params.InputProps,
+          sx: {
+            color: "#5a555a",              
+            "& .MuiOutlinedInput-notchedOutline": {
+              borderColor: "#5a555a",      
+            },
+            "&:hover .MuiOutlinedInput-notchedOutline": {
+              borderColor: "#5a555a",      
+            },
+            "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+              borderColor: "#5a555a",      
+            },
+            "& input::placeholder": {
+              color: "#5a555a",             
+              opacity: 1,
+            },
+          },
+        }}
+      />
+    )}
+  />
             </div>
 
           </div>

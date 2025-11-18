@@ -29,8 +29,8 @@ function HomeContent() {
         <div class="min-h-full h-full w-full container-full mx-auto relative z-[4] flex  md:flex-row justify-end md:justify-between lg:px-5 md:items-center gap-5 lg:gap-13" style={{backgroundColor:"#000!important"}}>
 
           <div class="flex flex-col md:items-start text-txt100 gap-y-12px pb-8 md:max-w-1/2" style={{ maxWidth: "100%", width: "100%", alignItems: "center" }}>
-            <h2 className="mainHeadingTotal fadeInUp anime-delay">
-              In The Media
+            <h2 className="courseHeading fadeInUp anime-delay">
+              Media Highlights
 
             </h2>
             {/* <p style={{ color: "#fff", margin: "0px" }}>Backed by multiple educational awards, Backstage Pass proudly holds the #1 position as the best gaming college in India.

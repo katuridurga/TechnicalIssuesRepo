@@ -52,13 +52,10 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import wc1 from '../../../assets/img/Icons/WEBSITE-ICON/15yearsofExperience1.webp';
-import wc2 from '../../../assets/img/Icons/WEBSITE-ICON/Awardwinninggamingcollege1.webp';
 import wc3 from '../../../assets/img/Icons/WEBSITE-ICON/Industryalignedcurriculum1.webp';
 import wc4 from '../../../assets/img/Icons/WEBSITE-ICON/TaughtbyindustryExperiencedprofessionals1.webp';
 import wc5 from '../../../assets/img/Icons/WEBSITE-ICON/HandsonTraining1.webp';
 import wc6 from '../../../assets/img/Icons/WEBSITE-ICON/StrongIndustryConnection1.webp';
-import wc7 from '../../../assets/img/Icons/WEBSITE-ICON/Placementassistance1.webp';
 import wc8 from '../../../assets/img/Icons/WEBSITE-ICON/Accesstofreewebinars_workshops1.webp';
 import wc9 from '../../../assets/img/Icons/WEBSITE-ICON/GlobalAluminicommunity1.webp';
 import cc1 from '../../../assets/img/Icons/WEBSITE-ICON/GameDeveloper.webp';
@@ -457,7 +454,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
             <section style={{ background: "#222" }}>
-              {!isMobileState ?
+             
                 <div className="counter-wrapperba" >
                   <div className="counter-wrapper1ba">
                     <AnimatedText direction="up" delay={0.2}>
@@ -493,45 +490,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                     </AnimatedText>
 
                   </div>
-                </div> :
-
-                <div className="mblcounter">
-                  <div className="counter-wrapper1ba">
-                    <AnimatedText direction="up" delay={0.2}>
-                      <div className="counterba">
-                        <div className="countba">
-
-                          <div> 15 Years</div></div>
-                        <p>Academic Excellence </p>
-                      </div>
-                    </AnimatedText>
-                    <AnimatedText direction="up" delay={0.2}>
-                      <div className="counterba">
-                        <div className="countba">
-                          <div> 30+ </div></div>
-                        <p>Awards won</p>
-                      </div>
-                    </AnimatedText>
-                    <AnimatedText direction="up" delay={0.2}>
-                      <div className="counterba">
-                        <div className="countba">
-                          <div> 100% </div></div>
-                        <p>Placement support
-                        </p>
-                      </div>
-                    </AnimatedText>
-                    <AnimatedText direction="up" delay={0.2}>
-                      <div className="counterba">
-                        <div className="countba">
-
-                          <div> 4.3  <FaStar style={{ fontSize: "20px", color: "#f59d41" }} /></div></div>
-                        <p>student rating</p>
-                      </div>
-                    </AnimatedText>
-
-                  </div>
-                </div>
-              }
+                </div> 
+              
             </section>
 
             <section style={{ background: "#fff", padding: "1px", overflow: "hidden" }}>
@@ -714,7 +674,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
               <div className="" style={{ flexDirection: "column", marginTop: isMobileState ? "-22px" : "0px" }}>
                 <AnimatedText direction="up" delay={0.2}>
-                  <h2 className="mainHeadingTotall-2">Student Artwork</h2>
+                  <h2 className="mainHeadingTotall-2" style={{color:"#ffffff"}}>Student Artwork</h2>
                 </AnimatedText>
                  <StudentArtGalleryS/>
 
@@ -732,7 +692,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
           <div className='imgmb'>
             <img src={cc1} alt="ic7" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
           </div>
-          <p className='lsh'>Game Developer (Unity, Unreal, Mobile & Console)</p>
+          <p className='lsh' style={{textAlign:"center"}}>Game Developer (Unity, Unreal, Mobile & Console)</p>
         </div>
       </li>
     </AnimatedText>
@@ -754,7 +714,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
           <div className='imgmb'>
             <img src={cc3} alt="ic9" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
           </div>
-          <p className='lsh'>Game Designer (Level, Systems, Mechanics)</p>
+          <p className='lsh' style={{textAlign:"center"}}>Game Designer (Level, Systems, Mechanics)</p>
         </div>
       </li>
     </AnimatedText>
@@ -933,7 +893,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             <section style={{ marginBottom: "45px", background: "#222" }}>
               <AnimatedText direction="up" delay={0.2}>
 
-                <h2 className='mainHeadingTotall-2'>Our Alumni Work At Leading Companies Like</h2>
+                <h2 className='mainHeadingTotall-2' style={{color:"#fff"}}>Our Alumni Work At Leading Companies Like</h2>
               </AnimatedText>
 
 
@@ -1123,7 +1083,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                     <div className='fom-ad-21' id="CounsellingOnGamingCareer">
 
 
-                      <div className='containers-21'>
+                      <div className='containers-21' style={{backgroundColor:"#f9fafb"}}>
 
 
 

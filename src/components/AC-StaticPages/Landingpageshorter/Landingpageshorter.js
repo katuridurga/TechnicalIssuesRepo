@@ -46,14 +46,14 @@ function Aboutus(props) {
 
 
             <h2 className="mainHeadingTotal" style={{ marginTop: "-30px!important" }}>Vision</h2>
-            <p className='tagline tg1' style={{ color: "#fff" }}> To shape the future of global gaming education</p>
+            <p className='tagline tg1' style={{ color: "#ed1925" }}> To shape the future of global gaming education</p>
             <div className='courses-container'>
             <div className="main-img" style={{ boxShadow: "none", backgroundColor: "#000", marginBottom: "28px !important" }}>
             <div style={{ boxShadow: "none", backgroundColor: "#000", padding: "0px" }} className="main-img2">
                     <div style={{ boxShadow: "none", background: "none", padding: "0px" }} >      
                         <div className="inner-column" style={{ backgroundColor: "#000", padding: "0px" }}>
                         <div className="sec-title">
-                            <h3 className="courses-title fadeInUp anime-delay" style={{ color: "#fff" }}>How It Started</h3>
+                            <h3 className="courses-title fadeInUp anime-delay" style={{ color: "#ed1925" }}>How It Started</h3>
                         </div>
                         <div className="text">At a time when gaming enthusiasts didn’t have many Indian educational institutes to turn to, Backstage Pass Institute of Gaming & Technology rose as a beacon of hope. With a single motto to revolutionize the world of gaming in the country and transform this form of entertainment into a full-fledged source of earning, Backstage Pass has championed quality gaming education at an affordable price.</div>
                         <div className="text">The institute has welcomed students from all over the country, belonging to diverse backgrounds, possessing unique mindsets, and has united them through their singular passion for gaming and making games.</div>

@@ -383,8 +383,120 @@ function BlogDetail({ match }) {
             "datePublished": formatDateToDMY(event.event_s_dt) // Ensure this returns a valid ISO or date string
           })}
         </script>
-      
+
         {Number(event.event_id) === 70 && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is the average game developer salary in India?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "₹6–12 LPA depending on experience and skills."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can you earn ₹1 crore in game development in India?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, especially in senior roles or international studios, some professionals earn ₹1 crore+ annually."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is game development a good career in India?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely! With rising demand and growing salaries, its one of the most exciting creative tech careers today. Backstage Pass graduates are building their careers at leading game studios like Ubisoft, Rockstar Games, EA, and Zynga with high-paying roles right after college. If you have a passion for games, then it is the best time to start developing a game."
+                  }
+                }
+              ]
+            })}
+          </script>
+        )}
+
+        {Number(event.event_id) === 75 && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Are there creative courses after 12th that offer high salaries?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, absolutely. Creative fields like Game Art & Design, Animation, UI/UX Design, Visual Communication, and even Content Creation can lead to high-paying careers. These industries value originality and hands-on skills, and with the rise of digital platforms, there’s growing demand (and pay!) for talented creators."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can arts students pursue high-paying careers?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, arts students can build successful and high-paying careers too. Courses in Design, Psychology, Digital Marketing, Law, Mass Communication, and even Entrepreneurship are in high demand. With the right skills and specialization, you can earn just as much as science or commerce graduates."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do high-salary careers require engineering or medical degrees only?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Not anymore. While engineering and medical are still valuable, high-paying careers today also come from fields like Data Science, Game Development, AI, Law, Design, Finance, and Business. What matters more is your skill, passion, and how much you’re willing to learn and grow."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is game development a good career choice after 12th?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, game development is a fantastic choice if youre passionate about games, art, or coding. The gaming industry is booming globally and in India, offering both creative satisfaction and high salaries. With the right education and portfolio, you can work on games enjoyed by millions and build a rewarding global career."
+                  }
+                }
+              ]
+            })}
+          </script>
+        )}
+        {Number(event.event_id) === 76 && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Can one person be both a designer and a developer?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! Especially in small indie game teams, one person may handle both design and development. However, in bigger studios, these roles are often separate to focus on specialised skills."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do I need to know how to code to become a game designer?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Not always. While coding helps, many game designers work more on ideas, storylines, and gameplay mechanics. Basic knowledge of game engines or scripting can definitely give you an edge."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What skills do I need to become a game developer?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You’ll need strong programming skills (like C++, C#, Python), logical thinking, problem-solving abilities, and experience using game engines like Unity or Unreal."
+                  }
+                }
+              ]
+            })}
+          </script>
+        )}
+
+{Number(event.event_id) === 81 && (
   <script type="application/ld+json">
     {JSON.stringify({
       "@context": "https://schema.org",
@@ -392,34 +504,57 @@ function BlogDetail({ match }) {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is the average game developer salary in India?",
+          "name": "Why is Hyderabad becoming a hub for gaming and esports?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "₹6–12 LPA depending on experience and skills."
+            "text": "With its IT strength, talent, policies, and community, Hyderabad is the ideal hub for gaming and esports."
           }
         },
         {
           "@type": "Question",
-          "name": "Can you earn ₹1 crore in game development in India?",
+          "name": "What kind of talent does Hyderabad offer for the gaming industry?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, especially in senior roles or international studios, some professionals earn ₹1 crore+ annually."
+            "text": "The city trains skilled professionals in game development, 3D art, animation, AR/VR, and esports through its leading institutes"
           }
         },
         {
           "@type": "Question",
-          "name": "Is game development a good career in India?",
+          "name": "How does government support help Hyderabad’s gaming ecosystem?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Absolutely! With rising demand and growing salaries, its one of the most exciting creative tech careers today. Backstage Pass graduates are building their careers at leading game studios like Ubisoft, Rockstar Games, EA, and Zynga with high-paying roles right after college. If you have a passion for games, then it is the best time to start developing a game."
+            "text": "The Telangana government supports AVGC-XR startups with policies, funding, and infrastructure, fostering growth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there esports opportunities for young gamers in Hyderabad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Hyderabad’s tournaments and gaming arenas help players compete, learn, and turn esports into a career."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes Hyderabad different from other cities in India for gaming?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With tech, talent, community, and government support, Hyderabad is emerging as a hub for gaming careers and innovation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can someone get involved in Hyderabad’s gaming and esports ecosystem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aspiring gamers, developers, and creators can join communities, tournaments, and studios to build skills and careers."
           }
         }
       ]
     })}
   </script>
 )}
-
-{Number(event.event_id) === 75 && (
+{Number(event.event_id) === 82 && (
   <script type="application/ld+json">
     {JSON.stringify({
       "@context": "https://schema.org",
@@ -427,80 +562,60 @@ function BlogDetail({ match }) {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Are there creative courses after 12th that offer high salaries?",
+          "name": "Will AI replace human game designers?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, absolutely. Creative fields like Game Art & Design, Animation, UI/UX Design, Visual Communication, and even Content Creation can lead to high-paying careers. These industries value originality and hands-on skills, and with the rise of digital platforms, there’s growing demand (and pay!) for talented creators."
+            "text": "No. AI is a tool that assists in automating repetitive tasks and expanding possibilities. Human creativity, vision, and emotional storytelling remain essential."
           }
         },
         {
           "@type": "Question",
-          "name": "Can arts students pursue high-paying careers?",
+          "name": "How soon will AI-designed games become mainstream?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, arts students can build successful and high-paying careers too. Courses in Design, Psychology, Digital Marketing, Law, Mass Communication, and even Entrepreneurship are in high demand. With the right skills and specialization, you can earn just as much as science or commerce graduates."
+            "text": "Early AI integration is already happening. By 2030, AI-driven design and personalisation are expected to be common in AAA titles and mobile games alike."
           }
         },
         {
           "@type": "Question",
-          "name": "Do high-salary careers require engineering or medical degrees only?",
+          "name": "What are the biggest benefits of AI in game development?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Not anymore. While engineering and medical are still valuable, high-paying careers today also come from fields like Data Science, Game Development, AI, Law, Design, Finance, and Business. What matters more is your skill, passion, and how much you’re willing to learn and grow."
+            "text": "Faster asset creation, smarter NPCs, personalised experiences, and continuous content evolution are the most impactful benefits."
           }
         },
         {
           "@type": "Question",
-          "name": "Is game development a good career choice after 12th?",
+          "name": "What challenges come with AI-driven game design?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, game development is a fantastic choice if youre passionate about games, art, or coding. The gaming industry is booming globally and in India, offering both creative satisfaction and high salaries. With the right education and portfolio, you can work on games enjoyed by millions and build a rewarding global career."
+            "text": "Ethical concerns (like job displacement), the risk of generic AI-created content, and the need for human oversight are key challenges."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can AI create entirely new genres of games?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. AI can enable meta-games where intelligent agents compete alongside humans, or persistent worlds that evolve in real time—genres not possible with traditional design methods."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How will players benefit the most?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Players will experience games that feel alive—worlds that adapt to their choices, NPCs that behave intelligently, and gameplay that feels uniquely personal every time."
           }
         }
       ]
     })}
   </script>
 )}
-{Number(event.event_id) === 76 && (
-   <script type="application/ld+json">
-    {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Can one person be both a designer and a developer?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes! Especially in small indie game teams, one person may handle both design and development. However, in bigger studios, these roles are often separate to focus on specialised skills."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do I need to know how to code to become a game designer?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Not always. While coding helps, many game designers work more on ideas, storylines, and gameplay mechanics. Basic knowledge of game engines or scripting can definitely give you an edge."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What skills do I need to become a game developer?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You’ll need strong programming skills (like C++, C#, Python), logical thinking, problem-solving abilities, and experience using game engines like Unity or Unreal."
-            }
-          }
-        ]
-      })}
-  </script>
-)}
-
-
 
         <title>{event.meta_tittle}</title>
         <meta property="og:title" content={event.meta_tittle} />
-        <meta  name="description" content={event.meta_des} />
+        <meta name="description" content={event.meta_des} />
         <link rel="canonical" href={window.location.href} />
       </Helmet>
       {/* <div className='courseBanner'>
@@ -554,7 +669,7 @@ function BlogDetail({ match }) {
           <p className='testtitle'>{event.event_schema}</p>
           <div className="courses-wrapperb mainpost">
             <div>
-              <p className="suprts1" style={{ backgroundColor: "#000" }}>
+              <p className="suprts1" style={{ backgroundColor: "#ffffff" }}>
                 <span dangerouslySetInnerHTML={{ __html: event.description }} />
               </p>
             </div>

@@ -1,227 +1,67 @@
-import React, { useCallback, useEffect, useRef } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
-import {
-  NextButton,
-  PrevButton,
-  usePrevNextButtons
-} from './EmblaCarouselArrowButtonsAward'
-import { useDotButton } from './EmblaCarouselDotButtonBuzz';
-import awd1 from "../assets/img/banners/2018.webp";
-import awr1 from "../assets/img/banners/2023.webp";
-import awr2 from "../assets/img/banners/times2018.webp";
-import awr3 from "../assets/img/banners/times2022.webp";
-import awr4 from "../assets/img/banners/times2019.webp";
-import awr6 from "../assets/img/banners/Time.webp";
-import awr7 from "../assets/img/banners/times2023.webp";
-const TWEEN_FACTOR_BASE = 0.2
+import React, { useCallback, useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import "../assets/css/AwardsCarousel.css";
 
-const EmblaCarousel = (props) => {
-  const { options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
-  const tweenFactor = useRef(0)
-  const tweenNodes = useRef([])
+import award1 from "../assets/img/awards/Best_Education_Brand_2018.webp";
+import award2 from "../assets/img/awards/Times_Education_Excellence_2019.webp";
+import award3 from "../assets/img/awards/Time_Excellence_Awards_2020.webp";
+import award4 from "../assets/img/awards/Times_Education_Excellence_2021.webp";
+import award5 from "../assets/img/awards/Times_Education_Excellence_2022.webp";
+import award6 from "../assets/img/banners/2023.webp";
+import award7 from "../assets/img/awards/Times_Education_Excellence_2023.webp";
 
-  const {} =
-    useDotButton(emblaApi)
+const awardsimg = [
+  { img: award1, text: "Best Education Brand Award – Economic Times 2018" },
+  { img: award2, text: "Times Education Excellence Awards 2018-19" },
+  { img: award3, text: "Times Excellence Award 2019-20" },
+  { img: award4, text: "Times Education Excellence Award 2020-21" },
+  { img: award5, text: "Times Education Excellence Awards 2022" },
+  { img: award6, text: "Emerging Leader Award – Eduspark Awards 2023" },
+  { img: award7, text: "Times Education Excellence Awards 2023" },
+];
 
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick
-  } = usePrevNextButtons(emblaApi)
+const EmblaCarousel = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: "start",
+  });
 
-  const setTweenNodes = useCallback((emblaApi) => {
-    tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
-      return slideNode.querySelector('.embla__parallax__layerb')
-    })
-  }, [])
+useEffect(() => {
+  if (!emblaApi) return;
 
-  const setTweenFactor = useCallback((emblaApi) => {
-    tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
-  }, [])
+  const id = setInterval(() => {
+    emblaApi.scrollNext();   // RIGHT → LEFT for your layout
+  }, 2500);
 
-  const tweenParallax = useCallback((emblaApi, eventName) => {
-    const engine = emblaApi.internalEngine()
-    const scrollProgress = emblaApi.scrollProgress()
-    const slidesInView = emblaApi.slidesInView()
-    const isScrollEvent = eventName === 'scroll'
+  return () => clearInterval(id);
+}, [emblaApi]);
 
-    emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
-      let diffToTarget = scrollSnap - scrollProgress
-      const slidesInSnap = engine.slideRegistry[snapIndex]
-
-      slidesInSnap.forEach((slideIndex) => {
-        if (isScrollEvent && !slidesInView.includes(slideIndex)) return
-
-        if (engine.options.loop) {
-          engine.slideLooper.loopPoints.forEach((loopItem) => {
-            const target = loopItem.target()
-
-            if (slideIndex === loopItem.index && target !== 0) {
-              const sign = Math.sign(target)
-
-              if (sign === -1) {
-                diffToTarget = scrollSnap - (1 + scrollProgress)
-              }
-              if (sign === 1) {
-                diffToTarget = scrollSnap + (1 - scrollProgress)
-              }
-            }
-          })
-        }
-
-        // const translate = diffToTarget * (-1 * tweenFactor.current) * 100
-        // const tweenNode = tweenNodes.current[slideIndex]
-        // tweenNode.style.transform = `translateX(${translate}%)`
-      })
-    })
-  }, [])
-
-  useEffect(() => {
-    if (!emblaApi) return
-
-    setTweenNodes(emblaApi)
-    setTweenFactor(emblaApi)
-    tweenParallax(emblaApi)
-
-    emblaApi
-      .on('reInit', setTweenNodes)
-      .on('reInit', setTweenFactor)
-      .on('reInit', tweenParallax)
-      .on('scroll', tweenParallax)
-      .on('slideFocus', tweenParallax)
-  }, [emblaApi, setTweenFactor, setTweenNodes, tweenParallax])
 
   return (
-    <div className="emblaba">
-      <div className="embla__viewportba" ref={emblaRef}>
-        <div className="embla__containerba">
-          
-            <div className=".embla__slideba imgn" key={1}>
-              <div className="embla__parallaxba">
-                <div className="embla__parallax__layerba">
-                  <img
-                    className="embla__slide__imgba embla__parallax__imgba"
-                    src={awd1}
-                    alt="Your alt text"
+    <div className="emblaaward">
+      <div className="embla__viewportaward" ref={emblaRef}>
+        <div className="embla__containeraward">
+          {awardsimg.map((awds, index) => (
+            <div className="embla__slideaward" key={index}>
+              <div className="embla__image-wrapperawrd">
+                <span>
+                  <LazyLoadImage
+                    src={awds.img}
+                    alt={awds.text}
+                    effect="blur"
+                    className="embla__slide__imgawards"
                   />
-                  <div className="buzzdiv">
-                    <p>Best Education Brand Award Economic Times 2018
-                    </p>
-                  </div>
-                  
-                </div>
+                  <p className="embla__captionaward">{awds.text}</p>
+                </span>
               </div>
             </div>
-            <div className=".embla__slideba imgn" key={2}>
-              <div className="embla__parallaxba">
-                <div className="embla__parallax__layerba">
-                  <img
-                    className="embla__slide__imgba embla__parallax__imgba"
-                    src={awr2}
-                    alt="Your alt text"
-                  />
-                  <div className="buzzdiv">
-                    <p>Times Education Excellence Awards 2018-19
-                    </p>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-            <div className=".embla__slideba imgn" key={3}>
-              <div className="embla__parallaxba">
-                <div className="embla__parallax__layerba">
-                  <img
-                    className="embla__slide__imgba embla__parallax__imgba"
-                    src={awr4}
-                    alt="Your alt text"
-                    style={{objectPosition:"center"}}
-                  />
-                   <div className="buzzdiv">
-                    <p>Times Excellence Award 2019-20
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=".embla__slideba imgn" key={3}>
-              <div className="embla__parallaxba">
-                <div className="embla__parallax__layerba">
-                  <img
-                    className="embla__slide__imgba embla__parallax__imgba"
-                    src={awr6}
-                    alt="Your alt text"
-                  />
-                   <div className="buzzdiv">
-                    <p>Times Education Excellence Award 2020-21
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=".embla__slideba imgn" key={4}>
-              <div className="embla__parallaxba">
-                <div className="embla__parallax__layerba">
-                  <img
-                    className="embla__slide__imgba embla__parallax__imgba"
-                    src={awr3}
-                    alt="Your alt text"
-                    style={{objectPosition:"center"}}
-                  />
-                   <div className="buzzdiv">
-                    <p>Times Education Excellence Awards 2022
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=".embla__slideba imgn" key={5}>
-              <div className="embla__parallaxba">
-                <div className="embla__parallax__layerba">
-                  <img
-                    className="embla__slide__imgba embla__parallax__imgba"
-                    src={awr1}
-                    alt="Your alt text"
-                  />
-                   <div className="buzzdiv">
-                    <p>Emerging Leader Award at the Eduspark Awards 2023</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className=".embla__slideba imgn" key={6}>
-              <div className="embla__parallaxba">
-                <div className="embla__parallax__layerba">
-                  <img
-                    className="embla__slide__imgba embla__parallax__imgba"
-                    src={awr7}
-                    alt="Your alt text"
-                  />
-                   <div className="buzzdiv">
-                    <p>Times Education Excellence Awards 2023
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-         
-          
+          ))}
         </div>
-      </div>
-
-      <div className="embla__controlsba">
-        <div className="embla__buttonsba">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
-
-      
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default EmblaCarousel
+export default EmblaCarousel;

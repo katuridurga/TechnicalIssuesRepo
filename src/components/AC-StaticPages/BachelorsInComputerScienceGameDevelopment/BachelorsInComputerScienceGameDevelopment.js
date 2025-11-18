@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector, shallowEqual } from "react-redux";
 import "./BachelorsInComputerScienceGameDevelopment.css";
 import Scrollspy from "react-scrollspy";
-
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import { PiArrowFatRightLight } from 'react-icons/pi';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import EmblaCarouselMentors from '../../../content/EmblaCarouselMentors';
@@ -12,15 +13,17 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Chip from '@mui/material/Chip';
 import HomeIcon from '@mui/icons-material/Home';
 import ScrollSpy from "react-ui-scrollspy";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import m1 from "../../../assets/img/test/1.webp";
 import m2 from "../../../assets/img/test/2.webp";
 import m3 from "../../../assets/img/test/3.webp";
 import m4 from "../../../assets/img/test/4.png";
-import m5 from "../../../assets/img/Icons/flags.png";
-import m6 from "../../../assets/img/Icons/lightbulb.png";
-import m7 from "../../../assets/img/Icons/game-console.png";
-import m8 from "../../../assets/img/Icons/team-work.png";
+import m5 from "../../../assets/img/Icons/flags.webp";
+import c1 from "../../../assets/img/Courses/careeroprt.webp";
+import m6 from "../../../assets/img/Icons/jams.webp";
+import m7 from "../../../assets/img/Icons/gameconsole.webp";
+import m8 from "../../../assets/img/Icons/team-work.webp";
+import { FaPlus, FaMinus } from "react-icons/fa";
 
 
 import Tabs, { tabsClasses } from '@mui/material/Tabs';
@@ -57,8 +60,6 @@ TabPanel.propTypes = {
   index: PropTypes.number.isRequired,
   value: PropTypes.number.isRequired,
 };
-
-
 
 const StyledBreadcrumb = styled(Chip)(({ theme, Props }) => {
   const backgroundColor =
@@ -103,6 +104,8 @@ function Courses(props) {
 
   const [value1, setValue1] = React.useState(0);
 
+  // ✅ Add this here (INSIDE component)
+  const [activeTab, setActiveTab] = useState("GAME PROGRAMMING");
   const handleChange1 = (event, newValue) => {
     setValue1(newValue);
   };
@@ -115,8 +118,107 @@ function Courses(props) {
     state => state.mainReducer.isMobile,
     shallowEqual
   );
+  const semesters = [
+    {
+      title: "Computer science - Core",
+      subjects: [
+        "Operating Systems",
+        "Data Structures",
+        "Design and Analysis of Algorithms",
+        "Data Base Management Systems",
+        "Data Communications",
+        "Computer Organization",
+        "Object Oriented System Development",
+        "Human Computer Interaction",
+        "Artificial Intelligence and Machine Learning",
+        "Software Engineering",
+        "Information Retrieval Systems",
+      ],
+    },
+    {
+      title: "Computer Science - Programming",
+      subjects: [
+        "C++ | Adv C++ & STL",
+        "Object Oriented Programming with Java",
+        "C# and .Net Framework",
+        "Python Programming Language",
+        "Web Application Development",
+        "Web Programming",
+      ],
+    },
+    {
+      title: "Game Programming",
+      subjects: [
+        "Unity 3D Game Engine – Basic & Advanced",
+        "Unreal Game Engine -  Blue Prints & Programming with C++",
+        "Graphic Programming with OpenGL",
+        "Mathematical Concepts for Gaming",
+        "Physics for Gaming",
+        "AI Programming",
+        "Game Networking",
+        "Gameplay Programming",
+        "Code Optimization",
+      ],
+    },
+  ];
+  const semsecond = [
+    {
+      title: "Game Design & Production",
+      subjects: [
+        "Game Genres & History ",
+        "Conceptulization and Design thinking",
+        "Game Design and Production Pipeline",
+        "Level Design for Games",
+        "Game World Design",
+        "Game Design Documentation",
+        "Story Telling for Games ",
+        "Game Psychology",
+        "Game Quality Assurance",
+        "Game Project Management",
+        "Publishing & Marketing for Games",
+        "Game Monetization",
+        "Gamification",
+      ],
+    },
+   
+    {
+      title: "Humanities",
+      subjects: [
+        "English Communication",
+        "Creative Writing for Media",
+        "Environmental Science",
+        "Universal Human Values",
+        "Personality Development",
+      ],
+      subcategories: [
+        {
+          title: "Art Courses",
+          subjects: [
+            "Introduction to Fine Arts",
+            "Art History",
+            "Digital Illustration Basics",
+            "Drawing and Painting Techniques",
+          ],
+        },
+      ],
+    },
+ {
+      title: "AR & VR courses – Electives",
+      subjects: [
+        "Introduction to Augmented Reality",
+        "Introduction to Virtual Reality",
 
-
+      ],
+    },
+  ];
+  const items = ["Gain a strong technical foundation in core Computer Science subjects, including data structures, algorithms, Database Management, operating systems, etc.",
+    "Develop expertise in creating games using leading game engines including, Unity 3D (with C# programming language) and Unreal Engine (With C++ programming language), both essential tools in the game development industry.",
+    "Master the basics of game design principles and understand the complete life cycle of a game’s development.",
+    "Engage in practical, hands-on projects that mimic real-world game development scenarios, enhancing your problem-solving abilities.",
+    "Stay ahead of the curve by mastering cutting edge technologies like AI programming, graphic programming with OpenGL, and game optimization techniques.",
+    "Prepare for a variety of roles, including Game Programmer, AI Programmer, Unity Developer, Unreal Developer, Gameplay Programmer, Game Engine Programmer, Graphic Programmer, Software Engineer, Game Designer, Producer, Level Designer, etc. in both the IT and Gaming industries.",
+    "Benefit from the knowledge and experience of seasoned professionals who will guide you through both theoretical and practical aspects of game development.",
+    "Build a strong portfolio showcasing your unique style and technical skills, making you a competitive candidate in the job market."];
 
   const handleScroll = (id) => {
     const el = document.getElementById(id);
@@ -126,21 +228,71 @@ function Courses(props) {
     }
   };
 
+  const faqs = [
+    {
+      question: "GAME PROGRAMMING",
+      answer: [
+
+        "Game Programmer",
+        "Unity Developer",
+        "Unreal Developer",
+        "Gameplay Programmer",
+        "Graphic Programmer",
+        "AI Programmer",
+        "Game Engine Programmer",
+        "AR Developer",
+        "VR Developer",
+        "Metaverse Developer",
+      ],
+    },
+    {
+      question: "GAME DESIGN",
+      answer: [
+        "Game Designer",
+        "Level Designer",
+        "UI/UX Designer",
+        "Narrative Designer",
+        "Combat Designer",
+        "Economy/Monetization Designer",
+        "Systems Designer",
+        "Technical Designer",
+      ],
+    },
+    {
+      question: "OTHER CAREERS",
+      answer: [
+        "Game Producer",
+        "Quality Assurance Tester",
+        "Video Game Marketing",
+        "Software Engineer",
+        "Database Administrator",
+      ],
+    },
+
+  ];
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <>
       <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'MobileClassbsc' : 'Bachelors-in-Computer-Science-Game-Development'}`}>
         <div className="et_pb_row et_pb_row_0">
           <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
             <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">Bachelor's in Computer Science <br />& Game Development</h1></div>
+              <div className="et_pb_text_inner"><h1 className="title white-txt">Bachelor's in Computer Science <br />& Game Development</h1>
+                <a href="#Enquire-Now" class="capplynow">Apply Now</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="courses-container">
-        <Helmet>
-          <script type="application/ld+json">
-            {`
+      <Helmet>
+        <script type="application/ld+json">
+          {`
           {
             "@context": "https://schema.org/", 
             "@type": "BreadcrumbList", 
@@ -157,10 +309,10 @@ function Courses(props) {
             }]
           }
             `}
-          </script>
+        </script>
 
-          <script type="application/ld+json">
-            {`
+        <script type="application/ld+json">
+          {`
           {
             "@context": "https://schema.org/",
             "@type": "WebSite",
@@ -173,430 +325,298 @@ function Courses(props) {
             }
           }
             `}
-          </script>
-
-          <title>Bachelor's Degree in Computer Science & Game Development | Backstage Pass Institute Gaming, Hyderabad,  India.</title>
-
-
-          <meta property="og:title" content="Bachelor's Degree in Computer Science & Game Development | Backstage Pass Institute of Gaming, Hyderabad, India" />
-          <meta name="description" content="Backstage Pass Institute of Gaming is offering a Bachelor's Degree in Computer Science & Game Development. Master game design, game programming, and top game engines like Unity & Unreal. Enroll Now & Build a Career in Gaming!" />
-          <meta property="og:url" content="https://www.backstagepass.co.in/courses/bachelors-in-computer-science-game-development/" />
-          <meta name="keywords" content="game development courses, game development colleges in india, game development courses in india, Computer Science in Gaming, game programming courses, bsc game design and development, game development degree, game development degree in india, game developer courses in india, video game developer course​, video game development courses​, video game development courses in india​" />
-          <link rel="canonical" href="https://www.backstagepass.co.in/courses/bachelors-in-computer-science-and-game-development/" />
-
-        </Helmet>
-
-        <div className="courses-wrapper">
-
-
-
-
-
-
-          <div className="CourseesOverView">
-            {isMobileState ? null : <StickyBox offsetTop={isMobileState ? 0 : 90} offsetBottom={0} style={{ position: isMobileState ? "initial" : "sticky", width: isMobileState ? '100%' : '24%', marginRight: isMobileState ? "0%" : "3%" }}>
-              <div className="sidebarview">
-                <Scrollspy
-                  items={sections}
-                  currentClassName="active"
-                  offset={-100}
-                  componentTag="ul"
-                >
-                  {sections.map((section) => (
-                    <li key={section}>
-                      <div
-                        className="ss-item-demo-2"
-                        onClick={() => handleScroll(section)}
-                      >
-                        {section.replace(/-/g, " ")}
-                      </div>
-                    </li>
-                  ))}
-                  <li className="t-c1">
-                    <button
-                      className="three button brand size200 w-full sm:w-auto"
-                      style={{ width: "auto", fontSize: "14.5px" }}
-                      type="button"
-                    >
-                      <a
-                        href="https://backstagepass.co.in/enquiry-now/"
-                        style={{ color: "#fff" }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Enquire Now
-                      </a>
-                    </button>
-                  </li>
-                </Scrollspy>
-              </div>
-              <div className="applybottom"><button
-                className="three button brand size200 w-full sm:w-auto"
-                style={{ width: "180px", fontSize: "14.5px" }}
-                type="button"
-              >
-                <a
-                  href="https://backstagepass.co.in/application-form/"
-                  style={{ color: "#fff" }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Apply Now
-                </a>
-              </button></div>
-            </StickyBox>}
-            <div style={{ width: isMobileState ? "100%" : "70%" }}>
-              {!isMobileState ? <div role="presentation">
-                <Breadcrumbs aria-label="breadcrumb" style={{ background: "none" }}>
-                  <StyledBreadcrumb
-                    style={{ background: "none", color: "#fff", fontFamily: "Montserrat, sans-serif", border: "1px solid #fff", cursor: "pointer" }}
-                    component="a"
-                    href="/"
-                    label="Home"
-                    icon={<HomeIcon fontSize="small" />}
-                  />
-                  <StyledBreadcrumb style={{ background: "none", color: "#fff", fontFamily: "Montserrat, sans-serif", border: "1px solid #fff", cursor: "pointer" }} component="a" href="/courses/" label="Courses" />
-                  <StyledBreadcrumb
-                    style={{ background: "none", color: "#fff", fontFamily: "Montserrat, sans-serif", border: "1px solid #fff" }}
-                    label="Computer Science and Game Development"
-                  // component="a" href="/"
-                  />
-                </Breadcrumbs>
-              </div> : null}
-
-              <div className="">
-                <div
-                // style={{
-                //   position: "relative",
-                //   overflowY: "scroll",
-                //   height: "50vh",
-                // }}
-                >
-                  <ScrollSpy
-                    // parentScrollContainerRef={parentScrollContainerRef}
-                    activeclassName="ss-active-demo-2"
-                    offsetBottom={100}
-                    scrollThrottle={80}
-                    useBoxMethod
-                  >
-                    <div id="Course-Overview" backgroundColor="orange" height="300vh">
-                      <h2 className='courseHeading'>Course Overview</h2>
-                      <div className='courseUpdates'>
-                        <ul>
-                          <li><img src={m1} alt="Duration icon" />
-                            <p>Duration <p className='innerhd'> 4 Years</p></p></li>
-                          <li><img src={m2} alt="Eligibility icon" />
-                            <p>Eligibility<p className='innerhd'>10+2 or Equivalent
-                              with Maths
-                            </p></p></li>
-                          <li><img src={m3} alt="Mode icon" />
-                            <p>Mode  <p className='innerhd'>Offline</p></p></li>
-                          <li><img src={m4} alt="JNAFAU" />
-                            <p>Affiliated <p className='innerhd'>JNAFAU</p></p></li>
-                        </ul>
-                      </div>
-                      <p className='normaltext'>The B.Sc (Hons) - Computer Science & Game Development program blends Computer Science, Game Design, and Game Programming skills. This course provides students with a strong foundation in core computer science topics, including software development and programming, while also focusing on game design and game development principles. Students will gain both theoretical knowledge and practical experience, preparing them for careers in both the IT and Game Development industries.</p>
-                      <p className='normaltext'>Whether you are passionate about crafting immersive gaming experiences or advancing in the IT industry, Backstage Pass Institute of Gaming is the ideal choice.</p>
-                      <p className='normaltext'> As the <a href="https://www.backstagepass.co.in/" style={{ color: "#ec1923", fontWeight: "500" }}>best game development college in India,</a> we provide opportunities for students to excel and thrive in these dynamic fields.
-                      </p>
-
-
-                    </div>
-                    <div id="Course-Objectives" height="150vh" style={{ padding: "0px 0px", borderRadius: '20px', marginTop: "30px" }}>
-                      <h2 className='courseHeading' style={{ marginTop: "0px" }}>Course Objectives</h2>
-
-                      <ul className='Objectives'>
-                        <li>Gain a strong technical foundation in core Computer Science subjects, including data structures, algorithms, Database Management, operating systems, etc.</li>
-
-                        <li>Develop expertise in creating games using leading game engines including, Unity 3D (with C# programming language) and Unreal Engine (With C++ programming language), both essential tools in the game development industry. </li>
-                        <li>Master the basics of game design principles and understand the complete life cycle of a game’s development.</li>
-                        <li>Engage in practical, hands-on projects that mimic real-world game development scenarios, enhancing your problem-solving abilities.</li>
-                        <li>Stay ahead of the curve by mastering cutting edge technologies like AI programming, graphic programming with OpenGL, and game optimization techniques.</li>
-                        <li>Prepare for a variety of roles, including Game Programmer, AI Programmer, Unity Developer, Unreal Developer, Gameplay Programmer, Game Engine Programmer, Graphic Programmer, Software Engineer, Game Designer, Producer, Level Designer, etc. in both the IT and Gaming industries.</li>
-                        <li>Benefit from the knowledge and experience of seasoned professionals who will guide you through both theoretical and practical aspects of game development.</li>
-                        <li>Build a strong portfolio showcasing your unique style and technical skills, making you a competitive candidate in the job market.</li>
-                      </ul>
-
-
-                    </div>
-
-                    <div id="Curriculum" backgroundColor="blue" height="150vh">
-
-
-                      <h2 className='courseHeading'>Curriculum</h2>
-
-                      <Box >
-                        <Tabs
-                          TabIndicatorProps={{ style: { background: '#ed1923' } }}
-                          value={value}
-                          onChange={handleChange}
-                          variant="scrollable"
-                          textColor="secondary"
-                          // indicatorColor="secondary"
-                          scrollButtons
-                          aria-label="visible arrows tabs example"
-                          style={{ background: "#222", color: "#fff" }}
-                          sx={{
-                            [`& .${tabsClasses.scrollButtons}`]: {
-                              '&.Mui-disabled': { opacity: 0.5, color: "#fff", fontSize: "35px" },
-                            },
-                          }}
-                        >
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="Computer science - Core" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="Computer Science - Programming" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="Game Programming" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="Game Design & Production" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="AR & VR courses – Electives" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="Humanities" />
-                        </Tabs>
-
-                        <TabPanel value={value} index={0} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-
-                            <li>Operating Systems</li>
-                            <li>Data Structures</li>
-                            <li>Design and Analysis of Algorithms</li>
-                            <li>Data Base Management Systems</li>
-                            <li>Data Communications</li>
-                            <li>Computer Organization</li>
-                            <li>Object Oriented System Development</li>
-                            <li>Human Computer Interaction</li>
-                            <li>Artificial Intelligence and Machine Learning</li>
-                            <li>Software Engineering</li>
-                            <li>Information Retrieval Systems</li>
-
-                          </ul>
-                        </TabPanel>
-                        <TabPanel value={value} index={1} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>C++ | Adv C++ & STL</li>
-                            <li>Object Oriented Programming with Java</li>
-                            <li>C# and .Net Framework</li>
-                            <li>Python Programming Language</li>
-                            <li>Web Application Development</li>
-                            <li>Web Programming</li>
-                          </ul>
-                        </TabPanel>
-                        <TabPanel value={value} index={2} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>Unity 3D Game Engine – Basic & Advanced</li>
-                            <li>Unreal Game Engine -  Blue Prints & Programming with C++</li>
-                            <li>Graphic Programming with OpenGL</li>
-                            <li>Mathematical Concepts for Gaming</li>
-                            <li>Physics for Gaming</li>
-                            <li>AI Programming</li>
-                            <li>Game Networking</li>
-                            <li>Gameplay Programming</li>
-                            <li>Code Optimization</li>
-                          </ul>
-                        </TabPanel>
-
-                        <TabPanel value={value} index={3} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>Game Genres & History </li>
-                            <li>Conceptulization and Design thinking</li>
-                            <li>Game Design and Production Pipeline</li>
-                            <li>Level Design for Games</li>
-                            <li>Game World Design</li>
-                            <li>Game Design Documentation</li>
-                            <li>Story Telling for Games </li>
-                            <li>Game Psychology</li>
-                            <li>Game Quality Assurance</li>
-                            <li>Game Project Management</li>
-                            <li>Publishing & Marketing for Games</li>
-                            <li>Game Monetization</li>
-                            <li>Gamification</li>
-                          </ul>
-                        </TabPanel>
-
-                        <TabPanel value={value} index={4} dir={theme.direction}>
-
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>Introduction to Augmented Reality</li>
-                            <li>Introduction to Virtual Reality</li>
-                          </ul>
-
-                        </TabPanel>
-
-                        <TabPanel value={value} index={5} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>English Communication</li>
-                            <li>Creative Writing for Media</li>
-                            <li>Environmental Science</li>
-                            <li>Universal Human Values</li>
-                            <li>Personality Development</li>
-                          </ul>
-
-                          <h4 className="Objectives1h" style={{ fontFamily: "Montserrat, sans-serif" }}>Art Courses </h4>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>Drawing</li>
-                            <li>Color Theory</li>
-                            <li>Traditional Sculpting</li>
-                            <li>Drawing & Perspective </li>
-                            <li>Image Editing</li>
-                            <li>Introduction to 3D Modeling and Texturing</li>
-                          </ul>
-                        </TabPanel>
-
-                      </Box>
-
-
-
-                    </div>
-                    <div id="Beyond-The-Course" backgroundColor="blue" height="150vh" style={{ padding: "0px 0px" }}>
-                      <h2 className='courseHeading' style={{ color: "#fff", marginTop: "0px" }}>Beyond The Course</h2>
-
-                      <p className='normaltext'>At Backstage Pass, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.
-                      </p>
-
-                      <div className='courseUpdates1'>
-                        <ul>
-                          <li>
-                            <div className='BeyondLeft'>
-                              <img src={m5} />
-                            </div>
-                            <div className='BeyondRight'>
-                              <p className='lsh'>Studio Visits</p>
-                              <p>Visits to game studios allow students to witness how a game company truly works
-                              </p>
-                            </div>
-                          </li>
-                          <li>
-                            <div className='BeyondLeft'>
-                              <img src={m6} />
-                            </div>
-                            <div className='BeyondRight'>
-                              <p className='lsh'>Jams & Conferences</p>
-                              <p>Students are encouraged to participate in game jams and attend conferences to hone their skills</p>
-                            </div>
-
-
-                          </li>
-
-                          <li>
-                            <div className='BeyondLeft'>
-                              <img src={m8} />
-                            </div>
-                            <div className='BeyondRight'>
-                              <p className='lsh'>Networking Opportunities</p>
-                              <p>With frequent webinars and workshops, our students directly interact with alumni and industry experts</p>
-                            </div>
-
-
-                          </li>
-
-                          <li>
-                            <div className='BeyondLeft'>
-                              <img src={m7} />
-                            </div>
-                            <div className='BeyondRight'>
-                              <p className='lsh'>Make Your Own Game</p>
-                              <p>Our Accelerator Program enables students to make their own games and build an impressive portfolio</p>
-                            </div>
-
-
-                          </li>
-
-
-                        </ul>
-                      </div>
-
-                    </div>
-
-                    <div id="Career-Opportunities" backgroundColor="brown" height="150vh">
-                      <h2 className='courseHeading'>Career Opportunities</h2>
-
-                      <Box >
-                        <Tabs
-                          TabIndicatorProps={{ style: { background: '#ed1923' } }}
-                          value={value1}
-                          onChange={handleChange1}
-                          variant="scrollable"
-                          scrollButtons="auto"
-                          aria-label="scrollable auto tabs example"
-                          style={{ background: "#222", color: "#fff" }}
-                        >
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="GAME PROGRAMMING" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="GAME DESIGN" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="OTHER CAREERS" />
-                        </Tabs>
-
-                        <TabPanel value={value1} index={0} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>Game Programmer</li>
-                            <li>Unity Developer</li>
-                            <li>Unreal Developer</li>
-                            <li>Gameplay Programmer</li>
-                            <li>Graphic Programmer</li>
-                            <li>AI Programmer</li>
-                            <li>Game Engine Programmer</li>
-                            <li>AR Developer</li>
-                            <li>VR Developer</li>
-                            <li>Metaverse Developer</li>
-                          </ul>
-                        </TabPanel>
-                        <TabPanel value={value1} index={1} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>Game Designer</li>
-                            <li>Level Designer</li>
-                            <li>UI/UX Designer</li>
-                            <li>Narrative Designer</li>
-                            <li>Combat Designer</li>
-                            <li>Economy/Monetization  Designer</li>
-                            <li>Systems Designer</li>
-                            <li>Technical Designer</li>
-                          </ul>
-                        </TabPanel>
-                        <TabPanel value={value1} index={2} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>Game Producer</li>
-                            <li>Quality Assurance Tester</li>
-                            <li>Video Game Marketing</li>
-                            <li>Software Engineer</li>
-                            <li>Database Administrator</li>
-                          </ul>
-                        </TabPanel>
-
-
-
-                      </Box>
-
-
-
-                    </div>
-
-
-                    <div id="Featured-Mentors" backgroundColor="brown" height="150vh">
-                      <h2 className='courseHeading'>Featured Mentors</h2>
-
-                      <EmblaCarouselMentors slides={SLIDES} options={OPTIONS} />
-
-
-
-
-                    </div>
-                    <div id="Enquire-Now">
-                      <HomeContentForm />
-                    </div>
-                  </ScrollSpy>
-                </div>
-              </div>
-
-
+        </script>
+
+        <title>Bachelor's Degree in Computer Science & Game Development | Backstage Pass Institute Gaming, Hyderabad,  India.</title>
+
+
+        <meta property="og:title" content="Bachelor's Degree in Computer Science & Game Development | Backstage Pass Institute of Gaming, Hyderabad, India" />
+        <meta name="description" content="Backstage Pass Institute of Gaming is offering a Bachelor's Degree in Computer Science & Game Development. Master game design, game programming, and top game engines like Unity & Unreal. Enroll Now & Build a Career in Gaming!" />
+        <meta property="og:url" content="https://www.backstagepass.co.in/courses/bachelors-in-computer-science-game-development/" />
+        <meta name="keywords" content="game development courses, game development colleges in india, game development courses in india, Computer Science in Gaming, game programming courses, bsc game design and development, game development degree, game development degree in india, game developer courses in india, video game developer course​, video game development courses​, video game development courses in india​" />
+        <link rel="canonical" href="https://www.backstagepass.co.in/courses/bachelors-in-computer-science-and-game-development/" />
+
+      </Helmet>
+
+      <div className="courses-wrapper">
+
+
+        <div className="course-page">
+          {/* Info Card */}
+          <div className="info-card slanted-info">
+            <div className="info-item">
+            <span className="info-subtitle">Course Duration</span>
+              <span className="info-title">4 Years</span>
+            </div>
+            <div className="info-item">
+              <span className="info-subtitle">Mode</span>
+              <span className="info-title">Offline</span>
+            </div>
+            <div className="info-item">
+              <span className="info-subtitle">Eligibility</span>
+              <span className="info-title">10+2 or Equivalent to MPC</span>
+            </div>
+            <div className="info-item">
+              <span className="info-subtitle">Affiliated</span>
+              <span className="info-title">JNAFAU</span>
+              
             </div>
           </div>
-
-
-
-
         </div>
+      </div>
 
+      {/* Course Overview */}
+      <div className="overviewsection">
+        <h2 className='courseHeading'>Course Overview</h2>
+         <div className="brname"></div>
+        <p>
+        The B.Sc (Hons) - Computer Science & Game Development program blends Computer Science, Game Design, and Game Programming skills. This course provides students with a strong foundation in core computer science topics, including software development and programming, while also focusing on video game design and game development principles. Students will gain both theoretical knowledge and practical experience, preparing them for careers in both the IT and Game Development industries.<br/>
+       
+       Whether you are passionate about crafting immersive gaming experiences or advancing in the IT industry, Backstage Pass Institute of Gaming is the ideal choice. As the best game development college in India, we provide students opportunities to excel and thrive in the gaming and IT industries.
 
+        </p>
+      </div>
 
+      {/* Course Objectives / Curriculum */}
+      <div className="curriculum-section" style={{ marginTop: "24px" }}>
+        <h2 className='courseHeading'>Course Objectives</h2>
+         <div className="brname"></div>
+        <div className="">
+          <ul style={{ listStyle: "none", padding: 0 }}>
+            {items.map((item, index) => (
+              <li key={index} style={{ display: "flex", marginBottom: "14px", fontSize:"16px",gap:"10px", alignItems:"flex-start", justifyContent:"flex-start", lineHeight:"1.6"}}>
+                <CheckBoxIcon style={{ color: "#ec1923", marginRight: "12px", fontSize: "22px", marginTop: "3px" }} />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      {/* Course Objectives / Curriculum */}
+      <div className="curriculum-section" style={{ background: "#f9fafb", marginBottom: "20px", boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)", padding: "10px", marginTop: "30px" }}>
+        <h2 className='courseHeading'>Course Curriculum</h2>
+        <div className="brname"></div>
+        <section className="curriculum">
+          <div className="curriculum-grid">
+            {semesters.map((sem, index) => {
+              // Start a new row every 3 semesters
+              if (index % 3 === 0) {
+                return (
+                  <div className="curriculum-row" key={index}>
+                    {semesters.slice(index, index + 3).map((s, i) => (
+                      <div key={i} className="semester-card">
+                        <h4 className="semester-title">{s.title}</h4>
+                        <ul>
+                          {s.subjects.map((subject, j) => (
+                            <li key={j}>{subject}</li>
+                          ))}
+                        </ul>
 
+                        {/* 👇 Add this part for subcategories like Art Courses */}
+                        {s.subcategories?.map((sub, k) => (
+                          <div key={k} className="subcategory">
+                            <h5 className="subcategory-title">{sub.title}</h5>
+                            <ul>
+                              {sub.subjects.map((subj, l) => (
+                                <li key={l}>{subj}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                );
+              }
+              return null;
+            })}
+          </div>
+        </section>
+        <section className="curriculum">
+          <div className="curriculum-grid">
+            {semsecond.map((sem, index) => {
+              // Start a new row every 3 semesters
+              if (index % 3 === 0) {
+                return (
+                  <div className="curriculum-row" key={index}>
+                    {semsecond.slice(index, index + 3).map((s, i) => (
+                      <div key={i} className="semester-card">
+                        <h4 className="semester-title">{s.title}</h4>
+                        <ul>
+                          {s.subjects.map((subject, j) => (
+                            <li key={j}>{subject}</li>
+                          ))}
+                        </ul>
+
+                        {/* 👇 Add this part for subcategories like Art Courses */}
+                        {s.subcategories?.map((sub, k) => (
+                          <div key={k} className="subcategory">
+                            <h5 className="subcategory-title">{sub.title}</h5>
+                            <ul>
+                              {sub.subjects.map((subj, l) => (
+                                <li key={l}>{subj}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                );
+              }
+              return null;
+            })}
+          </div>
+        </section>
 
 
       </div>
+      <div id="Beyond-The-Course" backgroundColor="blue" height="180vh" style={{ padding: "0px 0px", marginBottom: "20px" }}>
+        <h2 className='courseHeading' style={{ color: "#ec1923", marginTop: "0px" }}>Beyond The Course</h2>
+ <div className="brname"></div>
+        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At Backstage Pass, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.
+        </p>
+
+        <div className='courseUpdates1'>
+          <ul style={{ width: "80%", margin: "0px auto", paddingTop: "10px" }}>
+            <li>
+              <div className='BeyondLeft'>
+                <img src={m5} />
+              </div>
+              <div className='BeyondRight'>
+               <h4 className='lsh'>Studio Visits</h4>
+                <p>Visits to game studios allow students to witness how a game company truly works
+                </p>
+              </div>
+            </li>
+            <li>
+              <div className='BeyondLeft'>
+                <img src={m6} />
+              </div>
+              <div className='BeyondRight'>
+                <h4 className='lsh'>Jams & Conferences</h4>
+                <p>Students are encouraged to participate in game jams and attend conferences to hone their skills</p>
+              </div>
+
+
+            </li>
+
+            <li>
+              <div className='BeyondLeft'>
+                <img src={m8} />
+              </div>
+              <div className='BeyondRight'>
+                <h4 className='lsh'>Networking Opportunities</h4>
+                <p>With frequent webinars and workshops, our students directly interact with alumni and industry experts</p>
+              </div>
+
+
+            </li>
+
+            <li>
+              <div className='BeyondLeft'>
+                <img src={m7} />
+              </div>
+              <div className='BeyondRight'>
+                <h4 className='lsh'>Make Your Own Game</h4>
+                <p>Our Accelerator Program enables students to make their own games and build an impressive portfolio</p>
+              </div>
+
+
+            </li>
+
+
+          </ul>
+        </div>
+
+      </div>
+      <div id="Career-Opportunities" backgroundColor="brown" >
+
+        <div className='coppertunities'>
+          <div className='left'>
+            <img src={c1} alt="careerop" />
+          </div>
+
+          <div className="right career-tabs-container">
+            {/* Tabs */}
+
+
+            <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
+              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"80%" }}>Career Opportunities</h2>
+ <div className="brname"></div>
+              <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
+                {faqs.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="p-4 inline-block justify-start" style={{ borderBottom: "1px solid#d8d7d7", width: "100%", margin: "0px auto" }}>
+                    <button
+                      className="w-full flex justify-center items-center text-left btnplus"
+                      onClick={() => toggleFAQ(index)}
+                      style={{
+                        background: "#f9fafb",
+                        color: "#000",
+                        justifyContent: "flex-start",
+                        paddingLeft: "0px"
+
+                      }}
+                    >
+                      {/* Icon inside circle */}
+                      <span
+                        className="w-8 h-8 flex items-center justify-center border border-gray-400 rounded-full text-black plusbtn"
+                        style={{
+                          background: "#fff",
+                          color: "#000",
+                          border: "1px solid #000",
+                          borderRadius: "0%",
+                          padding: "20px"
+                        }}
+                      >
+                        {openIndex === index ? (
+                          <FaMinus className="w-3 h-3" />
+                        ) : (
+                          <FaPlus className="w-3 h-3" />
+                        )}
+                      </span>
+                      <span className="faqquestion text-lg font-medium text-gray-800" style={{
+                        paddingLeft: "20px",
+                        textAlign: "justify",
+                        lineHeight: "24px",
+                        fontSize:"16px"
+                      }}>
+                        {faq.question}
+                      </span>
+
+
+                    </button>
+
+                    {openIndex === index && (
+                      <ul style={{ paddingLeft: "6.5rem", lineHeight: "1.9" }}>
+                        {faq.answer.map((point, i) => (
+                          <li key={i} style={{ listStyle: "disc" }}>{point}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="Enquire-Now" style={{marginTop:"30px"}}>
+        <HomeContentForm />
+      </div>
+
+
+
+
 
     </>
   )

@@ -26,8 +26,138 @@
   color: #000;
   cursor: pointer;
 }
+.course-page {
+  padding: 16px;
+  max-width: 1161px;
+  margin: 0 auto;
+  font-family: "Arial", sans-serif;
+}
+/* ====== Slanted Info Section ====== */
+.slanted-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: -56px;
+}
+
+/* connecting lines */
+.slanted-info::before,
+.slanted-info::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  z-index: 0;
+  left: 0;
+}
+
+.info-item {
+  position: relative;
+  z-index: 1;
+  background: #FA9F42;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 0 #8f8a8a;
+  transform: skew(-10deg);
+  padding: 1rem 1.2rem;
+  text-align: center;
+  width: 272px;
+  transition: 0.3s ease;
+}
 
 
+
+.info-title {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  color: #000;
+  transform: skew(10deg);
+}
+
+.info-subtitle {
+  display: block;
+  font-size: 12px;
+  color: #000;
+  transform: skew(10deg);
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+.subcategory-title{
+  margin-left:10px;
+}
+/* responsive */
+@media (max-width: 768px) {
+  
+.info-title {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  color: #000;
+  transform: skew(0deg);
+}
+
+.info-subtitle {
+  display: block;
+  font-size: 12px;
+  color: #000;
+  transform: skew(0deg);
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+  .slanted-info {
+    gap: 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .slanted-info::before,
+  .slanted-info::after {
+    display: none;
+  }
+  .info-item {
+    width: 100%;
+    transform: skew(0deg);
+    height:100px;
+  }
+  .course-page {
+    padding: 0px;
+    max-width: 400px; 
+    font-family: "Arial", sans-serif;
+}
+.courses-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px !important;
+}
+}
+
+
+
+.curriculum-card {
+  padding: 0px 16px 16px 16px;
+  border-radius: 8px;
+}
+
+.curriculum-card h4 {
+  margin-top: 16px;
+}
+
+.curriculum-card ul {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+.curriculum {
+    margin-left: 10px;
+    width: 80%;
+    margin: 0px auto;
+    padding-top: 16px;
+    padding-bottom: 28px;
+}
 h3.courses-title {
     text-align: center;
     font-size: 48px;
@@ -80,14 +210,15 @@ h3.courses-title {
   grid-template-columns: repeat(1, 1fr) !important;
 }
 .courseUpdates1 ul li{
-  width: 90% !important;
+  width: 100% !important;
   height: auto !important;
+  margin-left:0px !important;
 }
 .BeyondRight {
   margin-left: 20px !important;
 }
 .BeyondRight .lsh {
-  font-size: 19px !important;
+  font-size: 18px !important;
   font-weight: 600 !important;
 }
 .courseUpdates1 ul li p {
@@ -148,16 +279,45 @@ h3.courses-title {
     
   }
   .courseHeading{
-    font-size: 36px;
-    font-weight: 900;
+    font-size: 42px;
+    font-weight: 600;
     margin: 30px 0px 30px 0px;
-    color: #fff;
+    color:#ec1923;
   }
   .courseHeading2{
     font-size: 21px;
     font-weight: 600;
     margin: 30px 0px 30px 0px;
     color:#fff;
+  }
+  .overviewsection  p{
+    width: 80%;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 30px;
+    margin:0px auto;
+   padding: 20px;
+  }
+  .curriculum-section p{
+    width: 80%;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 30px;
+    margin:0px auto;
+   padding: 20px;
+  }
+  .overviewsection{
+    width:100%;
+    background: #f9fafb;
+    box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
+  }
+  .curriculum-section ul{
+  list-style: none;
+    padding: 0px;
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 20px;
+    padding-left: 20px !important;
   }
   .courseUpdates ul{
     display: grid;
@@ -194,7 +354,7 @@ h3.courses-title {
 .courseUpdates ul li p {
     font-size: 19px;
     font-weight: bold;
-    color:#fff;
+    color:#000;
     margin-top: 20px;
     text-align: center;
 }
@@ -204,7 +364,7 @@ h3.courses-title {
     line-height: 28px;
     width: 100%;
     text-align: justify;
-    color: #fff;
+    color: #000;
 }
 .Objectives {
     display: flex;
@@ -220,7 +380,7 @@ h3.courses-title {
     line-height: 28px;
     width: 100%;
     text-align: justify;
-    color: #fff;
+    color: #000;
     margin-bottom: 10px;
     padding-left: 15px;
 }
@@ -248,12 +408,9 @@ h3.courses-title {
   line-height: 28px;
   width: 100%;
   text-align: justify;
-  color: #fff;
+  color: #000;
   margin-bottom: 10px;
 }
-
-
-
 .courseUpdates1 ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -262,36 +419,46 @@ h3.courses-title {
     margin-top: 40px;
     column-gap: 50px;
   }
-  .BeyondLeft{
+ 
+.BeyondLeft::after {
+    content: "";
     position: absolute;
-    left: -40px;
+    right: -8px;
+    top: -6px;
+    bottom: 5px;
+    width: 2px;
+    background-color: #ccc;
+    height: 78px;
+}
+  .BeyondLeft{
+    position: relative;
     background: #fff;
     border-radius: 50%;
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -20px;
-    width: 64px;
-    height: 64px;
+    width: 100px;
+    height: 60px;
+    box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
   }
   .courseUpdates1 ul li {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    border: 2px solid #222;
-    height: 170px;
-    background: #222;
-    color: #FFF;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    background: #fff;
+    color: #000;
     border-radius: 15px;
     width: 100%;
     padding: 20px;
     position: relative;
     margin-left: 30px;
+    box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
   }
   .courseUpdates1 ul li img {
     width: 80%;
-    height: 50px;
+    height: 100%;
     object-fit: scale-down;
     object-position: center;
     display: flex;
@@ -299,7 +466,7 @@ h3.courses-title {
     align-items: center;
 }
 .courseUpdates1 ul li p {
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 500;
   text-align: left;
   margin: 10px 0px;
@@ -311,13 +478,15 @@ h3.courses-title {
   margin-left: 20px;
   align-items: flex-start;
   justify-content: flex-start;
+   color:#000;
 }
 .BeyondRight .lsh{
-  font-size: 24px;
+  font-size: 18px;
   margin: 0px 0px;
   display: flex;
   width: 100%;
-  font-weight: 500;
+  font-weight: bold;
+    color: #ed1923;
 }
 
 .active-scroll-spy{
@@ -473,6 +642,26 @@ html {
     margin-right: -6px;
     color: #ed1923 !important;
 }
+.btnplus :hover{
+color:#ed1923;
+}
+.btnplus svg:hover{
+  color:#fff;
+}
+.courseHeading{
+  width: 80%;
+    margin: 0px auto;
+    margin-bottom: 0px;
+    padding: 10px;
+    font-size: 42px;
+    font-weight: 600;
+    color: #ec1923;
+}
+.plusbtn:hover{
+  background-color:#ed1923 !important;
+  color:#fff !important;
+  border:1px solid #ed1923 !important;
+}
 .css-6od3lo-MuiChip-label {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -483,10 +672,8 @@ html {
 }
 button:focus {
     outline: none;
-    background-color: #ed1923 !important;
     font-size: 15px;
-    font-weight: 700;
-    color: #ffff !important;
+    color: #000!important;
 }
 .css-1ujykiq-MuiButtonBase-root-MuiTab-root {
     display: -webkit-inline-box;
@@ -566,7 +753,7 @@ button:focus {
 .innerhd{
     text-align: center;
     margin: 0px;
-    color: #fff !important;
+    color: #000 !important;
     font-weight: normal !important;
 
 }
@@ -577,11 +764,49 @@ button:focus {
   border:1px solid#fff;
 }
 @media only screen and (max-width : 1024px){
+  .coppertunities {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 0px;
+    gap: 0px;
+    width: 100%;
+    padding: 0px 0;
+    flex-direction: column-reverse !important;
+}
+  .coppertunities .right {
+    /* flex: 2 1; */
+    background: #f9fafb;
+    padding: 0px;
+    width: 80% !important;
+    margin: 0px auto !important;
+}
+  .curriculum {
+    margin-left: 10px;
+    width: 85%;
+    margin: 0px auto;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+.curriculum-row {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-gap: 10px;
+    gap: 10px;
+}
+   .curriculum-section ul{
+  list-style: none;
+    padding: 0px;
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 20px;
+    padding-left: 0px !important;
+  }
   .courseHeading {
     font-size: 22px !important;
-    font-weight: 900;
-    margin: 30px 0px 30px 0px;
-    color: #fff;
+    font-weight: 600;
+    margin: 10px 0px 10px 0px;
+    color: #ec1923;
     text-align: center;
 }
 .courseUpdates ul li {
@@ -594,24 +819,296 @@ button:focus {
   font-size: 19px;
   font-weight: 400;
   line-height: 32px;
-  width: 95% !important;
-  text-align: left !important;
-  color: #fff;
+  width: 80% !important;
+  text-align: justify !important;
+  color: #000;
   margin-top: 20px !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 .BeyondLeft {
-  position: absolute;
-  left: -40px;
+  position: relative;
   background: #fff;
   border-radius: 50%;
   padding: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: -20px;
-  width: 58px;
-  height: 58px;
+  width: 100px;
+  height: 60px;
+    box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
 }
+}
+.curriculum-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.curriculum-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:10px;
+}
+
+
+.semester-card {
+    text-align: left;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 2px solid #fff4f4;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+   background:#fff;
+}
+.semester-title {
+  background: #ed1923;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-weight: bold;
+  margin: 0;
+  font-size: 16px;
+}
+
+.semester-card ul {
+  list-style-type: disc;
+  margin: 0;
+  padding: 1rem 1.5rem;
+  margin-left:10px;
+}
+
+.semester-card ul li {
+  margin-bottom: 0.5rem;
+  font-size: 15px;
+}
+.show-gridcourses  {
+      padding-top: 10px;
+      padding-bottom: 24px;
+   width:80%;
+   margin: 0px auto;
+  }
+.show-gridcourses .maind {
+    margin-bottom: 6px;
+    display: flex;
+    text-align: left;
+}
+.course-section {
+  width: 90%;
+  max-width: 900px;
+  margin: 3rem auto;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* Decorative top line with boxes */
+.top-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.top-line .line {
+  flex: 1;
+  height: 2px;
+  background-color: #000;
+}
+
+.boxes {
+  display: flex;
+  gap: 10px;
+  margin: 0 10px;
+}
+
+.tilted-box {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000;
+  transform: rotate(-10deg);
+  background: #fff;
+  box-shadow: 2px 2px 0 #000;
+}
+
+/* Text sections */
+.section-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #444;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  border-bottom: 1px dashed #999;
+  display: inline-block;
+}
+
+.overview-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Checkbox list */
+.objectives-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.objectives-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.objectives-list input[type="checkbox"] {
+  accent-color: #007b55;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+}
+
+.objectives-list span {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .tilted-box {
+    width: 30px;
+    height: 30px;
+  }
+  .overview-text {
+    font-size: 0.9rem;
+  }
+  .section-heading {
+    font-size: 0.9rem;
+  }
+}
+.content-column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.content-column li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #000;
+}
+
+.arrow-icon {
+  color: #ff0000;
+  margin-right: 8px;
+  font-size: 14px;
+}
+/* 
+.tab.active  {
+  background-color: #FA9F42; 
+  color: #fff;
+} */
+
+/* Top boxes */
+.top-boxes {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.coppertunities {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0px;
+  width: 100%;
+  padding: 0px 0;
+  background-color: #f9fafb;
+}
+
+.coppertunities .left {
+  flex: 2; /* smaller width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coppertunities .left img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+.Career-Opportunities{
+  margin-top:20px;
+}
+
+.coppertunities .right {
+  flex: 2; /* make this side wider */
+  background: #f9fafb;
+  padding: 20px;
+}
+
+.box {
+  flex: 1;
+  height: 120px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tabs */
+.tabs-section {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: -2px;
+}
+
+
+.tab {
+    padding: 10px 20px;
+    width: 370px;
+    border-radius: 4px;
+    background: #ed1923;
+    color: white;
+    padding: 0.8rem 1rem;
+    font-weight: bold;
+    margin: 0;
+    font-size: 16px;
+}
+/* Content box */
+.content-box {
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+  border-top:none;
+}
+
+.content-column {
+  flex: 1;
+}
+
+.content-column ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .top-boxes {
+    flex-direction: column;
+  }
+
+  .content-box {
+    flex-direction: column;
+  }
+}
+.career-tabs-container{
+  cursor: context-menu;
 }

@@ -703,7 +703,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 <form onSubmit={handleSubmit} className="formMain">
 
-                  <p className="suprtsMobiless">Get <b>a Counselling</b> Session on Gaming Career</p>
+                  <p className="suprtsMobiless" style={{color:"#fff"}}>Get <b>a Counselling</b> Session on Gaming Career</p>
                   <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
 
 
@@ -829,7 +829,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
         </div>
       </div>
       {isButtonVisible && (
-        <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>)}
+        <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Enroll Now</a></div>)}
 <div className="App">
         <ReactWhatsappButton
           countryCode="91"

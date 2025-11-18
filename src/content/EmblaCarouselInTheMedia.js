@@ -79,20 +79,40 @@ const EmblaCarousel = (props) => {
     })
   }, [])
 
-  useEffect(() => {
+useEffect(() => {
+  if (!emblaApi) return
+
+  // --- Auto Scroll Left Loop ---
+  let autoScrollInterval
+
+  const autoScrollLeft = () => {
     if (!emblaApi) return
+    if (emblaApi.canScrollPrev()) {
+      emblaApi.scrollPrev()
+    } else {
+      emblaApi.scrollTo(emblaApi.scrollSnapList().length - 1) // Jump to last slide when at first
+    }
+  }
 
-    setTweenNodes(emblaApi)
-    setTweenFactor(emblaApi)
-    tweenParallax(emblaApi)
+  autoScrollInterval = setInterval(autoScrollLeft, 3000) // scroll every 3 seconds
 
-    emblaApi
-      .on('reInit', setTweenNodes)
-      .on('reInit', setTweenFactor)
-      .on('reInit', tweenParallax)
-      .on('scroll', tweenParallax)
-      .on('slideFocus', tweenParallax)
-  }, [emblaApi, setTweenFactor, setTweenNodes, tweenParallax])
+  // --- Existing Logic ---
+  setTweenNodes(emblaApi)
+  setTweenFactor(emblaApi)
+  tweenParallax(emblaApi)
+
+  emblaApi
+    .on('reInit', setTweenNodes)
+    .on('reInit', setTweenFactor)
+    .on('reInit', tweenParallax)
+    .on('scroll', tweenParallax)
+    .on('slideFocus', tweenParallax)
+
+  // Cleanup on unmount
+  return () => {
+    clearInterval(autoScrollInterval)
+  }
+}, [emblaApi, setTweenFactor, setTweenNodes, tweenParallax])
 
   return (
     <div className="emblabaM">
@@ -113,7 +133,7 @@ const EmblaCarousel = (props) => {
 
                   </p>
 
-                  <a href="https://www.thehindu.com/sci-tech/technology/at-india-games-developer-conference-2024-three-hyderabad-based-game-developers-shine/article68913734.ece/amp/" target='_blank' rel="noopener noreferrer"><button style={{ marginTop: "-28px", background: "none", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800" }} className='three button size201 w-full sm:w-auto' type="button">Read more<FiArrowRight style={{ marginLeft: "7px" }} /></button></a>
+                  <a href="https://www.thehindu.com/sci-tech/technology/at-india-games-developer-conference-2024-three-hyderabad-based-game-developers-shine/article68913734.ece/amp/" target='_blank' rel="noopener noreferrer"><a style={{ marginTop: "-20px", background: "none", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800",color:"#fff" }} className='three rbth size201 w-full sm:w-auto' type="button">Read more<FiArrowRight className="arros" style={{ marginLeft: "7px", color:"#fff" }} /></a></a>
                 </div>
 
               </div>
@@ -134,7 +154,7 @@ const EmblaCarousel = (props) => {
                   <p>Backstage Pass Students Take Home Awards and Accolades at IGDC 2018
                   </p>
 
-                  <a href="https://timesofindia.indiatimes.com/education/news/backstage-pass-students-take-home-awards-and-accolades-at-igdc-2018/articleshow/67140616.cms" target='_blank' rel="noopener noreferrer"><button style={{ marginTop: "-28px", background: "none", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800" }} className='three button size201 w-full sm:w-auto' type="button">Read more<FiArrowRight style={{ marginLeft: "7px" }} /></button></a>
+                  <a href="https://timesofindia.indiatimes.com/education/news/backstage-pass-students-take-home-awards-and-accolades-at-igdc-2018/articleshow/67140616.cms" target='_blank' rel="noopener noreferrer"><a style={{ marginTop: "-20px", background: "none", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800",color:"#fff" }} className='three rbth size201 w-full sm:w-auto' type="button">Read more<FiArrowRight className="arros"style={{ marginLeft: "7px", color:"#fff"  }} /></a></a>
                 </div>
 
               </div>
@@ -156,7 +176,7 @@ const EmblaCarousel = (props) => {
 
 
                   </p>
-                  <a href="https://www.thehindu.com/brandhub/turn-your-passion-for-gaming-into-a-rewarding-career/article65665332.ece" target='_blank' rel="noopener noreferrer"><button style={{ marginTop: "-28px", background: "none", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800" }} className='three button size201 w-full sm:w-auto' type="button">Read more<FiArrowRight style={{ marginLeft: "7px" }} /></button></a>
+                  <a href="https://www.thehindu.com/brandhub/turn-your-passion-for-gaming-into-a-rewarding-career/article65665332.ece" target='_blank' rel="noopener noreferrer"><a style={{ marginTop: "-20px", background: "none", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800",color:"#fff" }} className='three rbth size201 w-full sm:w-auto' type="button">Read more<FiArrowRight className="arros"style={{ marginLeft: "7px", color:"#fff"  }} /></a></a>
                 </div>
 
               </div>
@@ -176,7 +196,7 @@ const EmblaCarousel = (props) => {
                 <div className="incontent">
                   <p>How Backstage Pass Gaming College Prepare Students to Join the Top Game and Technology Companies
                   </p>
-                  <a href="https://www.dnaindia.com/education/report-how-backstage-pass-gaming-college-prepare-students-to-join-the-top-game-and-technology-companies-2897946" target='_blank' rel="noopener noreferrer"><button style={{ marginTop: "-28px", background: "none", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800" }} className='three button size201 w-full sm:w-auto' type="button">Read more<FiArrowRight style={{ marginLeft: "7px" }} /></button></a>                  </div>
+                  <a href="https://www.dnaindia.com/education/report-how-backstage-pass-gaming-college-prepare-students-to-join-the-top-game-and-technology-companies-2897946" target='_blank' rel="noopener noreferrer"><a style={{ marginTop: "-20px", background: "none", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800",color:"#fff" }} className='three rbth size201 w-full sm:w-auto' type="button">Read more<FiArrowRight className="arros"style={{ marginLeft: "7px", color:"#fff"  }} /></a></a>                  </div>
 
               </div>
             </div>
@@ -194,7 +214,7 @@ const EmblaCarousel = (props) => {
                 </div>
                 <div className="incontent">
                   <p>This gaming college in India is revolutionising gaming education</p>
-                  <a href="https://www.forbesindia.com/article/brand-connect/this-gaming-college-in-india-is-revolutionising-gaming-education/60133/1" rel="noopener noreferrer" target='_blank'><button style={{ marginTop: "-28px", background: "none", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800" }} className='three button size201 w-full sm:w-auto' type="button">Read more<FiArrowRight style={{ marginLeft: "7px" }} /></button></a>
+                  <a href="https://www.forbesindia.com/article/brand-connect/this-gaming-college-in-india-is-revolutionising-gaming-education/60133/1" rel="noopener noreferrer" target='_blank'><a style={{ marginTop: "-20px", background: "none", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800",color:"#fff" }} className='three rbth size201 w-full sm:w-auto' type="button">Read more<FiArrowRight className="arros"style={{ marginLeft: "7px", color:"#fff"  }} /></a></a>
                 </div>
 
               </div>
@@ -213,7 +233,7 @@ const EmblaCarousel = (props) => {
                 <div className="incontent">
                   <p>Backstage Pass brings world-class gaming education right to your doorstep
                   </p>
-                  <a rel="noopener noreferrer" href="https://yourstory.com/2020/06/backstage-world-class-gaming-education" target='_blank'><button style={{ marginTop: "-28px", background: "none", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800" }} className='three button size201 w-full sm:w-auto' type="button">Read more<FiArrowRight style={{ marginLeft: "7px" }} /></button></a>
+                  <a rel="noopener noreferrer" href="https://yourstory.com/2020/06/backstage-world-class-gaming-education" target='_blank'><a style={{ marginTop: "-20px", background: "none", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800",color:"#fff" }} className='three rbth size201 w-full sm:w-auto' type="button">Read more<FiArrowRight className="arros"style={{ marginLeft: "7px", color:"#fff"  }} /></a></a>
                 </div>
 
               </div>

@@ -70,7 +70,7 @@ function HomeContent() {
     advancedDiploma: [
       { value: "gd", label: " Game Development" },
       { value: "3dgame", label: "3D Game Art & Digital Sculpting" },
-      { value: "tdca", label: "Traditional & Digital Concept Art" }
+      // { value: "tdca", label: "Traditional & Digital Concept Art" }
     ],
     
     diploma: [
@@ -78,6 +78,7 @@ function HomeContent() {
       { value: "gdu", label: "Game Development with Unity" },
       { value: "3dart", label: "3D Environment Art For Games" },
       { value: 'gdunreal', label: 'Game Development with Unreal' },
+      { value: 'dvra', label: 'VR Application Development' },
     ]
   };
 
@@ -184,7 +185,7 @@ const [mainCategory, setMainCategory] = useState("");
             <div className="hidden md:block md:flex-1 self-start form-stcc">
 
 
-              <h3 className="mainHeadingTotal">
+              <h3 className="mainHeadingTotal-form">
                 Enquire now
               </h3>
               <form onSubmit={handleSubmit} className="formMain">
@@ -211,38 +212,58 @@ const [mainCategory, setMainCategory] = useState("");
                     <label className="" for="PhoneNumber">Phone Number <span style={{color:"red", marginLeft:"4px", marginTop:"2px"}}>*</span></label>
                     <input className="" placeholder="Phone Number" id="PhoneNumber" name="PhoneNumber" type="tel" pattern="[6-9][0-9]{9}" minLength="10" maxLength="10" value={formData.PhoneNumber} onChange={handleInputChange} required />
                   </div>
-                  <div className="inputContainer">
-                    <label htmlFor="city">City</label>
-                    <Autocomplete
-                      id="city"
-                      name="city"
-                      value={collegecity.find((city) => city.value === formData.city) || null}
-                      onChange={handleCitySelect}
-                      options={collegecity}
-                      isOptionEqualToValue={(option, value) => option.value === value}
-                      loading={loading}
-                      loadingText="Loading cities..."
-                      renderInput={(params) => (
-                        <StyledTextField
-                          {...params}
-                          required
-                          variant="outlined"
-                          placeholder="City"
-                          InputLabelProps={{
-                            sx: {
-                              color: 'white',
-                              background: '#222222',
-                              px: 1,
-                              '& .MuiInputLabel-asterisk': {
-                                color: 'red',
-                                fontSize: '21px',
-                              },
-                            },
-                          }}
-                        />
-                      )}
-                    />
-                  </div>
+       <div className="">
+  <label htmlFor="city" style={{ color: "#5a555a" }}>City</label>
+  <Autocomplete
+    id="city"
+    name="city"
+    value={collegecity.find((city) => city.value === formData.city) || null}
+    onChange={handleCitySelect}
+    options={collegecity}
+    isOptionEqualToValue={(option, value) => option.value === value}
+    loading={loading}
+    loadingText="Loading cities..."
+    renderInput={(params) => (
+      <StyledTextField
+        {...params}
+        required
+        variant="outlined"
+        placeholder="City"
+        InputLabelProps={{
+          sx: {
+            color: "#5a555a",              
+            "&.Mui-focused": { color: "#5a555a" }, 
+            "& .MuiInputLabel-asterisk": {
+              color: "red",
+              fontSize: "21px",
+            },
+          },
+        }}
+        InputProps={{
+          ...params.InputProps,
+          sx: {
+            color: "#5a555a",              
+            "& .MuiOutlinedInput-notchedOutline": {
+              borderColor: "#5a555a",      
+            },
+            "&:hover .MuiOutlinedInput-notchedOutline": {
+              borderColor: "#5a555a",      
+            },
+            "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+              borderColor: "#5a555a",      
+            },
+            "& input::placeholder": {
+              color: "#5a555a",             
+              opacity: 1,
+            },
+          },
+        }}
+      />
+    )}
+  />
+</div>
+
+
                 </div>
                 <div className="formGrid" data-form-id="need-guidance" data-form="step1-container">
                   <div className="">
@@ -305,9 +326,10 @@ const [mainCategory, setMainCategory] = useState("");
                   </div>
                 </div>
                 <div>
-                  <button className=" three button brand size200 w-full sm:w-auto" data-form-id="need-guidance" data-form="step1-button-continue" type="submit">
+                  <button className="glowing-button" data-form-id="need-guidance" data-form="step1-button-continue" type="submit">
                     Submit
                   </button>
+                 
                 </div>
               </form>
               <React.Fragment>

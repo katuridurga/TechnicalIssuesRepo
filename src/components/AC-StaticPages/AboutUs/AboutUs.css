@@ -12,10 +12,10 @@
   align-items: center;
   background: #020202;
 }
-.mainHeadingTotal{
-  font-size: 48px;
-  color: #fff;
-  text-transform: uppercase;
+.mainHeadingTotal3{
+  font-size: 42px;
+  color: #ec1923;
+  text-transform: capitalize;
   font-weight: 600;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -199,9 +199,9 @@ svg#curve {
 
 .text {
   margin-bottom: 20px;
-  font-size: 19px;
+  font-size: 16px;
   line-height: 31px;
-  color: #fff;
+  color: #000;
   font-weight: 400;
   width: 95%;
   text-align: justify;
@@ -270,7 +270,7 @@ svg#curve {
 .image-1 {
   position: relative;
   background: #222;
-    padding: 20px;
+    padding: 10px;
 }
 
 .image-2 {
@@ -286,6 +286,7 @@ svg#curve {
   width: 100%;
   height: 400px;
   object-fit: cover;
+  display: inline-block;
 }
 
 .video-link {
@@ -902,7 +903,7 @@ figure {
   border-bottom: 100px solid transparent;
 }
 .wtmakesbsp{
-  background: #222;
+  background: #f9fafb;
   position: relative;
   margin-top: 30px;
 }
@@ -1100,7 +1101,7 @@ figure {
   color: #fff;
 }
 .css-1633um2-MuiPaper-root {
-  background-color: #000 !important;
+  background-color: #fff !important;
 }
 .plu1{
   display: flex;
@@ -1130,8 +1131,18 @@ justify-content: center;
 }
 
 @media only screen and (max-width : 1024px){
+  .wtmakesbsp .left {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding: 10px;
+}
+  .main-img {
+  width: 100%;
+  margin-top: 0px !important;
+}
   .wtmakesbsp {
     margin-top: 30px;
+    margin-bottom: 30px;
 }
    .inner > :last-child {
     margin-bottom: 20px; /* adjust as needed */
@@ -1155,15 +1166,16 @@ justify-content: center;
   .wtmakesbsp .right {
     flex: 0 0 60%;
     max-width: 60%;
-    padding: 0px 0 0 24px !important;
+    padding: 0px 0 0 0px !important;
 }
 ul.makes-different-list li {
     margin-bottom: 0px !important;
+    padding:12px !important;
 }
 
  .wtmakesbsp .bg-image {
     width: 100% !important;
-    height: 100%;
+    height:1200px;
     position: absolute;
     left: 0;
     top: 0;
@@ -1219,7 +1231,7 @@ justify-content: center;
      margin:0px auto;
      font-size: 16px !important;
      line-height: 31px;
-     color: #fff;
+     color: #000;
      font-weight: 400;
      width: 90%;
      text-align: left !important;
@@ -1254,7 +1266,7 @@ justify-content: center;
   position: relative;
   background: none;
   padding: 0px;
-  margin-top: 20px !important;
+  margin-top: 0px !important;
 }
 .mbimg12 p{
 color: #fff;
@@ -1314,18 +1326,23 @@ ul.makes-different-list li h3 {
     padding-bottom: 0px;
     font-size: 18px;
     text-transform: inherit;
-    color: #fff;
+    color: #000;
     font-weight: 900;
     margin: 10px 0px;
 }
 ul.makes-different-list li p {
     font-size: 14px;
     line-height: 22px;
-    color: #e7e7e7;
-    font-weight: 600;
+    color: #000;
+    font-weight: 400;
 }
 ul.makes-different-list li {
-    margin-bottom: 25px;
+     margin-bottom: 25px;
+    border: 1px solid #f2f2f2;
+    padding: 20px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
 }
 .wtmakesbsp .makes-different-list {
   display: grid;
@@ -1361,10 +1378,109 @@ ul.makes-different-list li {
 }
 
 .makes-different-list .inner img {
-  flex-shrink: 0;        /* keep image size fixed */
+  flex-shrink: 0;      
+    position: relative;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
+
+}
+.inner img::after{
+      content: "";
+    position: absolute;
+    right: -8px;
+    top: -6px;
+    bottom: 5px;
+    width: 2px;
+    background-color: #ccc;
+    height: 78px;
 }
 
-.makes-different-list .inner h3 {
+.makes-different-list .inner h2 {
   margin: 0;             /* remove default margin */
   font-size: 1.25rem;    /* adjust as needed */
+  color:#ec1923;
+  font-weight: 600;
+}
+
+.brtopleft {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* Top border */
+.brtopleft::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* 👈 length of top border */
+  border-top: 6px solid #5a555a; /* 👈 thickness + color */
+}
+
+/* Left border */
+.brtopleft::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%; /* 👈 length of left border */
+  border-left: 4px solid #5a555a;
+  border-right: 4px solid #5a555a;
+}
+/* Top border */
+.brtopleft1 {
+  position: relative;
+  display: inline-block; /* makes sure borders wrap image */
+}
+
+/* Top border */
+.brtopleft1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%; /* 👈 top border length */
+  border-bottom: 6px solid #5a555a; /* 👈 visible border */
+}
+
+/* Left border */
+.brtopleft1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 50%; /* 👈 left border length */
+  border-right: 8px solid #5a555a;
+  border-right-style: inset;
+}
+.courseUpdatesabout ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    background: #fff;
+    color: #000;
+    border-radius: 15px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    margin-left: 30px;
+    box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.courseUpdatesabout ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 40px;
+    row-gap: 40px;
+    width: 100%;
+    margin-top: 40px;
+    grid-column-gap: 50px;
+    column-gap: 50px;
 }

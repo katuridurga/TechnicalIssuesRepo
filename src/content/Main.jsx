@@ -134,7 +134,7 @@ function Main({ active, props }) {
               <TopRequiters />
 
               <div className='chapter' id="chapter1">
-                <div className="bg-c-gradient300 absolute w-full h-[101%] -top-[1px] -bottom-[1px] left-0 z-[2]"></div>
+                {/* <div className="bg-c-gradient300 absolute w-full h-[101%] -top-[1px] -bottom-[1px] left-0 z-[2]"></div> */}
                 <FeaturedProducts />
                 <Awards />
               </div>

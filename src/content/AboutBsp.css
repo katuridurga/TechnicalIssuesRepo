@@ -70,9 +70,10 @@
     color: #ffffff;
   }
   .number span {
-    font-size: 1.2em;
+    font-size: 45px;
     display: block;
-    color: #ffffff;
+    color: #000;
+    font-weight: bold;
   }
  .section-title7 {
     text-align: center;
@@ -106,16 +107,17 @@
 
 .counter-wrapper{
   
-  position: relative;
-  margin-top: 0rem;
-  background: #222;
-  z-index: 1;
+ position: relative;
+    margin-top: 0rem;
+    background: #f9fafb;
+    z-index: 1;
+    box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
 }
 .counter-wrapper1{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-column-gap: 1.5rem;
-  padding: 0rem 5% 1rem 5%;
+  padding: 0rem 3% 1rem 3%;
   
 }
 /* .counter-wrapper::before{
@@ -131,7 +133,7 @@
 } */
 .counter{
  text-align: center;   
- color: #ffffff;
+ color: #000;
  z-index: 2;
  position: relative;
 }
@@ -139,18 +141,25 @@
 .counter .count{
   font-size: 5rem;
   margin: 1.9466666667rem 0 1.168rem;
-  line-height: 110%;
+  line-height: 56%;
     font-weight: 600; 
 }
 .counter p{
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .count img{
   width: 90px;
 }
 .counter-wrapper1 div{
-  background: #222;
+  background: #f9fafb;
+  font-size:60px; 
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 991px) {
   html{
@@ -175,10 +184,7 @@
   .count img {
       width: 66px;
   }
-  .counter-wrapper1 div {
-      background: #222;
-      width: 160px;
-  }
+
   .counter-wrapper1{
       overflow:hidden;
   }
@@ -188,9 +194,9 @@
   }
   .counter-wrapper1 {
       display: grid !important;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-column-gap: 1.5rem;
-      padding: 0rem 5% 0rem 5%;
+      padding: 0rem 3% 0rem 3%;
   }
   .mblcounter{
     display: flex;
@@ -214,3 +220,56 @@
     font-weight: 900;
 }
 }
+.count .icon {
+  flex-shrink: 0;        /* keep icon fixed size */
+}
+
+.count .number {
+  display: flex;
+  flex-direction: column;  /* number on top, p below */
+  align-items: flex-start; /* align left */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.count .number span {
+  font-weight: bold;
+}
+
+.count .number p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  font-weight: normal;
+  color: #555;
+}
+.counter {
+  margin: 20px 0;
+}
+
+.count {
+  display: flex;
+  align-items: center;   /* align icon and number vertically */
+  gap: 15px;             /* space between icon & number */
+}
+.count {
+  display: flex;
+  align-items: center;  /* icon + number aligned */
+  gap: 15px;
+}
+
+.count .icon {
+  flex-shrink: 0;
+}
+
+
+.count .number .num-line {
+  display: flex;
+  align-items: flex-start;  /* number and + side by side */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.count .number .num-line .plus {
+  margin-left: 3px;  /* small gap between number and + */
+}
+

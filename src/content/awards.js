@@ -1,24 +1,21 @@
 import React from 'react';
 import { useSelector, shallowEqual } from "react-redux";
 import aw2 from "../assets/img/banners/_SRI8766.webp"
-// import aw3 from "../assets/img/banners/BSP_AWard.webp"
 import aw330 from "../assets/img/banners/BSP_AWard-300.webp"
-import aw315 from "../assets/img/banners/BSP_AWard-150.webp"
-// import aw4 from "../assets/img/banners/A1.webp"
-import aw45 from "../assets/img/banners/A1-150.webp"
 import aw43 from "../assets/img/banners/A1-300.webp"
-// import aw5 from "../assets/img/banners/A2.webp"
-import aw515 from "../assets/img/banners/A2-150.webp"
 import aw530 from "../assets/img/banners/A2-300.webp"
-// import aw6 from "../assets/img/banners/Times-Award.webp"
-import aw615 from "../assets/img/banners/Times-Award-150.webp"
 import aw630 from "../assets/img/banners/Times-Award-300.webp"
-// import aw8 from "../assets/img/banners/times2023.webp"
 import aw815 from "../assets/img/banners/times2023-150.webp"
-import aw830 from "../assets/img/banners/times2023-300.webp"
 import aw7 from "../assets/img/banners/et2025.webp"
 import aw9 from "../assets/img/banners/2024times.webp"
-
+import aw18 from "../assets/img/awards/Best_Education_Brand_2018.webp";
+import aw19 from "../assets/img/awards/Times_Education_Excellence_2019.webp";
+import aw20 from "../assets/img/awards/Time_Excellence_Awards_2020.webp";
+import aw21 from "../assets/img/awards/Times_Education_Excellence_2021.webp";
+import aw22 from "../assets/img/awards/Times_Education_Excellence_2022.webp";
+import aw23 from "../assets/img/awards/Times_Education_Excellence_2023.webp";
+import aw24 from "../assets/img/awards/Times_Education_Excellence_2024.webp";
+import aw25 from "../assets/img/awards/ET_Achievers_2025.webp";
 
 
 import "./awards.css"
@@ -38,7 +35,7 @@ function Awards() {
 
                 <div className="min-h-full h-full w-full relative z-[3] py-4 md:py-8">
                     <div className="sm:max-w-[480px] lg:max-w-[560px]" style={{ maxWidth: "100%" }}>
-                        <h3 className="mainHeadingTotal">Our Awards</h3>
+                        <h2 className="mainHeadingTotal">Our Awards</h2>
 
                         <div className="">
 
@@ -51,7 +48,7 @@ function Awards() {
 
                             <div className="container grid-cols-1 sm:grid-cols-2 gap-3 mt-3 sm:mt-5 lg:mt-6" style={{ width: "100%" }}>
 
-                                <ol className="ps-timeline">
+                                {/* <ol className="ps-timeline">
                                     <li style={{ marginLeft: isMobileState ? "auto" : "17px" }}>
                                         <div className="img-handler-top">
                                             <picture>
@@ -332,9 +329,76 @@ function Awards() {
                                         <span className="ps-sp-bot">2025</span>
                                     </li>
 
-                                </ol>
+                                </ol> */}
+
+                                <div class="containergawardh">
+                                    <div class="cardsgawardh">
+                                        <img src={aw18} alt="awardseven" />
+                                        <p>2018</p>
+                                        <div class="overlaysawardh">
+                                            <h3>Best Education Brand Award Economic Times <br /><br />  2018</h3>
+
+                                        </div>
+                                    </div>
+                                    <div class="cardsgawardh">
+                                        <img src={aw19} alt="awardsix" />
+                                        <p>2019</p>
+                                        <div class="overlaysawardh">
+                                            <h3>Times Education Excellence Award <br /><br />  2019</h3>
+
+                                        </div>
+                                    </div>
+                                    <div class="cardsgawardh">
+                                        <img src={aw20} alt="awardone" />
+                                        <p>2020</p>
+                                        <div class="overlaysawardh">
+                                            <h3>Times Excellence Award <br /><br />  2020</h3>
+
+                                        </div>
+                                    </div>
+                                    <div class="cardsgawardh">
+                                        <img src={aw21} alt="aw630" />
+                                        <p>2021</p>
+                                        <div class="overlaysawardh">
+                                            <h3>Times Education Excellence Award <br /><br />  2021</h3>
+
+                                        </div>
+                                    </div>
+                                    <div class="cardsgawardh">
+                                        <img src={aw22} alt="awardthree" />
+                                        <p>2022</p>
+                                        <div class="overlaysawardh">
+                                            <h3>Times Education Excellence Award <br /><br />  2022</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="cardsgawardh">
+                                        <img src={aw23} alt="awardfive" />
+                                        <p>2023</p>
+                                        <div class="overlaysawardh">
+                                            <h3>Times Education Excellence Award <br /><br />  2023</h3>
+
+                                        </div>
+                                    </div>
+                                    <div class="cardsgawardh">
+                                        <img src={aw24} alt="awardfive" />
+                                        <p>2024</p>
+                                        <div class="overlaysawardh">
+                                            <h3>Times Education Excellence Award <br /><br />  2024</h3>
+
+                                        </div>
+                                    </div>
+                                    <div class="cardsgawardh">
+                                        <img src={aw25} alt="awardfive" />
+                                        <p>2025</p>
+                                        <div class="overlaysawardh">
+                                            <h3>ET Industry Achievers <br /><br /> 2025 </h3>
+
+                                        </div>
+                                    </div>
 
 
+                                </div>
 
 
 

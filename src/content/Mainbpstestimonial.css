@@ -1,0 +1,291 @@
+.maintestimonial-section {
+  background-color: #ffffff;
+  color: white;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.testimonial-header {
+  max-width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 380px;
+}
+
+
+.testimonial-header h3 {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.testimonial-header span {
+  color: white;
+  font-weight: 600;
+}
+
+.testimonial-header p {
+  color: #c3c6d1;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.view-all-btn {
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.maintestimonial-slider-wrapper {
+  /* position: relative; */
+  width: auto;
+  max-width: 1110px;
+  /* 330 * 3 + 20 * 2 margins */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* .testimonial-slider {
+  width: 100%;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+ touch-action: pan-x;
+   Prevent vertical drag scroll 
+ 
+
+} */
+.maintestimonial-slider {
+  width: 100%;
+   overflow-x: auto !important; /* enable scrolling */
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+  cursor: grab;
+   
+}
+.maintestimonial-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.maintestimonial-slider-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+}
+
+.maintestimonial-card {
+  background-color: #f9fafb;
+  box-shadow: 0px 12px 15px 0px rgba(0, 0, 0,8%);
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 330px;
+  max-width: 330px;
+  flex-shrink: 0;
+  margin-right: 20px;
+  height: 100%;
+    flex: 0 0 auto; /* required for horizontal scrolling */
+
+}
+
+.maintestimonial-card h4 {
+  font-size: 16px;
+  color: #2db7f5;
+  margin-bottom: 10px;
+}
+
+.maintestimonial-card h4 span {
+  float: right;
+  font-size: 45px;
+  color: #ffc107;
+  font-weight: 900;
+}
+
+/* 
+.maintestimonial-text {
+  font-size: 14px;
+  color: #d1d1d1;
+  margin-bottom: 15px;
+} */
+
+.maintestimonial-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.maintestimonial-profile img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.maintestimonial-profile strong {
+  display: block;
+  font-size: 14px;
+  color:#ed1923;
+}
+
+.maintestimonial-profile p {
+  font-size: 12px;
+  color: #343232;
+  margin: 0;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #555;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #ffc107;
+}
+
+.maintestimonial-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color:#000;
+}
+
+.maintestimonial-text.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.show-more-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #ed1923;
+  cursor: pointer;
+  padding: 4px 0;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.show-more-btn:hover {
+  background: none;
+  border: none;
+  color: red !important;
+  cursor: pointer;
+  padding: 4px 0;
+  font-weight: bold;
+}
+
+
+
+
+.downcontent {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+
+/* 💡 Responsive Tweaks for Mobile */
+@media (max-width: 768px) {
+   .maintestimonial-card {
+    flex: 0 0 100% !important;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    margin-right: 0px !important;
+    margin-left: 0%;
+  }
+
+
+  .maintestimonial-slider {
+    display: flex;
+    /* align-items: center;
+    justify-content: center;
+    margin: 0px auto; */
+  }
+  .maintestimonial-slider-inner::after {
+    content: "";
+    flex: 0 0 100% !important; /* gives space for last card to center */
+  }
+    .maintestimonial-slider-inner{
+  scroll-snap-align: start;
+    }
+
+  .dots {
+   display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding: 10px 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  }
+  .dots::-webkit-scrollbar {
+    display: none;
+  }
+
+  .dot {
+    flex: 0 0 auto; /* each dot takes 25% width, so 4 fit perfectly */
+   
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+  }
+
+  .dot.active {
+    background-color: #333;
+  }
+  
+  .testimonial-header h3 {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    line-height: 0px !important;
+    margin: 20px 0px 20px 20px !important;
+  }
+
+  .maintestimonial-section {
+    background-color: #ffffff;
+    color: white;
+    padding: 0px 20px !important;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .maintestimonial-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 0px !important;
+  }
+}

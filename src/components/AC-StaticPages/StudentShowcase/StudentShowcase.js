@@ -134,10 +134,10 @@ function StudentShowcase(props) {
               <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/student-awards/" />
             </Helmet>
         <div className="courses-wrapper">
-          <div className="CourseesOverViewsh courseover1" style={{marginTop: isMobileState ? "0px" : "20px"}}>
+          <div className="CourseesOverViewsh courseover1" style={{marginTop: isMobileState ? "0px" : "0px"}}>
             <h2 className="mainHeadingTotal">Student Awards</h2>
  
-            <p className="suprtsMobile">The Student Showcase is a celebration of excellence, where our brightest minds present their projects, games, and animations. This is a space to highlight the achievements of our students and demonstrate the cutting-edge work being produced at Backstage Pass Institute.
+            <p className="suprtsMobile" style={{color:"#000",marginBottom:isMobileState?"0px" : "10px"}}>The Student Showcase is a celebration of excellence, where our brightest minds present their projects, games, and animations. This is a space to highlight the achievements of our students and demonstrate the cutting-edge work being produced at Backstage Pass Institute.
             </p>
           
 

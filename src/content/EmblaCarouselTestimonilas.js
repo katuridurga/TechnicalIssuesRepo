@@ -1,648 +1,308 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
-import rajath from '../assets/img/test/rajatojha.webp'
-import anshul from '../assets/img/test/AnshulSoni.webp'
-import sridar from '../assets/img/test/shridhar.webp'
-import navin from '../assets/img/test/navinmandal.webp'
-import kash from '../assets/img/test/kashyapreddy.webp'
-import asar from '../assets/img/test/Asar.webp'
-import jithin from '../assets/img/test/JithinPeter.webp'
-import sushil from '../assets/img/test/SushilGeorge.webp'
-import anand from '../assets/img/test/AnandDhwale.webp'
-import suryashankh from '../assets/img/test/Suryashankha.webp'
-import aniket from '../assets/img/test/AniketMukhi.webp'
-import joesph from '../assets/img/test/JoesphKalathil.webp'
-import srivast from '../assets/img/test/Srivatsan.webp'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
-import thumbnail from "../assets/img/thumbnail.webp";
-import {
-  NextButton,
-  PrevButton,
-  usePrevNextButtons
-} from './EmblaCarouselArrowButtonsTest'
-//import { useDotButton } from './EmblaCarouselDotButton'
+import React, { useState, useRef, useEffect } from "react";
+import "./Mainbpstestimonial.css";
+import AnimatedText from "../components/AC-StaticPages/landingpage/AnimatedText";
 
-const TWEEN_FACTOR_BASE = 0.00
+const testimonials = [
+  {
+    text: "From being a student in the first batch of Backstage Pass to being a mentor later, I have seen BSP grow from a small ambitious game development & game design institute to a full-fledged gaming college. With the game industry's continued growth and future potential, I'm certain they're on the right track to impart the right knowledge and skills to produce competent professionals.",
+    name: "Sushil George",
+    role: "Sr. Game Developer, Product Madness, London, UK",
+    avatar: "https://www.backstagepass.co.in/SushilGeorge-028c91ea.webp?img=1",
+  },
+  {
+    text: "Backstage Pass has an advantage over other colleges since its students are industry-ready, meaning they are ready to begin their careers immediately after graduation, without additional training or fine-tuning. As far as I know, Backstage Pass is the only college dedicated exclusively to game development and game art & design",
+    name: "Rajat Ojha",
+    role: "CEO & Co-Founder,Gamitronics",
+    avatar: "https://www.backstagepass.co.in/rajatojha-ed3d0983.webp?img=2",
+  },
+  {
+    text: "We have been recruiting from Backstage Pass for a couple of years now. They have a certain quality and their courses are amazing! We don't have to wait until the end of the academic year for us to be able to hire their students. Instead, we can hire them right in the middle because they are excellent in what they do. We definitely recommend Backstage Pass.",
+    name: "Sridhar",
+    role: "CEO, Purple Talk",
+    avatar: "https://www.backstagepass.co.in/shridhar-dd6c063d.webp?img=3",
+  },
+  {
+    text: "Backstage Pass brings the like-minded under a single roof. Our courses related to game development & game design were custom- tailored to meet the requirements of the game industry and I feel it is the right place to start for a successful career in the game industry.",
+    name: "Jithin Peter",
+    role: "Sr. Game Programmer, sumo digital, Bangalore",
+    avatar: "https://www.backstagepass.co.in/JithinPeter-bd2017d7.webp?img=4",
+  },
+  {
+    text: "One of the best aspects of Backstage Pass is that it gives you the option to interact with a lot of individuals who have a strong interest in game development and the freedom to work together with students from other streams, such as design or art, to create incredible outcomes.",
+    name: "Anand Dhavle",
+    role: "Gameplay Programmer, Tarsier Studios, Sweden",
+    avatar: "https://www.backstagepass.co.in/AnandDhwale-da6efb8f.webp?img=5",
+  },
+  {
+    text: "Innovation and adaptability are crucial for growth in the modern generation. Therefore, we require a creative and determined workforce. Students from Backstage Pass have excelled in both of these areas. We were very impressed with how they questioned the status quo and developed more effective working methods.",
+    name: "Navin Mandal",
+    role: "Co-Founder & CTO,  Immersive Labz",
+    avatar: "https://www.backstagepass.co.in/navinmandal-280e276b.webp?img=6",
+  },
+  {
+    text: "Backstage Pass is the first of its kind of gaming college in India with some great industry experts. I had the joy of learning from the people who work in the game industry and was taught about the working of the game industry that helped me a lot while working at EA Sports. So, Backstage Pass was a life-changing experience.",
+    name: "Anshul Soni",
+    role: "Software Engineer, EA Sports, Seattle, USA",
+    avatar: "https://backstagepass.co.in/AnshulSoni-cf9bf58b.webp?img=7",
+  },
+  {
+    text: "Our front-end lead Arsalan is a graduate from Backstage Pass and it is a pleasure to see how passionate he is about gaming. Whenever we interview a candidate from Backstage Pass, we find something unique that they bring in; their focus, understanding and knowledge about gaming even before they start working in a company.",
+    name: "Kashyap Reddy",
+    role: "Co-Founder, HitWicket",
+    avatar: "https://backstagepass.co.in/kashyapreddy-889e8da6.webp?img=8",
+  },
+  {
+    text: "While doing my Graduation at Backstage Pass, I started my own Game studio Seven Summits with the help of this gaming college. We learned concepts related to Game Art, Game Design, Level design, etc. from Industry Experts. In order to mark your footprint in the game industry, Backstage Pass is the best place to start.",
+    name: "Asar Dhandala",
+    role: "Founder/ Game Designer/ Producer, Seven Summits",
+    avatar: "https://backstagepass.co.in/Asar-268f6887.webp?img=9",
+  },
+  {
+    text: "When I was searching for colleges that offer Game Art and Design courses, Backstage Pass stood out as the best choice. Once I joined, I discovered the vast opportunities within the gaming industry. In just two years, my skills improved by 60%, thanks to the solid foundation provided. I also worked on a game called Infocus, which was recognized at IGDC. The one-on-one mentorship at Backstage Pass played a crucial role in my learning, as it helped identify and refine the specific skills I needed to develop.",
+    name: "Aniket Mukhi",
+    role: "4th-Year Student in Game Art & Design",
+    avatar: "https://www.backstagepass.co.in/AniketMukhi-c777716a.webp?img=10",
+  },
+  {
+    text: "My passion for gaming led me to pursue a course at Backstage Pass, and it completely transformed my understanding of game art. I learned how entertainment-focused artwork differs from traditional fine arts and how to approach art in a way that makes it a seamless part of the game world. This insight helped me develop a structured approach to game art, turning creativity into immersive gaming experiences.",
+    name: "Surya Shanka",
+    role: "Concept artist at Hitwicket",
+    avatar: "https://www.backstagepass.co.in/Suryashankha-5232eea7.webp?img=11",
+  },
+  {
+    text: "Backstage Pass is one of the few colleges in India that offers a game development course with computer science as a core subject and it truly stands out in this category. The mentors were incredibly supportive throughout my journey. After years of playing games, the ability to now create games that millions enjoy is a rewarding experience. Looking back, I can confidently say that my four years at Backstage Pass were well worth the effort.",
+    name: "Srivatsan Prativadibhayankara",
+    role: "Senior Unity Developer, Product Madness",
+    avatar: "https://www.backstagepass.co.in/Srivatsan-713173e3.webp?img=12",
+  },
+  {
+    text: "Backstage Pass was the catalyst that let me do bigger things as it provided me a very strong foundation. It was more than just exams. There is a lot of scope for knowledge sharing and it played a big role in how I was able to get good at my craft.",
+    name: "JOSEPH KALATHIL",
+    role: "Gameplay Programmer Hacksaw studios,stockholm, sweden",
+    avatar: "https://www.backstagepass.co.in/JoesphKalathil-d9008f68.webp?img=13",
+  },
+];
 
-const numberWithinRange = (number, min, max) =>
-  Math.min(Math.max(number, min), max)
+const Testimonials = () => {
+  const scrollRef = useRef();
+  const [activePage, setActivePage] = useState(0);
+  const [cardsPerPage, setCardsPerPage] = useState(3);
+  const [scrollWidth, setScrollWidth] = useState(0);
+  const [expandedCards, setExpandedCards] = useState({});
+  const maxVisibleDots = 4;
 
-const EmblaCarousel = (props) => {
-  const { options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
-  const tweenFactor = useRef(0)
-  const tweenNodes = useRef([])
+  const getVisibleDotRange = () => {
+    if (window.innerWidth >= 768) {
+      // Desktop: show all dots
+      return Array.from({ length: totalPages }, (_, i) => i);
+    }
 
-  
+    let start = Math.max(0, activePage - Math.floor(maxVisibleDots / 2));
+    let end = start + maxVisibleDots;
+    if (end > totalPages) {
+      end = totalPages;
+      start = Math.max(0, end - maxVisibleDots);
+    }
 
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick
-  } = usePrevNextButtons(emblaApi)
+    return Array.from({ length: end - start }, (_, i) => start + i);
+  };
+  const updateLayout = () => {
+    const screenWidth = window.innerWidth;
 
-  const setTweenNodes = useCallback((emblaApi) => {
-    tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
-      return slideNode.querySelector('.embla__slide__number')
-    })
-  }, [])
+    if (screenWidth < 768) {
+      // ✅ Mobile
+      setCardsPerPage(1);
+      setScrollWidth(screenWidth);
+    } else if (screenWidth < 1100) {
+      // ✅ Between 768px and 1100px → show 2 cards
+      setCardsPerPage(2);
+      setScrollWidth(330 * 2 + 20); // adjust spacing
+    } else {
+      // ✅ Desktop
+      setCardsPerPage(3);
+      setScrollWidth(330 * 3 + 20 * 2);
+    }
+  };
 
-  const setTweenFactor = useCallback((emblaApi) => {
-    tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
-  }, [])
-
-  const tweenScale = useCallback((emblaApi, eventName) => {
-    const engine = emblaApi.internalEngine()
-    const scrollProgress = emblaApi.scrollProgress()
-    const slidesInView = emblaApi.slidesInView()
-    const isScrollEvent = eventName === 'scroll'
-
-    emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
-      let diffToTarget = scrollSnap - scrollProgress
-      const slidesInSnap = engine.slideRegistry[snapIndex]
-
-      slidesInSnap.forEach((slideIndex) => {
-        if (isScrollEvent && !slidesInView.includes(slideIndex)) return
-
-        if (engine.options.loop) {
-          engine.slideLooper.loopPoints.forEach((loopItem) => {
-            const target = loopItem.target()
-
-            if (slideIndex === loopItem.index && target !== 0) {
-              const sign = Math.sign(target)
-
-              if (sign === -1) {
-                diffToTarget = scrollSnap - (1 + scrollProgress)
-              }
-              if (sign === 1) {
-                diffToTarget = scrollSnap + (1 - scrollProgress)
-              }
-            }
-          })
-        }
-
-        const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current)
-        const scale = numberWithinRange(tweenValue, 0, 1).toString()
-        const tweenNode = tweenNodes.current[slideIndex]
-        tweenNode.style.transform = `scale(${scale})`
-      })
-    })
-  }, [])
 
   useEffect(() => {
-    if (!emblaApi) return
+    updateLayout();
+    window.addEventListener("resize", updateLayout);
 
-    setTweenNodes(emblaApi)
-    setTweenFactor(emblaApi)
-    tweenScale(emblaApi)
+    // Reset to first page
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft = 0;
+    }
 
-    emblaApi
-      .on('reInit', setTweenNodes)
-      .on('reInit', setTweenFactor)
-      .on('reInit', tweenScale)
-      .on('scroll', tweenScale)
-      .on('slideFocus', tweenScale)
-  }, [emblaApi, setTweenFactor, setTweenNodes, tweenScale])
+    return () => window.removeEventListener("resize", updateLayout);
+  }, []);
 
 
-  const [showMore, setShowMore] = useState(false);
+  const totalPages = Math.ceil(testimonials.length / cardsPerPage);
 
-  const content = `"From being a student in the first batch of Backstage Pass to being a mentor later, I have seen BSP grow from a small ambitious game development & game design institute to a full-fledged gaming college. With the game industry's continued growth and future potential, I'm certain they're on the right track to impart the right knowledge and skills to produce competent professionals."`;
-
-  const toggleShowMore = () => {
-    setShowMore(!showMore);
+  const toggleExpand = (index) => {
+    setExpandedCards((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
   };
 
-
-
-
-
-
-
-  const [showMore2, setShowMore2] = useState(false);
-
-  const content2 = `"Backstage Pass has an advantage over other colleges since its students are industry-ready, meaning they are ready to begin their careers immediately after graduation, without additional training or fine-tuning. As far as I know, Backstage Pass is the only college dedicated exclusively to game development and game art & design"`;
-
-  const toggleShowMore2 = () => {
-    setShowMore2(!showMore2);
-  };
-  const [showMore3, setShowMore3] = useState(false);
-
-  const content3 = `"We have been recruiting from Backstage Pass for a couple of years now. They have a certain quality and their courses are amazing! We don't have to wait until the end of the academic year for us to be able to hire their students. Instead, we can hire them right in the middle because they are excellent in what they do. We definitely recommend Backstage Pass."`;
-
-  const toggleShowMore3 = () => {
-    setShowMore3(!showMore3);
-  };
-  const [showMore4, setShowMore4] = useState(false);
-
-  const content4 = `"Backstage Pass brings the like-minded under a single roof. Our courses related to game development & game design were custom- tailored to meet the requirements of the game industry and I feel it is the right place to start for a successful career in the game industry."`;
-
-  const toggleShowMore4 = () => {
-    setShowMore4(!showMore4);
-  };
-  const [showMore5, setShowMore5] = useState(false);
-
-  const content5 = `"One of the best aspects of Backstage Pass is that it gives you the option to interact with a lot of individuals who have a strong interest in game development and the freedom to work together with students from other streams, such as design or art, to create incredible outcomes."`;
-
-  const toggleShowMore5 = () => {
-    setShowMore5(!showMore5);
-  };
-  const [showMore6, setShowMore6] = useState(false);
-
-  const content6 = `"Innovation and adaptability are crucial for growth in the modern generation. Therefore, we require a creative and determined workforce. Students from Backstage Pass have excelled in both of these areas. We were very impressed with how they questioned the status quo and developed more effective working methods."`;
-
-  const toggleShowMore6 = () => {
-    setShowMore6(!showMore6);
-  };
-  const [showMore7, setShowMore7] = useState(false);
-
-  const content7 = `"Backstage Pass is the first of its kind of gaming college in India with some great industry experts. I had the joy of learning from the people who work in the game industry and was taught about the working of the game industry that helped me a lot while working at EA Sports. So, Backstage Pass was a life-changing experience."`;
-
-  const toggleShowMore7 = () => {
-    setShowMore7(!showMore7);
+  const scrollToPage = (pageIndex) => {
+    const container = scrollRef.current;
+    container.scrollTo({
+      left: pageIndex * scrollWidth,
+      behavior: "smooth",
+    });
+    setActivePage(pageIndex);
   };
 
-  const [showMore8, setShowMore8] = useState(false);
+  useEffect(() => {
+    const container = scrollRef.current;
+    const handleScroll = () => {
+      const index = Math.round(container.scrollLeft / scrollWidth);
+      setActivePage(index);
+    };
+    container.addEventListener("scroll", handleScroll);
+    return () => container.removeEventListener("scroll", handleScroll);
+  }, [scrollWidth]);
 
-  const content8 = `"Our front-end lead Arsalan is a graduate from Backstage Pass and it is a pleasure to see how passionate he is about gaming. Whenever we interview a candidate from Backstage Pass, we find something unique that they bring in; their focus, understanding and knowledge about gaming even before they start working in a company."`;
+  // Swipe support
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
+  const startTime = useRef(0);
+  const lastX = useRef(0);
 
-  const toggleShowMore8 = () => {
-    setShowMore8(!showMore8);
+  const onPointerDown = (xPos) => {
+    isDragging.current = true;
+    startX.current = xPos - scrollRef.current.offsetLeft;
+    scrollLeft.current = scrollRef.current.scrollLeft;
+    startTime.current = Date.now();
+    lastX.current = xPos;
+    scrollRef.current.style.cursor = "grabbing";
   };
-  const [showMore9, setShowMore9] = useState(false);
 
-  const content9 = `"While doing my Graduation at Backstage Pass, I started my own Game studio Seven Summits with the help of this gaming college. We learned concepts related to Game Art, Game Design, Level design, etc. from Industry Experts. In order to mark your footprint in the game industry, Backstage Pass is the best place to start."`;
-
-  const toggleShowMore9 = () => {
-    setShowMore9(!showMore9);
+  const onPointerMove = (xPos) => {
+    if (!isDragging.current) return;
+    const walk = (xPos - startX.current) * 1.5;
+    scrollRef.current.scrollLeft = scrollLeft.current - walk;
+    lastX.current = xPos;
   };
-  const [showMore10, setShowMore10] = useState(false);
 
-  const content10 = `"When I was searching for colleges that offer Game Art and Design courses, Backstage Pass stood out as the best choice. Once I joined, I discovered the vast opportunities within the gaming industry. In just two years, my skills improved by 60%, thanks to the solid foundation provided. I also worked on a game called Infocus, which was recognized at IGDC. The one-on-one mentorship at Backstage Pass played a crucial role in my learning, as it helped identify and refine the specific skills I needed to develop."`;
+  const onPointerUp = () => {
+    if (!isDragging.current) return;
+    isDragging.current = false;
+    scrollRef.current.style.cursor = "grab";
 
-  const toggleShowMore10 = () => {
-    setShowMore10(!showMore10);
+    const deltaTime = Date.now() - startTime.current;
+    const deltaX = lastX.current - startX.current;
+    const velocity = deltaX / deltaTime;
+
+    const currentScroll = scrollRef.current.scrollLeft;
+    const currentPage = Math.round(currentScroll / scrollWidth);
+
+    if (velocity > 0.3) {
+      scrollToPage(Math.max(currentPage - 1, 0));
+    } else if (velocity < -0.3) {
+      scrollToPage(Math.min(currentPage + 1, totalPages - 1));
+    } else {
+      scrollToPage(currentPage);
+    }
   };
-  const [showMore11, setShowMore11] = useState(false);
 
-  const content11 = `"My passion for gaming led me to pursue a course at Backstage Pass, and it completely transformed my understanding of game art. I learned how entertainment-focused artwork differs from traditional fine arts and how to approach art in a way that makes it a seamless part of the game world. This insight helped me develop a structured approach to game art, turning creativity into immersive gaming experiences."`;
-
-  const toggleShowMore11 = () => {
-    setShowMore11(!showMore11);
+  const onMouseDown = (e) => onPointerDown(e.pageX);
+  const onMouseMove = (e) => {
+    if (!isDragging.current) return;
+    e.preventDefault();
+    onPointerMove(e.pageX);
   };
-  const [showMore12, setShowMore12] = useState(false);
-
-  const content12 = `"Backstage Pass is one of the few colleges in India that offers a game development course with computer science as a core subject and it truly stands out in this category. The mentors were incredibly supportive throughout my journey. After years of playing games, the ability to now create games that millions enjoy is a rewarding experience. Looking back, I can confidently say that my four years at Backstage Pass were well worth the effort."`;
-
-  const toggleShowMore12 = () => {
-    setShowMore12(!showMore12);
+  const onMouseUp = () => onPointerUp();
+  const onMouseLeave = () => onPointerUp();
+  const onTouchStart = (e) => onPointerDown(e.touches[0].pageX);
+  const onTouchMove = (e) => {
+    if (!isDragging.current) return;
+    onPointerMove(e.touches[0].pageX);
   };
-  const [showMore13, setShowMore13] = useState(false);
+  const onTouchEnd = () => onPointerUp();
 
-  const content13 = `"Backstage Pass was the catalyst that let me do bigger things as it provided me a very strong foundation. It was more than just exams. There is a lot of scope for knowledge sharing and it played a big role in how I was able to get good at my craft."`;
-
-  const toggleShowMore13 = () => {
-    setShowMore13(!showMore13);
-  };
+  const fullPagesOnly = testimonials;
 
   return (
-    <div className="embla3">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
-
-          <div className="embla__slidetS tsetm" key={1} data-label="In Progress" style={{ height: "max-content" }}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><LazyLoadImage effect="blur" src={rajath} placeholderSrc={thumbnail} width="150" height="150" className="testimonial-image" alt="rajath" /></div>
-                      <div className="ribbon ribbon-new"><span>RECRUITERS</span></div>
-                      <div className="tcontent">
-                        <p className="author-name">Rajat Ojha</p>
-                        <p className="author-designation">CEO & Co-Founder, <br />Gamitronics</p>
-                        {/* <p style={{ color: "#fff", fontSize: "21px" }}>Recuiter Testimonials</p> */}
-                        <p className="testimonial-paragraph">
-                          {showMore2 ? content2 : `${content2.substring(0, 150)}...`}
-
-                        </p>
-
-                        <button onClick={toggleShowMore2}>
-                          {showMore2 ? 'Show Less' : 'Show More'}
-                        </button>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="embla__slidetS" key={2} style={{ height: "max-content" }}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><LazyLoadImage effect="blur" src={sridar} placeholderSrc={thumbnail} width="150" height="150" className="testimonial-image" alt="sridar" /></div>
-
-                      <div className="ribbon ribbon-new"><span>RECRUITERS</span></div>
-                      <div className="tcontent">
-                        <p className="author-name">Sridhar</p>
-                        <p className='author-designation'>CEO, <br />Purple Talk</p>
-                        <p className="testimonial-paragraph">
-                          {showMore3 ? content3 : `${content3.substring(0, 150)}...`}
-
-                        </p>
-
-                        <button onClick={toggleShowMore3}>
-                          {showMore3 ? 'Show Less' : 'Show More'}
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="embla__slidetS" key={3} style={{ height: "max-content" }}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><LazyLoadImage effect="blur" src={navin} placeholderSrc={thumbnail} width="150" height="150" className="testimonial-image" alt="navin" /></div>
-                      <div className="ribbon ribbon-new"><span>RECRUITERS</span></div>
-
-                      <div className="tcontent">
-                        <p className="author-name">Navin Mandal</p>
-                        <p className='author-designation'>Co-Founder & CTO, <br /> Immersive Labz</p>
-                        <p className="testimonial-paragraph">
-                          {showMore6 ? content6 : `${content6.substring(0, 150)}...`}
-
-                        </p>
-
-                        <button onClick={toggleShowMore6}>
-                          {showMore6 ? 'Show Less' : 'Show More'}
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="embla__slidetS" key={4} style={{ height: "max-content" }}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><LazyLoadImage effect="blur" src={kash} placeholderSrc={thumbnail} width="150" height="150" className="testimonial-image" alt="kashyap" /></div>
-                      <div className="ribbon ribbon-new"><span>RECRUITERS</span></div>
-
-                      <div className="tcontent">
-                        <p className="author-name">Kashyap Reddy</p>
-                        <p className='author-designation'>Co-Founder, <br /> HitWicket</p>
-                        <p className="testimonial-paragraph">
-                          {showMore8 ? content8 : `${content8.substring(0, 150)}...`}
-
-                        </p>
-
-                        <button onClick={toggleShowMore8}>
-                          {showMore8 ? 'Show Less' : 'Show More'}
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="embla__slidetS" key={10} style={{ height: "max-content" }}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><LazyLoadImage effect="blur" src={jithin} placeholderSrc={thumbnail} width="150" height="150" className="testimonial-image" alt="jithin" /></div>
-                      <div className="ribbon1 ribbon-new1"><span>ALUMNI</span></div>
-                      <div className="tcontent">
-                        <p className="author-name">Jithin Peter</p>
-                        <p className='author-designation'>Sr. Game Programmer, <br />sumo digital, Bangalore
-
-                        </p>
-
-                        <p className="testimonial-paragraph">
-                          {showMore4 ? content4 : `${content4.substring(0, 135)}...`}
-
-                        </p>
-
-                        <button onClick={toggleShowMore4}>
-                          {showMore4 ? 'Show Less' : 'Show More'}
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="embla__slidetS" key={13} style={{ height: "max-content" }}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><LazyLoadImage effect="blur" src={joesph} placeholderSrc={thumbnail} width="150" height="150" className="testimonial-image" alt="joesph" /></div>
-                      <div className="ribbon1 ribbon-new1"><span>ALUMNI</span></div>
-
-                      <div className="tcontent">
-                        <p className="author-name">JOSEPH KALATHIL
-
-                        </p>
-                        <p className='author-designation'>Gameplay Programmer
-                          <br />Hacksaw studios,stockholm, sweden
-
-                        </p>
-
-
-                        <p className="testimonial-paragraph">
-                          {showMore13 ? content13 : `${content13.substring(0, 150)}...`}
-
-                        </p>
-
-                        <button onClick={toggleShowMore13}>
-                          {showMore13 ? 'Show Less' : 'Show More'}
-                        </button>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="embla__slidetS" key={12} style={{ height: "max-content" }}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><LazyLoadImage effect="blur" src={anand} placeholderSrc={thumbnail} width="150" height="150" className="testimonial-image" alt="anand" /></div>
-                      <div className="ribbon1 ribbon-new1"><span>ALUMNI</span></div>
-                      <div className="tcontent">
-                        <p className="author-name">Anand Dhavle
-                        </p>
-                        <p className='author-designation'>Gameplay Programmer, <br />Tarsier Studios, Sweden
-
-                        </p>
-
-
-                        <p className="testimonial-paragraph">
-                          {showMore5 ? content5 : `${content5.substring(0, 150)}...`}
-
-                        </p>
-
-                        <button onClick={toggleShowMore5}>
-                          {showMore5 ? 'Show Less' : 'Show More'}
-                        </button>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="embla__slidetS" key={11} style={{ height: "max-content" }}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><LazyLoadImage effect="blur" src={sushil} placeholderSrc={thumbnail} width="150" height="150" className="testimonial-image" alt="sushil" /></div>
-                      <div className="ribbon1 ribbon-new1"><span>ALUMNI</span></div>
-                      <div className="tcontent">
-                        <p className="author-name">Sushil George
-                        </p>
-                        <p className='author-designation'>Sr. Game Developer, Product Madness, London, UK
-
-                        </p>
-                        <p className="testimonial-paragraph">
-                          {showMore ? content : `${content.substring(0, 150)}...`}
-
-                        </p>
-
-                        <button onClick={toggleShowMore}>
-                          {showMore ? 'Show Less' : 'Show More'}
-                        </button>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="embla__slidetS" key={9} style={{ height: "max-content" }}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><LazyLoadImage effect="blur" src={asar} placeholderSrc={thumbnail} width="150" height="150" className="testimonial-image" alt="Asar" /></div>
-                      <div className="ribbon1 ribbon-new1"><span>ALUMNI</span></div>
-
-                      <div className="tcontent">
-                        <p className="author-name">Asar Dhandala
-
-                        </p>
-                        <p className='author-designation'>Founder/ Game Designer/ Producer, Seven Summits
-
-                        </p>
-                        <p className="testimonial-paragraph" style={{ width: "150% !important" }}>
-                          {showMore9 ? content9 : `${content9.substring(0, 150)}...`}
-
-                        </p>
-
-                        <button onClick={toggleShowMore9}>
-                          {showMore9 ? 'Show Less' : 'Show More'}
-                        </button>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
-
-      <div className="embla__slidetS" key={7} style={{ height: "max-content" }}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><LazyLoadImage effect="blur"   src={anshul} width="150" height="150" className="testimonial-image" alt="anshul" /></div>
-                      <div className="ribbon1 ribbon-new1"><span>ALUMNI</span></div>
-
-                      <div className="tcontent">
-                        <p className="author-name">Anshul Soni
-                        </p>
-                        <p className='author-designation'>Software Engineer, EA Sports, Seattle, USA
-
-                        </p>
-                        <p className="testimonial-paragraph">
-                          {showMore7 ? content7 : `${content7.substring(0, 150)}...`}
-
-                        </p>
-
-                        <button onClick={toggleShowMore7}>
-                          {showMore7 ? 'Show Less' : 'Show More'}
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-          <div className="embla__slidetS" key={5} style={{ height: "max-content" }}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><LazyLoadImage effect="blur" src={aniket} placeholderSrc={thumbnail} width="150" height="150" className="testimonial-image" alt="aniket" /></div>
-                      <div className="ribbon1 ribbon-new1"><span>Student</span></div>
-
-                      <div className="tcontent">
-                        <p className="author-name">Aniket Mukhi</p>
-                        <p className='author-designation'>4th-Year Student in <br /> Game Art & Design
-
-
-                        </p>
-                        <p className="testimonial-paragraph">
-                          {showMore10 ? content10 : `${content10.substring(0, 150)}...`}
-
-                        </p>
-
-                        <button onClick={toggleShowMore10}>
-                          {showMore10 ? 'Show Less' : 'Show More'}
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="embla__slidetS" key={6} style={{ height: "max-content" }}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><LazyLoadImage effect="blur" src={suryashankh} placeholderSrc={thumbnail} width="150" height="150" className="testimonial-image" alt="suryashankh" /></div>
-                      <div className="ribbon1 ribbon-new1"><span>ALUMNI</span></div>
-
-                      <div className="tcontent">
-                        <p className="author-name">Surya Shanka</p>
-                        <p className='author-designation'>Concept artist at <br /> Hitwicket
-
-
-                        </p>
-                        <p className="testimonial-paragraph">
-                          {showMore11 ? content11 : `${content11.substring(0, 135)}...`}
-
-                        </p>
-
-                        <button onClick={toggleShowMore11}>
-                          {showMore11 ? 'Show Less' : 'Show More'}
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="embla__slidetS" key={8} style={{ height: "max-content" }}>
-            <div className="embla__slide__number">
-              <div className="testimonial-slide w-slide">
-                <div className="testimonial-columns">
-                  <div className="testimonial-content-wrap">
-                    <div className="testimonial-content-block">
-                      <div className="tname"><LazyLoadImage effect="blur" src={srivast} placeholderSrc={thumbnail} width="150" height="150" className="testimonial-image" alt="srivast" /></div>
-                      <div className="ribbon1 ribbon-new1"><span>ALUMNI</span></div>
-
-                      <div className="tcontent">
-                        <p className="author-name" style={{ marginBottom: "13px" }}>Srivatsan
-                        </p>
-                        <p className='author-designation' style={{ marginBottom: "13px", fontSize: "20px" }}>Prativadibhayankara</p>
-                        <p className='author-designation'> Senior Unity Developer, Product Madness
-
-                        </p>
-                        <p className="testimonial-paragraph">
-                          {showMore12 ? content12 : `${content12.substring(0, 135)}....`}
-
-                        </p>
-
-                        <button onClick={toggleShowMore12}>
-                          {showMore12 ? 'Show Less' : 'Show More'}
-                        </button>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
+    <section className="maintestimonial-section">
+      <div className="testimonial-header">
+        <AnimatedText direction="up" delay={0.2}>
+          <h2 className="mainHeadingTotal">Testimonials</h2>
+        </AnimatedText>
       </div>
 
-      <div className="embla__controlss">
-        <div className="embla__buttonss">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+      <div className="maintestimonial-slider-wrapper">
+        <div
+          className="maintestimonial-slider"
+          ref={scrollRef}
+          style={{ cursor: "grab" }}
+          onMouseDown={onMouseDown}
+          onMouseMove={onMouseMove}
+          onMouseUp={onMouseUp}
+          onMouseLeave={onMouseLeave}
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
+          <div className="maintestimonial-slider-inner">
+            {fullPagesOnly.map((item, index) => {
+              const isExpanded = expandedCards[index] || false;
+              return (
+                <AnimatedText direction="up" delay={0.2} key={index} >
+                  <div
+                    className="maintestimonial-card"
+                    style={{
+                      flex: `0 0 ${100 / cardsPerPage}%`,
+                      maxWidth: `${100 / cardsPerPage}%`,
+                    }}
+                  >
+                    <h4>
+                      {item.title} <span>”</span>
+                    </h4>
+                    <p className={`maintestimonial-text ${isExpanded ? "expanded" : ""}`}>
+                      {item.text}
+                    </p>
+                    {item.text.split(" ").length > 30 && (
+                      <button
+                        className="show-more-btn"
+                        onClick={() => toggleExpand(index)}
+                      >
+                        {isExpanded ? "Show Less" : "Show More"}
+                      </button>
+                    )}
+                    <div className="maintestimonial-profile">
+                      <img src={item.avatar} alt={item.name} />
+                      <div>
+                        <strong>{item.name}</strong>
+                        <p>{item.role}</p>
+                      </div>
+                    </div>
+                  </div>
+                </AnimatedText>
+              );
+            })}
+          </div>
         </div>
 
-        {/* <div className="embla__dots">
-          {scrollSnaps.map((_, index) => (
-            <DotButton
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : ''
-              )}
-            />
+        <div className="dots">
+          {getVisibleDotRange().map((i) => (
+            <span
+              key={i}
+              className={`dot ${activePage === i ? "active" : ""}`}
+              onClick={() => scrollToPage(i)}
+            ></span>
           ))}
-        </div> */}
-      </div>
-    </div>
-  )
-}
+        </div>
 
-export default EmblaCarousel
+      </div>
+    </section>
+  );
+};
+
+export default Testimonials;
+
+

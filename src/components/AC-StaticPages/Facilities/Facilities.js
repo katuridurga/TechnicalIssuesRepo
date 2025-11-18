@@ -3,7 +3,7 @@ import "./Facilities.css";
 import hstl2 from "../../../assets/img/test/hstl2.webp"
 import hstl3 from "../../../assets/img/test/hstl3.webp"
 import hstl5 from "../../../assets/img/test/hstl5.webp"
-import location from "../../../assets/img/location.png";
+import location from "../../../assets/img/Location.webp";
 import { CiPhone } from "react-icons/ci";
 import { FaHome } from "react-icons/fa";
 
@@ -76,9 +76,10 @@ function Courses(props) {
         </p>
 
         <div className="courses-wrapper">
-          <h2 className="mainHeadingTotal">ACCOMMODATION & FEES
+          <h2 className="mainHeadingTotal" style={{marginBottom:"10px"}}>Accommodation & Fees
           </h2>
-          <p className='suprtsF'><a href="https://www.google.com/maps/place/Backstage+Pass+Institute+of+Gaming/@17.44016,78.392541,13z/data=!4m6!3m5!1s0x3bcb915c849c2fc5:0x8cde844cfd7d651e!8m2!3d17.4401601!4d78.3925411!16s%2Fg%2F1hjhgw81m?hl=en&entry=ttu&g_ep=EgoyMDI0MTExMi4wIKXMDSoASAFQAw%3D%3D" target='_blanck' style={{ display: "contents", color: "#fff" }}><img src={location} alt="Location" /> <p>Plot No: 3-978, Road No: 49, Ayyappa Society, Madhapur, <br /> Hyderabad - 500081 </p></a>
+          <p className='suprtsF' style={{marginBottom:"10px", marginTop:"10px"}}><a href="https://www.google.com/maps/place/Backstage+Pass+Institute+of+Gaming/@17.44016,78.392541,13z/data=!4m6!3m5!1s0x3bcb915c849c2fc5:0x8cde844cfd7d651e!8m2!3d17.4401601!4d78.3925411!16s%2Fg%2F1hjhgw81m?hl=en&entry=ttu&g_ep=EgoyMDI0MTExMi4wIKXMDSoASAFQAw%3D%3D" target='_blanck' style={{ display: "contents", color: "#000" }}><img src={location} alt="Location" /> <p style={{color:"#000"}}>   Plot No. 72, beside Springboard, Jubilee Enclave, HITEC City, <br /> Hyderabad, Telangana 500081 </p></a>
+        
           </p>
 
           {isMobileState ? <div>
@@ -116,15 +117,12 @@ function Courses(props) {
           </p>
           <div className="mainCourse1">
 
-            <div className="mainCourseRight1">
+            <div className="mainCourseRight1" style={{borderRight:isMobileState?"0px":"1px solid#e0e0e0", borderBottom:isMobileState?"1px solid#e0e0e0":"0px"}}>
               <h2><FaHome />Non AC Rooms
               </h2>
               <p>Available in 2, 3, 4, and 5-sharing configurations. The cost for this ranges from ₹8,000 to ₹12,000 per bed, depending on the room configuration.</p>
 
             </div>
-          </div>
-          <div className="mainCourse1">
-
             <div className="mainCourseRight1">
 
               <h2><FaHome />AC Rooms
@@ -134,11 +132,12 @@ function Courses(props) {
 
             </div>
           </div>
-          <h2 className="mainHeadingTotal">HOW TO APPLY
+         
+          <h2 className="mainHeadingTotal">How To Apply
           </h2>
           <p className='suprtsF'>Once a student has secured admission to the college, they can apply for hostel accommodation. The Hostel Supervisor will allocate rooms based on availability, ensuring a smooth and fair process.
           </p>
-          <h2 className="mainHeadingTotal">HOSTEL DOs & DON’Ts
+          <h2 className="mainHeadingTotal">Hostel DOs & DON’Ts 
           </h2>
 
           <ul className='benfits1'>
@@ -154,30 +153,7 @@ function Courses(props) {
 
 
           </ul>
-          <h2 className="mainHeadingTotal">CONTACT US
-          </h2>
-          <div className='HostelMain1'>
-            <div className='HostelMainleft'>
-              <p>Hostel Supervisor <br />
-                <b>Ammineni Jaya Chandra</b>
-              </p>
-            </div>
-            <div className="HostelMainright">
-
-              <div className="contact-wrapper">
-                <div className="cont1">
-                  <div className="contact-wrapper-inner">
-                    <CiPhone className="iconsmain" />
-                    <div>
-                      <p><a href="tel:9490310390"> +91-9490310390</a></p>
-                    </div></div></div></div>
-
-
-
-            </div>
-
-
-          </div>
+       
         </div>
 
       </div>

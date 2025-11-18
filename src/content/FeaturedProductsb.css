@@ -577,7 +577,7 @@ top: -25px;
 left: -15px;
 }
 .testimonial-paragraph {
-  color: #fff;
+  color: #000;
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -600,7 +600,7 @@ border-radius: 50%;
 object-fit: cover;
 }
 .author-name {
-  color: #fff;
+  color: #000;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -612,7 +612,7 @@ object-fit: cover;
   margin-bottom: 8px;
 }
 .author-designation {
-  color: #fff;
+  color: #000;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;

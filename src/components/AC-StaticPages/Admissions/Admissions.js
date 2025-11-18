@@ -103,7 +103,10 @@ function Courses(props) {
         <div className="courses-wrapper">
           <h2 className="mainHeadingTotal fadeInUp anime-delay">Admission Process</h2>
 
-          <p className='adminissionPTag'>At Backstage Pass, we are committed to providing our students with quality education. Students opting for any course at the institute must follow the below process and read specific instructions (if applicable) depending on the course of their choice.
+          <p className='adminissionPTagad'>At Backstage Pass, we believe that every student’s journey begins with a deliberate choice. Our career-oriented bachelor's programs, including specialised computer science with game development, game art & design, and AR/VR courses, are built on the idea that true learning grows from careful guidance and sincere effort.<br />
+
+            Students joining our college are encouraged to follow a simple and clear process by reviewing the instructions for their chosen course.
+
           </p>
 
           <React.Fragment>
@@ -188,40 +191,40 @@ function Courses(props) {
             </BootstrapDialog>
           </React.Fragment>
 
+          <div className='bgforprocess'>
 
+            <ul className="process">
+              <li className="process__item1">
+                <div id="infinity"><span className="process__number1">01</span></div>
 
-          <ul className="process">
-            <li className="process__item1">
-              <div id="infinity"><span className="process__number1">01</span></div>
+                <h4 className="process__title">Online Application</h4>
+                <span className="process__subtitle">If you match the eligibility criteria for the course of your choice, then fill our application form by <a href="https://backstagepass.co.in/application-form/" rel="noopener noreferrer" target='_blank'><b style={{ fontSize: "16px", textDecoration: "underline", display: "inline-block", color: "#eb1a23" }}>clicking here </b></a><br />(No application fee involved)</span>
+              </li>
 
-              <span className="process__title">Online Application</span>
-              <span className="process__subtitle">If you match the eligibility criteria for the course of your choice, then fill our application form by <a href="https://backstagepass.co.in/application-form/" rel="noopener noreferrer" target='_blank'><b style={{ fontSize: "18px", textDecoration: "underline", display: "inline-block", color: "#ec1923" }}>clicking here </b></a><br />(No application fee involved)</span>
-            </li>
+              <li className="process__item1">
+                <div id="infinity"><span className="process__number1">02</span></div>
+                <h4 className="process__title">Entrance Exam*</h4>
+                <p style={{ textAlign: "left", color: "#eb1a23" }}>*For Bachelor’s courses only.</p>
+                <span className="process__subtitle">An online entrance exam will be conducted after receiving your application, with prior intimation about the exam schedule
+                </span>
+              </li>
 
-            <li className="process__item1">
-              <div id="infinity"><span className="process__number1">02</span></div>
-              <span className="process__title">Entrance Exam*</span>
-              <p style={{ textAlign: "left", color: "#fff" }}>*For Bachelor’s courses only.</p>
-              <span className="process__subtitle">An online entrance exam will be conducted after receiving your application, with prior intimation about the exam schedule
-              </span>
-            </li>
+              <li className="process__item1">
+                <div id="infinity"><span className="process__number1">03</span></div>
+                <h4 className="process__title">Student Counselling</h4>
+                <span className="process__subtitle">Upon clearing the entrance exam, a personal or online counselling session will be held where you will need to provide
+                  <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "20px" }}><button class=" three button brand size200 w-full sm:w-auto" style={{ width: "245px", fontSize: "12px", fontWeight: "800" }} onClick={handleClickOpen}>Relevant Documents</button></div>
+                </span>
+              </li>
 
-            <li className="process__item1">
-              <div id="infinity"><span className="process__number1">03</span></div>
-              <span className="process__title">Student Counselling</span>
-              <span className="process__subtitle">Upon clearing the entrance exam, a personal or online counselling session will be held where you will need to provide
-                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginTop: "20px" }}><button class=" three button brand size200 w-full sm:w-auto" style={{ width: "245px", fontSize: "12px", fontWeight: "800" }} onClick={handleClickOpen}>Relevant Documents</button></div>
-              </span>
-            </li>
-
-            <li className="process__item1">
-              <div id="infinity"><span className="process__number1">04</span></div>
-              <span className="process__title">Final Enrolment</span>
-              <span className="process__subtitle">Upon document verification and payment of semester tuition fee, the student’s seat will be officially reserved.</span>
-            </li>
-          </ul>
-
-          <p className='adminissionPTag'>If you are a resident of Hyderabad, you can schedule a walk-in counselling session in order to complete all formalities to reserve your seat.
+              <li className="process__item1">
+                <div id="infinity"><span className="process__number1">04</span></div>
+                <h4 className="process__title" >Final Enrolment</h4>
+                <span className="process__subtitle">Upon document verification and payment of semester tuition fee, the student’s seat will be officially reserved.</span>
+              </li>
+            </ul>
+          </div>
+          <p className='adminissionPTagadp'>If you are a resident of Hyderabad, you can schedule a walk-in counselling session in order to complete all formalities to reserve your seat.
           </p>
 
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}><button class=" three button brand size200 w-full sm:w-auto" style={{ width: "180px", fontSize: "17px" }}

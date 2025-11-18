@@ -149,11 +149,12 @@ width: 100% !important;
     color: #c91b2b;
     
   }
-  .courseHeading{
-    font-size: 36px;
+.courseHeading{
+    font-size: 42px;
     font-weight: 900;
     margin: 30px 0px 30px 0px;
-    color: #fff;
+    color:#ec1923;
+    text-align: center;
   }
   .courseHeading2{
     font-size: 21px;
@@ -196,7 +197,7 @@ width: 100% !important;
 .courseUpdates ul li p {
     font-size: 19px;
     font-weight: bold;
-    color:#fff;
+    color:#000;
     margin-top: 20px;
     text-align: center;
 }
@@ -206,7 +207,7 @@ width: 100% !important;
     line-height: 28px;
     width: 100%;
     text-align: justify;
-    color: #fff;
+    color: #000;
 }
 .Objectives {
     display: flex;
@@ -223,7 +224,7 @@ width: 100% !important;
     line-height: 28px;
     width: 100%;
     text-align: justify;
-    color: #fff;
+    color: #000;
     margin-bottom: 10px;
 }
 
@@ -250,7 +251,7 @@ width: 100% !important;
   line-height: 28px;
   width: 100%;
   text-align: justify;
-  color: #fff;
+  color: #000;
   margin-bottom: 10px;
 }
 
@@ -275,20 +276,22 @@ width: 100% !important;
     top: -20px;
     width: 64px;
     height: 64px;
+    box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
   }
   .courseUpdates1 ul li {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    border: 2px solid #222;
+    border: 2px solid #fff;
     height: 170px;
-    background: #222;
-    color: #FFF;
+    background: #fff;
+    color: #000;
     border-radius: 15px;
     width: 100%;
     padding: 20px;
     position: relative;
     margin-left: 30px;
+    box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
   }
   .courseUpdates1 ul li img {
     width: 80%;
@@ -312,6 +315,7 @@ width: 100% !important;
   margin-left: 20px;
   align-items: flex-start;
   justify-content: flex-start;
+   color:#000;
 }
 .BeyondRight .lsh{
   font-size: 24px;
@@ -319,6 +323,7 @@ width: 100% !important;
   display: flex;
   width: 100%;
   font-weight: 500;
+    color: #ed1923;
 }
 
 .active-scroll-spy{
@@ -484,13 +489,7 @@ width: 100% !important;
     white-space: nowrap;
     font-weight: 700;
 }
-button:focus {
-    outline: none;
-    background-color: #ed1923 !important;
-    font-size: 15px;
-    font-weight: 700;
-    color: #ffff;
-}
+
 .css-1ujykiq-MuiButtonBase-root-MuiTab-root {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
@@ -569,7 +568,7 @@ button:focus {
 .innerhd{
     text-align: center;
     margin: 0px;
-    color: #fff !important;
+    color: #000 !important;
     font-weight: normal !important;
 
 }
@@ -584,7 +583,7 @@ button:focus {
     font-size: 22px !important;
     font-weight: 900;
     margin: 30px 0px 30px 0px;
-    color: #fff;
+    color: #ec1923;
     text-align: center;
 }
 .courseUpdates ul li {
@@ -599,7 +598,7 @@ button:focus {
   line-height: 32px;
   width: 95% !important;
   text-align: left !important;
-  color: #fff;
+  color: #000;
   margin-top: 20px !important;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -616,5 +615,6 @@ button:focus {
   top: -20px;
   width: 58px;
   height: 58px;
+    box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
 }
 }

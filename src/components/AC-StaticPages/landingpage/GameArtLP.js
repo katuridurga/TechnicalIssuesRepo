@@ -64,8 +64,8 @@ import Typography from '@mui/material/Typography';
 
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import m1 from "../../../assets/img/test/1.webp";
-import m2 from "../../../assets/img/test/2.webp";
+import m3 from "../../../assets/img/test/d1.webp";
+import m4 from "../../../assets/img/test/eli.webp";
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -338,7 +338,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     advancedDiploma: [
       { value: "gd", label: " Game Development" },
       { value: "3dgame", label: "3D Game Art & Digital Sculpting" },
-      { value: "tdca", label: "Traditional & Digital Concept Art" }
+      // { value: "tdca", label: "Traditional & Digital Concept Art" }
     ],
     diploma: [
       { value: "gdp", label: "Game Design & Production" },
@@ -445,7 +445,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             {/* <a onClick={scrollToBottom} href="#CounsellingOnGamingCareer"> <div className={`et_pb_section bgimage et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? '' : ''}`}>
               {isMobileState ? <div className="CousellingButton10" style={{ position: "absolute", bottom: "-50px", left: "auto", marginBottom: "0px" }} onClick={scrollToBottom}><a style={{ padding: "12px 30px", width: "363px" }} href="#CounsellingOnGamingCareer">Enroll Now</a></div> : null}
             </div></a> */}
-            <div style={{ background: "#000", color: "#fff" }}>
+            <div style={{ background: "#ffffff", color: "#000" }}>
               <h1 style={{ textTransform: "capitalize" }} className='maintext'>Transform Your Love for Games into a Game Art Career
               </h1>
               <p className='undhd'>Get ready to create Immersive Gaming experiences and Pursue Your Dream </p>
@@ -488,7 +488,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                     <form onSubmit={handleSubmit} className="formMain">
 
-                      <p className="suprtsMobiless">Get <b>a Counselling</b> Session on Gaming Career</p>
+                      <p className="suprtsMobiless" style={{color:"#fff"}}>Get <b>a Counselling</b> Session on Gaming Career</p>
                       <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
 
 
@@ -715,10 +715,10 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <TabPanel value={value1} index={0} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
                   <div className='courseUpdatesl'>
                     <ul>
-                      <li><img src={m1} alt="Duration icon"/>
-                        <span>Duration: 4 Years</span></li>
-                      <li><img src={m2} alt="Eligibility icon" />
-                        <span>Eligibility: 10+2 or Equivalent *</span></li>
+                      <li><img src={m3} alt="Duration icon"/>
+                        <span style={{color:"#000"}}>Duration: 4 Years</span></li>
+                      <li><img src={m4} alt="Eligibility icon" />
+                        <span style={{color:"#000"}}>Eligibility: 10+2 or Equivalent *</span></li>
 
                     </ul>
                     {/* <p style={{ color: "#fff", textAlign: "center" }}>*The eligibility criteria for each Bachelor's course varies based the curriculum. Please check the criteria for the course you want to opt for before applying.</p> */}
@@ -743,10 +743,10 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
  <TabPanel value={value1} index={1} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
                   <div className='courseUpdatesl'>
                     <ul>
-                      <li><img src={m1} alt="Duration icon" />
-                        <span>Duration: 2 Years</span></li>
-                      <li><img src={m2} alt="Eligibility icon" />
-                        <span>Eligibility: Any Graduation</span></li>
+                      <li><img src={m3} alt="Duration icon" />
+                        <span style={{color:"#000"}}>Duration: 2 Years</span></li>
+                      <li><img src={m4} alt="Eligibility icon" />
+                        <span style={{color:"#000"}}>Eligibility: Any Graduation</span></li>
 
 
                     </ul>
@@ -770,10 +770,10 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <TabPanel value={value1} index={2} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
                   <div className='courseUpdatesl'>
                     <ul>
-                      <li><img src={m1} alt="Duration icon" />
-                        <span>Duration: 1 Year</span></li>
-                      <li><img src={m2} alt="Eligibility icon" />
-                        <span>Eligibility: 10+2 or Equivalent</span></li>
+                      <li><img src={m3} alt="Duration icon" />
+                        <span style={{color:"#000"}}>Duration: 1 Year</span></li>
+                      <li><img src={m4} alt="Eligibility icon" />
+                        <span style={{color:"#000"}}>Eligibility: 10+2 or Equivalent</span></li>
 
 
                     </ul>
@@ -798,10 +798,10 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <TabPanel value={value1} index={3} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
                   <div className='courseUpdatesl'>
                     <ul>
-                      <li><img src={m1} alt="Duration icon" />
-                        <span>Duration: 6 months</span></li>
-                      <li><img src={m2} alt="Eligibility icon" />
-                        <span>Eligibility: 10+2 or Equivalent</span></li>
+                      <li><img src={m3} alt="Duration icon" />
+                        <span style={{color:"#000"}}>Duration: 6 months</span></li>
+                      <li><img src={m4} alt="Eligibility icon" />
+                        <span style={{color:"#000"}}>Eligibility: 10+2 or Equivalent</span></li>
 
 
                     </ul>
@@ -1314,7 +1314,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
             <div className="footerin" style={{ height: "160px", padding: "30px" }}>
-              <div className="text-center foot-content fadeInUp anime-delay2" style={{ display: 'flex', alignItems: "center", justifyContent: "center", color: "#fff" }}>© A Subsidiary of PVR Memorial Educational Society 2025. All Rights Reserved</div>
+              <div className="text-center foot-content fadeInUp anime-delay2" style={{ display: 'flex', alignItems: "center", justifyContent: "center", color: "#000" }}>© A Subsidiary of PVR Memorial Educational Society 2025. All Rights Reserved</div>
             </div>
           </div>
 
@@ -1323,7 +1323,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
       </div>
       {isButtonVisible && (
-        <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>)}
+        <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Enroll Now</a></div>)}
    <div className="App">
         <ReactWhatsappButton
           countryCode="91"

@@ -20,7 +20,7 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .nav-hover-1>li>a {
   line-height: 50px !important;
@@ -72,7 +72,7 @@ html * {
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  background-color: #fff;
+  background-color: #ffffff;
   color: #3c4858;
   margin: 0;
   font-weight: 300;
@@ -121,7 +121,7 @@ h6 {
 }
 
 body {
-  background-color: #fff;
+  background-color: #ffffff;
   color: #3c4858;
 }
 
@@ -192,7 +192,7 @@ output {
 label {
   font-size: 14px;
   line-height: 1.42857;
-  color: #aaaaaa;
+  color: #9e9e9e;
   font-weight: 400;
 }
 

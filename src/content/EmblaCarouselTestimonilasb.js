@@ -225,7 +225,7 @@ const Testimonials = () => {
     <section className="testimonial-section">
       <div className="testimonial-header">
         <AnimatedText direction="up" delay={0.2}>
-          <h2 className="mainHeadingTotall-2">Testimonials</h2>
+          <h2 className="mainHeadingTotall-2" style={{color:"#fff"}}>Testimonials</h2>
         </AnimatedText>
       </div>
 

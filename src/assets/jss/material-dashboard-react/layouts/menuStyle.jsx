@@ -2,7 +2,7 @@
 
 const appStyle = theme => ({
   menu: {
-    backgroundColor: "#fff",
+    backgroundColor: "#ffffff",
     position: "relative",
     zIndex: "100",
     animation: "none"

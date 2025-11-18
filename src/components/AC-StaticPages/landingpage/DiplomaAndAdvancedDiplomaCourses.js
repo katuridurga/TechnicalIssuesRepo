@@ -42,8 +42,8 @@ import choose5 from '../../../assets/img/banners/business-man.png';
 import recimg from '../../../assets/img/banners/Times-Award.webp';
 import Typography from '@mui/material/Typography';
 import { Link } from "react-router-dom";
-import m1 from "../../../assets/img/test/1.webp";
-import m2 from "../../../assets/img/test/2.webp";
+import m3 from "../../../assets/img/test/d1.webp";
+import m4 from "../../../assets/img/test/eli.webp";
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -298,7 +298,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
             </div>
 
             <div id="Career-Opportunitiesl" backgroundColor="brown" height="auto">
-              <h2 className='mainHeadingTotall'>COURSES OVERVIEW</h2>
+              <h2 className='mainHeadingTotall-2'>COURSES OVERVIEW</h2>
 
               <Box >
                 <Tabs
@@ -309,7 +309,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                   scrollButtons="auto"
                   aria-label="scrollable auto tabs example"
                   className='tabcenter'
-                  style={{ background: "#222", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", width: isMobileState ? "100%" : "fit-content", margin: "0px auto" }}
+                  style={{ background: "#222", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", width: isMobileState ? "100%" : "max-content", margin: "0px auto" }}
                 >
                   <Tab style={{ color: "#fff", fontSize: isMobileState ? "12px" : "15px",width: isMobileState ? "50%" : "fit-content", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center" }} label="Diploma Courses"  />
                   <Tab style={{ color: "#fff", fontSize: isMobileState ? "12px" : "15px", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center" }} label="Advanced Diploma Courses" />
@@ -319,10 +319,10 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                 <TabPanel value={value1} index={0} dir={theme.direction}>
                   <div className='courseUpdatesl'>
                     <ul>
-                      <li><img src={m1} alt="Duration icon" />
-                        <span>Duration : 6 months</span></li>
-                      <li><img src={m2} alt="Eligibility icon" />
-                        <span>Eligibility : 10+2 or Equivalent</span></li>
+                      <li><img src={m3} alt="Duration icon" />
+                        <span style={{color:"#000"}}>Duration : 6 months</span></li>
+                      <li><img src={m4} alt="Eligibility icon" />
+                        <span style={{color:"#000"}}>Eligibility : 10+2 or Equivalent</span></li>
 
 
                     </ul>
@@ -369,10 +369,10 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                 <TabPanel value={value1} index={1} dir={theme.direction}>
                   <div className='courseUpdatesl'>
                     <ul>
-                      <li><img src={m1} alt="Duration icon" />
-                        <span>Duration :1 Year</span></li>
-                      <li><img src={m2} alt="Eligibility icon" />
-                        <span>Eligibility : 10+2 or Equivalent</span></li>
+                      <li><img src={m3} alt="Duration icon" />
+                        <span style={{color:"#000"}}>Duration :1 Year</span></li>
+                      <li><img src={m4} alt="Eligibility icon" />
+                        <span style={{color:"#000"}}>Eligibility : 10+2 or Equivalent</span></li>
 
 
                     </ul>
@@ -425,8 +425,8 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
             <div className="mainrec">
               <img src={infog} alt="infog" style={{ width: "100%", height:"100%" }} />
             </div>
-            <div style={{ background: "#000", padding: "20px" }}>
-              <h2 className='mainHeadingTotall mt-top'>YOU SHOULD TAKE THIS COURSE IF </h2>
+            <div style={{ background: "#ffffff", padding: "20px" }}>
+              <h2 className='mainHeadingTotall-2 mt-top'>YOU SHOULD TAKE THIS COURSE IF </h2>
 
               {isMobileState ? <div>
                 <div>
@@ -519,7 +519,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                 <img src={recimg} alt="recimg" style={{ width: "100%", height:"100%"  }} />
               </div>
               <div className="show-grid">
-                <h2 className="mainHeadingTotall">
+                <h2 className="mainHeadingTotall-2">
                   Why choose us?
                 </h2>
                 <div className="maind">
@@ -593,7 +593,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                 </div>
               </div>
             </div>
-            <h2 className='mainHeadingTotall'>Student Showcase</h2>
+            <h2 className='mainHeadingTotall-2'>Student Showcase</h2>
 
 
             <div className="">
@@ -817,7 +817,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
                     <form onSubmit={handleSubmit} className="formMain">
 
-                      <p className="suprtsMobiless">Get <b>a Counselling</b> Session on Gaming Career</p>
+                      <p className="suprtsMobiless" style={{color:"#fff"}}>Get <b>a Counselling</b> Session on Gaming Career</p>
                       <div className="formGrid1" data-form-id="need-guidance" data-form="step1-container">
 
 

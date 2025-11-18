@@ -12,13 +12,14 @@
   .show-grid  {
       padding-top: 10px;
       padding-bottom: 24px;
-      background-color: #222;
-      border: 1px solid rgba(86,61,124,.2);
+         background-color: #f9fafb;
+    /* border: 1px solid rgba(86, 61, 124, .2); */
+    box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.1);
   }
   .w-100{
     width:100%;
     margin: 9px;
-    border-bottom: 1px solid #252323;
+    border-bottom: 0px solid #252323;
     padding-bottom: 5px;
     font-size: 18px;
     color: #fff;
@@ -35,14 +36,16 @@
   }
   .mainic{
     font-size: 17px;
+    color:#000;
   }
   .mainic p{
-    font-weight: 700;
-    font-size: 17px;
+    font-weight: 900;
+    font-size: 18px;
     margin-bottom: 4px;
     margin-top: 0px;
     text-align: left;
     width: 100%;
+    color:#ec1923;
   }
   .formMain input{
     color: #fff!important;
@@ -72,4 +75,55 @@
     grid-template-columns: repeat(1, 1fr) !important;
 }
 
+  }
+  .glowing-button {
+  background-color: #ec1923;
+  color: #fff;
+  border: none;
+  padding: 15px 50px;
+  border-radius: 20px;
+box-shadow: 0 0 10px #ffffff, 0 0 40px #ffffff, 0 0 20px #ec1923;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  margin-top: 20px;
+}
+
+.glowing-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ec1923, 
+    0 0 6px #ec1923, 
+    0 0 6px #ec1923;
+    color:#fff !important
+}
+ .glowing-button1 {
+  background-color: #ec1923;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 20px;
+box-shadow: 0 0 10px #ffffff, 0 0 40px #ffffff, 0 0 20px #ec1923;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  margin-top: 20px;
+}
+
+.glowing-button1:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ec1923, 
+    0 0 6px #ec1923, 
+    0 0 6px #ec1923;
+    color:#fff !important
+}
+.gradient-border-button {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid;
+  padding: 15px 50px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #fa9f42, #ec1923);
+  transition: background-image 0.3s ease;
+}
+
+.gradient-border-button:hover {
+background-image: linear-gradient(to right, #ec1923, #ed1923, #fcb045);
+    color: #fff !important;
+    margin-top: 20px;
   }

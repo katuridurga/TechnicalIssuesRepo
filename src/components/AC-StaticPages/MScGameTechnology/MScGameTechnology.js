@@ -1,29 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react'
 import { useSelector, shallowEqual } from "react-redux";
-import "./MScGameTechnology.css";
-import Scrollspy from "react-scrollspy";
+import "../BachelorsInComputerScienceGameDevelopment/BachelorsInComputerScienceGameDevelopment.css";
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
-import EmblaCarouselMentors3 from '../../../content/EmblaCarouselMentors3';
-import StickyBox from "react-sticky-box";
+
 import { emphasize, styled } from '@mui/material/styles';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Chip from '@mui/material/Chip';
-import HomeIcon from '@mui/icons-material/Home';
-import ScrollSpy from "react-ui-scrollspy";
-
-import m1 from "../../../assets/img/test/1.webp";
-import m2 from "../../../assets/img/test/2.webp";
-import m3 from "../../../assets/img/test/3.webp";
-import m4 from "../../../assets/img/test/4.png";
-import m5 from "../../../assets/img/Icons/flags.png";
-import m6 from "../../../assets/img/Icons/lightbulb.png";
+import m5 from "../../../assets/img/Icons/flags.webp";
+import c1 from "../../../assets/img/Courses/careeroprt.webp";
+import m6 from "../../../assets/img/Icons/jams.webp";
 import m7 from "../../../assets/img/Icons/game-console.png";
-import m8 from "../../../assets/img/Icons/team-work.png";
+import m8 from "../../../assets/img/Icons/team-work.webp";
+import { FaPlus, FaMinus } from "react-icons/fa";
 
-
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
@@ -57,13 +47,13 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-
-
 const StyledBreadcrumb = styled(Chip)(({ theme, Props }) => {
   const backgroundColor =
     theme.palette.mode === 'light'
       ? theme.palette.grey[100]
       : theme.palette.grey[800];
+
+
   return {
     backgroundColor,
     height: theme.spacing(3),
@@ -79,13 +69,6 @@ const StyledBreadcrumb = styled(Chip)(({ theme, Props }) => {
   };
 }); // TypeScript only: need a type cast here because https://github.com/Microsoft/TypeScript/issues/26591
 
-const sections = [
-  "Course-Overview",
-  "Course-Objectives",
-  "Curriculum",
-  "Beyond-The-Course",
-  "Career-Opportunities"
-];
 
 
 function Courses(props) {
@@ -98,8 +81,11 @@ function Courses(props) {
     setValue(newValue);
   };
 
+
   const [value1, setValue1] = React.useState(0);
 
+  // ✅ Add this here (INSIDE component)
+  const [activeTab, setActiveTab] = useState("GAME PROGRAMMING");
   const handleChange1 = (event, newValue) => {
     setValue1(newValue);
   };
@@ -107,10 +93,62 @@ function Courses(props) {
   const OPTIONS = { loop: true }
   const SLIDE_COUNT = 10
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
     shallowEqual
   );
+    const semesters = [
+    {
+      title: "CS & Game Programming",
+      subjects: [
+"C++ | Adv C++ & STL",
+"Unity 3D Game Engine – Basic & Advanced",
+"Unreal Game Engine - Blue Prints & Programming with C++",
+"Graphic Programming with OpenGL",
+"Mathematical Concepts for Gaming",
+"Physics for Gaming",
+"AI Programming",
+"Game Networking",
+"Gameplay Programming",
+"Code Optimization",
+
+      ],
+    },
+    {
+      title: "Game Design & Production",
+       subcategories: [
+        {
+          title: "*Free 50 teaching hours of Fundamentals Of Game Design & Production add-on",
+          
+        },
+      ],
+      subjects: [
+       
+       "Conceptulization and Design thinking",
+"Game Design and Production Pipeline",
+"Level Design for Games",
+"Game World Design",
+"Game Design Documentation",
+"Game Quality Assurance",
+"Game Project Management",
+"Publishing & Marketing for Games",
+"Game Monetization",
+"Gamification",
+"UI Design for Games",
+      ],
+    },
+  ];
+
+
+  const items = ["Gain practical experience in core programming languages such as C++, C#, and the .NET framework, essential for game development.",
+"Obtain in-depth knowledge of industry-standard game engines like Unity3D and Unreal, enabling you to create and optimize games.",
+"Learn advanced graphics programming using IDEs like OpenGL to build visually stunning and technically sound games.",
+"Develop the skills to design games for multiple genres, with a focus on creating immersive worlds and detailed level designs.",
+"Learn to navigate the entire game development lifecycle, from initial design documentation to final release, ensuring a thorough understanding of each phase.",
+"Develop a detailed understanding of game economies and revenue models, crucial for designing commercially successful games.",
+"Work on real-world projects with industry professionals, enhancing your ability to collaborate across various teams and disciplines.",
+"Build a strong portfolio showcasing your unique style and technical skills, making you a competitive candidate in the job market."];
 
   const handleScroll = (id) => {
     const el = document.getElementById(id);
@@ -120,19 +158,62 @@ function Courses(props) {
     }
   };
 
+  const faqs = [
+    {
+      question: "GAME PROGRAMMING",
+      answer: [
+"Programmer",
+"Game Programmer",
+"Unity/Unreal Developer",
+"Gameplay Programmer",
+"Graphic Programmer",
+"Game Engine Programmer",
+"Software Developer",
+"AI Programmer",
+"Metaverse Developer",
+      ],
+    },
+      {
+      question: "GAME DESIGN",
+      answer: [
+"Game Designer",
+"Level Designer",
+"UI/UX Designer",
+"Narrative Designer",
+"Combat Designer",
+"Economy Designer",
+"Systems Designer",
+      ],
+    },
+        {
+      question: "OTHER CAREERS",
+      answer: [
+"Game Producer",
+"Quality Assurance Tester",
+"Video Game Marketing",
+"Start Your Own Studio",
+      ],
+    },
+
+  ];
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <>
-
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'Masters-in-Game-Technologym' : 'Masters-in-Game-Technology'}`}>
+         <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'Masters-in-Game-Technologym' : 'Masters-in-Game-Technology'}`}>
         <div className="et_pb_row et_pb_row_0">
           <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
             <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">Master's in Game Technology</h1></div>
+              <div className="et_pb_text_inner"><h1 className="title white-txt">Master's in Game Technology</h1><a href="#Enquire-Now" class="capplynow">Apply Now</a></div>
             </div>
           </div>
         </div>
       </div>
-      <div className="courses-container">
         <Helmet>
           <script type="application/ld+json">
             {`
@@ -177,367 +258,256 @@ function Courses(props) {
           <link rel="canonical" href="https://www.backstagepass.co.in/courses/masters-in-game-technology/" />
         </Helmet>
 
-        <div className="courses-wrapper">
 
 
 
 
+      <div className="courses-wrapper">
 
 
-          <div className="CourseesOverView">
-            {isMobileState ? null : <StickyBox offsetTop={isMobileState ? 0 : 90} offsetBottom={20} style={{ position: isMobileState ? "initial" : "sticky", width: isMobileState ? '100%' : '24%', marginRight: isMobileState ? "0%" : "3%" }}>
-              <div className="sidebarview">
-                <Scrollspy
-                  items={sections}
-                  currentClassName="active"
-                  offset={-100}
-                  componentTag="ul"
-                >
-                  {sections.map((section) => (
-                    <li key={section}>
-                      <div
-                        className="ss-item-demo-2"
-                        onClick={() => handleScroll(section)}
-                      >
-                        {section.replace(/-/g, " ")}
-                      </div>
-                    </li>
-                  ))}
-                  <li className="t-c1">
-                    <button
-                      className="three button brand size200 w-full sm:w-auto"
-                      style={{ width: "auto", fontSize: "14.5px" }}
-                      type="button"
-                    >
-                      <a
-                        href="https://backstagepass.co.in/enquire-now/"
-                        style={{ color: "#fff" }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Enquire Now
-                      </a>
-                    </button>
-                  </li>
-                </Scrollspy>
-              </div>
-              <div className="applybottom"><button
-                className="three button brand size200 w-full sm:w-auto"
-                style={{ width: "180px", fontSize: "14.5px" }}
-                type="button"
-              >
-                <a
-                  href="https://backstagepass.co.in/application-form/"
-                  style={{ color: "#fff" }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Apply Now
-                </a>
-              </button></div>
-            </StickyBox>}
-            <div style={{ width: isMobileState ? "100%" : "70%" }}>
-              {!isMobileState ? <div role="presentation">
-                <Breadcrumbs aria-label="breadcrumb" style={{ background: "none", color: "#fff" }}>
-                  <StyledBreadcrumb
-                    style={{ cursor: "pointer", background: "none", color: "#fff", fontFamily: "Montserrat, sans-serif", border: "1px solid #fff" }}
-                    component="a"
-                    href="/"
-                    label="Home"
-                    icon={<HomeIcon fontSize="small" />}
-                  />
-                  <StyledBreadcrumb style={{ cursor: "pointer", background: "none", color: "#fff", fontFamily: "Montserrat, sans-serif", border: "1px solid #fff" }} component="a" href="/courses/" label="Courses" />
-                  <StyledBreadcrumb
-                    style={{ background: "none", color: "#fff", fontFamily: "Montserrat, sans-serif", border: "1px solid #fff" }}
-                    label="M.Sc Game Technology"
-                  // component="a" href="/"
-                  />
-                </Breadcrumbs>
-              </div> : null}
+        <div className="course-page">
+          {/* Info Card */}
+          <div className="info-card slanted-info">
+            <div className="info-item">
+            <span className="info-subtitle">Course Duration</span>
+              <span className="info-title">2 years</span>
+            </div>
+            <div className="info-item">
+              <span className="info-subtitle">Mode</span>
+              <span className="info-title">Offline</span>
+            </div>
+            <div className="info-item">
+              <span className="info-subtitle">Eligibility</span>
+              <span className="info-title">Graduation*
 
-              <div className="">
-                <div
-                // style={{
-                //   position: "relative",
-                //   overflowY: "scroll",
-                //   height: "50vh",
-                // }}
-                >
-                  <ScrollSpy
-                    // parentScrollContainerRef={parentScrollContainerRef}
-                    activeclassName="ss-active-demo-2"
-                    offsetBottom={100}
-                    scrollThrottle={80}
-                    useBoxMethod
-                  >
-                    <div id="Course-Overview" backgroundColor="orange" height="150vh">
-                      <h2 className='courseHeading'>Course Overview</h2>
-                      <div className='courseUpdates'>
-                        <ul>
-                          <li><img src={m1} alt="Duration icon" />
-                            <p>Duration <p className='innerhd'> 2 Years</p></p></li>
-                          <li><img src={m2} alt="Eligibility icon" />
-                            <p>Eligibility<p className='innerhd'>Graduation*
-                            </p></p></li>
-                          <li><img src={m3} alt="Mode icon" />
-                            <p>Mode  <p className='innerhd'>Offline</p></p></li>
-                          <li><img src={m4} />
-                            <p>Affiliated <p className='innerhd'>JNAFAU</p></p></li>
-                        </ul>
-                      </div>
-                      <div className='alkksk'>
-                        *B.E. /B, Tech. / B. Arch/ B. Design[BFA(BV A(BMM/B. Sc. (Computers/Maths/ Visual  Communications)/BCA /MCA /any  UG of  at  least  3 year  or  PG  of 2 year related to Gaming /Computer Science /Animation /ARVR from any UGC approved University or equivalent.
-                      </div>
-                      <p className='normaltext'>The M.Sc Game Technology program is designed to equip students with advanced programming, design, and production concepts, and offers in-depth training in cutting-edge game technology.
-                      </p>
-                      <p className='normaltext'>This program enhances your expertise in key areas of game development, preparing you for a successful career or advancement in the industry. Whether you're a newcomer looking to switch to the field of game development or a professional aiming to elevate your career, this course provides the knowledge and skills necessary to master in game design and development and thrive in the evolving landscape of game technology.
 
-                      </p>
+</span>
+            </div>
+            <div className="info-item">
+              <span className="info-subtitle">Affiliated</span>
+              <span className="info-title">JNAFAU
 
 
-                    </div>
-                    <div id="Course-Objectives" height="150vh" style={{ padding: "0px 0px", borderRadius: '20px', marginTop: '30px' }}>
-                      <h2 className='courseHeading' style={{ marginTop: "0px" }}>Course Objectives</h2>
-
-                      <ul className='Objectives'>
-
-                        <li>Gain practical experience in core programming languages such as C++, C#, and the .NET framework, essential for game development.</li>
-
-                        <li>Obtain in-depth knowledge of industry-standard game engines like Unity3D and Unreal, enabling you to create and optimize games.</li>
-
-                        <li>Learn advanced graphics programming using IDEs like OpenGL to build visually stunning and technically sound games.</li>
-
-                        <li>Develop the skills to design games for multiple genres, with a focus on creating immersive worlds and detailed level designs.</li>
-
-                        <li>Learn to navigate the entire game development lifecycle, from initial design documentation to final release, ensuring a thorough understanding of each phase.</li>
-
-                        <li>Develop a detailed understanding of game economies and revenue models, crucial for designing commercially successful games.</li>
-
-                        <li>Work on real-world projects with industry professionals, enhancing your ability to collaborate across various teams and disciplines.</li>
-
-                        <li>Build a strong portfolio showcasing your unique style and technical skills, making you a competitive candidate in the job market.</li>
-
-                      </ul>
-
-
-                    </div>
-
-                    <div id="Curriculum" backgroundColor="blue" height="150vh">
-
-
-                      <h2 className='courseHeading'>Curriculum</h2>
-
-                      <Box >
-                        <Tabs
-                          TabIndicatorProps={{ style: { background: '#ed1923' } }}
-                          value={value}
-                          onChange={handleChange}
-                          style={{ background: "#222", color: "#fff" }}
-
-                        >
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="CS & Game Programming" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="Game Design & Production" />
-                        </Tabs>
-
-                        <TabPanel value={value} index={0} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-
-                            <li>C++ | Adv C++ & STL</li>
-                            <li>Unity 3D Game Engine – Basic & Advanced</li>
-                            <li>Unreal Game Engine -  Blue Prints & Programming with C++</li>
-                            <li>Graphic Programming with OpenGL</li>
-                            <li>Mathematical Concepts for Gaming</li>
-                            <li>Physics for Gaming</li>
-                            <li>AI Programming</li>
-                            <li>Game Networking</li>
-                            <li>Gameplay Programming</li>
-                            <li>Code Optimization</li>
-
-                          </ul>
-                        </TabPanel>
-                        <TabPanel value={value} index={1} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>Conceptulization and Design thinking</li>
-                            <li>Game Design and Production Pipeline</li>
-                            <li>Level Design for Games</li>
-                            <li>Game World Design</li>
-                            <li>Game Design Documentation</li>
-                            <li>Game Quality Assurance</li>
-                            <li>Game Project Management</li>
-                            <li>Publishing & Marketing for Games</li>
-                            <li>Game Monetization</li>
-                            <li>Gamification</li>
-                            <li>UI Design for Games</li>
-
-                          </ul>
-                        </TabPanel>
-
-                      </Box>
-
-
-
-                    </div>
-                    <div id="Beyond-The-Course" backgroundColor="blue" height="150vh" style={{ padding: "0px 0px" }}>
-                      <h2 className='courseHeading' style={{ color: "#fff", marginTop: "0px" }}>Beyond The Course</h2>
-
-                      <p className='normaltext'>At Backstage Pass, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.
-                      </p>
-
-                      <div className='courseUpdates1'>
-                        <ul>
-                          <li>
-                            <div className='BeyondLeft'>
-                              <img src={m5} alt="m5" />
-                            </div>
-                            <div className='BeyondRight'>
-                              <p className='lsh'>Studio Visits</p>
-                              <p>An annual visit to game studios allow students to witness how a game company truly works
-
-                              </p>
-                            </div>
-                          </li>
-                          <li>
-                            <div className='BeyondLeft'>
-                              <img src={m6} alt="m6" />
-                            </div>
-                            <div className='BeyondRight'>
-                              <p className='lsh'>Jams & Conferences</p>
-                              <p>Students are encouraged to participate in game jams and attend conferences to hone their skills
-                              </p>
-                            </div>
-
-
-                          </li>
-
-                          <li>
-                            <div className='BeyondLeft'>
-                              <img src={m8} alt="m8" />
-                            </div>
-                            <div className='BeyondRight'>
-                              <p className='lsh'>Networking Opportunities</p>
-                              <p>With frequent webinars and workshops, our students directly interact with alumni and industry experts
-
-                              </p>
-                            </div>
-
-
-                          </li>
-
-                          <li>
-                            <div className='BeyondLeft'>
-                              <img src={m7} alt="m7" />
-                            </div>
-                            <div className='BeyondRight'>
-                              <p className='lsh'>Make Your Own Game</p>
-                              <p>Our Accelerator Program allows eligible students to make and publish their own game even before graduation
-                              </p>
-                            </div>
-
-
-                          </li>
-
-
-                        </ul>
-                      </div>
-
-                    </div>
-
-                    <div id="Career-Opportunities" backgroundColor="brown" height="150vh">
-                      <h2 className='courseHeading'>Career Opportunities</h2>
-
-                      <Box >
-                        <Tabs
-                          TabIndicatorProps={{ style: { background: '#ed1923' } }}
-                          value={value1}
-                          onChange={handleChange1}
-                          variant="scrollable"
-                          scrollButtons="auto"
-                          aria-label="scrollable auto tabs example"
-                          style={{ background: "#222", color: "#fff" }}
-                        >
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="GAME PROGRAMMING" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="GAME DESIGN" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="OTHER CAREERS" />
-                        </Tabs>
-
-                        <TabPanel value={value1} index={0} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-
-                            <li>Programmer</li>
-                            <li>Game Programmer</li>
-                            <li>Unity/Unreal Developer</li>
-                            <li>Gameplay Programmer</li>
-                            <li>Graphic Programmer</li>
-                            <li>Game Engine Programmer</li>
-                            <li>Software Developer</li>
-                            <li>AI Programmer</li>
-                            <li>Metaverse Developer</li>
-                          </ul>
-                        </TabPanel>
-                        <TabPanel value={value1} index={1} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-
-                            <li>Game Designer</li>
-                            <li>Level Designer</li>
-                            <li>UI/UX Designer</li>
-                            <li>Narrative Designer</li>
-                            <li>Combat Designer</li>
-                            <li>Economy Designer</li>
-                            <li>Systems Designer</li>
-                          </ul>
-                        </TabPanel>
-                        <TabPanel value={value1} index={2} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-
-                            <li>Game Producer</li>
-                            <li>Quality Assurance Tester</li>
-                            <li>Video Game Marketing</li>
-                            <li>Start Your Own Studio</li>
-                          </ul>
-                        </TabPanel>
-
-
-
-                      </Box>
-                      {/* 
-                      <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                        <button className=" three button brand size200 w-full sm:w-auto" data-form-id="need-guidance" data-form="step1-button-continue" type="button" fdprocessedid="6qkh5h" style={{ width: "400px", fontSize: "17px" }}>DOWNLOAD CAREER GUIDE</button>
-                      </div> */}
-
-                    </div>
-
-
-                    <div id="Featured-Mentors" backgroundColor="brown" height="150vh">
-                      <h2 className='courseHeading'>Featured Mentors</h2>
-
-                      <EmblaCarouselMentors3 slides={SLIDES} options={OPTIONS} />
-
-
-
-
-                    </div>
-                    <div id="Enquire-Now">
-                      <HomeContentForm />
-                    </div>
-                  </ScrollSpy>
-                </div>
-              </div>
-
-
+</span>
+              
             </div>
           </div>
-
-
-
-
         </div>
+      </div>
 
+      {/* Course Overview */}
+      <div class="alkksk">*B.E. /B, Tech. / B. Arch/ B. Design[BFA(BV A(BMM/B. Sc. (Computers/Maths/ Visual  Communications)/BCA /MCA /any  UG of  at  least  3 year  or  PG  of 2 year related to Gaming /Computer Science /Animation /ARVR from any UGC approved University or equivalent.</div>
+      <div className="overviewsection">
+        <h2 className='courseHeading'>Course Overview</h2>
+         <div className="brname"></div>
+        <p>
+      The M.Sc Game Technology program is designed to equip students with advanced programming, design, and production concepts, and offers in-depth training in cutting-edge game technology.<br/>
 
+This program enhances your expertise in key areas of game development, preparing you for a successful career or advancement in the industry. Whether you're a newcomer looking to switch to the field of game development or a professional aiming to elevate your career, this course provides the knowledge and skills necessary to master in game design and development and thrive in the evolving landscape of game technology.
+        </p>
+      </div>
 
+      {/* Course Objectives / Curriculum */}
+      <div className="curriculum-section" style={{ marginTop: "24px" }}>
+        <h2 className='courseHeading'>Course Objectives</h2>
+         <div className="brname"></div>
+        <div className="">
+          <ul style={{ listStyle: "none", padding: 0 }}>
+            {items.map((item, index) => (
+              <li key={index} style={{ display: "flex", marginBottom: "14px", fontSize:"16px",gap:"10px", alignItems:"flex-start", justifyContent:"flex-start", lineHeight:"1.6"}}>
+                <CheckBoxIcon style={{ color: "#ec1923", marginRight: "12px", fontSize: "22px", marginTop: "3px" }} />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      {/* Course Objectives / Curriculum */}
+      <div className="curriculum-section" style={{ background: "#f9fafb", marginBottom: "20px", boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)", padding: "10px", marginTop: "30px" }}>
+        <h2 className='courseHeading'>Course Curriculum</h2>
+        <div className="brname"></div>
+        <section className="curriculum">
+          <div className="curriculum-grid">
+            {semesters.map((sem, index) => {
+              // Start a new row every 3 semesters
+              if (index % 3 === 0) {
+                return (
+                  <div className="curriculum-row" key={index} style={{gridTemplateColumns:"repeat(2, 1fr)"}}>
+                    {semesters.slice(index, index + 3).map((s, i) => (
+                      <div key={i} className="semester-card">
+                        <h4 className="semester-title">{s.title}</h4>
+                        <ul>
+                          {s.subjects.map((subject, j) => (
+                            <li key={j}>{subject}</li>
+                          ))}
+                        </ul>
 
+                      
+                      </div>
+                    ))}
+                  </div>
+                );
+              }
+              return null;
+            })}
+     
+
+          </div>
+                              
+        </section>
+     
 
 
       </div>
+      <div id="Beyond-The-Course" backgroundColor="blue" height="180vh" style={{ padding: "0px 0px", marginBottom: "20px" }}>
+        <h2 className='courseHeading' style={{ color: "#ec1923", marginTop: "0px" }}>Beyond The Course</h2>
+ <div className="brname"></div>
+        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At Backstage Pass, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.
+
+
+        </p>
+
+        <div className='courseUpdates1'>
+          <ul style={{ width: "80%", margin: "0px auto", paddingTop: "10px" }}>
+            <li>
+              <div className='BeyondLeft'>
+                <img src={m5} />
+              </div>
+              <div className='BeyondRight'>
+               <h4 className='lsh'>Studio Visits</h4>
+                <p>Visits to game studios allow students to witness how a game company truly works
+                </p>
+              </div>
+            </li>
+            <li>
+              <div className='BeyondLeft'>
+                <img src={m6} />
+              </div>
+              <div className='BeyondRight'>
+                <h4 className='lsh'>Jams & Conferences</h4>
+                <p>Students are encouraged to participate in game jams and attend conferences to hone their skills</p>
+              </div>
+
+
+            </li>
+
+            <li>
+              <div className='BeyondLeft'>
+                <img src={m8} />
+              </div>
+              <div className='BeyondRight'>
+                <h4 className='lsh'>Networking Opportunities</h4>
+                <p>With frequent webinars and workshops, our students directly interact with alumni and industry experts</p>
+              </div>
+
+
+            </li>
+
+            <li>
+              <div className='BeyondLeft'>
+                <img src={m7} />
+              </div>
+              <div className='BeyondRight'>
+                <h4 className='lsh'>Make Your Own Game</h4>
+                <p>Our Accelerator Program enables students to make their own games and build an impressive portfolio</p>
+              </div>
+
+
+            </li>
+
+
+          </ul>
+        </div>
+
+      </div>
+      <div id="Career-Opportunities" backgroundColor="brown" >
+
+        <div className='coppertunities'>
+          <div className='left'>
+            <img src={c1} alt="careerop" />
+          </div>
+
+          <div className="right career-tabs-container">
+            {/* Tabs */}
+
+
+            <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
+              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"80%" }}>Career Opportunities</h2>
+ <div className="brname"></div>
+              <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
+                {faqs.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="p-4 inline-block justify-start" style={{ borderBottom: "1px solid#d8d7d7", width: "100%", margin: "0px auto" }}>
+                    <button
+                      className="w-full flex justify-center items-center text-left btnplus"
+                      onClick={() => toggleFAQ(index)}
+                      style={{
+                        background: "#f9fafb",
+                        color: "#000",
+                        justifyContent: "flex-start",
+                        paddingLeft: "0px"
+
+                      }}
+                    >
+                      {/* Icon inside circle */}
+                      <span
+                        className="w-8 h-8 flex items-center justify-center border border-gray-400 rounded-full text-black plusbtn"
+                        style={{
+                          background: "#fff",
+                          color: "#000",
+                          border: "1px solid #000",
+                          borderRadius: "0%",
+                          padding: "20px"
+                        }}
+                      >
+                        {openIndex === index ? (
+                          <FaMinus className="w-3 h-3" />
+                        ) : (
+                          <FaPlus className="w-3 h-3" />
+                        )}
+                      </span>
+                      <span className="faqquestion text-lg font-medium text-gray-800" style={{
+                        paddingLeft: "20px",
+                        textAlign: "justify",
+                        lineHeight: "24px",
+                        fontSize:"16px"
+                      }}>
+                        {faq.question}
+                      </span>
+
+
+                    </button>
+
+                    {openIndex === index && (
+                      <ul style={{ paddingLeft: "6.5rem", lineHeight: "1.9" }}>
+                        {faq.answer.map((point, i) => (
+                          <li key={i} style={{ listStyle: "disc" }}>{point}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                  
+                ))}
+              </div>
+      
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="Enquire-Now" style={{marginTop:"30px"}}>
+        <HomeContentForm />
+      </div>
+
+
+
+
 
     </>
   )

@@ -579,7 +579,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       <div className="mainCourseLeft1">
                         <img src={MscGameTechnology} alt="MASTER’S in Game Technology" className="img-circle" />
                       </div>
-                      <div className="mainCourseRight1">
+                      <div className="">
                         <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>MASTER’S in Game Technology</h2>
                         <p style={{ fontFamily: "'Montserrat', sans-serif" }}>Whether you're a newcomer looking to switch to the field of game development or a professional aiming to elevate your career, this course provides the knowledge and skills necessary to thrive in the gaming industry.</p>
 

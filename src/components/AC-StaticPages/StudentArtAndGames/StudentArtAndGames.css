@@ -2,11 +2,11 @@
   width: 90%;
   margin: 0 auto;
   margin-bottom: 30px;
-  color: #fff;
+  color: #000;
   text-align: center;
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 500;
-  margin-top: 30px;
+  margin-top: 8px;
 }
 
 
@@ -69,6 +69,15 @@
   padding: 8px;
 }
 @media only screen and (max-width : 1024px){
+  
+.viewmore-btn-wrapper {
+display: none !important;
+}
+    .overlaysg p {
+    font-size: 15px;
+    font-weight: 900;
+    padding: 20px;
+}
   .photos {
     /*   display: grid;
       grid-template-columns: repeat(3, 3fr);
@@ -76,6 +85,7 @@
        column-count: 3 !important;
        width: 90% !important;;
        margin: 0px auto;
+       overflow: hidden;
     } 
    
   .containerga {
@@ -104,6 +114,8 @@
     object-fit: cover;
     display: block;
     width: 100% !important;
+      transition: transform 0.4s ease;
+  filter: brightness(60%); 
   }
   .CourseesOverViewsh {
     display: flex;
@@ -115,7 +127,7 @@
   width: 90%;
   margin: 0 auto;
   margin-bottom: 30px;
-  color: #fff;
+  color: #000;
   text-align: left;
   font-size: 16px;
   font-weight: 500;
@@ -246,6 +258,7 @@ width: 90%;
   height: 100%;
   object-fit: cover;
   display: block;
+    filter: brightness(60%); 
 }
 
 .overlaysg {
@@ -265,10 +278,17 @@ width: 90%;
   transition: bottom 1s ease;
   flex-direction: column;
 }
-.overlaysg h3 {
-  font-size: 20px;
-  font-weight: 900;
+
+  .overlaysg h3 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 600;
+  color: #fff;
+  z-index: 2;
+  opacity: 1;
+  transform: translateY(0);
 }
+
 .overlaysg p{
   font-size: 15px;
   font-weight: 900;
@@ -312,10 +332,97 @@ width: 90%;
     transform: scale(0.9);
     opacity: 0.5;
     border-radius:10px;
-
+    position: relative;
+display: inline-block;
   }
   
   .photos img.zoomed {
     transform: scale(1);
     opacity: 1;
   }
+ .photos .ph:hover img {
+  transform: scale(1.18);
+  filter: brightness(1.05);
+  box-shadow:
+    0 6px 15px rgba(0,0,0,.3),
+    0 0 10px rgba(255,255,255,.4) inset;
+  z-index: 99;
+  position: relative;
+}
+
+
+/* The outside h3 below image */
+.cardsg > h3 {
+     text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: -41px;
+    transition: opacity 0.3s 
+ease;
+    position: relative;
+}
+.cardsg:hover > h3 {
+  opacity: 0; /* always visible */
+}
+.cardsg img:hover{
+transform: scale(1.18);
+}
+
+.photos .ph {
+  position: relative;
+  display: inline-block;
+  overflow: visible; /* allow pop-out */
+}
+
+.photos .ph::after{
+  content: attr(data-type);
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  transform: translateX(120%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform .36s ease, opacity .28s ease;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  border-top-left-radius: 6px;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.photos .ph:hover::after{
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.viewmore-btn-wrapper {
+ background: #ff7a00;
+    width: fit-content;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+.viewmore-btn {
+  background: #ff7a00;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.viewmore-btn:hover {
+  background: #e56c00;
+}

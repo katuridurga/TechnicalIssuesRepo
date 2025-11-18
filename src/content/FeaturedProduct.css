@@ -595,3 +595,143 @@ font-weight: 900;
   }
 }
 
+.figures img {
+    width: 100%;
+    height: 193px;
+    object-fit: cover;
+    object-position: center;
+}
+.figures {
+    position: relative;
+    overflow: hidden;
+    max-width: 400px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+/* ✅ Base container for mobile dropdown */
+@media (max-width: 768px) {
+
+  .dropdown-container {
+    padding: 10px;
+    width: 100%;
+  }
+
+  /* Dropdown section box */
+  .dropdown-section {
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+
+  /* Header (title bar) */
+  .dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7f7f7;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e5e5e5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .dropdown-header.active {
+    background: #ec1c24;
+    color: #fff;
+  }
+
+  /* Dropdown open content */
+.dropdown-content {
+  display: flex !important;            
+  flex-wrap: nowrap !important;         
+  overflow-x: auto !important;         
+  overflow-y: hidden !important;        
+  -webkit-overflow-scrolling: touch;   
+  scroll-snap-type: x mandatory;        
+  padding: 12px;                                    
+  visibility: visible !important;      
+  opacity: 1 !important;             
+  max-height: none !important;          
+  position: relative !important;        
+  z-index: 10 !important;
+  scrollbar-width: thin;
+}
+
+
+  /* Scrollable horizontal list */
+  .dropdown-content::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .dropdown-content::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5px;
+  }
+
+ .cardssf {
+  flex: 0 0 100%;                        /* ✅ Each card takes 85% width in scroll */
+  margin-right: 12px;                   /* ✅ Space between cards */
+  scroll-snap-align: center;             /* ✅ Snap scroll effect */
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* ✅ Figure and image styling */
+.figuress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.figuress img {
+  width: 90% !important;
+  height: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+  z-index: 2;
+}
+
+/* ✅ Caption slightly wider than image */
+.figcaptionss {
+  width: 100% !important;               /* ✅ Wider than image */
+  margin-top: -31px;
+  background: #f9fafb;
+  color: #fff;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+  .mainggames p {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    color: #000;
+  }
+
+  .viewc a {
+    display: inline-block;
+    color: #ec1c24;
+    border: 1px solid #ec1c24;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .viewc a:hover {
+    background: #ec1c24;
+    color: #fff;
+  }
+}

@@ -67,7 +67,7 @@ function HomeContent() {
     advancedDiploma: [
       { value: "gd", label: " Game Development" },
       { value: "3dgame", label: "3D Game Art & Digital Sculpting" },
-      { value: "tdca", label: "Traditional & Digital Concept Art" }
+      // { value: "tdca", label: "Traditional & Digital Concept Art" }
     ],
     
     diploma: [
@@ -75,6 +75,7 @@ function HomeContent() {
       { value: "gdu", label: "Game Development with Unity" },
       { value: "3dart", label: "3D Environment Art For Games" },
       { value: 'gdunreal', label: 'Game Development with Unreal' },
+        { value: 'dvra', label: 'VR Application Development' },
     ]
   };
  
@@ -195,7 +196,7 @@ const [mainCategory, setMainCategory] = useState("");
             <div className="hidden md:block md:flex-1 self-start form-stcc">
 
 
-              <h3 className="mainHeadingTotal">
+              <h3 className="mainHeadingTotal3">
                 Enquire now
               </h3>
               <form onSubmit={handleSubmit} className="formMain">

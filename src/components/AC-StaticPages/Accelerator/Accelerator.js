@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Accelerator.css";
-
+import c1a from "../../../assets/img/Courses/Acceleratorimagea.webp";
+import c2a from "../../../assets/img/Courses/WhyChooseUsImagea.webp";
 import { useSelector, shallowEqual } from "react-redux";
+import { FaPlus, FaMinus } from "react-icons/fa";
 
 
 
@@ -9,7 +11,7 @@ import { Helmet } from "react-helmet";
 const ulStyle = {
   listStyleType: 'disc',  // Set the bullet point style
   //  paddingLeft: '200px', 
-  color: '#fff',
+  color: '#000',
   // textAlign:'center',  // Indentation for the bullets
 };
 
@@ -17,7 +19,7 @@ const liStyle = {
   margin: '8px',    // Space between each bullet point
   fontSize: '16px',
   // paddingLeft: '200px', 
-  color: '#fff',
+  color: '#000',
 
   //textAlign:'center',      // Font size for the list items
 };
@@ -33,6 +35,89 @@ function Courses(props) {
     state => state.mainReducer.isMobile,
     shallowEqual
   );
+  const faqsac = [
+    {
+      question: "1. Hands-On Game Development",
+      answer: [
+
+        "Practical Experience: Work on real-world projects that simulate industry challenges.",
+        "Creative Freedom: Design, develop, and refine your unique ideas into market-ready games.",
+      ],
+    },
+    {
+      question: "2. Expert Mentorship",
+      answer: [
+        "Learn from Leaders: Collaborate with industry experts who possess extensive experience in game design, programming, and production.",
+        "Career Guidance: Receive advice on navigating the gaming industry and building a successful career.",
+      ],
+    },
+    {
+      question: "3. Recognition & Opportunities",
+      answer: [
+        "Award-Winning Projects: Contribute to games that have received recognition at:",
+        "a. Shortlisted in Indie 40 Games at IGDC 2024",
+        "b. Student Game of the Year nominations at IGDC 2024",
+        "c. Showcased at prestigious Gaming Expos.",
+        "Global Exposure: Showcase your games on global platforms and connect with industry leaders.",
+      ],
+    },
+    {
+      question: "4. Professional Portfolio",
+      answer: [
+        "Showcase Your Work: Develop a striking portfolio that showcases refined, professional-quality projects.",
+        "Future-Ready: Engage potential employers and collaborators with your varied skills and accomplishments.",
+      ],
+    },
+    {
+      question: "5. Revenue-Sharing Opportunities",
+      answer: [
+        "Earn While You Learn: Take advantage of a unique revenue-sharing model that acknowledges your hard work and creativity.",
+      ],
+    },
+    {
+      question: "Internships and Employment",
+      answer: [
+        "Internships offered followed by full-time employment opportunities. Certain companies extend Pre-Placement Offers (PPO) to successful interns. The college also supports alumni seeking new job opportunities or career changes.",
+      ],
+    },
+
+  ];
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQacc = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const faqswhy = [
+    {
+      question: "1. Cutting-Edge Learning Environment",
+      answer: [
+
+        "Collaborate with peers from various disciplines—designers, artists, and developers—in a team-oriented environment that reflects the gaming industry.",
+      ],
+    },
+    {
+      question: "2. Dedicated Project Support",
+      answer: [
+        "End-to-End Guidance: Our experienced team ensures every aspect of your project operates smoothly.",
+        "Structured Milestones: Follow a clear roadmap to bring your ideas to life efficiently and effectively.",
+      ],
+    },
+    {
+      question: "3. Global Recognition",
+      answer: [
+        "Showcase your work at major events like IGDC (India Game Developer Conference).",
+        "Gain exposure in international markets and forge meaningful industry connections.",
+      ],
+    },
+
+  ];
+  const [openIndex1, setOpenIndex1] = useState(null);
+
+  const toggleFAQwhy = (indexw) => {
+    setOpenIndex1(openIndex1 === indexw ? null : indexw);
+  };
+
   return (
     <>
 
@@ -93,17 +178,17 @@ function Courses(props) {
 
         </Helmet>
 
-        <div className="courses-wrapper223">
-          <h3 className="mainHeadingTotall-2">The Accelerator Program
-          </h3>
+        <div className="courses-wrapper223" style={{backgroundColor:"#faf9fb",boxShadow:"0 2px 15px 5px rgba(0, 0, 0, 0.1)",padding:"12px"}}>
+          <h2 className="mainHeadingTotal">The Accelerator Program
+          </h2>
 
           <p className='suprtst' style={{ width: "85%" }}>The Accelerator Program is designed to equip Backstage Pass students with the skills, mentorship, and resources needed to develop industry-ready games. This program enhances students’ game development skills while fostering teamwork, creativity, and innovation.
           </p>
 
         </div>
         <div className="courses-wrapper223">
-          <h3 className="mainHeadingTotall-2" >Program Overview
-          </h3>
+          <h2 className="mainHeadingTotal" >Program Overview
+          </h2>
 
           <p className='suprtst' style={{ width: "85%" }}>The Accelerator Program combines practical experience, expert mentorship, and industry exposure to prepare students for success in the global gaming market. By participating, you  will gain access to resources and opportunities to:
           </p>
@@ -114,81 +199,181 @@ function Courses(props) {
             <li style={liStyle}><span style={boldStyle}>Recognition:</span> Become part of a community of award-winning student developers.</li>
           </ul>
         </div>
-        <div className="courses-wrapper223">
-          <h3 className="mainHeadingTotall-2" >What You’ll Gain
-          </h3>
-          <p className='suprtst' style={{ width: isMobileState ? "90%" : "75%", marginBottom: "0px" }}>
-            <span style={boldStyle}>1.	Hands-On Game Development</span>
-          </p>
-          <ul style={ulStyle} className='pdna lefcontac'>
-            <li style={liStyle}><span style={boldStyle}>Practical Experience:</span> Work on real-world projects that simulate industry challenges.</li>
-            <li style={liStyle}><span style={boldStyle}>Creative Freedom:</span> Design, develop, and refine your unique ideas into market-ready games.</li>
 
-          </ul>
-          <p className='suprtst' style={{ width: isMobileState ? "90%" : "75%", marginBottom: "0px" }}>
-            <span style={boldStyle}>2.	Expert Mentorship</span>
-          </p>
-          <ul style={ulStyle} className='pdna lefcontac'>
-            <li style={liStyle}><span style={boldStyle}>Learn from Leaders:</span> Collaborate with industry experts who possess extensive experience in <br />game design, programming, and production.</li>
-            <li style={liStyle}><span style={boldStyle}>Career Guidance:</span> Receive advice on navigating the gaming industry and building a successful career.</li>
-          </ul>
-          <p className='suprtst' style={{ width: isMobileState ? "90%" : "75%", marginBottom: "0px" }}>
-            <span style={boldStyle}>3.	Recognition & Opportunities</span>
-          </p>
-          <ul style={ulStyle} className='pdna lefcontac'>
-            <li style={liStyle}><span style={boldStyle}>Award-Winning Projects:</span>  Contribute to games that have received recognition at:</li>
-            <div style={{ marginBottom: '10px', marginLeft: isMobileState ? '10px' : "10px" }}>
-              a. Shortlisted in Indie 40 Games at IGDC 2024
-            </div>
-            <div style={{ marginBottom: '10px', marginLeft: isMobileState ? '10px' : "10px" }}>
-              b. Student Game of the Year nominations at IGDC 2024
-            </div>
-            <div style={{ marginBottom: '10px', marginLeft: isMobileState ? '10px' : "10px" }}>
-              c. Showcased at prestigious Gaming Expos.
+        <div id="Career-Opportunitiesacc" style={{ backgroundColor: "#f9fafb", overflow: "hidden",boxShadow:"0 2px 15px 5px rgba(0, 0, 0, 0.1)" }} >
+
+          <div className='coppertunitiesacce'>
+            <div className='left'>
+              <img src={c1a} alt="careerop" />
             </div>
 
-            <li style={liStyle}><span style={boldStyle}>Global Exposure:</span> Showcase your games on global platforms and connect with industry leaders.</li>
-          </ul>
-          <p className='suprtst' style={{ width: isMobileState ? "90%" : "75%", marginBottom: "0px" }}>
-            <span style={boldStyle}>4.	Professional Portfolio</span>
-          </p>
-          <ul style={ulStyle} className='pdna lefcontac'>
-            <li style={liStyle}><span style={boldStyle}>Showcase Your Work:</span>  Develop a striking portfolio that showcases refined, professional-quality projects.</li>
-            <li style={liStyle}><span style={boldStyle}>Future-Ready:</span>  Engage potential employers and collaborators with your varied skills and accomplishments.</li>
-          </ul>
+            <div className="right career-tabs-container">
+              {/* Tabs */}
 
-          <p className='suprtst' style={{ width: isMobileState ? "90%" : "75%", marginBottom: "0px" }}>
-            <span style={boldStyle}>5.	Revenue-Sharing Opportunities</span>
-          </p>
-          <ul style={ulStyle} className='pdna lefcontac'>
-            <li style={liStyle}><span style={boldStyle}>Earn While You Learn:</span>  Take advantage of a unique revenue-sharing model that acknowledges <br />your hard work and creativity.</li>
 
-          </ul>
+              <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width: isMobileState ? "100%" : "80%", margin: "0px" }}>
+                <h2 className='courseHeading fadeInUp anime-delay' style={{
+                  textAlign: "left", textAlign: isMobileState ? "center" : "center",
+                  width: isMobileState ? "100%" : "80%",
+                  lineHeight: isMobileState ? "48px" : "48px",
+                  wordWrap: "break-word"
+                }}>What You’ll Gain
+
+                </h2>
+                <div className="brname"></div>
+                <div className="border rounded-lg bg-white" style={{ marginTop:isMobileState?"0px":"30px" }}>
+                  {faqsac.map((faq, index) => (
+                    <div
+                      key={index}
+                      className="p-4 inline-block justify-start" style={{ borderBottom: "1px solid#d8d7d7", width: "100%", margin: "0px auto" }}>
+                      <button
+                        className="w-full flex justify-center items-center text-left btnplusacc"
+                        onClick={() => toggleFAQacc(index)}
+                        style={{
+                          background: "#f9fafb",
+                          color: "#000",
+                          display: "flex",
+                          justifyContent: "flex-start",
+                          alignItems: "center",
+                          paddingLeft: "0px"
+
+                        }}
+                      >
+                        {/* Icon inside circle */}
+                        <span
+                          className="w-8 h-8 flex items-center justify-center border border-gray-400 rounded-full text-black plusbtn"
+                          style={{
+                            background: "#fff",
+                            color: "#000",
+                            border: "1px solid #000",
+                            borderRadius: "0%",
+                            padding: "20px"
+                          }}
+                        >
+                          {openIndex === index ? (
+                            <FaMinus className="w-3 h-3" />
+                          ) : (
+                            <FaPlus className="w-3 h-3" />
+                          )}
+                        </span>
+                        <span className="faqquestionacc text-lg font-medium text-gray-800" style={{
+                          paddingLeft: "20px",
+                          textAlign: "justify",
+                          lineHeight: "24px",
+                          fontSize: "16px"
+                        }}>
+                          {faq.question}
+                        </span>
+
+
+                      </button>
+
+                      {openIndex === index && (
+                        <ul style={{ paddingLeft: "6.5rem", lineHeight: "1.9" }}>
+                          {faq.answer.map((point, i) => (
+                            <li key={i} style={{ listStyle: "disc" }}>{point}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+
+
+              </section>
+
+            </div>
+          </div>
         </div>
-        <div className="courses-wrapper223">
-          <h3 className="mainHeadingTotall-2" >Why Choose Us?
-          </h3>
-          <p className='suprtst' style={{ width: isMobileState ? "90%" : "75%", marginBottom: "0px" }}>
-            <span style={boldStyle}>1.	Cutting-Edge Learning Environment</span>
-          </p>
-          <ul style={ulStyle} className='pdna lefcontac'>
-            <li style={liStyle}>Collaborate with peers from various disciplines—designers, artists, and developers—in a team-oriented <br />environment that reflects the gaming industry.</li>
-          </ul>
-          <p className='suprtst' style={{ width: isMobileState ? "90%" : "75%", marginBottom: "0px" }}>
-            <span style={boldStyle}>2.	Dedicated Project Support</span>
-          </p>
-          <ul style={ulStyle} className='pdna lefcontac'>
-            <li style={liStyle}><span style={boldStyle}>End-to-End Guidance:</span> Our experienced team ensures every aspect of your project operates smoothly.</li>
-            <li style={liStyle}><span style={boldStyle}>Structured Milestones:</span> Follow a clear roadmap to bring your ideas to life efficiently and effectively.</li>
-          </ul>
-          <p className='suprtst' style={{ width: isMobileState ? "90%" : "75%", marginBottom: "0px" }}>
-            <span style={boldStyle}>3.	Global Recognition</span>
-          </p>
-          <ul style={ulStyle} className='pdna lefcontac'>
-            <li style={liStyle}> Showcase your work at major events like IGDC (India Game Developer Conference).</li>
-            <li style={liStyle}> Gain exposure in international markets and forge meaningful industry connections.</li>
-          </ul>
+        <div id="Career-Opportunitiesacc" style={{ backgroundColor: "#fff", overflow: "hidden", marginTop:"12px" }} >
+
+          <div className='coppertunitiesacce'>
+
+
+            <div className="left career-tabs-container">
+              {/* Tabs */}
+
+
+              <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#fff", color: "#000", width: isMobileState ? "100%" : "80%", margin: "0px" }}>
+                <h2 className='courseHeading fadeInUp anime-delay' style={{
+                  textAlign: "left", textAlign: isMobileState ? "center" : "center",
+                  width: isMobileState ? "100%" : "80%",
+                  lineHeight: isMobileState ? "48px" : "48px",
+                  wordWrap: "break-word"
+                }}>Why Choose Us?
+
+                </h2>
+                <div className="brname"></div>
+                <div className="border rounded-lg bg-white" style={{ marginTop:isMobileState?"0px":"30px", padding:"10px" }}>
+                  {faqswhy.map((faqw, indexw) => (
+                    <div
+                      key={indexw}
+                      className="p-4 inline-block justify-start" style={{ borderBottom: "1px solid#d8d7d7", width: "100%", margin: "0px auto" }}>
+                      <button
+                        className="w-full flex justify-center items-center text-left btnplusacc"
+                        onClick={() => toggleFAQwhy(indexw)}
+                        style={{
+                          background: "#fff",
+                          color: "#000",
+                          display: "flex",
+                          justifyContent: "flex-start",
+                          alignItems: "center",
+                          paddingLeft: "0px"
+
+                        }}
+                      >
+                        {/* Icon inside circle */}
+                        <span
+                          className="w-8 h-8 flex items-center justify-center border border-gray-400 rounded-full text-black plusbtn"
+                          style={{
+                            background: "#fff",
+                            color: "#000",
+                            border: "1px solid #000",
+                            borderRadius: "0%",
+                            padding: "20px"
+                          }}
+                        >
+                          {openIndex1 === indexw ? (
+                            <FaMinus className="w-3 h-3" />
+                          ) : (
+                            <FaPlus className="w-3 h-3" />
+                          )}
+                        </span>
+                        <span className="faqquestionacc text-lg font-medium text-gray-800" style={{
+                          paddingLeft: "20px",
+                          textAlign: "justify",
+                          lineHeight: "24px",
+                          fontSize: "16px"
+                        }}>
+                          {faqw.question}
+                        </span>
+
+
+                      </button>
+
+                      {openIndex1 === indexw && (
+                        <ul style={{ paddingLeft: "6.5rem", lineHeight: "1.9" }}>
+                          {faqw.answer.map((pointw, p) => (
+                            <li key={p} style={{ listStyle: "disc" }}>{pointw}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+
+
+              </section>
+
+            </div>
+            <div className='right'>
+              <img src={c2a} alt="careerop" />
+            </div>
+          </div>
         </div>
+     
       </div>
 
     </>

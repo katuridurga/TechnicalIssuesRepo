@@ -2360,7 +2360,7 @@ img {
  */
 svg:not(:root) {
   overflow: hidden;
-  color:#fff;
+  color:#000;
 }
 
 /* Forms
@@ -6099,7 +6099,7 @@ button:focus {
 label {
   font-size: .8571em;
   margin-bottom: 5px !important;
-  color: #9a9a9a;
+  color: #9e9e9e;
   display: inline-block;
 }
 

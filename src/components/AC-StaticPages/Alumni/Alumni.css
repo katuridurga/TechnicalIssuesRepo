@@ -2,38 +2,32 @@
   width: 65%;
   margin: 0 auto;
   margin-bottom: 30px;
-  color: #fff;
+  color: #000;
   text-align: center;
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 500;
   margin-top: 30px;
 }
 
-.figures {
+.figuresalu {
   position: relative;
   text-align: center;
   overflow: hidden; /* Ensure the figcaption doesn't overflow */
   max-width: 400px;
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0px auto;
+  box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
   /* border-top-left-radius: 20px;
   border-top-right-radius: 20px; */
 
 }
 
-.figures img {
-  width: 100%;
-  height: 193px;
-  object-fit: cover;
-  object-position: center;
 
-}
-
-figcaptions {
-  background: #222;
+figcaptionsalu {
+  background: #077187;
   color: #000;
   padding: 15px 25px;
   width: 400px;
@@ -48,15 +42,15 @@ figcaptions {
   justify-content: center;
   overflow: hidden;
 }
-.maincoll .maincolltwo {
+.maincoll .maincolltwoalu {
   position: relative;
   backface-visibility: hidden;
   width: 400px;
 }
-.cardss {
+.cardssalu {
   position: relative;
   margin: .5rem 0 1rem;
-  background-color: #000;
+  background-color: #fff;
   transition: box-shadow .25s;
   border-radius: 2px;
 }
@@ -96,7 +90,7 @@ figcaptions {
   margin: 0 28px;
   border-radius: 0px;
   overflow: hidden;
-  background: #222;
+  background: #f9fafb;
   box-shadow: 0 15px 20px rgba(0, 0, 0, .6);
 
 }
@@ -222,6 +216,32 @@ figcaptions {
   object-position: center center;
 }
 @media only screen and (max-width : 1024px){
+
+  .figuresalu {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    max-width: 400px;
+    width: 90% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px auto;
+    box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.mainggameing p {
+    color: #fff;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif !important;
+}
   .maincoll {
     position: relative;
     display: flex;
@@ -231,8 +251,8 @@ figcaptions {
     overflow-x: scroll!important;
     scrollbar-width: thin;
 }
-  figcaptions {
-    background: #222;
+  figcaptionsalu {
+    background: #077187;
     color: #000;
     padding: 4px 25px;
     width: 360px;
@@ -242,7 +262,7 @@ figcaptions {
     width: 90%;
     margin: 0 auto;
     margin-bottom: 30px;
-    color: #fff;
+    color: #000;
     text-align: center;
     font-size: 16px;
     font-weight: 500;
@@ -256,11 +276,11 @@ figcaptions {
 }
 .mainHeadingTotal {
   font-size: 19px !important;
-  color: #fff;
-  text-transform: uppercase;
+  color: #ec1923;
+  text-transform: capitalize;
   font-weight: 600;
   margin-top: 30px !important;
-  margin-bottom: 30px !important;
+  margin-bottom: 30px;
   width: 100%;
   letter-spacing: 1px;
   text-align: center;
@@ -279,7 +299,7 @@ figcaptions {
   margin: 0 28px;
   border-radius: 0px;
   overflow: hidden;
-  background: #222;
+  background: #f9fafb;
   box-shadow: 0 15px 20px rgba(0, 0, 0, .6);
   margin-top: 25px;
 }
@@ -287,4 +307,188 @@ figcaptions {
 }
 #Featured-Mentorsd{
   display: block;
+}
+.recuitersList img {
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+/* Emboss effect on hover */
+.recuitersList img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+.scroll-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  margin: 40px auto 10px;
+}
+
+/* Animate the scroll left continuously */
+.scroll-content {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll-left 40s linear infinite;
+}
+
+/* Each card takes up 25% of container width → 4 cards visible */
+.cardssalu {
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card figure styling */
+.figuresalu {
+  margin: 0;
+  text-align: center;
+}
+
+.figuresalu img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Emboss hover effect */
+.cardssalu:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/* Scroll animation keyframes */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause scrolling on hover */
+.scroll-container:hover .scroll-content {
+  animation-play-state: paused;
+}
+
+/* Responsive tweak for mobile (show 2 cards) */
+@media (max-width: 768px) {
+  .cardssalu {
+    flex: 0 0 50%;
+  }
+}
+
+/* GRID LAYOUT */
+.speakers-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0px;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #f9fafb 0%, #f9fafb 100%);
+  width:90%;
+  margin: 0px auto;
+  box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* CARD */
+.speaker-card {
+  text-align: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* DIAGONAL RED FRAME */
+.speaker-frame {
+  position: relative;
+  border: 3px solid #e3041b;
+  transform: skewY(-10deg);
+  overflow: hidden;
+}
+
+.speaker-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  transform: skewY(10deg);      /* cancels the parent skew */
+  transition: 0.3s ease;
+}
+
+.speaker-frame:hover img {
+  filter: grayscale(0%);
+  transform: skewY(10deg) scale(1.05);
+}
+
+/* NAME */
+.speaker-name {
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  color:#000;
+}
+
+/* TITLE / SUBTEXT */
+.speaker-title {
+  font-size: 13px;
+  opacity: 0.8;
+  line-height: 4px;
+  margin-top: 5px;
+  color:#000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .speakers-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ----- UNIVERSAL MOBILE SCROLL (ALL PHONES / SMALL TABLETS) ----- */
+@media (max-width: 768px) {
+  .speakers-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 0px;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* smooth iOS scroll */
+    scroll-behavior: smooth;
+    white-space: nowrap; /* prevents wrapping */
+    scrollbar-width: thin;
+  }
+
+  .speakers-container::-webkit-scrollbar {
+    display: none; /* hide scrollbar */
+  }
+
+  .speaker-card {
+    flex: 0 0 100%;   /* each card takes 80% width */
+    scroll-snap-align: center;
+    white-space: normal; /* let text wrap normally */
+  }
+}
+.speaker-card:hover{
+    transform: scale(1.18);
+    filter: brightness(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, .3), 0 0 10px rgba(255, 255, 255, .4) inset;
+    z-index: 99;
+    position: relative;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    padding: 10px;
+      line-height: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+}
+.speaker-title:hover {
+    font-size: 13px;
+    opacity: 0.8;
+    line-height: 20px;
+    margin-top: 5px;
+    color: #000;
 }

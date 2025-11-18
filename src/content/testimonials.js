@@ -36,12 +36,10 @@ function HomeContent() {
     <>
 
       <section id="page-tuition_aid-section" class="tuitiona-aid-section bg-bg100 flex items-end md:items-center relative overflow-hidden pt-5 sm:pt-10 md:pt-16 -mt-[2px]" data-locomotive-section-id="page-tuition_aid" data-locomotive-section-type="tuition_aid">
-        <div class="min-h-full h-full w-full container-full mx-auto relative z-[4] flex  md:flex-row justify-end md:justify-between lg:px-5 md:items-center gap-5 lg:gap-13">
+        <div class="min-h-full h-full w-full mx-auto relative z-[4] flex  md:flex-row justify-end md:justify-between lg:px-5 md:items-center gap-5 lg:gap-13">
 
           <div class="flex flex-col md:items-start text-txt100 gap-y-12px pb-8 md:max-w-1/2">
-            <h3 class="text-txt900 v-c-h900 mb-4 text-center md:text-left">
-              TESTIMONIALS
-            </h3>
+            
 
 
             <EmblaCarouselTestimonilas slides={SLIDES} options={OPTIONS} />

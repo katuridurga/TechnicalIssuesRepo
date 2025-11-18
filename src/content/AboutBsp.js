@@ -6,6 +6,11 @@ import ins from '../assets/img/12.webp';
 import awd from '../assets/img/13.webp';
 import grad from '../assets/img/14.webp';
 import clock from '../assets/img/15.webp';
+import jobn from '../assets/img/placentsn.webp';
+import insn from '../assets/img/yaen.webp';
+import awdn from '../assets/img/awardsn.webp';
+import gradn from '../assets/img/studentsi.webp';
+import clockn from '../assets/img/star.webp';
 import "./AboutBsp.css";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -24,86 +29,147 @@ function HomeContent() {
 
     <>
   
-
-    {!isMobileState ? 
             <div className="counter-wrapper" >
             <div className="counter-wrapper1">
-            <ScrollTrigger onEnter={() => setCounterState(true)} onExit={() => setCounterState(false)}> <div className="counter">
-                <div className="count">
-                <div> <LazyLoadImage effect="blur" src={grad} placeholderSrc={thumbnail} alt="count" width="90" height="90" style={{ width: '90px', height: '90px', display: 'block' }} /></div>
-                <div>  {counterState &&
-                  <CountUp
-                    start={0}
 
-                    end={1000}
-                    duration={5}
-                  />}+</div></div>
-                <p>Students</p>
-              </div>
-              </ScrollTrigger>
-            <ScrollTrigger onEnter={() => setCounterState(true)} onExit={() => setCounterState(false)}>
-              <div className="counter">
-                <div className="count">
-                <div> <LazyLoadImage effect="blur" src={ins} placeholderSrc={thumbnail} alt="insurance" width="90" height="90" style={{ width: '90px', height: '90px', display: 'block' }} /></div>
-                <div>  {counterState &&
-                  <CountUp
-                    start={0}
+    {/* 1. Students */}
+    <ScrollTrigger onEnter={() => setCounterState(true)} onExit={() => setCounterState(false)}>
+      <div className="counter">
+        <div className="count">
+          {/* Icon left */}
+          <div className="icon">
+            <LazyLoadImage
+              effect="blur"
+              src={gradn}
+              placeholderSrc={thumbnail}
+              alt="count"
+              width="50"
+              height="50"
+              style={{ width:isMobileState?'50px':'70px', height:isMobileState?'50px':'70px', display: 'block' }}
+            />
+          </div>
 
-                    end={15}
-                    duration={5}
-                  />}</div></div>
-                <p>Years of Academic Excellence</p>
-              </div>
-              </ScrollTrigger>
-              <ScrollTrigger onEnter={() => setCounterState(true)} onExit={() => setCounterState(false)}><div className="counter">
-                <div className="count">
-                <div> <LazyLoadImage effect="blur" src={clock} placeholderSrc={thumbnail} alt="clock" width="90" height="90" style={{ width: '90px', height: '90px', display: 'block' }} /></div>
-                <div>  {counterState &&
-                  <CountUp
-                    start={0}
-
-                    end={200}
-                    duration={5}
-                  />}K+</div></div>
-                <p>Mentoring Hours</p>
-              </div></ScrollTrigger>
-              <ScrollTrigger onEnter={() => setCounterState(true)} onExit={() => setCounterState(false)}>
-              <div className="counter">
-                <div className="count">
-                <div> <LazyLoadImage effect="blur" src={awd} placeholderSrc={thumbnail} alt="award" width="90" height="90" style={{ width: '90px', height: '90px', display: 'block' }} /></div>
-                <div>   {counterState &&
-                  <CountUp
-                    start={0}
-
-                    end={30}
-                    duration={5}
-                  />}+</div></div>
-                <p>Awards Won</p>
-              </div>
-              </ScrollTrigger>
-              
-              <ScrollTrigger onEnter={() => setCounterState(true)} onExit={() => setCounterState(false)}>
-              <div className="counter">
-                <div className="count">
-               <div> <LazyLoadImage effect="blur" src= {job} placeholderSrc={thumbnail} alt="count" width="90" height="90" style={{ width: '90px', height: '90px', display: 'block' }} /></div>
-               <div> {counterState &&
-                  <CountUp
-                    start={0}
-
-                    end={100}
-                    duration={5}
-                  />}%</div></div>
-                <p>Placement Support</p>
-              </div>
-              </ScrollTrigger>
-              
-            </div>
-            </div>:
-                 
-         <div className="mblcounter">
-              <Mbcounter/>
+          {/* Number + p stacked */}
+          <div className="number">
+               <div className="num-line">
+          {counterState && <CountUp start={0} end={1500} duration={5} />}
+          <span className="plus">+</span>
         </div>
-}
+        
+            <p>Alumni</p>
+          </div>
+        </div>
+      </div>
+    </ScrollTrigger>
+
+    {/* 2. Academic Excellence */}
+    <ScrollTrigger onEnter={() => setCounterState(true)} onExit={() => setCounterState(false)}>
+      <div className="counter">
+        <div className="count">
+          <div className="icon">
+            <LazyLoadImage
+              effect="blur"
+              src={insn}
+              placeholderSrc={thumbnail}
+              alt="insurance"
+              width="50"
+              height="50"
+              style={{ width:isMobileState?'50px':'70px', height:isMobileState?'50px':'70px', display: 'block' }}
+            />
+          </div>
+          <div className="number">
+              <div className="num-line">
+          {counterState && <CountUp start={0} end={15} duration={5} />}
+        </div>
+            
+            <p>Years of Excellence</p>
+          </div>
+        </div>
+      </div>
+    </ScrollTrigger>
+
+    {/* 3. Mentoring Hours */}
+    <ScrollTrigger onEnter={() => setCounterState(true)} onExit={() => setCounterState(false)}>
+      <div className="counter">
+        <div className="count">
+          <div className="icon">
+            <LazyLoadImage
+              effect="blur"
+              src={clockn}
+              placeholderSrc={thumbnail}
+              alt="clock"
+              width="50"
+              height="50"
+              style={{ width:isMobileState?'50px':'65px', height:isMobileState?'50px':'65px', display: 'block' }}
+            />
+          </div>
+          <div className="number">
+                <div className="num-line">
+{counterState && <CountUp start={0} end={4.3} duration={5} decimals={1} />}
+           
+          
+        </div>
+            <p>Student Rating</p>
+          </div>
+        </div>
+      </div>
+    </ScrollTrigger>
+
+    {/* 4. Awards */}
+    <ScrollTrigger onEnter={() => setCounterState(true)} onExit={() => setCounterState(false)}>
+      <div className="counter">
+        <div className="count">
+          <div className="icon">
+            <LazyLoadImage
+              effect="blur"
+              src={awdn}
+              placeholderSrc={thumbnail}
+              alt="award"
+              width="50"
+              height="50"
+              style={{ width:isMobileState?'50px':'65px', height:isMobileState?'50px':'65px', display: 'block' }}
+            />
+          </div>
+          <div className="number">
+                <div className="num-line">
+  {counterState && <CountUp start={0} end={30} duration={5} />}          <span className="plus">+</span>
+        </div>
+          
+            <p>Awards Won</p>
+          </div>
+        </div>
+      </div>
+    </ScrollTrigger>
+
+    {/* 5. Placement */}
+    <ScrollTrigger onEnter={() => setCounterState(true)} onExit={() => setCounterState(false)}>
+      <div className="counter">
+        <div className="count">
+          <div className="icon">
+            <LazyLoadImage
+              effect="blur"
+              src={jobn}
+              placeholderSrc={thumbnail}
+              alt="count"
+              width="50"
+              height="50"
+              style={{ width:isMobileState?'50px':'65px', height:isMobileState?'50px':'65px', display: 'block' }}
+            />
+          </div>
+          <div className="number">
+                <div className="num-line">
+   {counterState && <CountUp start={0} end={100} duration={5} />}         <span className="plus">%</span>
+        </div>
+           
+            <p>Placement Support</p>
+          </div>
+        </div>
+      </div>
+    </ScrollTrigger>
+
+  </div>
+            </div>
+         
 
     </>
   );

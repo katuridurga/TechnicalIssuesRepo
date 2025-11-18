@@ -5,7 +5,7 @@ width: 65%;
     margin-bottom: 50px;
     color: #fff;
     text-align: center;
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -17,8 +17,9 @@ div.courses-title {
     position: relative;
     align-self: center;
     font-family: 'Montserrat', sans-serif;
-    color: #fff;
+    color: #000;
 }
+
 #thing {
     position: relative;
     background-color:#272626;
@@ -43,23 +44,37 @@ div.courses-title {
 .sp1{
     margin-top: 40px;
     margin-bottom: 30px;
+    color:#000;
 }
 .askuss{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 350px;
-  border: 1px solid #fff;
+  width: max-content;
   margin: 0px auto;
   margin-bottom: 30px;
 
 }
 .askuss li{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   /* border-radius: 10px; */
   padding: 10px 20px;
+  margin-right: 0px;
+    border-radius: 20px;
+    margin-right: 20px;
+    background: linear-gradient(to bottom, #eb1a23 0%, #ec1923 100%);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 28px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+.askuss li:last-child{
   margin-right: 0px;
 }
 .askuss li img{
@@ -82,6 +97,13 @@ div.courses-title {
   font-size: 29px;
   margin-right: 10px;
 }
+.askuss svg :hover{
+  color: #fff !important;
+  font-size: 29px;
+  margin-right: 10px;
+      box-shadow: rgb(237 25 35 / 0%) 0px 0px 29.5299px 0px, rgb(237 25 35 / 13%) 0px 0px 59.0599px 0px, rgb(237 25 35 / 13%) 0px 0px 88.5898px 0px;
+}
+
   .hexagon {
     aspect-ratio: cos(0deg);
     clip-path: polygon(50% 50%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -141,7 +163,7 @@ div.courses-title {
     width: 90%;
     margin: 0 auto;
     margin-bottom: 50px;
-    color: #fff;
+    color: #000;
     text-align: left;
     font-size: 16px;
     font-weight: 500;
@@ -154,7 +176,7 @@ div.courses-title {
   position: relative;
   align-self: center;
   font-family: 'Montserrat', sans-serif;
-  color: #fff;
+  color: #000;
 }
 #thing {
   > p {
@@ -194,6 +216,7 @@ div.courses-title {
 .askuss li:hover{
   color:#fff;
   background: #ec1925;
+      box-shadow: rgb(237 25 35 / 0%) 0px 0px 29.5299px 0px, rgb(237 25 35 / 13%) 0px 0px 59.0599px 0px, rgb(237 25 35 / 13%) 0px 0px 88.5898px 0px;
 }
 @media only screen and (max-width : 1024px){
 div.courses-title {
@@ -204,7 +227,82 @@ div.courses-title {
     position: relative;
     align-self: center;
     font-family: 'Montserrat', sans-serif;
-    color: #fff;
+    color: #000;
     line-height: inherit;
 }
 }
+
+
+.coppertunitiesaff {
+  display: flex;
+  align-items: center; /* Ensures top alignment */
+  
+}
+
+.coppertunitiesaff .left,
+.coppertunitiesaff .right {
+  flex:2 1;
+  min-width: 300px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coppertunitiesaff .left img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin-top:20px;
+}
+
+
+.courseHeading{
+    font-size: 42px;
+    font-weight: 900;
+    margin: 30px 0px 30px 0px;
+    color:#ec1923;
+    text-align: center;
+  }
+
+
+.coppertunitiesaff .left img {
+  width: 80%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.coppertunitiesaff .right {
+  flex: 2;
+  min-width: 320px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .coppertunitiesaff {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .coppertunitiesaff .left,
+  .coppertunitiesaff .right {
+    width: 100%;
+  }
+
+  .coppertunitiesaff .right section {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 15px !important;
+  }
+
+  .faqquestion {
+    font-size: 15px !important;
+    line-height: 22px !important;
+  }
+
+  .btnplus span {
+    padding: 15px !important;
+  }
+}
+

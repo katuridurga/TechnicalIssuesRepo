@@ -32,7 +32,7 @@ function HomeContent() {
 
 
 
-        <div style={{ marginTop: "0px", display: "flex", background: "#000" }} class="min-h-full h-full mx-auto relative z-[4] flex  md:flex-row justify-end md:justify-between md:items-center" >
+        <div style={{ marginTop: "0px", display: "flex", background: "#ffffff" }} class="min-h-full h-full mx-auto relative z-[4] flex  md:flex-row justify-end md:justify-between md:items-center" >
 
           <div class="flex flex-col md:items-start text-txt100 pb-8 md:max-w-1/2" style={{ maxWidth: "100%" }}>
 

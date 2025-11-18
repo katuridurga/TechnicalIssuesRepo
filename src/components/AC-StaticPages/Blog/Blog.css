@@ -236,10 +236,10 @@ margin-bottom: 20px;
   column-gap: 0px;
   grid-row-gap: 0px;
   width: 100%;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.06);
+  
 }
 .blog {
-background-color: #222;
+background-color: #f9fafb;
 border-radius: 0px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 overflow: hidden;
@@ -289,7 +289,7 @@ flex-grow: 1;
 height: 250px;
 }
 .blog-content span{
-  color: #fff;
+  color: #000;
   font-weight: 500;
   margin-bottom: 10px;
   display: block;
@@ -311,7 +311,7 @@ height: 250px;
 .blog-content h2 {
   font-size: 16px;
   margin-bottom: 20px;
-  color: #fff;
+  color: #000;
   font-weight: 600;
   width: 100%;
   margin-top: 0px;
@@ -320,7 +320,7 @@ height: 250px;
 }
 .blog-content p {
   flex-grow: 1;
-  color: #fff;
+  color: #000;
   margin-bottom: 20px;
   margin-top: 10px;
   overflow: hidden;
@@ -343,6 +343,15 @@ height: 250px;
  text-decoration: underline;
 }
 @media only screen and (max-width : 1024px){
+  .blog-image img {
+width: 100%;
+height: 100%;
+transition: transform 0.3s;
+object-fit: fill;
+object-position: center;
+border-radius: 4px;
+}
+
   .blog-content {
 padding: 10px 15px 20px 15px;
 display: flex;
@@ -351,7 +360,7 @@ flex-grow: 1;
 height: auto !important;
 }
   .suprts1 p {
-    font-size: 17px!important;
+    font-size: 16px!important;
     font-weight: 400;
     text-align: left !important;
     width: 95%!important;
@@ -382,7 +391,7 @@ height: auto !important;
     }
   .blog-content p {
     flex-grow: 1;
-    color: #fff;
+    color: #000;
     margin-bottom: 20px;
     margin-top: 10px;
     overflow: hidden;
@@ -455,7 +464,7 @@ height: auto !important;
 }
 
 .textrightpc{
-  color: #fff;
+  color: #000;
   margin-left: 6px;
   font-size: 16px;
   font-weight: 700;
@@ -465,7 +474,7 @@ height: auto !important;
   margin: 10px 0px 10px 0px;
 }
 .textpostc{
-  border: 1px solid #181717;
+  border: 1px solid #ccc;
   padding: 0px;
   width: 100%;
   height: auto !important;
@@ -477,7 +486,7 @@ height: auto !important;
   margin: 0px auto;
   align-items: flex-start;
   justify-content: center;
-  border-bottom: 1px solid#2b2929;
+  border-bottom: 1px solid#ccc;
   cursor:default;
   
   }

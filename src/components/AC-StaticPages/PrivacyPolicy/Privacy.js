@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet";
 const ulStyle = {
   listStyleType: 'disc',  // Set the bullet point style
    paddingLeft: '200px', 
-  color:'#fff', 
+  color:'#000', 
   // textAlign:'center',  // Indentation for the bullets
 };
 
@@ -17,7 +17,7 @@ const liStyle = {
   marginBottom: '8px',    // Space between each bullet point
   fontSize: '16px', 
   // paddingLeft: '200px', 
-  color:'#fff', 
+  color:'#000', 
   
   //textAlign:'center',      // Font size for the list items
 };

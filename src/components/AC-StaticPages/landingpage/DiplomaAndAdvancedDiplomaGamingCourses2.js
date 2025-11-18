@@ -41,8 +41,9 @@ import MscGameTechnology3d from "../../../assets/img/Courses/3dgameartandgamedes
 
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import m1 from "../../../assets/img/test/1.webp";
-import m2 from "../../../assets/img/test/2.webp";
+
+import m3 from "../../../assets/img/test/d1.webp";
+import m4 from "../../../assets/img/test/eli.webp";
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -559,13 +560,13 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <TabPanel value={value1} index={0} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
                   <div className='courseUpdatesl'>
                     <ul>
-                      <li><img src={m1} alt="Duration icon" />
-                        <span>Duration: 4 Years</span></li>
-                      <li><img src={m2} alt="Eligibility icon" />
-                        <span>Eligibility: 10+2 or Equivalent *</span></li>
+                      <li><img src={m3} alt="Duration icon" />
+                        <span style={{color:"#000"}}>Duration: 4 Years</span></li>
+                      <li><img src={m4} alt="Eligibility icon" />
+                        <span style={{color:"#000"}}>Eligibility: 10+2 or Equivalent *</span></li>
 
                     </ul>
-                    <p style={{ color: "#fff", textAlign: "center" }}>*The eligibility criteria for each Bachelor's course varies based the curriculum. Please check the criteria for the course you want to opt for before applying.</p>
+                    <p style={{ color: "#000", textAlign: "center" }}>*The eligibility criteria for each Bachelor's course varies based the curriculum. Please check the criteria for the course you want to opt for before applying.</p>
                   </div>
                   <Link className="CourseLink1" to={"/courses/bachelors-in-computer-science-and-game-development/"}>
                     <div className="mainCourse1">
@@ -610,11 +611,10 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <TabPanel value={value1} index={1} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto" }}>
                   <div className='courseUpdatesl'>
                     <ul>
-                      <li><img src={m1} alt="Duration icon" />
-                        <span>Duration: 2 Years</span></li>
-                      <li><img src={m2} alt="Eligibility icon" />
-                        <span>Eligibility:  As mentioned in the course</span></li>
-
+                      <li><img src={m3} alt="Duration icon" />
+                        <span style={{color:"#000"}}>Duration: 2 Years</span></li>
+                      <li><img src={m4} alt="Eligibility icon" />
+                        <span style={{color:"#000"}}>Eligibility:  As mentioned in the course</span></li>
 
                     </ul>
                   </div>
@@ -767,7 +767,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 <form onSubmit={handleSubmit} className="formMain">
 
-                  <p className="suprtsMobiless">Get <b>a Counselling</b> Session on Gaming Career</p>
+                  <p className="suprtsMobiless" style={{color:"#fff"}}>Get <b>a Counselling</b> Session on Gaming Career</p>
                   <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
 
 
@@ -906,7 +906,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       
             </div>
       {isButtonVisible && (
-        <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{ zIndex: "1" }}>Get a Counselling Session on Gaming Career</a></div>)}
+        <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{ zIndex: "1" }}>Enroll Now</a></div>)}
 
     </>
   )

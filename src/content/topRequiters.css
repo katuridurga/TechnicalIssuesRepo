@@ -56,10 +56,8 @@ section#section-1687842563123::after {
 }
 
 
-.recuitersList{
-  
-}
-.recuitersList img {
+
+.recuitersList1 img {
   width: 220px;
   object-fit: contain;
   height: 80px;
@@ -474,3 +472,20 @@ object-fit: cover;
 
 }
 
+.recuitersList1 {
+  display: flex !important;
+  align-items: center;
+  flex-wrap: nowrap !important;
+  gap: 50px; /* adjust space between logos */
+  overflow: hidden;
+}
+
+.recuitersList1 img {
+  display: inline-block !important;
+  height: 81px !important;
+  width: auto !important;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}

@@ -1,24 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react'
 import { useSelector, shallowEqual } from "react-redux";
-import "./AugmentedRealityAndVirtualReality.css";
+import "../BachelorsInComputerScienceGameDevelopment/BachelorsInComputerScienceGameDevelopment.css";
+import Scrollspy from "react-scrollspy";
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import { PiArrowFatRightLight } from 'react-icons/pi';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
-import EmblaCarouselMentors2 from '../../../content/EmblaCarouselMentors2';
+import EmblaCarouselMentors from '../../../content/EmblaCarouselMentors';
 import StickyBox from "react-sticky-box";
 import { emphasize, styled } from '@mui/material/styles';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Chip from '@mui/material/Chip';
 import HomeIcon from '@mui/icons-material/Home';
 import ScrollSpy from "react-ui-scrollspy";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import m1 from "../../../assets/img/test/1.webp";
 import m2 from "../../../assets/img/test/2.webp";
 import m3 from "../../../assets/img/test/3.webp";
 import m4 from "../../../assets/img/test/4.png";
-import m5 from "../../../assets/img/Icons/flags.png";
-import m6 from "../../../assets/img/Icons/lightbulb.png";
+import m5 from "../../../assets/img/Icons/flags.webp";
+import c1 from "../../../assets/img/Courses/careeroprt.webp";
+import m6 from "../../../assets/img/Icons/jams.webp";
 import m7 from "../../../assets/img/Icons/game-console.png";
-import m8 from "../../../assets/img/Icons/team-work.png";
-import Scrollspy from "react-scrollspy";
+import m8 from "../../../assets/img/Icons/team-work.webp";
+import { FaPlus, FaMinus } from "react-icons/fa";
+
 
 import Tabs, { tabsClasses } from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -55,18 +61,13 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-// function a11yProps(index) {
-//   return {
-//     id: `full-width-tab-${index}`,
-//     'aria-controls': `full-width-tabpanel-${index}`,
-//   };
-// }
-
 const StyledBreadcrumb = styled(Chip)(({ theme, Props }) => {
   const backgroundColor =
     theme.palette.mode === 'light'
       ? theme.palette.grey[100]
       : theme.palette.grey[800];
+
+
   return {
     backgroundColor,
     height: theme.spacing(3),
@@ -100,8 +101,11 @@ function Courses(props) {
     setValue(newValue);
   };
 
+
   const [value1, setValue1] = React.useState(0);
 
+  // ✅ Add this here (INSIDE component)
+  const [activeTab, setActiveTab] = useState("GAME PROGRAMMING");
   const handleChange1 = (event, newValue) => {
     setValue1(newValue);
   };
@@ -114,6 +118,118 @@ function Courses(props) {
     state => state.mainReducer.isMobile,
     shallowEqual
   );
+const semesters = [
+  {
+    title: "Computer Science",
+    subjects: [
+      "C++ | Adv C++ & STL",
+      "Object Oriented Programming with Java",
+      "C# and .Net Framework",
+      "Python Programming Language",
+      "Data Structures",
+      "Object Oriented System Development",
+      "Human Computer Interaction",
+      "Web Application Development",
+      "Web Programming",
+    ],
+  },
+  {
+    title: "Game Engine Programming",
+    subjects: [
+      "Unity 3D Game Engine – Basic & Advanced",
+      "Unreal Game Engine -  Blue Prints & Programming with C++",
+      "Mathematical Concepts for Gaming",
+      "Physics for Gaming",
+      "AI Programming",
+      "Game Networking",
+      "Gameplay Programming",
+      "Code Optimization",
+    ],
+  },
+  {
+    title: "Game Design & Production",
+    subjects: [
+      "Game Genres & History",
+      "Conceptulization and Design thinking",
+      "Game Design and Production Pipeline",
+      "Level Design for Games",
+      "Game World Design",
+      "Game Design Documentation",
+      "Story Telling for Games",
+      "Game Psychology",
+      "Game Quality Assurance",
+      "Game Project Management",
+      "Publishing & Marketing for Games",
+      "Game Monetization",
+      "Gamification",
+    ],
+  },
+];
+
+const semsecond = [
+  {
+    title: "Traditional Art",
+    subjects: [
+      "Drawing & Sketching",
+      "Colour, Value and Line",
+      "Figure Drawing",
+      "Anatomy of Humans and Birds",
+      "Perspective",
+      "Lighting and shading",
+      "Composition",
+      "Live Drawing",
+      "Color Theory",
+      "Color Design",
+      "Traditional Sculpting.",
+    ],
+  },
+  {
+    title: "Intro to Digital Art",
+    subjects: [
+      "Image Editing and Design",
+      "2D Illustration",
+      "Lighting & Shading",
+      "Composition UI Design",
+      "Digital Concept Art – Prop, Vehicle & Environment Design",
+    ],
+  },
+  {
+    title: "3D Game Art",
+    subjects: [
+      "3D Art Pipeline: Modelling | Texturing | Lighting | Rendering | Animation",
+      "3D Art Asset Creation: Props, Vehicle, Environment & Character creation",
+      "Digital Sculpting for Environment, Props, Vehicle and Character creation",
+    ],
+  },
+  {
+    title: "AR & VR Courses",
+    subjects: [
+      "Introduction to Augmented Reality",
+      "Introduction to Virtual Reality",
+      "3D Models & Design for VR",
+    ],
+  },
+  {
+    title: "Humanities",
+    subjects: [
+      "English Communication",
+      "Creative Writing for Media",
+      "Environmental Science",
+      "Universal Human Values",
+      "Personality Development",
+    ],
+  },
+];
+
+
+  const items = ["Enter a rapidly growing field and learn the basics of programming, game engines, AI and gameplay mechanics.",
+"Engage in hands-on, practical learning experiences in game world and level design.",
+"Gain expertise in the basics of Traditional Art and 3D Art with specialized training in AR and VR games and application development.",
+"Master the latest AR and VR tools and techniques, to create immersive and interactive experiences.",
+"Develop and customize geolocation-based AR/VR applications.",
+"Open up diverse career opportunities, from Game Engine Programmer, AR/VR Developer to 3D Artist and Game Designer, in a variety of industries including gaming, education, healthcare, etc.",
+"Learn from industry experts and build a professional network that will support your career growth and development.",
+"Build a strong portfolio showcasing your unique style and technical skills, making you a competitive candidate in the job market."];
 
   const handleScroll = (id) => {
     const el = document.getElementById(id);
@@ -123,19 +239,75 @@ function Courses(props) {
     }
   };
 
+  const faqs = [
+    {
+      question: "AR/VR & GAME PROGRAMMING",
+      answer: [
+
+       "AR/VR Application Developer",
+"AR/VR Game Developer",
+"Game Programmer",
+"Unity Developer",
+"Gameplay Programmer",
+"Unreal Developer",
+"AI Programmer",
+"Metaverse Developer",
+"XR Developer",
+      ],
+    },
+    {
+      question: "2D AND 3D ART",
+      answer: [
+      "3D Modeler",
+"Props Artist",
+"Environment Artist",
+"Character Artist",
+"Texture Artist",
+"Digital Sculptor",
+"Lighting Artist",
+"Rigging Artist",
+"Animator",
+"Concept Artist",
+"Illustrator",
+      ],
+    },
+    {
+      question: "GAME DESIGN & OTHERS",
+      answer: [
+       "Game Designer",
+"Technical Designer",
+"Level Designer",
+"UI/UX Designer",
+"Narrative Designer",
+"Combat Designer",
+"Economy/Monetization Designer",
+"Systems Designer",
+"Game Producer",
+"Quality Assurance Tester",
+"Video Game Marketing",
+      ],
+    },
+
+  ];
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <>
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'MobileClassarvr' : 'Bachelors-in-Augmented-Reality-Virtual-Reality'}`}>
+         <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'MobileClassarvr' : 'Bachelors-in-Augmented-Reality-Virtual-Reality'}`}>
         <div className="et_pb_row et_pb_row_0">
           <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
             <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
               <div className="et_pb_text_inner"><h1 className="title white-txt">Bachelor's in Augmented Reality
-                <br />& Virtual Reality </h1></div>
+                <br />& Virtual Reality </h1><a href="#Enquire-Now" class="capplynow">Apply Now</a></div>
             </div>
           </div>
         </div>
       </div>
-      <div className="courses-container">
         <Helmet>
           <script type="application/ld+json">
             {`
@@ -182,460 +354,288 @@ function Courses(props) {
 
         </Helmet>
 
-        <div className="courses-wrapper">
 
-
-
-
-
-
-          <div className="CourseesOverView">
-            {isMobileState ? null : <StickyBox offsetTop={isMobileState ? 0 : 90} offsetBottom={20} style={{ position: isMobileState ? "initial" : "sticky", width: isMobileState ? '100%' : '24%', marginRight: isMobileState ? "0%" : "3%" }}>
-              <div className="sidebarview">
-                <Scrollspy
-                  items={sections}
-                  currentClassName="active"
-                  offset={-100}
-                  componentTag="ul"
-                >
-                  {sections.map((section) => (
-                    <li key={section}>
-                      <div
-                        className="ss-item-demo-2"
-                        onClick={() => handleScroll(section)}
-                      >
-                        {section.replace(/-/g, " ")}
-                      </div>
-                    </li>
-                  ))}
-                  <li className="t-c1">
-                    <button
-                      className="three button brand size200 w-full sm:w-auto"
-                      style={{ width: "auto", fontSize: "14.5px" }}
-                      type="button"
-                    >
-                      <a
-                        href="https://backstagepass.co.in/enquire-now/"
-                        style={{ color: "#fff" }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Enquire Now
-                      </a>
-                    </button>
-                  </li>
-                </Scrollspy>
-              </div>
-              <div className="applybottom"><button
-                className="three button brand size200 w-full sm:w-auto"
-                style={{ width: "180px", fontSize: "14.5px" }}
-                type="button"
-              >
-                <a
-                  href="https://backstagepass.co.in/application-form/"
-                  style={{ color: "#fff" }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Apply Now
-                </a>
-              </button></div>
-            </StickyBox>}
-            <div style={{ width: isMobileState ? "100%" : "70%" }}>
-              {!isMobileState ? <div role="presentation">
-                <Breadcrumbs aria-label="breadcrumb" style={{ background: "none", color: "#fff" }}>
-                  <StyledBreadcrumb
-                    style={{ cursor: "pointer", background: "none", color: "#fff", fontFamily: "Montserrat, sans-serif", border: "1px solid #fff" }}
-                    component="a"
-                    href="/"
-                    label="Home"
-                    icon={<HomeIcon fontSize="small" />}
-                  />
-                  <StyledBreadcrumb style={{ cursor: "pointer", background: "none", color: "#fff", fontFamily: "Montserrat, sans-serif", border: "1px solid #fff" }} component="a" href="/courses/" label="Courses" />
-                  <StyledBreadcrumb
-                    style={{ background: "none", color: "#fff", fontFamily: "Montserrat, sans-serif", border: "1px solid #fff" }}
-                    label="B.A.(Hons) Augmented Reality And Virtual Reality (AR & VR)"
-                  //component="a" href="/"
-                  />
-                </Breadcrumbs>
-              </div> : null}
-
-              <div className="">
-                <div
-                // style={{
-                //   position: "relative",
-                //   overflowY: "scroll",
-                //   height: "50vh",
-                // }}
-                >
-                  <ScrollSpy
-                    // parentScrollContainerRef={parentScrollContainerRef}
-                    activeclassName="ss-active-demo-2"
-                    offsetBottom={100}
-                    scrollThrottle={80}
-                    useBoxMethod
-                  >
-                    <div id="Course-Overview" backgroundColor="orange" height="150vh">
-                      <h2 className='courseHeading'>Course Overview</h2>
-                      <div className='courseUpdates'>
-                        <ul>
-                          <li><img src={m1} alt="Duration icon" />
-                            <p>Duration <p className='innerhd'> 4 Years</p></p></li>
-                          <li><img src={m2} alt="Eligibility icon" />
-                            <p>Eligibility<p className='innerhd'>10+2 or Equivalent
-                            </p></p></li>
-                          <li><img src={m3} alt="Mode icon" />
-                            <p>Mode  <p className='innerhd'>Offline</p></p></li>
-                          <li><img src={m4} alt="Jnafu logo" />
-                            <p>Affiliated <p className='innerhd'>JNAFAU</p></p></li>
-                        </ul>
-                      </div>
-                      <p className='normaltext'>The BA (Hons) in Augmented Reality and Virtual Reality (AR/VR) curriculum is designed to equip students with the essential basics and principles of art, design, and programming, specifically tailored for AR and VR application development. The program is perfect for innovators aiming to be at the forefront of these outstanding technologies, offering a unique combination of <a href="https://www.backstagepass.co.in/courses/bachelors-in-computer-science-and-game-development/" style={{ color: "#ec1923", fontWeight: "500" }}>computer science and programming </a> with a strong emphasis on AR and VR application development.
-                      </p>
-                      <p className='normaltext'>The course covers a wide range of topics, including Augmented Reality and Virtual Reality, Game Design, 3D Art, and immersive AR/VR application development. Through practical learning experiences such as case studies and assignments, students gain a comprehensive understanding of the theoretical and technical aspects needed to thrive in the evolving world of AR/VR technology.
-
-                      </p>
-
-
-                    </div>
-                    <div id="Course-Objectives" height="150vh" style={{ padding: "0px 0px", borderRadius: '20px', marginTop: "30px" }}>
-                      <h2 className='courseHeading' style={{ marginTop: "0px" }}>Course Objectives</h2>
-
-                      <ul className='Objectives'>
-                        <li>Enter a rapidly growing field and learn the basics of programming, game engines, AI and gameplay mechanics.</li>
-
-                        <li>Engage in hands-on, practical learning experiences in game world and level design.</li>
-
-                        <li>Gain expertise in the basics of Traditional Art and 3D Art with specialized training in AR and VR games and application development.</li>
-
-                        <li>Master the latest AR and VR tools and techniques, to create immersive and interactive experiences.</li>
-
-                        <li>Develop and customize geolocation-based AR/VR applications.</li>
-
-                        <li>Open up diverse career opportunities, from Game Engine Programmer, AR/VR Developer to 3D Artist and Game Designer, in a variety of industries including gaming, education, healthcare, etc.</li>
-
-                        <li>Learn from industry experts and build a professional network that will support your career growth and development.</li>
-
-                        <li>Build a strong portfolio showcasing your unique style and technical skills, making you a competitive candidate in the job market.</li>
-                      </ul>
-
-
-                    </div>
-
-                    <div id="Curriculum" backgroundColor="blue" height="150vh">
-
-
-                      <h2 className='courseHeading'>Curriculum</h2>
-
-                      <Box >
-                        <Tabs
-                          TabIndicatorProps={{ style: { background: '#ed1923' } }}
-                          value={value}
-                          onChange={handleChange}
-                          variant="scrollable"
-                          scrollButtons
-                          aria-label="visible arrows tabs example"
-                          style={{ background: "#222", color: "#fff" }}
-                          sx={{
-                            [`& .${tabsClasses.scrollButtons}`]: {
-                              '&.Mui-disabled': { opacity: 0.5, color: "#fff", fontSize: "35px" },
-                            },
-                          }}
-                        >
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="Computer science" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="Game Engine Programming" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="Game Design & Production" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="Traditional Art" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="Intro to Digital Art" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="3D Game Art" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="AR & VR courses" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="Humanities" />
-                        </Tabs>
-
-                        <TabPanel value={value} index={0} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-
-                            <li>C++ | Adv C++ & STL</li>
-                            <li>Object Oriented Programming with Java</li>
-                            <li>	C# and .Net Framework</li>
-                            <li>Python Programming Language</li>
-                            <li>Data Structures</li>
-                            <li>Object Oriented System Development</li>
-                            <li>Human Computer Interaction</li>
-                            <li>Web Application Development</li>
-                            <li>Web Programming</li>
-
-
-                          </ul>
-                        </TabPanel>
-
-                        <TabPanel value={value} index={1} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>Unity 3D Game Engine – Basic & Advanced</li>
-                            <li>Unreal Game Engine -  Blue Prints & Programming with C++</li>
-                            <li>Mathematical Concepts for Gaming</li>
-                            <li>Physics for Gaming</li>
-                            <li>AI Programming</li>
-                            <li>Game Networking</li>
-                            <li>Gameplay Programming</li>
-                            <li>Code Optimization</li>
-                          </ul>
-                        </TabPanel>
-
-                        <TabPanel value={value} index={2} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>Game Genres & History </li>
-                            <li>Conceptulization and Design thinking</li>
-                            <li>Game Design and Production Pipeline</li>
-                            <li>Level Design for Games</li>
-                            <li>Game World Design</li>
-                            <li>Game Design Documentation</li>
-                            <li>Story Telling for Games </li>
-                            <li>Game Psychology</li>
-                            <li>Game Quality Assurance</li>
-                            <li>Game Project Management</li>
-                            <li>Publishing & Marketing for Games</li>
-                            <li>Game Monetization</li>
-                            <li>Gamification</li>
-                          </ul>
-                        </TabPanel>
-                        <TabPanel value={value} index={3} dir={theme.direction}>
-
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>Drawing & Sketching </li>
-                            <li>Colour, Value and Line  </li>
-                            <li>Figure Drawing  </li>
-                            <li>Anatomy of Humans and Birds  </li>
-                            <li>Perspective  </li>
-                            <li>Lighting and shading  </li>
-                            <li>Composition  </li>
-                            <li>	Live Drawing  </li>
-                            <li>Color Theory  </li>
-                            <li>Color Design  </li>
-                            <li>Traditional Sculpting. </li>
-
-
-
-                          </ul>
-                        </TabPanel>
-                        <TabPanel value={value} index={4} dir={theme.direction}>
-
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>Image Editing and Design</li>
-                            <li>2D Illustration </li>
-                            <li>Lighting & Shading</li>
-                            <li>Composition UI Design  </li>
-                            <li>Digital Concept Art – Prop, Vehicle & Environment Design</li>
-
-
-                          </ul>
-                        </TabPanel>
-                        <TabPanel value={value} index={5} dir={theme.direction}>
-
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>3D Art Pipeline: Modelling | Texturing | Lighting | Rendering | Animation </li>
-                            <li>3D Art Asset Creation: Props, Vehicle, Environment & Character creation</li>
-                            <li>Digital Sculpting for Environment, Props, Vehicle and Character creation</li>
-
-
-                          </ul>
-                        </TabPanel>
-
-                        <TabPanel value={value} index={6} dir={theme.direction}>
-
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>Introduction to Augmented Reality</li>
-                            <li>Introduction to Virtual Reality</li>
-                            <li>3D Models & Design for VR</li>
-
-                          </ul>
-                        </TabPanel>
-
-                        <TabPanel value={value} index={7} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>English Communication</li>
-                            <li>Creative Writing for Media</li>
-                            <li>Environmental Science</li>
-                            <li>Universal Human Values</li>
-                            <li>Personality Development</li>
-                          </ul>
-                        </TabPanel>
-
-                      </Box>
-
-
-
-                    </div>
-                    <div id="Beyond-The-Course" backgroundColor="blue" height="150vh" style={{ padding: "0px 0px" }}>
-                      <h2 className='courseHeading' style={{ color: "#fff", marginTop: "0px" }}>Beyond The Course</h2>
-
-                      <p className='normaltext'>At <a href="https://www.backstagepass.co.in/" style={{ color: "#ec1923", fontWeight: "500" }}> Backstage Pass Institute of Gaming,</a> we believe learning extends beyond the classroom. We provide students with numerous activities and opportunities to enter the real world and gain first-hand experience of how things work in the gaming industry. As one of the best game development colleges in India, Backstage Pass offers unparalleled opportunities for students interested in pursuing a career in Augmented Reality and Virtual Reality, from education to game development and beyond.
-
-
-
-                      </p>
-
-                      <div className='courseUpdates1'>
-                        <ul>
-                          <li>
-                            <div className='BeyondLeft'>
-                              <img src={m5} alt="m5" />
-                            </div>
-                            <div className='BeyondRight'>
-                              <p className='lsh'>Studio Visits</p>
-                              <p>Visits to game studios allow students to witness how a game company truly works
-                              </p>
-                            </div>
-                          </li>
-                          <li>
-                            <div className='BeyondLeft'>
-                              <img src={m6} alt="m6" />
-                            </div>
-                            <div className='BeyondRight'>
-                              <p className='lsh'>Jams & Conferences</p>
-                              <p>Students are encouraged to participate in game jams and attend conferences to hone their skills</p>
-                            </div>
-
-
-                          </li>
-
-                          <li>
-                            <div className='BeyondLeft'>
-                              <img src={m8} alt="m8" />
-                            </div>
-                            <div className='BeyondRight'>
-                              <p className='lsh'>Networking Opportunities</p>
-                              <p>With frequent webinars and workshops, our students directly interact with alumni and industry experts
-                              </p>
-                            </div>
-
-
-                          </li>
-
-                          <li>
-                            <div className='BeyondLeft'>
-                              <img src={m7} alt="m7" />
-                            </div>
-                            <div className='BeyondRight'>
-                              <p className='lsh'>Make Your Own Game</p>
-                              <p>Our Accelerator Program allows eligible students to make and publish their own game even before graduation</p>
-                            </div>
-
-
-                          </li>
-
-
-                        </ul>
-                      </div>
-
-                    </div>
-
-                    <div id="Career-Opportunities" backgroundColor="brown" height="150vh">
-                      <h2 className='courseHeading'>Career Opportunities</h2>
-
-                      <Box >
-                        <Tabs
-                          TabIndicatorProps={{ style: { background: '#ed1923' } }}
-                          value={value1}
-                          onChange={handleChange1}
-                          variant="scrollable"
-                          scrollButtons="auto"
-                          aria-label="scrollable auto tabs example"
-                          style={{ background: "#222", color: "#fff" }}
-                        >
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="AR/VR & GAME PROGRAMMING" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="2D AND 3D ART" />
-                          <Tab style={{ color: "#fff", fontSize: "15px", fontFamily: "Montserrat, sans-serif" }} label="GAME DESIGN & OTHERS" />
-                        </Tabs>
-
-                        <TabPanel value={value1} index={0} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>AR/VR Application Developer</li>
-
-
-                            <li>AR/VR Game Developer</li>
-                            <li>Game Programmer</li>
-                            <li>Unity Developer</li>
-                            <li>Gameplay Programmer</li>
-                            <li>Unreal Developer</li>
-                            <li>AI Programmer</li>
-                            <li>Metaverse Developer</li>
-                            <li>XR Developer</li>
-                          </ul>
-                        </TabPanel>
-                        <TabPanel value={value1} index={1} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>3D Modeler</li>
-                            <li>Props Artist</li>
-                            <li>Environment Artist</li>
-                            <li>Character Artist</li>
-                            <li>Texture Artist</li>
-                            <li>Digital Sculptor</li>
-                            <li>Lighting Artist</li>
-                            <li>Rigging Artist</li>
-                            <li>Animator</li>
-                            <li>Concept Artist </li>
-                            <li>Illustrator</li>
-                          </ul>
-                        </TabPanel>
-                        <TabPanel value={value1} index={2} dir={theme.direction}>
-                          <ul className='Objectives1' style={{ fontFamily: "Montserrat, sans-serif" }}>
-                            <li>Game Designer</li>
-                            <li>Technical Designer</li>
-                            <li>Level Designer</li>
-                            <li>UI/UX Designer</li>
-                            <li>Narrative Designer</li>
-                            <li>Combat Designer</li>
-                            <li>Economy/Monetization Designer</li>
-                            <li>Systems Designer</li>
-                            <li>Game Producer</li>
-                            <li>Quality Assurance Tester</li>
-                            <li>Video Game Marketing</li>
-                          </ul>
-                        </TabPanel>
-
-
-
-                      </Box>
-
-                      {/* <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                        <button className=" three button brand size200 w-full sm:w-auto" data-form-id="need-guidance" data-form="step1-button-continue" type="button" fdprocessedid="6qkh5h" style={{ width: "400px", fontSize: "17px" }}>DOWNLOAD CAREER GUIDE</button>
-                      </div> */}
-
-                    </div>
-
-
-                    <div id="Featured-Mentors" backgroundColor="brown" height="150vh">
-                      <h2 className='courseHeading'>Featured Mentors</h2>
-
-                      <EmblaCarouselMentors2 slides={SLIDES} options={OPTIONS} />
-
-
-
-
-                    </div>
-                    <div id="Enquire-Now">
-                      <HomeContentForm />
-                    </div>
-                  </ScrollSpy>
-                </div>
-              </div>
-
-
+      <div className="courses-wrapper">
+
+
+        <div className="course-page">
+          {/* Info Card */}
+          <div className="info-card slanted-info">
+            <div className="info-item">
+            <span className="info-subtitle">Course Duration</span>
+              <span className="info-title">4 Years</span>
+            </div>
+            <div className="info-item">
+              <span className="info-subtitle">Mode</span>
+              <span className="info-title">Offline</span>
+            </div>
+            <div className="info-item">
+              <span className="info-subtitle">Eligibility</span>
+              <span className="info-title">10+2 or Equivalent </span>
+            </div>
+            <div className="info-item">
+              <span className="info-subtitle">Affiliated</span>
+              <span className="info-title">JNAFAU</span>
+              
             </div>
           </div>
-
-
-
-
         </div>
+      </div>
 
+      {/* Course Overview */}
+      <div className="overviewsection">
+        <h2 className='courseHeading'>Course Overview</h2>
+         <div className="brname"></div>
+        <p>
+    The BA (Hons) in Augmented Reality and Virtual Reality curriculum is designed to equip students with the essential principles of art, design, and programming, specifically tailored for the development of AR and VR applications. Ideal for innovators eager to lead the future, this program combines computer science with hands-on AR/VR creation, making it one of the best AR VR courses in India for those who want to master these transformative technologies.<br/>
 
+The course explores a wide range of topics, including Augmented Reality and Virtual Reality, Game Design, 3D Art, and immersive AR/VR application development. Students also learn the difference between AR and VR, gaining clarity on how each technology shapes modern digital experiences.<br/>
 
+Through practical learning methods, such as case studies and assignments, this program ensures that learners in AR VR courses gain both the theoretical foundation and the technical skills required to thrive in the rapidly evolving world of AR/VR technology.
 
+        </p>
+      </div>
+
+      {/* Course Objectives / Curriculum */}
+      <div className="curriculum-section" style={{ marginTop: "24px" }}>
+        <h2 className='courseHeading'>Course Objectives</h2>
+         <div className="brname"></div>
+        <div className="">
+          <ul style={{ listStyle: "none", padding: 0 }}>
+            {items.map((item, index) => (
+              <li key={index} style={{ display: "flex", marginBottom: "14px", fontSize:"16px",gap:"10px", alignItems:"flex-start", justifyContent:"flex-start", lineHeight:"1.6"}}>
+                <CheckBoxIcon style={{ color: "#ec1923", marginRight: "12px", fontSize: "22px", marginTop: "3px" }} />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      {/* Course Objectives / Curriculum */}
+      <div className="curriculum-section" style={{ background: "#f9fafb", marginBottom: "20px", boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)", padding: "10px", marginTop: "30px" }}>
+        <h2 className='courseHeading'>Course Curriculum</h2>
+        <div className="brname"></div>
+        <section className="curriculum">
+          <div className="curriculum-grid">
+            {semesters.map((sem, index) => {
+              // Start a new row every 3 semesters
+              if (index % 3 === 0) {
+                return (
+                  <div className="curriculum-row" key={index}>
+                    {semesters.slice(index, index + 3).map((s, i) => (
+                      <div key={i} className="semester-card">
+                        <h4 className="semester-title">{s.title}</h4>
+                        <ul>
+                          {s.subjects.map((subject, j) => (
+                            <li key={j}>{subject}</li>
+                          ))}
+                        </ul>
+
+                        {/* 👇 Add this part for subcategories like Art Courses */}
+                        {s.subcategories?.map((sub, k) => (
+                          <div key={k} className="subcategory">
+                            <h5 className="subcategory-title">{sub.title}</h5>
+                            <ul>
+                              {sub.subjects.map((subj, l) => (
+                                <li key={l}>{subj}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                );
+              }
+              return null;
+            })}
+          </div>
+        </section>
+        <section className="curriculum">
+          <div className="curriculum-grid">
+            {semsecond.map((sem, index) => {
+              // Start a new row every 3 semesters
+              if (index % 3 === 0) {
+                return (
+                  <div className="curriculum-row" key={index}>
+                    {semsecond.slice(index, index + 3).map((s, i) => (
+                      <div key={i} className="semester-card">
+                        <h4 className="semester-title">{s.title}</h4>
+                        <ul>
+                          {s.subjects.map((subject, j) => (
+                            <li key={j}>{subject}</li>
+                          ))}
+                        </ul>
+
+                        {/* 👇 Add this part for subcategories like Art Courses */}
+                        {s.subcategories?.map((sub, k) => (
+                          <div key={k} className="subcategory">
+                            <h5 className="subcategory-title">{sub.title}</h5>
+                            <ul>
+                              {sub.subjects.map((subj, l) => (
+                                <li key={l}>{subj}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                );
+              }
+              return null;
+            })}
+          </div>
+        </section>
 
 
       </div>
+      <div id="Beyond-The-Course" backgroundColor="blue" height="180vh" style={{ padding: "0px 0px", marginBottom: "20px" }}>
+        <h2 className='courseHeading' style={{ color: "#ec1923", marginTop: "0px" }}>Beyond The Course</h2>
+ <div className="brname"></div>
+        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At Backstage Pass Institute of Gaming, we believe learning extends beyond the classroom. We provide students with numerous activities and opportunities to enter the real world and gain first-hand experience of how things work in the gaming industry. As one of the best game development colleges in India, Backstage Pass offers unparalleled opportunities for students interested in pursuing a career in Augmented Reality and Virtual Reality, from education to game development and beyond.
+        </p>
+
+        <div className='courseUpdates1'>
+          <ul style={{ width: "80%", margin: "0px auto", paddingTop: "10px" }}>
+            <li>
+              <div className='BeyondLeft'>
+                <img src={m5} />
+              </div>
+              <div className='BeyondRight'>
+               <h4 className='lsh'>Studio Visits</h4>
+                <p>Visits to game studios allow students to witness how a game company truly works
+                </p>
+              </div>
+            </li>
+            <li>
+              <div className='BeyondLeft'>
+                <img src={m6} />
+              </div>
+              <div className='BeyondRight'>
+                <h4 className='lsh'>Jams & Conferences</h4>
+                <p>Students are encouraged to participate in game jams and attend conferences to hone their skills</p>
+              </div>
+
+
+            </li>
+
+            <li>
+              <div className='BeyondLeft'>
+                <img src={m8} />
+              </div>
+              <div className='BeyondRight'>
+                <h4 className='lsh'>Networking Opportunities</h4>
+                <p>With frequent webinars and workshops, our students directly interact with alumni and industry experts</p>
+              </div>
+
+
+            </li>
+
+            <li>
+              <div className='BeyondLeft'>
+                <img src={m7} />
+              </div>
+              <div className='BeyondRight'>
+                <h4 className='lsh'>Make Your Own Game</h4>
+                <p>Our Accelerator Program enables students to make their own games and build an impressive portfolio</p>
+              </div>
+
+
+            </li>
+
+
+          </ul>
+        </div>
+
+      </div>
+      <div id="Career-Opportunities" backgroundColor="brown" >
+
+        <div className='coppertunities'>
+          <div className='left'>
+            <img src={c1} alt="careerop" />
+          </div>
+
+          <div className="right career-tabs-container">
+            {/* Tabs */}
+
+
+            <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
+              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"80%" }}>Career Opportunities</h2>
+ <div className="brname"></div>
+              <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
+                {faqs.map((faq, index) => (
+                  <div
+                    key={index}
+                    className="p-4 inline-block justify-start" style={{ borderBottom: "1px solid#d8d7d7", width: "100%", margin: "0px auto" }}>
+                    <button
+                      className="w-full flex justify-center items-center text-left btnplus"
+                      onClick={() => toggleFAQ(index)}
+                      style={{
+                        background: "#f9fafb",
+                        color: "#000",
+                        justifyContent: "flex-start",
+                        paddingLeft: "0px"
+
+                      }}
+                    >
+                      {/* Icon inside circle */}
+                      <span
+                        className="w-8 h-8 flex items-center justify-center border border-gray-400 rounded-full text-black plusbtn"
+                        style={{
+                          background: "#fff",
+                          color: "#000",
+                          border: "1px solid #000",
+                          borderRadius: "0%",
+                          padding: "20px"
+                        }}
+                      >
+                        {openIndex === index ? (
+                          <FaMinus className="w-3 h-3" />
+                        ) : (
+                          <FaPlus className="w-3 h-3" />
+                        )}
+                      </span>
+                      <span className="faqquestion text-lg font-medium text-gray-800" style={{
+                        paddingLeft: "20px",
+                        textAlign: "justify",
+                        lineHeight: "24px",
+                        fontSize:"16px"
+                      }}>
+                        {faq.question}
+                      </span>
+
+
+                    </button>
+
+                    {openIndex === index && (
+                      <ul style={{ paddingLeft: "6.5rem", lineHeight: "1.9" }}>
+                        {faq.answer.map((point, i) => (
+                          <li key={i} style={{ listStyle: "disc" }}>{point}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="Enquire-Now" style={{marginTop:"30px"}}>
+        <HomeContentForm />
+      </div>
+
+
+
+
 
     </>
   )

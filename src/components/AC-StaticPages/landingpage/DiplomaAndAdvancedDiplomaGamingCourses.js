@@ -21,6 +21,7 @@ import Flag1 from "../../../assets/img/banners/usa.webp";
 import Flag2 from "../../../assets/img/banners/uk.webp";
 import Flag3 from "../../../assets/img/banners/canada.webp";
 import Flag4 from "../../../assets/img/banners/sweden.webp";
+import bannerimgunrealc from "../../../assets/img/banners/Diploma_in_Game_Development_with_Unreal.webp";
 
 
 
@@ -55,8 +56,10 @@ import Typography from '@mui/material/Typography';
 
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import m1 from "../../../assets/img/test/1.webp";
-import m2 from "../../../assets/img/test/2.webp";
+
+import m3 from "../../../assets/img/test/d1.webp";
+import m4 from "../../../assets/img/test/eli.webp";
+
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -409,18 +412,18 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
         <meta  name="description" content="Join the top game design and development college in Hyderabad. Explore game development courses & game design courses to kickstart your gaming career." />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
-      <div className="row mb0" id="scroll-container" >
+      <div className="row mb0" id="scroll-container" style={{background:"#fff"}} >
         <div className="mainPanel1">
 
 
           <div style={{ width: isMobileState ? "100%" : "100%", margin: "0 auto" }}>
 
             <a onClick={scrollToBottom} href="#CounsellingOnGamingCareer"> <div className={`et_pb_section bgimage et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'MobileClassbsc1' : 'bscadv'}`}>
-              {isMobileState ? <div className="CousellingButton10" style={{ position: "absolute", bottom: "-50px", left: "auto", marginBottom: "0px" }} onClick={scrollToBottom}><a style={{ padding: "12px 30px", width: "363px" }} href="#CounsellingOnGamingCareer">Enroll Now</a></div> : null}
+              {isMobileState ? <div className="CousellingButton10" style={{ position: "absolute", bottom: "-50px", left: "auto", marginBottom: "0px" }} onClick={scrollToBottom}><a style={{ color:"#000", padding: "12px 30px", width: "363px" }} href="#CounsellingOnGamingCareer">Enroll Now</a></div> : null}
             </div></a>
             <div className='MainVideoSection'>
-              <h3 style={{ textTransform: "capitalize" }}>Make a Career in Gaming that pays you from 3 LPA to 30 LPA*</h3>
-              <div className="videomain2">
+              {/* <h3 style={{ textTransform: "capitalize", color:"#000" }}>Make a Career in Gaming that pays you from 3 LPA to 30 LPA*</h3> */}
+              {/* <div className="videomain2">
                 <video ref={videoRef} controls loop>
                   <source src="https://www.backstagepass.co.in/landingpage/adv-dip.mp4" type="video/mp4" />
 
@@ -435,15 +438,15 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                     onClick={handlePlay} // Handle the click to play the video
                   />
                 )}
-              </div>
+              </div> */}
             </div>
 
-            <div className="mainrec2">
+            {/* <div className="mainrec2">
               <img src={recimg} alt="recimg" style={{ width: "100%", height:"100%"  }} />
 
-            </div>
+            </div> */}
 
-            <h2 className='mainHeadingTotall-2'>You are Eligible for a Gaming Career if you are:</h2>
+            <h2 className='mainHeadingTotall-2' style={{color:"#000"}}>You are Eligible for a Gaming Career if you are:</h2>
 
             <ul className='featuress2'>
               <li><img src={ic1} alt="ic1" />
@@ -479,16 +482,200 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                 <FeaturedProducts />
 
               </div> */}
+   <div id="Career-Opportunitiesl" backgroundColor="brown" height="auto" style={{marginBottom:"30px"}} >
+              <h2 className='mainHeadingTotall-2' style={{color:"#000"}}>What will you learn?</h2>
+
+              <Box >
+               <Tabs
+  TabIndicatorProps={{
+    style: {
+      border: "1px solid #222",
+      background: "#222",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      marginBottom: "-2px",
+    },
+  }}
+  value={value1}
+  onChange={handleChange1}
+  variant="scrollable"
+  scrollButtons="auto"
+  aria-label="scrollable auto tabs example"
+  className="tabcenter"
+  style={{
+    background: "#222",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "#fff",
+    width: isMobileState ? "100%" : "fit-content",
+    margin: "0 auto",
+  }}
+>
+  <Tab
+    label="Advanced Diploma Courses"
+    style={{
+      color: "#fff",
+      fontSize: isMobileState ? "11px" : "15px",
+      fontFamily: "Montserrat, sans-serif",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      margin:"0px auto",
+      textAlign: isMobileState ? "center" : "left",
+    }}
+  />
+  <Tab
+    label="Diploma Courses"
+    style={{
+      color: "#fff",
+      fontSize: isMobileState ? "11px" : "15px",
+      fontFamily: "Montserrat, sans-serif",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      margin:"0px auto",
+      textAlign: isMobileState ? "center" : "left",
+    }}
+  />
+</Tabs>
+
+
+                <TabPanel value={value1} index={0} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
+                  <div className='courseUpdatesl'>
+                    <ul>
+                      <li><img src={m3} alt="Duration icon"/>
+                        <span style={{color:"#000"}}>Duration: 1 Year</span></li>
+                      <li><img src={m4} alt="Eligibility icon" />
+                        <span style={{color:"#000"}}>Eligibility: 10+2 or Equivalent</span></li>
+
+
+                    </ul>
+                  </div>
+                  <Link to={"/courses/advanced-diploma-in-game-development/"}>
+                    <div className="mainCourse1">
+                      <div className="mainCourseLeft1">
+                        <img src={AdvancedDiplomainGameDevelopment} alt="Advanced Diploma in Game Development" className="img-circle" />
+                      </div>
+                      <div className="mainCourseRight1">
+                        <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>Advanced Diploma in Game Development</h2>
+                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>This comprehensive program is designed to equip students with the essential skills and knowledge required to excel in the gaming industry. Thus ensuring that students are well-prepared to create and optimize games across various platforms.</p>
+
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to={"/courses/advanced-diploma-in-3d-game-art-digital-sculpting/"}>
+                    <div className="mainCourse1">
+                      <div className="mainCourseLeft1">
+                        <img src={AdvancedDiplomain3DGameArtDigitalSculpting} alt="Advanced Diploma in 3D Game Art & Digital Sculpting" className="img-circle" />
+                      </div>
+                      <div className="mainCourseRight1">
+                        <h2 style={{ fontFamily: "'Montserrat', sans-serif" }} className="CourseHead1">Advanced Diploma in 3D Game Art & Digital Sculpting</h2>
+                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>Designed to provide students with a deep understanding of the 3D game art pipeline, this program equips students with the skills needed to create detailed and immersive game visuals.</p>
+
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to={"/courses/advanced-diploma-in-traditional-digital-art/"}>
+                    <div className="mainCourse1" style={{ marginBottom: "0px" }}>
+                      <div className="mainCourseLeft1">
+                        <img src={AdvancedDiplomainTraditionalDigitalConceptArt} alt="Advanced Diploma in Traditional & Digital Concept Art" className="img-circle" />
+                      </div>
+                      <div className="mainCourseRight1">
+                        <h2 style={{ fontFamily: "'Montserrat', sans-serif" }} className="CourseHead1">Advanced Diploma in Traditional & Digital Concept Art</h2>
+                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>Designed to develop your skills in both traditional and digital art forms, this curriculum covers essential aspects of drawing, perspective, and anatomy, progressing into advanced concepts of environment, character, and creature design.</p>
+
+                      </div>
+                    </div>
+                  </Link>
+
+                </TabPanel>
+
+                <TabPanel value={value1} index={1} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto" }}>
+                  <div className='courseUpdatesl'>
+                    <ul>
+                      <li><img src={m3} alt="Duration icon" />
+                        <span style={{color:"#000"}}>Duration: 6 months</span></li>
+                      <li><img src={m4} alt="Eligibility icon" />
+                        <span style={{color:"#000"}}>Eligibility: 10+2 or Equivalent</span></li>
+
+
+                    </ul>
+                  </div>
+                  <Link className="CourseLink1" to={"/courses/diploma-in-game-design-production/"}>
+                    <div className="mainCourse1">
+                      <div className="mainCourseLeft1">
+                        <img src={DiplomainGameDesignProduction} alt="Diploma in Game Design & Production" className="img-circle" />
+                      </div>
+                      <div className="mainCourseRight1">
+                        <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>Diploma in Game Design & Production</h2>
+                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>From understanding the history and genres of games to mastering high-level design principles and practical tools like Unity/Unreal Engine, this program covers every aspect of game design.
+                        </p>
+
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to={"/courses/diploma-in-game-development-with-unity/"}>
+                    <div className="mainCourse1">
+                      <div className="mainCourseLeft1">
+                        <img src={DiplomainGameDevelopmentwithUnity} alt="Diploma in Game Development with Unity" className="img-circle" />
+                      </div>
+                      <div className="mainCourseRight1">
+                        <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>Diploma in Game Development with Unity</h2>
+                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>With a more specialized approach, this intensive program is designed to provide students with the foundational skills and advanced techniques necessary to excel in game development using Unity Game Engine.
+                        </p>
+
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to={"/courses/diploma-in-game-development-with-unreal/"}>
+                    <div className="mainCourse1">
+                      <div className="mainCourseLeft1">
+                        <img src={bannerimgunrealc} alt="Diploma in Game Development with Unreal" className="img-circle" />
+                      </div>
+                      <div className="mainCourseRight1">
+                        <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>Diploma in Game Development with Unreal
+</h2>
+                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>With a more specialised approach, this intensive program is designed to provide students with the foundational skills and advanced techniques necessary to excel in game development using Unreal Engine.</p>
+
+                      </div>
+                    </div>
+                  </Link>
+                   <Link to={"/courses/diploma-in-3d-environment-art-creation-for-games/"}>
+                    <div className="mainCourse1" style={{ marginBottom: "0px" }}>
+                      <div className="mainCourseLeft1">
+                        <img src={Diplomain3DEnvironmentArtCreationforGames} alt="Diploma In 3D Environment Art For Games" className="img-circle" />
+                      </div>
+                      <div className="mainCourseRight1">
+                        <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>Diploma In 3D Environment Art For Games</h2>
+                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>This is a specialized program designed to equip students with the skills needed to create stunning and immersive environments for video games.</p>
+
+                      </div>
+                    </div>
+                  </Link>
+                </TabPanel>
+
+
+
+
+              </Box>
+
+              {/* <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                        <button className=" three button brand size200 w-full sm:w-auto" data-form-id="need-guidance" data-form="step1-button-continue" type="button" fdprocessedid="6qkh5h" style={{ width: "400px", fontSize: "17px" }}>DOWNLOAD CAREER GUIDE</button>
+                      </div> */}
+
+            </div>
 
             <div className='' id="">
               <FeaturedProductL />
               {/* <Awards /> */}
 
-              <div className="CousellingButton1" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>
+              <div className="CousellingButton1" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{color:"#000"}}>Enroll Now</a></div>
             </div>
 
 
-            <h2 className='mainHeadingTotall-2'>In the Media</h2>
+            <h2 className='mainHeadingTotall-2' style={{color:"#000"}}>In the Media</h2>
 
             {isMobileState ? <MIntheMedia /> :
 
@@ -511,7 +698,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
               </ul>}
 
 
-            <h2 className='mainHeadingTotall-2'>This course is for you if you…</h2>
+            <h2 className='mainHeadingTotall-2' style={{color:"#000"}}>This course is for you if you…</h2>
 
             <ul className='featuress3'>
               <li><img src={ic7} alt="ic1" />
@@ -561,7 +748,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                 </div></li>
             </ul>
 
-            <h2 className='mainHeadingTotall-2'>Learn from scratch to advanced level and build games like...</h2>
+            <h2 className='mainHeadingTotall-2' style={{color:"#000"}}>Learn from scratch to advanced level and build games like...</h2>
 
             <StudentGamesList />
             <div id="nopadding" className={isMobileState ? "CousellingButton1 ismobtest" : "CousellingButton1"} onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>
@@ -569,140 +756,9 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
 
 
-            <div id="Career-Opportunitiesl" backgroundColor="brown" height="auto">
-              <h2 className='mainHeadingTotall-2'>What will you learn?</h2>
+         
 
-              <Box >
-                <Tabs
-                  TabIndicatorProps={{ style: { border: "1px solid #222", background: '#222', display: "flex", alignItems: "center", justifyContent: "center" } }}
-                  value={value1}
-                  onChange={handleChange1}
-                  variant="scrollable"
-                  scrollButtons="auto"
-                  aria-label="scrollable auto tabs example"
-                  className='tabcenter'
-                  style={{ background: "#222", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", width: isMobileState ? "100%" : "fit-content", margin: "0px auto" }}
-
-                >
-                  <Tab style={{ color: "#fff", fontSize: isMobileState ? "11px" : "15px", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center" }} label="Advanced Diploma Courses" />
-                  <Tab style={{ color: "#fff", fontSize: isMobileState ? "11px" : "15px", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center" }} label="Diploma Courses" />
-
-                </Tabs>
-
-                <TabPanel value={value1} index={0} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
-                  <div className='courseUpdatesl'>
-                    <ul>
-                      <li><img src={m1} alt="Duration icon"/>
-                        <span>Duration: 1 Year</span></li>
-                      <li><img src={m2} alt="Eligibility icon" />
-                        <span>Eligibility: 10+2 or Equivalent</span></li>
-
-
-                    </ul>
-                  </div>
-                  <Link to={"/courses/advanced-diploma-in-game-development/"}>
-                    <div className="mainCourse1">
-                      <div className="mainCourseLeft1">
-                        <img src={AdvancedDiplomainGameDevelopment} alt="Advanced Diploma in Game Development" className="img-circle" />
-                      </div>
-                      <div className="mainCourseRight1">
-                        <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>Advanced Diploma in Game Development</h2>
-                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>This comprehensive program is designed to equip students with the essential skills and knowledge required to excel in the gaming industry. Thus ensuring that students are well-prepared to create and optimize games across various platforms.</p>
-
-                      </div>
-                    </div>
-                  </Link>
-                  <Link to={"/courses/advanced-diploma-in-3d-game-art-digital-sculpting/"}>
-                    <div className="mainCourse1">
-                      <div className="mainCourseLeft1">
-                        <img src={AdvancedDiplomain3DGameArtDigitalSculpting} alt="Advanced Diploma in 3D Game Art & Digital Sculpting" className="img-circle" />
-                      </div>
-                      <div className="mainCourseRight1">
-                        <h2 style={{ fontFamily: "'Montserrat', sans-serif" }} className="CourseHead1">Advanced Diploma in 3D Game Art & Digital Sculpting</h2>
-                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>Designed to provide students with a deep understanding of the 3D game art pipeline, this program equips students with the skills needed to create detailed and immersive game visuals.</p>
-
-                      </div>
-                    </div>
-                  </Link>
-                  <Link to={"/courses/advanced-diploma-in-traditional-digital-art/"}>
-                    <div className="mainCourse1" style={{ marginBottom: "0px" }}>
-                      <div className="mainCourseLeft1">
-                        <img src={AdvancedDiplomainTraditionalDigitalConceptArt} alt="Advanced Diploma in Traditional & Digital Concept Art" className="img-circle" />
-                      </div>
-                      <div className="mainCourseRight1">
-                        <h2 style={{ fontFamily: "'Montserrat', sans-serif" }} className="CourseHead1">Advanced Diploma in Traditional & Digital Concept Art</h2>
-                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>Designed to develop your skills in both traditional and digital art forms, this curriculum covers essential aspects of drawing, perspective, and anatomy, progressing into advanced concepts of environment, character, and creature design.</p>
-
-                      </div>
-                    </div>
-                  </Link>
-
-                </TabPanel>
-
-                <TabPanel value={value1} index={1} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto" }}>
-                  <div className='courseUpdatesl'>
-                    <ul>
-                      <li><img src={m1} alt="Duration icon" />
-                        <span>Duration: 6 months</span></li>
-                      <li><img src={m2} alt="Eligibility icon" />
-                        <span>Eligibility: 10+2 or Equivalent</span></li>
-
-
-                    </ul>
-                  </div>
-                  <Link className="CourseLink1" to={"/courses/diploma-in-game-design-production/"}>
-                    <div className="mainCourse1">
-                      <div className="mainCourseLeft1">
-                        <img src={DiplomainGameDesignProduction} alt="Diploma in Game Design & Production" className="img-circle" />
-                      </div>
-                      <div className="mainCourseRight1">
-                        <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>Diploma in Game Design & Production</h2>
-                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>From understanding the history and genres of games to mastering high-level design principles and practical tools like Unity/Unreal Engine, this program covers every aspect of game design.
-                        </p>
-
-                      </div>
-                    </div>
-                  </Link>
-                  <Link to={"/courses/diploma-in-game-development-with-unity/"}>
-                    <div className="mainCourse1">
-                      <div className="mainCourseLeft1">
-                        <img src={DiplomainGameDevelopmentwithUnity} alt="Diploma in Game Development with Unity" className="img-circle" />
-                      </div>
-                      <div className="mainCourseRight1">
-                        <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>Diploma in Game Development with Unity</h2>
-                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>With a more specialized approach, this intensive program is designed to provide students with the foundational skills and advanced techniques necessary to excel in game development using Unity Game Engine.
-                        </p>
-
-                      </div>
-                    </div>
-                  </Link>
-                  <Link to={"/courses/diploma-in-3d-environment-art-creation-for-games/"}>
-                    <div className="mainCourse1" style={{ marginBottom: "0px" }}>
-                      <div className="mainCourseLeft1">
-                        <img src={Diplomain3DEnvironmentArtCreationforGames} alt="Diploma In 3D Environment Art For Games" className="img-circle" />
-                      </div>
-                      <div className="mainCourseRight1">
-                        <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>Diploma In 3D Environment Art For Games</h2>
-                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>This is a specialized program designed to equip students with the skills needed to create stunning and immersive environments for video games.</p>
-
-                      </div>
-                    </div>
-                  </Link>
-                </TabPanel>
-
-
-
-
-              </Box>
-
-              {/* <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                        <button className=" three button brand size200 w-full sm:w-auto" data-form-id="need-guidance" data-form="step1-button-continue" type="button" fdprocessedid="6qkh5h" style={{ width: "400px", fontSize: "17px" }}>DOWNLOAD CAREER GUIDE</button>
-                      </div> */}
-
-            </div>
-
-
-            <h2 className='mainHeadingTotall-2'>Our Students are working in Countries Like
+            <h2 className='mainHeadingTotall-2'style={{color:"#000"}}>Our Students are working in Countries Like
             </h2>
 
             <div style={{ margin: '0px auto' }}>
@@ -727,7 +783,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                   {isMobileState ? '' : <div className='CountryLogos-2'>Sweden</div>}</li>
               </ul>
             </div>
-            <h2 className='mainHeadingTotall-2'>Our Students are working at Companies like</h2>
+            <h2 className='mainHeadingTotall-2'style={{color:"#000"}}>Our Students are working at Companies like</h2>
 
             <Marquee speed={100} style={{ Padding: "0px 20px" }} className='recuitersList-20'>
               <img alt="rec1" src={r1} width={"300"} height={"81"} />
@@ -740,8 +796,8 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
             </Marquee>
 
-            <div id="nopadding" className="CousellingButton1 TestM" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>
-            <h2 className='mainHeadingTotall-2'>FAQ's</h2>
+            <div id="nopadding" className="CousellingButton1 TestM" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{color:"#fff"}}>Enroll Now</a></div>
+            <h2 className='mainHeadingTotall-2' style={{color:"#000"}}>FAQ's</h2>
 
             <div className="faq-container">
               {faqData.map((faq, index) => (
@@ -825,18 +881,18 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
 
 
-            <div className='fom-ad-2' id="CounsellingOnGamingCareer">
+            <div className='fom-ad-2' id="CounsellingOnGamingCareer" style={{marginBottom:"30px"}}>
 
 
-              <div className='containers-2'>
+              <div className='containers-2' style={{backgroundColor:"#f9fafb", padding:"0px"}}>
 
 
-
+  <h3 className="mainHeadingTotal-form" style={{color:"#fff", padding:"20px", fontSize:"22px"}}>Get <b>a Counselling</b> Session on Gaming Career</h3>
 
 
                 <form onSubmit={handleSubmit} className="formMain">
 
-                  <p className="suprtsMobiless">Get <b>a Counselling</b> Session on Gaming Career</p>
+                
                   <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
 
 
@@ -962,7 +1018,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
         </div>
       </div>
       {isButtonVisible && (
-        <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>)}
+        <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Enroll Now</a></div>)}
    <div className="App">
         <ReactWhatsappButton
           countryCode="91"
@@ -977,4 +1033,3 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 }
 
 export default DiplomaAndAdvancedDiplomaCourses;
-

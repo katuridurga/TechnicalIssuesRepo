@@ -2,17 +2,17 @@ import React, { useState, useEffect } from "react";
 import "./HomeContent.css";
 import "./FeaturedProducts.css";
 import axios from 'axios';
-import awic from '../assets/img/banners/global-network.png';
+import awic from '../assets/img/banners/global-networkn.webp';
 import { useForm } from 'react-hook-form';
 import { TextField } from '@mui/material';
 import styled from 'styled-components';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import awic1 from '../assets/img/banners/expert.png';
-import awic2 from '../assets/img/banners/medal.png';
-import awic3 from '../assets/img/banners/mindset.png';
-import awic4 from '../assets/img/banners/loan-to-value.png';
-import awic5 from '../assets/img/banners/business-man.png';
+import awic1 from '../assets/img/banners/expertn.webp';
+import awic2 from '../assets/img/banners/medaln.webp';
+import awic3 from '../assets/img/banners/mindsetn.webp';
+import awic4 from '../assets/img/banners/loan-to-valuen.webp';
+import awic5 from '../assets/img/banners/business-mann.webp';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -22,6 +22,7 @@ import Slide from '@mui/material/Slide';
 import { useSelector, shallowEqual } from "react-redux";
 import Autocomplete from '@mui/material/Autocomplete';
 import { Helmet } from "react-helmet";
+import { boxShadow } from "../assets/jss/material-dashboard-react";
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -74,7 +75,7 @@ function HomeContent() {
     advancedDiploma: [
       { value: "gd", label: " Game Development" },
       { value: "3dgame", label: "3D Game Art & Digital Sculpting" },
-      { value: "tdca", label: "Traditional & Digital Concept Art" }
+      // { value: "tdca", label: "Traditional & Digital Concept Art" }
     ],
 
     diploma: [
@@ -82,6 +83,7 @@ function HomeContent() {
       { value: "gdu", label: "Game Development with Unity" },
       { value: "3dart", label: "3D Environment Art For Games" },
       { value: 'gdunreal', label: 'Game Development with Unreal' },
+       { value: 'dvra', label: 'VR Application Development' },
     ]
   };
 
@@ -282,48 +284,61 @@ function HomeContent() {
           <div className="tuitiona-aid-sectionsLeft left1">
 
             <div className="show-grid desg">
-              <h3 className="mainHeadingTotal">
-                Why choose us?
+              <h3 className="mainHeadingTotal3">
+                Why choose backstagepass?
               </h3>
               <div className="maind">
 
-                <div className="left w-100 icn" style={{ width: isMobileState ? "95%" : "100%" }}>
+                <div className="bgchange left w-100 icn" style={{ width: isMobileState ? "95%" : "100%" }}>
                   <div style={{
-                      border: "1px solid #fff",
-                      height: "40px",
-                      width: "40px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      borderRadius: "50%",
-                      background: "#fff",
-                      overflow: "hidden",
-                  }}><LazyLoadImage  effect="blur"
-                  src={awic2}
-                  alt="icon"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    maxWidth: "24px",
-                    maxHeight: "24px",
-                    objectFit: "contain",
-                    display: "block",
-                  }} /></div>
+                       flexShrink: "0",
+    position: "relative",
+    background: "#fff",
+    borderRadius: "50%",
+    padding: "10px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "40px",
+    height: "40px",
+    boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
+                  }}><LazyLoadImage effect="blur"
+                    src={awic2}
+                    alt="icon"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      maxWidth: "30px",
+                      maxHeight: "30px",
+                      objectFit: "contain",
+                      display: "block",
+                    }} /></div>
                   <div className="mainic" style={{ marginLeft: isMobileState ? "10px" : "5px", width: "90%" }}>
                     <p className="suprts">#1 Gaming Institute</p>
                     Specialized education in gaming with industry-aligned curriculum
                   </div>
                 </div>
-                <div className="left w-100 icn" style={{ width: isMobileState ? "95%" : "100%" }}>
+                <div className="bgchange left w-100 icn" style={{ width: isMobileState ? "95%" : "100%" }}>
                   <div style={{
-                    border: "1px solid#fff", height: "40px", display: "flex",
-                    justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
-                  }}><LazyLoadImage effect="blur"   width="30" height="30" src={awic} alt="icons" style={{ width: "100%",
+                      flexShrink: "0",
+    position: "relative",
+    background: "#fff",
+    borderRadius: "50%",
+    padding: "10px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "40px",
+    height: "40px",
+    boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
+                  }}><LazyLoadImage effect="blur" width="30" height="30" src={awic} alt="icons" style={{
+                    width: "100%",
                     height: "100%",
-                    maxWidth: "24px",
-                    maxHeight: "24px",
+                    maxWidth: "30px",
+                    maxHeight: "30px",
                     objectFit: "contain",
-                    display: "block", }} /></div>
+                    display: "block",
+                  }} /></div>
                   <div className="mainic" style={{ marginLeft: isMobileState ? "10px" : "5px", width: "90%" }}>
                     <p className="suprts">Industry Exposure</p>
 
@@ -331,31 +346,53 @@ function HomeContent() {
 
               </div>
               <div className="maind">
-                <div className="left w-100 icn" style={{ width: isMobileState ? "95%" : "100%" }}>
+                <div className="bgchange left w-100 icn" style={{ width: isMobileState ? "95%" : "100%" }}>
                   <div style={{
-                    border: "1px solid#fff", height: "40px", display: "flex",
-                    justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
-                  }}><LazyLoadImage effect="blur"   width="30" height="30" src={awic1} alt="icons" style={{       width: "100%",
+                      flexShrink: "0",
+    position: "relative",
+    background: "#fff",
+    borderRadius: "50%",
+    padding: "10px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "40px",
+    height: "40px",
+    boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
+                  }}><LazyLoadImage effect="blur" width="30" height="30" src={awic1} alt="icons" style={{
+                    width: "100%",
                     height: "100%",
-                    maxWidth: "24px",
-                    maxHeight: "24px",
+                    maxWidth: "30px",
+                    maxHeight: "30px",
                     objectFit: "contain",
-                    display: "block",}} /></div>
+                    display: "block",
+                  }} /></div>
                   <div className="mainic" style={{ marginLeft: isMobileState ? "10px" : "5px", width: "90%" }}>
                     <p className="suprts">Industry-experienced Mentors</p>
 
                     Guidance from industry veterans with an experience of 10+ years</div>
                 </div>
-                <div className="left w-100 icn" style={{ width: isMobileState ? "95%" : "100%" }}>
+                <div className="bgchange left w-100 icn" style={{ width: isMobileState ? "95%" : "100%" }}>
                   <div style={{
-                    border: "1px solid#fff", height: "40px", display: "flex",
-                    justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
-                  }}><LazyLoadImage effect="blur"   width="30" height="30" src={awic3} alt="icons" style={{       width: "100%",
+                      flexShrink: "0",
+    position: "relative",
+    background: "#fff",
+    borderRadius: "50%",
+    padding: "10px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "40px",
+    height: "40px",
+    boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
+                  }}><LazyLoadImage effect="blur" width="30" height="30" src={awic3} alt="icons" style={{
+                    width: "100%",
                     height: "100%",
-                    maxWidth: "24px",
-                    maxHeight: "24px",
+                    maxWidth: "30px",
+                    maxHeight: "30px",
                     objectFit: "contain",
-                    display: "block", }} /></div>
+                    display: "block",
+                  }} /></div>
                   <div className="mainic" style={{ marginLeft: isMobileState ? "10px" : "5px", width: "90%" }}>
                     <p className="suprts">Hands-on Learning</p>
 
@@ -363,32 +400,54 @@ function HomeContent() {
                   </div></div>
               </div>
               <div className="maind">
-                <div className="left w-100 icn" style={{ width: isMobileState ? "95%" : "100%" }}>
+                <div className="bgchange left w-100 icn" style={{ width: isMobileState ? "95%" : "100%" }}>
                   <div style={{
-                    border: "1px solid#fff", height: "40px", display: "flex",
-                    justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
-                  }}><LazyLoadImage effect="blur"   width="30" height="30" src={awic4} alt="icons" style={{       width: "100%",
+                     flexShrink: "0",
+    position: "relative",
+    background: "#fff",
+    borderRadius: "50%",
+    padding: "10px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "40px",
+    height: "40px",
+    boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
+                  }}><LazyLoadImage effect="blur" width="30" height="30" src={awic4} alt="icons" style={{
+                    width: "100%",
                     height: "100%",
-                    maxWidth: "24px",
-                    maxHeight: "24px",
+                    maxWidth: "30px",
+                    maxHeight: "30px",
                     objectFit: "contain",
-                    display: "block", }} /></div>
+                    display: "block",
+                  }} /></div>
                   <div className="mainic" style={{ marginLeft: isMobileState ? "10px" : "5px", width: "90%" }}>
                     <p className="suprts">Financial Aid</p>
 
                     Flexible financial aid options for affordable quality learning
                   </div>
                 </div>
-                <div className="left w-100 icn" style={{ width: isMobileState ? "95%" : "100%" }}>
+                <div className="bgchange left w-100 icn" style={{ width: isMobileState ? "95%" : "100%" }}>
                   <div style={{
-                    border: "1px solid#fff", height: "40px", display: "flex",
-                    justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
-                  }}><LazyLoadImage effect="blur"   width="30" height="30" src={awic5} alt="icons" style={{      width: "100%",
+                     flexShrink: "0",
+    position: "relative",
+    background: "#fff",
+    borderRadius: "50%",
+    padding: "10px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "40px",
+    height: "40px",
+    boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
+                  }}><LazyLoadImage effect="blur" width="30" height="30" src={awic5} alt="icons" style={{
+                    width: "100%",
                     height: "100%",
-                    maxWidth: "24px",
-                    maxHeight: "24px",
+                    maxWidth: "30px",
+                    maxHeight: "30px",
                     objectFit: "contain",
-                    display: "block", }} /></div>
+                    display: "block",
+                  }} /></div>
                   <div className="mainic" style={{ marginLeft: isMobileState ? "10px" : "5px", width: "90%" }}>
                     <p className="suprts">Professional Readiness</p>
 
@@ -405,7 +464,7 @@ function HomeContent() {
 
           <div className="hidden md:block md:flex-1 self-start form-stcc">
 
-            <h3 className="mainHeadingTotal">
+            <h3 className="mainHeadingTotal3">
               Enquire now
             </h3>
 
@@ -444,25 +503,43 @@ function HomeContent() {
                     loading={loading}
                     loadingText="Loading cities..."
                     renderInput={(params) => (
-                      <StyledTextField
-                        {...params}
-                        required
-                        variant="outlined"
-                        placeholder="City"
-                        InputLabelProps={{
-                          sx: {
-                            color: 'white',
-                            background: '#222222',
-                            px: 1,
-                            '& .MuiInputLabel-asterisk': {
-                              color: 'red',
-                              fontSize: '21px',
-                            },
-                          },
-                        }}
-                      />
-                    )}
-                  />
+                        <StyledTextField
+        {...params}
+        required
+        variant="outlined"
+        placeholder="City"
+        InputLabelProps={{
+          sx: {
+            color: "#5a555a",              
+            "&.Mui-focused": { color: "#5a555a" }, 
+            "& .MuiInputLabel-asterisk": {
+              color: "red",
+              fontSize: "21px",
+            },
+          },
+        }}
+        InputProps={{
+          ...params.InputProps,
+          sx: {
+            color: "#5a555a",              
+            "& .MuiOutlinedInput-notchedOutline": {
+              borderColor: "#5a555a",      
+            },
+            "&:hover .MuiOutlinedInput-notchedOutline": {
+              borderColor: "#5a555a",      
+            },
+            "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+              borderColor: "#5a555a",      
+            },
+            "& input::placeholder": {
+              color: "#5a555a",             
+              opacity: 1,
+            },
+          },
+        }}
+      />
+    )}
+  />
                 </div>
 
               </div>

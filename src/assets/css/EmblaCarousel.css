@@ -1,0 +1,202 @@
+.emblabuzz {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.embla__viewportbuzz {
+  overflow: hidden; /* Keep this to control slide scroll */
+  width: 100%;
+}
+
+.embla__containerbuzz {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Show 3 slides per view */
+.embla__slidebuzz {
+  flex: 0 0 calc(100% / 3 - 1rem);
+  position: relative;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  overflow: visible; /* ✅ allows image to pop out */
+  z-index: 1;
+}
+
+.embla__slide__imgbuzz {
+  width: 100%;
+  height:22rem !important;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-origin: center center;
+}
+
+/* 💥 True pop-out hover effect */
+.embla__slidebuzz:hover {
+  z-index: 5; /* ✅ ensures hover card appears above others */
+}
+
+.embla__image-wrapper {
+
+  position: relative;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+height: 100%;
+width:100%;
+}
+
+
+/* ✅ Pop-out only image */
+
+.embla__slidebuzz:hover .embla__image-wrapper {
+
+  transform: scale(1.1);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+
+  z-index: 5;
+
+}
+
+
+.embla__slidebuzz:hover .embla__slide__imgbuzz {
+  transform: scale(1.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+.embla__captionbuzz:hover {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 15px 20px;
+  text-align: center;
+  border-radius: 0 0 12px 12px;
+  box-sizing: border-box;
+  transition: background 0.3s ease;
+}
+/* Caption styling */
+.embla__captionbuzz {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 15px 20px;
+  text-align: center;
+  border-radius: 0 0 12px 12px;
+  box-sizing: border-box;
+  transition: background 0.3s ease;
+}
+
+.embla__slidebuzz:hover .embla__captionbuzz {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/* Navigation controls */
+.embla__controlsbuzz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 1.2rem;
+}
+
+.embla__buttonbuzz {
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.embla__buttonbuzz:hover {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+
+/* Arrows positioning */
+.embla__buttonbuzz {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect for buttons */
+.embla__buttonbuzz:hover {
+  background: rgba(0, 0, 0, 0.85);
+  transform: translateY(-50%) scale(1.1);
+  color:#fff !important;
+}
+
+/* Left arrow */
+.embla__buttonbuzz--prev {
+  left: 10px;
+}
+
+/* Right arrow */
+.embla__buttonbuzz--next {
+  right: 10px;
+}
+
+/* Optional: hide on small screens */
+@media (max-width: 768px) {
+  .embla__buttonbuzz {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+  
+  .embla__slidebuzz {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100% / 1 - 1rem) !important;
+    position: relative;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    overflow:scroll !important;
+    scrollbar-width: thin !important;
+    z-index: 1;
+}
+.embla__slide__imgbuzz {
+    width: 100%;
+    height: 28rem !important;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-origin: center center;
+}
+}

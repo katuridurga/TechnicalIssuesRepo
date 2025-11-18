@@ -7,7 +7,7 @@ import  {useSelector, shallowEqual}  from "react-redux";
 const ulStyle = {
   listStyleType: 'disc',  // Set the bullet point style
    paddingLeft: '200px', 
-  color:'#fff', 
+  color:'#000', 
   // textAlign:'center',  // Indentation for the bullets
 };
 
@@ -15,7 +15,7 @@ const liStyle = {
   marginBottom: '8px',    // Space between each bullet point
   fontSize: '16px', 
   // paddingLeft: '200px', 
-  color:'#fff', 
+  color:'#000', 
   
   //textAlign:'center',      // Font size for the list items
 };
@@ -154,8 +154,8 @@ function Courses(props) {
        <li style={liStyle}><a href="/life-at-bsp/accelerator-program/">Accelerator Program</a></li>
        <li style={liStyle}><a href="/life-at-bsp/facilities/">Hostel Facilities</a></li>
        </ul>
-       <li style={{marginBottom:"10px"}}><span style={boldStyle}><a href="/blogs/" style={{color:"#fff"}}>Blogs</a></span>  </li>
-       <li><span style={boldStyle}><a href="/contactus/" style={{color:"#fff"}}>Contact Us</a></span></li>    
+       <li style={{marginBottom:"10px"}}><span style={boldStyle}><a href="/blogs/" style={{color:"#000"}}>Blogs</a></span>  </li>
+       <li><span style={boldStyle}><a href="/contactus/" style={{color:"#000"}}>Contact Us</a></span></li>    
         </ul>
         </div>
         </div>

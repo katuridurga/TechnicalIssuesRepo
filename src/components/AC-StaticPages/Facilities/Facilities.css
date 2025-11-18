@@ -2,9 +2,9 @@
   width: 90%;
   margin: 0 auto;
   margin-bottom: 30px;
-  color: #fff;
+  color: #000;
   text-align: left;
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 500;
   margin-top: 30px;
   display: flex;
@@ -124,7 +124,7 @@
   width: 100%;
 
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   padding-left: 3%;
   flex-direction: column;
@@ -137,10 +137,11 @@
   padding: 2px;
   margin-bottom: 0px;
   margin: 0 auto;
-  background: #222;
+  box-shadow: 10px 5px 15px 15px rgba(0, 0, 0, 0.1);
+  background: #f9fafb;
 }
 .mainCourseRight1 p {
-  color: #fff;
+  color: #000;
   font-size: 19px;
   text-transform: math-auto;
   font-weight: 500;
@@ -150,7 +151,7 @@
   width: 90%;
 }
 .mainCourseRight1 h2 {
-  color: #fff;
+  color: #ec1923;
   font-size: 27px;
   text-transform: uppercase;
   font-weight: 700;
@@ -160,7 +161,8 @@
   align-items: center;
 }
 .mainCourseRight1 h2 svg{
-  margin-right: 10px;
+  margin-right: 20px;
+  color:#ec1923
 }
 .benfits1{
   width: 100%;
@@ -169,8 +171,9 @@
   justify-content: center;
   flex-direction: column;
   margin-bottom: 20px;
-  background: #222;
-  padding: 20px;
+  background: #f9fafb;
+  padding: 20px;  
+
 }
 .benfitIcon1{
   width: 50px;
@@ -178,18 +181,18 @@
   margin-right: 7px;
 }
 .benfitIcon1 img{
-  width: 100%;
+  width: 90%;
 }
 .benfitContent1 {
-  height: 60px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0px 20px;
-  color: #fff;
+  padding: 0px 0px;
+  color: #000;
   border-radius: 10px;
   width: 1000px;
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 500;
 }
 .benfits1 li {
@@ -199,18 +202,19 @@
   margin-bottom: 10px;
 }
 .HostelMain1{
-  width: 600px;
+  width: 545px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
     padding: 18px;
    border:1px solid#666;
     padding: 18px;
     border-radius: 14px;
+    color:#000;
 }
 .HostelMainleft{
-  color: #fff;
+  color: #000;
   font-size: 22px;
 }
 .HostelMainright a{
@@ -235,7 +239,7 @@
 
   }
   .HostelMainleft {
-    color: #fff;
+    color: #000;
     font-size: 22px;
     height: 150px;
     padding: 20px 0px;
@@ -247,9 +251,9 @@
     width: 90%;
     margin: 0 auto;
     margin-bottom: 30px;
-    color: #fff;
+    color: #000;
     text-align: left;
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 500;
     margin-top: 30px;
     display: flex;
@@ -257,7 +261,7 @@
     justify-content: center;
 }
 .mainCourseRight1 p {
-  color: #fff;
+  color: #000;
   font-size: 18px;
   text-transform: math-auto;
   font-weight: 500;
@@ -278,7 +282,7 @@
   align-items: center;
   justify-content: flex-start;
   padding: 0px;
-  color: #fff;
+  color: #000;
   border-radius: 10px;
   width: 100%;
   font-size: 16px;
@@ -292,7 +296,7 @@
   justify-content: center;
   flex-direction: column;
   margin-bottom: 20px;
-  background: #222;
+  background: #f9fafb;
   /* padding: 20px; */
 }
 .HostelMain1 {

@@ -670,11 +670,11 @@ font-size:20px;
 }
 .courseUpdatess ul{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 40px;
-    width: 80%;
-    margin-top: -64px;
-    column-gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 0px;
+    width: 90%;
+    margin-top: 0px;
+    column-gap: 0px;
     margin-bottom: 40px;
   }
   
@@ -683,23 +683,24 @@ font-size:20px;
     flex-direction: column;
     align-items: center;
     justify-content: center; */
-    border: 2px solid #222;
+    border: 2px solid #f9fafb;
     height: 360px;
-    background: #222;
+    background: #f9fafb;
     color: #fff;
     border-radius: 15px;
     width: 100%;
     padding: 20px;
-    box-shadow: 0 0 10px -10px #bfb8b8;
-
+   box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
+margin: 0 auto 0 0% !important;
 }
 .mainbtn iframe{
   border-radius: 10px;
 }
 .enqhd{
-  font-size: 24px !important;
+  font-size: 21px !important;
   font-weight: 900 !important;
   margin-top: 0px !important;
+  margin-bottom: 7px;
 }
   .courseUpdatess ul li img {
     width: 80px;
@@ -709,16 +710,16 @@ font-size:20px;
     animation: updown 3s ease infinite;
 }
 .courseUpdatess ul li p {
-    font-size: 19px;
-    font-weight: 500;
+    font-size: 17px;
+    font-weight: 400;
     text-align: center;
-    color: #fff;
+    color: #000;
     margin: 10px 0px;
 }
 .courseUpdatess{
 display: flex;
-align-items: center;
-justify-content: center;
+align-items: flex-start;
+justify-content: flex-start;
 color: #fff;
 position: relative;
 z-index: 99;
@@ -1048,6 +1049,15 @@ z-index: 99;
     .courses-container {
       width: 90%;
     }
+    .faqquestion {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    text-align: left;
+    width: 100%!important;
+    margin: 0;
+    padding: 4px 15px;
+}
   }
   
   #chapter122 {
@@ -2410,3 +2420,121 @@ z-index: 99;
 .plucon .pluin svg{
     color:#fff !important;
   }
+  .iconsv svg{
+    color:#000;
+    font-size: 20px;
+  }
+  .iconsv button:hover{
+    color:#000 !important;
+  }
+  .faqquestion{
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    text-align: left;
+    width: 75%;
+    margin: 0;
+    padding: 4px 15px;
+  }
+  .faqa{
+     font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    text-align: left;
+    width: 100%;
+    margin: 0px auto;
+    padding: 4px;
+  }
+  .iconsv{
+    padding: 30px 0px;
+  }
+  .faqcontact button{
+    padding: 20px 15px 15px;
+  }
+  
+@media only screen and (max-width : 1024px) {
+  
+  .ic-sty{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .faqquestion {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    text-align: left;
+    width: 100% !important;
+    margin: 0;
+    padding: 4px 15px;
+}
+}
+.spcear {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 60px;  /* equal space on left */
+  padding-right: 60px; /* equal space on right */
+  gap: 40px;           /* space between left and right sections */
+  box-sizing: border-box;
+}
+.spcear {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.spcear ul {
+  display: flex;
+  justify-content: center; /* centers the 3 li horizontally */
+  align-items: center;  
+  gap: 25px; /* space between li cards */
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px; /* centers within page width */
+}
+
+.spcear ul li {
+  flex: 1 1 30%; /* 3 cards per row, equal width */
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 25px 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* equal height content distribution */
+  min-width: 380px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Optional hover effect */
+.spcear ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+/* Ensures all p tags inside li don’t stretch unevenly */
+.spcear ul li h3 {
+  flex-grow: 1;
+  color: #ee1b24;
+}
+
+/* Responsive view (stack vertically) */
+@media (max-width: 900px) {
+  .spcear ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .spcear ul li {
+    width: 90%;
+    max-width: 500px;
+  }
+}
+

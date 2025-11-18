@@ -159,7 +159,7 @@ function HomeContent() {
 
             <div className="hidden md:block md:flex-1 self-start form-stcc">
 
-              <h3 className="mainHeadingTotal">
+              <h3 className="mainHeadingTotal3">
                 Enquire now
               </h3>
 
