@@ -737,7 +737,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
                       rows="6"
                       maxLength={40}
-                      style={{ color: 'white' }}
+                      style={{ color: '#5a555a' }}
                       title="max 40 characters allowed"
                     ></textarea>
                     <small style={{ color: '#888', fontSize: '12px' }}>Allow maximum 40 characters</small>
@@ -894,7 +894,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
                       rows="6"
                       maxLength={40}
-                      style={{ color: 'white' }}
+                      style={{ color: '#5a555a' }}
                       title="max 40 characters allowed"
                     ></textarea>
                     <small style={{ color: '#888', fontSize: '12px' }}>Allow maximum 40 characters</small>

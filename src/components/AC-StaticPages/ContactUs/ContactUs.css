@@ -2453,6 +2453,9 @@ z-index: 99;
   }
   
 @media only screen and (max-width : 1024px) {
+  .iconsv{
+    padding: 0px 0px !important;
+  }
   
   .ic-sty{
     display: flex;

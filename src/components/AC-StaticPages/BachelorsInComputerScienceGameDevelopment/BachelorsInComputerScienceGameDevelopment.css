@@ -96,7 +96,7 @@
   
 .info-title {
   display: block;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   color: #000;
   transform: skew(0deg);
@@ -307,9 +307,13 @@ h3.courses-title {
    padding: 20px;
   }
   .overviewsection{
-    width:100%;
+    width:100% !important;
     background: #f9fafb;
     box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
+  }
+    .overviewsection p{
+    width:100% !important;
+ 
   }
   .curriculum-section ul{
   list-style: none;

@@ -69,6 +69,25 @@
   padding: 8px;
 }
 @media only screen and (max-width : 1024px){
+  .photos .ph::after {
+    content: attr(data-type);
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    transform: translateX(120%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform .36s ease, opacity .28s ease;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 10px !important;
+    font-weight: 600;
+    white-space: nowrap;
+    border-top-left-radius: 6px;
+    pointer-events: none;
+    z-index: 9999;
+}
   
 .viewmore-btn-wrapper {
 display: none !important;

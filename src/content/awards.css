@@ -834,7 +834,7 @@ width: 65%;
     flex: 0 0 100%; /* Prevent multiple from fitting */
     margin-right: 10px;
     scroll-snap-align: center; /* Snap the card to center on scroll */
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .cardsgawardh img {
     width: 100%;

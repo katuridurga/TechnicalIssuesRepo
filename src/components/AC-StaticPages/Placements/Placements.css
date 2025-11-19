@@ -299,6 +299,7 @@ div.courses-title {
   .faqquestion {
     font-size: 15px !important;
     line-height: 22px !important;
+    text-align: left !important;
   }
 
   .btnplus span {

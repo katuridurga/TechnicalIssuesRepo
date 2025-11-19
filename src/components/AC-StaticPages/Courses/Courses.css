@@ -225,6 +225,10 @@ svg#curve {
 }
 
 @media only screen and (max-width: 1020px) and (min-width: 320px) {
+    .programs-section {
+    padding: 0px 0px 30px !important;
+    background-color: #ffffff;
+}
     .site-content {
         width: 100% !important;
         margin: auto;

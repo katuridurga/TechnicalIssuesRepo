@@ -602,7 +602,7 @@ function Courses(props) {
 
                 rows="6"
                 maxLength={40}
-                style={{ color: 'white' }}
+                style={{ color: '#5a555a' }}
                 title="max 40 characters allowed"
               ></textarea>
             </div>

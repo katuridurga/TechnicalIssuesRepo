@@ -318,7 +318,7 @@ backgroundPosition: isShortHeight? "top":"center",marginTop:isShortHeight? "10px
                         </div>
                         <div className="bottomFootRight">
                           <a href="/enquire-now/">
-                            <FaPaperPlane /> Apply Now
+                            <FaPaperPlane style={{color:"#fff"}}/> Apply Now
                           </a>
                         </div>
                       </div>

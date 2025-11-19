@@ -82,7 +82,7 @@ function HomeContent() {
           {counterState && <CountUp start={0} end={15} duration={5} />}
         </div>
             
-            <p>Years of Excellence</p>
+            <p style={{textAlign:"left"}}>Years of Excellence</p>
           </div>
         </div>
       </div>
@@ -161,7 +161,7 @@ function HomeContent() {
    {counterState && <CountUp start={0} end={100} duration={5} />}         <span className="plus">%</span>
         </div>
            
-            <p>Placement Support</p>
+            <p style={{textAlign:"left"}}>Placement Support</p>
           </div>
         </div>
       </div>

@@ -358,6 +358,11 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .pr9 {
+    position: relative;
+    z-index: 1;
+    min-height: 460px !important;
+}
   .breadcrumbs{
 
   display: flex;
@@ -379,7 +384,7 @@
   }
 
   .courseHeading {
-    font-size: 28px !important;
+    font-size: 24px !important;
     font-weight: 900;
     margin: 30px 0px 30px 0px;
     color: #ec1923;
@@ -705,6 +710,7 @@
   .mobile-menumt li a {
     color: #000;
     font-weight: 600;
+    font-size: 15px;
   }
 
   .mobile-menumt h1 {
@@ -1340,7 +1346,7 @@
 .embla__controls {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 0rem;
   gap: 1rem;
 }
 
@@ -2455,7 +2461,7 @@
 
 .siva {
   position: relative;
-  padding: 1.3rem 0;
+  padding: 0rem 0;
   text-align: center;
   overflow: hidden;
   background-position: center;
@@ -3789,7 +3795,7 @@ div.et_pb_section.et_pb_section_0 {
   background-position: top;
   height: 483px;
   top: 44px;
-  margin-bottom: 60px !important;
+  margin-bottom: 38px !important;
 }
 
 .MobileClassacctr {
@@ -6472,7 +6478,7 @@ h1 {
   margin-bottom: 10px;
   border: 1px solid #ccc !important;
   border-radius: 4px;
-  color: #fff !important;
+  color: #5a555a !important;
 }
 
 .formMaina input {
@@ -6721,7 +6727,7 @@ body {
     margin-bottom: 10px;
     border: 1px solid #ccc !important;
     border-radius: 4px;
-    color: #000 !important;
+    color: #5a555a !important;
   }
 
   .whychooseb ul li p {
@@ -9113,6 +9119,8 @@ td p {
     font-size: 11px;
     display: flex;
     align-items: flex-start;
+    text-align: left;
+  
   }
 
   .mainhdb strong {

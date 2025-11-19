@@ -10,7 +10,7 @@ import Chip from '@mui/material/Chip';
 import m5 from "../../../assets/img/Icons/flags.webp";
 import c1 from "../../../assets/img/Courses/careeroprt.webp";
 import m6 from "../../../assets/img/Icons/jams.webp";
-import m7 from "../../../assets/img/Icons/game-console.png";
+import m7 from "../../../assets/img/Icons/gameconsole.webp";
 import m8 from "../../../assets/img/Icons/team-work.webp";
 import { FaPlus, FaMinus } from "react-icons/fa";
 

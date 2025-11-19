@@ -750,7 +750,7 @@ function BlogDetail({ match }) {
 
                       rows="6"
                       maxLength={40}
-                      style={{ color: 'white' }}
+                      style={{ color: '#5a555a' }}
                       title="max 40 characters allowed"
                     ></textarea>
                     <small style={{ color: '#888', fontSize: '12px' }}>Allow maximum 40 characters</small>

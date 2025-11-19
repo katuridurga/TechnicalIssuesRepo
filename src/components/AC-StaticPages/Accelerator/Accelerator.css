@@ -516,6 +516,7 @@ margin-right:10px;
   .faqquestionacc {
     font-size: 15px !important;
     line-height: 22px !important;
+    text-align: left !important;
   }
 
   .btnplusacc span {

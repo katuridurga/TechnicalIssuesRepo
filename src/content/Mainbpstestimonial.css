@@ -206,86 +206,71 @@
 }
 
 
-/* 💡 Responsive Tweaks for Mobile */
+/* --- Mobile Fixes --- */
 @media (max-width: 768px) {
-   .maintestimonial-card {
-    flex: 0 0 100% !important;
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-    margin-right: 0px !important;
-    margin-left: 0%;
-  }
-
-
-  .maintestimonial-slider {
-    display: flex;
-    /* align-items: center;
-    justify-content: center;
-    margin: 0px auto; */
-  }
-  .maintestimonial-slider-inner::after {
-    content: "";
-    flex: 0 0 100% !important; /* gives space for last card to center */
-  }
-    .maintestimonial-slider-inner{
-  scroll-snap-align: start;
-    }
-
-  .dots {
-   display: flex;
-  overflow-x: auto;
-  flex-wrap: nowrap;
-  gap: 10px;
-  padding: 10px 0;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  margin: 10px auto;
-  }
-  .dots::-webkit-scrollbar {
-    display: none;
-  }
-
-  .dot {
-    flex: 0 0 auto; /* each dot takes 25% width, so 4 fit perfectly */
-   
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ccc;
-  }
-
-  .dot.active {
-    background-color: #333;
-  }
-  
-  .testimonial-header h3 {
-    font-size: 24px;
-    font-weight: 600;
-    text-transform: capitalize;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    line-height: 0px !important;
-    margin: 20px 0px 20px 20px !important;
-  }
 
   .maintestimonial-section {
-    background-color: #ffffff;
-    color: white;
-    padding: 0px 20px !important;
-    display: flex;
-    justify-content: center;
-    width: 100%;
     flex-direction: column !important;
-    align-items: center;
+    align-items: center !important;
+    padding: 30px 15px !important;
+  }
+
+  .testimonial-header {
+    max-width: 100% !important;
+    min-width: auto !important;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-header h3 {
+    font-size: 22px;
+    margin: 10px 0 !important;
+    line-height: 26px !important;
+    text-align: center !important;
   }
 
   .maintestimonial-slider-wrapper {
-    position: relative;
+    width: 100% !important;
+    margin: 0 auto !important;
     overflow: hidden;
-    width: 100%;
-    margin-top: 0px !important;
+  }
+
+  .maintestimonial-slider {
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    display: flex;
+  }
+
+  .maintestimonial-slider-inner {
+    display: flex;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .maintestimonial-card {
+    flex: 0 0 90% !important;
+    max-width: 90% !important;
+    scroll-snap-align: center;
+    margin: 0 auto !important;
+  }
+
+  /* dots section */
+  .dots {
+    display: flex !important;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #aaa;
+    border-radius: 50%;
+  }
+
+  .dot.active {
+    background-color: #ffc107;
   }
 }

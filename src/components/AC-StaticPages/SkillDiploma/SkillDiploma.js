@@ -216,8 +216,8 @@ function Courses(props) {
                   variant="outlined"
                   margin="normal"
                   {...register("comments")}
-                  InputLabelProps={{ style: { color: 'white' } }}
-                  sx={{ textarea: { color: 'white' }, label: { color: 'gray' }, '& .MuiOutlinedInput-root': { '& fieldset': { borderColor: 'gray' }, '&:hover fieldset': { borderColor: 'white' } }, '& .MuiFormHelperText-root': { fontSize: '1.2rem' } }}
+                  InputLabelProps={{ style: { color: '#5a555a' } }}
+                  sx={{ textarea: { color: '#5a555a' }, label: { color: 'gray' }, '& .MuiOutlinedInput-root': { '& fieldset': { borderColor: 'gray' }, '&:hover fieldset': { borderColor: 'white' } }, '& .MuiFormHelperText-root': { fontSize: '1.2rem' } }}
                 />
 
                 <Button type="submit" fullWidth variant="contained" color="primary" sx={{ mt: 2, py: 1.5, fontSize: 16 }}>
