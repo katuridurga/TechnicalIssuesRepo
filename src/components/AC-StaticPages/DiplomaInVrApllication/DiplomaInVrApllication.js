@@ -313,8 +313,8 @@ function Courses(props) {
         <h2 className='courseHeading'>Course Overview</h2>
          <div className="brname"></div>
         <p>
-     The Diploma in VR Application Development is an intensive, hands-on program crafted to prepare students for the fast-growing field of Virtual Reality. It integrates strong foundations in programming, 3D engines, and immersive application design using Unity and Unreal Engine.<br/>
-
+     The Diploma in VR Application Development is an intensive, hands-on program crafted to prepare students for the fast-growing field of Virtual Reality. It integrates strong foundations in programming, 3D engines, and immersive application design using Unity and Unreal Engine.</p>
+<p>
 Learners will explore VR development principles, user interaction, optimization for headsets, and content creation workflows—culminating in a professional portfolio showcasing real-world VR projects.
         </p>
       </div>
@@ -370,7 +370,7 @@ Learners will explore VR development principles, user interaction, optimization 
 
 
             <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb",color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
-              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"80%" }}>Career Opportunities</h2>
+              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"100%" }}>Career Opportunities</h2>
  <div className="brname"></div>
               <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
                 {faqs.map((faq, index) => (

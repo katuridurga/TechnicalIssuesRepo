@@ -140,13 +140,17 @@ function Courses(props) {
                   <br />
                   3.  <Link className="" to={"/Application-form/"} target="_blank">B.A (Hons) in Augmented Reality & Virtual Reality</Link>
                   <br />
-                  4.  <Link className="" to={"/Application-form/"} target="_blank">M.Sc Game Technology</Link><br />
-                  5.  <Link className="" to={"/Application-form/"} target="_blank">Advanced Diploma in Game Development</Link><br />
-                  6.  <Link className="" to={"/Application-form/"} target="_blank">Advanced Diploma in 3D Game Art & Digital Sculpting</Link><br />
-                  7.  <Link className="" to={"/Application-form/"} target="_blank">Advanced Diploma in Traditional & Digital Concept Art</Link><br />
-                  8.  <Link className="" to={"/Application-form/"} target="_blank">Diploma in Game Design & Production</Link><br />
-                  9.  <Link className="" to={"/Application-form/"} target="_blank">Diploma in Game Development with Unity</Link><br />
-                  10. <Link className="" to={"/Application-form/"} target="_blank">Diploma In 3D Environment Art For Games</Link><br />
+
+                  4.  <Link className="" to={"/Application-form/"} target="_blank">Advanced Diploma in Game Development</Link><br />
+                  5.  <Link className="" to={"/Application-form/"} target="_blank">Advanced Diploma in 3D Game Art & Digital Sculpting</Link><br />
+
+                  6.  <Link className="" to={"/Application-form/"} target="_blank">Diploma in Game Design & Production</Link><br />
+                  7.  <Link className="" to={"/Application-form/"} target="_blank">Diploma in Game Development with Unity</Link><br />
+                  8. <Link className="" to={"/Application-form/"} target="_blank">Diploma In Game Development with Unreal</Link><br />
+                  9. <Link className="" to={"/Application-form/"} target="_blank">Diploma In 3D Environment Art For Games</Link><br />
+                  10.<Link className="" to={"/Application-form/"} target="_blank">Diploma In VR Application Development</Link><br />
+                  11.  <Link className="" to={"/Application-form/"} target="_blank">M.Sc Game Technology</Link><br />
+                  12.  <Link className="" to={"/Application-form/"} target="_blank">M.A 3D Game Art Design</Link><br />
                 </div>
 
 

@@ -237,7 +237,7 @@ const [mainCategory, setMainCategory] = useState("");
                       renderInput={(params) => (
                         <StyledTextField
                           {...params}
-                          required
+                          
                           variant="outlined"
                           placeholder="City"
                           InputLabelProps={{

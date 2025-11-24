@@ -114,6 +114,8 @@ function Courses(props) {
 //   art1, art2, art4, art3,
 //   art1, art2, art4, art3
 // ];
+
+
 const [showMore, setShowMore] = useState(false);
 
 const gameCards = [
@@ -159,6 +161,60 @@ const gameCards = [
   { img: Framet1, title: "Trox", desc: "TROX is a psychological narrative where Marco faces brutal choices and dark truths in a post-World War III world driven by survival." },
   { img: Frame388, title: "Wobble Gobble", desc: "Guide a bouncy jelly cube through colourful isometric levels, using physics-based movement to solve adorable puzzles and explore whimsical worlds." },
 ];
+// Hook 1 — detect which card is centered and add “active” class
+useEffect(() => {
+  if (window.innerWidth > 1024) return; // only mobile
+
+  const container = document.querySelector(".containerga");
+  const cards = container.querySelectorAll(".cardsg");
+
+  const setActiveCard = () => {
+    const centerX = window.innerWidth / 2;
+
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.left < centerX && rect.right > centerX) {
+        card.classList.add("active");
+      } else {
+        card.classList.remove("active");
+      }
+    });
+  };
+
+  container.addEventListener("scroll", setActiveCard);
+  // initial call
+  setActiveCard();
+
+  return () => container.removeEventListener("scroll", setActiveCard);
+}, []);
+
+useEffect(() => {
+  if (window.innerWidth > 1024) return; // only mobile
+
+  // WAIT for ViewMore DOM to finish rendering
+  
+    const container = document.querySelector(".containerga");
+    if (!container) return;
+
+    let scrollPos = 0;
+
+    const autoScroll = setInterval(() => {
+      scrollPos += container.clientWidth * 0.85;
+
+      // FULL WIDTH AVAILABLE because of the delay
+      if (scrollPos >= container.scrollWidth - window.innerWidth) {
+        scrollPos = 0;
+      }
+
+      container.scrollTo({
+        left: scrollPos,
+        behavior: "smooth",
+      });
+    }, 2500);
+
+    return () => clearInterval(autoScroll);
+
+}, [showMore, gameCards]); 
 
   return (
     <>
@@ -191,7 +247,7 @@ const gameCards = [
     "@type": "ListItem", 
     "position": 2, 
     "name": "Explore Backstage Pass Institute Students arts and games",
-    "item": "https://www.backstagepass.co.in/life-at-bsp/student-artwork-and-games/"  
+    "item": "https://www.backstagepass.co.in/life-at-bsp/student-portfolio/"  
   }]
 }
 `}
@@ -205,7 +261,7 @@ const gameCards = [
   "url": "https://www.backstagepass.co.in/",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://www.backstagepass.co.in/life-at-bsp/student-artwork-and-games/{search_term_string}",
+    "target": "https://www.backstagepass.co.in/life-at-bsp/student-portfolio/{search_term_string}",
     "query-input": "required name=search_term_string"
   }
 }
@@ -214,8 +270,8 @@ const gameCards = [
           <title>Explore Backstage Pass Institute Students arts and games</title>
           <meta property="og:title" content="Explore Backstage Pass Institute Students Arts and Games" />
 <meta name="description" content="See what students at Backstage Pass are building—from concept art to full-fledged games. A creative space where learning turns into real projects." />
-<meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/student-artwork-and-games/" />
-          <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/student-artwork-and-games/"/>
+<meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/student-portfolio/" />
+          <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/student-portfolio/"/>
 
         </Helmet>
 
@@ -273,28 +329,49 @@ const gameCards = [
                  <h2 className="mainHeadingTotal">Student Games
         </h2>
         <p className='suprts'> At Backstage Pass, we celebrate and recognize exceptional achievements in game art, design, and development. Our awards honor students for their innovation, dedication, and talent, distinguishing them as future leaders in the industry. These awards extend beyond internal recognition, encompassing students who excel in external competitions.</p>
-       <div className="containerga">
-  {(showMore ? gameCards : gameCards.slice(0, 15)).map((g, i) => (
-    <div className="cardsg" key={i}>
-      <img src={g.img} alt={g.title} />
-      <h3>{g.title}</h3>
-
-      <div className="overlaysg">
+   {isMobileState ? (
+  /* MOBILE → Show all cards */
+  <div className="containerga">
+    {gameCards.map((g, i) => (
+      <div className="cardsg" key={i}>
+        <img src={g.img} alt={g.title} />
         <h3>{g.title}</h3>
-        <p>{g.desc}</p>
-      </div>
-    </div>
-  ))}
-</div>
 
-<div className="viewmore-btn-wrapper">
-  <button 
-    className="viewmore-btn"
-    onClick={() => setShowMore(!showMore)}
-  >
-    {showMore ? "View Less" : "View More"}
-  </button>
-</div>
+        <div className="overlaysg">
+          <h3>{g.title}</h3>
+          <p>{g.desc}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+) : (
+  /* DESKTOP → Show limited + View More */
+  <>
+    <div className="containerga">
+      {(showMore ? gameCards : gameCards.slice(0, 15)).map((g, i) => (
+        <div className="cardsg" key={i}>
+          <img src={g.img} alt={g.title} />
+          <h3>{g.title}</h3>
+
+          <div className="overlaysg">
+            <h3>{g.title}</h3>
+            <p>{g.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div className="viewmore-btn-wrapper">
+      <button
+        className="viewmore-btn"
+        onClick={() => setShowMore(!showMore)}
+      >
+        {showMore ? "View Less" : "View More"}
+      </button>
+    </div>
+  </>
+)}
+
 
         </div>
 

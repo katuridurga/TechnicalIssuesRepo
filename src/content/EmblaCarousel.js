@@ -13,7 +13,7 @@ import newbanF from "../assets/img/banners/NewCampus.webp";
 
 
 import newban1 from "../assets/img/banners/igdcb.webp";
-import newbang from "../assets/img/banners/gaming1.webp";
+// import newbang from "../assets/img/banners/gaming1.webp";
 // import newban2 from "../assets/img/banners/learning.webp";
 import newban3 from "../assets/img/banners/alumni.webp";
 import mbnewbang from "../assets/img/mobilebanner/homepagebanner/gemawards.webp";
@@ -154,7 +154,7 @@ useEffect(() => {
                 alt="Home Banner" style={{objectPosition:isMobile ? "center" :"top", height:isMobile ? "auto" : "auto", marginTop:isMobile ? "0px" : "0px"}}
               /> */}
             </div>
-   <div className="embla__slide" key={1}>
+   {/* <div className="embla__slide" key={1}>
    <picture>
   <source srcSet={mbnewbang} media="(max-width: 768px)" />
   <img
@@ -162,10 +162,10 @@ useEffect(() => {
     alt="Home Banner"
     width={1526}
     height={450}
-    loading="lazy"  // ✅ Native lazy loading
+    loading="lazy"  
     style={{ width: "100%", margin: "0 auto" }}
   />
-</picture>
+</picture> */}
         {/* <picture>
   <source srcSet={mbnewban1} media="(max-width: 768px)" />
   <LazyLoadImage effect="blur" src={newban0} placeholderSrc={thumbnail} alt="Home Banner" width={1526} height={450} style={{width:"100%", margin: "0 auto"}} />
@@ -175,7 +175,7 @@ useEffect(() => {
                 className="embla__slide__img"
                 src={isMobile ? mbnewban1 : newban0}
                 alt="Home Banner" style={{ height:isMobile ? "auto" : "41rem",objectFit:"cover",objectPosition:"top", marginTop:isMobile ? "0px" :"0px"}}
-              /> */}
+              /> 
             </div>
        
             {/* <div className="embla__slide" key={2}>

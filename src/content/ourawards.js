@@ -47,7 +47,7 @@ function HomeContent() {
           style={{
             marginTop: "0px",
             display: "flex",
-            background: "#faf9fb",
+            background: "#f9fafb",
             boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
           }}
           className="min-h-full h-full w-full mx-auto relative z-[4] flex md:flex-row justify-end md:justify-between md:items-center awards-flex-wrapper"

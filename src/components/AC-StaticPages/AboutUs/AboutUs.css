@@ -270,7 +270,7 @@ svg#curve {
 .image-1 {
   position: relative;
   background: #222;
-    padding: 10px;
+    padding: 5px;
 }
 
 .image-2 {
@@ -902,36 +902,7 @@ figure {
   border-top: 100px solid transparent;
   border-bottom: 100px solid transparent;
 }
-.wtmakesbsp{
-  background: #f9fafb;
-  position: relative;
-  margin-top: 30px;
-}
 
-
-.wtmakesbsp .bg-image {
-  width: 45%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-position: left top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 0; /* push background behind content */
-   /* background-image: url("../../../assets/img/banners/make-different-img.webp");  */
-}
-
-.wtmakesbsp .bg-image:after {
-  width: 100%;
-  height: 100%;
-  content: "";
-  background: rgb(50 51 53 / 78%);
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 0; /* keep overlay behind content */
-}
 #pointerabut3 {
   width: 600px;
   height: 200px;
@@ -1132,62 +1103,26 @@ justify-content: center;
 
 @media only screen and (max-width : 1024px){
   #awards-section{
-    margin-top: 60px;
+    margin-top: 30px;
   }
-  .wtmakesbsp .left {
-    flex: 0 0 40%;
-    max-width: 40%;
-    padding: 10px;
-}
+ 
   .main-img {
   width: 100%;
   margin-top: 0px !important;
+  flex-direction: column;
 }
-  .wtmakesbsp {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
+  /* Always move IMAGE to top */
+  .main-img > .main-img2 img {
+    order: 1 !important;
+  }
+   .main-img > .main-img2:not(:has(img)) {
+    order: 2 !important;
+  }
+  
    .inner > :last-child {
     margin-bottom: 20px; /* adjust as needed */
   }
-  .wtmakesbsp .left .q-mark {
-    width: 60px !important;
-    height: 60px !important;
-    margin-bottom: 22px;
-    font-family: sans-serif;
-    font-size: 34px !important;
-    line-height: 90px;
-    background: #ff9600;
-    border-radius: 50%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px auto;
-    color: #fff;
-}
-  .wtmakesbsp .right {
-    flex: 0 0 60%;
-    max-width: 60%;
-    padding: 0px 0 0 0px !important;
-}
-ul.makes-different-list li {
-    margin-bottom: 0px !important;
-    padding:12px !important;
-}
 
- .wtmakesbsp .bg-image {
-    width: 100% !important;
-    height:1200px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-position: center, top !important;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 0;
-    background-image: url(/make-different-img-d4c663ce.jpg);
-}
   .mabanimg img{
     width:185px;
   }
@@ -1291,108 +1226,8 @@ color: #fff;
     text-align: center;
 }
 }
-.wtmakesbsp .custom-row {
-  display: flex;
-  align-items: center;
-}
 
-.wtmakesbsp .left {
-  flex: 0 0 40%;  /* exactly 40% */
-  max-width: 40%;
-  padding: 20px;
-}
 
-.wtmakesbsp .left .q-mark {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 22px;
-    font-family: sans-serif;
-    font-size: 60px;
-    line-height: 90px;
-    background: #ff9600;
-    border-radius: 50%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px auto;
-    color: #fff;
-}
-
-.wtmakesbsp .right {
-  flex: 0 0 60%;  /* exactly 60% */
-  max-width: 60%;
-  padding: 47px 0 0 120px;
-}
-ul.makes-different-list li h3 {
-    padding: 0px 0 0px 0;
-    padding-bottom: 0px;
-    font-size: 18px;
-    text-transform: inherit;
-    color: #000;
-    font-weight: 900;
-    margin: 10px 0px;
-}
-ul.makes-different-list li p {
-    font-size: 14px;
-    line-height: 22px;
-    color: #000;
-    font-weight: 400;
-}
-ul.makes-different-list li {
-     margin-bottom: 25px;
-    border: 1px solid #f2f2f2;
-    padding: 20px;
-    border-radius: 20px;
-    background: #ffffff;
-    box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
-}
-.wtmakesbsp .makes-different-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 per row desktop */
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.wtmakesbsp .container{
-  margin: 0px auto;
-  position: relative;
-  z-index: 1;
-}
-@media (max-width: 991px) {
-  .wtmakesbsp .custom-row {
-    flex-direction: column;
-  }
-  .wtmakesbsp .left,
-  .wtmakesbsp .right {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .wtmakesbsp .makes-different-list {
-    grid-template-columns: 1fr; /* mobile 1 per row */
-  }
-}
-.makes-different-list .inner {
-  display: flex;
-  align-items: center;   /* vertically center img + h3 */
-  gap: 12px;             /* spacing between img and h3 */
-  margin-bottom: 8px;    /* little spacing before <p> */
-}
-
-.makes-different-list .inner img {
-  flex-shrink: 0;      
-    position: relative;
-    border-radius: 50%;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
-
-}
 .inner img::after{
       content: "";
     position: absolute;
@@ -1402,13 +1237,6 @@ ul.makes-different-list li {
     width: 2px;
     background-color: #ccc;
     height: 78px;
-}
-
-.makes-different-list .inner h2 {
-  margin: 0;             /* remove default margin */
-  font-size: 1.25rem;    /* adjust as needed */
-  color:#ec1923;
-  font-weight: 600;
 }
 
 .brtopleft {
@@ -1486,4 +1314,192 @@ ul.makes-different-list li {
     margin-top: 40px;
     grid-column-gap: 50px;
     column-gap: 50px;
+}
+/* ------------------------------------------------------------------------------ */
+/*                       WT MAKES BSP – FINAL RESPONSIVE FIX                      */
+/* ------------------------------------------------------------------------------ */
+
+.wtmakesbsp {
+  background: #f9fafb;
+  position: relative;
+  margin-top: 30px;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+/* LEFT SIDE IMAGE (DESKTOP) */
+.wtmakesbsp .bg-image {
+  width: 45%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* slight overlay for text clarity */
+.wtmakesbsp .bg-image:after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+/* MAIN CONTENT GRID */
+.wtmakesbsp .container {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.wtmakesbsp .custom-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* LEFT EMPTY BLOCK — TO RESPECT 40% IMAGE SPACE */
+.wtmakesbsp .left {
+  flex: 0 0 40%;
+  max-width: 40%;
+  padding: 0;
+}
+
+/* RIGHT SIDE CONTENT */
+.wtmakesbsp .right {
+  flex: 0 0 60%;
+  max-width: 60%;
+  padding: 0 0 0 80px;
+}
+
+/* -------------------- */
+/*     LIST STYLING     */
+/* -------------------- */
+
+.wtmakesbsp .makes-different-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wtmakesbsp .makes-different-list li {
+  border: 1px solid #f2f2f2;
+  padding: 22px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.12);
+}
+
+.wtmakesbsp .makes-different-list .inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.wtmakesbsp .makes-different-list .inner img {
+  width: 60px;
+  height: 60px;
+  padding: 0px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #fff;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  position: relative;
+  object-fit: scale-down;
+    transform: scale(1);
+}
+
+.wtmakesbsp .makes-different-list .inner h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ec1923;
+}
+
+.wtmakesbsp .makes-different-list li p {
+  font-size: 14px;
+  line-height: 22px;
+  color: #000;
+}
+
+/* ------------------------------------------------------------------------------ */
+/*                                    MOBILE                                      */
+/* ------------------------------------------------------------------------------ */
+
+@media (max-width: 991px) {
+
+.wtmakesbsp .container{
+  z-index: 0!important;
+}
+  .wtmakesbsp {
+    padding: 0 0 0px;
+  }
+
+  /* Background image becomes top full-width */
+  .wtmakesbsp .bg-image {
+    width: 100% !important;
+    height: 300px !important;
+    position: relative;
+    background-position: center top !important;
+  }
+
+  /* Stack layout */
+  .wtmakesbsp .custom-row {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .wtmakesbsp .left,
+  .wtmakesbsp .right {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  /* LIST — ONE PER ROW */
+  .wtmakesbsp .makes-different-list {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
+
+  .wtmakesbsp .right {
+    padding: 0px 20px 20px;
+    margin-top: -38px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .wtmakesbsp .makes-different-list li {
+    padding: 18px;
+  }
+
+  .wtmakesbsp .makes-different-list .inner img {
+    width: 52px;
+    height: 52px;
+    padding: 0px;
+    border-radius: 0px !important;
+    background: #ffffff;
+    box-shadow:0 0px 0px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+  }
+
+  .wtmakesbsp .makes-different-list .inner h2 {
+    font-size: 18px;
+  }
+
+  .wtmakesbsp .makes-different-list li p {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }

@@ -171,111 +171,111 @@ function Alumni() {
       img: speaker3,
       name: "AnshulSoni",
       title: "Engineering Manager",
-      subtitle: "Electronic Arts (EA),Canada"
+      subtitle: "Electronic Arts (EA), Canada"
     },
     {
       img: speaker23,
       name: "Anirudh Bhandari",
       title: "Senior Engineer",
-      subtitle: "Qualcomm ,Bengaluru"
+      subtitle: "Qualcomm, Bengaluru"
     },
     {
       img: speaker5,
       name: "Aakash Parameswaran",
       title: "Founder/CEO",
-      subtitle: "Fable Fox,Canada"
+      subtitle: "Fable Fox, Canada"
     },
     {
       img: speaker22,
       name: "Simbram Das",
       title: "Project Co-ordinator",
-      subtitle: "Lakshya Digital,Pune"
+      subtitle: "Lakshya Digital, Pune"
     },
     {
       img: speaker15,
       name: "Nani Surya Teja Sreerama",
       title: "Software Developer",
-      subtitle: "East Side Games,Canada"
+      subtitle: "East Side Games, Canada"
     },
     {
       img: speaker12,
       name: "Harshal Shinde ",
       title: "Game Developer",
-      subtitle: "Boo boo games ,Ahemdabad"
+      subtitle: "Boo boo games, Ahemdabad"
     },
     {
       img: speaker6,
       name: "Aditya Mehta",
       title: "Senior Game Designer",
-      subtitle: "Scopely,USA"
+      subtitle: "Scopely, USA"
     },
     {
       img: speaker17,
       name: "Rishi Prakaash S M",
       title: "Software Developer",
-      subtitle: "Mobilityware ,USA"
+      subtitle: "Mobilityware, USA"
     },
     {
       img: speaker14,
       name: "Jithin Peter",
       title: "Programmer",
-      subtitle: "Sumo Digital Ltd,Pune"
+      subtitle: "Sumo Digital Ltd, Pune"
     },
     {
       img: speaker18,
       name: "Sruthi Chekka",
       title: "Game Artist",
-      subtitle: "88 Games,Bengaluru"
+      subtitle: "88 Games, Bengaluru"
     },
 
     {
       img: speaker7,
       name: "Dennchen Lama",
       title: "Game Designer",
-      subtitle: "Ubisoft,UAE"
+      subtitle: "Ubisoft, UAE"
     },
     {
       img: speaker19,
       name: "Tarun Reddi",
       title: "Project Manager",
-      subtitle: "Pidgin,USA"
+      subtitle: "Pidgin, USA"
     },
     {
       img: speaker11,
       name: "Giri Nithin Yogendra",
       title: "Software Developer ",
-      subtitle: "Paycom,USA"
+      subtitle: "Paycom, USA"
     },
     {
       img: speaker9,
       name: "Diksha Subba",
       title: "Game Developer",
-      subtitle: "Gape Labs,Bengaluru"
+      subtitle: "Gape Labs, Bengaluru"
     },
     {
       img: speaker2,
       name: "Divyanshu Soni",
       title: "Motion Graphic Designer",
-      subtitle: "HitWicket,Hyderabad"
+      subtitle: "HitWicket, Hyderabad"
     },
     {
       img: speaker1,
       name: "Anics Chacko",
       title: "Gameplay Engineer",
-      subtitle: "Zynga,Hyderabad"
+      subtitle: "Zynga, Hyderabad"
     },
     {
       img: speaker8,
       name: "Devashish Tiwari",
       title: "Game Play Programmer",
-      subtitle: "Tuttifrutti Interactive,Kerala"
+      subtitle: "Tuttifrutti Interactive, Kerala"
     },
 
     {
       img: speaker4,
       name: "Anoushka Yadav",
       title: "Game Designer ",
-      subtitle: "Electronic Arts,Hyderabad"
+      subtitle: "Electronic Arts, Hyderabad"
     },
 
 
@@ -284,33 +284,33 @@ function Alumni() {
       img: speaker13,
       name: "Hritam Samanta",
       title: "Graphic User Interface Designer",
-      subtitle: "American Software Resources, Inc,Hyderabad"
+      subtitle: "American Software Resources, Inc, Hyderabad"
     },
     {
       img: speaker16,
       name: "Palli charan tej ",
       title: "Graphic User Interface Designer",
-      subtitle: "American Software Resources, Inc,Hyderabad"
+      subtitle: "American S/W Resources, Hyderabad"
     },
 
     {
       img: speaker10,
       name: "Ekagra Mittal",
       title: "Junior Engineer",
-      subtitle: "Kuro Gaming,Hyderabad"
+      subtitle: "Kuro Gaming, Hyderabad"
     },
 
     {
       img: speaker20,
       name: "Vijay Sivatej Mareedu",
       title: "3D Artist",
-      subtitle: "GameShastra,Hyderabad"
+      subtitle: "GameShastra, Hyderabad"
     },
     {
       img: speaker21,
       name: "Harshini isvi",
       title: "Senior Designer",
-      subtitle: "IVY,Hyderabad"
+      subtitle: "IVY, Hyderabad"
     },
   ];
 
@@ -690,7 +690,7 @@ function Alumni() {
                     </div>
                     <div className="input-boxs">
                       <label htmlFor="year">Year Of Graduation</label>
-                      <input type="text" placeholder="Year" name="year" value={formData.year} onChange={handleChange} required style={{ border: "1px solid #ccc" }}
+                      <input type="text" placeholder="Year" name="year" value={formData.year} onChange={handleChange}  style={{ border: "1px solid #ccc" }}
                       />
                     </div>
                     <div className="input-boxs">
@@ -699,23 +699,23 @@ function Alumni() {
                     </div>
                     <div className="input-boxs">
                       <label htmlFor="campus">Campus</label>
-                      <input type="text" placeholder="Campus" name="campus" value={formData.campus} onChange={handleChange} required style={{ border: "1px solid #ccc" }} />
+                      <input type="text" placeholder="Campus" name="campus" value={formData.campus} onChange={handleChange}  style={{ border: "1px solid #ccc" }} />
                     </div>
                     <div className="input-boxs">
                       <label htmlFor="number">Mobile Number</label>
-                      <input type="tel" placeholder="Mobile Number" name="number" pattern="[6-9][0-9]{9}" minLength="10" maxLength="10" value={formData.number} onChange={handleChange} required style={{ border: "1px solid #ccc" }} />
+                      <input type="tel" placeholder="Mobile Number" name="number" pattern="[6-9][0-9]{9}" minLength="10" maxLength="10" value={formData.number} onChange={handleChange}  style={{ border: "1px solid #ccc" }} />
                     </div>
                     <div className="input-boxs">
                       <label htmlFor="email">Email ID</label>
-                      <input type="email" placeholder="Email ID" name="email" value={formData.email} onChange={handleChange} required style={{ border: "1px solid #ccc" }} />
+                      <input type="email" placeholder="Email ID" name="email" value={formData.email} onChange={handleChange}  style={{ border: "1px solid #ccc" }} />
                     </div>
                     <div className="input-boxs">
                       <label htmlFor="linkdin">LinkedIn</label>
-                      <input type="url" placeholder="LinkedIn" name="linkdin" value={formData.linkdin} onChange={handleChange} required style={{ border: "1px solid #ccc" }} />
+                      <input type="url" placeholder="LinkedIn" name="linkdin" value={formData.linkdin} onChange={handleChange}  style={{ border: "1px solid #ccc" }} />
                     </div>
                     <div className="input-boxs">
                       <label htmlFor="emply">Employment Status</label>
-                      <input type="text" placeholder="Employment Status" name="emply" value={formData.emply} onChange={handleChange} required style={{ border: "1px solid #ccc" }} />
+                      <input type="text" placeholder="Employment Status" name="emply" value={formData.emply} onChange={handleChange}  style={{ border: "1px solid #ccc" }} />
                     </div>
                     <div className="input-boxs">
                       <label htmlFor="org">Current Organisation</label>
@@ -723,7 +723,7 @@ function Alumni() {
                     </div>
                     <div className="input-boxs">
                       <label htmlFor="des">Designation</label>
-                      <input type="text" placeholder="Designation" name="des" value={formData.des} onChange={handleChange} required style={{ border: "1px solid #ccc" }} />
+                      <input type="text" placeholder="Designation" name="des" value={formData.des} onChange={handleChange}  style={{ border: "1px solid #ccc" }} />
                     </div>
                   </div>
 

@@ -525,7 +525,7 @@ const items = [
 
           <div className="show-grid desg" style={{margin:"0px auto", backgroundColor:"#ffffff"}}>
             <h3 className="mainHeadingTotal3">
-              Why choose backstagepass?
+              Why choose backstage Pass?
             </h3>
             <div className="maind">
 

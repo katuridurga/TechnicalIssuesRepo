@@ -68,80 +68,39 @@
   min-width: 30%;
   padding: 8px;
 }
-@media only screen and (max-width : 1024px){
-  .photos .ph::after {
-    content: attr(data-type);
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
-    transform: translateX(120%);
-    opacity: 0;
-    visibility: hidden;
-    transition: transform .36s ease, opacity .28s ease;
-    background: rgba(0,0,0,0.75);
-    color: #fff;
-    padding: 6px 12px;
-    font-size: 10px !important;
-    font-weight: 600;
-    white-space: nowrap;
-    border-top-left-radius: 6px;
-    pointer-events: none;
-    z-index: 9999;
-}
-  
-.viewmore-btn-wrapper {
-display: none !important;
-}
-    .overlaysg p {
-    font-size: 15px;
-    font-weight: 900;
-    padding: 20px;
-}
-  .photos {
-    /*   display: grid;
-      grid-template-columns: repeat(3, 3fr);
-      grid-gap: 20px; */
-       column-count: 3 !important;
-       width: 90% !important;;
-       margin: 0px auto;
-       overflow: hidden;
-    } 
-   
-  .containerga {
-    display: flex !important;
-    gap: 15px !important;
-    padding: 10px 0px !important;
-    width: 90% !important;
-    margin: 0px auto;
-    align-items: flex-start;
-    justify-content: flex-start;
-    overflow-x: scroll !important;
-    scrollbar-width: thin;
-  }
 
-  .cardsg {
-    position: relative;
-    background-color: #cce0f5;
-    border: 1px solid #000;
-    border-radius: 20px;
-    overflow: hidden;
-    /* height: 150px; */
-    min-width: 100%;
-  }
-  .cardsg img{
-  height: 100%;
-    object-fit: cover;
-    display: block;
-    width: 100% !important;
-      transition: transform 0.4s ease;
-  filter: brightness(60%); 
-  }
+  /* ---------------------------
+   MOBILE ONLY STYLES
+---------------------------- */
+@media only screen and (max-width: 1024px) {
+  .cardsg:hover {
+  transform: none !important;
+
+}
+  .cardsg img:hover{
+transform:none !important;
+}
   .CourseesOverViewsh {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     margin-top: 0px !important;
   }
+  .containerga {
+    display: flex !important;
+    flex-direction: row;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding: 15px;
+    width: 100% !important;
+    scrollbar-width: none;
+    min-width: 100% !important;
+    flex-wrap: nowrap;
+    scroll-behavior: auto;
+}
+
 .suprts {
   width: 90%;
   margin: 0 auto;
@@ -167,7 +126,113 @@ display: none !important;
   margin-bottom: 24px;
   border: 1px solid #8c8383;
 }
+  .photos .ph::after {
+    content: attr(data-type);
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    transform: translateX(120%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform .36s ease, opacity .28s ease;
+    background: rgba(0,0,0,0.75);
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 10px !important;
+    font-weight: 600;
+    white-space: nowrap;
+    border-top-left-radius: 6px;
+    pointer-events: none;
+    z-index: 9999;
 }
+  
+.viewmore-btn-wrapper {
+display: none !important;
+}
+    .overlaysg p {
+     font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    max-width: 90%;
+}
+  .photos {
+    /*   display: grid;
+      grid-template-columns: repeat(3, 3fr);
+      grid-gap: 20px; */
+       column-count: 3 !important;
+       width: 90% !important;;
+       margin: 0px auto;
+       overflow: hidden;
+    } 
+   
+   /* FIX PARENT CONTAINER CUTTING THE SCROLL AREA */
+  .courses-container,
+  .courses-wrapper,
+  .CourseesOverViewA,
+  .CourseesOverViewsh {
+    overflow: visible !important;
+    width: 100% !important;
+  }
+ .overlaysg h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    max-width: 90%;               /* centered and clean */
+  }
+
+ 
+  .containerga::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Each card takes 85% width for smooth carousel */
+  .cardsg {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #cce0f5;
+  }
+
+  .cardsg img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    filter: brightness(60%);
+    transition: transform 0.4s ease;
+  }
+
+  /* Overlay hidden by default */
+  .overlaysg {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(12, 5, 5, 0.85);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: bottom 0.5s ease;
+    padding: 15px 12px !important;
+    text-align: center;
+    
+    /* Prevent overlay text from touching edges */
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Overlay visible when card is active */
+  .cardsg.active .overlaysg {
+    bottom: 0 !important;
+  }
+}
+
+  
+
 .courseover1{
   display: flex;
   align-items: center;

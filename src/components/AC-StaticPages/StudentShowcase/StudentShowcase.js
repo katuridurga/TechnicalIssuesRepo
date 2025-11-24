@@ -10,7 +10,7 @@ import awardtwo from "../../../assets/img/awards/newgdc.webp"
 import awardthree from "../../../assets/img/awards/IGDC19.webp"
 import awardone from "../../../assets/img/awards/NGDC.webp"
 import awardfive from "../../../assets/img/awards/competition.webp"
-import awardfour from "../../../assets/img/awards/IGDC22.webp"
+import awardfour from "../../../assets/img/awards/igdc2025.jpg"
 import awardsix from "../../../assets/img/awards/IGDC23.webp"
 import awardseven from "../../../assets/img/awards/GEM-AWARDS-2025.webp"
 
@@ -164,9 +164,9 @@ function StudentShowcase(props) {
                  </div>
                </div>
                <div class="cardsgaward">
-                 <img src= {awardtwo} alt="awardtwo"/>
+                 <img src= {awardfour} alt="awardtwo" style={{objectFit:isMobileState?"cover":"contain"}}/>
                  <div class="overlaysaward">
-                   <h3>Upcoming Game of the year at IGDC 2019</h3>
+                   <h3>Student Game of the year at IGDC 2025</h3>
                    
                  </div>
                </div>
@@ -176,12 +176,12 @@ function StudentShowcase(props) {
                    <h3>Student game of the year at IGDC 2019</h3>
                  </div>
                </div>
-               <div class="cardsgaward">
+               {/* <div class="cardsgaward">
                  <img src= {awardfour} alt="awardfour"/>
                  <div class="overlaysaward">
                    <h3>Hyper casual Game of the year- Student Game of the year at IGDC 2022</h3>
                  </div>
-               </div>
+               </div> */}
                <div class="cardsgaward">
                  <img src= {awardfive} alt="awardfive"/>
                  <div class="overlaysaward">

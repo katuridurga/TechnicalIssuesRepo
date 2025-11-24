@@ -94,7 +94,7 @@ useEffect(() => {
     }
   }
 
-  autoScrollInterval = setInterval(autoScrollLeft, 3000) // scroll every 3 seconds
+  autoScrollInterval = setInterval(autoScrollLeft, 30000000) // scroll every 3 seconds
 
   // --- Existing Logic ---
   setTweenNodes(emblaApi)
@@ -196,7 +196,7 @@ useEffect(() => {
                 <div className="incontent">
                   <p>How Backstage Pass Gaming College Prepare Students to Join the Top Game and Technology Companies
                   </p>
-                  <a href="https://www.dnaindia.com/education/report-how-backstage-pass-gaming-college-prepare-students-to-join-the-top-game-and-technology-companies-2897946" target='_blank' rel="noopener noreferrer"><a style={{ marginTop: "-20px", background: "none", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800",color:"#fff" }} className='three rbth size201 w-full sm:w-auto' type="button">Read more<FiArrowRight className="arros"style={{ marginLeft: "7px", color:"#fff"  }} /></a></a>                  </div>
+                  <a href="https://www.dnaindia.com/education/report-how-backstage-pass-gaming-college-prepare-students-to-join-the-top-game-and-technology-companies-2897946" target='_blank' rel="noopener noreferrer"><a style={{ marginTop: "-12px", background: "none", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800",color:"#fff" }} className='three rbth size201 w-full sm:w-auto' type="button">Read more<FiArrowRight className="arros"style={{ marginLeft: "7px", color:"#fff"  }} /></a></a>                  </div>
 
               </div>
             </div>
@@ -233,7 +233,7 @@ useEffect(() => {
                 <div className="incontent">
                   <p>Backstage Pass brings world-class gaming education right to your doorstep
                   </p>
-                  <a rel="noopener noreferrer" href="https://yourstory.com/2020/06/backstage-world-class-gaming-education" target='_blank'><a style={{ marginTop: "-20px", background: "none", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800",color:"#fff" }} className='three rbth size201 w-full sm:w-auto' type="button">Read more<FiArrowRight className="arros"style={{ marginLeft: "7px", color:"#fff"  }} /></a></a>
+                  <a rel="noopener noreferrer" href="https://yourstory.com/2020/06/backstage-world-class-gaming-education" target='_blank'><a style={{ marginTop: "-12px", background: "none", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: "800",color:"#fff" }} className='three rbth size201 w-full sm:w-auto' type="button">Read more<FiArrowRight className="arros"style={{ marginLeft: "7px", color:"#fff"  }} /></a></a>
                 </div>
 
               </div>

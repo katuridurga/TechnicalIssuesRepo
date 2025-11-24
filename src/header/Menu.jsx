@@ -14,7 +14,6 @@ import Box from '@mui/material/Box';
 import Fade from '@mui/material/Fade';
 import { Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 import ScrollToTop from "react-scroll-to-top";
-
 import { useSelector, shallowEqual } from "react-redux";
 
 

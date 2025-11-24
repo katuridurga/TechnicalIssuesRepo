@@ -289,8 +289,8 @@ function Courses(props) {
         <h2 className='courseHeading'>Course Overview</h2>
          <div className="brname"></div>
         <p>
-         The Advanced Diploma in Game Development at Backstage Pass Institute of Gaming is a comprehensive program designed to equip students with the essential skills and knowledge required to excel in the gaming industry.<br/>
-
+         The Advanced Diploma in Game Development at Backstage Pass Institute of Gaming is a comprehensive program designed to equip students with the essential skills and knowledge required to excel in the gaming industry.</p>
+<p>
 The curriculum covers foundational programming, advanced game engine programming, graphics programming, and portfolio development, ensuring that students are well-prepared to create and optimise games across various platforms.
 
         </p>
@@ -422,7 +422,7 @@ The curriculum covers foundational programming, advanced game engine programming
 
 
             <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
-              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"80%" }}>Career Opportunities</h2>
+              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"100%" }}>Career Opportunities</h2>
  <div className="brname"></div>
               <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
                 {faqs.map((faq, index) => (

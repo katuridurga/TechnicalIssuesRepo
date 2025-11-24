@@ -498,7 +498,7 @@ svg#curve {
 }
 
 .program-content h4 {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     margin-bottom: 10px;
     margin: 0px;
@@ -514,6 +514,7 @@ svg#curve {
     margin-bottom: 12px;
     text-align: left;
     padding: 8px 4px;
+    margin-top: 10px;
 }
 
 
@@ -529,7 +530,7 @@ svg#curve {
 .view-all-btn {
     display: block;
     margin: 1rem auto 2rem;
-    padding: 0.5rem 1rem;
+    padding: 1.5rem 2rem;
     background-color: #ed1923;
     color: #fff;
     border: none;
@@ -542,9 +543,36 @@ svg#curve {
     background-color: #ed1923;
 }
 
-/* Mobile: 1 card per row */
+/* ========================================================== */
+/* MOBILE: SNAP SCROLL ONE CARD AT A TIME                     */
+/* ========================================================== */
 @media (max-width: 768px) {
-    .programs-grid {
-        grid-template-columns: 1fr;
-    }
+
+  .programs-grid {
+    display: flex !important;
+    overflow-x: auto !important;
+    gap: 16px !important;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;      /* snap scrolling */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;              /* Firefox hide */
+  }
+
+ 
+
+  .program-card {
+    min-width: 100% !important;          /* shows ONE card at a time */
+    max-width:100% !important;
+    flex-shrink: 0;
+    scroll-snap-align: center;          /* snap to center */
+    border-radius: 12px;
+    background: #fff;
+  }
+
+  .program-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
 }

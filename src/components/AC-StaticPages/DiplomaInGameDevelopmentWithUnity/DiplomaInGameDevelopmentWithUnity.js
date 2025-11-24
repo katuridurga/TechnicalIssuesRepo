@@ -257,7 +257,8 @@ function Courses(props) {
          <div className="brname"></div>
         <p>
          The Diploma in Game Development with Unity is an intensive program designed to provide students with the foundational skills and advanced techniques necessary to excel in game development using the Unity game engine.
-<br/>
+</p>
+<p>
 The curriculum covers core programming languages like C++ and C#, in-depth training in Unity's game engine, and advanced graphics programming.
         </p>
       </div>
@@ -384,7 +385,7 @@ The curriculum covers core programming languages like C++ and C#, in-depth train
 
 
             <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
-              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"80%" }}>Career Opportunities</h2>
+              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"100%" }}>Career Opportunities</h2>
  <div className="brname"></div>
               <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
                 {faqs.map((faq, index) => (

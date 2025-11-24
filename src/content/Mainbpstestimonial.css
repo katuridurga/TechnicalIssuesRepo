@@ -212,7 +212,7 @@
   .maintestimonial-section {
     flex-direction: column !important;
     align-items: center !important;
-    padding: 30px 15px !important;
+    padding: 0px 30px 15px !important;
   }
 
   .testimonial-header {
@@ -220,7 +220,7 @@
     min-width: auto !important;
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
   .testimonial-header h3 {

@@ -385,7 +385,7 @@ The course culminates in a final portfolio project, where students create a poli
 
 
             <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
-              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"80%" }}>Career Opportunities</h2>
+              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"100%" }}>Career Opportunities</h2>
  <div className="brname"></div>
               <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
                 {faqs.map((faq, index) => (

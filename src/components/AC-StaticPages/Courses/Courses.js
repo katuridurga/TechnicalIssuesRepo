@@ -27,7 +27,7 @@ function Courses(props) {
         { title: "Bachelor’s in Augmented Reality & Virtual Reality", description: "A course for bold innovators, uniting art, design, and game engine programming to master the science of augmented and virtual reality. You will learn to transform...", link: "/courses/bachelors-in-augmented-reality-and-virtual-reality/", image: AugmentedRealityandVirtualReality }
       ]
     },
-   
+
     {
       heading: "Advanced Diploma Courses",
       cards: [
@@ -36,7 +36,7 @@ function Courses(props) {
         // { title: "Advanced Diploma in Traditional & Digital Concept Art", description: "A hands-on 12-month advanced diploma that builds strong fundamentals in advancing to character and environment design.", link: "/courses/advanced-diploma-in-traditional-digital-art/", image: AdvancedDiplomainTraditionalDigitalConceptArt }
       ]
     },
-   
+
     {
       heading: "Diploma Courses",
       cards: [
@@ -44,10 +44,10 @@ function Courses(props) {
         { title: "Diploma in Game Development with Unity", description: "The Diploma in Game Development with Unity empowers creators to master both 2D and 3D game development by blending logic...", link: "/courses/diploma-in-game-development-with-unity/", image: DiplomainGameDevelopmentwithUnity },
         { title: "Diploma in Game Development with Unreal", description: "With the Diploma in Game Development with Unreal, students will learn the real science behind making games. The course will guide students through Unreal Engine...", link: "/courses/diploma-in-game-development-with-unity/", image: Diploma_in_Game_Development_with_Unreal },
         { title: "Diploma In 3D Environment Art For Games", description: "The Diploma in 3D Environment Art Creation for Games explores the harmony of art in 3D modelling, texturing, and digital sculpting to craft breathtaking, immersive game worlds.", link: "/courses/diploma-in-3d-environment-art-creation-for-games/", image: Diplomain3DEnvironmentArtCreationforGames },
-          { title: "Diploma in VR Application Development", description: "The Diploma in VR Application Development Course unlocks the future of technology, where students master VR programming with Unity and Unreal to design, develop, and innovate...", link: "/courses/diploma-in-vr-application-development/", image: AugmentedRealityandVirtualReality }
+        { title: "Diploma in VR Application Development", description: "The Diploma in VR Application Development Course unlocks the future of technology, where students master VR programming with Unity and Unreal to design, develop, and innovate...", link: "/courses/diploma-in-vr-application-development/", image: AugmentedRealityandVirtualReality }
       ]
     },
-      {
+    {
       heading: "Master’s Courses",
       cards: [
         { title: "Master’s in Game Technology", description: "The Master’s in Game Technology unites art, logic, and physics, immersing learners in C++ engine development, graphics programming, and Unity & Unreal mastery to craft intelligent, high-performance games...", link: "/courses/masters-in-game-technology/", image: MscGameTechnology },
@@ -60,6 +60,7 @@ function Courses(props) {
     state => state.mainReducer.isMobile,
     shallowEqual
   );
+  
 
   // Track which headings are expanded
   const [expandedHeadings, setExpandedHeadings] = useState({});
@@ -121,19 +122,20 @@ function Courses(props) {
           <meta property="og:title" content="Backstage Pass College offers Online & Offline Video Game Development & Design Courses" />
           <meta name="description" content="Join career-building programs in Bachelor’s, Master’s, Advanced Diploma & Certified Skill Courses. Browse our Game Design, Game Art, 3D Art, Game Programming, & AR/VR courses. Upskill with our eLearning and Offline Programs." />
           <meta property="og:url" content="https://www.backstagepass.co.in/courses/" />
-          <meta name="keywords" content="game development courses near me, game design courses in india, video game college courses, game development college courses, course for game design and art, gaming courses after 12th, gaming courses in india, game development courses in india"/>
+          <meta name="keywords" content="game development courses near me, game design courses in india, video game college courses, game development college courses, course for game design and art, gaming courses after 12th, gaming courses in india, game development courses in india" />
           <link rel="canonical" href="https://www.backstagepass.co.in/courses/" />
         </Helmet>
 
         <section className="programs-section">
-             <p className="suprts" style={{width:"90%", textAlign:"left",fontSize:"16px", margin:"0px auto", paddingTop:"20px"}}>Level up your creativity with Backstage Pass’s Gaming Courses. Learn game design, art, and programming using Unity and Unreal Engine. Explore AR & VR development, create stunning 3D video game art, and build immersive games. Learn from industry experts, design your own games, and join a community of passionate game developers shaping the future of interactive entertainment.</p>
+          <p className="suprts" style={{ width: "90%", textAlign: "left", fontSize: "16px", margin: "0px auto", paddingTop: "20px" }}>Level up your creativity with Backstage Pass’s Gaming Courses. Learn game design, art, and programming using Unity and Unreal Engine. Explore AR & VR development, create stunning 3D video game art, and build immersive games. Learn from industry experts, design your own games, and join a community of passionate game developers shaping the future of interactive entertainment.</p>
           <div className="programs-container">
-         
+
             {programs.map((program, index) => {
               if (!program.heading) return null;
 
               const showAll = expandedHeadings[program.heading];
-              const cardsToShow = isMobileState && !showAll ? program.cards.slice(0, 1) : program.cards;
+
+              const cardsToShow = isMobileState ? program.cards : program.cards;
 
               return (
                 <div key={index} className="program-heading-row">
@@ -153,11 +155,7 @@ function Courses(props) {
                   </div>
 
                   {/* View All button for mobile */}
-                  {isMobileState && !showAll && program.cards.length > 1 && (
-                    <button className="view-all-btn" onClick={() => toggleViewAll(program.heading)}>
-                      View All
-                    </button>
-                  )}
+
                 </div>
               );
             })}

@@ -341,7 +341,7 @@ function MenuCore(props) {
                     <Link to={""} onClick={(e) => e.preventDefault()} style={{ color: activeParent3 ? "#ee1b24" : "#000" }}>Life @ BSP <FiChevronDown style={{ color: activeParent3 ? "#ee1b24" : "#000" }} /></Link>
                     <ul style={{ width: "350px" }}>
                       <div className="mainc"><Link to={"/life-at-bsp/alumni-success/"} onClick={() => setActiveParent3(true)} style={linkStyle}>Alumni Success</Link></div>
-                      <div className="mainc"><Link to={"/life-at-bsp/student-artwork-and-games/"} onClick={() => setActiveParent3(true)} style={linkStyle}>Student Portfolio</Link></div>
+                      <div className="mainc"><Link to={"/life-at-bsp/student-portfolio/"} onClick={() => setActiveParent3(true)} style={linkStyle}>Student Portfolio</Link></div>
                       <div className="mainc"><Link to={"/life-at-bsp/student-awards/"} onClick={() => setActiveParent3(true)} style={linkStyle}>Student Awards</Link></div>
                       <div className="mainc"><Link to={"/life-at-bsp/accelerator-program/"} onClick={() => setActiveParent3(true)} style={linkStyle}>Accelerator Program</Link></div>
                       <div className="mainc"><Link to={"/life-at-bsp/facilities/"} className="link-item" onClick={() => setActiveParent3(true)} style={linkStyle}>Hostel Facilities</Link></div>
@@ -531,7 +531,7 @@ function MenuCore(props) {
                   {activeMenu === 'life' && (
                     <div className="MobileAccordian-content" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
                       <Link to={"/life-at-bsp/alumni-success/"}>Alumni Success</Link>
-                      <Link to={"/life-at-bsp/student-artwork-and-games/"}>Student Portfolio</Link>
+                      <Link to={"/life-at-bsp/student-portfolio/"}>Student Portfolio</Link>
                       <Link to={"/life-at-bsp/student-awards/"}>Student Awards</Link>
 
                       <Link to={"/life-at-bsp/accelerator-program/"}>Accelerator Program</Link>

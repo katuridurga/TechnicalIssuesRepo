@@ -67,11 +67,11 @@ h3.courses-title {
         width: 90%;
     }
     .benfitIcon img {
-      width: 100%;
-      height: 100%;
+      width: auto !important;
+      height: fit-content !important;
       object-fit: contain;
       object-position: center;
-      padding: 3px;
+      padding: 0px;
   }
 }
 
@@ -128,7 +128,7 @@ h3.courses-title {
     background: #f9fafb;
   }
   .process__itemf:hover .process__numberfinance {
-    transform: translateY(0px);
+    transform: translatex(-50%);
     color: #fff;
     -webkit-text-stroke: 1px #fff;
   }
@@ -141,7 +141,7 @@ h3.courses-title {
 ease-in-out;
     position: absolute;
     background: #eb1a23;
-    left: 10px;
+    left: 50%;
     top: 13%;
     width: 70px;
     border-radius: 50%;
@@ -149,18 +149,33 @@ ease-in-out;
     line-height: 69px;
     border: 2px solid #eb1a23;
     color:#fff;
+   transform: translateX(-50%);
 }
   .process__titlef {
-    display: block;
-    /* font-family: "Roboto Condensed"; */
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    font-size: 19px;
-    color: #000;
+letter-spacing: 1.5px;
+    font-size: 18px;
+    color: #eb1a23;
     text-transform: capitalize;
-    margin-top: 80px;
+    margin-top: 40px;
     width: 100%;
-    text-align: left;
+    text-align: center;
+    border-bottom: 1px solid #ebe6e6;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+/* Initially hidden underline */
+.process__titlef::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background-color: #eb1a23; /* Red underline color */
+  transition: width 0.4s ease-in-out;
 }
 .process__subtitlef {
     display: block;
@@ -172,7 +187,65 @@ ease-in-out;
     text-align: justify;
     font-weight: 500;
 }
-  
+  /* Default mobile layout → 2 inputs per row */
+/* MOBILE — FIX FORM WIDTH + GRID */
+@media (max-width: 768px) {
+  .formMain {
+    width: 100% !important;
+    padding: 15px !important;
+    box-sizing: border-box;
+  }
+
+  /* Fix parent wrapper */
+  .formGridfs {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+    width: 100% !important;
+  }
+
+  /* Make sure each field fills its cell */
+  .formGridfs > div {
+    width: 100% !important;
+  }
+
+  /* All inputs same width */
+  .formGridfs input,
+  .formGridfs select,
+  .MuiOutlinedInput-root,
+  .MuiAutocomplete-root {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Fix Autocomplete height */
+  .MuiOutlinedInput-root {
+    min-height: 45px !important;
+  }
+
+  /* Fix labels alignment */
+  .formGridfs label {
+    margin-bottom: 4px !important;
+    font-size: 13px !important;
+  }
+}
+
+/* EXTRA FIX for very small devices (like shown in your screenshot — 360px) */
+@media (max-width: 380px) {
+  .formGridfs {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* Make inputs readable */
+  .formGridfs input,
+  .formGridfs select {
+    padding: 10px !important;
+    font-size: 14px !important;
+  }
+}
+
+
   @media (min-width: 768px) {
     .process {
       display: inline-block;
@@ -180,10 +253,10 @@ ease-in-out;
     .process__itemf {
       width: 49%;
       display: inline-block;
-      background: #ffffff;
-      border: 1px solid #222;
+           background: #f9fafb;
+        border: 1px solid #f9fafb !important;
+        box-shadow: 10px 4px 15px rgba(0, 0, 0, 0.1);
       margin-right: 10px;
-      border-radius: 35px;
     }
      .process__itempartner {
       width: 49%;
@@ -341,8 +414,9 @@ ease-in-out;
   width: 100px;
   height: 70px;
   box-sizing: content-box;
-  top: -10px;
-  left: -10px;
+  top: -34px;
+  left: 50%;
+  transform: translateX(-50%);
   background: none;
 }
 
@@ -445,6 +519,16 @@ margin-right: 10px;
     box-shadow: rgb(237 25 35 / 0%) 0px 0px 29.5299px 0px, rgb(237 25 35 / 13%) 0px 0px 59.0599px 0px, rgb(237 25 35 / 13%) 0px 0px 88.5898px 0px;
 }
 @media only screen and (max-width : 1024px){
+  .benfitIcon{
+      width: auto !important;
+    height: fit-content !important;
+    margin-right: 10px;
+    background:none !important;
+    border-right: 0px solid #000!important;
+    border: 0px solid #eb1a23!important;
+    border-radius: 50%;
+    padding: 7px;
+}
   .processpartner {
     width: 90% !important;
     padding: 0 15px;
@@ -472,17 +556,18 @@ margin-right: 10px;
 }
   .bgicofin {
     background: #ccc;
-    width: 55px !important;
-    height: 55px !important;
+    width: auto !important;
+    height: fit-content !important;
     border: 1px solid #ccc;
     border-radius: 50px;
     top: -8px !important;
     position: relative;
+    padding: 6px;
 }
   .courseUpdates3 ul li img {
-    width: 40px !important;
-    height: 54px !important;
-    object-fit: scale-down;
+    width: auto !important;
+    height: fit-content !important;
+    object-fit:contain;
     object-position: center;
     animation: updown 0s ease infinite;
     padding: 4px;
@@ -501,7 +586,7 @@ margin-right: 10px;
     transition: 0.4s ease-in-out;
     position: absolute;
     background: #eb1a23;
-    left: 150px;
+    left: 50%;
     top: 20% !important;
     width: 50px;
     border-radius: 50%;
@@ -518,13 +603,14 @@ margin-right: 10px;
     width: 100px;
     height: 70px;
     box-sizing: content-box;
-    top: 0px;
-    left: 0px;
+    top: -34px;
+    left: 50%;
     background: none;
     margin: 0px auto;
     display: flex;
     justify-content: center;
     align-items: center;
+ transform: translateX(-50%);
 }
   .mgrid{
     grid-template-columns: repeat(2, 1fr) !important;
@@ -588,9 +674,9 @@ margin-right: 10px;
   font-size: 19px;
   color: #000;
   text-transform: capitalize;
-  margin-top: 64px;
+  margin-top: 40px;
   width: 100%;
-  text-align: left;
+  text-align: center;
 }
 .process {
   width: 100%;
@@ -606,10 +692,13 @@ margin-right: 10px;
   padding: 13px 35px;
   transition: 0.4s ease-in-out;
   margin-top: 16px !important;
-  background: #f9fafb;
+          background: #f9fafb;
+        border: 1px solid #f0e7e7 !important;
+        box-shadow: 10px 4px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
 }
 .courseUpdates3 ul li p {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 800;
   text-align: center;
   margin: 7px;
@@ -787,3 +876,6 @@ margin-right: 10px;
     margin: 0px auto;
     display: flex;
   }
+  .process__itemf:hover .process__titlef::after {
+  width: 100%;
+}

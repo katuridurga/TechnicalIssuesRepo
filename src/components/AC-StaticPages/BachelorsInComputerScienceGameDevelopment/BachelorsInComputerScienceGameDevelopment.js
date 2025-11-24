@@ -370,8 +370,8 @@ function Courses(props) {
         <h2 className='courseHeading'>Course Overview</h2>
          <div className="brname"></div>
         <p>
-        The B.Sc (Hons) - Computer Science & Game Development program blends Computer Science, Game Design, and Game Programming skills. This course provides students with a strong foundation in core computer science topics, including software development and programming, while also focusing on video game design and game development principles. Students will gain both theoretical knowledge and practical experience, preparing them for careers in both the IT and Game Development industries.<br/>
-       
+        The B.Sc (Hons) - Computer Science & Game Development program blends Computer Science, Game Design, and Game Programming skills. This course provides students with a strong foundation in core computer science topics, including software development and programming, while also focusing on video game design and game development principles. Students will gain both theoretical knowledge and practical experience, preparing them for careers in both the IT and Game Development industries.</p>
+       <p>
        Whether you are passionate about crafting immersive gaming experiences or advancing in the IT industry, Backstage Pass Institute of Gaming is the ideal choice. As the best game development college in India, we provide students opportunities to excel and thrive in the gaming and IT industries.
 
         </p>
@@ -542,7 +542,7 @@ function Courses(props) {
 
 
             <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
-              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"80%" }}>Career Opportunities</h2>
+              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"100%" }}>Career Opportunities</h2>
  <div className="brname"></div>
               <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
                 {faqs.map((faq, index) => (

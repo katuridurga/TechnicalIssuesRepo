@@ -103,7 +103,7 @@
   position: relative;
 }
 .embla__viewportbaM {
-  overflow: visible;
+  overflow: hidden;
 }
 .embla__containerbaM {
   backface-visibility: hidden;

@@ -178,7 +178,7 @@ function Courses(props) {
 
         </Helmet>
 
-        <div className="courses-wrapper223" style={{backgroundColor:"#faf9fb",boxShadow:"0 2px 15px 5px rgba(0, 0, 0, 0.1)",padding:"12px"}}>
+        <div className="courses-wrapper223" style={{backgroundColor:"#f9fafb",boxShadow:"0 2px 15px 5px rgba(0, 0, 0, 0.1)",padding:"12px"}}>
           <h2 className="mainHeadingTotal">The Accelerator Program
           </h2>
 

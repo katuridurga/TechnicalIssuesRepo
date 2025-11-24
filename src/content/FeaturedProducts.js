@@ -18,7 +18,7 @@ function Testimonials() {
   return (
     <>
 
-      <section id="page-need_guidance-section" className="need-guidance-form flex items-end md:items-center md:min-h-[680px] lg:min-h-[800px] relative z-[11] -mt-[2px] overflow-hidden" data-locomotive-section-id="page-need_guidance" data-locomotive-section-type="need_guidance" style={{background:"#fff", marginTop:"50px", boxShadow:" 0 2px 15px 0px rgba(0, 0, 0, 0.1)", position:"relative", zIndex:'1'
+      <section id="page-need_guidance-section" className="need-guidance-form flex items-end md:items-center md:min-h-[680px] lg:min-h-[800px] relative z-[11] -mt-[2px] overflow-hidden" data-locomotive-section-id="page-need_guidance" data-locomotive-section-type="need_guidance" style={{background:"#f9fafb", marginTop:"50px", boxShadow:" 0 2px 15px 0px rgba(0, 0, 0, 0.1)", position:"relative", zIndex:'1'
 }}>
 
 

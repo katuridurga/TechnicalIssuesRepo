@@ -133,7 +133,7 @@ figcaptionsalu {
 .input-boxs input{
   height: 40px !important;
   width: 95% !important;
-
+COLOR:#000 !important;
 }
 
 
@@ -399,6 +399,8 @@ figcaptionsalu {
   text-align: center;
   color: white;
   font-family: 'Montserrat', sans-serif;
+  margin: 10px;
+  padding: 10px;
 }
 
 /* DIAGONAL RED FRAME */
@@ -450,6 +452,10 @@ figcaptionsalu {
 
 /* ----- UNIVERSAL MOBILE SCROLL (ALL PHONES / SMALL TABLETS) ----- */
 @media (max-width: 768px) {
+  .speaker-card:hover {
+    transform:none !important;   /* enlarge visually, NO layout shift */
+    
+}
   .speakers-container {
     display: flex;
     overflow-x: auto;
@@ -472,23 +478,11 @@ figcaptionsalu {
     white-space: normal; /* let text wrap normally */
   }
 }
-.speaker-card:hover{
-    transform: scale(1.18);
+.speaker-card:hover {
+    transform: scale(1);   /* enlarge visually, NO layout shift */
     filter: brightness(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, .3), 0 0 10px rgba(255, 255, 255, .4) inset;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, .3), 
+                0 0 10px rgba(255, 255, 255, .4) inset;
     z-index: 99;
-    position: relative;
-    margin-bottom: 40px;
-    margin-top: 30px;
-    padding: 10px;
-      line-height: 20px;
-      margin-left: 10px;
-      margin-right: 10px;
 }
-.speaker-title:hover {
-    font-size: 13px;
-    opacity: 0.8;
-    line-height: 20px;
-    margin-top: 5px;
-    color: #000;
-}
+

@@ -427,8 +427,8 @@ function Courses(props) {
           </ul>
         </div>
         <form onSubmit={handleSubmit} className="formMain" style={{ background: "#f9fafb", boxShadow:"0 2px 15px 0px rgba(0, 0, 0, 0.1)" }}>
+           <h3 className="mainHeadingTotal">Loan Application Form </h3>
           <div className="formGridfs mgrid" data-form-id="need-guidance" data-form="step1-container">
-
 
             <div className="">
               <label className="" htmlFor="firstname">First Name <span style={{ color: "red", marginLeft: "4px", marginTop: "2px" }}>*</span></label>

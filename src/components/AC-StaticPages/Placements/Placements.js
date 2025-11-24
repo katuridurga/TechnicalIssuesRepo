@@ -173,8 +173,8 @@ function Placementsupport(props) {
             <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width: isMobileState ? "100%" : "80%", margin: "0px" }}>
               <h2 className='courseHeading fadeInUp anime-delay' style={{
                 textAlign: "left", textAlign: isMobileState ? "center" : "left",
-                width: isMobileState ? "100%" : "80%",
-                lineHeight: isMobileState ? "48px" : "48px",                
+                width: isMobileState ? "100%" : "100%",
+                lineHeight: isMobileState ? "38px" : "48px",                
                 wordWrap: "break-word"
               }}>Internship/Placement Support
               </h2>

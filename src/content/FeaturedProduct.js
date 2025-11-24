@@ -102,24 +102,24 @@ function HomeContent() {
 
   };
   const categories = [
-    { id: "bachelors", title: "🎓 Bachelor's Degree" },
+    { id: "bachelors", title: "Bachelor's Degree" },
 
-    { id: "advancedDiploma", title: "🎯 Advanced Diploma" },
-    { id: "diploma", title: "📘 Diploma" },
-    { id: "masters", title: "🏆 Master's Degree" },
+    { id: "advancedDiploma", title: "Advanced Diploma" },
+    { id: "diploma", title: "Diploma" },
+    { id: "masters", title: "Master's Degree" },
   ];
   return (
     <>
-      <section id="page-need_guidance-section" className="need-guidance-form flex items-end md:items-center md:min-h-[680px] lg:min-h-[800px] relative z-[11] -mt-[2px] overflow-hidden bgw" data-locomotive-section-id="page-need_guidance" data-locomotive-section-type="need_guidance">
+      <section id="page-need_guidance-section" className="need-guidance-form flex items-end md:items-center md:min-h-[680px] lg:min-h-[800px] relative z-[11] -mt-[2px] overflow-hidden bgw" data-locomotive-section-id="page-need_guidance" data-locomotive-section-type="need_guidance" >
         <div className="min-h-full h-full w-full container-full relative z-[3] py-4 md:py-8">
           <div className="d">
             <h2 className="mainHeadingTotal"> About Us </h2>
 
 
-            <p class="text" style={{fontSize:"16px"}}>
+            <p class="text" style={{fontSize:"16px", marginBottom:"20px"}}>
               Founded in 2010, Backstage Pass Institute of Gaming is recognised as one of the best game development colleges in India. We offer comprehensive <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/courses/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank"> game design and development courses</a></b>, including Bachelor's, Master's, Diploma, and Advanced Diploma programs.
             </p>
-            <p class="text" style={{fontSize:"16px"}}>
+            <p class="text" style={{fontSize:"16px", marginBottom:"20px"}}>
               Our founder and chairman, Mr Surya P, is a visionary and a pioneer in the Indian gaming industry and education. <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/life-at-bsp/alumni-success/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank"> Alumni from Backstage Pass</a></b> now work at top game studios across India and abroad, reflecting the strong industry connections and real-world exposure our students gain.
             </p>
             <p class="text" style={{fontSize:"16px"}}>
@@ -129,7 +129,7 @@ function HomeContent() {
           </div>
         </div>
       </section>
-      <section id="page-need_guidance-section" className="need-guidance-form flex items-end md:items-center md:min-h-[680px] lg:min-h-[800px] relative z-[11] -mt-[2px] overflow-hidden bgw" data-locomotive-section-id="page-need_guidance" data-locomotive-section-type="need_guidance">
+      <section id="page-need_guidance-section" className="need-guidance-form flex items-end md:items-center md:min-h-[680px] lg:min-h-[800px] relative z-[11] -mt-[2px] overflow-hidden bgw" data-locomotive-section-id="page-need_guidance" data-locomotive-section-type="need_guidance" style={{backgroundColor:"#f9fafb"}}>
         <div className="min-h-full h-full w-full container-full relative z-[3] py-4 md:py-8">
           <div className="d">
             <h2 className="mainHeadingTotal">Featured Courses </h2>

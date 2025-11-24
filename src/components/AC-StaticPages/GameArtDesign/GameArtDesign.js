@@ -350,8 +350,8 @@ const semsecond = [
         <h2 className='courseHeading'>Course Overview</h2>
          <div className="brname"></div>
         <p>
-         The Bachelor’s in Game Art & Design program prepares students for success with a curriculum that covers Traditional Art, Concept Art, 2D and 3D Game Art, and Game Design.<br/>
-
+         The Bachelor’s in Game Art & Design program prepares students for success with a curriculum that covers Traditional Art, Concept Art, 2D and 3D Game Art, and Game Design.</p>
+<p>
 We, at Backstage Pass Institute of Gaming, designed this course for aspiring artists and designers who aim to combine their artistic talents with cutting-edge technology to create visually stunning and immersive games. It focuses on developing core skills in both traditional and digital mediums, offering a comprehensive education that balances theory and practical application.
         </p>
       </div>
@@ -524,7 +524,7 @@ We, at Backstage Pass Institute of Gaming, designed this course for aspiring art
 
 
             <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
-              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"80%" }}>Career Opportunities</h2>
+              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"100%" }}>Career Opportunities</h2>
  <div className="brname"></div>
               <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
                 {faqs.map((faq, index) => (

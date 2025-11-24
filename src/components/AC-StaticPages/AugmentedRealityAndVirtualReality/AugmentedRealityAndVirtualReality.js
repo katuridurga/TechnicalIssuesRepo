@@ -387,10 +387,10 @@ const semsecond = [
         <h2 className='courseHeading'>Course Overview</h2>
          <div className="brname"></div>
         <p>
-    The BA (Hons) in Augmented Reality and Virtual Reality curriculum is designed to equip students with the essential principles of art, design, and programming, specifically tailored for the development of AR and VR applications. Ideal for innovators eager to lead the future, this program combines computer science with hands-on AR/VR creation, making it one of the best AR VR courses in India for those who want to master these transformative technologies.<br/>
-
-The course explores a wide range of topics, including Augmented Reality and Virtual Reality, Game Design, 3D Art, and immersive AR/VR application development. Students also learn the difference between AR and VR, gaining clarity on how each technology shapes modern digital experiences.<br/>
-
+    The BA (Hons) in Augmented Reality and Virtual Reality curriculum is designed to equip students with the essential principles of art, design, and programming, specifically tailored for the development of AR and VR applications. Ideal for innovators eager to lead the future, this program combines computer science with hands-on AR/VR creation, making it one of the best AR VR courses in India for those who want to master these transformative technologies.</p>
+<p>
+The course explores a wide range of topics, including Augmented Reality and Virtual Reality, Game Design, 3D Art, and immersive AR/VR application development. Students also learn the difference between AR and VR, gaining clarity on how each technology shapes modern digital experiences.</p>
+<p>
 Through practical learning methods, such as case studies and assignments, this program ensures that learners in AR VR courses gain both the theoretical foundation and the technical skills required to thrive in the rapidly evolving world of AR/VR technology.
 
         </p>
@@ -561,7 +561,7 @@ Through practical learning methods, such as case studies and assignments, this p
 
 
             <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
-              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"80%" }}>Career Opportunities</h2>
+              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"100%" }}>Career Opportunities</h2>
  <div className="brname"></div>
               <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
                 {faqs.map((faq, index) => (

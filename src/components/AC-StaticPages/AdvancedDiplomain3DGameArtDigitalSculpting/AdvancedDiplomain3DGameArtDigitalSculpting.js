@@ -288,7 +288,8 @@ function Courses(props) {
          <div className="brname"></div>
         <p>
         The Advanced Diploma in 3D Art & Digital Sculpting is designed to provide students with a deep understanding of the 3D game art pipeline, from basic modeling techniques to advanced digital sculpting, texturing, and rendering.
-<br/>
+</p>
+<p>
 This program equips students with the skills needed to create detailed environments, props, and vehicles for games, while also mastering lighting and shading techniques.
         </p>
       </div>
@@ -421,7 +422,7 @@ This program equips students with the skills needed to create detailed environme
 
 
             <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
-              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"80%" }}>Career Opportunities</h2>
+              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"100%" }}>Career Opportunities</h2>
  <div className="brname"></div>
               <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
                 {faqs.map((faq, index) => (

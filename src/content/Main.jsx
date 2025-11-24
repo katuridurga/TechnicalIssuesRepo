@@ -1,6 +1,7 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import preLoaderVideo from "../assets/img/BSPAnimated.mp4";
 import preLoaderWebm from "../assets/img/BSPAnimated.webm";
+import { useSelector, shallowEqual } from "react-redux";
 
 import PropTypes from 'prop-types';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
@@ -39,13 +40,16 @@ HideOnScroll.propTypes = {
   children: PropTypes.element.isRequired,
   window: PropTypes.func,
 };
-
+ 
 function Main({ active, props }) {
   const [showBanner, setShowBanner] = useState(true);
   const [showPreloader, setShowPreloader] = useState(true);
   const [loading, setLoading] = useState(true);
   const [isReady, setIsReady] = useState(false);
-
+ const isMobileState = useSelector(
+    state => state.mainReducer.isMobile,
+    shallowEqual
+  );
   useEffect(() => {
     const data = window.localStorage.getItem('MY_APP_STATE');
     if (data !== null) setShowBanner(JSON.parse(data));
@@ -95,10 +99,18 @@ function Main({ active, props }) {
           <a href="#ribbon">
             <div className='scallop animate'>
               <div className='stripd'>
-                <div className='adopen'><p>Admissions Open! </p></div>
+<div className='adopen'>
+  <p style={{ marginBottom: isMobileState ? "0px" : "0px" }}>
+    Admissions Open!
+    <br />
+    <span style={{ marginTop: "6px", display: "block" }}>
+      Limited seats
+    </span>
+  </p>
+</div>
                 <div className='mainhdb'>
-                  <p><b>Bachelor's/Master's Programs :</b> <strong> Apply now for 2025 intake!</strong><strong style={{ fontWeight: "700" }}> (Limited seats)</strong></p><br />
-                  <p><b>Diploma/Advanced Diploma Programs :</b> <strong> Limited seats. Apply now!</strong> </p>
+                  <p><b>Bachelor's/Master's Programs :</b> <strong> Apply now for 2026 intake!</strong></p><br />
+                  <p><b>Diploma/Advanced Diploma Programs :</b> <strong>Apply now!</strong> </p>
                 </div>
               </div>
             </div>

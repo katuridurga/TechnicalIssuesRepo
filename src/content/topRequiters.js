@@ -42,7 +42,7 @@ function TopRequiters() {
 
 
       <Marquee
-  speed={100}
+  speed={80}
   gradient={false}
   pauseOnHover={true}
   style={{ padding: "0px 20px" }}

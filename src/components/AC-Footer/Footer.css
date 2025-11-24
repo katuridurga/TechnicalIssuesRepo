@@ -108,7 +108,7 @@
     font-weight: 800;
     align-self: stretch;
     margin-top: 0;
-    color:#000;
+    color:#ee1b24;
 }
 
 .address-wrapper {
@@ -525,4 +525,182 @@
 top: 68px;
     position: relative;
     margin-bottom: 54px;
+}
+
+  /* WRAPPER */
+  .floatingIcon {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 99999;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;     /* 👈 equal spacing */
+  }
+
+  /* CHILD CONTAINER */
+  .floatingIcon .App {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;     /* 👈 same equal spacing for all icons */
+  }
+
+  /* UNIVERSAL FIX FOR ALL BUTTONS */
+  .floatingIcon .durga,
+  .floatingIcon .durga1,
+  .floatingIcon .durga3,
+  .floatingIcon .whatsappsivak,
+  .btn-floating-whatsapp {
+      width: 60px !important;
+      height: 60px !important;
+      border-radius: 50% !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      position: relative !important;
+      right: 0 !important;
+      top: auto !important;
+      bottom: auto !important;
+      transform: none !important;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
+      cursor: pointer;
+      padding: 0 !important;
+  }
+
+  /* WHATSAPP BUTTON FIX */
+  .floatingIcon .whatsappsivak {
+      background-color: #25d366 !important;
+      z-index: 9999;
+  }
+
+  /* CALL BUTTON */
+  .floatingIcon .durga {
+      background-color: rgb(0, 164, 245) !important;
+  }
+
+  /* ENQUIRE BUTTON */
+  .floatingIcon .durga1 {
+      background-color: #eb1a23 !important;
+  }
+
+  /* ICON STYLING INSIDE ENQUIRE BUTTON */
+  .floatingIcon svg {
+      width: 60% !important;
+      height: 60% !important;
+      pointer-events: none !important;
+  }
+  /* Base - all icons look same shape */
+.whatsappsivak,
+.durga,
+.durga1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    cursor: pointer;
+
+    /* Animation */
+    transition: all 0.35s ease;
+    transform-origin: right center;   /* <-- KEY FIX */
+}
+/* Colors */
+.whatsappsivak { background-color: #25d366 !important; }
+.durga         { background-color: #00a4f5 !important; }
+.durga1        { background-color: #eb1a23 !important; }
+
+/* ICONS always stay fixed size */
+.whatsappsivak,
+.durga,
+.durga1 {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    position: relative !important;
+    overflow: visible !important;  /* allow pill & label outside */
+    transition: all 0.35s ease;
+}
+
+/* ------------------------------
+   ICAT STYLE PILL BACKGROUND
+------------------------------- */
+.whatsappsivak::before,
+.durga::before,
+.durga1::before {
+    content: "";
+    position: absolute;
+    right: 10px;      /* attach to icon */
+    height: 46px;
+    border-radius: 40px;
+    background: inherit; /* uses icon's background color */
+    width: 0;              /* collapsed */
+    opacity: 0;
+    transition: all 0.35s ease;
+    z-index: -1;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+/* Expand the pill on hover */
+.whatsappsivak:hover::before,
+.durga:hover::before,
+.durga1:hover::before {
+    width: 170px;      /* pill grows LEFT */
+    opacity: 1;
+}
+
+/* ------------------------------
+   SLIDING TEXT INSIDE PILL
+------------------------------- */
+.whatsappsivak::after,
+.durga::after,
+.durga1::after {
+    position: absolute;
+    right: 80px; /* slide from behind icon */
+    opacity: 0;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 900;
+    transform: translateX(20px);  /* hidden offset */
+    transition: all 0.35s ease;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Label text */
+.whatsappsivak::after { content: "WhatsApp"; }
+.durga::after         { content: "Call Us"; }
+.durga1::after        { content: "Enquire"; }
+
+/* Slide-in text ONLY — icon stays fixed */
+.whatsappsivak:hover::after,
+.durga:hover::after,
+.durga1:hover::after {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Icon inside buttons */
+.floatingIcon svg {
+    width: 55%;
+    height: 55%;
+    color: #fff;
+    pointer-events: none;
+}
+/* HOVER EFFECT — makes the white pill expand left */
+.enq-btn:hover .enq-info {
+    width: 140px;
+    visibility: visible;
+    padding: 10px 0px 10px 15px;
 }

@@ -4,6 +4,7 @@ import footerStyle from "../../assets/jss/material-dashboard-react/components/fo
 import LazyLoad from "react-lazyload";
 import { useSelector, shallowEqual } from "react-redux";
 import ReactWhatsappButton from "react-whatsapp-button";
+import { FaWhatsapp } from "react-icons/fa";
 import { RiFacebookLine } from "react-icons/ri";
 import { CiInstagram } from "react-icons/ci";
 import discord from "../../assets/img/Icons/dicord.webp";
@@ -22,6 +23,9 @@ import axios from "axios";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
 import "./Footer.css";
+import { BiSolidPencil } from "react-icons/bi";
+
+import { IoIosCall } from "react-icons/io";
 
 function Footer() {
   const isMobileState = useSelector(
@@ -334,6 +338,7 @@ backgroundPosition: isShortHeight? "top":"center",marginTop:isShortHeight? "10px
                           phoneNumber="8008002795"
                           style={{
                             right: "0.6rem",
+                            bottom:"9rem !important",
                             display: hiddenPaths.includes(path) ? "none" : "flex",
                           }}
                           className="whatsappsivak"
@@ -342,33 +347,57 @@ backgroundPosition: isShortHeight? "top":"center",marginTop:isShortHeight? "10px
                     </div>
                   ) : (
                     <div className="floatingIcon">
-                      <div className="App">
-                        <ReactWhatsappButton
-                          countryCode="91"
-                          aria-label="Chat with us on WhatsApp"
-                          phoneNumber="8008002795"
-                          style={{
-                            right: "0.6rem",
-                            bottom: "16rem",
-                            display: hiddenPaths.includes(path) ? "none" : "flex",
-                          }}
-                          className="whatsappsivak"
-                        />
-                        <a
-                          href="tel:+918008002795"
-                          className="btn-floating-whatsapp durga"
-                          aria-label="Call with us"
-                          style={{
-                            right: isMobileState ? "10rem" : "0.6rem",
-                            bottom: isLandingPage ? "6.3rem" : "12rem",
-                            backgroundColor: "rgb(0, 164, 245)",
-                            backgroundPosition: "center center",
-                            backgroundRepeat: "no-repeat",
-                            backgroundSize: "40%",
-                            display: hideAllFooter ? "none" : "block",
-                          }}
-                        ></a>
-                      </div>
+                     <div className="floatingIcon enq-fix-strip">
+  <div className="App">
+    
+    <a
+      href="tel:+918008002795"
+      countryCode="91"
+      aria-label="Chat with us on WhatsApp durga3"
+      phoneNumber="8008002795"
+      style={{
+        display: hiddenPaths.includes(path) ? "none" : "flex",
+      }}
+      className="whatsappsivak"
+    >
+<FaWhatsapp  style={{ color: "#fff", fontSize: "28px" }} />
+</a>
+    <a
+      href="tel:+918008002795"
+      className="btn-floating-whatsapp durga"
+      aria-label="Call with us"
+      style={{
+        backgroundColor: "rgb(0, 164, 245)",
+        backgroundPosition: "center center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "40%",
+        display: hideAllFooter ? "none" : "block",
+      }}
+    >
+      <IoIosCall style={{ color: "#fff", fontSize: "28px" }} />
+
+    </a>
+    
+   <a
+  href="https://dev.backstagepass.co.in/application-form/"
+  className="btn-floating-whatsapp durga1"
+  aria-label="Enquire Now"
+  style={{
+    backgroundColor: "#eb1a23",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "40%",
+    display: hideAllFooter ? "none" : "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  }}
+>
+  <BiSolidPencil style={{ color: "#fff", fontSize: "28px" }} />
+</a>
+
+  </div>
+</div>
+
                     </div>
                   )}
 
@@ -446,6 +475,16 @@ backgroundPosition: isShortHeight? "top":"center",marginTop:isShortHeight? "10px
                                   <p>
                                     <a href="mailto:info@backstagepass.co.in" rel="noopener noreferrer">
                                       info@backstagepass.co.in
+                                    </a>
+                                  </p>
+                                </div>
+                              </div>
+                                  <div className="contact-wrapper-inner">
+                                <CiMail className="iconsmain" />
+                                <div>
+                                  <p>
+                                    <a href="mailto:admissions@backstagepass.co.in" rel="noopener noreferrer">
+                                      admissions@backstagepass.co.in
                                     </a>
                                   </p>
                                 </div>

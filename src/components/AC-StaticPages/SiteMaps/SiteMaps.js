@@ -149,7 +149,7 @@ function Courses(props) {
 
          <ul className='innerc'>
        <li style={liStyle}><a href="/life-at-bsp/alumni-success/">Alumni Success</a></li>
-       <li style={liStyle}><a href="/life-at-bsp/student-artwork-and-games/">Student Art works & games</a></li>
+       <li style={liStyle}><a href="/life-at-bsp/student-portfolio/">Student Art works & games</a></li>
        <li style={liStyle}><a href="/life-at-bsp/student-awards/">Student Awards</a></li>
        <li style={liStyle}><a href="/life-at-bsp/accelerator-program/">Accelerator Program</a></li>
        <li style={liStyle}><a href="/life-at-bsp/facilities/">Hostel Facilities</a></li>

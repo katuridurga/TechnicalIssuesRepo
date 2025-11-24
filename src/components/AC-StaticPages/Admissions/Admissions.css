@@ -116,7 +116,7 @@ h3.courses-title {
     margin-left:30px;
   }
   .process__item1:hover .process__number1 {
-    transform: translateY(0px);
+    transform: translateX(-50%);
     color: #fff;
     -webkit-text-stroke: 1px #fff;
     background: #eb1a23;
@@ -135,7 +135,7 @@ ease-in-out;
     top: -36px;
     position: absolute;
     margin: 0px auto;
-    left: 106px;
+    left: 50%;
     border: 3px solid #eb1a23;
 }
  .process__number1 {
@@ -155,10 +155,10 @@ ease-in-out;
     top: -34px;
     position: absolute;
     margin: 0px auto;
-    left: 112px;
+    left: 50%;
     border: 3px solid #eb1a23;
     color: #ffffff;
-    
+    transform: translateX(-50%);
 }
   .process__title {
     display: block;
@@ -266,11 +266,12 @@ ease-in-out;
     top: -30px;
     position: absolute;
     margin: 0px auto;
-    left: 126px;
+    left: 50%;
     border: 3px solid #ed1923;
+    transform:translateX(-50%);
 }
   .process__item1:hover .process__number1 {
-    transform: translateY(0px);
+    transform: translatex(-50%);
     color: #fff !important;
     -webkit-text-stroke: 1px #fff;
         width: 54px !important;
@@ -278,7 +279,7 @@ ease-in-out;
     top: -36px;
     position: absolute;
     margin: 0px auto;
-    left: 130px !important;
+    left: 50% !important;
     font-size:22px !important;
   }
   .process__item1:hover {
@@ -383,19 +384,6 @@ margin-bottom: 40px;
     padding: 65px;
     padding-bottom: 24px;
     border-radius: 10px;
-}
-.process__title:hover{
-    display: block;
-    /* font-family: "Roboto Condensed"; */
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    font-size: 16px !important;
-    color: #000;
-    text-transform: capitalize;
-    margin-top: 40px;
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid#ebe6e6;
 }
 
 /* Optional hover background or shadow for li */

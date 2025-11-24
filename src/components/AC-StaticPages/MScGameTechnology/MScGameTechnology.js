@@ -301,8 +301,8 @@ function Courses(props) {
         <h2 className='courseHeading'>Course Overview</h2>
          <div className="brname"></div>
         <p>
-      The M.Sc Game Technology program is designed to equip students with advanced programming, design, and production concepts, and offers in-depth training in cutting-edge game technology.<br/>
-
+      The M.Sc Game Technology program is designed to equip students with advanced programming, design, and production concepts, and offers in-depth training in cutting-edge game technology.</p>
+<p>
 This program enhances your expertise in key areas of game development, preparing you for a successful career or advancement in the industry. Whether you're a newcomer looking to switch to the field of game development or a professional aiming to elevate your career, this course provides the knowledge and skills necessary to master in game design and development and thrive in the evolving landscape of game technology.
         </p>
       </div>
@@ -432,7 +432,7 @@ This program enhances your expertise in key areas of game development, preparing
 
 
             <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
-              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"80%" }}>Career Opportunities</h2>
+              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"100%" }}>Career Opportunities</h2>
  <div className="brname"></div>
               <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
                 {faqs.map((faq, index) => (

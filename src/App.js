@@ -409,7 +409,7 @@ export default function App() {
                 />
                  <Route
                   exact
-                  path={"/life-at-bsp/student-artwork-and-games/"}
+                  path={"/life-at-bsp/student-portfolio/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="StudentArtAndGames" />
                   )}

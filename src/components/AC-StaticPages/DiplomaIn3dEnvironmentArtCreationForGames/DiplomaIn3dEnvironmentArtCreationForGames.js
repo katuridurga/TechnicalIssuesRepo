@@ -253,8 +253,8 @@ function Courses(props) {
         <h2 className='courseHeading'>Course Overview</h2>
          <div className="brname"></div>
         <p>
-       The Diploma in 3D Environment Art For Games is a specialized program designed to equip students with the skills needed to create stunning and immersive environments for video games.<br/>
-
+       The Diploma in 3D Environment Art For Games is a specialized program designed to equip students with the skills needed to create stunning and immersive environments for video games.</p>
+<p>
 The curriculum covers the entire 3D art pipeline, from basic modeling and texturing to advanced digital sculpting and 3D environment art creation.
         </p>
       </div>
@@ -384,7 +384,7 @@ The curriculum covers the entire 3D art pipeline, from basic modeling and textur
 
 
             <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
-              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"80%" }}>Career Opportunities</h2>
+              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"100%" }}>Career Opportunities</h2>
  <div className="brname"></div>
               <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
                 {faqs.map((faq, index) => (

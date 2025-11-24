@@ -74,7 +74,7 @@ function Affilication() {
      
 
       <section className="content-section courses-container">
-        <div className="content-wrapper" style={{marginTop:isMobileState?"0px" : "60px"}}>
+        <div className="content-wrapper" style={{marginTop:isMobileState?"0px" : "0px"}}>
            <h2 className="courseHeading fadeInUp anime-delay" style={{textAlign:"center"}}>
         Jawaharlal Nehru Architecture & Fine Arts University (JNAFAU)
       </h2>
@@ -117,8 +117,8 @@ function Affilication() {
               className="flipImage" style={{top:isMobileState? "0px":"30px", position:"relative"}}
             />
           </div>
-          <div className="content-text">
-            <h2  className="courseHeading fadeInUp anime-delay" style={{textAlign:"left"}}>
+          <div className="content-text" style={{marginTop:"0px"}}>
+            <h2  className="courseHeading fadeInUp anime-delay" style={{textAlign:isMobileState?"center":"left"}}>
               Lincoln University College
             </h2>
             <p>

@@ -285,7 +285,7 @@ function HomeContent() {
 
             <div className="show-grid desg">
               <h3 className="mainHeadingTotal3">
-                Why choose backstagepass?
+                Why choose backstage Pass?
               </h3>
               <div className="maind">
 
@@ -505,7 +505,7 @@ function HomeContent() {
                     renderInput={(params) => (
                         <StyledTextField
         {...params}
-        required
+       
         variant="outlined"
         placeholder="City"
         InputLabelProps={{

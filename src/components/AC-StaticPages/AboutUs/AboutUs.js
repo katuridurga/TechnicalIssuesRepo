@@ -143,7 +143,7 @@ function Aboutus(props) {
 
         </div>
       </div>
-      <div className='courses-container'>
+      <div className='courses-container' style={{marginTop:isMobileState?"0px":"20px"}}>
 
         <h2 className="courseHeading fadeInUp anime-delay" style={{ marginTop: "-30px!important", textAlign: "center" }}>Kyodai Gameworks
         </h2>
@@ -170,62 +170,11 @@ function Aboutus(props) {
           <div className="custom-row">
             {/* Left section */}
             <div className="left">
-              <div className="q-mark">?</div>
-              <h2 className="courseHeading fadeInUp anime-delay" style={{ lineHeight: "4rem", color: "#fff", marginBottom: isMobileState ? "8px" : "30px", marginTop: isMobileState ? "8px" : "30px", textAlign: "center" }}>Why Students Choose Backstage Pass?
-</h2>
+          
+         
 
             </div>
-            {/* <div className='courseUpdatesabout'>
-          <ul style={{ width: "80%", margin: "0px auto", paddingTop: "10px" }}>
-            <li>
-              <div className='BeyondLeft'>
-                <img src={m1} />
-              </div>
-              <div className='BeyondRight'>
-                <p className='lsh'>Passion For Gaming</p>
-                <p>At Backstage Pass, we pride ourselves on hosting students from across India with different cultures, backgrounds, and mindsets and uniting them through their passion for gaming
-                </p>
-              </div>
-            </li>
-            <li>
-              <div className='BeyondLeft'>
-                <img src={m5} />
-              </div>
-              <div className='BeyondRight'>
-                <p className='lsh'>Hands-on Experience</p>
-                <p>One of the most important things about making a kickass game is actually making it. That's where our workshops and various curricular programs come into picture for practical learning</p>
-              </div>
-
-
-            </li>
-
-            <li>
-              <div className='BeyondLeft'>
-                <img src={m2} />
-              </div>
-              <div className='BeyondRight'>
-                <p className='lsh'>Industry Veterans</p>
-                <p>Our students are continuously guided by industry veterans who have spent 12 to 20 years working in and for the industry. Thus, our students get firsthand knowledge of the goods and bads of the industry.</p>
-              </div>
-
-
-            </li>
-
-            <li>
-              <div className='BeyondLeft'>
-                <img src={m3} />
-              </div>
-              <div className='BeyondRight'>
-                <p className='lsh'>Industry Connections</p>
-                <p>Since its inception, Backstage Pass has strong connections and exposure to the industry. Be it top gaming studios in India or our web of talented alumni spread across the globe</p>
-              </div>
-
-
-            </li>
-
-
-          </ul>
-        </div> */}
+          
             {/* Right section */}
             <div className="right">
               <ul className="makes-different-list">
@@ -264,83 +213,7 @@ function Aboutus(props) {
         </div>
       </section>
 
-      {/* <div id='chapter12' style={{background:"#fff"}} >
-                <div className="mid-title">
-
-
-                </div>
-                <div className="sec-title" id="">
-                    <h3 className="mainHeadingTotal fadeInUp anime-delay" style={{color:"#000"}}>What Makes BSP Tick</h3>
-
-                </div>
-                {isMobileState ? <div>
-                    <div>
-                        <ul className='mbimg12'>
-                            <li>
-                                <h3 style={{color:"#fff"}}>Passion For Gaming
-                                </h3>
-                                <p>At Backstage Pass, we pride ourselves on hosting students from across India with different cultures, backgrounds, and mindsets and uniting them through their passion for gaming</p></li>
-                            <li>
-                                <h3 style={{color:"#fff"}}>Hands-on Experience
-
-                                </h3>
-                                <p>One of the most important things about making a kickass game is actually making it. That's where our workshops and various curricular programs come into picture for practical learning.</p></li>
-                            <li>
-                                <h3 style={{color:"#fff"}}>Industry Veterans
-                                </h3>
-                                <p>Our students are continuously guided by industry veterans who have spent 12 to 20 years working in and for the industry. Thus, our students get firsthand knowledge of the goods and bads of the industry.</p></li>
-                            <li>
-                                <h3 style={{color:"#fff"}}>Industry Connections
-                                </h3>
-                                <p>Since its inception, Backstage Pass has strong connections and exposure to the industry. Be it top gaming studios in India or our web of talented alumni spread across the globe...</p>
-
-                                <p>Since its inception, Backstage Pass has strong connections and exposure to the industry. Be it top gaming studios in India or our web of talented alumni spread across the globe, the management at Backstage Pass personally looks into proper industry exposure for the students.</p>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div> :
-
-                    <div style={{ position: "relative", height: "618px" }}>
-                        <div id="pointerabut" className={isActive ? 'aboutHeaderPoint' : ' '} >
-                            <div className='plu1'>
-                                <p style={{color:"#fff"}}>Passion For Gaming
-                                </p>
-                                <div className='pluin' onClick={() => setIsActive(!isActive)}></div>
-                            </div>
-                            {isActive && <div className="Faqs" style={{ display: isActive ? "block" : "block" }}><p>At Backstage Pass, we pride ourselves on hosting students from across India with different cultures, backgrounds, and mindsets and uniting them through their passion for gaming</p></div>}
-                        </div>
-
-
-                        <div id="pointerabut1" className={isActives ? 'aboutHeaderPoint' : ' '} >
-                            <div className='plu1'>
-                                <p style={{color:"#fff"}}>Hands-on Experience
-                                </p>
-                                <div className='pluin' onClick={() => setIsActives(!isActives)}> </div>
-                            </div>
-                            {isActives && <div className="Faqs" id="HiddenText3" style={{ display: isActives ? "block" : "none" }}><p>One of the most important things about making a kickass game is actually making it. That's where our workshops and various curricular programs come into picture for practical learning.</p></div>}
-                        </div>
-
-                        <div id="pointerabut2" className={isActivess ? 'aboutHeaderPoint' : ' '} >
-                            <div className='plu1'>
-                                <p style={{color:"#fff"}}>Industry Veterans
-                                </p>
-                                <div className='pluin' onClick={() => setIsActivess(!isActivess)}></div>
-                            </div>
-                            {isActivess && <div className="Faqs" style={{ display: isActivess ? "block" : "block" }}><p>Our students are continuously guided by industry veterans who have spent 12 to 20 years working in and for the industry. Thus, our students get firsthand knowledge of the goods and bads of the industry.</p></div>}
-                        </div>
-
-                        <div id="pointerabut3" className={isActivesss ? 'aboutHeaderPoint' : ' '} >
-                            <div className='plu1'>
-                                <p style={{color:"#fff"}}>Industry Connections
-                                </p>
-                                <div className='pluin' onClick={() => setIsActivesss(!isActivesss)}></div>
-                            </div>
-                            {isActivesss && <div className="Faqs" id="HiddenText3" style={{ display: isActivesss ? "block" : "block" }}><p>Since its inception, Backstage Pass has strong connections and exposure to the industry. Be it top gaming studios in India or our web of talented alumni spread across the globe...</p></div>}
-                        </div>
-
-                    </div>}
-            </div> */}
+   
       {/* <Ourawards /> */}
       <div id="awards-section">
   <Ourawards />

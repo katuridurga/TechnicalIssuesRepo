@@ -184,7 +184,7 @@ function HomeContent() {
                   </div>
                   <div className="">
                     <label className="" for="city">City</label>
-                    <input className="" placeholder="City" id="city" name="city" type="text" value={formData.city} onChange={handleInputChange} required />
+                    <input className="" placeholder="City" id="city" name="city" type="text" value={formData.city} onChange={handleInputChange}  />
                   </div>
                 </div>
                 <div className="formGrid" data-form-id="need-guidance" data-form="step1-container">
