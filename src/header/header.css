@@ -358,6 +358,16 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .readmore-btn {
+    margin-top: -12px !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #fff;
+    background: none;
+    text-decoration: none;
+}
   .incontent p{
     font-size: 13px !important;
   }
@@ -2949,11 +2959,23 @@ option:first-of-type {
 }
 
 .incontent {
-  background: #222;
-  color: #000;
-  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 130px;
+      padding-top: 0px;
+    background: #222;
 }
-
+.readmore-btn {
+  margin-top: -14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #fff;
+  background: none;
+  text-decoration: none;
+}
 .incontent p {
   color: #fff !important;
   font-weight: 600;
@@ -3795,7 +3817,7 @@ div.et_pb_section.et_pb_section_0 {
   background-position: top;
   height: 483px;
   top: 44px;
-  margin-bottom: 38px !important;
+  margin-bottom: 68px !important;
 }
 
 .MobileClassacctr {
@@ -4088,7 +4110,7 @@ div.et_pb_section.et_pb_section_0 {
   .scroll-to-top {
     background: #ed1923 !important;
     right: 1rem !important;
-    bottom: 4rem !important;
+    bottom: 5rem !important;
     position: fixed;
     z-index: 99 !important;
     cursor: pointer;
@@ -9078,6 +9100,10 @@ td p {
   transform: translateX(4px);
 }
 
+.arros {
+  margin-left: 7px;
+  color: #fff !important;
+}
 .incontent .rbtn:hover a,
 .incontent a:hover svg:hover {
   color: #ED1B24 !important;

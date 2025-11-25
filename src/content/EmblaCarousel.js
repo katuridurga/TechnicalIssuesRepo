@@ -113,29 +113,8 @@ useEffect(() => {
       
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-        <div className="embla__slide" key={220}>
-        <picture>
-  <source srcSet={mbnewbanF} media="(max-width: 768px)" />
-  <img
-    src={newbanF}
-    alt="Home Banner"
-    width={1526}
-    height={450}    
-    fetchpriority="high"     
-    decoding="async"
-    style={{ width: "100%" }}
-  />
-</picture>
-
-
-              {/* <img
-                className="embla__slide__img"
-                src={isMobile ? mbnewban0 : newban1}
-                alt="Home Banner" style={{objectPosition:isMobile ? "center" :"top", height:isMobile ? "auto" : "auto", marginTop:isMobile ? "0px" : "0px"}}
-              /> */}
-            </div>
-
-            <div className="embla__slide" key={0}>
+     
+   <div className="embla__slide" key={0}>
             <picture>
   <source srcSet={mbnewban0} media="(max-width: 768px)" />
   <img
@@ -146,6 +125,29 @@ useEffect(() => {
     decoding="async"
     fetchpriority="high"
     style={{ width: "100%", margin: "0 auto", height: "auto" }}
+  />
+</picture>
+
+              {/* <img
+                className="embla__slide__img"
+                src={isMobile ? mbnewban0 : newban1}
+                alt="Home Banner" style={{objectPosition:isMobile ? "center" :"top", height:isMobile ? "auto" : "auto", marginTop:isMobile ? "0px" : "0px"}}
+              /> */}
+            </div>
+
+         
+
+   <div className="embla__slide" key={220}>
+        <picture>
+  <source srcSet={mbnewbanF} media="(max-width: 768px)" />
+  <img
+    src={newbanF}
+    alt="Home Banner"
+    width={1526}
+    height={450}    
+    fetchpriority="high"     
+    decoding="async"
+    style={{ width: "100%" }}
   />
 </picture>
               {/* <img

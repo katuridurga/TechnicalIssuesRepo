@@ -472,7 +472,7 @@ The curriculum covers foundational programming, advanced game engine programming
                     {openIndex === index && (
                       <ul style={{ paddingLeft: "6.5rem", lineHeight: "1.9" }}>
                         {faq.answer.map((point, i) => (
-                          <li key={i} style={{ listStyle: "disc" }}>{point}</li>
+                          <li key={i} style={{ listStyle: "disc", fontSize:"14px" }}>{point}</li>
                         ))}
                       </ul>
                     )}

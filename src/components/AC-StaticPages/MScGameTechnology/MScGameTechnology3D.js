@@ -654,7 +654,7 @@ const items = [
 
       </section>
 
-      <div id="Enquire-Now" style={{ marginTop: "30px" }}>
+      <div id="Enquire-Now" style={{ marginTop: "30px", fontSize:"14px" }}>
         <HomeContentForm />
       </div>
 

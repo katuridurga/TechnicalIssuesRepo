@@ -88,7 +88,9 @@
     background: #222;
     color: #000;
     height: 100px !important;
+    min-height: 100px !important;
 }
+
 .embla__parallax__layerbaM p {
   padding: 0px 30px !important;
 }

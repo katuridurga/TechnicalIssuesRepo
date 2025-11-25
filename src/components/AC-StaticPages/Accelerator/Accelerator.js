@@ -271,7 +271,7 @@ function Courses(props) {
                       {openIndex === index && (
                         <ul style={{ paddingLeft: "6.5rem", lineHeight: "1.9" }}>
                           {faq.answer.map((point, i) => (
-                            <li key={i} style={{ listStyle: "disc" }}>{point}</li>
+                            <li key={i} style={{ listStyle: "disc", fontSize:"14px" }}>{point}</li>
                           ))}
                         </ul>
                       )}
@@ -355,7 +355,7 @@ function Courses(props) {
                       {openIndex1 === indexw && (
                         <ul style={{ paddingLeft: "6.5rem", lineHeight: "1.9" }}>
                           {faqw.answer.map((pointw, p) => (
-                            <li key={p} style={{ listStyle: "disc" }}>{pointw}</li>
+                            <li key={p} style={{ listStyle: "disc", fontSize:"14px" }}>{pointw}</li>
                           ))}
                         </ul>
                       )}

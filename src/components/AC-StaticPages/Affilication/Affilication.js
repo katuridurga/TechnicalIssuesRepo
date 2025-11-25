@@ -74,10 +74,11 @@ function Affilication() {
      
 
       <section className="content-section courses-container">
-        <div className="content-wrapper" style={{marginTop:isMobileState?"0px" : "0px"}}>
-           <h2 className="courseHeading fadeInUp anime-delay" style={{textAlign:"center"}}>
+          <h2 className="courseHeading fadeInUp anime-delay" style={{textAlign:"center"}}>
         Jawaharlal Nehru Architecture & Fine Arts University (JNAFAU)
       </h2>
+        <div className="content-wrapper" style={{marginTop:isMobileState?"0px" : "0px"}}>
+         
           <div className="content-text">
             <p>
               JNAFAU is a prestigious state university in Telangana, recognized by

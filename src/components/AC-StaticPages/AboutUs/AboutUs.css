@@ -1103,7 +1103,7 @@ justify-content: center;
 
 @media only screen and (max-width : 1024px){
   #awards-section{
-    margin-top: 30px;
+    margin-top: 0px;
   }
  
   .main-img {
