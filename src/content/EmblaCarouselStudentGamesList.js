@@ -1,13 +1,13 @@
 import React, { useCallback, useEffect, useRef } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-import { useSelector, shallowEqual, useDispatch } from "react-redux"
+import { useSelector, shallowEqual } from "react-redux"
 
 import {
   NextButton,
   PrevButton,
   usePrevNextButtons
 } from './EmblaCarouselArrowButtonsGames'
-import { useDotButton } from './EmblaCarouselDotButtonBuzz' 
+
 
 const TWEEN_FACTOR_BASE = 0.2
 
@@ -17,8 +17,8 @@ const EmblaCarousel = (props) => {
   const tweenFactor = useRef(0)
   const tweenNodes = useRef([])
 
-  const {} =
-    useDotButton(emblaApi)
+  // const {} =
+  //   useDotButton(emblaApi)
 
   const {
     prevBtnDisabled,
@@ -103,7 +103,7 @@ const isMobileState = useSelector(
                   <img
                     className="embla__slide__imgba-22 embla__parallax__imgba-2"
                     src={"https://cdn.infobot.org/com.glu.sniperx-header.png"}
-                    alt="Your alt text"
+                    alt="Orbital"
                     height={isMobileState ? "220" : "220"} 
               width={isMobileState ? "486" : "525"}
                   />
@@ -126,7 +126,7 @@ const isMobileState = useSelector(
                     width={isMobileState ? "486" : "525"}
                   />
                    {/* <div className="buzzdiv-2">
-                    <h1>Minecraft Game</h1>
+                    <h1>Orbital Game</h1>
                   </div> */}
                 </div>
               </div>
@@ -142,10 +142,10 @@ const isMobileState = useSelector(
                     height={isMobileState ? "220" : "220"} 
                     width={isMobileState ? "486" : "525"}
                     src={"https://images.squarespace-cdn.com/content/v1/615dd9c46ea913604f68e0aa/1641862191916-N0LGJ4U0GURCQOOBH3HE/Thumbnail_Crackdown+3.jpg"}
-                    alt="Your alt text"
+                    alt="orbital image"
                   />
                    {/* <div className="buzzdiv-2">
-                    <h1>Minecraft Game</h1>
+                    <h1>Orbital Game</h1>
                   </div> */}
                 </div>
               </div>
@@ -170,12 +170,12 @@ const isMobileState = useSelector(
                   <img
                     className="embla__slide__imgba-22 embla__parallax__imgba-2"
                     src={"https://img.youtube.com/vi/qLkqJVln9ns/maxresdefault.jpg"}
-                    alt="Your alt text"
+                    alt="youtube"
                     height={isMobileState ? "220" : "220"} 
               width={isMobileState ? "486" : "525"}
                   />
                    {/* <div className="buzzdiv-2">
-                    <h1>Minecraft Game</h1>
+                    <h1>Orbital Game</h1>
                   </div> */}
                 </div>
               </div>
@@ -187,7 +187,7 @@ const isMobileState = useSelector(
                   <img
                     className="embla__slide__imgba-22 embla__parallax__imgba-2"
                     src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMjly1KJTpRHMaFpZA9XW5bat_I4RrpLNlflqsFZX7H2L-bqAKs8ukw-84JqgElQqW-H4&usqp=CAU"}
-                    alt="Your alt text"
+                    alt="Orbitalimage"
                     height={isMobileState ? "220" : "220"} 
                     width={isMobileState ? "486" : "525"}
                   />
@@ -214,10 +214,10 @@ const isMobileState = useSelector(
                   width={isMobileState ? "486" : "525"}
                     className="embla__slide__imgba-22 embla__parallax__imgba-2"
                     src={"https://wallpapers.com/images/hd/texas-chainsaw-massacre-scary-poster-786e7gfiyuete0kn.jpg"}
-                    alt="Your alt text"
+                    alt="orbitalimage"
                   />
                    {/* <div className="buzzdiv-2">
-                    <h1>Minecraft Game</h1>
+                    <h1>Orbital Game</h1>
                   </div> */}
                 </div>
               </div>
@@ -229,12 +229,12 @@ const isMobileState = useSelector(
                   <img
                     className="embla__slide__imgba-22 embla__parallax__imgba-2"
                     src={"https://assets.goal.com/images/v3/bltde95f09fad0ce0f3/f7503bfbd076bcb69f0957343c00be42da8f388d.jpg?auto=webp&format=pjpg&width=1080&quality=60"}
-                    alt="Your alt text"
+                    alt="Orbital"
                     height={isMobileState ? "220" : "220"} 
                     width={isMobileState ? "486" : "525"}
                   />
                    {/* <div className="buzzdiv-2">
-                    <h1>Minecraft Game</h1>
+                    <h1>Orbital Game</h1>
                   </div> */}
                 </div>
               </div>
@@ -263,10 +263,10 @@ const isMobileState = useSelector(
                   width={isMobileState ? "486" : "525"}
                     className="embla__slide__imgba-22 embla__parallax__imgba-2"
                     src={"https://images.squarespace-cdn.com/content/5e32c700db6dd75a6c7df8d1/1584712393283-3M810KPHNUXUOINCNVTZ/Spyder_OnlineAsset_1280x720.png?content-type=image%2Fpng"}
-                    alt="image"
+                    alt="Orbital"
                   />
                    {/* <div className="buzzdiv-2">
-                    <h1>Minecraft Game</h1>
+                    <h1>Orbital Game</h1>
                   </div> */}
                 </div>
               </div>
@@ -279,11 +279,11 @@ const isMobileState = useSelector(
                   <img
                     className="embla__slide__imgba-22 embla__parallax__imgba-2"
                     src={"https://images5.alphacoders.com/103/thumb-1920-1037076.jpg"}
-                    alt="images5"
+                    alt="imageOrbital Game"
                     height={isMobileState ? "220" : "220"} 
                     width={isMobileState ? "486" : "525"}                  />
                    {/* <div className="buzzdiv-2">
-                    <h1>Minecraft Game</h1>
+                    <h1>Orbital Game</h1>
                   </div> */}
                 </div>
               </div>

@@ -275,11 +275,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
             </a>
 
-
-            {/* <div className="mainrec22s">
-              <img src={recimg} alt="recimg" style={{ width: "100%", height: "100%" }} />
-
-            </div> */}
             <div className='eldiv'>
               <ul className='elm'>
                 <li><b>Duration</b>: 20 Hours</li>

@@ -743,12 +743,13 @@ section#section-16878425631230::before {
     z-index: 9999;
 }
 .containergawardh {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 0px;
-width: 65%;
-    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;                  /* equal gap everywhere */
+    padding: 0;
+    width: 100%;                /* full width */
+    max-width: 1000px;          /* perfect for desktop + large screens */
+    margin: 0 auto;             /* center the grid */
 }
 
 .cardsgawardh {

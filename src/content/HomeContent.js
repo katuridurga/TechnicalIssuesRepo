@@ -22,7 +22,6 @@ import Slide from '@mui/material/Slide';
 import { useSelector, shallowEqual } from "react-redux";
 import Autocomplete from '@mui/material/Autocomplete';
 import { Helmet } from "react-helmet";
-import { boxShadow } from "../assets/jss/material-dashboard-react";
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -120,7 +119,7 @@ function HomeContent() {
     if (name === "PhoneNumber" && /^[0-9]{10}$/.test(value)) {
       try {
         const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkenquirypagemobile.php?contactNumber=${value}`);
-        const result = await response.json();
+        // const result = await response.json();
 
         if (response.status === 200) {
           alert('This mobile number is already registered with in the last 3 months our team will get back to you.');

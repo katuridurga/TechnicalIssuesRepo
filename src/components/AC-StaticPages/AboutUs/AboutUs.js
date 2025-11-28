@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./AboutUs.css";
 import HomeContentForm from "../../../content/HomeContentFrom";
 import Ourawards from "../../../content/ourawards";
-import EmblaCarouselAwards from "../../../content/EmblaCarouselAwards";
 import InTheMedia from "../../../content/inTheMedia";
 import { useSelector, shallowEqual } from "react-redux";
 import bgImage from "../../../assets/img/banners/make-different-img.webp";
-
 import n1 from "../../../assets/img/banners/nemonics.webp";
 import hwst from "../../../assets/img/test/howstrt.webp";
 import suryasir from "../../../assets/img/test/suryasir.webp";
@@ -24,12 +22,6 @@ function Aboutus(props) {
     state => state.mainReducer.isMobile,
     shallowEqual
   );
-
-  const [isActive, setIsActive] = useState(true);
-  const [isActives, setIsActives] = useState(true);
-  const [isActivess, setIsActivess] = useState(true);
-  const [isActivesss, setIsActivesss] = useState(true);
-
 
   return (
     <>
@@ -71,7 +63,7 @@ function Aboutus(props) {
         <title>Backstage Pass Institute of Gaming , India's #1 College for Game Development & Design
         </title>
         <meta property="og:title" content="Backstage Pass Institute of Gaming , India's #1 College for Game Development & Design" />
-        <meta name="description" content="Experience hands-on game development and design education at Backstage Pass, India's leading gaming college. Get mentored by experts and build your future." />
+        <meta property="og:description" name="description" content="Experience hands-on game development and design education at Backstage Pass, India's leading gaming college. Get mentored by experts and build your future." />
         <meta property="og:url" content="https://www.backstagepass.co.in/about-us/our-story/" />
         <link rel="canonical" href="https://www.backstagepass.co.in/about-us/our-story/" />
       </Helmet>
@@ -98,7 +90,7 @@ function Aboutus(props) {
                 <div className="sec-title">
                   <h2 className="courseHeading fadeInUp anime-delay" style={{ color: "#ed1925" }}>How It Started</h2>
                 </div>
-                <div className="text">At a time when gaming enthusiasts didn’t have many game development colleges in India to turn to,<b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank"> Backstage Pass Institute of Gaming</a></b> rose as a beacon of hope. With a single motto to revolutionise the world of gaming in the country and transform this form of entertainment into a full-fledged source of earning, Backstage Pass has championed quality gaming education at an affordable price.
+                <div className="text">At a time when gaming enthusiasts didn’t have many game development colleges in India to turn to,<b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer"> Backstage Pass Institute of Gaming</a></b> rose as a beacon of hope. With a single motto to revolutionise the world of gaming in the country and transform this form of entertainment into a full-fledged source of earning, Backstage Pass has championed quality gaming education at an affordable price.
                 </div>
                 <div className="text">
                   The institute has welcomed students from all over the country, belonging to diverse backgrounds and unique mindsets, uniting them through their singular passion for gaming and making games. As one of the leading gaming colleges in India, Backstage Pass offers career-oriented bachelor's programs in India, making it one of the best video game development courses after 12th for aspiring game developers and creators.
@@ -109,7 +101,7 @@ function Aboutus(props) {
           <div className="main-img2 brtopleft" style={{ boxShadow: "none", background: "none", padding: "0px" }} >
             <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%" }}>
               <div className="inner-column inner-column1 wow fadeInLeft" style={{}}>
-                <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={hwst} alt="" /></a></div>
+                <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={hwst} alt="hwst" /></a></div>
 
               </div></div>
           </div>
@@ -120,43 +112,67 @@ function Aboutus(props) {
 
         <div className="main-img" style={{ boxShadow: "none", marginBottom: "28px !important" }}>
 
-          <div style={{ boxShadow: "none", background: "none", padding: "0px", marginBottom: isMobileState ? "0px" : "0px" }} className="main-img2 brtopleft1">
-            <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%", marginTop: isMobileState ? "0px" : "20px" }}>
-              <div className="inner-column inner-column1 wow fadeInLeft" style={{ paddingBottom: "0px" }}>
-                <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={suryasir} alt="" /></a></div>
+          {isMobileState ? (
+            <> 
+              <div className="sec-title">
+                      <h2 className="vision-section courseHeading fadeInUp anime-delay" style={{ color: "#ed1925", textAlign: "left" }}>Vision </h2>
+                    </div><div style={{ boxShadow: "none", background: "none", padding: "0px", marginBottom: isMobileState ? "0px" : "0px" }} className="main-img2 brtopleft1">
+              <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%", marginTop: isMobileState ? "0px" : "20px" }}>
+                <div className="inner-column inner-column1 wow fadeInLeft" style={{ paddingBottom: "0px" }}>
+                  <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={suryasir} alt="suryasir" /></a></div>
 
-              </div></div>
-          </div>
-          <div style={{ boxShadow: "none", padding: "0px" }} className="main-img2">
-            <div style={{ boxShadow: "none", background: "none", padding: "0px" }} >
-              <div className="inner-column" style={{ padding: isMobileState ? '0px 0px 0px 0px' : '0px 0px 0px 30px' }}>
-                <div className="sec-title">
-                  <h2 className="courseHeading fadeInUp anime-delay" style={{ color: "#ed1925", textAlign: "left" }}>Vision </h2>
-                </div>
-                <div className="text"> What started as <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.linkedin.com/in/surya-p-99413b6/" rel="noopener noreferrer" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank">Mr. Surya's</a></b> simple vision has evolved into a thriving academic and professional ecosystem, bringing together a diverse gaming community of students, alumni, and industry experts.</div>
-                <div className="text">Over the years, our graduates have joined some of the largest game studios, contributed to the development of innovative and acclaimed titles, and earned recognition for their creative and technical excellence. </div>
-                <div className="text">These achievements reflect the enduring spirit and high standards of our institution. If you're motivated to shape the future of game development, we welcome you to embark on this journey with us.</div>
+                </div></div>
+            </div>
+              <div style={{ boxShadow: "none", padding: "0px" }} className="main-img2 mat">
+                <div style={{ boxShadow: "none", background: "none", padding: "0px" }} >
+                  <div className="inner-column" style={{ padding: isMobileState ? '0px 0px 0px 0px' : '0px 0px 0px 30px' }}>
+                  
+                    <div className="text"> What started as <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.linkedin.com/in/surya-p-99413b6/" rel="noopener noreferrer" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank">Mr. Surya's</a></b> simple vision has evolved into a thriving academic and professional ecosystem, bringing together a diverse gaming community of students, alumni, and industry experts.</div>
+                    <div className="text">Over the years, our graduates have joined some of the largest game studios, contributed to the development of innovative and acclaimed titles, and earned recognition for their creative and technical excellence. </div>
+                    <div className="text">These achievements reflect the enduring spirit and high standards of our institution. If you're motivated to shape the future of game development, we welcome you to embark on this journey with us.</div>
 
-              </div></div>
-          </div>
+                  </div></div>
+              </div>
+            </>
+          ) : (
+            <>
+              <div style={{ boxShadow: "none", background: "none", padding: "0px", marginBottom: isMobileState ? "0px" : "0px" }} className="main-img2 brtopleft1">
+                <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%", marginTop: isMobileState ? "0px" : "20px" }}>
+                  <div className="inner-column inner-column1 wow fadeInLeft" style={{ paddingBottom: "0px" }}>
+                    <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={suryasir} alt="suryasir" /></a></div>
 
+                  </div></div>
+              </div>
+              <div style={{ boxShadow: "none", padding: "0px" }} className="main-img2">
+                <div style={{ boxShadow: "none", background: "none", padding: "0px" }} >
+                  <div className="inner-column" style={{ padding: isMobileState ? '0px 0px 0px 0px' : '0px 0px 0px 30px' }}>
+                    <div className="sec-title">
+                      <h2 className="vision-section courseHeading fadeInUp anime-delay" style={{ color: "#ed1925", textAlign: "left" }}>Vision </h2>
+                    </div>
+                    <div className="text"> What started as <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.linkedin.com/in/surya-p-99413b6/" rel="noopener noreferrer" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank">Mr. Surya's</a></b> simple vision has evolved into a thriving academic and professional ecosystem, bringing together a diverse gaming community of students, alumni, and industry experts.</div>
+                    <div className="text">Over the years, our graduates have joined some of the largest game studios, contributed to the development of innovative and acclaimed titles, and earned recognition for their creative and technical excellence. </div>
+                    <div className="text">These achievements reflect the enduring spirit and high standards of our institution. If you're motivated to shape the future of game development, we welcome you to embark on this journey with us.</div>
 
+                  </div></div>
+              </div>
+            </>
+          )}
         </div>
       </div>
-      <div className='courses-container' style={{marginTop:isMobileState?"0px":"20px"}}>
+      <div className='courses-container' style={{ marginTop: isMobileState ? "0px" : "20px" }}>
 
         <h2 className="courseHeading fadeInUp anime-delay" style={{ marginTop: "-30px!important", textAlign: "center" }}>Kyodai Gameworks
         </h2>
         <p className="text">
-          <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://kyodaigameworks.com/" className="slu" target='_blank'> Kyodai Gameworks </a></b> is a full-fledged game development studio dedicated to crafting immersive, innovative, and genre-defining gaming experiences. From concept to launch, the studio is involved in every aspect of game creation — including development, design, and publishing.
+          <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://kyodaigameworks.com/" className="slu" target='_blank' rel="noopener noreferrer"> Kyodai Gameworks </a></b> is a full-fledged game development studio dedicated to crafting immersive, innovative, and genre-defining gaming experiences. From concept to launch, the studio is involved in every aspect of game creation — including development, design, and publishing.
         </p>
         <p className="text">
           Affiliated with the Backstage Pass Institute of Gaming, Kyodai Gameworks blends academic insight with industry expertise, pushing boundaries to deliver games that are not only fun and engaging but also refreshingly original. With a passion for storytelling and gameplay innovation, the studio continually explores new twists on familiar genres, setting the stage for the next generation of interactive entertainment.
         </p>
         <p className="text">
-           <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://play.google.com/store/apps/details?id=com.KyodaiGameworks.Slunkey" className="slu" target='_blank'>Slunkey</a></b> is the first game launched by Kyodai Gameworks. It is a fun slime puzzle adventure where a cheeky monkey mutates into a gooey character, and it tries to escape the crazy banana factory using slingshot mechanics. If you love puzzle games, quirky platformers, or are searching for the best puzzle games for Android and iPhone, this monkey puzzle escape is packed with challenge and fun.
+          <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://play.google.com/store/apps/details?id=com.KyodaiGameworks.Slunkey" className="slu" target='_blank' rel="noopener noreferrer">Slunkey</a></b> is the first game launched by Kyodai Gameworks. It is a fun slime puzzle adventure where a cheeky monkey mutates into a gooey character, and it tries to escape the crazy banana factory using slingshot mechanics. If you love puzzle games, quirky platformers, or are searching for the best puzzle games for Android and iPhone, this monkey puzzle escape is packed with challenge and fun.
 
-          Kyodai Gameworks’ 2nd game,  <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://play.google.com/store/apps/details?id=com.orbital.kyodaigameworks" className="slu" target='_blank'>Orbital Outbreak</a></b>, is a chaotic roguelite shooter set on spinning planets. Packed with nonstop action, this offline top-down shooter delivers survival chaos and ranks among the best shooting games for Android and iPhone
+          Kyodai Gameworks’ 2nd game,  <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://play.google.com/store/apps/details?id=com.orbital.kyodaigameworks" className="slu" target='_blank' rel="noopener noreferrer">Orbital Outbreak</a></b>, is a chaotic roguelite shooter set on spinning planets. Packed with nonstop action, this offline top-down shooter delivers survival chaos and ranks among the best shooting games for Android and iPhone
         </p>
       </div>
 
@@ -170,11 +186,11 @@ function Aboutus(props) {
           <div className="custom-row">
             {/* Left section */}
             <div className="left">
-          
-         
+
+
 
             </div>
-          
+
             {/* Right section */}
             <div className="right">
               <ul className="makes-different-list">
@@ -213,11 +229,11 @@ function Aboutus(props) {
         </div>
       </section>
 
-   
+
       {/* <Ourawards /> */}
       <div id="awards-section">
-  <Ourawards />
-</div>
+        <Ourawards />
+      </div>
       <InTheMedia />
       <HomeContentForm />
     </>

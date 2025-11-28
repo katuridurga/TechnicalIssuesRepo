@@ -3,10 +3,6 @@ import { useSelector, shallowEqual } from "react-redux";
 import "../BachelorsInComputerScienceGameDevelopment/BachelorsInComputerScienceGameDevelopment.css";
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import PropTypes from 'prop-types';
-import { useTheme } from '@mui/material/styles';
-
-import { emphasize, styled } from '@mui/material/styles';
-import Chip from '@mui/material/Chip';
 import m5 from "../../../assets/img/Icons/flags.webp";
 import c1 from "../../../assets/img/Courses/careeroprt.webp";
 import m6 from "../../../assets/img/Icons/jams.webp";
@@ -47,52 +43,9 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-const StyledBreadcrumb = styled(Chip)(({ theme, Props }) => {
-  const backgroundColor =
-    theme.palette.mode === 'light'
-      ? theme.palette.grey[100]
-      : theme.palette.grey[800];
-
-
-  return {
-    backgroundColor,
-    height: theme.spacing(3),
-    color: theme.palette.text.primary,
-    fontWeight: theme.typography.fontWeightRegular,
-    '&:hover, &:focus': {
-      backgroundColor: emphasize(backgroundColor, 0.06),
-    },
-    '&:active': {
-      boxShadow: theme.shadows[1],
-      backgroundColor: emphasize(backgroundColor, 0.12),
-    },
-  };
-}); // TypeScript only: need a type cast here because https://github.com/Microsoft/TypeScript/issues/26591
-
 
 
 function Courses(props) {
-
-
-  const theme = useTheme();
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
-
-  const [value1, setValue1] = React.useState(0);
-
-  // ✅ Add this here (INSIDE component)
-  const [activeTab, setActiveTab] = useState("GAME PROGRAMMING");
-  const handleChange1 = (event, newValue) => {
-    setValue1(newValue);
-  };
-
-  const OPTIONS = { loop: true }
-  const SLIDE_COUNT = 10
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
@@ -102,51 +55,43 @@ function Courses(props) {
     {
       title: "CS & Game Programming",
       subjects: [
-  "C++ Fundamentals for Unreal Engine",
-"Introduction to Unreal Engine and Game Development",
-"Gameplay Programming Essentials",
-"Unreal Blueprints",
-"Level Design and Environment Interaction",
-"AI and Behavior Programming",
-"Advanced Gameplay Programming",
-"UI Programming and Game Systems",
-"Portfolio Development & Final Project",
-     ],
+        "C++ Fundamentals for Unreal Engine",
+        "Introduction to Unreal Engine and Game Development",
+        "Gameplay Programming Essentials",
+        "Unreal Blueprints",
+        "Level Design and Environment Interaction",
+        "AI and Behavior Programming",
+        "Advanced Gameplay Programming",
+        "UI Programming and Game Systems",
+        "Portfolio Development & Final Project",
+      ],
     },
-   
+
   ];
 
   const items = ["Understand and implement C++ programming for Unreal Engine.",
-"Utilize Unreal Blueprints for rapid prototyping and gameplay scripting.",
-"Develop interactive gameplay mechanics using both Blueprints and C++.",
-"Design immersive levels with environment interactions and physics.",
-"Implement AI behaviors using Behavior Trees and decision-making systems.",
-"Create user interfaces using Unreal Motion Graphics (UMG).",
-"Build and showcase a fully functional Unreal Engine game project."];
-
-  const handleScroll = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-      window.history.replaceState(null, "", window.location.pathname);
-    }
-  };
+    "Utilize Unreal Blueprints for rapid prototyping and gameplay scripting.",
+    "Develop interactive gameplay mechanics using both Blueprints and C++.",
+    "Design immersive levels with environment interactions and physics.",
+    "Implement AI behaviors using Behavior Trees and decision-making systems.",
+    "Create user interfaces using Unreal Motion Graphics (UMG).",
+    "Build and showcase a fully functional Unreal Engine game project."];
 
   const faqs = [
     {
       question: "Career Opportunities",
       answer: [
-"Unreal Engine Game Developer",
-"Gameplay Programmer",
-"AI Programmer",
-"Level Designer",
-"UI/UX Developer for Games",
-"Technical Artist",
-"VR/AR Developer",
-"Indie Game Developer",
+        "Unreal Engine Game Developer",
+        "Gameplay Programmer",
+        "AI Programmer",
+        "Level Designer",
+        "UI/UX Developer for Games",
+        "Technical Artist",
+        "VR/AR Developer",
+        "Indie Game Developer",
       ],
     },
-  
+
 
   ];
 
@@ -158,7 +103,7 @@ function Courses(props) {
 
   return (
     <>
-        <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'Diploma-in-Game-Development-with-Unrealmm' : 'Diploma-in-Game-Development-with-Unreal'}`}>
+      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'Diploma-in-Game-Development-with-Unrealmm' : 'Diploma-in-Game-Development-with-Unreal'}`}>
         <div className="et_pb_row et_pb_row_0">
           <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
             <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
@@ -169,9 +114,9 @@ function Courses(props) {
       </div>
 
 
-        <Helmet>
-          <script type="application/ld+json">
-            {`
+      <Helmet>
+        <script type="application/ld+json">
+          {`
               {
   "@context": "https://schema.org/", 
   "@type": "BreadcrumbList", 
@@ -188,9 +133,9 @@ function Courses(props) {
   }]
 }
                 `}
-          </script>
-          <script type="application/ld+json">
-            {`
+        </script>
+        <script type="application/ld+json">
+          {`
             {
   "@context": "https://schema.org/",
   "@type": "WebSite",
@@ -203,17 +148,17 @@ function Courses(props) {
   }
 }
               `}
-          </script>
+        </script>
 
-          <title>Best Game Development with Unreal Course in India - Backstage Pass college</title>
+        <title>Best Game Development with Unreal Course in India - Backstage Pass college</title>
 
-          <meta property="og:title" content="Best Game Development with Unreal Course in India - Backstage Pass College" />
-          <meta name="description" content="Learn game development with Unreal Engine Diploma by Backstage Pass. Master C++, Blueprints, AI, level design, ⁠Game systems, Gameplay Programming. 6-month diploma. Online & offline modes." />
-          <meta property="og:url" content="https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unreal/" />
+        <meta property="og:title" content="Best Game Development with Unreal Course in India - Backstage Pass College" />
+        <meta property="og:description" name="description" content="Learn game development with Unreal Engine Diploma by Backstage Pass. Master C++, Blueprints, AI, level design, ⁠Game systems, Gameplay Programming. 6-month diploma. Online & offline modes." />
+        <meta property="og:url" content="https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unreal/" />
 
-          <meta name="keywords" content="unreal engine course, game development course, unreal game development training, learn unreal engine, game development with unreal, best unreal engine course in India, how to become unreal engine developer, career in unreal engine game development, game development course with placement, unreal engine certification course​" />
-          <link rel="canonical" href="https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unreal/" />
-        </Helmet>
+        <meta name="keywords" content="unreal engine course, game development course, unreal game development training, learn unreal engine, game development with unreal, best unreal engine course in India, how to become unreal engine developer, career in unreal engine game development, game development course with placement, unreal engine certification course​" />
+        <link rel="canonical" href="https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unreal/" />
+      </Helmet>
 
 
 
@@ -224,7 +169,7 @@ function Courses(props) {
           {/* Info Card */}
           <div className="info-card slanted-info">
             <div className="info-item">
-            <span className="info-subtitle">Course Duration</span>
+              <span className="info-subtitle">Course Duration</span>
               <span className="info-title">6 months</span>
             </div>
             <div className="info-item">
@@ -240,8 +185,8 @@ function Courses(props) {
               <span className="info-title">Lincoln
 
 
-</span>
-              
+              </span>
+
             </div>
           </div>
         </div>
@@ -250,24 +195,24 @@ function Courses(props) {
       {/* Course Overview */}
       <div className="overviewsection">
         <h2 className='courseHeading'>Course Overview</h2>
-         <div className="brname"></div>
+        <div className="brname"></div>
         <p>
-       The Game Development with Unreal Engine program provides a comprehensive foundation in game programming using C++ and Unreal Engine. This hands-on course covers essential topics such as gameplay mechanics, AI behavior, UI programming, and level design.<br/>
+          The Game Development with Unreal Engine program provides a comprehensive foundation in game programming using C++ and Unreal Engine. This hands-on course covers essential topics such as gameplay mechanics, AI behavior, UI programming, and level design.<br />
 
-Students will learn both C++ scripting and Unreal Blueprints, ensuring a versatile skill set. Advanced gameplay programming techniques, AI systems, and UI development will be explored in-depth.<br/>
+          Students will learn both C++ scripting and Unreal Blueprints, ensuring a versatile skill set. Advanced gameplay programming techniques, AI systems, and UI development will be explored in-depth.<br />
 
-The course culminates in a final portfolio project, where students create a polished game prototype. Graduates will be well-prepared for careers in game development, interactive media, and emerging fields like VR and AR development.
+          The course culminates in a final portfolio project, where students create a polished game prototype. Graduates will be well-prepared for careers in game development, interactive media, and emerging fields like VR and AR development.
         </p>
       </div>
 
       {/* Course Objectives / Curriculum */}
       <div className="curriculum-section" style={{ marginTop: "24px" }}>
         <h2 className='courseHeading'>Course Objectives</h2>
-         <div className="brname"></div>
+        <div className="brname"></div>
         <div className="">
           <ul style={{ listStyle: "none", padding: 0 }}>
             {items.map((item, index) => (
-              <li key={index} style={{ display: "flex", marginBottom: "14px", fontSize:"16px",gap:"10px", alignItems:"flex-start", justifyContent:"flex-start", lineHeight:"1.6"}}>
+              <li key={index} style={{ display: "flex", marginBottom: "14px", fontSize: "16px", gap: "10px", alignItems: "flex-start", justifyContent: "flex-start", lineHeight: "1.6" }}>
                 <CheckBoxIcon style={{ color: "#ec1923", marginRight: "12px", fontSize: "22px", marginTop: "3px" }} />
                 {item}
               </li>
@@ -285,7 +230,7 @@ The course culminates in a final portfolio project, where students create a poli
               // Start a new row every 3 semesters
               if (index % 3 === 0) {
                 return (
-                  <div className="curriculum-row" key={index} style={{gridTemplateColumns:"repeat(2, 1fr)"}}>
+                  <div className="curriculum-row" key={index} style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
                     {semesters.slice(index, index + 1).map((s, i) => (
                       <div key={i} className="semester-card">
                         <h4 className="semester-title">{s.title}</h4>
@@ -295,7 +240,7 @@ The course culminates in a final portfolio project, where students create a poli
                           ))}
                         </ul>
 
-                      
+
                       </div>
                     ))}
                   </div>
@@ -303,18 +248,18 @@ The course culminates in a final portfolio project, where students create a poli
               }
               return null;
             })}
-     
+
 
           </div>
-                              
+
         </section>
-     
+
 
 
       </div>
       <div id="Beyond-The-Course" backgroundColor="blue" height="180vh" style={{ padding: "0px 0px", marginBottom: "20px" }}>
         <h2 className='courseHeading' style={{ color: "#ec1923", marginTop: "0px" }}>Beyond The Course</h2>
- <div className="brname"></div>
+        <div className="brname"></div>
         <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At Backstage Pass, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.
 
 
@@ -324,17 +269,17 @@ The course culminates in a final portfolio project, where students create a poli
           <ul style={{ width: "80%", margin: "0px auto", paddingTop: "10px" }}>
             <li>
               <div className='BeyondLeft'>
-                <img src={m5} />
+                <img src={m5} alt="m5" />
               </div>
               <div className='BeyondRight'>
-               <h4 className='lsh'>Studio Visits</h4>
+                <h4 className='lsh'>Studio Visits</h4>
                 <p>Visits to game studios allow students to witness how a game company truly works
                 </p>
               </div>
             </li>
             <li>
               <div className='BeyondLeft'>
-                <img src={m6} />
+                <img src={m6} alt="m6" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Jams & Conferences</h4>
@@ -346,7 +291,7 @@ The course culminates in a final portfolio project, where students create a poli
 
             <li>
               <div className='BeyondLeft'>
-                <img src={m8} />
+                <img src={m8} alt="m8" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Networking Opportunities</h4>
@@ -358,7 +303,7 @@ The course culminates in a final portfolio project, where students create a poli
 
             <li>
               <div className='BeyondLeft'>
-                <img src={m7} />
+                <img src={m7} alt="m7" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Make Your Own Game</h4>
@@ -384,10 +329,10 @@ The course culminates in a final portfolio project, where students create a poli
             {/* Tabs */}
 
 
-            <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
-              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"100%" }}>Career Opportunities</h2>
- <div className="brname"></div>
-              <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
+            <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width: isMobileState ? "100%" : "80%", margin: "0px" }}>
+              <h2 className='courseHeading' style={{ textAlign: "left", width: isMobileState ? "100%" : "100%" }}>Career Opportunities</h2>
+              <div className="brname"></div>
+              <div className="border rounded-lg bg-white" style={{ marginTop: "30px" }}>
                 {faqs.map((faq, index) => (
                   <div
                     key={index}
@@ -424,7 +369,7 @@ The course culminates in a final portfolio project, where students create a poli
                         paddingLeft: "20px",
                         textAlign: "justify",
                         lineHeight: "24px",
-                        fontSize:"16px"
+                        fontSize: "16px"
                       }}>
                         {faq.question}
                       </span>
@@ -435,15 +380,15 @@ The course culminates in a final portfolio project, where students create a poli
                     {openIndex === index && (
                       <ul style={{ paddingLeft: "6.5rem", lineHeight: "1.9" }}>
                         {faq.answer.map((point, i) => (
-                          <li key={i} style={{ listStyle: "disc", fontSize:"14px" }}>{point}</li>
+                          <li key={i} style={{ listStyle: "disc", fontSize: "14px" }}>{point}</li>
                         ))}
                       </ul>
                     )}
                   </div>
-                  
+
                 ))}
               </div>
-         <p className='normaltext'>This program prepares students for roles in game studios, interactive media companies, and AR/VR development firms.</p>
+              <p className='normaltext'>This program prepares students for roles in game studios, interactive media companies, and AR/VR development firms.</p>
 
 
             </section>
@@ -454,7 +399,7 @@ The course culminates in a final portfolio project, where students create a poli
 
 
 
-      <div id="Enquire-Now" style={{marginTop:"30px"}}>
+      <div id="Enquire-Now" style={{ marginTop: "30px" }}>
         <HomeContentForm />
       </div>
 

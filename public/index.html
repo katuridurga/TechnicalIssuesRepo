@@ -7,8 +7,8 @@
   <meta name="theme-color" content="#000000" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Backstage Pass</title>
-  <meta property="og:image" content="https://backstagepass.co.in/logo-16c7e4db.webp" />
-
+  <meta property="og:image" content="https://backstagepass.co.in/newlogo.webp" />
+  <meta property="og:type" content="website">
 
   <!-- Font Optimization -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -91,35 +91,29 @@
     })();
   </script>
   <!-- End Matomo Tag Manager -->
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    requestIdleCallback(() => {
-      document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
-        const href = link.getAttribute('href');
-        if (href && href.includes('.chunk.css')) {
-          const preload = document.createElement('link');
-          preload.rel = 'preload';
-          preload.as = 'style';
-          preload.href = href;
-          preload.onload = function () {
-            this.rel = 'stylesheet';
-          };
-          preload.onerror = function () {
-            this.rel = 'stylesheet';
-          };
-          link.remove();
-          document.head.appendChild(preload);
-        }
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      requestIdleCallback(() => {
+        document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+          const href = link.getAttribute('href');
+          if (href && href.includes('.chunk.css')) {
+            const preload = document.createElement('link');
+            preload.rel = 'preload';
+            preload.as = 'style';
+            preload.href = href;
+            preload.onload = function () {
+              this.rel = 'stylesheet';
+            };
+            preload.onerror = function () {
+              this.rel = 'stylesheet';
+            };
+            link.remove();
+            document.head.appendChild(preload);
+          }
+        });
       });
     });
-  });
-</script>
-
-
-
-
-
-
+  </script>
 
 </head>
 
@@ -132,32 +126,32 @@
   <div id="root"></div>
 
   <script>
-  (async function () {
-    try {
-      const currentChunks = Array.from(document.querySelectorAll('script[src*=".chunk."]'))
-        .map(s => s.src.split('/').pop())
-        .sort()
-        .join(',');
+    (async function () {
+      try {
+        const currentChunks = Array.from(document.querySelectorAll('script[src*=".chunk."]'))
+          .map(s => s.src.split('/').pop())
+          .sort()
+          .join(',');
 
-      const previousChunks = localStorage.getItem('react_build_chunks');
+        const previousChunks = localStorage.getItem('react_build_chunks');
 
-      if (previousChunks && previousChunks !== currentChunks) {
-        console.log('🧹 New React build detected — clearing old cached chunks...');
-        if ('caches' in window) {
-          const cacheNames = await caches.keys();
-          await Promise.all(cacheNames.map(name => caches.delete(name)));
+        if (previousChunks && previousChunks !== currentChunks) {
+          console.log('🧹 New React build detected — clearing old cached chunks...');
+          if ('caches' in window) {
+            const cacheNames = await caches.keys();
+            await Promise.all(cacheNames.map(name => caches.delete(name)));
+          }
+          localStorage.clear();
+          sessionStorage.clear();
+          location.reload(true);
         }
-        localStorage.clear();
-        sessionStorage.clear();
-        location.reload(true);
-      }
 
-      localStorage.setItem('react_build_chunks', currentChunks);
-    } catch (e) {
-      console.warn('Cache cleanup failed:', e);
-    }
-  })();
-</script>
+        localStorage.setItem('react_build_chunks', currentChunks);
+      } catch (e) {
+        console.warn('Cache cleanup failed:', e);
+      }
+    })();
+  </script>
 
 </body>
 

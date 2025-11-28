@@ -1,10 +1,8 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import "./Workshop.css";
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import courseBanner from "../../../assets/img/banners/CSGD.webp";
-import { emphasize, styled } from '@mui/material/styles';
-import Chip from '@mui/material/Chip';
 import b1 from "../../../assets/img/games/1.webp";
 import b11 from "../../../assets/img/games/11.webp";
 import b3 from "../../../assets/img/games/3.webp";
@@ -35,36 +33,7 @@ CustomTabPanel.propTypes = {
 };
 
 
-
-const StyledBreadcrumb = styled(Chip)(({ theme, Props }) => {
-  const backgroundColor =
-    theme.palette.mode === 'light'
-      ? theme.palette.grey[100]
-      : theme.palette.grey[800];
-  return {
-    backgroundColor,
-    height: theme.spacing(3),
-    color: theme.palette.text.primary,
-    fontWeight: theme.typography.fontWeightRegular,
-    '&:hover, &:focus': {
-      backgroundColor: emphasize(backgroundColor, 0.06),
-    },
-    '&:active': {
-      boxShadow: theme.shadows[1],
-      backgroundColor: emphasize(backgroundColor, 0.12),
-    },
-  };
-});
-
-function handleClick(event) {
-  event.preventDefault();
-  console.info('You clicked a breadcrumb.');
-}
-
 function Workshop(props) {
-
-
-  
 
   return (
     <>

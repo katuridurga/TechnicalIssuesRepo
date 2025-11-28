@@ -249,6 +249,9 @@ flex-direction: column;
 width:100%;
 margin:10px;
 }
+.blog:hover{
+      transform: scale(1.01);
+}
 
 .blog-image {
 position: relative;
@@ -266,9 +269,6 @@ object-position: center;
 border-radius: 4px;
 }
 
-.blog-image img:hover {
-transform: scale(1.05);
-}
 
 .blog-image .date {
 position: absolute;

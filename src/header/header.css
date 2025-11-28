@@ -1116,6 +1116,7 @@
   padding: 0px 0px;
   height: 60px;
   line-height: 60px;
+  position: relative;
 }
 
 #nav li ul {
@@ -1123,7 +1124,7 @@
   left: -999em;
   width: auto;
   background: #fff;
-  top: 80px;
+  top: 100%;
 }
 
 .mainc {
@@ -1245,7 +1246,7 @@
 
 #nav li:hover,
 #nav li.sfhover {
-  position: static;
+  position: relative !important;
 }
 
 .tab-menu>button {
@@ -4110,7 +4111,7 @@ div.et_pb_section.et_pb_section_0 {
   .scroll-to-top {
     background: #ed1923 !important;
     right: 1rem !important;
-    bottom: 5rem !important;
+    bottom: 7rem !important;
     position: fixed;
     z-index: 99 !important;
     cursor: pointer;
@@ -6730,7 +6731,7 @@ body {
 @media only screen and (max-width : 1024px) {
   .floatingIcon {
     position: fixed;
-    top: 79% !important;
+    top: 81% !important;
     right: 0;
     transform: translateY(-50%);
     z-index: 99999;
@@ -9210,3 +9211,4 @@ td p {
   color: #fff !important;
   stroke: #fff !important;
 }
+ 

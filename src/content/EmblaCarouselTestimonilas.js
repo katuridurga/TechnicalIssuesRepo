@@ -77,7 +77,7 @@ const testimonials = [
   },
   {
     text: "Backstage Pass was the catalyst that let me do bigger things as it provided me a very strong foundation. It was more than just exams. There is a lot of scope for knowledge sharing and it played a big role in how I was able to get good at my craft.",
-    name: "JOSEPH KALATHIL",
+    name: "Joseph Kalathi",
     role: "Gameplay Programmer Hacksaw studios,stockholm, sweden",
     avatar: "https://www.backstagepass.co.in/JoesphKalathil-d9008f68.webp?img=13",
   },

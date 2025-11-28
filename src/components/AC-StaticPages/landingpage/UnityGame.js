@@ -1,9 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./DiplomaAndAdvancedDiplomaCourses.css";
 import PropTypes from 'prop-types';
-
-import ReactWhatsappButton from "react-whatsapp-button";
-
+import { FaWhatsapp } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
 import r1 from "../../../assets/img/partners/r1.png";
 import r2 from "../../../assets/img/partners/r2.png";
@@ -126,18 +124,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     window.localStorage.setItem('MY_APP_STATE', JSON.stringify(showBanner));
   }, [showBanner]);
 
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setShowBanner(false);
-      setLoading(false);
-    }, 3000);
-
-  }, []);
-
-  const OPTIONS = { loop: true }
-  const SLIDE_COUNT = 5
 
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
@@ -194,13 +181,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       }
     };
   }, []);
-
-  const [value1, setValue1] = React.useState(0);
-
- 
   const [open, setOpen] = React.useState(false);
-
-
 
   const handleClose = () => {
     setOpen(false);
@@ -262,7 +243,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     if (name === "PhoneNumber" && /^[0-9]{10}$/.test(value)) {
       try {
 const response = await fetch(`https://www.backstagepass.co.in/reactapi/checklandingpagemobile.php?contactNumber=${value}`);
-             const result = await response.json();
 
         if (response.status === 200) {
           alert('This mobile number is already registered with in the last 3 months our team will get back to you.');
@@ -309,18 +289,6 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
       alert('An error occurred while submitting the form. Please try again.');
     }
   };
-
-  const videoRef = useRef(null); // To reference the video element
-  const [isPlaying, setIsPlaying] = useState(false); // To manage the play state
-
-  const handlePlay = () => {
-    // Play the video when the image is clicked
-    if (videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true); // Update the state to hide the image
-    }
-  };
-
 
   const faqData = [
     {
@@ -548,16 +516,16 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
               <div class="containeru">
   <div class="flexu">
     <div class="btnu arrowu">
-      <a href="">Bachelor's</a>
+      <a href="/courses/">Bachelor's</a>
     </div>
     <div class="btnu arrowu">
-      <a href="">Master’s</a>
+      <a href="/courses/">Master’s</a>
     </div>
     <div class="btnu arrowu">
-      <a href="">Advanced Diploma</a>
+      <a href="/courses/">Advanced Diploma</a>
     </div>
     <div class="btnu arrowu">
-      <a href="">Diploma</a>
+      <a href="/courses/">Diploma</a>
     </div>
   </div>
   </div>
@@ -628,7 +596,6 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
             <Marquee speed={100} style={{Padding: "0px 20px" }} className='recuitersList-20'>
               <img alt="rec1" src={r1} width={"300"} height={"81"} />
               <img alt="rec2" src={r2} width={"300"} height={"81"} />
-              {/* <img alt="rec3" src={r3} width={"300"} height={"81"} /> */}
               <img alt="rec4" src={r4} width={"300"} height={"81"} />
               <img alt="rec5" src={r5} width={"300"} height={"81"} />
               <img alt="rec9" src={r6} width={"300"} height={"81"} />
@@ -650,7 +617,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                   </div>
 
                   <div className={`faq-answer ${activeIndex === index ? 'open' : 'closed'}`}>
-                    {faq.id == "2" ? <div className='faq2'>
+                    {faq.id === "2" ? <div className='faq2'>
                       <ul>
                         <li>
                         </li>
@@ -659,7 +626,13 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
                     </div> : null}
 
-                    {faq.id == "4" ? <div className='faq2'>
+                    {faq.id === "4" ? <div className='faq2'>
+
+
+                    </div> : null}
+
+
+                    {faq.id === "5" ? <div className='faq2'>
 
                       <p> </p>
 
@@ -668,26 +641,17 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                     </div> : null}
 
 
-                    {faq.id == "5" ? <div className='faq2'>
-
-                      <p> </p>
 
 
-
-                    </div> : null}
-
-
-
-
-                    {faq.id == "7" ? <div className='faq2'>
+                    {faq.id === "7" ? <div className='faq2'>
                       Unity is widely used for platformers, mobile games, puzzle games, and 3D open-world games.
 
 
                     </div> : null}
 
-                    {faq.id == "7" ? null : faq.answer}
+                    {faq.id === "7" ? null : faq.answer}
 
-                    {faq.id == "8" ? <div className='faq2'>
+                    {faq.id === "8" ? <div className='faq2'>
 
 <p> Salaries range from ₹3,00,000 to ₹8,00,000 annually, depending on experience, location, and the studio's size.</p>
 
@@ -695,7 +659,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
 </div> : null}
 
-{faq.id == "9" ? <div className='faq2'>
+{faq.id === "9" ? <div className='faq2'>
 
 <p> Salaries range from ₹3,00,000 to ₹8,00,000 annually, depending on experience, location, and the studio's size.</p>
 
@@ -854,13 +818,14 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
       {isButtonVisible && (
         <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Enroll Now</a></div>)}
 <div className="App">
-        <ReactWhatsappButton
+        <a
           countryCode="91"
           phoneNumber="8977945705"
           style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "4rem" : "-1rem", zIndex: "11111" }}
-          className="whatsappsivak"
-        />
+          className="whatsappsivakl">
+          <FaWhatsapp  style={{ color: "#fff", fontSize: "32px" }} />
 
+</a>
       </div>
     </>
   )

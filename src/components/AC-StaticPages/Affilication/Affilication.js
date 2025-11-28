@@ -44,6 +44,7 @@ function Affilication() {
           content="Backstage Pass Institute of Gaming is Accredited by JNAFAU & Lincoln University"
         />
         <meta
+          property="og:description"
           name="description"
           content="Backstage Pass is affiliated with top universities like JNAFAU and Lincoln University to offer globally recognized programs in gaming and digital arts."
         />
@@ -108,7 +109,44 @@ function Affilication() {
         </div>
       </section>
 
-      <section className="content-section courses-container">
+        {isMobileState ? (
+            <>
+             <section className="content-section courses-container">
+        <div className="content-wrapper">
+            <h2  className="courseHeading fadeInUp anime-delay" style={{textAlign:isMobileState?"center":"left"}}>
+              Lincoln University College
+            </h2>
+          <div className="content-image">
+            <img
+              ref={(el) => (imageRefs.current[1] = el)}
+              src="https://www.plic.edu.np/sites/default/files/styles/large/public/images/pages/lincoln-uni-logo.gif?itok=qSZr65aP"
+              alt="Lincoln University Logo"
+              className="flipImage" style={{top:isMobileState? "0px":"30px", position:"relative"}}
+            />
+          </div>
+          <div className="content-text" style={{marginTop:"0px"}}>
+          
+            <p>
+              Lincoln University College is a premier private institution in
+              Malaysia, approved by the Ministry of Higher Education and MQA.
+            </p>
+            <p>
+              In collaboration with Backstage Pass, Lincoln University offers
+              Diploma and Advanced Diploma programs in game design and technology,
+              providing global exposure and strong academic foundation.
+            </p>
+            <p>
+              This partnership empowers our students with international learning
+              opportunities and credentials that are widely respected across the
+              gaming industry.
+            </p>
+          </div>
+        </div>
+      </section>
+        </>
+       ) : (
+            <>
+<section className="content-section courses-container">
         <div className="content-wrapper">
           <div className="content-image">
             <img
@@ -139,8 +177,11 @@ function Affilication() {
           </div>
         </div>
       </section>
-
+       </>
+          )}
       <HomeContentForm />
+    
+    
     </>
   );
 }

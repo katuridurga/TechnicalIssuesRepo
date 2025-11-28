@@ -11,16 +11,8 @@ import { CiPhone, CiMail } from "react-icons/ci";
 import { useSelector, shallowEqual } from "react-redux";
 import c1 from "../../../assets/img/partners/InternshipPlacement.webp";
 import { FaPlus, FaMinus } from "react-icons/fa";
-
-
-
-
-
-
 import { Helmet } from "react-helmet";
 import HomeContentForm from '../../../content/HomeContentFrom';
-
-
 
 function Placementsupport(props) {
   const isMobileState = useSelector(
@@ -123,7 +115,7 @@ function Placementsupport(props) {
 
 
         <meta property="og:title" content="Placement Support for Gaming Jobs & Internships | Backstage Pass Institute of Gaming" />
-        <meta name="description" content="Backstage Pass Institute of Gaming offers 100% placement support. Get mentorship, portfolio-building guidance, and direct access to top gaming companies and studios for internships and job placements." />
+        <meta property="og:description" name="description" content="Backstage Pass Institute of Gaming offers 100% placement support. Get mentorship, portfolio-building guidance, and direct access to top gaming companies and studios for internships and job placements." />
         <meta property="og:url" content="https://www.backstagepass.co.in/about-us/placement-support/" />
         <link rel="canonical" href="https://www.backstagepass.co.in/about-us/placement-support/" />
       </Helmet>
@@ -172,7 +164,7 @@ function Placementsupport(props) {
 
             <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width: isMobileState ? "100%" : "80%", margin: "0px" }}>
               <h2 className='courseHeading fadeInUp anime-delay' style={{
-                textAlign: "left", textAlign: isMobileState ? "center" : "left",
+                textAlign: isMobileState ? "center" : "left",
                 width: isMobileState ? "100%" : "100%",
                 lineHeight: isMobileState ? "38px" : "48px",                
                 wordWrap: "break-word"

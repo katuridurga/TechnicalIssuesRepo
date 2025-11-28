@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import "./DiplomaAndAdvancedDiplomaCourses.css";
 import PropTypes from 'prop-types';
 
+import { FaWhatsapp } from "react-icons/fa";
 
 import { Helmet } from "react-helmet";
 
@@ -48,7 +49,6 @@ import advdip from '../../../assets/img/banners/advdip.webp';
 import csgd from "../../../assets/img/Courses/csgdc.webp"
 import GameArtDesign from "../../../assets/img/Courses/GameArt&Design.webp"
 import AugmentedRealityandVirtualReality from "../../../assets/img/Courses/AugmentedRealityandVirtualReality.webp"
-import ReactWhatsappButton from "react-whatsapp-button";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -940,13 +940,14 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
       </div>
 
 <div className="App">
-        <ReactWhatsappButton
+        <a
           countryCode="91"
           phoneNumber="8977945705"
-          style={{ right: isMobileState ? "1.5rem" : "1rem", marginBottom: isMobileState ? "-7rem" : "9rem", zIndex: "11111" }}
-          className="whatsappsivak"
-        />
-
+          style={{ right: isMobileState ? "1.5rem" : "1rem!impoirtant", marginBottom: isMobileState ? "-7rem" : "9rem", zIndex: "11111", position:"fixed" }}
+          className="whatsappsivakl">
+        
+        <FaWhatsapp  style={{ color: "#fff", fontSize: "32px" }} />
+</a>
       </div>
     </>
   )

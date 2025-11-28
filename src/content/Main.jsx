@@ -1,6 +1,6 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
-import preLoaderVideo from "../assets/img/BSPAnimated.mp4";
-import preLoaderWebm from "../assets/img/BSPAnimated.webm";
+// import preLoaderVideo from "../assets/img/BSPAnimated.mp4";
+// import preLoaderWebm from "../assets/img/BSPAnimated.webm";
 import { useSelector, shallowEqual } from "react-redux";
 
 import PropTypes from 'prop-types';
@@ -88,7 +88,7 @@ function Main({ active, props }) {
         <title>India’s Best Game Development college | Backstage Pass Institute of Gaming</title>
 
         <meta property="og:title" content="India’s Best Game Development college | Backstage Pass Institute of Gaming" />
-        <meta name="description" content="Backstage Pass Institute of Gaming, a leading game development college in India, offers Bachelor’s, Master’s, Diploma, and Advanced Diploma programs in Game Development, Game Art & Design, AR/VR, and more. Get gaming industry-ready with our hands-on curriculum and placement support. Apply Now." />
+        <meta property="og:description" name="description" content="Backstage Pass Institute of Gaming, a leading game development college in India, offers Bachelor’s, Master’s, Diploma, and Advanced Diploma programs in Game Development, Game Art & Design, AR/VR, and more. Get gaming industry-ready with our hands-on curriculum and placement support. Apply Now." />
         <meta property="og:url" content="https://www.backstagepass.co.in/" />
         <meta name="keywords" content="game programming, best gaming colleges in india, best game development colleges in india, game development, game art & design, game design courses, unity game development, game development courses, gaming colleges in india, gaming courses in india, game design colleges, bsc gaming colleges​​" />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />

@@ -5,13 +5,10 @@ import LazyLoad from "react-lazyload";
 import { useSelector, shallowEqual } from "react-redux";
 import ReactWhatsappButton from "react-whatsapp-button";
 import { FaWhatsapp } from "react-icons/fa";
-import { RiFacebookLine } from "react-icons/ri";
-import { CiInstagram } from "react-icons/ci";
 import discord from "../../assets/img/Icons/dicord.webp";
 import instagram from "../../assets/img/Icons/instagram.webp";
 import facebook from "../../assets/img/Icons/facebook.webp";
 import linkedin from "../../assets/img/Icons/linkedin.webp";
-import twitter from "../../assets/img/Icons/twitter.webp";
 import Youtube from "../../assets/img/Icons/Youtube.webp";
 import { CiYoutube } from "react-icons/ci";
 import { PiDiscordLogoThin } from "react-icons/pi";
@@ -34,20 +31,16 @@ function Footer() {
   );
   const [openForm, setOpenForm] = useState(false);
   const path = window.location.pathname;
-  const isLandingPage = path.includes("/landingpage");
-  const isLandingPageb = path.includes(
-    "/landingpage/bachelors-degree-courses-in-gaming/"
-  );
+
 
 
   const shortHeightPaths = [
     "/landingpage/diploma-and-advanced-diploma-courses/",
     "/landingpage/diploma-and-advanced-diploma-gaming-courses-test/",
     "/landingpage/top-game-development-programs/",
-    "/landingpage/diploma-and-advanced-diploma-game-development-courses/",
     "/landingpage/masters-and-bachelors-programs/",
-"/landingpage/certificate-program-in-prototyping-and-game-concept-development/"
- 
+    "/landingpage/certificate-program-in-prototyping-and-game-concept-development/"
+
   ];
 
   const testFooterPaths = [
@@ -93,37 +86,38 @@ function Footer() {
     "/landingpage/diploma-and-advanced-diploma-game-development-courses/",
     "/landingpage/game-development-programs/",
     "/landingpage/game-development-with-unity-programs/",
-    "landingpage/game-development-with-unreal-programs/",
-    "/landingpage/masters-and-bachelors-game-development-courses/"
+    "/landingpage/masters-and-bachelors-game-development-courses/",
+    "/landingpage/certified-diploma-3d-hard-surface-modeling-texturing/"
   ];
+
 
   // ✅ Derived booleans for cleaner conditions
   const isShortHeight = shortHeightPaths.includes(path);
   const isTestFooter = testFooterPaths.includes(path);
   const hideMobileFooter = mobileFooterHidePaths.includes(path);
   const hideAllFooter = testFooterPaths.includes(path);
-const specialHeightPaths = [
-  "/landingpage/masters-and-bachelors-game-development-courses/",
-  "/landingpage/bachelors-degree-courses-in-gaming/",
-  "/landingpage/diploma-and-advanced-diploma-game-development-courses/",
-     "/landingpage/game-development-programs/",
-     "/landingpage/game-development-with-unity-programs/",
-     "/landingpage/game-development-with-unreal-programs/",
-     "/landingpage/certificate-program-in-prototyping-and-game-concept-development/"
+  const specialHeightPaths = [
+    "/landingpage/masters-and-bachelors-game-development-courses/",
+    "/landingpage/bachelors-degree-courses-in-gaming/",
+    "/landingpage/diploma-and-advanced-diploma-game-development-courses/",
+    "/landingpage/game-development-programs/",
+    "/landingpage/game-development-with-unity-programs/",
+    "/landingpage/game-development-with-unreal-programs/",
+    "/landingpage/certificate-program-in-prototyping-and-game-concept-development/"
 
-];
+  ];
 
-const computedHeight = specialHeightPaths.includes(path)
-  ? isMobileState
-    ? "250px"
-    : "400px"
-  : isShortHeight
+  const computedHeight = specialHeightPaths.includes(path)
     ? isMobileState
       ? "250px"
-      : "300px"
-    : isMobileState
-      ? "800px"
       : "400px"
+    : isShortHeight
+      ? isMobileState
+        ? "250px"
+        : "300px"
+      : isMobileState
+        ? "800px"
+        : "400px"
 
   const [formData, setFormData] = useState({
     name: "",
@@ -151,7 +145,6 @@ const computedHeight = specialHeightPaths.includes(path)
         const response = await fetch(
           `https://www.backstagepass.co.in/reactapi/checkenquirypagemobile.php?contactNumber=${value}`
         );
-        const result = await response.json();
         if (response.status === 200) {
           alert(
             "This mobile number is already registered within the last 3 months. Our team will get back to you."
@@ -292,13 +285,13 @@ const computedHeight = specialHeightPaths.includes(path)
       <section
         id="page-need_guidance-section"
         className="bgfooter minhg need-guidance-form flex items-end md:items-center md:min-h-[680px] lg:min-h-[800px] relative z-[11] -mt-[2px] overflow-hidden rammm"
-  style={{
-   [isMobileState ? "height" : "minHeight"]: computedHeight,padding: window.location.pathname === "/landingpage/game-development-programs/"||"/landingpage/certificate-program-in-prototyping-and-game-concept-development/"
-  ? "1px"
-  : "0px",
-    backgroundPosition: isShortHeight ? "top" : "center",
-    marginTop: isShortHeight ? "10px" : "0px",
-backgroundPosition: isShortHeight? "top":"center",marginTop:isShortHeight? "10px":"0px" }}
+        style={{
+          [isMobileState ? "height" : "minHeight"]: computedHeight, padding: window.location.pathname === "/landingpage/game-development-programs/" || "/landingpage/certificate-program-in-prototyping-and-game-concept-development/"
+            ? "1px"
+            : "0px",
+          backgroundPosition: isShortHeight ? "top" : "center",
+          marginTop: isShortHeight ? "10px" : "0px"
+        }}
         data-locomotive-section-id="page-need_guidance"
         data-locomotive-section-type="need_guidance"
       >
@@ -307,7 +300,7 @@ backgroundPosition: isShortHeight? "top":"center",marginTop:isShortHeight? "10px
             <div className="">
               <div className="grid-cols-1 sm:grid-cols-2 gap-3 mt-3 sm:mt-5" style={{ width: "100%" }}>
                 <div className={isTestFooter ? "testfooter" : "footer-wrapper"}>
-                  
+
                   {/* 🔹 Mobile Footer */}
                   {isMobileState && (
                     <div
@@ -322,7 +315,7 @@ backgroundPosition: isShortHeight? "top":"center",marginTop:isShortHeight? "10px
                         </div>
                         <div className="bottomFootRight">
                           <a href="/enquire-now/">
-                            <FaPaperPlane style={{color:"#fff"}}/> Apply Now
+                            <FaPaperPlane style={{ color: "#fff" }} /> Apply Now
                           </a>
                         </div>
                       </div>
@@ -331,72 +324,73 @@ backgroundPosition: isShortHeight? "top":"center",marginTop:isShortHeight? "10px
 
                   {/* 🔹 Floating WhatsApp */}
                   {isMobileState ? (
-                    <div className="floatingIcon">
+                    <div className="floatingIcon" style={{
+                               display: hiddenPaths.includes(window.location.pathname) ? "none" : "flex"
+                            }}>
                       <div className="App">
                         <ReactWhatsappButton
                           countryCode="91"
                           phoneNumber="8008002795"
                           style={{
                             right: "0.6rem",
-                            bottom:"9rem !important",
-                            display: hiddenPaths.includes(path) ? "none" : "flex",
+                            bottom: "9rem !important",
                           }}
                           className="whatsappsivak"
                         />
                       </div>
                     </div>
                   ) : (
-                    <div className="floatingIcon">
-                     <div className="floatingIcon enq-fix-strip">
-  <div className="App">
-    
-    <a
-      href="tel:+918008002795"
-      countryCode="91"
-      aria-label="Chat with us on WhatsApp durga3"
-      phoneNumber="8008002795"
-      style={{
-        display: hiddenPaths.includes(path) ? "none" : "flex",
-      }}
-      className="whatsappsivak"
-    >
-<FaWhatsapp  style={{ color: "#fff", fontSize: "28px" }} />
-</a>
-    <a
-      href="tel:+918008002795"
-      className="btn-floating-whatsapp durga"
-      aria-label="Call with us"
-      style={{
-        backgroundColor: "rgb(0, 164, 245)",
-        backgroundPosition: "center center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "40%",
-        display: hideAllFooter ? "none" : "block",
-      }}
-    >
-      <IoIosCall style={{ color: "#fff", fontSize: "28px" }} />
+                    <div className="floatingIcon" style={{
+                               display: hiddenPaths.includes(window.location.pathname) ? "none" : "flex"
+                            }}>
+                      <div className="floatingIcon enq-fix-strip">
+                        <div className="App">
 
-    </a>
-    
-   <a
-  href="https://dev.backstagepass.co.in/application-form/"
-  className="btn-floating-whatsapp durga1"
-  aria-label="Enquire Now"
-  style={{
-    backgroundColor: "#eb1a23",
-    backgroundPosition: "center center",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "40%",
-    display: hideAllFooter ? "none" : "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  }}
->
-  <BiSolidPencil style={{ color: "#fff", fontSize: "28px" }} />
-</a>
+                          <a
+                            href="tel:+918008002795"
+                            countryCode="91"
+                            aria-label="Chat with us on WhatsApp durga3"
+                            phoneNumber="8008002795"
+                          
+                            className="whatsappsivak"
+                          >
+                            <FaWhatsapp style={{ color: "#fff", fontSize: "28px" }} />
+                          </a>
+                          <a
+                            href="tel:+918008002795"
+                            className="btn-floating-whatsapp durga"
+                            aria-label="Call with us"
+                            style={{
+                              backgroundColor: "rgb(0, 164, 245)",
+                              backgroundPosition: "center center",
+                              backgroundRepeat: "no-repeat",
+                              backgroundSize: "40%",
+                             
+                            }}
+                          >
+                            <IoIosCall style={{ color: "#fff", fontSize: "28px" }} />
 
-  </div>
-</div>
+                          </a>
+
+                          <a
+                            href="/enquire-now/"
+                            className="btn-floating-whatsapp durga1"
+                            aria-label="Enquire Now"
+                            style={{
+                              backgroundColor: "#eb1a23",
+                              backgroundPosition: "center center",
+                              backgroundRepeat: "no-repeat",
+                              backgroundSize: "40%",
+                              display: hideAllFooter ? "none" : "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                            }}
+                          >
+                            <BiSolidPencil style={{ color: "#fff", fontSize: "28px" }} />
+                          </a>
+
+                        </div>
+                      </div>
 
                     </div>
                   )}
@@ -479,7 +473,7 @@ backgroundPosition: isShortHeight? "top":"center",marginTop:isShortHeight? "10px
                                   </p>
                                 </div>
                               </div>
-                                  <div className="contact-wrapper-inner">
+                              <div className="contact-wrapper-inner">
                                 <CiMail className="iconsmain" />
                                 <div>
                                   <p>

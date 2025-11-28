@@ -2,23 +2,10 @@ import React, { useState } from "react";
 import CountUp from "react-countup";
 import ScrollTrigger from 'react-scroll-trigger';
 import { IoMdStarOutline } from "react-icons/io";
-import { IoRibbonOutline } from "react-icons/io5";
 import { SlGraduation } from "react-icons/sl";
 import { MdOutlineGroups } from "react-icons/md";
 import { PiMedal } from "react-icons/pi";
 import { LiaTrophySolid } from "react-icons/lia";
-import { RiAwardFill } from "react-icons/ri";
-
-
-
-
-
-
-import job from '../assets/img/11.webp';
-import ins from '../assets/img/12.webp';
-import awd from '../assets/img/13.webp';
-import grad from '../assets/img/14.webp';
-import clock from '../assets/img/15.webp';
 import jobn from '../assets/img/placentsn.webp';
 import insn from '../assets/img/yaen.webp';
 import awdn from '../assets/img/awardsn.webp';
@@ -28,7 +15,6 @@ import "./AboutBsp.css";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { useSelector, shallowEqual } from "react-redux";
-import Mbcounter from '../components/AC-StaticPages/counter/counter.js';
 import thumbnail from "../assets/img/thumbnail.webp";
 
 function HomeContent() {
@@ -90,7 +76,7 @@ function HomeContent() {
               <div className="count">
                 <div className="icon">
                   {isMobileState ? (
-                    <PiMedal 
+                    <PiMedal
                       size={50} color="#ee1b24" />
                   ) : (
                     <LazyLoadImage

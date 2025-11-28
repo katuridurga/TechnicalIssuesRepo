@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React  from "react";
 import "./Courses.css";
 import { useSelector, shallowEqual } from "react-redux";
-import { Link } from "react-router-dom";
 import csgd from "../../../assets/img/Courses/csgdc.webp";
 import GameArtDesign from "../../../assets/img/Courses/GameArt&Design.webp";
 import AugmentedRealityandVirtualReality from "../../../assets/img/Courses/AugmentedRealityandVirtualReality.webp";
@@ -42,7 +41,7 @@ function Courses(props) {
       cards: [
         { title: "Diploma in Game Design & Production", description: "The Diploma in Game Design & Production explores Unity, Unreal Engine, and project-based training to build visionary designers and industry-ready game design portfolios.", link: "/courses/diploma-in-game-design-production/", image: DiplomainGameDesignProduction },
         { title: "Diploma in Game Development with Unity", description: "The Diploma in Game Development with Unity empowers creators to master both 2D and 3D game development by blending logic...", link: "/courses/diploma-in-game-development-with-unity/", image: DiplomainGameDevelopmentwithUnity },
-        { title: "Diploma in Game Development with Unreal", description: "With the Diploma in Game Development with Unreal, students will learn the real science behind making games. The course will guide students through Unreal Engine...", link: "/courses/diploma-in-game-development-with-unity/", image: Diploma_in_Game_Development_with_Unreal },
+        { title: "Diploma in Game Development with Unreal", description: "With the Diploma in Game Development with Unreal, students will learn the real science behind making games. The course will guide students through Unreal Engine...", link: "/courses/diploma-in-game-development-with-unreal/", image: Diploma_in_Game_Development_with_Unreal },
         { title: "Diploma In 3D Environment Art For Games", description: "The Diploma in 3D Environment Art Creation for Games explores the harmony of art in 3D modelling, texturing, and digital sculpting to craft breathtaking, immersive game worlds.", link: "/courses/diploma-in-3d-environment-art-creation-for-games/", image: Diplomain3DEnvironmentArtCreationforGames },
         { title: "Diploma in VR Application Development", description: "The Diploma in VR Application Development Course unlocks the future of technology, where students master VR programming with Unity and Unreal to design, develop, and innovate...", link: "/courses/diploma-in-vr-application-development/", image: AugmentedRealityandVirtualReality }
       ]
@@ -60,17 +59,9 @@ function Courses(props) {
     state => state.mainReducer.isMobile,
     shallowEqual
   );
-  
 
-  // Track which headings are expanded
-  const [expandedHeadings, setExpandedHeadings] = useState({});
 
-  const toggleViewAll = (heading) => {
-    setExpandedHeadings(prev => ({
-      ...prev,
-      [heading]: !prev[heading],
-    }));
-  };
+
 
   return (
     <>
@@ -120,7 +111,7 @@ function Courses(props) {
 
           <title>Backstage Pass College offers Online & Offline Video Game Development & Design Courses</title>
           <meta property="og:title" content="Backstage Pass College offers Online & Offline Video Game Development & Design Courses" />
-          <meta name="description" content="Join career-building programs in Bachelor’s, Master’s, Advanced Diploma & Certified Skill Courses. Browse our Game Design, Game Art, 3D Art, Game Programming, & AR/VR courses. Upskill with our eLearning and Offline Programs." />
+          <meta property="og:description" name="description" content="Join career-building programs in Bachelor’s, Master’s, Advanced Diploma & Certified Skill Courses. Browse our Game Design, Game Art, 3D Art, Game Programming, & AR/VR courses. Upskill with our eLearning and Offline Programs." />
           <meta property="og:url" content="https://www.backstagepass.co.in/courses/" />
           <meta name="keywords" content="game development courses near me, game design courses in india, video game college courses, game development college courses, course for game design and art, gaming courses after 12th, gaming courses in india, game development courses in india" />
           <link rel="canonical" href="https://www.backstagepass.co.in/courses/" />
@@ -132,9 +123,6 @@ function Courses(props) {
 
             {programs.map((program, index) => {
               if (!program.heading) return null;
-
-              const showAll = expandedHeadings[program.heading];
-
               const cardsToShow = isMobileState ? program.cards : program.cards;
 
               return (

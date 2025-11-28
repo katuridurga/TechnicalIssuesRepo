@@ -12,6 +12,8 @@ import f11 from "../assets/img/art/dgdp.webp";
 import f7 from "../assets/img/art/3dart.webp";
 import f8 from "../assets/img/art/gdu.webp";
 import f3d from "../assets/img/art/3gard.webp";
+import funr from "../assets/img/art/Unreal.webp";
+import funrm from "../assets/img/art/Unrealm.webp";
 import { FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Box from '@mui/material/Box';
@@ -53,25 +55,8 @@ TabPanel.propTypes = {
 
 
 
-
-
-
-
 function HomeContent() {
 
-
-
-
-
-
-
-
-
-
-
-  const OPTIONS = { loop: true }
-  const SLIDE_COUNT = 10
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
   const [activeTab, setActiveTab] = useState("bachelors");
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
@@ -93,7 +78,8 @@ function HomeContent() {
     diploma: [
       { src: f11, title: "Diploma in Game Design & Production", link: "/courses/diploma-in-game-design-production/" },
       { src: f8, title: "Diploma in Game Development with Unity", link: "/courses/diploma-in-game-development-with-unity/" },
-      { src: f10, title: "Diploma in 3D Environment Art For Games", link: "/courses/diploma-in-3d-environment-art-creation-for-games/" },
+      { src: funrm, title: "Diploma in Game Development with Unreal", link: "/courses/diploma-in-game-development-with-unreal/" },
+       { src: f10, title: "Diploma in 3D Environment Art For Games", link: "/courses/diploma-in-3d-environment-art-creation-for-games/" },
     ],
     masters: [
       { src: f5, title: "Master's in Game Technology", link: "/courses/masters-in-game-technology/" },
@@ -116,20 +102,20 @@ function HomeContent() {
             <h2 className="mainHeadingTotal"> About Us </h2>
 
 
-            <p class="text" style={{fontSize:"16px", marginBottom:"20px"}}>
+            <p class="text" style={{ fontSize: "16px", marginBottom: "20px" }}>
               Founded in 2010, Backstage Pass Institute of Gaming is recognised as one of the best game development colleges in India. We offer comprehensive <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/courses/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank"> game design and development courses</a></b>, including Bachelor's, Master's, Diploma, and Advanced Diploma programs.
             </p>
-            <p class="text" style={{fontSize:"16px", marginBottom:"20px"}}>
+            <p class="text" style={{ fontSize: "16px", marginBottom: "20px" }}>
               Our founder and chairman, Mr Surya P, is a visionary and a pioneer in the Indian gaming industry and education. <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/life-at-bsp/alumni-success/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank"> Alumni from Backstage Pass</a></b> now work at top game studios across India and abroad, reflecting the strong industry connections and real-world exposure our students gain.
             </p>
-            <p class="text" style={{fontSize:"16px"}}>
+            <p class="text" style={{ fontSize: "16px" }}>
               We also offer an  <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/life-at-bsp/accelerator-program/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank">accelerator program </a></b>to help students build a professional portfolio and gain hands-on experience with real games. As part of our commitment to industry-focused gaming courses, we emphasise practical learning to ensure students develop a deep understanding of both creative and technical aspects of gaming.
             </p>
             <Link style={{ display: "flex", justifyContent: "center" }} to={"/about-us/our-story/"}> <button style={{ width: "fit-content", float: "right", marginTop: isMobileState ? '30px' : "0px", color: "#fff" }} className='three button brand size200 w-full sm:w-auto' type="button">Know More <FiArrowRight style={{ marginLeft: "7px", color: "#fff" }} /></button></Link>
           </div>
         </div>
       </section>
-      <section id="page-need_guidance-section" className="need-guidance-form flex items-end md:items-center md:min-h-[680px] lg:min-h-[800px] relative z-[11] -mt-[2px] overflow-hidden bgw" data-locomotive-section-id="page-need_guidance" data-locomotive-section-type="need_guidance" style={{backgroundColor:"#f9fafb"}}>
+      <section id="page-need_guidance-section" className="need-guidance-form flex items-end md:items-center md:min-h-[680px] lg:min-h-[800px] relative z-[11] -mt-[2px] overflow-hidden bgw" data-locomotive-section-id="page-need_guidance" data-locomotive-section-type="need_guidance" style={{ backgroundColor: "#f9fafb" }}>
         <div className="min-h-full h-full w-full container-full relative z-[3] py-4 md:py-8">
           <div className="d">
             <h2 className="mainHeadingTotal">Featured Courses </h2>
@@ -215,31 +201,7 @@ function HomeContent() {
                       </figcaption>
                     </figure>
                   </div>
-
-                  <div className="cardssf maincolltwo">
-                    <figure className="figures">
-                      <LazyLoadImage effect="blur" src={f5} placeholderSrc={thumbnail} alt="f5" style={{ borderRadius: "8px" }} />
-                      <figcaption className="figcaptionss">
-
-
-                        <div className="mainggames"><p>Master's in Game Technology</p><div className="viewc"><a href="/courses/masters-in-game-technology/">View Course</a></div></div>
-                      </figcaption>
-                    </figure>
-                  </div>
-
-                </div>
-                <div className="maincoll clear-fix">
-                  <div className="cardssf maincolltwo">
-                    <figure className="figures">
-                      <LazyLoadImage effect="blur" src={f3d} placeholderSrc={thumbnail} alt="f3d" style={{ borderRadius: "8px" }} />
-                      <figcaption className="figcaptionss">
-
-
-                        <div className="mainggames"><p>Master's in 3D Game Art & Game Design </p><div className="viewc"><a href="/courses/masters-in-3d-game-art-design/">View Course</a></div></div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                  <div className="cardssf maincolltwo">
+  <div className="cardssf maincolltwo">
                     <figure className="figures">
                       <LazyLoadImage effect="blur" src={f6} placeholderSrc={thumbnail} alt="f6" style={{ width: "100%", borderRadius: "8px" }} />
                       <figcaption className="figcaptionss">
@@ -249,6 +211,10 @@ function HomeContent() {
                       </figcaption>
                     </figure>
                   </div>
+                </div>
+                <div className="maincoll clear-fix">
+                  
+                
 
                   <div className="cardssf maincolltwo">
                     <figure className="figures">
@@ -270,7 +236,16 @@ function HomeContent() {
                       </figcaption>
                     </figure>
                   </div> */}
-                  <div className="cardssf maincolltwo">
+                   <div className="cardssf maincolltwo">
+                    <figure className="figures">
+                      <LazyLoadImage effect="blur" src={f11} placeholderSrc={thumbnail} alt="f11" style={{ width: "100%", borderRadius: "8px" }} />
+                      <figcaption className="figcaptionss">
+                        <div className="mainggames"><p>Diploma in Game Design & Production</p><div className="viewc"><a href="/courses/diploma-in-game-design-production/">View Course</a></div></div>
+
+                      </figcaption>
+                    </figure>
+                  </div>
+              <div className="cardssf maincolltwo">
                     <figure className="figures">
                       <LazyLoadImage effect="blur" src={f8} placeholderSrc={thumbnail} alt="f8" style={{ width: "100%", borderRadius: "8px" }} />
                       <figcaption className="figcaptionss">
@@ -279,9 +254,19 @@ function HomeContent() {
                       </figcaption>
                     </figure>
                   </div>
+                   <div className="cardssf maincolltwo">
+                    <figure className="figures">
+                      <LazyLoadImage effect="blur" src={funr} placeholderSrc={thumbnail} alt="funr" style={{ width: "100%", borderRadius: "8px" }} />
+                      <figcaption className="figcaptionss">
+                        <div className="mainggames"><p>Diploma in Game Development with Unreal</p><div className="viewc"><a href="/courses/diploma-in-game-development-with-unreal/">View Course</a></div></div>
+
+                      </figcaption>
+                    </figure>
+                  </div>
                 </div>
                 <div className="maincoll clear-fix">
-
+    
+                      
                   <div className="cardssf maincolltwo">
                     <figure className="figures">
                       <LazyLoadImage effect="blur" src={f10} placeholderSrc={thumbnail} alt="f10" style={{ width: "100%", borderRadius: "8px" }} />
@@ -292,21 +277,34 @@ function HomeContent() {
                       </figcaption>
                     </figure>
                   </div>
-                  <div className="cardssf maincolltwo">
-                    <figure className="figures">
-                      <LazyLoadImage effect="blur" src={f11} placeholderSrc={thumbnail} alt="f11" style={{ width: "100%", borderRadius: "8px" }} />
-                      <figcaption className="figcaptionss">
-                        <div className="mainggames"><p>Diploma in Game Design & Production</p><div className="viewc"><a href="/courses/diploma-in-game-design-production/">View Course</a></div></div>
-
-                      </figcaption>
-                    </figure>
-                  </div>
+                 
                   <div className="cardssf maincolltwo">
                     <figure className="figures">
                       <LazyLoadImage effect="blur" src={f3} placeholderSrc={thumbnail} alt="f11" style={{ width: "100%", borderRadius: "8px" }} />
                       <figcaption className="figcaptionss">
                         <div className="mainggames"><p>Diploma in VR Application Development</p><div className="viewc"><a href="/courses/diploma-in-vr-application-development/">View Course</a></div></div>
 
+                      </figcaption>
+                    </figure>
+                  </div>
+                  
+                  <div className="cardssf maincolltwo">
+                    <figure className="figures">
+                      <LazyLoadImage effect="blur" src={f5} placeholderSrc={thumbnail} alt="f5" style={{ borderRadius: "8px" }} />
+                      <figcaption className="figcaptionss">
+
+
+                        <div className="mainggames"><p>Master's in Game Technology</p><div className="viewc"><a href="/courses/masters-in-game-technology/">View Course</a></div></div>
+                      </figcaption>
+                    </figure>
+                  </div>
+<div className="cardssf maincolltwo">
+                    <figure className="figures">
+                      <LazyLoadImage effect="blur" src={f3d} placeholderSrc={thumbnail} alt="f3d" style={{ borderRadius: "8px" }} />
+                      <figcaption className="figcaptionss">
+
+
+                        <div className="mainggames"><p>Master's in 3D Game Art & Game Design </p><div className="viewc"><a href="/courses/masters-in-3d-game-art-design/">View Course</a></div></div>
                       </figcaption>
                     </figure>
                   </div>

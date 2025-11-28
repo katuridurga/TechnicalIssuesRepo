@@ -91,10 +91,7 @@ function MenuCore(props) {
     setExpanded(newExpanded ? panel : false);
   };
 
-  const toggleDrawer1 = (open) => (event) => {
-    if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) return;
-    setLeft(open);
-  };
+ 
 
   const selectTab = index => dispatch(selectedTab(index));
   const hiddenPaths = [

@@ -37,7 +37,7 @@ function Courses(props) {
   );
   const faqsac = [
     {
-      question: "1. Hands-On Game Development",
+      question: "Hands-On Game Development",
       answer: [
 
         "Practical Experience: Work on real-world projects that simulate industry challenges.",
@@ -45,14 +45,14 @@ function Courses(props) {
       ],
     },
     {
-      question: "2. Expert Mentorship",
+      question: "Expert Mentorship",
       answer: [
         "Learn from Leaders: Collaborate with industry experts who possess extensive experience in game design, programming, and production.",
         "Career Guidance: Receive advice on navigating the gaming industry and building a successful career.",
       ],
     },
     {
-      question: "3. Recognition & Opportunities",
+      question: "Recognition & Opportunities",
       answer: [
         "Award-Winning Projects: Contribute to games that have received recognition at:",
         "a. Shortlisted in Indie 40 Games at IGDC 2024",
@@ -62,14 +62,14 @@ function Courses(props) {
       ],
     },
     {
-      question: "4. Professional Portfolio",
+      question: "Professional Portfolio",
       answer: [
         "Showcase Your Work: Develop a striking portfolio that showcases refined, professional-quality projects.",
         "Future-Ready: Engage potential employers and collaborators with your varied skills and accomplishments.",
       ],
     },
     {
-      question: "5. Revenue-Sharing Opportunities",
+      question: "Revenue-Sharing Opportunities",
       answer: [
         "Earn While You Learn: Take advantage of a unique revenue-sharing model that acknowledges your hard work and creativity.",
       ],
@@ -90,21 +90,21 @@ function Courses(props) {
 
   const faqswhy = [
     {
-      question: "1. Cutting-Edge Learning Environment",
+      question: "Cutting-Edge Learning Environment",
       answer: [
 
         "Collaborate with peers from various disciplines—designers, artists, and developers—in a team-oriented environment that reflects the gaming industry.",
       ],
     },
     {
-      question: "2. Dedicated Project Support",
+      question: "Dedicated Project Support",
       answer: [
         "End-to-End Guidance: Our experienced team ensures every aspect of your project operates smoothly.",
         "Structured Milestones: Follow a clear roadmap to bring your ideas to life efficiently and effectively.",
       ],
     },
     {
-      question: "3. Global Recognition",
+      question: "Global Recognition",
       answer: [
         "Showcase your work at major events like IGDC (India Game Developer Conference).",
         "Gain exposure in international markets and forge meaningful industry connections.",
@@ -172,7 +172,7 @@ function Courses(props) {
           <title>Game Development Accelerator Program | Backstage Pass Institute of Gaming</title>
 
           <meta property="og:title" content="Game Development Accelerator Program | Backstage Pass Institute of Gaming" />
-          <meta name="description" content="With Backstage Pass Gaming Accelerator Program, students have developed & published award-winning games. They also gained global exposure & mentorship to launch their own gaming studios." />
+          <meta property="og:description" name="description" content="With Backstage Pass Gaming Accelerator Program, students have developed & published award-winning games. They also gained global exposure & mentorship to launch their own gaming studios." />
           <meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/accelerator-program/" />
           <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/accelerator-program/" />
 
@@ -213,7 +213,7 @@ function Courses(props) {
 
               <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width: isMobileState ? "100%" : "80%", margin: "0px" }}>
                 <h2 className='courseHeading fadeInUp anime-delay' style={{
-                  textAlign: "left", textAlign: isMobileState ? "center" : "center",
+                  textAlign: isMobileState ? "center" : "center",
                   width: isMobileState ? "100%" : "80%",
                   lineHeight: isMobileState ? "48px" : "48px",
                   wordWrap: "break-word"
@@ -297,7 +297,7 @@ function Courses(props) {
 
               <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#fff", color: "#000", width: isMobileState ? "100%" : "80%", margin: "0px" }}>
                 <h2 className='courseHeading fadeInUp anime-delay' style={{
-                  textAlign: "left", textAlign: isMobileState ? "center" : "center",
+                 textAlign: isMobileState ? "center" : "center",
                   width: isMobileState ? "100%" : "80%",
                   lineHeight: isMobileState ? "48px" : "48px",
                   wordWrap: "break-word"

@@ -10,15 +10,6 @@ import { useSelector, shallowEqual } from "react-redux";
 
 import { Helmet } from "react-helmet";
 
-const handleBlur = (event) => {
-  const { name, value } = event.target;
-  if (name === "email") {
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (value && !emailRegex.test(value)) {
-      alert("Please enter a valid email address.");
-    }
-  }
-};
 function Courses(props) {
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
@@ -26,9 +17,7 @@ function Courses(props) {
   );
   const [openModal, setOpenModal] = useState(false);
   const [open, setOpen] = React.useState(false);
-  const handleClose = () => {
-    setOpen(false);
-  };
+
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [formData, setFormData] = useState({
     name: '',

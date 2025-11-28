@@ -14,11 +14,9 @@ import B3 from "../../../assets/img/banners/et-logo.webp";
 import B4 from "../../../assets/img/banners/thehindu-logo.svg";
 import csgd from "../../../assets/img/Courses/csgdc.webp"
 import { Helmet } from "react-helmet";
-
-
+import { FaWhatsapp } from "react-icons/fa";
 import StudentGamesList from "../../../content/StudentGamesList";
 import MIntheMedia from "../../../content/MIntheMedia";
-import ReactWhatsappButton from "react-whatsapp-button";
 import Flag1 from "../../../assets/img/banners/usa.webp";
 import Flag2 from "../../../assets/img/banners/uk.webp";
 import Flag3 from "../../../assets/img/banners/canada.webp";
@@ -145,17 +143,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     window.localStorage.setItem('MY_APP_STATE', JSON.stringify(showBanner));
   }, [showBanner]);
 
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowBanner(false);
-      setLoading(false);
-    }, 3000);
-
-  }, []);
-
-  const SLIDE_COUNT = 5
 
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
@@ -269,7 +256,7 @@ const [mainCategory, setMainCategory] = useState("");
     if (name === "PhoneNumber" && /^[0-9]{10}$/.test(value)) {
       try {
 const response = await fetch(`https://www.backstagepass.co.in/reactapi/checklandingpagemobile.php?contactNumber=${value}`);
-             const result = await response.json();
+             
 
         if (response.status === 200) {
           alert('This mobile number is already registered with in the last 3 months our team will get back to you.');
@@ -1256,13 +1243,14 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
       {isButtonVisible && (
         <div className="CousellingButton" style={{display:"flex", justifyContent:isMobileState ? "center" : "center"}} onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Enroll Now</a></div>)}
 <div className="App">
-        <ReactWhatsappButton
+        <a
           countryCode="91"
           phoneNumber="8977945705"
           style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "4rem" : "-1rem", zIndex: "11111" }}
-          className="whatsappsivak"
-        />
-
+          className="whatsappsivakl">
+            <FaWhatsapp  style={{ color: "#fff", fontSize: "28px" }} />
+            
+</a>
       </div>
     </>
   )

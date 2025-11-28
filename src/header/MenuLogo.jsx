@@ -24,8 +24,7 @@ export default function MenuLogo() {
     "/landingpage/best-gaming-courses-in-india/",
   ];
 
-  const isLandingLogo = landingLogoPaths.includes(path);
-
+ 
   return (
     <>
       {/* ✅ Single Link (no conditional mount) to avoid flicker */}

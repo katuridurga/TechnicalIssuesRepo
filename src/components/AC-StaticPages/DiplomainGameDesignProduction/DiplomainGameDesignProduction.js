@@ -3,10 +3,6 @@ import { useSelector, shallowEqual } from "react-redux";
 import "../BachelorsInComputerScienceGameDevelopment/BachelorsInComputerScienceGameDevelopment.css";
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import PropTypes from 'prop-types';
-import { useTheme } from '@mui/material/styles';
-
-import { emphasize, styled } from '@mui/material/styles';
-import Chip from '@mui/material/Chip';
 import m5 from "../../../assets/img/Icons/flags.webp";
 import c1 from "../../../assets/img/Courses/careeroprt.webp";
 import m6 from "../../../assets/img/Icons/jams.webp";
@@ -47,58 +43,8 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-const StyledBreadcrumb = styled(Chip)(({ theme, Props }) => {
-  const backgroundColor =
-    theme.palette.mode === 'light'
-      ? theme.palette.grey[100]
-      : theme.palette.grey[800];
-
-
-  return {
-    backgroundColor,
-    height: theme.spacing(3),
-    color: theme.palette.text.primary,
-    fontWeight: theme.typography.fontWeightRegular,
-    '&:hover, &:focus': {
-      backgroundColor: emphasize(backgroundColor, 0.06),
-    },
-    '&:active': {
-      boxShadow: theme.shadows[1],
-      backgroundColor: emphasize(backgroundColor, 0.12),
-    },
-  };
-}); // TypeScript only: need a type cast here because https://github.com/Microsoft/TypeScript/issues/26591
-
-const sections = [
-  "Course-Overview",
-  "Course-Objectives",
-  "Curriculum",
-  "Beyond-The-Course",
-  "Career-Opportunities"
-];
 
 function Courses(props) {
-
-
-  const theme = useTheme();
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
-
-  const [value1, setValue1] = React.useState(0);
-
-  // ✅ Add this here (INSIDE component)
-  const [activeTab, setActiveTab] = useState("GAME PROGRAMMING");
-  const handleChange1 = (event, newValue) => {
-    setValue1(newValue);
-  };
-
-  const OPTIONS = { loop: true }
-  const SLIDE_COUNT = 10
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
@@ -108,52 +54,45 @@ function Courses(props) {
     {
       title: "Curriculum",
       subjects: [
-      "Game History & Genres",
-"Game Analysis & Deconstruction",
-"Conceptualization & Design Thinking",
-"Pitch Deck & Presentation",
-"High-Level Game Design",
-"Spec Creation & Game Design Documentation",
-"Scope & Production Planning",
-"Level Design & World building",
-"Systems Design & Machinations",
-"Introduction to Unreal Blueprints",
-"Prototyping & Level Design Tools in Unreal",
+        "Game History & Genres",
+        "Game Analysis & Deconstruction",
+        "Conceptualization & Design Thinking",
+        "Pitch Deck & Presentation",
+        "High-Level Game Design",
+        "Spec Creation & Game Design Documentation",
+        "Scope & Production Planning",
+        "Level Design & World building",
+        "Systems Design & Machinations",
+        "Introduction to Unreal Blueprints",
+        "Prototyping & Level Design Tools in Unreal",
       ],
     },
-   
+
   ];
 
   const items = ["Learn to play, analyze, and deconstruct games using various techniques, with a focus on comparative analysis, user experience, feedback, and case studies.",
-"Master design thinking, idea generation, and concept development, with a focus on prototyping basics and feedback loops to refine game ideas.",
-"Learn the elements of a pitch deck, storytelling, and pitching skills, as well as visual communication techniques, handling Q&A sessions, and practicing live pitches.",
-"Define game vision, design game mechanics and dynamics, integrate narrative elements, and focus on balancing, pacing, and comprehensive documentation.",
-"Develop thorough game design documentation, technical specifications, and understand version control, with an emphasis on clear communication with stakeholders and the use of document templates and tools.",
-"Learn the principles of level design and world-building, focusing on environmental storytelling, and refining designs through playtesting and iteration.",
-"Benefit from the knowledge and experience of seasoned professionals who will guide you through both theoretical and practical aspects of game design and production.",
-"Build a strong portfolio showcasing your unique style and technical skills, making you a competitive candidate in the job market."];
+    "Master design thinking, idea generation, and concept development, with a focus on prototyping basics and feedback loops to refine game ideas.",
+    "Learn the elements of a pitch deck, storytelling, and pitching skills, as well as visual communication techniques, handling Q&A sessions, and practicing live pitches.",
+    "Define game vision, design game mechanics and dynamics, integrate narrative elements, and focus on balancing, pacing, and comprehensive documentation.",
+    "Develop thorough game design documentation, technical specifications, and understand version control, with an emphasis on clear communication with stakeholders and the use of document templates and tools.",
+    "Learn the principles of level design and world-building, focusing on environmental storytelling, and refining designs through playtesting and iteration.",
+    "Benefit from the knowledge and experience of seasoned professionals who will guide you through both theoretical and practical aspects of game design and production.",
+    "Build a strong portfolio showcasing your unique style and technical skills, making you a competitive candidate in the job market."];
 
-  const handleScroll = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-      window.history.replaceState(null, "", window.location.pathname);
-    }
-  };
 
   const faqs = [
     {
       question: "Game Design",
       answer: [
-"Game Designer",
-"Level Designer",
-"UI/UX Designer",
-"Narrative Designer",
-"Combat Designer",
-"Technical Designer",
+        "Game Designer",
+        "Level Designer",
+        "UI/UX Designer",
+        "Narrative Designer",
+        "Combat Designer",
+        "Technical Designer",
       ],
     },
-  
+
 
   ];
 
@@ -165,7 +104,7 @@ function Courses(props) {
 
   return (
     <>
-   <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'Diploma-in-Game-Design-Productionm' : 'Diploma-in-Game-Design-Production'}`}>
+      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'Diploma-in-Game-Design-Productionm' : 'Diploma-in-Game-Design-Production'}`}>
         <div className="et_pb_row et_pb_row_0">
           <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
             <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
@@ -174,9 +113,9 @@ function Courses(props) {
           </div>
         </div>
       </div>
-        <Helmet>
-          <script type="application/ld+json">
-            {`
+      <Helmet>
+        <script type="application/ld+json">
+          {`
         {
           "@context": "https://schema.org/",
           "@type": "WebSite",
@@ -189,9 +128,9 @@ function Courses(props) {
           }
         }
           `}
-          </script>
-          <script type="application/ld+json">
-            {`
+        </script>
+        <script type="application/ld+json">
+          {`
           {
             "@context": "https://schema.org/", 
             "@type": "BreadcrumbList", 
@@ -208,15 +147,15 @@ function Courses(props) {
             }]
           }
             `}
-          </script>
-          <title>Best Game Design & Production Diploma Course in India | Backstage Pass Institute of Gaming</title>
+        </script>
+        <title>Best Game Design & Production Diploma Course in India | Backstage Pass Institute of Gaming</title>
 
-          <meta property="og:title" content="Best Game Design & Production Diploma Course in India | Backstage Pass Institute of Gaming" />
-          <meta name="description" content="Backstage Pass Institute of Gaming is India’s leading Game Design college in Hyderabad. Our Diploma in Game Design and Production covers - genres, high-level design & hands-on Unity/Unreal Engine experience" />
-          <meta property="og:url" content="https://www.backstagepass.co.in/courses/diploma-in-game-design-production/" />
-          <meta name="keywords" content="Game Design Diploma India, Game Production Diploma India, Game Design and Production Course Hyderabad, Diploma in Game Development India, Game Production Training India, Game Design Fundamentals Diploma, Game Production Management Diploma, Introduction to Game Design Course​" />
-          <link rel="canonical" href="https://www.backstagepass.co.in/courses/diploma-in-game-design-production/" />
-        </Helmet>
+        <meta property="og:title" content="Best Game Design & Production Diploma Course in India | Backstage Pass Institute of Gaming" />
+        <meta property="og:description" name="description" content="Backstage Pass Institute of Gaming is India’s leading Game Design college in Hyderabad. Our Diploma in Game Design and Production covers - genres, high-level design & hands-on Unity/Unreal Engine experience" />
+        <meta property="og:url" content="https://www.backstagepass.co.in/courses/diploma-in-game-design-production/" />
+        <meta name="keywords" content="Game Design Diploma India, Game Production Diploma India, Game Design and Production Course Hyderabad, Diploma in Game Development India, Game Production Training India, Game Design Fundamentals Diploma, Game Production Management Diploma, Introduction to Game Design Course​" />
+        <link rel="canonical" href="https://www.backstagepass.co.in/courses/diploma-in-game-design-production/" />
+      </Helmet>
 
 
 
@@ -228,7 +167,7 @@ function Courses(props) {
           {/* Info Card */}
           <div className="info-card slanted-info">
             <div className="info-item">
-            <span className="info-subtitle">Course Duration</span>
+              <span className="info-subtitle">Course Duration</span>
               <span className="info-title">6 months</span>
             </div>
             <div className="info-item">
@@ -244,8 +183,8 @@ function Courses(props) {
               <span className="info-title">Lincoln
 
 
-</span>
-              
+              </span>
+
             </div>
           </div>
         </div>
@@ -254,22 +193,22 @@ function Courses(props) {
       {/* Course Overview */}
       <div className="overviewsection">
         <h2 className='courseHeading'>Course Overview</h2>
-         <div className="brname"></div>
+        <div className="brname"></div>
         <p>
           The Diploma in Game Design and Production program offers a comprehensive curriculum that covers every aspect of game design and production, from understanding the history and genres of games to mastering high-level design principles and practical tools like Unity/Unreal Engine.</p>
-<p>
-This program is designed to equip students with the skills needed to conceptualize, design, and produce engaging and innovative games.
+        <p>
+          This program is designed to equip students with the skills needed to conceptualize, design, and produce engaging and innovative games.
         </p>
       </div>
 
       {/* Course Objectives / Curriculum */}
       <div className="curriculum-section" style={{ marginTop: "24px" }}>
         <h2 className='courseHeading'>Course Objectives</h2>
-         <div className="brname"></div>
+        <div className="brname"></div>
         <div className="">
           <ul style={{ listStyle: "none", padding: 0 }}>
             {items.map((item, index) => (
-              <li key={index} style={{ display: "flex", marginBottom: "14px", fontSize:"16px",gap:"10px", alignItems:"flex-start", justifyContent:"flex-start", lineHeight:"1.6"}}>
+              <li key={index} style={{ display: "flex", marginBottom: "14px", fontSize: "16px", gap: "10px", alignItems: "flex-start", justifyContent: "flex-start", lineHeight: "1.6" }}>
                 <CheckBoxIcon style={{ color: "#ec1923", marginRight: "12px", fontSize: "22px", marginTop: "3px" }} />
                 {item}
               </li>
@@ -287,7 +226,7 @@ This program is designed to equip students with the skills needed to conceptuali
               // Start a new row every 3 semesters
               if (index % 3 === 0) {
                 return (
-                  <div className="curriculum-row" key={index}  style={{gridTemplateColumns:"repeat(2, 1fr)"}}>
+                  <div className="curriculum-row" key={index} style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
                     {semesters.slice(index, index + 1).map((s, i) => (
                       <div key={i} className="semester-card">
                         <h4 className="semester-title">{s.title}</h4>
@@ -297,7 +236,7 @@ This program is designed to equip students with the skills needed to conceptuali
                           ))}
                         </ul>
 
-                      
+
                       </div>
                     ))}
                   </div>
@@ -307,13 +246,13 @@ This program is designed to equip students with the skills needed to conceptuali
             })}
           </div>
         </section>
-     
+
 
 
       </div>
       <div id="Beyond-The-Course" backgroundColor="blue" height="180vh" style={{ padding: "0px 0px", marginBottom: "20px" }}>
         <h2 className='courseHeading' style={{ color: "#ec1923", marginTop: "0px" }}>Beyond The Course</h2>
- <div className="brname"></div>
+        <div className="brname"></div>
         <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At Backstage Pass, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.
 
 
@@ -323,17 +262,17 @@ This program is designed to equip students with the skills needed to conceptuali
           <ul style={{ width: "80%", margin: "0px auto", paddingTop: "10px" }}>
             <li>
               <div className='BeyondLeft'>
-                <img src={m5} />
+                <img src={m5} alt="m5" />
               </div>
               <div className='BeyondRight'>
-               <h4 className='lsh'>Studio Visits</h4>
+                <h4 className='lsh'>Studio Visits</h4>
                 <p>Visits to game studios allow students to witness how a game company truly works
                 </p>
               </div>
             </li>
             <li>
               <div className='BeyondLeft'>
-                <img src={m6} />
+                <img src={m6} alt="m6" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Jams & Conferences</h4>
@@ -345,7 +284,7 @@ This program is designed to equip students with the skills needed to conceptuali
 
             <li>
               <div className='BeyondLeft'>
-                <img src={m8} />
+                <img src={m8} alt="m8" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Networking Opportunities</h4>
@@ -357,7 +296,7 @@ This program is designed to equip students with the skills needed to conceptuali
 
             <li>
               <div className='BeyondLeft'>
-                <img src={m7} />
+                <img src={m7} alt="m7" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Make Your Own Game</h4>
@@ -383,10 +322,10 @@ This program is designed to equip students with the skills needed to conceptuali
             {/* Tabs */}
 
 
-            <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
-              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"100%" }}>Career Opportunities</h2>
- <div className="brname"></div>
-              <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
+            <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width: isMobileState ? "100%" : "80%", margin: "0px" }}>
+              <h2 className='courseHeading' style={{ textAlign: "left", width: isMobileState ? "100%" : "100%" }}>Career Opportunities</h2>
+              <div className="brname"></div>
+              <div className="border rounded-lg bg-white" style={{ marginTop: "30px" }}>
                 {faqs.map((faq, index) => (
                   <div
                     key={index}
@@ -423,7 +362,7 @@ This program is designed to equip students with the skills needed to conceptuali
                         paddingLeft: "20px",
                         textAlign: "justify",
                         lineHeight: "24px",
-                        fontSize:"16px"
+                        fontSize: "16px"
                       }}>
                         {faq.question}
                       </span>
@@ -434,7 +373,7 @@ This program is designed to equip students with the skills needed to conceptuali
                     {openIndex === index && (
                       <ul style={{ paddingLeft: "6.5rem", lineHeight: "1.9" }}>
                         {faq.answer.map((point, i) => (
-                          <li key={i} style={{ listStyle: "disc", fontSize:"14px" }}>{point}</li>
+                          <li key={i} style={{ listStyle: "disc", fontSize: "14px" }}>{point}</li>
                         ))}
                       </ul>
                     )}
@@ -452,7 +391,7 @@ This program is designed to equip students with the skills needed to conceptuali
 
 
 
-      <div id="Enquire-Now" style={{marginTop:"30px"}}>
+      <div id="Enquire-Now" style={{ marginTop: "30px" }}>
         <HomeContentForm />
       </div>
 

@@ -176,7 +176,7 @@ const Testimonials = () => {
     <section className="testimonial-section">
       <div className="testimonial-header">
         <AnimatedText direction="up" delay={0.2}>
-          <h2 className="mainHeadingTotal" style={{color:"#ffffff"}}>Testimonials</h2>
+          <h2 className="mainHeadingTotal" style={{color:"#ec1923"}}>Testimonials</h2>
         </AnimatedText>
       </div>
 

@@ -7,7 +7,6 @@ import {
   PrevButton,
   usePrevNextButtons
 } from './EmblaCarouselArrowButtonsGames'
-import { useDotButton } from './EmblaCarouselDotButtonBuzz'
 import B1 from "../assets/img/banners/business-standard-logo.png";
 import B2 from "../assets/img/banners/forbes-logo.webp";
 import B3 from "../assets/img/banners/et-logo.webp";
@@ -20,10 +19,6 @@ const EmblaCarousel = (props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
   const tweenFactor = useRef(0)
   const tweenNodes = useRef([])
-
-  const { } =
-    useDotButton(emblaApi)
-
   const {
     prevBtnDisabled,
     nextBtnDisabled,

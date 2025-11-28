@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./FinancialAssistance.css";
 import HomeContent from "../../../content/HomeContent";
-import Marquee from "react-fast-marquee";
-import r1 from "../../../assets/img/partners/r1.webp";
-import r2 from "../../../assets/img/partners/r2.webp";
-import r3 from "../../../assets/img/partners/r1.webp";
-import r4 from "../../../assets/img/partners/r4.webp";
-import r5 from "../../../assets/img/partners/r5.webp";
-import r6 from "../../../assets/img/partners/r6.webp";
-import r7 from "../../../assets/img/partners/r7.webp";
+
 import partner1 from "../../../assets/img/partners/Edufin.webp";
 import partner2 from "../../../assets/img/partners/Feemonk.webp";
 import insurance from "../../../assets/img/security.webp";
@@ -19,7 +12,6 @@ import { FiArrowRight } from "react-icons/fi";
 import { CiPhone, CiMail } from "react-icons/ci";
 import { useSelector, shallowEqual } from "react-redux";
 import Autocomplete from '@mui/material/Autocomplete';
-import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { TextField } from '@mui/material';
 import styled from 'styled-components';
 import axios from 'axios';
@@ -242,7 +234,7 @@ function Courses(props) {
         <Helmet>
           <title> Financial Assistance & Scholarships | Backstage Pass Institute of Gaming</title>
           <meta property="og:title" content=" Financial Assistance & Scholarships | Backstage Pass Institute of Gaming" />
-          <meta name="description" content="Make your gaming education affordable with student loan options, scholarships, and financial aid from Backstage Pass Institute of Gaming. Our program features 0% interest and quick processing." />
+          <meta property="og:description" name="description" content="Make your gaming education affordable with student loan options, scholarships, and financial aid from Backstage Pass Institute of Gaming. Our program features 0% interest and quick processing." />
           <meta property="og:url" content="https://www.backstagepass.co.in/admissions/financial-assistance-and-scholarship/" />
 
           <link rel="canonical" href="https://www.backstagepass.co.in/admissions/financial-assistance-and-scholarship/" />

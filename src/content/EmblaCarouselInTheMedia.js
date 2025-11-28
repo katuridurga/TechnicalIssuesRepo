@@ -5,7 +5,6 @@ import {
   PrevButton,
   usePrevNextButtons
 } from './EmblaCarouselArrowButtonsInTheMedia'
-import { useDotButton } from './EmblaCarouselDotButtonBuzz'
 import awardtwo from "../assets/img/PR6.webp"
 import awardthree from "../assets/img/PR3.webp"
 import awardone from "../assets/img/PR1.webp"
@@ -13,7 +12,6 @@ import awardfive from "../assets/img/PR5.webp"
 import awardfour from "../assets/img/PR4.webp"
 import { FiArrowRight } from "react-icons/fi";
 import awardig from "../assets/img/igdc2024.webp";
-import { useSelector, shallowEqual } from "react-redux";
 
 const TWEEN_FACTOR_BASE = 0.2
 
@@ -23,8 +21,6 @@ const EmblaCarousel = (props) => {
   const tweenFactor = useRef(0)
   const tweenNodes = useRef([])
 
-  const { } =
-    useDotButton(emblaApi)
 
   const {
     prevBtnDisabled,
@@ -114,10 +110,7 @@ useEffect(() => {
     clearInterval(autoScrollInterval)
   }
 }, [emblaApi, setTweenFactor, setTweenNodes, tweenParallax])
-  const isMobileState = useSelector(
-    state => state.mainReducer.isMobile,
-    shallowEqual
-  );
+  
   return (
    <div className="emblabaM">
   <div className="embla__viewportbaM" ref={emblaRef}>

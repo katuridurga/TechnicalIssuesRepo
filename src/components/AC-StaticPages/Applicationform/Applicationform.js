@@ -1,29 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Tabs, Tab, Box, TextField, MenuItem, Avatar, IconButton, Button, Typography, Modal, Grid, RadioGroup, FormControlLabel, Radio, FormHelperText, FormControl as MuiFormControl } from '@mui/material';
+import { Container, Box, TextField, MenuItem, Button, Typography, Modal, Grid, RadioGroup, FormControlLabel, Radio, FormHelperText, FormControl as MuiFormControl } from '@mui/material';
 import { useSelector, shallowEqual } from "react-redux";
 import { useForm, Controller } from 'react-hook-form';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Helmet } from "react-helmet";
-import { CiMail } from "react-icons/ci";
 import axios from 'axios';
-import Slide from '@mui/material/Slide';
-import { FaDownload } from "react-icons/fa6";
 import "./Applicationform.css"
 import Autocomplete from '@mui/material/Autocomplete';
 
-
-
-
-// Validation Schema using Yup
-// const schema = yup.object().shape({
-//   name: yup.string().required('Name is required'),
-//   dob: yup.date().required('Date of Birth is required'),
-//   contactNumber: yup
-//     .string()
-//     .matches(/^[0-9]{10}$/, 'Contact number must be 10 digits')
-//     .required('Contact number is required'),
-//   email: yup.string().email('Enter a valid email').required('Email is required'),
-// });
 
 function App() {
   const [open, setOpen] = React.useState(false);
@@ -84,103 +68,27 @@ function App() {
   //     }
   //   }
   // };
-  const SpecializationSelector = ({ program, specialization, handleSpecializationChange }) => {
-    // Define specializations based on the selected program
-    const specializationOptions = {
-      bachelor: [
-        { value: 'csgameDevelopment', label: 'Computer Science & Game Development' },
-        { value: 'gameArtDesign', label: 'Game Art & Design' },
-        { value: 'arvr', label: 'Augmented Reality And Virtual Reality' },
-      ],
-      masters: [
-        { value: 'msc', label: 'M.Sc Game Technology' },
-        { value: 'msc3d', label: '3D Game Art & Game Design' },
-      ],
-      advancedDiploma: [
-        { value: 'gd', label: 'Game Development' },
-        { value: '3dgame', label: '3D Game Art & Digital Sculpting' },
-        // { value: 'tdca', label: 'Traditional & Digital Concept Art' },
-      ],
-      diploma: [
-        { value: 'gdp', label: 'Game Design & Production' },
-        { value: 'gdu', label: 'Game Development with Unity' },
-        { value: '3dart', label: '3D Environment Art For Games' },
-        { value: 'gdunreal', label: 'Game Development with Unreal' },
-        { value: 'dvra', label: 'VR Application Development' },
-      ],
-    };
-
-    return (
-      <TextField
-
-        select
-        fullWidth
-        label="Choose your specialization"
-        value={specialization}
-        onChange={handleSpecializationChange}
-        InputProps={{
-          sx: {
-            color: '#000',
-            '& .MuiOutlinedInput-notchedOutline': {
-              borderColor: '#555', // Default border color
-            },
-            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-              borderColor: '#555', // Focused border color
-            },
-            '&:hover .MuiOutlinedInput-notchedOutline': {
-              borderColor: '#fff', // Hover border color
+ 
+  const theme = createTheme({
+    components: {
+      MuiOutlinedInput: {
+        styleOverrides: {
+          root: {
+            '& input': {
+              color: '#000 !important',
             },
           },
-        }}
-        InputLabelProps={{
-          sx: {
-
-            color: '#000', // Label text color
-
-            background: '#f9fafb',
-
-            px: 1,
-
-            '& .MuiInputLabel-asterisk': {
-
-              color: 'red', // Asterisk color
-
-              fontSize: "21px"
-
-            },
-
-          },
-        }}
-      >
-        {specializationOptions[program]?.map(option => (
-          <MenuItem className="mfn" key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
-    );
-  };
-
-const theme = createTheme({
-  components: {
-    MuiOutlinedInput: {
-      styleOverrides: {
-        root: {
-          '& input': {
+        },
+      },
+      MuiInputLabel: {
+        styleOverrides: {
+          root: {
             color: '#000 !important',
           },
         },
       },
     },
-    MuiInputLabel: {
-      styleOverrides: {
-        root: {
-          color: '#000 !important',
-        },
-      },
-    },
-  },
-});
+  });
 
 
 
@@ -195,37 +103,6 @@ const theme = createTheme({
     // aadhar: null,
     passportPhotos: null,
   });
-
-  const handleFileChange = (e) => {
-    const { name, files } = e.target;
-    //alert("hii");
-    // Check if files are selected
-    if (files.length > 0) {
-
-      // Display the file name in the alert
-      //alert(`File uploaded: ${fileName}`);
-
-      // Store the file in the state (only first file if multiple is not allowed)
-      setFiles((prevFiles) => ({
-        ...prevFiles,
-        [name]: files[0],
-      }));
-    }
-  };
-
-  const scrollToTop = () => {
-
-    window.scrollTo({
-
-      top: 0,
-
-      behavior: "smooth", // This makes the scroll smooth
-
-    });
-
-  };
-
-
 
   const [program, setProgram] = useState('');
   const [specialization, setSpecialization] = useState('');
@@ -246,18 +123,8 @@ const theme = createTheme({
     }));
   };
 
-  const handleSpecializationChange = (event) => {
-    const selectedSpecialization = event.target.value;
-    setSpecialization(selectedSpecialization);
-    setFormData((prevData) => ({
-      ...prevData,
-      specialization: selectedSpecialization,
-    }));
-  };
 
-  const [employmentStatus, setEmploymentStatus] = useState('');
-  const [pursuingstatus, setpursuingstatus] = useState('');
-  const [qualification, setQualification] = useState('');
+
   const selectedQualification = watch('qualification', '');
 
 
@@ -568,18 +435,6 @@ const theme = createTheme({
     }));
   };
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setImage(file);
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImagePreviewUrl(reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
   const handleSubmit = (e) => {
     setOpen(true);
 
@@ -702,7 +557,7 @@ const theme = createTheme({
       <Helmet>
         <title> Apply Now for Game Development Courses | Backstage Pass</title>
         <meta property="og:title" content="Apply Now for Game Development Courses | Backstage Pass" />
-        <meta name="description" content=" Applying to Backstage Pass is simple and fast. Fill out our online application form to get started with your game development education today." />
+        <meta property="og:description" name="description" content=" Applying to Backstage Pass is simple and fast. Fill out our online application form to get started with your game development education today." />
         <meta property="og:url" content="https://www.backstagepass.co.in/Application-form/" />
 
         <link rel="canonical" href="https://www.backstagepass.co.in/Application-form/" />
@@ -717,7 +572,7 @@ const theme = createTheme({
             backgroundColor: '#f4f4f4', // Example background
             borderRadius: '8px',
             boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
-            width:'90%',
+            width: '90%',
           }}
         >
           <div
@@ -762,8 +617,8 @@ const theme = createTheme({
                 <Grid container spacing={2} sx={{
                   width: '100%',
                   flexDirection: isMobileState ? 'column-reverse' : null,
-                    ml: isMobileState ? 0 : '-16px', 
-                        
+                  ml: isMobileState ? 0 : '-16px',
+
                 }} >
                   <Grid item xs={12} md={12} sx={{ pl: isMobileState ? '0px !important' : '-16px !important' }}>
                     <Box mt={2} >
@@ -1885,7 +1740,7 @@ const theme = createTheme({
                         /> */}
 
 
-                       
+
                         {/* {employmentStatus === 'employed' && (
                           <>
                             <Controller
@@ -2775,187 +2630,187 @@ const theme = createTheme({
                         </>
                       )}
                     </Box>
-                   <Box mt={2} style={{ fontSize: isMobileState ? "17px" : "24px", color: '#000' }}>
-                  {/* How did you find out about us */}
-                  <Typography variant="subtitle1" style={{ fontSize: isMobileState ? "17px" : "24px", color: '#000' }}>
-                    Before submitting the form, let us know how you found out about us:
-                  </Typography>
-                  <RadioGroup
-                    value={foundBy} // Keep it synced with foundBy state
-                    onChange={handleFoundByChange}
-                    style={{ fontSize: isMobileState ? "17px" : "24px", color: '#000' }}
-                  >
-                    <FormControlLabel value="Google" control={<Radio sx={{
-                      color: '#000',
-                      '&.Mui-checked': { color: '#000' },
-                    }} />} label="Google" style={{ color: "#000", fontSize: "1rem" }} />
+                    <Box mt={2} style={{ fontSize: isMobileState ? "17px" : "24px", color: '#000' }}>
+                      {/* How did you find out about us */}
+                      <Typography variant="subtitle1" style={{ fontSize: isMobileState ? "17px" : "24px", color: '#000' }}>
+                        Before submitting the form, let us know how you found out about us:
+                      </Typography>
+                      <RadioGroup
+                        value={foundBy} // Keep it synced with foundBy state
+                        onChange={handleFoundByChange}
+                        style={{ fontSize: isMobileState ? "17px" : "24px", color: '#000' }}
+                      >
+                        <FormControlLabel value="Google" control={<Radio sx={{
+                          color: '#000',
+                          '&.Mui-checked': { color: '#000' },
+                        }} />} label="Google" style={{ color: "#000", fontSize: "1rem" }} />
 
-                    <FormControlLabel value="Facebook/Instagram Ad" control={<Radio sx={{
-                      color: 'white',
-                      '&.Mui-checked': { color: 'white' },
+                        <FormControlLabel value="Facebook/Instagram Ad" control={<Radio sx={{
+                          color: 'white',
+                          '&.Mui-checked': { color: 'white' },
 
-                    }} />} label="Facebook/Instagram Ad" style={{ color: "#000", fontSize: "1rem" }} />
+                        }} />} label="Facebook/Instagram Ad" style={{ color: "#000", fontSize: "1rem" }} />
 
-                    <FormControlLabel value="twitter" control={<Radio sx={{
-                      color: 'white',
-                      '&.Mui-checked': { color: 'white' },
-                    }} />} label="Twitter" style={{ color: "#000", fontSize: "1rem" }} />
+                        <FormControlLabel value="twitter" control={<Radio sx={{
+                          color: 'white',
+                          '&.Mui-checked': { color: 'white' },
+                        }} />} label="Twitter" style={{ color: "#000", fontSize: "1rem" }} />
 
-                    <FormControlLabel value="youtube" control={<Radio sx={{
-                      color: 'white',
-                      '&.Mui-checked': { color: 'white' },
-                    }} />} label="YouTube" style={{ color: "#000", fontSize: "1rem" }} />
+                        <FormControlLabel value="youtube" control={<Radio sx={{
+                          color: 'white',
+                          '&.Mui-checked': { color: 'white' },
+                        }} />} label="YouTube" style={{ color: "#000", fontSize: "1rem" }} />
 
-                    <FormControlLabel value="family" control={<Radio sx={{
-                      color: 'white',
-                      '&.Mui-checked': { color: 'white' },
-                    }} />} label="Through family" style={{ color: "#000", fontSize: "1rem" }} />
+                        <FormControlLabel value="family" control={<Radio sx={{
+                          color: 'white',
+                          '&.Mui-checked': { color: 'white' },
+                        }} />} label="Through family" style={{ color: "#000", fontSize: "1rem" }} />
 
-                    <FormControlLabel value="referral" control={<Radio sx={{
-                      color: 'white',
-                      '&.Mui-checked': { color: 'white' },
-                    }} />} label="I am a referral" style={{ color: "#000", fontSize: "1rem" }} />
-                  </RadioGroup>
+                        <FormControlLabel value="referral" control={<Radio sx={{
+                          color: 'white',
+                          '&.Mui-checked': { color: 'white' },
+                        }} />} label="I am a referral" style={{ color: "#000", fontSize: "1rem" }} />
+                      </RadioGroup>
 
-                  {/* Conditional fields for referral */}
-                  {/* Conditional referral fields */}
-                  {foundBy === 'referral' && (
-                    <Box mt={3}>
-                      <TextField
+                      {/* Conditional fields for referral */}
+                      {/* Conditional referral fields */}
+                      {foundBy === 'referral' && (
+                        <Box mt={3}>
+                          <TextField
 
-                        fullWidth
-                        label="Referral Name"
-                        value={referralName}
-                        onChange={handleReferralNameChange}
-                        margin="normal"
-                        InputProps={{
-                          sx: {
-                            color: '#000',
-                            '& .MuiOutlinedInput-notchedOutline': {
-                              borderColor: '#555',
-                            },
-                            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                              borderColor: isRegistered ? 'red' : '#555', // Red if registered
-                            },
-                          },
-                        }}
-                        InputLabelProps={{
-                          sx: {
-                            color: 'white', // Label text color
-                            background: '#f9fafb',
-                            px: 1,
-                            '& .MuiInputLabel-asterisk': {
-                              color: 'red', // Asterisk color
-                              fontSize: '21px',
-                            },
-                          },
-                        }}
-                      />
-                      <TextField
-                        required
-                        fullWidth
-                        label="Contact Number"
-                        value={referralContact}
-                        onChange={handleReferralContactChange}
-                        margin="normal"
-                        InputProps={{
-                          sx: {
-                            color: 'white',
-                            '& .MuiOutlinedInput-notchedOutline': {
-                              borderColor: '#555',
-                            },
-                            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                              borderColor: isRegistered ? 'red' : '#555', // Red if registered
-                            },
-                          },
-                        }}
-                        InputLabelProps={{
-                          sx: {
-                            color: 'white', // Label text color
-                            background: '#f9fafb',
-                            px: 1,
-                            '& .MuiInputLabel-asterisk': {
-                              color: 'red', // Asterisk color
-                              fontSize: '21px',
-                            },
-                          },
-                        }}
-                      />
-                      <TextField
-                        required
-                        fullWidth
-                        label="Program"
-                        value={referralProgram}
-                        onChange={handleReferralProgramChange}
-                        margin="normal"
-                        InputProps={{
-                          sx: {
-                            color: 'white',
-                            '& .MuiOutlinedInput-notchedOutline': {
-                              borderColor: '#555',
-                            },
-                            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                              borderColor: isRegistered ? 'red' : '#555', // Red if registered
-                            },
-                          },
-                        }}
-                        InputLabelProps={{
-                          sx: {
-                            color: 'white', // Label text color
-                            background: '#f9fafb',
-                            px: 1,
-                            '& .MuiInputLabel-asterisk': {
-                              color: 'red', // Asterisk color
-                              fontSize: '21px',
-                            },
-                          },
-                        }}
-                      />
-                      <TextField
+                            fullWidth
+                            label="Referral Name"
+                            value={referralName}
+                            onChange={handleReferralNameChange}
+                            margin="normal"
+                            InputProps={{
+                              sx: {
+                                color: '#000',
+                                '& .MuiOutlinedInput-notchedOutline': {
+                                  borderColor: '#555',
+                                },
+                                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                  borderColor: isRegistered ? 'red' : '#555', // Red if registered
+                                },
+                              },
+                            }}
+                            InputLabelProps={{
+                              sx: {
+                                color: 'white', // Label text color
+                                background: '#f9fafb',
+                                px: 1,
+                                '& .MuiInputLabel-asterisk': {
+                                  color: 'red', // Asterisk color
+                                  fontSize: '21px',
+                                },
+                              },
+                            }}
+                          />
+                          <TextField
+                            required
+                            fullWidth
+                            label="Contact Number"
+                            value={referralContact}
+                            onChange={handleReferralContactChange}
+                            margin="normal"
+                            InputProps={{
+                              sx: {
+                                color: 'white',
+                                '& .MuiOutlinedInput-notchedOutline': {
+                                  borderColor: '#555',
+                                },
+                                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                  borderColor: isRegistered ? 'red' : '#555', // Red if registered
+                                },
+                              },
+                            }}
+                            InputLabelProps={{
+                              sx: {
+                                color: 'white', // Label text color
+                                background: '#f9fafb',
+                                px: 1,
+                                '& .MuiInputLabel-asterisk': {
+                                  color: 'red', // Asterisk color
+                                  fontSize: '21px',
+                                },
+                              },
+                            }}
+                          />
+                          <TextField
+                            required
+                            fullWidth
+                            label="Program"
+                            value={referralProgram}
+                            onChange={handleReferralProgramChange}
+                            margin="normal"
+                            InputProps={{
+                              sx: {
+                                color: 'white',
+                                '& .MuiOutlinedInput-notchedOutline': {
+                                  borderColor: '#555',
+                                },
+                                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                  borderColor: isRegistered ? 'red' : '#555', // Red if registered
+                                },
+                              },
+                            }}
+                            InputLabelProps={{
+                              sx: {
+                                color: 'white', // Label text color
+                                background: '#f9fafb',
+                                px: 1,
+                                '& .MuiInputLabel-asterisk': {
+                                  color: 'red', // Asterisk color
+                                  fontSize: '21px',
+                                },
+                              },
+                            }}
+                          />
+                          <TextField
 
-                        fullWidth
-                        label="Batch Year"
-                        value={referralBatchYear}
-                        onChange={handleReferralBatchYearChange}
-                        margin="normal"
-                        InputProps={{
-                          sx: {
-                            color: 'white',
-                            '& .MuiOutlinedInput-notchedOutline': {
-                              borderColor: '#555',
-                            },
-                            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                              borderColor: isRegistered ? 'red' : '#555', // Red if registered
-                            },
-                          },
-                        }}
-                        InputLabelProps={{
-                          sx: {
-                            color: 'white', // Label text color
-                            background: '#f9fafb',
-                            px: 1,
-                            '& .MuiInputLabel-asterisk': {
-                              color: 'red', // Asterisk color
-                              fontSize: '21px',
-                            },
-                          },
-                        }}
-                      />
+                            fullWidth
+                            label="Batch Year"
+                            value={referralBatchYear}
+                            onChange={handleReferralBatchYearChange}
+                            margin="normal"
+                            InputProps={{
+                              sx: {
+                                color: 'white',
+                                '& .MuiOutlinedInput-notchedOutline': {
+                                  borderColor: '#555',
+                                },
+                                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                  borderColor: isRegistered ? 'red' : '#555', // Red if registered
+                                },
+                              },
+                            }}
+                            InputLabelProps={{
+                              sx: {
+                                color: 'white', // Label text color
+                                background: '#f9fafb',
+                                px: 1,
+                                '& .MuiInputLabel-asterisk': {
+                                  color: 'red', // Asterisk color
+                                  fontSize: '21px',
+                                },
+                              },
+                            }}
+                          />
+                        </Box>
+                      )}
                     </Box>
-                  )}
-                </Box>
                   </Box>
 
                 </Box>
-                 
-                <div className='app-btn26' style={{textAlign:"center",display:"flex",alignItems:"center",justifyContent:"center"}}>
+
+                <div className='app-btn26' style={{ textAlign: "center", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <Button type="submit" variant="contained" color="primary" className='button brand size200'>
                     Submit
                   </Button>
 
                 </div>
-    <Typography variant="body2" gutterBottom className='discl' style={{textAlign:'center', color:"#000"}}>  For quick help, call us on +91 8008002794 / 95
-Or Email us at admissions@backstagepass.co.in</Typography>
+                <Typography variant="body2" gutterBottom className='discl' style={{ textAlign: 'center', color: "#000" }}>  For quick help, call us on +91 8008002794 / 95
+                  Or Email us at admissions@backstagepass.co.in</Typography>
                 {/* <Button
                 variant="contained"
                 type='submit'
@@ -3145,7 +3000,7 @@ Or Email us at admissions@backstagepass.co.in</Typography>
                 <Typography variant="h6" gutterBottom className='subop' style={{ fontSize: isMobileState ? "17px" : "24px", color: '#fff' }}>4.Seat will be reserved only once the tuition fee (semester/program-wise) is paid.
 
                 </Typography>
-             
+
 
                 <Box mt={2}>
                   <Button

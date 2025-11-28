@@ -3,10 +3,6 @@ import { useSelector, shallowEqual } from "react-redux";
 import "../BachelorsInComputerScienceGameDevelopment/BachelorsInComputerScienceGameDevelopment.css";
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import PropTypes from 'prop-types';
-import { useTheme } from '@mui/material/styles';
-
-import { emphasize, styled } from '@mui/material/styles';
-import Chip from '@mui/material/Chip';
 import m5 from "../../../assets/img/Icons/flags.webp";
 import c1 from "../../../assets/img/Courses/careeroprt.webp";
 import m6 from "../../../assets/img/Icons/jams.webp";
@@ -47,58 +43,9 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-const StyledBreadcrumb = styled(Chip)(({ theme, Props }) => {
-  const backgroundColor =
-    theme.palette.mode === 'light'
-      ? theme.palette.grey[100]
-      : theme.palette.grey[800];
 
-
-  return {
-    backgroundColor,
-    height: theme.spacing(3),
-    color: theme.palette.text.primary,
-    fontWeight: theme.typography.fontWeightRegular,
-    '&:hover, &:focus': {
-      backgroundColor: emphasize(backgroundColor, 0.06),
-    },
-    '&:active': {
-      boxShadow: theme.shadows[1],
-      backgroundColor: emphasize(backgroundColor, 0.12),
-    },
-  };
-}); // TypeScript only: need a type cast here because https://github.com/Microsoft/TypeScript/issues/26591
-
-const sections = [
-  "Course-Overview",
-  "Course-Objectives",
-  "Curriculum",
-  "Beyond-The-Course",
-  "Career-Opportunities"
-];
 
 function Courses(props) {
-
-
-  const theme = useTheme();
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
-
-  const [value1, setValue1] = React.useState(0);
-
-  // ✅ Add this here (INSIDE component)
-  const [activeTab, setActiveTab] = useState("GAME PROGRAMMING");
-  const handleChange1 = (event, newValue) => {
-    setValue1(newValue);
-  };
-
-  const OPTIONS = { loop: true }
-  const SLIDE_COUNT = 10
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
@@ -129,13 +76,7 @@ function Courses(props) {
 "Benefit from the knowledge and experience of seasoned professionals who will guide you through both theoretical and practical aspects of Unity game development.",
 "Build a strong portfolio showcasing your unique style and technical skills, making you a competitive candidate in the job market."];
 
-  const handleScroll = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-      window.history.replaceState(null, "", window.location.pathname);
-    }
-  };
+ 
 
   const faqs = [
     {
@@ -212,7 +153,7 @@ function Courses(props) {
             
           <title>Best Unity Game Development Diploma Courses with Backstage Pass Institute of Gaming</title>
           <meta property="og:title" content="Best Unity Game Development Diploma Courses with Backstage Pass Institute of Gaming" />
-          <meta  name="description" content="Unity game development in 6 months. Start a game development journey with the best Unity courses at Backstage Pass Institute, Hyderabad, India. Learn C#, game design, and build immersive experiences" />
+          <meta property="og:description" name="description" content="Unity game development in 6 months. Start a game development journey with the best Unity courses at Backstage Pass Institute, Hyderabad, India. Learn C#, game design, and build immersive experiences" />
           <meta property="og:url" content="https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unity/" />
           <meta name="keywords" content="Unity Game Development Diploma India, Game Development with Unity Course Hyderabad, Unity 3D Game Development Diploma India, Diploma in Game Development using Unity Hyderabad, Unity Training for Game Development India, Unity Programming Diploma India, Unity Scripting Diploma, 2D Game Development with Unity Diploma, 3D Game Development with Unity Diploma, Mobile Game Development with Unity Diploma, Indie Game Development with Unity Diploma, Career in Unity Game Development India, Portfolio Building Unity Course, Game Development Fundamentals with Unity Diploma​"/>
           <link rel="canonical" href="https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unity/" />
@@ -324,7 +265,7 @@ The curriculum covers core programming languages like C++ and C#, in-depth train
           <ul style={{ width: "80%", margin: "0px auto", paddingTop: "10px" }}>
             <li>
               <div className='BeyondLeft'>
-                <img src={m5} />
+                <img src={m5} alt="m5"/>
               </div>
               <div className='BeyondRight'>
                <h4 className='lsh'>Studio Visits</h4>
@@ -334,7 +275,7 @@ The curriculum covers core programming languages like C++ and C#, in-depth train
             </li>
             <li>
               <div className='BeyondLeft'>
-                <img src={m6} />
+                <img src={m6} alt="m6"/>
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Jams & Conferences</h4>
@@ -346,7 +287,7 @@ The curriculum covers core programming languages like C++ and C#, in-depth train
 
             <li>
               <div className='BeyondLeft'>
-                <img src={m8} />
+                <img src={m8} alt="m8"/>
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Networking Opportunities</h4>
@@ -358,7 +299,7 @@ The curriculum covers core programming languages like C++ and C#, in-depth train
 
             <li>
               <div className='BeyondLeft'>
-                <img src={m7} />
+                <img src={m7} alt="m7"/>
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Make Your Own Game</h4>

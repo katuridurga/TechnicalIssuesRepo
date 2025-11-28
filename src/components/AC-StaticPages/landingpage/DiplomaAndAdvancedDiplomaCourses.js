@@ -6,10 +6,9 @@ import PropTypes from 'prop-types';
 
 import { Helmet } from "react-helmet";
 
-
+import { FaWhatsapp } from "react-icons/fa";
 import axios from 'axios';
 import { BsDot } from "react-icons/bs";
-import ReactWhatsappButton from "react-whatsapp-button";
 import FeaturedProducts1 from "../../../content/FeaturedProducts1.js";
 import { useSelector, shallowEqual } from "react-redux";
 import StickyBox from "react-sticky-box";
@@ -19,7 +18,7 @@ import AdvancedDiplomain3DGameArtDigitalSculpting from "../../../assets/img/Cour
 import DiplomainGameDesignProduction from "../../../assets/img/Courses/DiplomainGameDesignProduction.webp"
 import DiplomainGameDevelopmentwithUnity from "../../../assets/img/Courses/DiplomainGameDevelopmentwithUnity.webp"
 import Diplomain3DEnvironmentArtCreationforGames from "../../../assets/img/Courses/Diplomain3DEnvironmentArtCreationforGames.webp"
-import AdvancedDiplomainTraditionalDigitalConceptArt from "../../../assets/img/Courses/AdvancedDiplomainTraditionalDigitalConceptArt.webp"
+// import AdvancedDiplomainTraditionalDigitalConceptArt from "../../../assets/img/Courses/AdvancedDiplomainTraditionalDigitalConceptArt.webp"
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -52,7 +51,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import infog from '../../../assets/img/banners/info.webp';
 import advdip from '../../../assets/img/banners/advdip.webp';
-
+import gade from "../../../assets/img/art/gad.webp";
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -365,6 +364,18 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                       </div>
                     </div>
                   </Link>
+                  <Link to={"/courses/diploma-in-vr-application-development/"}>
+                    <div className="mainCourse1">
+                      <div className="mainCourseLeft1">
+                        <img src={gade} alt="Diploma in VR Application Development" className="img-circle" />
+                      </div>
+                      <div className="mainCourseRight1">
+                        <h2 style={{ fontFamily: "'Montserrat', sans-serif" }} className="CourseHead1">Diploma in VR Application Development</h2>
+                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>Design, develop, and experience the next generation of VR applications with our hands-on 6-month diploma program.</p>
+
+                      </div>
+                    </div>
+                  </Link>
                 </TabPanel>
                 <TabPanel value={value1} index={1} dir={theme.direction}>
                   <div className='courseUpdatesl'>
@@ -401,7 +412,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                       </div>
                     </div>
                   </Link>
-                  <Link to={"/courses/advanced-diploma-in-traditional-digital-art/"}>
+                  {/* <Link to={"/courses/advanced-diploma-in-traditional-digital-art/"}>
                     <div className="mainCourse1">
                       <div className="mainCourseLeft1">
                         <img src={AdvancedDiplomainTraditionalDigitalConceptArt} alt="Advanced Diploma in Traditional & Digital Concept Art" className="img-circle" />
@@ -412,7 +423,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
                       </div>
                     </div>
-                  </Link>
+                  </Link> */}
 
                 </TabPanel>
 
@@ -940,12 +951,14 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
         </div>
       </div>
 <div className="App">
-        <ReactWhatsappButton
+        <a
           countryCode="91"
           phoneNumber="8977945705"
-          style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-7rem" : "-1rem", zIndex: "11111" }}
-          className="whatsappsivak"
-        />
+          style={{ right: isMobileState ? "1.5rem" : "4rem!important", marginBottom: isMobileState ? "-7rem" : "-1rem", zIndex: "11111" }}
+          className="whatsappsivakl">
+        <FaWhatsapp  style={{ color: "#fff", fontSize: "32px" }} />
+
+          </a>
 
       </div>
 

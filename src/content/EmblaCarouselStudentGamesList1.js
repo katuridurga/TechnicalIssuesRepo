@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useRef } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 
 import { useSelector, shallowEqual } from "react-redux";
-import { useDotButton } from './EmblaCarouselDotButtonBuzz'
 import ig from '../assets/img/partners/Terminator-Genisys-Future-War.webp';
 import ig2 from "../assets/img/partners/Hit-Wicket.webp";
 import ig1 from "../assets/img/partners/FORZA-7.webp";
@@ -14,8 +13,6 @@ const EmblaCarousel = (props) => {
   const tweenFactor = useRef(0)
   const tweenNodes = useRef([])
 
-  const { } =
-    useDotButton(emblaApi)
   const setTweenNodes = useCallback((emblaApi) => {
     tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
       return slideNode.querySelector('.embla__parallax__layerb')

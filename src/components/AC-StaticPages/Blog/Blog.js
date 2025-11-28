@@ -140,7 +140,7 @@ function Blog() {
 
 
           <meta property="og:title" content="Backstage Pass Blogs: Gaming & Game Development News, Trends in Gaming Industry, & Gaming Career Guidance" />
-          <meta name="description" content="Gaming industry insights, trends, and tips from Backstage Pass. Explore game development courses, design, animation, and gaming career guidance from industry leaders, for aspiring game developers and designers." />
+          <meta property="og:description" name="description" content="Gaming industry insights, trends, and tips from Backstage Pass. Explore game development courses, design, animation, and gaming career guidance from industry leaders, for aspiring game developers and designers." />
           <meta property="og:url" content="https://www.backstagepass.co.in/blogs/" />
           <link rel="canonical" href="https://www.backstagepass.co.in/blogs/" />
 

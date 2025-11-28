@@ -1,33 +1,14 @@
 import React, { useState } from 'react'
 import { useSelector, shallowEqual } from "react-redux";
 import "../BachelorsInComputerScienceGameDevelopment/BachelorsInComputerScienceGameDevelopment.css";
-import Scrollspy from "react-scrollspy";
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
-import { PiArrowFatRightLight } from 'react-icons/pi';
 import PropTypes from 'prop-types';
-import { useTheme } from '@mui/material/styles';
-import EmblaCarouselMentors from '../../../content/EmblaCarouselMentors';
-import StickyBox from "react-sticky-box";
-import { emphasize, styled } from '@mui/material/styles';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Chip from '@mui/material/Chip';
-import HomeIcon from '@mui/icons-material/Home';
-import ScrollSpy from "react-ui-scrollspy";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import m1 from "../../../assets/img/test/1.webp";
-import m2 from "../../../assets/img/test/2.webp";
-import m3 from "../../../assets/img/test/3.webp";
-import m4 from "../../../assets/img/test/4.png";
 import m5 from "../../../assets/img/Icons/flags.webp";
 import c1 from "../../../assets/img/Courses/careeroprt.webp";
 import m6 from "../../../assets/img/Icons/jams.webp";
 import m7 from "../../../assets/img/Icons/gameconsole.webp";
 import m8 from "../../../assets/img/Icons/team-work.webp";
 import { FaPlus, FaMinus } from "react-icons/fa";
-
-
-import Tabs, { tabsClasses } from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
@@ -61,58 +42,8 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-const StyledBreadcrumb = styled(Chip)(({ theme, Props }) => {
-  const backgroundColor =
-    theme.palette.mode === 'light'
-      ? theme.palette.grey[100]
-      : theme.palette.grey[800];
-
-
-  return {
-    backgroundColor,
-    height: theme.spacing(3),
-    color: theme.palette.text.primary,
-    fontWeight: theme.typography.fontWeightRegular,
-    '&:hover, &:focus': {
-      backgroundColor: emphasize(backgroundColor, 0.06),
-    },
-    '&:active': {
-      boxShadow: theme.shadows[1],
-      backgroundColor: emphasize(backgroundColor, 0.12),
-    },
-  };
-}); // TypeScript only: need a type cast here because https://github.com/Microsoft/TypeScript/issues/26591
-
-const sections = [
-  "Course-Overview",
-  "Course-Objectives",
-  "Curriculum",
-  "Beyond-The-Course",
-  "Career-Opportunities"
-];
 
 function Courses(props) {
-
-
-  const theme = useTheme();
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
-
-  const [value1, setValue1] = React.useState(0);
-
-  // ✅ Add this here (INSIDE component)
-  const [activeTab, setActiveTab] = useState("GAME PROGRAMMING");
-  const handleChange1 = (event, newValue) => {
-    setValue1(newValue);
-  };
-
-  const OPTIONS = { loop: true }
-  const SLIDE_COUNT = 10
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
@@ -160,14 +91,6 @@ function Courses(props) {
 "Learn and apply optimization techniques to enhance game performance, and understand the end-to-end processes of developing a game.",
 "Learn from industry experts and build a professional network that will support your career growth and development.",
 "Build a strong portfolio showcasing your unique style and technical skills, making you a competitive candidate in the job market."];
-
-  const handleScroll = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-      window.history.replaceState(null, "", window.location.pathname);
-    }
-  };
 
   const faqs = [
     {
@@ -246,7 +169,7 @@ function Courses(props) {
           </title>
 
           <meta property="og:title" content="Advanced Diploma in Game Development | Backstage Pass Institute of Gaming" />
-          <meta name="description" content="Launch your game development career in India with Backstage Pass Institute of Gaming. Our 1-Year Advanced Diploma covers design, art, programming & more. Apply  now!" />
+          <meta property="og:description" name="description" content="Launch your game development career in India with Backstage Pass Institute of Gaming. Our 1-Year Advanced Diploma covers design, art, programming & more. Apply  now!" />
           <meta property="og:url" content="https://www.backstagepass.co.in/courses/advanced-diploma-in-game-development/" />
           <meta name="keywords" content="Advanced diploma in game development, Game development courses in advanced diploma, Advanced Game Development Diploma India, Game Development Course Advanced Hyderabad, Professional Game Development Training India, Advanced Game Programming Courses India, Advanced Level Game Development Training, Learn Advanced Game Development Hyderabad, Game Development with C++ Advanced India​" />
           <link rel="canonical" href="https://www.backstagepass.co.in/courses/advanced-diploma-in-game-development/" />
@@ -361,7 +284,7 @@ The curriculum covers foundational programming, advanced game engine programming
           <ul style={{ width: "80%", margin: "0px auto", paddingTop: "10px" }}>
             <li>
               <div className='BeyondLeft'>
-                <img src={m5} />
+                <img src={m5} alt="m5" />
               </div>
               <div className='BeyondRight'>
                <h4 className='lsh'>Studio Visits</h4>
@@ -371,7 +294,7 @@ The curriculum covers foundational programming, advanced game engine programming
             </li>
             <li>
               <div className='BeyondLeft'>
-                <img src={m6} />
+                <img src={m6} alt="m6" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Jams & Conferences</h4>
@@ -383,7 +306,7 @@ The curriculum covers foundational programming, advanced game engine programming
 
             <li>
               <div className='BeyondLeft'>
-                <img src={m8} />
+                <img src={m8} alt="m8" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Networking Opportunities</h4>
@@ -395,7 +318,7 @@ The curriculum covers foundational programming, advanced game engine programming
 
             <li>
               <div className='BeyondLeft'>
-                <img src={m7} />
+                <img src={m7} alt="m7"/>
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Make Your Own Game</h4>

@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import "./DiplomaAndAdvancedDiplomaCourses.css";
 import PropTypes from 'prop-types';
-import ReactWhatsappButton from "react-whatsapp-button";
-
+import { FaWhatsapp } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
 import r1 from "../../../assets/img/partners/r1.png";
 import r2 from "../../../assets/img/partners/r2.png";
@@ -20,7 +19,6 @@ import GAIMG4 from "../../../assets/img/partners/Icons/CharacterArtDigitalSculpt
 import GAIMG5 from "../../../assets/img/partners/Icons/HardSurfaceModeler.webp";
 import GAIMG6 from "../../../assets/img/partners/Icons/Fundamentalsofgamedesign.webp";
 import art11 from "../../../assets/img/art/Vishnusai.webp"
-import art22 from "../../../assets/img/art/SuryaShankha.webp"
 import art33 from "../../../assets/img/art/VijaySivatej1.webp"
 import art44 from "../../../assets/img/art/SuryaShankha2.webp"
 import art55 from "../../../assets/img/art/AbhiAstu1.webp"
@@ -171,9 +169,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
   // }, []);
 
-  const OPTIONS = { loop: true }
-  const SLIDE_COUNT = 5
-
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
     shallowEqual
@@ -284,8 +279,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     if (name === "PhoneNumber" && /^[0-9]{10}$/.test(value)) {
       try {
         const response = await fetch(`https://www.backstagepass.co.in/reactapi/checklandingpagemobile.php?contactNumber=${value}`);
-        const result = await response.json();
-
+      
         if (response.status === 200) {
           alert('This mobile number is already registered with in the last 3 months our team will get back to you.');
           setFormData((prevData) => ({
@@ -1325,13 +1319,13 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       {isButtonVisible && (
         <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Enroll Now</a></div>)}
    <div className="App">
-        <ReactWhatsappButton
+        <a
           countryCode="91"
           phoneNumber="8977945705"
           style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-1rem" : "-1rem", zIndex: "11111" }}
-          className="whatsappsivak"
-        />
-
+          className="whatsappsivakl">
+            <FaWhatsapp  style={{ color: "#fff", fontSize: "32px" }} />
+</a>
       </div>
     </>
   )

@@ -1118,11 +1118,30 @@ justify-content: center;
    .main-img > .main-img2:not(:has(img)) {
     order: 2 !important;
   }
-  
+  .sec-title {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0px !important;
+}
    .inner > :last-child {
     margin-bottom: 20px; /* adjust as needed */
   }
+   /* TEXT BLOCK — should come FIRST */
+  .main-img .main-img2:nth-child(2) {
+    order: 1 !important;
+  }
+.mat{
+  margin-top: 30px;
+}
+  /* IMAGE BLOCK — should come SECOND */
+  .main-img .main-img2:nth-child(1) {
+    order: 2 !important;
+  }
 
+  /* Inside text block → Vision heading stays at top */
+  .vision-section {
+    order: -1 !important;
+  }
   .mabanimg img{
     width:185px;
   }

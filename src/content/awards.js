@@ -1,13 +1,4 @@
 import React from 'react';
-import { useSelector, shallowEqual } from "react-redux";
-import aw2 from "../assets/img/banners/_SRI8766.webp"
-import aw330 from "../assets/img/banners/BSP_AWard-300.webp"
-import aw43 from "../assets/img/banners/A1-300.webp"
-import aw530 from "../assets/img/banners/A2-300.webp"
-import aw630 from "../assets/img/banners/Times-Award-300.webp"
-import aw815 from "../assets/img/banners/times2023-150.webp"
-import aw7 from "../assets/img/banners/et2025.webp"
-import aw9 from "../assets/img/banners/2024times.webp"
 import aw18 from "../assets/img/awards/Best_Education_Brand_2018.webp";
 import aw19 from "../assets/img/awards/Times_Education_Excellence_2019.webp";
 import aw20 from "../assets/img/awards/Time_Excellence_Awards_2020.webp";
@@ -22,11 +13,6 @@ import "./awards.css"
 
 
 function Awards() {
-
-    const isMobileState = useSelector(
-        state => state.mainReducer.isMobile,
-        shallowEqual
-    );
     return (
         <>
 
@@ -333,50 +319,10 @@ function Awards() {
 
                                 <div class="containergawardh">
                                     <div class="cardsgawardh">
-                                        <img src={aw18} alt="awardseven" />
-                                        <p>2018</p>
+                                        <img src={aw25} alt="awardfive" />
+                                        <p>2025</p>
                                         <div class="overlaysawardh">
-                                            <h3>Best Education Brand Award Economic Times <br /><br />  2018</h3>
-
-                                        </div>
-                                    </div>
-                                    <div class="cardsgawardh">
-                                        <img src={aw19} alt="awardsix" />
-                                        <p>2019</p>
-                                        <div class="overlaysawardh">
-                                            <h3>Times Education Excellence Award <br /><br />  2019</h3>
-
-                                        </div>
-                                    </div>
-                                    <div class="cardsgawardh">
-                                        <img src={aw20} alt="awardone" />
-                                        <p>2020</p>
-                                        <div class="overlaysawardh">
-                                            <h3>Times Excellence Award <br /><br />  2020</h3>
-
-                                        </div>
-                                    </div>
-                                    <div class="cardsgawardh">
-                                        <img src={aw21} alt="aw630" />
-                                        <p>2021</p>
-                                        <div class="overlaysawardh">
-                                            <h3>Times Education Excellence Award <br /><br />  2021</h3>
-
-                                        </div>
-                                    </div>
-                                    <div class="cardsgawardh">
-                                        <img src={aw22} alt="awardthree" />
-                                        <p>2022</p>
-                                        <div class="overlaysawardh">
-                                            <h3>Times Education Excellence Award <br /><br />  2022</h3>
-                                        </div>
-                                    </div>
-
-                                    <div class="cardsgawardh">
-                                        <img src={aw23} alt="awardfive" />
-                                        <p>2023</p>
-                                        <div class="overlaysawardh">
-                                            <h3>Times Education Excellence Award <br /><br />  2023</h3>
+                                            <h3>ET Industry Achievers <br /><br /> 2025 </h3>
 
                                         </div>
                                     </div>
@@ -389,10 +335,50 @@ function Awards() {
                                         </div>
                                     </div>
                                     <div class="cardsgawardh">
-                                        <img src={aw25} alt="awardfive" />
-                                        <p>2025</p>
+                                        <img src={aw23} alt="awardfive" />
+                                        <p>2023</p>
                                         <div class="overlaysawardh">
-                                            <h3>ET Industry Achievers <br /><br /> 2025 </h3>
+                                            <h3>Times Education Excellence Award <br /><br />  2023</h3>
+
+                                        </div>
+                                    </div>
+                                    <div class="cardsgawardh">
+                                        <img src={aw22} alt="awardthree" />
+                                        <p>2022</p>
+                                        <div class="overlaysawardh">
+                                            <h3>Times Education Excellence Award <br /><br />  2022</h3>
+                                        </div>
+                                    </div>
+                                    <div class="cardsgawardh">
+                                        <img src={aw21} alt="aw630" />
+                                        <p>2021</p>
+                                        <div class="overlaysawardh">
+                                            <h3>Times Education Excellence Award <br /><br />  2021</h3>
+
+                                        </div>
+                                    </div>
+                                    <div class="cardsgawardh">
+                                        <img src={aw20} alt="awardone" />
+                                        <p>2020</p>
+                                        <div class="overlaysawardh">
+                                            <h3>Times Excellence Award <br /><br />  2020</h3>
+
+                                        </div>
+                                    </div>
+                                    <div class="cardsgawardh">
+                                        <img src={aw19} alt="awardsix" />
+                                        <p>2019</p>
+                                        <div class="overlaysawardh">
+                                            <h3>Times Education Excellence Award <br /><br />  2019</h3>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="cardsgawardh">
+                                        <img src={aw18} alt="awardseven" />
+                                        <p>2018</p>
+                                        <div class="overlaysawardh">
+                                            <h3>Best Education Brand Award Economic Times <br /><br />  2018</h3>
 
                                         </div>
                                     </div>

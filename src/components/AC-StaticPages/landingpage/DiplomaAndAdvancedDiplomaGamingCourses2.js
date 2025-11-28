@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import "./DiplomaAndAdvancedDiplomaCourses.css";
 import PropTypes from 'prop-types';
 
+import { FaWhatsapp } from "react-icons/fa";
 
 import Marquee from "react-fast-marquee";
 import r1 from "../../../assets/img/partners/r1.png";
@@ -67,8 +68,6 @@ import icg from '../../../assets/img/logos/console.webp';
 import csgd from "../../../assets/img/Courses/csgdc.webp"
 import GameArtDesign from "../../../assets/img/Courses/GameArt&Design.webp"
 import AugmentedRealityandVirtualReality from "../../../assets/img/Courses/AugmentedRealityandVirtualReality.webp"
-import ReactWhatsappButton from "react-whatsapp-button";
-
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -133,20 +132,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
   useEffect(() => {
     window.localStorage.setItem('MY_APP_STATE', JSON.stringify(showBanner));
   }, [showBanner]);
-
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowBanner(false);
-      setLoading(false);
-    }, 3000);
-
-  }, []);
-
-  const OPTIONS = { loop: true }
-  const SLIDE_COUNT = 5
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
@@ -897,13 +882,15 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
         </div>
       </div>
       <div className="App">
-              <ReactWhatsappButton
+              <a
                 countryCode="91"
                 phoneNumber="8977945705"
                 style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "4rem" : "-1rem", zIndex: "11111" }}
-                className="whatsappsivak"
-              />
-      
+                className="whatsappsivakl">
+
+                  <FaWhatsapp  style={{ color: "#fff", fontSize: "32px" }} />
+                </a>
+    
             </div>
       {isButtonVisible && (
         <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{ zIndex: "1" }}>Enroll Now</a></div>)}

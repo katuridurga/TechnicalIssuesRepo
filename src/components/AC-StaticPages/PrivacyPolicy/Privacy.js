@@ -1,10 +1,6 @@
 import React from 'react'
 import "./Privacy.css";
 
-import  {useSelector, shallowEqual}  from "react-redux";
-
-
-
 import { Helmet } from "react-helmet";
 const ulStyle = {
   listStyleType: 'disc',  // Set the bullet point style

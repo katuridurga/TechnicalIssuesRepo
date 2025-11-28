@@ -1,9 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./DiplomaAndAdvancedDiplomaCourses.css";
 import PropTypes from 'prop-types';
-
-import ReactWhatsappButton from "react-whatsapp-button";
-
 import Marquee from "react-fast-marquee";
 import r1 from "../../../assets/img/partners/r1.png";
 import r2 from "../../../assets/img/partners/r2.png";
@@ -16,26 +13,17 @@ import B1 from "../../../assets/img/banners/business-standard-logo.png";
 import B2 from "../../../assets/img/banners/forbes-logo.webp";
 import B3 from "../../../assets/img/banners/et-logo.webp";
 import B4 from "../../../assets/img/banners/thehindu-logo.svg";
-
+import gade from "../../../assets/img/art/gad.webp";
 import Flag1 from "../../../assets/img/banners/usa.webp";
 import Flag2 from "../../../assets/img/banners/uk.webp";
 import Flag3 from "../../../assets/img/banners/canada.webp";
 import Flag4 from "../../../assets/img/banners/sweden.webp";
 import bannerimgunrealc from "../../../assets/img/banners/Diploma_in_Game_Development_with_Unreal.webp";
 
-
-
-
-
-
-
 import { Helmet } from "react-helmet";
-
+import { FaWhatsapp } from "react-icons/fa";
 import StudentGamesList from "../../../content/StudentGamesList";
 import MIntheMedia from "../../../content/MIntheMedia";
-
-
-
 import axios from 'axios';
 import FeaturedProductL from "../../../content/FeaturedProductL.js";
 import { useSelector, shallowEqual } from "react-redux";
@@ -51,22 +39,17 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
-import recimg from '../../../assets/img/banners/Times-Award.webp';
 import Typography from '@mui/material/Typography';
-
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 import { Link } from "react-router-dom";
-
 import m3 from "../../../assets/img/test/d1.webp";
 import m4 from "../../../assets/img/test/eli.webp";
-
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import advdip from '../../../assets/img/banners/thumbnail.webp';
 import ic1 from '../../../assets/img/Icons/WEBSITE-ICON/pass.webp';
 import ic2 from '../../../assets/img/Icons/WEBSITE-ICON/Pursuingengi.webp';
 import ic3 from '../../../assets/img/Icons/WEBSITE-ICON/Did-not.webp';
@@ -148,17 +131,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     window.localStorage.setItem('MY_APP_STATE', JSON.stringify(showBanner));
   }, [showBanner]);
 
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setShowBanner(false);
-      setLoading(false);
-    }, 3000);
-
-  }, []);
-
-  const SLIDE_COUNT = 5
 
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
@@ -237,8 +210,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     PhoneNumber: '',
     email: '',
     city: '',
-    course:'',
-    specialization:'',
+    course: '',
+    specialization: '',
     qualification: '',
     comments: '',
     url: window.location.href,
@@ -250,7 +223,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       { value: "3dgame", label: "3D Game Art & Digital Sculpting" },
       { value: "tdca", label: "Traditional & Digital Concept Art" }
     ],
-    
+
     diploma: [
       { value: "gdp", label: "Game Design & Production" },
       { value: "gdu", label: "Game Development with Unity" },
@@ -262,7 +235,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
   const handleMainCategoryChange = (event) => {
     const selectedCategory = event.target.value;
-   
+
     setMainCategory(selectedCategory);
     setSubOptions(options[selectedCategory] || []);
     setFormData((prevData) => ({
@@ -285,7 +258,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     }));
     if (name === "PhoneNumber" && /^[0-9]{10}$/.test(value)) {
       try {
-const response = await fetch(`https://www.backstagepass.co.in/reactapi/checklandingpagemobile.php?contactNumber=${value}`);
+        const response = await fetch(`https://www.backstagepass.co.in/reactapi/checklandingpagemobile.php?contactNumber=${value}`);
 
         if (response.status === 200) {
           alert('This mobile number is already registered with in the last 3 months our team will get back to you.');
@@ -321,8 +294,8 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
         email: '',
         city: '',
         qualification: '',
-        course:'',
-        specialization:'',
+        course: '',
+        specialization: '',
         comments: '',
         url: window.location.href, // Reset URL
       });
@@ -332,16 +305,6 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
     }
   };
 
-  const videoRef = useRef(null); // To reference the video element
-  const [isPlaying, setIsPlaying] = useState(false); // To manage the play state
-
-  const handlePlay = () => {
-    // Play the video when the image is clicked
-    if (videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true); // Update the state to hide the image
-    }
-  };
 
 
   const faqData = [
@@ -409,17 +372,17 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
     <>
       <Helmet>
         <title>Best Game Development College In India</title>
-        <meta  name="description" content="Join the top game design and development college in Hyderabad. Explore game development courses & game design courses to kickstart your gaming career." />
+        <meta name="description" content="Join the top game design and development college in Hyderabad. Explore game development courses & game design courses to kickstart your gaming career." />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
-      <div className="row mb0" id="scroll-container" style={{background:"#fff"}} >
+      <div className="row mb0" id="scroll-container" style={{ background: "#fff" }} >
         <div className="mainPanel1">
 
 
           <div style={{ width: isMobileState ? "100%" : "100%", margin: "0 auto" }}>
 
             <a onClick={scrollToBottom} href="#CounsellingOnGamingCareer"> <div className={`et_pb_section bgimage et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'MobileClassbsc1' : 'bscadv'}`}>
-              {isMobileState ? <div className="CousellingButton10" style={{ position: "absolute", bottom: "-50px", left: "auto", marginBottom: "0px" }} onClick={scrollToBottom}><a style={{ color:"#000", padding: "12px 30px", width: "363px" }} href="#CounsellingOnGamingCareer">Enroll Now</a></div> : null}
+              {isMobileState ? <div className="CousellingButton10" style={{ position: "absolute", bottom: "-50px", left: "auto", marginBottom: "0px" }} onClick={scrollToBottom}><a style={{ color: "#000", padding: "12px 30px", width: "363px" }} href="#CounsellingOnGamingCareer">Enroll Now</a></div> : null}
             </div></a>
             <div className='MainVideoSection'>
               {/* <h3 style={{ textTransform: "capitalize", color:"#000" }}>Make a Career in Gaming that pays you from 3 LPA to 30 LPA*</h3> */}
@@ -446,7 +409,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
             </div> */}
 
-            <h2 className='mainHeadingTotall-2' style={{color:"#000"}}>You are Eligible for a Gaming Career if you are:</h2>
+            <h2 className='mainHeadingTotall-2' style={{ color: "#000" }}>You are Eligible for a Gaming Career if you are:</h2>
 
             <ul className='featuress2'>
               <li><img src={ic1} alt="ic1" />
@@ -482,73 +445,73 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                 <FeaturedProducts />
 
               </div> */}
-   <div id="Career-Opportunitiesl" backgroundColor="brown" height="auto" style={{marginBottom:"30px"}} >
-              <h2 className='mainHeadingTotall-2' style={{color:"#000"}}>What will you learn?</h2>
+            <div id="Career-Opportunitiesl" backgroundColor="brown" height="auto" style={{ marginBottom: "30px" }} >
+              <h2 className='mainHeadingTotall-2' style={{ color: "#000" }}>What will you learn?</h2>
 
               <Box >
-               <Tabs
-  TabIndicatorProps={{
-    style: {
-      border: "1px solid #222",
-      background: "#222",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      marginBottom: "-2px",
-    },
-  }}
-  value={value1}
-  onChange={handleChange1}
-  variant="scrollable"
-  scrollButtons="auto"
-  aria-label="scrollable auto tabs example"
-  className="tabcenter"
-  style={{
-    background: "#222",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "#fff",
-    width: isMobileState ? "100%" : "fit-content",
-    margin: "0 auto",
-  }}
->
-  <Tab
-    label="Advanced Diploma Courses"
-    style={{
-      color: "#fff",
-      fontSize: isMobileState ? "11px" : "15px",
-      fontFamily: "Montserrat, sans-serif",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      margin:"0px auto",
-      textAlign: isMobileState ? "center" : "left",
-    }}
-  />
-  <Tab
-    label="Diploma Courses"
-    style={{
-      color: "#fff",
-      fontSize: isMobileState ? "11px" : "15px",
-      fontFamily: "Montserrat, sans-serif",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      margin:"0px auto",
-      textAlign: isMobileState ? "center" : "left",
-    }}
-  />
-</Tabs>
+                <Tabs
+                  TabIndicatorProps={{
+                    style: {
+                      border: "1px solid #222",
+                      background: "#222",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginBottom: "-2px",
+                    },
+                  }}
+                  value={value1}
+                  onChange={handleChange1}
+                  variant="scrollable"
+                  scrollButtons="auto"
+                  aria-label="scrollable auto tabs example"
+                  className="tabcenter"
+                  style={{
+                    background: "#222",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color: "#fff",
+                    width: isMobileState ? "100%" : "fit-content",
+                    margin: "0 auto",
+                  }}
+                >
+                  <Tab
+                    label="Advanced Diploma Courses"
+                    style={{
+                      color: "#fff",
+                      fontSize: isMobileState ? "11px" : "15px",
+                      fontFamily: "Montserrat, sans-serif",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      margin: "0px auto",
+                      textAlign: isMobileState ? "center" : "left",
+                    }}
+                  />
+                  <Tab
+                    label="Diploma Courses"
+                    style={{
+                      color: "#fff",
+                      fontSize: isMobileState ? "11px" : "15px",
+                      fontFamily: "Montserrat, sans-serif",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      margin: "0px auto",
+                      textAlign: isMobileState ? "center" : "left",
+                    }}
+                  />
+                </Tabs>
 
 
                 <TabPanel value={value1} index={0} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
                   <div className='courseUpdatesl'>
                     <ul>
-                      <li><img src={m3} alt="Duration icon"/>
-                        <span style={{color:"#000"}}>Duration: 1 Year</span></li>
+                      <li><img src={m3} alt="Duration icon" />
+                        <span style={{ color: "#000" }}>Duration: 1 Year</span></li>
                       <li><img src={m4} alt="Eligibility icon" />
-                        <span style={{color:"#000"}}>Eligibility: 10+2 or Equivalent</span></li>
+                        <span style={{ color: "#000" }}>Eligibility: 10+2 or Equivalent</span></li>
 
 
                     </ul>
@@ -577,18 +540,6 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                       </div>
                     </div>
                   </Link>
-                  <Link to={"/courses/advanced-diploma-in-traditional-digital-art/"}>
-                    <div className="mainCourse1" style={{ marginBottom: "0px" }}>
-                      <div className="mainCourseLeft1">
-                        <img src={AdvancedDiplomainTraditionalDigitalConceptArt} alt="Advanced Diploma in Traditional & Digital Concept Art" className="img-circle" />
-                      </div>
-                      <div className="mainCourseRight1">
-                        <h2 style={{ fontFamily: "'Montserrat', sans-serif" }} className="CourseHead1">Advanced Diploma in Traditional & Digital Concept Art</h2>
-                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>Designed to develop your skills in both traditional and digital art forms, this curriculum covers essential aspects of drawing, perspective, and anatomy, progressing into advanced concepts of environment, character, and creature design.</p>
-
-                      </div>
-                    </div>
-                  </Link>
 
                 </TabPanel>
 
@@ -596,9 +547,9 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                   <div className='courseUpdatesl'>
                     <ul>
                       <li><img src={m3} alt="Duration icon" />
-                        <span style={{color:"#000"}}>Duration: 6 months</span></li>
+                        <span style={{ color: "#000" }}>Duration: 6 months</span></li>
                       <li><img src={m4} alt="Eligibility icon" />
-                        <span style={{color:"#000"}}>Eligibility: 10+2 or Equivalent</span></li>
+                        <span style={{ color: "#000" }}>Eligibility: 10+2 or Equivalent</span></li>
 
 
                     </ul>
@@ -636,20 +587,34 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                       </div>
                       <div className="mainCourseRight1">
                         <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>Diploma in Game Development with Unreal
-</h2>
+                        </h2>
                         <p style={{ fontFamily: "'Montserrat', sans-serif" }}>With a more specialised approach, this intensive program is designed to provide students with the foundational skills and advanced techniques necessary to excel in game development using Unreal Engine.</p>
 
                       </div>
                     </div>
                   </Link>
-                   <Link to={"/courses/diploma-in-3d-environment-art-creation-for-games/"}>
-                    <div className="mainCourse1" style={{ marginBottom: "0px" }}>
+                  <Link to={"/courses/diploma-in-3d-environment-art-creation-for-games/"}>
+                    <div className="mainCourse1">
                       <div className="mainCourseLeft1">
                         <img src={Diplomain3DEnvironmentArtCreationforGames} alt="Diploma In 3D Environment Art For Games" className="img-circle" />
                       </div>
                       <div className="mainCourseRight1">
                         <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>Diploma In 3D Environment Art For Games</h2>
                         <p style={{ fontFamily: "'Montserrat', sans-serif" }}>This is a specialized program designed to equip students with the skills needed to create stunning and immersive environments for video games.</p>
+
+                      </div>
+                    </div>
+                  </Link>
+                  <Link to={"/courses/diploma-in-vr-application-development/"}>
+                    <div className="mainCourse1" style={{ marginBottom: "0px" }}>
+                      <div className="mainCourseLeft1">
+                        <img src={gade} alt="Diploma in
+VR Application Development" className="img-circle" />
+                      </div>
+                      <div className="mainCourseRight1">
+                        <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>Diploma in
+                          VR Application Development</h2>
+                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>Design, develop, and experience the next generation of VR applications with our hands-on 6-month diploma program.</p>
 
                       </div>
                     </div>
@@ -671,11 +636,11 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
               <FeaturedProductL />
               {/* <Awards /> */}
 
-              <div className="CousellingButton1" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{color:"#000"}}>Enroll Now</a></div>
+              <div className="CousellingButton1" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{ color: "#000" }}>Enroll Now</a></div>
             </div>
 
 
-            <h2 className='mainHeadingTotall-2' style={{color:"#000"}}>In the Media</h2>
+            <h2 className='mainHeadingTotall-2' style={{ color: "#000" }}>In the Media</h2>
 
             {isMobileState ? <MIntheMedia /> :
 
@@ -684,7 +649,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
                 </li>
 
-                <li><img src={B2} alt="b2"/>
+                <li><img src={B2} alt="b2" />
 
                 </li>
 
@@ -692,13 +657,13 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
                 </li>
 
-                <li><img style={{ filter: "invert(1)" }} src={B4} alt="b4"/>
+                <li><img style={{ filter: "invert(1)" }} src={B4} alt="b4" />
 
                 </li>
               </ul>}
 
 
-            <h2 className='mainHeadingTotall-2' style={{color:"#000"}}>This course is for you if you…</h2>
+            <h2 className='mainHeadingTotall-2' style={{ color: "#000" }}>This course is for you if you…</h2>
 
             <ul className='featuress3'>
               <li><img src={ic7} alt="ic1" />
@@ -748,7 +713,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                 </div></li>
             </ul>
 
-            <h2 className='mainHeadingTotall-2' style={{color:"#000"}}>Learn from scratch to advanced level and build games like...</h2>
+            <h2 className='mainHeadingTotall-2' style={{ color: "#000" }}>Learn from scratch to advanced level and build games like...</h2>
 
             <StudentGamesList />
             <div id="nopadding" className={isMobileState ? "CousellingButton1 ismobtest" : "CousellingButton1"} onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>
@@ -756,34 +721,34 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
 
 
-         
 
-            <h2 className='mainHeadingTotall-2'style={{color:"#000"}}>Our Students are working in Countries Like
+
+            <h2 className='mainHeadingTotall-2' style={{ color: "#000" }}>Our Students are working in Countries Like
             </h2>
 
             <div style={{ margin: '0px auto' }}>
               <ul className='CountryLogos'>
-                <li><img src={Flag1}  style={{width:"100%", height:isMobileState ?"100%":"130px"}} alt="Flag1" />
+                <li><img src={Flag1} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag1" />
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United States</div>}</li>
 
-                <li><img src={Flag2}  style={{width:"100%", height:isMobileState ?"100%":"130px"}} alt="Flag2" />
+                <li><img src={Flag2} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag2" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United Kingdom</div>}</li>
 
-                <li><img src={Flag3}  style={{width:"100%", height:isMobileState ?"100%":"130px"}} alt="Flag3"/>
+                <li><img src={Flag3} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag3" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Canada</div>}</li>
 
-                <li><img src={Flag4}  style={{width:"100%", height:isMobileState ?"100%":"130px"}} alt="Flag4" />
+                <li><img src={Flag4} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag4" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Sweden</div>}</li>
               </ul>
             </div>
-            <h2 className='mainHeadingTotall-2'style={{color:"#000"}}>Our Students are working at Companies like</h2>
+            <h2 className='mainHeadingTotall-2' style={{ color: "#000" }}>Our Students are working at Companies like</h2>
 
             <Marquee speed={100} style={{ Padding: "0px 20px" }} className='recuitersList-20'>
               <img alt="rec1" src={r1} width={"300"} height={"81"} />
@@ -796,8 +761,8 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
             </Marquee>
 
-            <div id="nopadding" className="CousellingButton1 TestM" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{color:"#fff"}}>Enroll Now</a></div>
-            <h2 className='mainHeadingTotall-2' style={{color:"#000"}}>FAQ's</h2>
+            <div id="nopadding" className="CousellingButton1 TestM" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{ color: "#fff" }}>Enroll Now</a></div>
+            <h2 className='mainHeadingTotall-2' style={{ color: "#000" }}>FAQ's</h2>
 
             <div className="faq-container">
               {faqData.map((faq, index) => (
@@ -881,18 +846,18 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
 
 
-            <div className='fom-ad-2' id="CounsellingOnGamingCareer" style={{marginBottom:"30px"}}>
+            <div className='fom-ad-2' id="CounsellingOnGamingCareer" style={{ marginBottom: "30px" }}>
 
 
-              <div className='containers-2' style={{backgroundColor:"#f9fafb", padding:"0px"}}>
+              <div className='containers-2' style={{ backgroundColor: "#f9fafb", padding: "0px" }}>
 
 
-  <h3 className="mainHeadingTotal-form" style={{color:"#fff", padding:"20px", fontSize:"22px"}}>Get <b>a Counselling</b> Session on Gaming Career</h3>
+                <h3 className="mainHeadingTotal-form" style={{ color: "#fff", padding: "20px", fontSize: "22px" }}>Get <b>a Counselling</b> Session on Gaming Career</h3>
 
 
                 <form onSubmit={handleSubmit} className="formMain">
 
-                
+
                   <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
 
 
@@ -938,44 +903,44 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                     </div>
                   </div>
                   <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
-                  <div className="">
-                  <label className="" for="course">Course <span style={{color:"red", marginLeft:"4px", marginTop:"2px"}}>*</span></label>
-      <select onChange={handleMainCategoryChange} name="course" id="course" value={formData.course}  style={{marginBottom:"10px"}} required>
-        <option value="" disabled>Select Course</option>
-        <option value="AdvancedDiploma">Advanced Diploma</option>
-        <option value="Diploma">Diploma</option>
-      </select>
+                    <div className="">
+                      <label className="" for="course">Course <span style={{ color: "red", marginLeft: "4px", marginTop: "2px" }}>*</span></label>
+                      <select onChange={handleMainCategoryChange} name="course" id="course" value={formData.course} style={{ marginBottom: "10px" }} required>
+                        <option value="" disabled>Select Course</option>
+                        <option value="AdvancedDiploma">Advanced Diploma</option>
+                        <option value="Diploma">Diploma</option>
+                      </select>
 
-      {subOptions.length > 0 && (
-        <>
-          <label>Specialization</label>
-          <select onChange={handleSubCategoryChange}  value={formData.specialization}name="specialization" id="specialization" required>
-            <option value="">Select Specialization</option>
-            {subOptions.map((sub) => (
-              <option key={sub.value} value={sub.value}>{sub.label}</option>
-            ))}
-          </select>
-        </>
-      )}
-    </div>
-    <div className="" style={{ width: isMobileState ? "100%" : "100%" }}>
-                    <label className="" for="comments">Comments</label>
-                    <textarea
-                      className="input-gray"
-                      name="comments"
-                      id="comments"
-                      placeholder="Enter your comments here..."
-                      value={formData.comments}
-                      onChange={handleInputChange}
+                      {subOptions.length > 0 && (
+                        <>
+                          <label>Specialization</label>
+                          <select onChange={handleSubCategoryChange} value={formData.specialization} name="specialization" id="specialization" required>
+                            <option value="">Select Specialization</option>
+                            {subOptions.map((sub) => (
+                              <option key={sub.value} value={sub.value}>{sub.label}</option>
+                            ))}
+                          </select>
+                        </>
+                      )}
+                    </div>
+                    <div className="" style={{ width: isMobileState ? "100%" : "100%" }}>
+                      <label className="" for="comments">Comments</label>
+                      <textarea
+                        className="input-gray"
+                        name="comments"
+                        id="comments"
+                        placeholder="Enter your comments here..."
+                        value={formData.comments}
+                        onChange={handleInputChange}
 
-                      rows="6"
-                      maxLength={40}
-                      style={{ color: '#5a555a' }}
-                      title="max 40 characters allowed"
-                    ></textarea>
-                    <small style={{ color: '#888', fontSize: '12px' }}>Allow maximum 40 characters</small>
+                        rows="6"
+                        maxLength={40}
+                        style={{ color: '#5a555a' }}
+                        title="max 40 characters allowed"
+                      ></textarea>
+                      <small style={{ color: '#888', fontSize: '12px' }}>Allow maximum 40 characters</small>
+                    </div>
                   </div>
-    </div>
 
                   <div style={{ padding: "20px" }}>
                     <button className=" three button brand size200 w-full sm:w-auto" data-form-id="need-guidance" data-form="step1-button-continue" type="submit">
@@ -1019,14 +984,14 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
       </div>
       {isButtonVisible && (
         <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Enroll Now</a></div>)}
-   <div className="App">
-        <ReactWhatsappButton
+      <div className="App">
+        <a
           countryCode="91"
           phoneNumber="8977945705"
           style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "4rem" : "-1rem", zIndex: "11111" }}
-          className="whatsappsivak"
-        />
-
+          className="whatsappsivakl">
+          <FaWhatsapp style={{ color: "#fff", fontSize: "32px" }} />
+        </a>
       </div>
     </>
   )

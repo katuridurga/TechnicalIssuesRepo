@@ -36,11 +36,6 @@ const StyledTextField = styled(TextField)`
     border: none !important;
   }
 `;
-
-
-
-
-
 function HomeContent() {
   const { formState: { }, setValue } = useForm();
   const [loading, setLoading] = useState(true);  // To handle loading state

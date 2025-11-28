@@ -4,7 +4,6 @@ import r1 from "../assets/img/partners/r1.webp";
 import r2 from "../assets/img/partners/r2.webp";
 import r4 from "../assets/img/partners/r4.webp";
 import r5 from "../assets/img/partners/r5.webp";
-import r6 from "../assets/img/partners/r6.webp";
 import r7 from "../assets/img/partners/r7.webp";
 import r8 from "../assets/img/partners/SumoDigital.webp";
 import r9 from "../assets/img/partners/Ubisoft.webp";

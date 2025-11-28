@@ -459,19 +459,19 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             {isMobileState ? <MIntheMedia /> :
 
               <ul className='CountryLogoss'>
-                <li><img src={B1} />
+                <li><img src={B1} alt="B1"/>
 
                 </li>
 
-                <li><img src={B2} />
+                <li><img src={B2} alt="B2"/>
 
                 </li>
 
-                <li><img style={{ filter: "invert(1)" }} src={B3} />
+                <li><img style={{ filter: "invert(1)" }} src={B3} alt="B3" />
 
                 </li>
 
-                <li><img style={{ filter: "invert(1)" }} src={B4} />
+                <li><img style={{ filter: "invert(1)" }} src={B4} alt="B4"/>
 
                 </li>
               </ul>}
@@ -600,21 +600,21 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
             <div style={{ margin: '0px auto' }}>
               <ul className='CountryLogos'>
-                <li><img src={Flag1} />
+                <li><img src={Flag1} alt="Flag1" />
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United States</div>}</li>
 
-                <li><img src={Flag2} />
+                <li><img src={Flag2} alt="Flag2"/>
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United Kingdom</div>}</li>
 
-                <li><img src={Flag3} />
+                <li><img src={Flag3} alt="Flag3"/>
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Canada</div>}</li>
 
-                <li><img src={Flag4} />
+                <li><img src={Flag4} alt="Flag4"/>
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Sweden</div>}</li>

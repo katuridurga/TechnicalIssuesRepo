@@ -32,6 +32,7 @@
   border-radius: 12px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   transform-origin: center center;
+  aspect-ratio: 18 / 9;
 }
 
 /* 💥 True pop-out hover effect */

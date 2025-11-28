@@ -36,8 +36,6 @@ import Flag4 from "../../../assets/img/banners/germany.webp";
 import Flag5 from "../../../assets/img/banners/sweden.webp";
 import axios from 'axios';
 import { useSelector, shallowEqual } from "react-redux";
-import { useTheme } from '@mui/material/styles';
-
 import Box from '@mui/material/Box';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
@@ -126,17 +124,12 @@ HideOnScroll.propTypes = {
 function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
-  const OPTIONS = { loop: true }
-  const SLIDE_COUNT = 5
-
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
     shallowEqual
   );
 
-  const theme = useTheme();
-
-
+ 
   const [isButtonVisible, setIsButtonVisible] = useState(true);
 
   // Function to scroll to the bottom of the container
@@ -186,11 +179,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     };
   }, []);
 
-  const [value1, setValue1] = React.useState(0);
 
-  const handleChange1 = (event, newValue) => {
-    setValue1(newValue);
-  };
   const [open, setOpen] = React.useState(false);
 
   const videoRef = useRef(null);
@@ -247,7 +236,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     if (name === "PhoneNumber" && /^[0-9]{10}$/.test(value)) {
       try {
         const response = await fetch(`https://www.backstagepass.co.in/reactapi/checklandingpagemobile.php?contactNumber=${value}`);
-        const result = await response.json();
 
         if (response.status === 200) {
           alert('This mobile number is already registered with in the last 3 months our team will get back to you.');
@@ -353,7 +341,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     <>
       <Helmet>
         <title>Bachelor's Degree Courses in Gaming | Backstage Pass</title>
-        <meta  name="description" content="Explore our Bachelor's degree courses in gaming to kickstart your career in game design, development, and animation. Learn from industry experts with hands-on training and placement assistance." />
+        <meta name="description" content="Explore our Bachelor's degree courses in gaming to kickstart your career in game design, development, and animation. Learn from industry experts with hands-on training and placement assistance." />
         <link rel="canonical" href="https://www.backstagepass.co.in/landingpage/bachelors-degree-courses-in-gaming/" />
       </Helmet>
       <a href="#ribbon" className='mainribbonb'>
@@ -365,7 +353,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
             </div>
-          
+
           </div>
 
         </div>
@@ -407,7 +395,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   />
 
                   <h1 className="titleb white-txt b-animated">You too can create a realistic and immersive game!</h1>
-                
+
                   <video
                     ref={videoRef}
                     autoPlay
@@ -454,120 +442,120 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
             <section style={{ background: "#222" }}>
-             
-                <div className="counter-wrapperba" >
-                  <div className="counter-wrapper1ba">
-                    <AnimatedText direction="up" delay={0.2}>
-                      <div className="counterba">
-                        <div className="countba">
+
+              <div className="counter-wrapperba" >
+                <div className="counter-wrapper1ba">
+                  <AnimatedText direction="up" delay={0.2}>
+                    <div className="counterba">
+                      <div className="countba">
 
                         <div> 15 Years</div></div>
-                        <p>Academic Excellence </p>
-                      </div>
-                    </AnimatedText>
-                    <AnimatedText direction="up" delay={0.2}>
-                      <div className="counterba">
-                        <div className="countba">
-                          <div> 30+ </div></div>
-                        <p>Awards Won</p>
-                      </div>
-                    </AnimatedText>
-                    <AnimatedText direction="up" delay={0.2}>
-                      <div className="counterba">
-                        <div className="countba">
-                          <div> 100% </div></div>
-                        <p>Placement Support
-                        </p>
-                      </div>
-                    </AnimatedText>
-                    <AnimatedText direction="up" delay={0.2}>
-                      <div className="counterba">
-                        <div className="countba">
+                      <p>Academic Excellence </p>
+                    </div>
+                  </AnimatedText>
+                  <AnimatedText direction="up" delay={0.2}>
+                    <div className="counterba">
+                      <div className="countba">
+                        <div> 30+ </div></div>
+                      <p>Awards Won</p>
+                    </div>
+                  </AnimatedText>
+                  <AnimatedText direction="up" delay={0.2}>
+                    <div className="counterba">
+                      <div className="countba">
+                        <div> 100% </div></div>
+                      <p>Placement Support
+                      </p>
+                    </div>
+                  </AnimatedText>
+                  <AnimatedText direction="up" delay={0.2}>
+                    <div className="counterba">
+                      <div className="countba">
 
-                          <div> 4.3  <FaStar style={{ fontSize: "20px", color: "#f59d41" }} /></div></div>
-                        <p>Student Rating</p>
-                      </div>
-                    </AnimatedText>
+                        <div> 4.3  <FaStar style={{ fontSize: "20px", color: "#f59d41" }} /></div></div>
+                      <p>Student Rating</p>
+                    </div>
+                  </AnimatedText>
 
-                  </div>
-                </div> 
-              
+                </div>
+              </div>
+
             </section>
 
             <section style={{ background: "#fff", padding: "1px", overflow: "hidden" }}>
               <AnimatedText direction="up" delay={0.2}>
-                <h2 className='mainHeadingTotall-2' style={{color:"#000"}}>Why Choose Backstage Pass?
+                <h2 className='mainHeadingTotall-2' style={{ color: "#000" }}>Why Choose Backstage Pass?
                 </h2>
               </AnimatedText>
-             <div className='whychooseb'>
-  <ul>
-    <AnimatedText direction={isMobileState ? "up" : "left"} delay={0.2}>
-      <li>
-        <div className=''>
-          <div className='imgmb'>
-            <img src={wc3} alt="wc3" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
-          </div>
-          <p className='lsh'>Industry-Aligned Curriculum</p>
-        </div>
-      </li>
-    </AnimatedText>
+              <div className='whychooseb'>
+                <ul>
+                  <AnimatedText direction={isMobileState ? "up" : "left"} delay={0.2}>
+                    <li>
+                      <div className=''>
+                        <div className='imgmb'>
+                          <img src={wc3} alt="wc3" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+                        </div>
+                        <p className='lsh'>Industry-Aligned Curriculum</p>
+                      </div>
+                    </li>
+                  </AnimatedText>
 
-    <AnimatedText direction="up" delay={0.2}>
-      <li>
-        <div className=''>
-          <div className='imgmb'>
-            <img src={wc4} alt="wc4" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
-          </div>
-          <p className='lsh'>Taught by Industry Experienced Professionals</p>
-        </div>
-      </li>
-    </AnimatedText>
+                  <AnimatedText direction="up" delay={0.2}>
+                    <li>
+                      <div className=''>
+                        <div className='imgmb'>
+                          <img src={wc4} alt="wc4" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+                        </div>
+                        <p className='lsh'>Taught by Industry Experienced Professionals</p>
+                      </div>
+                    </li>
+                  </AnimatedText>
 
-    <AnimatedText direction="up" delay={0.2}>
-      <li>
-        <div className=''>
-          <div className='imgmb'>
-            <img src={wc5} alt="wc5" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
-          </div>
-          <p className='lsh'>Hands-on Training</p>
-        </div>
-      </li>
-    </AnimatedText>
+                  <AnimatedText direction="up" delay={0.2}>
+                    <li>
+                      <div className=''>
+                        <div className='imgmb'>
+                          <img src={wc5} alt="wc5" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+                        </div>
+                        <p className='lsh'>Hands-on Training</p>
+                      </div>
+                    </li>
+                  </AnimatedText>
 
-    <AnimatedText direction={isMobileState ? "up" : "left"} delay={0.2}>
-      <li>
-        <div className=''>
-          <div className='imgmb'>
-            <img src={wc6} alt="wc6" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
-          </div>
-          <p className='lsh'>Strong Industry Connections</p>
-        </div>
-      </li>
-    </AnimatedText>
+                  <AnimatedText direction={isMobileState ? "up" : "left"} delay={0.2}>
+                    <li>
+                      <div className=''>
+                        <div className='imgmb'>
+                          <img src={wc6} alt="wc6" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+                        </div>
+                        <p className='lsh'>Strong Industry Connections</p>
+                      </div>
+                    </li>
+                  </AnimatedText>
 
-    <AnimatedText direction="up" delay={0.2}>
-      <li>
-        <div className=''>
-          <div className='imgmb'>
-            <img src={wc8} alt="wc8" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
-          </div>
-          <p className='lsh'>Access to Free Webinars/Workshops</p>
-        </div>
-      </li>
-    </AnimatedText>
+                  <AnimatedText direction="up" delay={0.2}>
+                    <li>
+                      <div className=''>
+                        <div className='imgmb'>
+                          <img src={wc8} alt="wc8" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+                        </div>
+                        <p className='lsh'>Access to Free Webinars/Workshops</p>
+                      </div>
+                    </li>
+                  </AnimatedText>
 
-    <AnimatedText direction={isMobileState ? "up" : "right"} delay={0.2}>
-      <li>
-        <div className=''>
-          <div className='imgmb'>
-            <img src={wc9} alt="wc9" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
-          </div>
-          <p className='lsh'>Global Alumni Community</p>
-        </div>
-      </li>
-    </AnimatedText>
-  </ul>
-</div>
+                  <AnimatedText direction={isMobileState ? "up" : "right"} delay={0.2}>
+                    <li>
+                      <div className=''>
+                        <div className='imgmb'>
+                          <img src={wc9} alt="wc9" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+                        </div>
+                        <p className='lsh'>Global Alumni Community</p>
+                      </div>
+                    </li>
+                  </AnimatedText>
+                </ul>
+              </div>
 
             </section>
             <section className='mainanidiv'><div className="anidiv">
@@ -674,9 +662,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
               <div className="" style={{ flexDirection: "column", marginTop: isMobileState ? "-22px" : "0px" }}>
                 <AnimatedText direction="up" delay={0.2}>
-                  <h2 className="mainHeadingTotall-2" style={{color:"#ffffff"}}>Student Artwork</h2>
+                  <h2 className="mainHeadingTotall-2" style={{ color: "#ffffff" }}>Student Artwork</h2>
                 </AnimatedText>
-                 <StudentArtGalleryS/>
+                <StudentArtGalleryS />
 
               </div>
             </section>
@@ -684,97 +672,97 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               <AnimatedText direction="up" delay={0.2}>
                 <h2 className="mainHeadingTotall-2" style={{ color: "#000" }}>Career Options</h2>
               </AnimatedText>
-             <div className='whychooseb1'>
-  <ul>
-    <AnimatedText direction={isMobileState ? "up" : "left"} delay={0.2}>
-      <li>
-        <div className=''>
-          <div className='imgmb'>
-            <img src={cc1} alt="ic7" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
-          </div>
-          <p className='lsh' style={{textAlign:"center"}}>Game Developer (Unity, Unreal, Mobile & Console)</p>
-        </div>
-      </li>
-    </AnimatedText>
+              <div className='whychooseb1'>
+                <ul>
+                  <AnimatedText direction={isMobileState ? "up" : "left"} delay={0.2}>
+                    <li>
+                      <div className=''>
+                        <div className='imgmb'>
+                          <img src={cc1} alt="ic7" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+                        </div>
+                        <p className='lsh' style={{ textAlign: "center" }}>Game Developer (Unity, Unreal, Mobile & Console)</p>
+                      </div>
+                    </li>
+                  </AnimatedText>
 
-    <AnimatedText direction="up" delay={0.2}>
-      <li>
-        <div className=''>
-          <div className='imgmb'>
-            <img src={cc2} alt="ic13" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
-          </div>
-          <p className='lsh'>Gameplay Programmer</p>
-        </div>
-      </li>
-    </AnimatedText>
+                  <AnimatedText direction="up" delay={0.2}>
+                    <li>
+                      <div className=''>
+                        <div className='imgmb'>
+                          <img src={cc2} alt="ic13" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+                        </div>
+                        <p className='lsh'>Gameplay Programmer</p>
+                      </div>
+                    </li>
+                  </AnimatedText>
 
-    <AnimatedText direction={isMobileState ? "up" : "right"} delay={0.2}>
-      <li>
-        <div className=''>
-          <div className='imgmb'>
-            <img src={cc3} alt="ic9" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
-          </div>
-          <p className='lsh' style={{textAlign:"center"}}>Game Designer (Level, Systems, Mechanics)</p>
-        </div>
-      </li>
-    </AnimatedText>
+                  <AnimatedText direction={isMobileState ? "up" : "right"} delay={0.2}>
+                    <li>
+                      <div className=''>
+                        <div className='imgmb'>
+                          <img src={cc3} alt="ic9" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+                        </div>
+                        <p className='lsh' style={{ textAlign: "center" }}>Game Designer (Level, Systems, Mechanics)</p>
+                      </div>
+                    </li>
+                  </AnimatedText>
 
-    <AnimatedText direction={isMobileState ? "up" : "left"} delay={0.2}>
-      <li>
-        <div className=''>
-          <div className='imgmb'>
-            <img src={cc4} alt="ic8" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
-          </div>
-          <p className='lsh'>3D Environment Artist</p>
-        </div>
-      </li>
-    </AnimatedText>
+                  <AnimatedText direction={isMobileState ? "up" : "left"} delay={0.2}>
+                    <li>
+                      <div className=''>
+                        <div className='imgmb'>
+                          <img src={cc4} alt="ic8" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+                        </div>
+                        <p className='lsh'>3D Environment Artist</p>
+                      </div>
+                    </li>
+                  </AnimatedText>
 
-    <AnimatedText direction="up" delay={0.2}>
-      <li>
-        <div className=''>
-          <div className='imgmb'>
-            <img src={cc5} alt="GAIMG5" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
-          </div>
-          <p className='lsh'>Character Artist / Animator</p>
-        </div>
-      </li>
-    </AnimatedText>
+                  <AnimatedText direction="up" delay={0.2}>
+                    <li>
+                      <div className=''>
+                        <div className='imgmb'>
+                          <img src={cc5} alt="GAIMG5" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+                        </div>
+                        <p className='lsh'>Character Artist / Animator</p>
+                      </div>
+                    </li>
+                  </AnimatedText>
 
-    <AnimatedText direction={isMobileState ? "up" : "right"} delay={0.2}>
-      <li>
-        <div className=''>
-          <div className='imgmb'>
-            <img src={cc6} alt="ic11" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
-          </div>
-          <p className='lsh'>UI/UX Designer for Games</p>
-        </div>
-      </li>
-    </AnimatedText>
+                  <AnimatedText direction={isMobileState ? "up" : "right"} delay={0.2}>
+                    <li>
+                      <div className=''>
+                        <div className='imgmb'>
+                          <img src={cc6} alt="ic11" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+                        </div>
+                        <p className='lsh'>UI/UX Designer for Games</p>
+                      </div>
+                    </li>
+                  </AnimatedText>
 
-    <AnimatedText direction={isMobileState ? "up" : "left"} delay={0.2}>
-      <li>
-        <div className=''>
-          <div className='imgmb'>
-            <img src={cc7} alt="ic10" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
-          </div>
-          <p className='lsh'>Technical Artist</p>
-        </div>
-      </li>
-    </AnimatedText>
+                  <AnimatedText direction={isMobileState ? "up" : "left"} delay={0.2}>
+                    <li>
+                      <div className=''>
+                        <div className='imgmb'>
+                          <img src={cc7} alt="ic10" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+                        </div>
+                        <p className='lsh'>Technical Artist</p>
+                      </div>
+                    </li>
+                  </AnimatedText>
 
-    <AnimatedText direction="up" delay={0.2}>
-      <li>
-        <div className=''>
-          <div className='imgmb'>
-            <img src={cc8} alt="ic12" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
-          </div>
-          <p className='lsh'>AR/VR Developer / Designer</p>
-        </div>
-      </li>
-    </AnimatedText>
-  </ul>
-</div>
+                  <AnimatedText direction="up" delay={0.2}>
+                    <li>
+                      <div className=''>
+                        <div className='imgmb'>
+                          <img src={cc8} alt="ic12" height={isMobileState ? "30" : "50"} width={isMobileState ? "30" : "50"} />
+                        </div>
+                        <p className='lsh'>AR/VR Developer / Designer</p>
+                      </div>
+                    </li>
+                  </AnimatedText>
+                </ul>
+              </div>
 
             </section>
 
@@ -893,25 +881,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             <section style={{ marginBottom: "45px", background: "#222" }}>
               <AnimatedText direction="up" delay={0.2}>
 
-                <h2 className='mainHeadingTotall-2' style={{color:"#fff"}}>Our Alumni Work At Leading Companies Like</h2>
+                <h2 className='mainHeadingTotall-2' style={{ color: "#fff" }}>Our Alumni Work At Leading Companies Like</h2>
               </AnimatedText>
 
-
-              {/* <Marquee speed={100} gradient={false} loop={0} style={{ Padding: "0px 20px" }} className='recuitersList-20'>
-                  <img alt="r1" src={r1} height="61"
-                    width="210" />
-                  <img alt="r2" src={r2} height="61"
-                    width="210" />
-                  <img alt="r4" src={r4} height="61"
-                    width="210" />
-                  <img alt="r5" src={r5} height="61"
-                    width="210" />
-                  <img alt="r6" src={r6} height="61"
-                    width="210" />
-                  <img alt="r7" src={r7} height="61"
-                    width="210" />
-
-                </Marquee> */}
 
               <Marquee
                 speed={100}
@@ -1044,46 +1016,46 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       </div>
                     </AnimatedText>
                   </div>
-                                      <AnimatedText direction="left" delay={0.2}>
+                  <AnimatedText direction="left" delay={0.2}>
 
                     <div className="foot-itembn fadeInUp anime-delay3">
-                       <div className="leftcb">
-                                    <p>Contact Info</p></div>
-                                    <div className="contact-wrapperbn">
-                                    <div className="cont1">
-                                      <div className="contact-wrapper-innerbn">
-            
-                                       
-            
-                                          <CiPhone className="iconsmain" />
-                                          <div><p> <a href="tel:8008002794" className="phone-number" rel="noopener noreferrer"> +91-8008002794</a></p>
-                                          </div>
-                                      </div>
-                                      </div>
-                                      <div className="cont1">
-                                      <div className="contact-wrapper-innerbn">
-            
-                                       
-                                          <CiPhone className="iconsmain" />
-                                          <div>
-                                          <p> <a href="tel:8008002795" className="phone-number" rel="noopener noreferrer"> +91-8008002795</a></p>
-                                          </div>
-            
-                                        
-                                      </div>
-                                      </div>
-            
-                                    </div>
-                                  
-                                  </div>
-                                     </AnimatedText>
+                      <div className="leftcb">
+                        <p>Contact Info</p></div>
+                      <div className="contact-wrapperbn">
+                        <div className="cont1">
+                          <div className="contact-wrapper-innerbn">
+
+
+
+                            <CiPhone className="iconsmain" />
+                            <div><p> <a href="tel:8008002794" className="phone-number" rel="noopener noreferrer"> +91-8008002794</a></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="cont1">
+                          <div className="contact-wrapper-innerbn">
+
+
+                            <CiPhone className="iconsmain" />
+                            <div>
+                              <p> <a href="tel:8008002795" className="phone-number" rel="noopener noreferrer"> +91-8008002795</a></p>
+                            </div>
+
+
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </AnimatedText>
                 </div>
                 <AnimatedText direction="up" delay={0.2}>
                   <div className="rightcb">
                     <div className='fom-ad-21' id="CounsellingOnGamingCareer">
 
 
-                      <div className='containers-21' style={{backgroundColor:"#f9fafb"}}>
+                      <div className='containers-21' style={{ backgroundColor: "#f9fafb" }}>
 
 
 
@@ -1250,9 +1222,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   </div>
                 </AnimatedText>
               </div>
-                <AnimatedText direction="up" delay={0.2}>
-                 <div className="text-center foot-content fadeInUp anime-delay2" id="pvrnm" style={{color:"#fff",height:"136px",display:"flex",alignItems:"center",justifyContent:"center"}}>© A Subsidiary of PVR Memorial Educational Society 2025. All Rights Reserved</div>
-                 </AnimatedText>
+              <AnimatedText direction="up" delay={0.2}>
+                <div className="text-center foot-content fadeInUp anime-delay2" id="pvrnm" style={{ color: "#fff", height: "136px", display: "flex", alignItems: "center", justifyContent: "center" }}>© A Subsidiary of PVR Memorial Educational Society 2025. All Rights Reserved</div>
+              </AnimatedText>
             </section>
 
           </div>
@@ -1263,13 +1235,13 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       </div>
       {isButtonVisible && (
 
-        <div className="CousellingButton stickyenq" style={{ background: "#393838f0" }} onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{ padding: "10px 35px", borderRadius:"0px", background:"linear-gradient(101deg, #ec242d, #ca484d)" }}>Enquire now</a></div>)}
+        <div className="CousellingButton stickyenq" style={{ background: "#393838f0" }} onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{ padding: "10px 35px", borderRadius: "0px", background: "linear-gradient(101deg, #ec242d, #ca484d)" }}>Enquire now</a></div>)}
       <div className="App">
         <ReactWhatsappButton
           countryCode="91"
           phoneNumber="8977945705"
-          style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-7rem" : "-1rem", zIndex: "11111" }}
-          className="whatsappsivak"
+          style={{ right: isMobileState ? "1.5rem" : "2rem !important", marginBottom: isMobileState ? "-7rem" : "1rem", zIndex: "11111", bottom:"0px !important" }}
+          className="whatsappsivakl"
         />
 
       </div>

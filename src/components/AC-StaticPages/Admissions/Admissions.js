@@ -21,7 +21,7 @@ function Courses(props) {
   const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     '& .MuiDialogContent-root': {
       padding: theme.spacing(2),
-      background: "#ec1925",
+     
     },
     '& .MuiDialogActions-root': {
       padding: theme.spacing(1),
@@ -94,7 +94,7 @@ function Courses(props) {
           <title>Enroll Now | Top Gaming College in Hyderabad, India - Backstage Pass institute of Gaming </title>
 
           <meta property="og:title" content="Enroll Now | Top Gaming College in Hyderabad, India - Backstage Pass Institute of Gaming" />
-          <meta name="description" content="Gain game development skills at Backstage Pass Institute of Gaming, Hyderabad's leading gaming college. Get practical training, expert guidance, and career support. Admissions open." />
+          <meta property="og:description" name="description" content="Gain game development skills at Backstage Pass Institute of Gaming, Hyderabad's leading gaming college. Get practical training, expert guidance, and career support. Admissions open." />
           <meta property="og:url" content="https://www.backstagepass.co.in/admissions/admission-process/" />
           <link rel="canonical" href="https://www.backstagepass.co.in/admissions/admission-process/" />
 
@@ -178,15 +178,16 @@ function Courses(props) {
               </IconButton>
               <DialogContent dividers style={{ background: "ec1923" }}>
                 <Typography gutterBottom style={{
-                  fontSize: "16px", fontWeight: "600", padding: "20px",
+                  fontSize: "16px", padding: "20px",
                   background: "#fff",
                   color: "#000",
-                  margin: "-3px"
+                  margin: "-3px",
+                  fontFamily:"Montserrat"
                 }}>
-                  1.10th class marks memo, <br />
-                  2.12th class marks memo,  <br />
-                  3.Study certificate(s) from class VI to XII, <br />
-                  4.Caste certificate, if applicable, Transfer/leaving/migration certificate
+                  1. 10th class marks memo, <br />
+                  2. 12th class marks memo,  <br />
+                  3. Study certificate(s) from class VI to XII, <br />
+                  4. Caste certificate, if applicable, Transfer/leaving/migration certificate
                 </Typography>
 
 

@@ -4,9 +4,6 @@ import PropTypes from 'prop-types';
 import { Helmet } from "react-helmet";
 import ic13 from '../../../assets/img/Icons/WEBSITE-ICON/short-term.webp';
 import Box from '@mui/material/Box';
-
-
-import axios from 'axios';
 import { useSelector, shallowEqual } from "react-redux";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
@@ -78,19 +75,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     window.localStorage.setItem('MY_APP_STATE', JSON.stringify(showBanner));
   }, [showBanner]);
 
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowBanner(false);
-      setLoading(false);
-    }, 3000);
-
-  }, []);
-
-  const OPTIONS = { loop: true }
-  const SLIDE_COUNT = 5
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
@@ -155,68 +139,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       }
     };
   }, []);
-
-  const [open, setOpen] = React.useState(false);
-
-
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const [formData, setFormData] = useState({
-    firstname: '',
-    lastname: '',
-    PhoneNumber: '',
-    email: '',
-    url: window.location.href,
-    course_ttl: 11,// Initialize URL in state
-    course_duration: 'shortterm',
-  });
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setOpen(true); // Assuming you want to show a modal upon submission
-
-    try {
-      const response = await axios.post("https://www.backstagepass.co.in/reactapi/downloadbroucher.php", formData);
-      console.log(response);
-      if (response.status === 200) {
-        setOpen(true);
-        setTimeout(() => {
-          window.location.reload();
-        }, 3000);
-      }
-      // Assuming the response indicates success
-      // alert("Your data was submitted successfully!");
-
-      // Reset form data
-      setFormData({
-        firstname: '',
-        lastname: '',
-        PhoneNumber: '',
-        email: '',
-        url: window.location.href, // Reset URL
-        course_duration: 'shortterm',
-      });
-    } catch (error) {
-      console.error('Error adding data:', error);
-      alert('An error occurred while submitting the form. Please try again.');
-    }
-  };
-
-
-
-  // const handleDownload = () => {
-  //   // For example, triggering a download of a file (replace with your own file URL or logic)
-  //   const fileUrl = 'https://www.backstagepass.co.in/brouchers/UNITY-compressed.pdf'; // Replace with your file URL or logic
-  //   const link = document.createElement('a');
-  //   link.href = fileUrl;
-  //   link.download = 'UNITY-compressed.pdf'; // You can specify the name of the file you want to download
-  //   link.click();
-  // };
-
-
 
 
   return (

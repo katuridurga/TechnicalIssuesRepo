@@ -6,7 +6,6 @@ import Menu from "./header/Menu.jsx";
 import "../src/assets/css/reactMaterial.css";
 import "../src/assets/css/icon.css";
 import "./assets/css/dk.css";
-import BlogDetail from './components/AC-StaticPages/Blog/Blogdetail';
 
 export default function App() {
 

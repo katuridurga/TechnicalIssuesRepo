@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./testimonialslidersmall.css";
-import AnimatedText from "../components/AC-StaticPages/landingpage/AnimatedText";
 
 const testimonials = [
   {

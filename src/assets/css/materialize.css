@@ -5919,7 +5919,7 @@ body.keyboard-focused .dropdown-content li:focus {
 .sidenav .collapsible-body,
 .sidenav.fixed .collapsible-body {
   border: 0;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .sidenav .collapsible-body li a,

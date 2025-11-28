@@ -1,21 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import "./StudentArtAndGames.css";
-import art1 from "../../../assets/img/art/art1.webp"
-import art2 from "../../../assets/img/art/art2.webp"
-import art3 from "../../../assets/img/art/BPR_Composite.webp"
-import art4 from "../../../assets/img/art/Heli_15.webp"
-import art5 from "../../../assets/img/art/potbot_11.webp"
-import art6 from "../../../assets/img/art/pratik-baidya-render-1.webp"
-import art7 from "../../../assets/img/art/render027.webp"
-import art8 from "../../../assets/img/art/sarwajeet-pandey-1-2.webp"
-import art9 from "../../../assets/img/art/Frame16.png"
-import art10 from "../../../assets/img/art/Frame19.png"
-import art11 from "../../../assets/img/art/Frame36.png"
-import art12 from "../../../assets/img/art/Frame30.png"
-import art13 from "../../../assets/img/art/Frame28.png"
-import art14 from "../../../assets/img/art/PratikBaidya.png"
-import art15 from "../../../assets/img/art/VijaySivatejMareedu.png"
-import art16 from "../../../assets/img/art/VijaySivatejMareedu1.png"
 import art17 from "../../../assets/img/art/KhushiNileshPathak.png"
 import art18 from "../../../assets/img/art/Deepak.png"
 import art19 from "../../../assets/img/art/SuryaVamsi2.png"
@@ -121,9 +105,10 @@ const [showMore, setShowMore] = useState(false);
 const gameCards = [
   { img: orbit, title: "Orbital Outbreak", desc: "Dive into Orbital Outbreak, a chaotic roguelite top-down shooter where alien swarms test your reflexes in nonstop action." },
   { img: b5, title: "Slunkey", desc: "Play as a cheeky monkey turned into slime in Slunkey — a quirky slingshot puzzle platformer." },
+   { img: b13, title: "ESC Sim", desc: "Esc Sim is a quirky first-person escape game where you explore a study, solve puzzles, uncover clues, and enjoy surprises." },
+     { img: b3, title: "Resonance", desc: "Resonance is a serene puzzle game where you form rhythmic loops, match shifting patterns, and solve meditative challenges through timing." },
   { img: b1, title: "Stone Wall", desc: "Stonewall is a fast-paced tower-defence auto-battler where you build defences, outsmart enemies, and protect your kingdom." },
   { img: b2, title: "Void Within", desc: "Void Within is a fast-paced FPS where you wall-run, slide, and unleash devastating weapons to survive chaotic arenas and relentless hordes." },
-  { img: b3, title: "Resonance", desc: "Resonance is a serene puzzle game where you form rhythmic loops, match shifting patterns, and solve meditative challenges through timing." },
   { img: b4, title: "Feny Frenzy", desc: "Feni Frenzy is a cel-shaded co-op shooter set in COVID-era Goa, where you raid monster-filled parties, loot, level up, and enjoy seasonal live-ops." },
   { img: b6, title: "Infocus", desc: "A 2-player first-person co-op puzzle game where you manipulate time with special cameras to solve challenges and uncover civilisation’s downfall." },
   { img: b7, title: "Disengage", desc: "Disengage is an adventure puzzle game where you start with nothing, using simple controls to overcome challenges in a unique, immersive experience." },
@@ -134,7 +119,7 @@ const gameCards = [
 
   // NOW ADD ALL NEW IMAGES BELOW
   { img: b12, title: "The Echo of Two Goodbyes", desc: "A first-person escape horror puzzle where you explore a haunted house, solve eerie mysteries, and uncover the tragic truth behind a restless spirit." },
-  { img: b13, title: "ESC Sim", desc: "Esc Sim is a quirky first-person escape game where you explore a study, solve puzzles, uncover clues, and enjoy surprises." },
+ 
   { img: b16, title: "Bhoomi", desc: "Bhoomi is a mythological action narrative set in 1950s Adilabad, where Ramu battles oppression and supernatural forces to avenge his family." },
   { img: b17, title: "Bricker", desc: "Bricker is a quirky voxel action game where you sneak, collect gold, survive as a brick, then activate King Mode for chaotic power." },
   { img: b18, title: "Meteor Strike", desc: "Meteor Strike is an 8-bit space shooter where you blast asteroids, collect coins, fight bosses, dodge patrol ships, and upgrade your craft." },
@@ -269,7 +254,7 @@ useEffect(() => {
 </script>
           <title>Explore Backstage Pass Institute Students arts and games</title>
           <meta property="og:title" content="Explore Backstage Pass Institute Students Arts and Games" />
-<meta name="description" content="See what students at Backstage Pass are building—from concept art to full-fledged games. A creative space where learning turns into real projects." />
+<meta property="og:description" name="description" content="See what students at Backstage Pass are building—from concept art to full-fledged games. A creative space where learning turns into real projects." />
 <meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/student-portfolio/" />
           <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/student-portfolio/"/>
 

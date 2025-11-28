@@ -202,3 +202,25 @@
     left: 0px;
 }
   }
+  .App .whatsappsivakl {
+      background-color: #25d366!important;
+      z-index: 9999;
+    margin-bottom: 9rem;
+    z-index: 11111;
+    position: fixed;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: fixed!important;
+    right: 2rem;
+    top: auto !important;
+    bottom: 2rem!important;
+    transform: none !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+    cursor: pointer;
+    padding: 0 !important;
+}
+  

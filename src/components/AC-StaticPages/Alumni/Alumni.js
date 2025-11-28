@@ -1,5 +1,5 @@
 //import React, { useState } from 'react'
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import "./Alumni.css";
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
@@ -135,37 +135,7 @@ function Alumni() {
       des: '',
     });
   };
-  const scrollRef = useRef(null);
 
-  // drag functionality
-  const isDown = useRef(false);
-  const startX = useRef(0);
-  const scrollLeft = useRef(0);
-
-  const handleMouseDown = (e) => {
-    isDown.current = true;
-    scrollRef.current.classList.add("active");
-    startX.current = e.pageX - scrollRef.current.offsetLeft;
-    scrollLeft.current = scrollRef.current.scrollLeft;
-  };
-
-  const handleMouseLeave = () => {
-    isDown.current = false;
-    scrollRef.current.classList.remove("active");
-  };
-
-  const handleMouseUp = () => {
-    isDown.current = false;
-    scrollRef.current.classList.remove("active");
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDown.current) return;
-    e.preventDefault();
-    const x = e.pageX - scrollRef.current.offsetLeft;
-    const walk = (x - startX.current) * 1.2; // scroll speed
-    scrollRef.current.scrollLeft = scrollLeft.current - walk;
-  };
   const speakers = [
     {
       img: speaker3,
@@ -363,7 +333,7 @@ function Alumni() {
           </script>
           <title>Alumni Success | Backstage Pass Institute of Gaming</title>
           <meta property="og:title" content="Alumni Success | Backstage Pass Institute of Gaming" />
-          <meta name="description" content="Backstage Pass graduates are making an impact in the gaming industry. Explore inspiring success stories and connect with our alumni network for career growth." />
+          <meta property="og:description" name="description" content="Backstage Pass graduates are making an impact in the gaming industry. Explore inspiring success stories and connect with our alumni network for career growth." />
           <meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/alumni-success/" />
           <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/alumni-success/" />
         </Helmet>

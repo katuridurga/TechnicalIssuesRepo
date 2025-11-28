@@ -8,7 +8,6 @@ import {
   PrevButton,
   usePrevNextButtons
 } from './EmblaCarouselArrowMentors.js'
-import { useDotButton } from './EmblaCarouselDotButton'
 
 const TWEEN_FACTOR_BASE = 0.00
 
@@ -20,9 +19,6 @@ const EmblaCarouselMentors = (props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
   const tweenFactor = useRef(0)
   const tweenNodes = useRef([])
-
-  const { } =
-    useDotButton(emblaApi)
 
   const {
     prevBtnDisabled,

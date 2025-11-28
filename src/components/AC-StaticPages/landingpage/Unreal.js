@@ -22,6 +22,7 @@ import Flag1 from "../../../assets/img/banners/usa.webp";
 import Flag2 from "../../../assets/img/banners/uk.webp";
 import Flag3 from "../../../assets/img/banners/canada.webp";
 import Flag4 from "../../../assets/img/banners/sweden.webp";
+import { FaWhatsapp } from "react-icons/fa";
 
 
 
@@ -56,15 +57,11 @@ import ic12 from '../../../assets/img/Icons/WEBSITE-ICON/hands-on.webp';
 import ic13 from '../../../assets/img/Icons/WEBSITE-ICON/short-term.webp';
 import ic14 from '../../../assets/img/Icons/WEBSITE-ICON/actually-fun.webp';
 import icg from '../../../assets/img/logos/console.webp';
-import ReactWhatsappButton from "react-whatsapp-button";
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
-
-
-
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -519,16 +516,16 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               <div class="containeru">
                 <div class="flexu">
                   <div class="btnu arrowu">
-                    <a href="">Bachelor's</a>
+                    <a href="/courses/">Bachelor's</a>
                   </div>
                   <div class="btnu arrowu">
-                    <a href="">Master’s</a>
+                    <a href="/courses/">Master’s</a>
                   </div>
                   <div class="btnu arrowu">
-                    <a href="">Advanced Diploma</a>
+                    <a href="/courses/">Advanced Diploma</a>
                   </div>
                   <div class="btnu arrowu">
-                    <a href="">Diploma</a>
+                    <a href="/courses/">Diploma</a>
                   </div>
                 </div>
               </div>
@@ -831,13 +828,14 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       {isButtonVisible && (
         <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Enroll Now</a></div>)}
 <div className="App">
-        <ReactWhatsappButton
+        <a
           countryCode="91"
           phoneNumber="8977945705"
           style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "4rem" : "-1rem", zIndex: "11111" }}
-          className="whatsappsivak"
-        />
+          className="whatsappsivakl">
+<FaWhatsapp  style={{ color: "#fff", fontSize: "32px" }} />
 
+</a>
       </div>
     </>
   )

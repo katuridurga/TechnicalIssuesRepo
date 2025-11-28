@@ -19,7 +19,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 
 function StudentResult(props) {
-  const [selectedOption, setSelectedOption] = useState('option1');
   const [isOpenM, setIsOpenM] = useState(false);
  const [open, setOpen] = React.useState(false);
 
@@ -46,9 +45,7 @@ function StudentResult(props) {
     setOpen(false);
   };
 
-  const handleChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
+  
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
     shallowEqual

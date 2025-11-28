@@ -3,7 +3,7 @@ import "./DiplomaAndAdvancedDiplomaCourses.css";
 import PropTypes from 'prop-types';
 
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
-
+import { FaWhatsapp } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
 import r1 from "../../../assets/img/partners/r1.png";
 import r2 from "../../../assets/img/partners/r2.png";
@@ -599,7 +599,16 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
         <div className="CousellingButton1 tetstL1" style={{ marginBottom: "0px" }} onClick={scrollToBottom}><button className="dwnbtn three w-full sm:w-auto" style={{ width: "450px" }} onClick={() => setIsOpenM(true)}>Download Brochure
         </button> </div>
       )}
+<div className="App">
+        <a
+         href="tel:+918008002795"
+                            countryCode="91"
+          style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "5rem" : "5rem", zIndex: "11111" }}
+          className="whatsappsivakl">
+          <FaWhatsapp  style={{ color: "#fff", fontSize: "32px" }} />
 
+</a>
+      </div>
     </>
   )
 }

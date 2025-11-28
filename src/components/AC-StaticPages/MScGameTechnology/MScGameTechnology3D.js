@@ -3,10 +3,7 @@ import { useSelector, shallowEqual } from "react-redux";
 import "../BachelorsInComputerScienceGameDevelopment/BachelorsInComputerScienceGameDevelopment.css";
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import PropTypes from 'prop-types';
-import { useTheme } from '@mui/material/styles';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { emphasize, styled } from '@mui/material/styles';
-import Chip from '@mui/material/Chip';
 import m5 from "../../../assets/img/Icons/flags.webp";
 import c1 from "../../../assets/img/Courses/careeroprt.webp";
 import m6 from "../../../assets/img/Icons/jams.webp";
@@ -14,8 +11,6 @@ import m8 from "../../../assets/img/Icons/team-work.webp";
 import awic1 from '../../../assets/img/banners/expertn.webp';
 import awic2 from '../../../assets/img/banners/medaln.webp';
 import awic3 from '../../../assets/img/banners/mindsetn.webp';
-import awic4 from '../../../assets/img/banners/loan-to-valuen.webp';
-import awic5 from '../../../assets/img/banners/business-mann.webp';
 import { FaPlus, FaMinus } from "react-icons/fa";
 import awic from '../../../assets/img/banners/global-networkn.webp';
 
@@ -52,53 +47,8 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-const StyledBreadcrumb = styled(Chip)(({ theme, Props }) => {
-  const backgroundColor =
-    theme.palette.mode === 'light'
-      ? theme.palette.grey[100]
-      : theme.palette.grey[800];
-
-
-  return {
-    backgroundColor,
-    height: theme.spacing(3),
-    color: theme.palette.text.primary,
-    fontWeight: theme.typography.fontWeightRegular,
-    '&:hover, &:focus': {
-      backgroundColor: emphasize(backgroundColor, 0.06),
-    },
-    '&:active': {
-      boxShadow: theme.shadows[1],
-      backgroundColor: emphasize(backgroundColor, 0.12),
-    },
-  };
-}); // TypeScript only: need a type cast here because https://github.com/Microsoft/TypeScript/issues/26591
-
-
 
 function Courses(props) {
-
-
-  const theme = useTheme();
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
-
-  const [value1, setValue1] = React.useState(0);
-
-  // ✅ Add this here (INSIDE component)
-  const [activeTab, setActiveTab] = useState("GAME PROGRAMMING");
-  const handleChange1 = (event, newValue) => {
-    setValue1(newValue);
-  };
-
-  const OPTIONS = { loop: true }
-  const SLIDE_COUNT = 10
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
-
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
     shallowEqual
@@ -164,7 +114,7 @@ function Courses(props) {
     },
   ];
 
-const items = [
+  const items = [
     {
       title: "Dual Specialization in Art & Design:",
       subjects: [
@@ -177,14 +127,14 @@ const items = [
 
       subjects: [
 
-     "Learn what studios demand—master asset creation, design workflows, environment building, and integration with industry-standard engines like Unity and Unreal Engine",
+        "Learn what studios demand—master asset creation, design workflows, environment building, and integration with industry-standard engines like Unity and Unreal Engine",
       ],
     },
     {
       title: "Flexible Elective Pairing :",
 
       subjects: [
-  "Customize your Semester 3 experience by choosing one elective from Game Design and one from 3D Game Art, allowing you to tailor your education to specific career goals.",
+        "Customize your Semester 3 experience by choosing one elective from Game Design and one from 3D Game Art, allowing you to tailor your education to specific career goals.",
       ],
     },
     {
@@ -192,20 +142,11 @@ const items = [
 
       subjects: [
 
-       "Your final semester focuses on a full production cycle—design, art, integration, testing—leading to a comprehensive portfolio, academic dissertation, and a playable game prototype.",
+        "Your final semester focuses on a full production cycle—design, art, integration, testing—leading to a comprehensive portfolio, academic dissertation, and a playable game prototype.",
       ],
     },
-   
+
   ];
-
-
-  const handleScroll = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-      window.history.replaceState(null, "", window.location.pathname);
-    }
-  };
 
   const faqs = [
     {
@@ -279,7 +220,7 @@ const items = [
         <title>Master’s in 3D Game Art and Game Design | Backstage Pass Institute of Gaming</title>
 
         <meta property="og:title" content="Master’s in Game Technology | Advanced Game Development & Design" />
-        <meta name="description" content="Master the 3D game art and design in sculpting, modeling, texturing, & more. Build worlds and design characters with Unreal blueprints and engine integration. You will learn from experts, create a professional portfolio, and confidently step into the game industry." />
+        <meta property="og:description" name="description" content="Master the 3D game art and design in sculpting, modeling, texturing, & more. Build worlds and design characters with Unreal blueprints and engine integration. You will learn from experts, create a professional portfolio, and confidently step into the game industry." />
         <meta property="og:url" content="https://www.backstagepass.co.in/courses/masters-in-3d-game-art-design/" />
 
         <meta name="keywords" content="Master’s in 3D Game Art, Master’s in Game Design, 3D Game Art and Design course, Game Art and Design degree, Game Design Master’s program, Master’s degree in 3D game art and game design in India, masters in 3D game art & design​" />
@@ -342,10 +283,10 @@ const items = [
             {items.map((item, index) => (
               <li key={index} style={{ display: "flex", marginBottom: "14px", fontSize: "16px", gap: "10px", alignItems: "flex-start", justifyContent: "flex-start", lineHeight: "1.6" }}>
                 <CheckBoxIcon style={{ color: "#ec1923", marginRight: "12px", fontSize: "22px", marginTop: "3px" }} />
-              <span><div style={{fontWeight:"900"}}>{item.title}</div><div> {item.subjects}</div> </span> 
-               
+                <span><div style={{ fontWeight: "900" }}>{item.title}</div><div> {item.subjects}</div> </span>
+
               </li>
-            
+
             ))}
           </ul>
         </div>
@@ -401,7 +342,7 @@ const items = [
           <ul style={{ width: "80%", margin: "0px auto", paddingTop: "10px" }}>
             <li>
               <div className='BeyondLeft'>
-                <img src={m5} />
+                <img src={m5} alt="m5" />
               </div>
               <div className='BeyondRight'>
                 <p className='lsh'>Final Game Project</p>
@@ -410,8 +351,8 @@ const items = [
               </div>
             </li>
             <li>
-              <div className='BeyondLeft' style={{width:"60px"}}>
-                <img src={m6} />
+              <div className='BeyondLeft' style={{ width: "60px" }}>
+                <img src={m6} alt="m6" />
               </div>
               <div className='BeyondRight'>
                 <p className='lsh'>Professional Portfolio</p>
@@ -423,7 +364,7 @@ const items = [
 
             <li>
               <div className='BeyondLeft'>
-                <img src={m8} />
+                <img src={m8} alt="m8" />
               </div>
               <div className='BeyondRight'>
                 <p className='lsh'>Dissertation</p>
@@ -523,7 +464,7 @@ const items = [
 
         <div className="tuitiona-aid-sectionsLeft left1">
 
-          <div className="show-grid desg" style={{margin:"0px auto", backgroundColor:"#ffffff"}}>
+          <div className="show-grid desg" style={{ margin: "0px auto", backgroundColor: "#ffffff" }}>
             <h3 className="mainHeadingTotal3">
               Why choose backstage Pass?
             </h3>
@@ -531,17 +472,17 @@ const items = [
 
               <div className="bgchange left w-100 icn" style={{ width: isMobileState ? "95%" : "100%" }}>
                 <div style={{
-                    flexShrink: "0",
-                      position: "relative",
-                      background: "#fff",
-                      borderRadius: "50%",
-                      padding: "10px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "45px",
-                      height: "45px",
-                      boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
+                  flexShrink: "0",
+                  position: "relative",
+                  background: "#fff",
+                  borderRadius: "50%",
+                  padding: "10px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "45px",
+                  height: "45px",
+                  boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
                 }}><LazyLoadImage effect="blur"
                   src={awic2}
                   alt="icon"
@@ -554,23 +495,23 @@ const items = [
                     display: "block",
                   }} /></div>
                 <div className="mainic" style={{ marginLeft: isMobileState ? "10px" : "5px", width: "90%" }}>
-                  <p className="suprts" style={{color:"#000", fontWeight:"400"}}>Cross-disciplinary training in both art and design</p>
+                  <p className="suprts" style={{ color: "#000", fontWeight: "400" }}>Cross-disciplinary training in both art and design</p>
 
                 </div>
               </div>
               <div className="bgchange left w-100 icn" style={{ width: isMobileState ? "95%" : "100%" }}>
                 <div style={{
-                    flexShrink: "0",
-                      position: "relative",
-                      background: "#fff",
-                      borderRadius: "50%",
-                      padding: "10px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "45px",
-                      height: "45px",
-                      boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
+                  flexShrink: "0",
+                  position: "relative",
+                  background: "#fff",
+                  borderRadius: "50%",
+                  padding: "10px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "45px",
+                  height: "45px",
+                  boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
                 }}><LazyLoadImage effect="blur" width="30" height="30" src={awic} alt="icons" style={{
                   width: "100%",
                   height: "100%",
@@ -580,7 +521,7 @@ const items = [
                   display: "block",
                 }} /></div>
                 <div className="mainic" style={{ marginLeft: isMobileState ? "10px" : "5px", width: "90%" }}>
-                  <p className="suprts" style={{color:"#000", fontWeight:"400"}}>Emphasis on creativity, interactivity, and portfolio
+                  <p className="suprts" style={{ color: "#000", fontWeight: "400" }}>Emphasis on creativity, interactivity, and portfolio
                   </p>
 
                 </div></div>
@@ -589,17 +530,17 @@ const items = [
             <div className="maind">
               <div className="bgchange left w-100 icn" style={{ width: isMobileState ? "95%" : "100%" }}>
                 <div style={{
-                   flexShrink: "0",
-                     position: "relative",
-                     background: "#fff",
-                     borderRadius: "50%",
-                     padding: "10px",
-                     display: "flex",
-                     justifyContent: "center",
-                     alignItems: "center",
-                     width: "45px",
-                     height: "45px",
-                     boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
+                  flexShrink: "0",
+                  position: "relative",
+                  background: "#fff",
+                  borderRadius: "50%",
+                  padding: "10px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "45px",
+                  height: "45px",
+                  boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
                 }}><LazyLoadImage effect="blur" width="30" height="30" src={awic1} alt="icons" style={{
                   width: "100%",
                   height: "100%",
@@ -609,7 +550,7 @@ const items = [
                   display: "block",
                 }} /></div>
                 <div className="mainic" style={{ marginLeft: isMobileState ? "10px" : "5px", width: "90%" }}>
-                  <p className="suprts" style={{color:"#000", fontWeight:"400", marginTop:"4px"}}>Mentorship by experienced game professionals
+                  <p className="suprts" style={{ color: "#000", fontWeight: "400", marginTop: "4px" }}>Mentorship by experienced game professionals
 
                   </p>
 
@@ -618,16 +559,16 @@ const items = [
               <div className="bgchange left w-100 icn" style={{ width: isMobileState ? "95%" : "100%" }}>
                 <div style={{
                   flexShrink: "0",
-                     position: "relative",
-                     background: "#fff",
-                     borderRadius: "50%",
-                     padding: "10px",
-                     display: "flex",
-                     justifyContent: "center",
-                     alignItems: "center",
-                     width: "45px",
-                     height: "45px",
-                     boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
+                  position: "relative",
+                  background: "#fff",
+                  borderRadius: "50%",
+                  padding: "10px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "45px",
+                  height: "45px",
+                  boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
                 }}><LazyLoadImage effect="blur" width="30" height="30" src={awic3} alt="icons" style={{
                   width: "100%",
                   height: "100%",
@@ -637,8 +578,9 @@ const items = [
                   display: "block",
                 }} /></div>
                 <div className="mainic" style={{ marginLeft: isMobileState ? "10px" : "5px", width: "90%" }}>
-                  <p className="suprts" style={{color:"#000", fontWeight:"400", marginTop:"4px"
-}}>Aligned with real-world industry practices
+                  <p className="suprts" style={{
+                    color: "#000", fontWeight: "400", marginTop: "4px"
+                  }}>Aligned with real-world industry practices
 
                   </p>
 
@@ -654,7 +596,7 @@ const items = [
 
       </section>
 
-      <div id="Enquire-Now" style={{ marginTop: "30px", fontSize:"14px" }}>
+      <div id="Enquire-Now" style={{ marginTop: "30px", fontSize: "14px" }}>
         <HomeContentForm />
       </div>
 
