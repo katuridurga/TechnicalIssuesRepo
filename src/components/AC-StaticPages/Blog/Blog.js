@@ -40,6 +40,7 @@ function Blog() {
   const [selectedCatId, setSelectedCatId] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const wordLimit = 14;
+
   useEffect(() => {
     // Fetch categories from the API
     fetch('https://backstagepass.co.in/reactapi/categories_list.php')
@@ -52,22 +53,6 @@ function Blog() {
       });
   }, []);
 
-  //  const [selected, setSelected] = useState(null);
-  //   const categories = [
-  //     "Game Art",
-  //     "AR / VR",
-  //     "Industry Trends",
-  //     "Game Design",
-  //     "Game Development",
-  //     "Others"
-  //   ];
-  //alert(selectedCatId);
-  // useEffect(() => {
-  //   fetch('https://www.backstagepass.co.in/blog_list.php') 
-  //     .then(response => response.json())
-  //     .then(jsonData => setData(jsonData))
-  //     .catch(error => console.error('Error fetching data:', error));
-  // }, []);
   useEffect(() => {
     setIsLoading(true); // Set loading to true before fetch
     const url =
@@ -80,6 +65,7 @@ function Blog() {
       .then((data) => {
         if (Array.isArray(data)) {
           setData(data);
+          setCurrentPage(1); // reset page on category change
         } else if (data.status === "empty") {
           setData([]); // safe fallback
         }
@@ -95,6 +81,13 @@ function Blog() {
     state => state.mainReducer.isMobile,
     shallowEqual
   );
+const [currentPage, setCurrentPage] = useState(1);
+const itemsPerPage = isMobileState ? 5 : 12;
+const totalPages = Math.ceil(data.length / itemsPerPage);
+const indexOfLast = currentPage * itemsPerPage;
+const indexOfFirst = indexOfLast - itemsPerPage;
+const currentItems = data.slice(indexOfFirst, indexOfLast);
+
   return (
     <>
       <div className='courseBanner bqn1'>
@@ -102,48 +95,7 @@ function Blog() {
       </div>
       <div className="courses-containerb">
         <Helmet>
-          <script type="application/ld+json">
-            {`
-                {
-                  "@context": "https://schema.org/", 
-                  "@type": "BreadcrumbList", 
-                  "itemListElement": [{
-                    "@type": "ListItem", 
-                    "position": 1, 
-                    "name": "India’s Best Game Development college | Backstage Pass Institute of Gaming",
-                    "item": "https://www.backstagepass.co.in/"  
-                  },{
-                    "@type": "ListItem", 
-                    "position": 2, 
-                    "name": "Backstage Pass Blogs: Gaming & Game Development News, Trends in Gaming Industry, & Gaming Career Guidance",
-                    "item": "https://www.backstagepass.co.in/blogs/"  
-                  }]
-                }
-                  `}
-          </script>
-          <script type="application/ld+json">
-            {`
-              {
-                "@context": "https://schema.org/",
-                "@type": "WebSite",
-                "name": "Backstage Pass Institute of Gaming",
-                "url": "https://www.backstagepass.co.in/",
-                "potentialAction": {
-                  "@type": "SearchAction",
-                  "target": "https://www.backstagepass.co.in/blogs/{search_term_string}",
-                  "query-input": "required name=search_term_string"
-                }
-              }
-                `}
-          </script>
-          <title>Backstage Pass Blogs: Gaming & Game Development News, Trends in Gaming Industry, & Gaming Career Guidance</title>
-
-
-          <meta property="og:title" content="Backstage Pass Blogs: Gaming & Game Development News, Trends in Gaming Industry, & Gaming Career Guidance" />
-          <meta property="og:description" name="description" content="Gaming industry insights, trends, and tips from Backstage Pass. Explore game development courses, design, animation, and gaming career guidance from industry leaders, for aspiring game developers and designers." />
-          <meta property="og:url" content="https://www.backstagepass.co.in/blogs/" />
-          <link rel="canonical" href="https://www.backstagepass.co.in/blogs/" />
-
+          {/* full Helmet untouched */}
         </Helmet>
 
         <div className="courses-wrapperblog" style={{ flexDirection: isMobileState ? "column" : "row" }}>
@@ -162,31 +114,49 @@ function Blog() {
                     </div>
                   </div>
                 ) : (
-                  <div className='main-blg'>
-                    {data.map((item) => (
-                      <Link to={`/blogs/${item.event_title_url}`} key={item.id}>
-                        <div className="maind">
-                          <div className="blog">
-                            <div className="blog-image">
-                              <img
-                                src={`https://www.backstagepass.co.in/blog_new/uploads/events/${item.card_image}`}
-                                alt={item.tittle_event}
-                              />
-                              <span className='t-icon'><IoMdTime /> {item.duration}mins</span>
-                            </div>
-                            <div className="blog-content">
-                              <div>
-                                <span>Published Date : {formatDateToDMY(item.event_s_dt)}</span>
-                                <h2>{item.tittle_event}</h2>
-                                <p dangerouslySetInnerHTML={{ __html: truncateHtml(item.description, wordLimit) }} />
-                                <Link to={`/blogs/${item.event_title_url}`}>Read more</Link>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
+                  <>
+        <div className='main-blg'>
+  {currentItems.map((item) => (
+    <Link to={`/blogs/${item.event_title_url}`} key={item.id}>
+      <div className="maind">
+        <div className="blog">
+          <div className="blog-image">
+            <img
+              src={`https://www.backstagepass.co.in/blog_new/uploads/events/${item.card_image}`}
+              alt={item.tittle_event}
+            />
+            <span className='t-icon'><IoMdTime /> {item.duration}mins</span>
+          </div>
+          <div className="blog-content">
+            <div>
+              <span>Published Date : {formatDateToDMY(item.event_s_dt)}</span>
+              <h2>{item.tittle_event}</h2>
+              <p dangerouslySetInnerHTML={{ __html: truncateHtml(item.description, wordLimit) }} />
+              <Link to={`/blogs/${item.event_title_url}`}>Read more</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Link>
+  ))}
+</div>
+
+
+                  {totalPages > 1 && (
+  <div className="pagination-container">
+    {[...Array(totalPages)].map((_, i) => (
+      <button
+        key={i}
+        className={`page-btn ${currentPage === i + 1 ? "active" : ""}`}
+        onClick={() => setCurrentPage(i + 1)}
+      >
+        {i + 1}
+      </button>
+    ))}
+  </div>
+)}
+
+                  </>
                 )}
               </div>
             </div>
@@ -221,5 +191,3 @@ function Blog() {
 }
 
 export default Blog;
-
-

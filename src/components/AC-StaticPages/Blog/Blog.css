@@ -229,46 +229,69 @@ flex-wrap: wrap;
 gap: 20px;
 margin-bottom: 20px;
 }
+/* make sure box-sizing is consistent */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+/* container grid: min width per card so images never squash */
 .main-blg {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 10px;
-  column-gap: 0px;
-  grid-row-gap: 0px;
-  width: 100%;
-  
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+  gap: 20px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  align-items: start !important;
 }
+
+/* React Router Link is the grid child — make it a block and full width */
+.main-blg > a,
+.main-blg > a > .maind {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* .maind wrapper: reset any margins/padding that can cause shrink */
+.maind {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* blog card: let grid control width, don't use flex-growth tricks */
 .blog {
-background-color: #f9fafb;
-border-radius: 0px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-overflow: hidden;
-flex: 1 0 calc(33.33% - 20px);
-display: flex;
-flex-direction: column;
-width:100%;
-margin:10px;
-}
-.blog:hover{
-      transform: scale(1.01);
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  background-color: #f9fafb !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06) !important;
+  transform: translateZ(0); /* helps layout */
 }
 
+/* image container uses aspect-ratio so height is automatic and consistent */
 .blog-image {
-position: relative;
-height: 250px;
-overflow: hidden;
-padding: 15px;
+  width: 100% !important;
+  overflow: hidden !important;
+  border-radius: 8px 8px 0 0 !important;
+  padding: 0 !important; /* remove padding if any */
 }
 
+/* image styling — block and cover so no gaps/distortions */
 .blog-image img {
-width: 100%;
-height: 100%;
-transition: transform 0.3s;
-object-fit: cover;
-object-position: center;
-border-radius: 4px;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border-radius: 0 !important;
+  transition: transform 0.3s ease !important;
 }
-
 
 .blog-image .date {
 position: absolute;
@@ -591,3 +614,29 @@ height: auto !important;
       margin: 0px auto;
       width: fit-content;
     }
+    .pagination-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.page-btn {
+  padding: 8px 14px;
+  background: #f9fafb;
+  border: none;
+  border-radius: 6px;
+  color:#ed1923;
+  font-size: 14px;
+      box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
+}
+
+.page-btn.active {
+  background: #ed1923;
+  color: #fff !important;
+}
+
+.page-btn:hover {
+  background: #ed1923;
+  color: #fff !important;
+}
