@@ -4111,7 +4111,7 @@ div.et_pb_section.et_pb_section_0 {
   .scroll-to-top {
     background: #ed1923 !important;
     right: 1rem !important;
-    bottom: 7rem !important;
+    bottom: 5.5rem !important;
     position: fixed;
     z-index: 99 !important;
     cursor: pointer;
@@ -6731,7 +6731,7 @@ body {
 @media only screen and (max-width : 1024px) {
   .floatingIcon {
     position: fixed;
-    top: 81% !important;
+    top: 82% !important;
     right: 0;
     transform: translateY(-50%);
     z-index: 99999;

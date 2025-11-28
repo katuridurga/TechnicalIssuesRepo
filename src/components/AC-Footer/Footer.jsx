@@ -332,8 +332,9 @@ function Footer() {
                           countryCode="91"
                           phoneNumber="8008002795"
                           style={{
-                            right: "0.6rem",
+                            right: "0.6rem !important",
                             bottom: "9rem !important",
+                            position:"fixed !important",
                           }}
                           className="whatsappsivak"
                         />

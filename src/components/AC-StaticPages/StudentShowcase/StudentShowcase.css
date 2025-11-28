@@ -340,7 +340,7 @@ width: 80%;
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
-  transition: bottom 1s ease;
+  transition: bottom 2s ease;
   flex-direction: column;
 }
 .overlaysaward h3 {
@@ -352,7 +352,7 @@ width: 80%;
   font-weight: 900;
 }
 .cardsgaward:hover{
- transform: scale(1.18);
+ transform: scale(1.1);
  z-index: 1;
 }
 .cardsgaward:hover .overlaysaward {

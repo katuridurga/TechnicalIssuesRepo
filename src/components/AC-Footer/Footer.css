@@ -21,6 +21,30 @@
 }
 
 @media only screen and (max-width: 1020px) and (min-width: 320px) {
+  .floatingIconm
+.whatsappsivakm,
+.btn-floating-whatsapp {
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: fixed !important;
+  right: 0 !important;
+  top: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+  cursor: pointer;
+  padding: 0 !important;
+}
+.floatingIconm .whatsappsivakm:hover, .btn-floating-whatsapp:hover {
+    background-color: #25d366 !important;
+    box-shadow: none !important;
+    border-radius: 50% !important;
+}
+
   .lfootdetails {
     top: 20px !important;
     position: relative;
@@ -663,7 +687,9 @@ button.extended-background-gradient-linkedin {
 .whatsappsivak {
   background-color: #25d366 !important;
 }
-
+.whatsappsivakm {
+  background-color: #25d366 !important;
+}
 .durga {
   background-color: #00a4f5 !important;
 }
