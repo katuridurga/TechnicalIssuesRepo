@@ -19,7 +19,8 @@ function Courses(props) {
   );
   return (
     <>
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'MobileClasshstl' : 'HostelB'}`}>
+      {/* <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'MobileClasshstl' : 'HostelB'}`}> */}
+        <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? '' : ''}`}>
         <div className="et_pb_row et_pb_row_0">
           <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
             <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
@@ -77,11 +78,11 @@ function Courses(props) {
         <div className="courses-wrapper">
           <h2 className="mainHeadingTotal" style={{ marginBottom: "10px" }}>Accommodation & Fees
           </h2>
-          <p className='suprtsF' style={{ marginBottom: "10px", marginTop: "10px" }}><a href="https://www.google.com/maps/place/Backstage+Pass+Institute+of+Gaming/@17.44016,78.392541,13z/data=!4m6!3m5!1s0x3bcb915c849c2fc5:0x8cde844cfd7d651e!8m2!3d17.4401601!4d78.3925411!16s%2Fg%2F1hjhgw81m?hl=en&entry=ttu&g_ep=EgoyMDI0MTExMi4wIKXMDSoASAFQAw%3D%3D" target='_blanck' style={{ display: "contents", color: "#000" }}><img src={location} alt="Location" /> <p style={{ color: "#000" }}>   Plot No. 72, beside Springboard, Jubilee Enclave, HITEC City, <br /> Hyderabad, Telangana 500081 </p></a>
+          {/* <p className='suprtsF' style={{ marginBottom: "10px", marginTop: "10px" }}><a href="https://www.google.com/maps/place/Backstage+Pass+Institute+of+Gaming/@17.44016,78.392541,13z/data=!4m6!3m5!1s0x3bcb915c849c2fc5:0x8cde844cfd7d651e!8m2!3d17.4401601!4d78.3925411!16s%2Fg%2F1hjhgw81m?hl=en&entry=ttu&g_ep=EgoyMDI0MTExMi4wIKXMDSoASAFQAw%3D%3D" target='_blanck' style={{ display: "contents", color: "#000" }}><img src={location} alt="Location" /> <p style={{ color: "#000" }}>   Plot No. 72, beside Springboard, Jubilee Enclave, HITEC City, <br /> Hyderabad, Telangana 500081 </p></a>
 
-          </p>
+          </p> */}
 
-          {isMobileState ? <div>
+          {/* {isMobileState ? <div>
             <div>
               <ul className='mbimg'>
                 <li><img src={hstl2} alt="hostel" /></li>
@@ -105,7 +106,7 @@ function Courses(props) {
 
 
 
-            </div>}
+            </div>} */}
           <p className='suprtsF'>The hostel facility offers a variety of room-sharing options to suit different needs. Additionally, the fee is structured to be affordable. The accommodation fees is inclusive of food.
           </p>
           <div className="mainCourse1">
@@ -113,7 +114,7 @@ function Courses(props) {
             <div className="mainCourseRight1" style={{ borderRight: isMobileState ? "0px" : "1px solid#e0e0e0", borderBottom: isMobileState ? "1px solid#e0e0e0" : "0px" }}>
               <h2><FaHome />Non AC Rooms
               </h2>
-              <p>Available in 2, 3, 4, and 5-sharing configurations. The cost for this ranges from ₹8,000 to ₹12,000 per bed, depending on the room configuration.</p>
+              <p>Available in 2, 3, 4, and 5-sharing configurations. The cost for this ranges from ₹10,000 to ₹14,000 per bed, depending on the room configuration.</p>
 
             </div>
             <div className="mainCourseRight1">

@@ -3283,6 +3283,9 @@ div.et_pb_section.et_pb_section_0 {
   background-size: cover;
 }
 
+.Bachelors-in-Computer-Science-Game-Developmentnew {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #0a0a0a 100%), url(./../assets/img/banners/Bachelors-in-Computer-Science-Game-Developmentnew.webp) !important;
+}
 .Bachelors-in-Computer-Science-Game-Development {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #0a0a0a 100%), url(./../assets/img/banners/Bachelors-in-Computer-Science-Game-Development.webp) !important;
 }
