@@ -253,13 +253,13 @@ function Alumni() {
     {
       img: speaker13,
       name: "Hritam Samanta",
-      title: "Graphic User Interface Designer",
+      title: "Graphic User Interface <br/> <br/> Designer",
       subtitle: "American Software Resources, Inc, Hyderabad"
     },
     {
       img: speaker16,
       name: "Palli charan tej ",
-      title: "Graphic User Interface Designer",
+      title: "Graphic User Interface <br/> <br/> Designer",
       subtitle: "American S/W Resources, Hyderabad"
     },
 
@@ -638,7 +638,12 @@ function Alumni() {
                   </div>
 
                   <h3 className="speaker-name">{s.name}</h3>
-                  <p className="speaker-title">{s.title}</p>
+                 <p
+  className="speaker-title"
+  dangerouslySetInnerHTML={{ __html: s.title }}
+></p>
+
+                  
                   <p style={{ color: "#000", opacity: "0.8", marginTop: "0px",fontSize:"13px" }}>{s.subtitle}</p>
                 </div>
               ))}

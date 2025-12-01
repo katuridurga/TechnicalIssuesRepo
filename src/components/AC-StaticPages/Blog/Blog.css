@@ -268,7 +268,8 @@ h3.courses-title {
 /* container grid: min width per card so images never squash */
 .main-blg {
   display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)) !important;
+  /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)) !important; */
+    grid-template-columns: repeat(3, 1fr) !important;
   gap: 20px !important;
   width: 100% !important;
   margin: 0 auto !important;
@@ -289,6 +290,11 @@ h3.courses-title {
   width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
+}
+.maind:hover{
+  transform: scale(1.01) !important;
+  position:relative;
+  z-index: 10;
 }
 
 /* blog card: let grid control width, don't use flex-growth tricks */

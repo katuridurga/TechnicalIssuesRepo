@@ -7284,6 +7284,11 @@ body {
   flex: 0 0 auto;
   min-width: auto !important;
 }
+.rfm-marquee-container,
+.rfm-marquee {
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
 
 .s1t select:focus {
   color: #000 !important;
