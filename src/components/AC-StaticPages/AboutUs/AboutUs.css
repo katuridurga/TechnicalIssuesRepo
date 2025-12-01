@@ -1373,7 +1373,7 @@ color: #fff;
 /* MAIN CONTENT GRID */
 .wtmakesbsp .container {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   margin: 0 auto;
 }
 
@@ -1381,6 +1381,8 @@ color: #fff;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+   position: static !important;
+  overflow: visible !important;
 }
 
 /* LEFT EMPTY BLOCK — TO RESPECT 40% IMAGE SPACE */
