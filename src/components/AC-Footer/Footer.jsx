@@ -11,7 +11,7 @@ import facebook from "../../assets/img/Icons/facebook.webp";
 import linkedin from "../../assets/img/Icons/linkedin.webp";
 import Youtube from "../../assets/img/Icons/Youtube.webp";
 import { CiYoutube } from "react-icons/ci";
-import { PiDiscordLogoThin } from "react-icons/pi";
+import { RiDiscordLine } from "react-icons/ri";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import { RiLinkedinLine, RiTwitterXLine } from "react-icons/ri";
 import { FaPaperPlane, FaPhone } from "react-icons/fa";
@@ -21,7 +21,7 @@ import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
 import "./Footer.css";
 import { BiSolidPencil } from "react-icons/bi";
-
+import { FaInstagram } from "react-icons/fa";
 import { IoIosCall } from "react-icons/io";
 
 function Footer() {
@@ -582,7 +582,7 @@ function Footer() {
                           rel="noopener noreferrer"
                           className="icon-box"
                         >
-                          <PiDiscordLogoThin className="default-icon" />
+                          <RiDiscordLine iscordLogoThin className="default-icon" />
                           <img src={discord} alt="discord" className="hover-icon" />
                         </a>
                       </div>
@@ -595,7 +595,7 @@ function Footer() {
                           rel="noopener noreferrer"
                           className="icon-box"
                         >
-                          <RiTwitterXLine className="default-icon" />
+                          <FaInstagram className="default-icon" />
                           <img src={instagram} alt="instagram" className="hover-icon" />
                         </a>
                       </div>

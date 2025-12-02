@@ -489,3 +489,12 @@ object-fit: cover;
   padding: 0;
   vertical-align: middle;
 }
+.recuitersList-item {
+  width: 200px;
+  height: 81px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;  /* MOST IMPORTANT */
+  margin-right: 20px;
+}

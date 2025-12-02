@@ -91,7 +91,7 @@ function MenuCore(props) {
     setExpanded(newExpanded ? panel : false);
   };
 
- 
+
 
   const selectTab = index => dispatch(selectedTab(index));
   const hiddenPaths = [
@@ -201,6 +201,7 @@ function MenuCore(props) {
           <Link to="/courses/diploma-in-game-development-with-unity/" style={linkStyles} onClick={toggleDrawer(false)}>Game Development with Unity</Link>
           <Link to="/courses/diploma-in-game-development-with-unreal/" style={linkStyles} onClick={toggleDrawer(false)}>Game Development with Unreal</Link>
           <Link to="/courses/diploma-in-3d-environment-art-creation-for-games/" style={linkStyles} onClick={toggleDrawer(false)}>3D Environment Art For Games</Link>
+          <Link to={"/courses/diploma-in-vr-application-development/"} style={linkStyles} onClick={toggleDrawer(false)}>VR Application Development</Link>
         </div>
       )}
 
@@ -395,7 +396,11 @@ function MenuCore(props) {
                 // onKeyDown={toggleDrawer(false)}
                 >
                   <li onClick={() => setActiveMenu(activeMenu === 'courses' ? null : 'courses')}>
-                    <Link to={"/courses/"} onClick={toggleDrawer(false)}>Courses</Link>
+                    <Link to={"/courses/"} onClick={() => {
+                      toggleDrawer(false)();
+                      window.scrollTo(0, 0);
+                    }}
+                    >Courses</Link>
                     <div>
                       <FiChevronDown style={{ color: "#000" }} />
                     </div>
@@ -407,7 +412,10 @@ function MenuCore(props) {
                           <Typography component="div"><div className="mainc" style={{ fontSize: "13.5px" }}>Bachelor's Degree</div></Typography>
                         </AccordionSummary>
                         <AccordionDetails>
-                          <Typography component="div" onClick={toggleDrawer(false)}>
+                          <Typography component="div" onClick={() => {
+                            toggleDrawer(false)();
+                            window.scrollTo(0, 0);
+                          }}>
                             <div className="accordion-content">
                               <Link to={"/courses/bachelors-in-computer-science-and-game-development/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "10px", display: "flex", paddingLeft: "40px" }}>Computer Science & Game Development</Link>
                               <Link to={"/courses/bachelors-in-game-art-and-design/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "10px", display: "flex", paddingLeft: "40px" }}>Game Art & Design</Link>
@@ -422,7 +430,10 @@ function MenuCore(props) {
                           <Typography component="div"><div className="mainc" style={{ fontSize: "13.5px" }}>Advanced Diploma</div></Typography>
                         </AccordionSummary>
                         <AccordionDetails>
-                          <Typography component="div" onClick={toggleDrawer(false)}>
+                          <Typography component="div" onClick={() => {
+                            toggleDrawer(false)();
+                            window.scrollTo(0, 0);
+                          }}>
                             <div className="accordion-content">
                               <Link to={"/courses/advanced-diploma-in-game-development/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "10px", display: "flex", paddingLeft: "40px" }}> Game Development</Link>
                               <Link to={"/courses/advanced-diploma-in-3d-game-art-digital-sculpting/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "0px", display: "flex", paddingLeft: "40px" }}> 3D Game Art & Digital Sculpting</Link>
@@ -436,12 +447,31 @@ function MenuCore(props) {
                           <Typography component="div"><div className="mainc" style={{ fontSize: "13.5px" }}>Diploma</div></Typography>
                         </AccordionSummary>
                         <AccordionDetails>
-                          <Typography component="div" onClick={toggleDrawer(false)}>
+                          <Typography component="div" onClick={() => {
+                            toggleDrawer(false)();
+                            window.scrollTo(0, 0);
+                          }}>
                             <div className="accordion-content">
-                              <Link onClick={toggleDrawer(false)} to={"/courses/diploma-in-game-design-production/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "10px", display: "flex", paddingLeft: "40px" }}>Game Design & Production</Link>
-                              <Link onClick={toggleDrawer(false)} to={"/courses/diploma-in-game-development-with-unity/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "10px", display: "flex", paddingLeft: "40px" }}>Game Development with Unity</Link>
-                              <Link onClick={toggleDrawer(false)} to={"/courses/diploma-in-3d-environment-art-creation-for-games/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "0px", display: "flex", paddingLeft: "40px" }}>3D Environment Art For Games</Link>
-                              <Link onClick={toggleDrawer(false)} to={"/courses/diploma-in-vr-application-development/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "0px", display: "flex", paddingLeft: "40px" }}>VR Application Development</Link>
+                              <Link onClick={() => {
+                                toggleDrawer(false)();
+                                window.scrollTo(0, 0);
+                              }} to={"/courses/diploma-in-game-design-production/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "10px", display: "flex", paddingLeft: "40px" }}>Game Design & Production</Link>
+                              <Link onClick={() => {
+                                toggleDrawer(false)();
+                                window.scrollTo(0, 0);
+                              }} to={"/courses/diploma-in-game-development-with-unity/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "10px", display: "flex", paddingLeft: "40px" }}>Game Development with Unity</Link>
+                              <Link onClick={() => {
+                                toggleDrawer(false)();
+                                window.scrollTo(0, 0);
+                              }} to={"/courses/diploma-in-game-development-with-unreal/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "10px", display: "flex", paddingLeft: "40px" }}>Game Development with Unreal</Link>
+                              <Link onClick={() => {
+                                toggleDrawer(false)();
+                                window.scrollTo(0, 0);
+                              }} to={"/courses/diploma-in-3d-environment-art-creation-for-games/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "0px", display: "flex", paddingLeft: "40px" }}>3D Environment Art For Games</Link>
+                              <Link onClick={() => {
+                                toggleDrawer(false)();
+                                window.scrollTo(0, 0);
+                              }} to={"/courses/diploma-in-vr-application-development/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "0px", display: "flex", paddingLeft: "40px" }}>VR Application Development</Link>
                             </div>
                           </Typography>
                         </AccordionDetails>
@@ -451,10 +481,19 @@ function MenuCore(props) {
                           <Typography component="div"><div className="mainc" style={{ fontSize: "13.5px" }}>Master's</div></Typography>
                         </AccordionSummary>
                         <AccordionDetails>
-                          <Typography component="div" onClick={toggleDrawer(false)}>
+                          <Typography component="div" onClick={() => {
+                            toggleDrawer(false)();
+                            window.scrollTo(0, 0);
+                          }}>
                             <div className="accordion-content">
-                              <Link onClick={toggleDrawer(false)} to={"/courses/masters-in-game-technology/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "10px", display: "flex", paddingLeft: "40px" }}>Game Technology</Link>
-                              <Link onClick={toggleDrawer(false)} to={"/courses/masters-in-3d-game-art-design/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "0px", display: "flex", paddingLeft: "40px" }}>3D Game Art & Game Design</Link>
+                              <Link onClick={() => {
+                                toggleDrawer(false)();
+                                window.scrollTo(0, 0);
+                              }} to={"/courses/masters-in-game-technology/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "10px", display: "flex", paddingLeft: "40px" }}>Game Technology</Link>
+                              <Link onClick={() => {
+                                toggleDrawer(false)();
+                                window.scrollTo(0, 0);
+                              }} to={"/courses/masters-in-3d-game-art-design/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "0px", display: "flex", paddingLeft: "40px" }}>3D Game Art & Game Design</Link>
 
                             </div>
                           </Typography>
@@ -479,7 +518,10 @@ function MenuCore(props) {
                     </div>
                   </li>
                   {activeMenu === 'about' && (
-                    <div className="MobileAccordian-content" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
+                    <div className="MobileAccordian-content" onClick={() => {
+                      toggleDrawer(false)();
+                      window.scrollTo(0, 0);
+                    }} onKeyDown={toggleDrawer(false)}>
                       <Link to={"/about-us/our-story/"}>Our story</Link>
                       <Link to={"/about-us/affiliation-collaboration/"}>Affiliation</Link>
                       <Link to={"/about-us/placement-support/"}>Placement Support</Link>
@@ -492,7 +534,10 @@ function MenuCore(props) {
                     </div>
                   </li>
                   {activeMenu === 'admission' && (
-                    <div className="MobileAccordian-content" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
+                    <div className="MobileAccordian-content" onClick={() => {
+                      toggleDrawer(false)();
+                      window.scrollTo(0, 0);
+                    }} onKeyDown={toggleDrawer(false)}>
                       <Link to={"/admissions/admission-process/"}>Admission Process</Link>
                       <Link to={"/admissions/financial-assistance-and-scholarship/"} >Financial Assistance</Link>
                     </div>
@@ -526,7 +571,10 @@ function MenuCore(props) {
                     </div>
                   </li>
                   {activeMenu === 'life' && (
-                    <div className="MobileAccordian-content" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
+                    <div className="MobileAccordian-content" onClick={() => {
+                      toggleDrawer(false)();
+                      window.scrollTo(0, 0);
+                    }} onKeyDown={toggleDrawer(false)}>
                       <Link to={"/life-at-bsp/alumni-success/"}>Alumni Success</Link>
                       <Link to={"/life-at-bsp/student-portfolio/"}>Student Portfolio</Link>
                       <Link to={"/life-at-bsp/student-awards/"}>Student Awards</Link>
@@ -535,7 +583,10 @@ function MenuCore(props) {
                       <Link to={"/life-at-bsp/facilities/"}>Hostel Facilities</Link>
                     </div>
                   )}
-                  <li onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
+                  <li onClick={() => {
+                    toggleDrawer(false)();
+                    window.scrollTo(0, 0);
+                  }} onKeyDown={toggleDrawer(false)}>
                     <Link to={"/blogs/"}>Blogs</Link>
 
                   </li>
@@ -545,11 +596,17 @@ function MenuCore(props) {
                   {/* {isActiveB4 && <div className="MobileAccordian-content" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
                       <Link to={""}>Blog</Link>
                     </div>} */}
-                  <li onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
+                  <li onClick={() => {
+                    toggleDrawer(false)();
+                    window.scrollTo(0, 0);
+                  }} onKeyDown={toggleDrawer(false)}>
                     <Link to={"/contactus/"}>Contact us</Link>
                   </li>
 
-                  <li onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
+                  <li onClick={() => {
+                    toggleDrawer(false)();
+                    window.scrollTo(0, 0);
+                  }} onKeyDown={toggleDrawer(false)}>
 
                     <Link to={"/Application-form/"} className="nobg">
                       <button className=" three button brand size200 w-full sm:w-auto" data-form-id="need-guidance" data-form="step1-button-continue" type="submit" style={{ marginTop: "0px" }}>
@@ -562,7 +619,10 @@ function MenuCore(props) {
               </div>
               <div
                 className="mobile-menu-footer"
-                onClick={toggleDrawer(false)}
+                onClick={() => {
+                  toggleDrawer(false)();
+                  window.scrollTo(0, 0);
+                }}
                 onKeyDown={toggleDrawer(false)}
               >
                 <div className="menu-divider"></div>

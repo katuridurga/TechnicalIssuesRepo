@@ -40,25 +40,25 @@ function TopRequiters() {
             <h2 className="mainHeadingTotal">Our Top Recruiters</h2>
 
 
-      <Marquee
+     <Marquee
   speed={60}
   gradient={false}
   pauseOnHover={true}
-  style={{ padding: "0px 20px" }}
   className="recuitersList"
+  style={{ padding: "0px 20px" }}
 >
-  <LazyLoadImage effect="blur" alt="rec4" src={r4} placeholderSrc={thumbnail} width="300" height="81" />
-  <LazyLoadImage effect="blur" alt="rec1" src={r1} placeholderSrc={thumbnail} width="300" height="81" />
-  <LazyLoadImage effect="blur" alt="rec7" src={r7} placeholderSrc={thumbnail} width="300" height="81" />
-  <LazyLoadImage effect="blur" alt="rec2" src={r2} placeholderSrc={thumbnail} width="300" height="81" />
-  <LazyLoadImage effect="blur" alt="rec10" src={r10} placeholderSrc={thumbnail} width="300" height="81" />
-  <LazyLoadImage effect="blur" alt="rec12" src={r12} placeholderSrc={thumbnail} width="300" height="81" />
-    <LazyLoadImage effect="blur" alt="rec5" src={r5} placeholderSrc={thumbnail} width="300" height="81" />
-  <LazyLoadImage effect="blur" alt="rec13" src={r13} placeholderSrc={thumbnail} width="300" height="81" />
-  <LazyLoadImage effect="blur" alt="rec8" src={r8} placeholderSrc={thumbnail} width="300" height="81" />
-  <LazyLoadImage effect="blur" alt="rec9" src={r9} placeholderSrc={thumbnail} width="300" height="81" />
-  <LazyLoadImage effect="blur" alt="rec11" src={r11} placeholderSrc={thumbnail} width="300" height="81" />
-  <LazyLoadImage effect="blur" alt="rec14" src={r14} placeholderSrc={thumbnail} width="300" height="81" />
+  <div className="recuitersList-item"><LazyLoadImage effect="blur" src={r4} alt="rec4" /></div>
+  <div className="recuitersList-item"><LazyLoadImage effect="blur" src={r1} alt="rec1" /></div>
+  <div className="recuitersList-item"><LazyLoadImage effect="blur" src={r7} alt="rec7" /></div>
+  <div className="recuitersList-item"><LazyLoadImage effect="blur" src={r2} alt="rec2" /></div>
+  <div className="recuitersList-item"><LazyLoadImage effect="blur" src={r10} alt="rec10" /></div>
+  <div className="recuitersList-item"><LazyLoadImage effect="blur" src={r12} alt="rec12" /></div>
+  <div className="recuitersList-item"><LazyLoadImage effect="blur" src={r5} alt="rec5" /></div>
+  <div className="recuitersList-item"><LazyLoadImage effect="blur" src={r13} alt="rec13" /></div>
+  <div className="recuitersList-item"><LazyLoadImage effect="blur" src={r8} alt="rec8" /></div>
+  <div className="recuitersList-item"><LazyLoadImage effect="blur" src={r9} alt="rec9" /></div>
+  <div className="recuitersList-item"><LazyLoadImage effect="blur" src={r11} alt="rec11" /></div>
+  <div className="recuitersList-item"><LazyLoadImage effect="blur" src={r14} alt="rec14" /></div>
 </Marquee>
 
 

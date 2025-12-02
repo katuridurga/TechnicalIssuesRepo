@@ -119,7 +119,7 @@ width:100%;
 }
 
 .embla__buttonbuzz {
-  background: #111;
+  background:none;
   color: white;
   border: none;
   border-radius: 50%;
@@ -131,7 +131,7 @@ width:100%;
 }
 
 .embla__buttonbuzz:hover {
-  background: #fff;
+  background: none;
   transform: scale(1.1);
 }
 
@@ -142,11 +142,11 @@ width:100%;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  background: #000;
+  background: none;
   color: #fff;
   border: none;
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 6rem;
   width: 50px;
   height: 50px;
   cursor: pointer;
@@ -159,7 +159,7 @@ width:100%;
 
 /* Hover effect for buttons */
 .embla__buttonbuzz:hover {
-  background: rgba(0, 0, 0, 0.85);
+  background:none;
   transform: translateY(-50%) scale(1.1);
   color:#fff !important;
 }

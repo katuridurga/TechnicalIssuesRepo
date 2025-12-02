@@ -173,13 +173,11 @@
   align-items: center;
   justify-content: center;
 }
-.embla__buttonbaM:disabled {
-  
-}
+
 .embla__button__svgbaM {
   width: 65%;
   height: 65%;
-  color: #fff;
+  color: #fff !important;
 }
 .embla__dotsbaM {
   display: flex;

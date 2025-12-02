@@ -18,7 +18,7 @@ import bui4 from "../assets/img/ga21.webp";
 import bui5 from "../assets/img/eta24.webp";
 import bui6 from "../assets/img/esa24.webp";
 import bui7 from "../assets/img/BSPsIGDC.webp";
-import bui8 from "../assets/img/thumbnail.webp";
+import epa from "../assets/img/awards/Timesawardepaper.webp";
 
 const slides = [
   { src: b4, alt: "Purple Talk", text: "Purple Talk" },
@@ -29,14 +29,15 @@ const slides = [
   { src: awardtwo, alt: "Gaming Career", text: "Turn your passion for gaming into a rewarding career" },
   { src: b8, alt: "Nazara", text: "Nazara" },
   { src: b9, alt: "IGDC", text: "IGDC" },
-  { src: bui2, alt: "Times Education", text: "Times Education E-paper Article 2024" },
+  { src: epa, alt: "Times Education", text: "Times Education E-paper Article 2024" },
   { src: bui1, alt: "Times Awards", text: "Times Excellence Awards 2021" },
-  { src: bui3, alt: "IGDC 2023", text: "IGDC 2023" },
-  { src: bui4, alt: "IGDC 2022", text: "IGDC 2022" },
-  { src: bui5, alt: "GAME Awards 2021", text: "GAME Awards 2021" },
-  { src: bui6, alt: "ET Achievers", text: "ET achievers 2025" },
-  { src: bui7, alt: "EduSpark Awards", text: "EduSpark Awards 2023" },
-  { src: bui8, alt: "BSP Students", text: "BSP Students at IGDC" }
+  { src: bui2, alt: "IGDC 2023", text: "IGDC 2023" },
+  { src: bui3, alt: "IGDC 2022", text: "IGDC 2022" },
+  { src: bui4, alt: "GAME Awards 2021", text: "GAME Awards 2021" },
+  { src: bui5, alt: "ET Achievers", text: "ET achievers 2025" },
+  { src: bui6, alt: "EduSpark Awards", text: "EduSpark Awards 2023" },
+  { src: bui7, alt: "BSP Students", text: "BSP Students at IGDC" },
+  
 ];
 
 const EmblaCarousel = () => {

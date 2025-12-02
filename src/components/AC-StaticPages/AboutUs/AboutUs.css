@@ -1111,10 +1111,7 @@ justify-content: center;
   margin-top: 0px !important;
   flex-direction: column;
 }
-  /* Always move IMAGE to top */
-  .main-img > .main-img2 img {
-    order: 1 !important;
-  }
+  
    .main-img > .main-img2:not(:has(img)) {
     order: 2 !important;
   }
@@ -1126,10 +1123,7 @@ justify-content: center;
    .inner > :last-child {
     margin-bottom: 20px; /* adjust as needed */
   }
-   /* TEXT BLOCK — should come FIRST */
-  .main-img .main-img2:nth-child(2) {
-    order: 1 !important;
-  }
+ 
 .mat{
   margin-top: 30px;
 }

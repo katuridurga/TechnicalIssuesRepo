@@ -275,3 +275,20 @@
   margin-left: 3px;  /* small gap between number and + */
 }
 
+/* iPad Pro Portrait + Landscape */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .counter-wrapper1 div {
+    background: #f9fafb;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.counter-wrapper1 {
+    display: grid!important;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 0.5rem;
+    padding: 0 3%;
+    text-align: left;
+}
+}

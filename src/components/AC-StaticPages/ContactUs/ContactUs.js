@@ -140,7 +140,7 @@ function ContactUs(props) {
 
                 <h3 class="text-center  enqhd">Head Office</h3>
                 <p style={{ color: "#000" }}>
-                  Plot No. 72, beside Spring Board, Jubilee Enclave, HITEC City, Hyderabad, Telangana 500081
+                  Plot No. 72, Jubilee Enclave, HITEC City, Hyderabad, Telangana 500081
                 </p>
                 <div className='mainbtn'>
                   {/* <button className="lc"><a target='_blank' href="https://www.google.com/maps/place/Backstage+Pass+Institute+of+Gaming/@17.440162,78.392406,15z/data=!4m6!3m5!1s0x3bcb915c849c2fc5:0x8cde844cfd7d651e!8m2!3d17.4401621!4d78.3924059!16s%2Fg%2F1hjhgw81m?hl=en&entry=ttu&g_ep=EgoyMDI0MDgyMC4xIKXMDSoASAFQAw%3D%3D">MAPS Directions</a></button> */}

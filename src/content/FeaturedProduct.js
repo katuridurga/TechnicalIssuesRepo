@@ -72,7 +72,7 @@ function HomeContent() {
     advancedDiploma: [
       { src: f6, title: "Advanced Diploma in Game Development", link: "/courses/advanced-diploma-in-game-development/" },
       { src: f7, title: "Advanced Diploma in 3D Game Art & Digital Sculpting", link: "/courses/advanced-diploma-in-3d-game-art-digital-sculpting/" },
-      { src: f9, title: "Advanced Diploma in Traditional & Digital Concept Art", link: "/courses/advanced-diploma-in-traditional-digital-art/" },
+    
     ],
 
     diploma: [
@@ -80,6 +80,7 @@ function HomeContent() {
       { src: f8, title: "Diploma in Game Development with Unity", link: "/courses/diploma-in-game-development-with-unity/" },
       { src: funrm, title: "Diploma in Game Development with Unreal", link: "/courses/diploma-in-game-development-with-unreal/" },
        { src: f10, title: "Diploma in 3D Environment Art For Games", link: "/courses/diploma-in-3d-environment-art-creation-for-games/" },
+          { src: f3, title: "Diploma in VR Application Development", link: "/courses/diploma-in-vr-application-development/" },
     ],
     masters: [
       { src: f5, title: "Master's in Game Technology", link: "/courses/masters-in-game-technology/" },

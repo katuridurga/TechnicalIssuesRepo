@@ -2633,7 +2633,7 @@ function App() {
                     <Box mt={2} style={{ fontSize: isMobileState ? "17px" : "24px", color: '#000' }}>
                       {/* How did you find out about us */}
                       <Typography variant="subtitle1" style={{ fontSize: isMobileState ? "17px" : "24px", color: '#000' }}>
-                        Before submitting the form, let us know how you found out about us:
+                     Before submitting, please let us know how you heard about us:
                       </Typography>
                       <RadioGroup
                         value={foundBy} // Keep it synced with foundBy state

@@ -84,9 +84,45 @@ function Aboutus(props) {
       <h3 className='tagline tg1' style={{ color: "#ed1925" }}> To shape the future of global gaming education</h3>
       <div className='courses-container'>
         <div className="main-img" style={{ boxShadow: "none", backgroundColor: "#fff", marginBottom: "28px !important" }}>
+          
+
+        {isMobileState ? (
+          <>
+            <div className="sec-title">
+              <h2 className="courseHeading fadeInUp anime-delay" style={{ color: "#ed1925" }}>How It Started</h2>
+            </div>
+<div className="main-img2 brtopleft" style={{ boxShadow: "none", background: "none", padding: "0px" }}>
+    <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%" }}>
+      <div className="inner-column inner-column1 wow fadeInLeft">
+        <div className="image-1">
+          <a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images">
+            <img src={hwst} alt="hwst" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+            <div className="text">
+              At a time when gaming enthusiasts didn’t have many game development colleges in India to turn to,
+              <b style={{ fontSize: "16px", color: '#ed1925' }}>
+                <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">
+                  Backstage Pass Institute of Gaming
+                </a>
+              </b>
+              rose as a beacon of hope. With a single motto to revolutionise the world of gaming in the country and transform this form of entertainment into a full-fledged source of earning, Backstage Pass has championed quality gaming education at an affordable price.
+            </div>
+
+            <div className="text">
+              The institute has welcomed students from all over the country, belonging to diverse backgrounds and unique mindsets, uniting them through their singular passion for gaming and making games. As one of the leading gaming colleges in India, Backstage Pass offers career-oriented bachelor's programs in India, making it one of the best video game development courses after 12th for aspiring game developers and creators.
+            </div>
+          </>
+        ) : (
+          <>
+
           <div style={{ boxShadow: "none", padding: "0px" }} className="main-img2">
             <div style={{ boxShadow: "none", background: "none", padding: "0px", width: "100%" }} >
               <div className="inner-column" style={{ padding: "0px" }}>
+                
                 <div className="sec-title">
                   <h2 className="courseHeading fadeInUp anime-delay" style={{ color: "#ed1925" }}>How It Started</h2>
                 </div>
@@ -105,7 +141,8 @@ function Aboutus(props) {
 
               </div></div>
           </div>
-
+</>
+)}
 
 
         </div>

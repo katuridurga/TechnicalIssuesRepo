@@ -19,6 +19,7 @@ import DiplomainGameDesignProduction from "../../../assets/img/Courses/Diplomain
 import DiplomainGameDevelopmentwithUnity from "../../../assets/img/Courses/DiplomainGameDevelopmentwithUnity.webp"
 import Diplomain3DEnvironmentArtCreationforGames from "../../../assets/img/Courses/Diplomain3DEnvironmentArtCreationforGames.webp"
 // import AdvancedDiplomainTraditionalDigitalConceptArt from "../../../assets/img/Courses/AdvancedDiplomainTraditionalDigitalConceptArt.webp"
+import Diploma_in_Game_Development_with_Unreal from "../../../assets/img/Courses/Diploma_in_Game_Development_with_Unreal.webp";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -347,6 +348,19 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                       <div className="mainCourseRight1">
                         <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>Diploma in Game Development with Unity</h2>
                         <p style={{ fontFamily: "'Montserrat', sans-serif" }}>With a more specialized approach, this intensive program is designed to provide students with the foundational skills and advanced techniques necessary to excel in game development using Unity Game Engine.
+                        </p>
+
+                      </div>
+                    </div>
+                  </Link>
+                   <Link to={"/courses/diploma-in-game-development-with-unreal/"}>
+                    <div className="mainCourse1">
+                      <div className="mainCourseLeft1">
+                        <img src={Diploma_in_Game_Development_with_Unreal} alt="Diploma in Game Development with Unreal" className="img-circle" />
+                      </div>
+                      <div className="mainCourseRight1">
+                        <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>Diploma in Game Development with Unreal</h2>
+                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>With the Diploma in Game Development with Unreal, students will learn the real science behind making games. The course will guide students through Unreal Engine.
                         </p>
 
                       </div>
