@@ -82,7 +82,7 @@ function Blog() {
     shallowEqual
   );
 const [currentPage, setCurrentPage] = useState(1);
-const itemsPerPage = isMobileState ? 5 : 12;
+const itemsPerPage = isMobileState ? 5 :27 ;
 const totalPages = Math.ceil(data.length / itemsPerPage);
 const indexOfLast = currentPage * itemsPerPage;
 const indexOfFirst = indexOfLast - itemsPerPage;

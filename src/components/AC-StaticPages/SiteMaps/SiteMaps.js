@@ -106,8 +106,18 @@ function Courses(props) {
        </li>
        <li>
        <div style={{marginBottom: '10px', marginLeft: isMobileState ? '10px':"0px" }}>
+       <a href="/courses/diploma-in-game-development-with-unreal/"> Game Development with Unreal</a>
+       </div>
+       </li>
+         <li>
+       <div style={{marginBottom: '10px', marginLeft: isMobileState ? '10px':"0px" }}>
        <a href="/courses/diploma-in-3d-environment-art-creation-for-games/">3D Environment Art For Games</a>
        </div>
+         <li style={{marginLeft:"0px"}}>
+       <div style={{marginBottom: '10px', marginLeft: isMobileState ? '10px':"0px" }}>
+       <a href="/courses/diploma-in-vr-application-development/">VR Application Development</a>
+       </div>
+       </li>
        </li>
        </ul>
        </li>
@@ -125,11 +135,11 @@ function Courses(props) {
        <a href="/courses/advanced-diploma-in-3d-game-art-digital-sculpting/">3D Game Art & Digital Sculpting</a>
        </div>
        </li>
-       <li>
+       {/* <li>
        <div style={{marginBottom: '10px', marginLeft: isMobileState ? '10px':"0px" }}>
        <a href="/courses/advanced-diploma-in-traditional-digital-art/">Traditional & Digital Concept Art</a>
        </div>
-       </li>
+       </li> */}
 
       </ul>
       </li>
@@ -149,7 +159,7 @@ function Courses(props) {
 
          <ul className='innerc'>
        <li style={liStyle}><a href="/life-at-bsp/alumni-success/">Alumni Success</a></li>
-       <li style={liStyle}><a href="/life-at-bsp/student-portfolio/">Student Art works & games</a></li>
+       <li style={liStyle}><a href="/life-at-bsp/student-portfolio/">Student Portfolio</a></li>
        <li style={liStyle}><a href="/life-at-bsp/student-awards/">Student Awards</a></li>
        <li style={liStyle}><a href="/life-at-bsp/accelerator-program/">Accelerator Program</a></li>
        <li style={liStyle}><a href="/life-at-bsp/facilities/">Hostel Facilities</a></li>
