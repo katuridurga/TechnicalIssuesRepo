@@ -2,6 +2,7 @@ import React  from "react";
 import "./Courses.css";
 import { useSelector, shallowEqual } from "react-redux";
 import csgd from "../../../assets/img/Courses/csgdc.webp";
+import dvr from "../../../assets/img/art/vrapplication.webp"
 import GameArtDesign from "../../../assets/img/Courses/GameArt&Design.webp";
 import AugmentedRealityandVirtualReality from "../../../assets/img/Courses/AugmentedRealityandVirtualReality.webp";
 import MscGameTechnology from "../../../assets/img/Courses/MscGameTechnology.webp";
@@ -14,6 +15,7 @@ import Diplomain3DEnvironmentArtCreationforGames from "../../../assets/img/Cours
 import Diploma_in_Game_Development_with_Unreal from "../../../assets/img/Courses/Diploma_in_Game_Development_with_Unreal.webp";
 import { Helmet } from "react-helmet";
 import HomeContentForm from '../../../content/HomeContentFrom';
+import dvrc from "../../../assets/img/Courses/VRApplicationn.webp";
 
 function Courses(props) {
 
@@ -43,7 +45,7 @@ function Courses(props) {
         { title: "Diploma in Game Development with Unity", description: "The Diploma in Game Development with Unity empowers creators to master both 2D and 3D game development by blending logic...", link: "/courses/diploma-in-game-development-with-unity/", image: DiplomainGameDevelopmentwithUnity },
         { title: "Diploma in Game Development with Unreal", description: "With the Diploma in Game Development with Unreal, students will learn the real science behind making games. The course will guide students through Unreal Engine...", link: "/courses/diploma-in-game-development-with-unreal/", image: Diploma_in_Game_Development_with_Unreal },
         { title: "Diploma In 3D Environment Art For Games", description: "The Diploma in 3D Environment Art Creation for Games explores the harmony of art in 3D modelling, texturing, and digital sculpting to craft breathtaking, immersive game worlds.", link: "/courses/diploma-in-3d-environment-art-creation-for-games/", image: Diplomain3DEnvironmentArtCreationforGames },
-        { title: "Diploma in VR Application Development", description: "The Diploma in VR Application Development Course unlocks the future of technology, where students master VR programming with Unity and Unreal to design, develop, and innovate...", link: "/courses/diploma-in-vr-application-development/", image: AugmentedRealityandVirtualReality }
+        { title: "Diploma in VR Application Development", description: "The Diploma in VR Application Development Course unlocks the future of technology, where students master VR programming with Unity and Unreal to design, develop, and innovate...", link: "/courses/diploma-in-vr-application-development/", image: dvrc }
       ]
     },
     {

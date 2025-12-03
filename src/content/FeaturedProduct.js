@@ -22,6 +22,7 @@ import PropTypes from 'prop-types';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import thumbnail from "../assets/img/thumbnail.webp";
+import dvr from "../assets/img/art/vrapplication.webp";
 
 import "./FeaturedProduct.css"
 
@@ -80,7 +81,7 @@ function HomeContent() {
       { src: f8, title: "Diploma in Game Development with Unity", link: "/courses/diploma-in-game-development-with-unity/" },
       { src: funrm, title: "Diploma in Game Development with Unreal", link: "/courses/diploma-in-game-development-with-unreal/" },
        { src: f10, title: "Diploma in 3D Environment Art For Games", link: "/courses/diploma-in-3d-environment-art-creation-for-games/" },
-          { src: f3, title: "Diploma in VR Application Development", link: "/courses/diploma-in-vr-application-development/" },
+          { src: dvr, title: "Diploma in VR Application Development", link: "/courses/diploma-in-vr-application-development/" },
     ],
     masters: [
       { src: f5, title: "Master's in Game Technology", link: "/courses/masters-in-game-technology/" },
@@ -281,7 +282,7 @@ function HomeContent() {
                  
                   <div className="cardssf maincolltwo">
                     <figure className="figures">
-                      <LazyLoadImage effect="blur" src={f3} placeholderSrc={thumbnail} alt="f11" style={{ width: "100%", borderRadius: "8px" }} />
+                      <LazyLoadImage effect="blur" src={dvr} placeholderSrc={thumbnail} alt="f11" style={{ width: "100%", borderRadius: "8px" }} />
                       <figcaption className="figcaptionss">
                         <div className="mainggames"><p>Diploma in VR Application Development</p><div className="viewc"><a href="/courses/diploma-in-vr-application-development/">View Course</a></div></div>
 
