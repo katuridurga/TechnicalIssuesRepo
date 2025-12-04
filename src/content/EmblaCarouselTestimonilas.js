@@ -124,7 +124,6 @@ const Testimonials = () => {
     }
   };
 
-
   useEffect(() => {
     updateLayout();
     window.addEventListener("resize", updateLayout);
@@ -252,7 +251,7 @@ const Testimonials = () => {
             {fullPagesOnly.map((item, index) => {
               const isExpanded = expandedCards[index] || false;
               return (
-                <AnimatedText direction="up" delay={0.2} key={index} >
+                <AnimatedText direction="up" delay={0.2} key={index}>
                   <div
                     className="maintestimonial-card"
                     style={{
@@ -275,7 +274,15 @@ const Testimonials = () => {
                       </button>
                     )}
                     <div className="maintestimonial-profile">
-                      <img src={item.avatar} alt={item.name} />
+                      <img
+                        srcSet={`${item.avatar}?w=70&h=70&fit=crop&auto=format 1x, ${item.avatar}?w=140&h=140&fit=crop&auto=format 2x`}
+                        sizes="(max-width: 768px) 70px, 140px"
+                        src={item.avatar}
+                        alt={item.name}
+                        width="70"
+                        height="70"
+                        loading="lazy"
+                      />
                       <div>
                         <strong>{item.name}</strong>
                         <p>{item.role}</p>
@@ -304,5 +311,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-
-

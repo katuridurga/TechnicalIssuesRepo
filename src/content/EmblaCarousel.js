@@ -28,12 +28,24 @@ const numberWithinRange = (number, min, max) =>
   Math.min(Math.max(number, min), max)
 
 const EmblaCarousel = (props) => {
-  
+  useEffect(() => {
+    // Preload the LCP image to optimize loading
+    const preloadLink = document.createElement('link');
+    preloadLink.rel = 'preload';
+    preloadLink.href = newban1; // Or replace with the image that's critical for LCP
+    preloadLink.as = 'image';
+    document.head.appendChild(preloadLink);
+
+    return () => {
+      document.head.removeChild(preloadLink); // Clean up on unmount
+    };
+  }, [newban1]);  // If newban1 changes dynamically, adjust accordingly
+
   const { options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
   const tweenFactor = useRef(0)
 
-  
+
 
   const {
     prevBtnDisabled,
@@ -97,143 +109,106 @@ const EmblaCarousel = (props) => {
 
   const [isMobile, setIsMobile] = React.useState(null)
 
-useEffect(() => {
-  const checkMobile = () => setIsMobile(window.innerWidth <= 768)
-  checkMobile()
-  window.addEventListener("resize", checkMobile)
-  return () => window.removeEventListener("resize", checkMobile)
-}, [])
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768)
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
 
 
   return (
     <div>
+
+      <div className="embla">
+
+        <div className="embla__viewport" ref={emblaRef}>
+          <div className="embla__container">
+
+            <div className="embla__slide" key={0}>
+              <picture>
+                <source srcSet={mbnewban0} media="(max-width: 768px)" />
+                <img
+                  src={newban1}
+                  alt="Home Banner"
+                  width={1526}
+                  height={450}
+                  decoding="async"
+                  fetchpriority="high"
+                  // Remove loading="lazy" to ensure immediate loading for LCP image
+                  style={{ width: "100%", margin: "0 auto", height: "auto" }}
+                />
+              </picture>
+
+
+
+            </div>
+
+
+
+            <div className="embla__slide" key={220}>
+          <picture>
+  {/* Mobile WebP Image for smaller screens (max-width: 768px) */}
+  <source srcSet={mbnewbanF} media="(max-width: 768px)" type="image/webp" />
   
-    <div className="embla">
-      
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
-     
-   <div className="embla__slide" key={0}>
-            <picture>
-  <source srcSet={mbnewban0} media="(max-width: 768px)" />
+  {/* Desktop WebP Image for larger screens */}
+  <source srcSet={newbanF} media="(min-width: 769px)" type="image/webp" />
+
+  {/* Mobile JPG Image fallback */}
+  <source srcSet={mbnewbanF.replace('.webp', '.jpg')} media="(max-width: 768px)" type="image/jpeg" />
+
+  {/* Desktop JPG Image fallback */}
+  <source srcSet={newbanF.replace('.webp', '.jpg')} media="(min-width: 769px)" type="image/jpeg" />
+
+  {/* Fallback image (WebP or JPG depending on the browser support) */}
   <img
-    src={newban1}
+    src={newbanF} // Default image for browsers that don't support <picture> or <source> elements
     alt="Home Banner"
     width={1526}
     height={450}
-    decoding="async"
     fetchpriority="high"
-    loading="lazy"
+    decoding="async"
     style={{ width: "100%", margin: "0 auto", height: "auto" }}
   />
 </picture>
 
-              {/* <img
-                className="embla__slide__img"
-                src={isMobile ? mbnewban0 : newban1}
-                alt="Home Banner" style={{objectPosition:isMobile ? "center" :"top", height:isMobile ? "auto" : "auto", marginTop:isMobile ? "0px" : "0px"}}
-              /> */}
+
             </div>
 
-         
-
-   <div className="embla__slide" key={220}>
-        <picture>
-  <source srcSet={mbnewbanF} media="(max-width: 768px)" />
-  <img
-    src={newbanF}
-    alt="Home Banner"
-    width={1526}
-    height={450}    
-    fetchpriority="high"     
-    decoding="async"
-    style={{ width: "100%" }}
-  />
-</picture>
-              {/* <img
-                className="embla__slide__img"
-                src={isMobile ? mbnewban0 : newban1}
-                alt="Home Banner" style={{objectPosition:isMobile ? "center" :"top", height:isMobile ? "auto" : "auto", marginTop:isMobile ? "0px" : "0px"}}
-              /> */}
-            </div>
-   {/* <div className="embla__slide" key={1}>
-   <picture>
-  <source srcSet={mbnewbang} media="(max-width: 768px)" />
-  <img
-    src={newbang}
-    alt="Home Banner"
-    width={1526}
-    height={450}
-    loading="lazy"  
-    style={{ width: "100%", margin: "0 auto" }}
-  />
-</picture> */}
-        {/* <picture>
-  <source srcSet={mbnewban1} media="(max-width: 768px)" />
-  <LazyLoadImage effect="blur" src={newban0} placeholderSrc={thumbnail} alt="Home Banner" width={1526} height={450} style={{width:"100%", margin: "0 auto"}} />
-</picture>
-
-              {/* <img
-                className="embla__slide__img"
-                src={isMobile ? mbnewban1 : newban0}
-                alt="Home Banner" style={{ height:isMobile ? "auto" : "41rem",objectFit:"cover",objectPosition:"top", marginTop:isMobile ? "0px" :"0px"}}
-              /> 
-            </div>
-       
-            {/* <div className="embla__slide" key={2}>
-            <picture>
-  <source srcSet={mbnewban2} media="(max-width: 768px)" />
-  <LazyLoadImage effect="blur" src={newban2} alt="Home Banner" width={1526} height={450} style={{width:"100%", margin: "0 auto"}} />
-</picture>
-              
-            </div> */}
 
             <div className="embla__slide" key={3}>
-         
 
-<picture>
+
+           <picture>
   <source srcSet={mbnewban3} media="(max-width: 768px)" />
   <img
     src={newban3}
     alt="Home Banner"
     width={1526}
     height={450}
-    loading="lazy"  // ✅ Native lazy loading
+    loading="lazy"  // ✅ Native lazy loading for images that are not critical for LCP
+    decoding="async" // Helps with non-blocking rendering
     style={{ width: "100%", margin: "0 auto" }}
   />
 </picture>
-              {/* <img
-                className="embla__slide__img"
-                src={isMobile ? mbnewban3 : newban3}
-                alt="Home Banner"
-                style={{ height:isMobile ? "auto" : "41rem",objectFit:"cover",objectPosition:"top", marginTop:isMobile ? "0px" :"0px"}}
-              /> */}
+
+
             </div>
 
-            
-         
+
+
+          </div>
         </div>
-      </div>
-      <div className="embla__controls">
-        <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        <div className="embla__controls">
+          <div className="embla__buttons">
+            <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+            <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+          </div>
+
+
         </div>
 
-        {/* <div className="embla__dots">
-          {scrollSnaps.map((_, index) => (
-            <DotButton
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : ''
-              )}
-            />
-          ))}
-        </div> */}
       </div>
-      
-    </div>
     </div>
   )
 }

@@ -33,18 +33,20 @@ export default function MenuLogo() {
           src={logo}
           alt="Backstage Pass"
           className="logo"
-          width="250"
+          width="438"
           height={isMobileState ? 43 : 50}
           loading="eager"      // ✅ Load immediately on page load
           decoding="sync"      // ✅ Render instantly (no async decode delay)
           style={{
-            width: "250px",
+            width: "438px",
             height: isMobileState ? "43px" : "50px",
             display: "block",
             transition: "none",  // ✅ Disable fade/transition
             opacity: 1,          // ✅ Always visible (no fade-in)
           }}
         />
+        
+        
       </Link>
     </>
   );
