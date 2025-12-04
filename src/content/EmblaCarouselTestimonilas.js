@@ -1,87 +1,17 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useMemo } from "react";
 import "./Mainbpstestimonial.css";
 import AnimatedText from "../components/AC-StaticPages/landingpage/AnimatedText";
 
-const testimonials = [
-  {
-    text: "From being a student in the first batch of Backstage Pass to being a mentor later, I have seen BSP grow from a small ambitious game development & game design institute to a full-fledged gaming college. With the game industry's continued growth and future potential, I'm certain they're on the right track to impart the right knowledge and skills to produce competent professionals.",
-    name: "Sushil George",
-    role: "Sr. Game Developer, Product Madness, London, UK",
-    avatar: "https://www.backstagepass.co.in/SushilGeorge-028c91ea.webp?img=1",
-  },
-  {
-    text: "Backstage Pass has an advantage over other colleges since its students are industry-ready, meaning they are ready to begin their careers immediately after graduation, without additional training or fine-tuning. As far as I know, Backstage Pass is the only college dedicated exclusively to game development and game art & design",
-    name: "Rajat Ojha",
-    role: "CEO & Co-Founder,Gamitronics",
-    avatar: "https://www.backstagepass.co.in/rajatojha-ed3d0983.webp?img=2",
-  },
-  {
-    text: "We have been recruiting from Backstage Pass for a couple of years now. They have a certain quality and their courses are amazing! We don't have to wait until the end of the academic year for us to be able to hire their students. Instead, we can hire them right in the middle because they are excellent in what they do. We definitely recommend Backstage Pass.",
-    name: "Sridhar",
-    role: "CEO, Purple Talk",
-    avatar: "https://www.backstagepass.co.in/shridhar-dd6c063d.webp?img=3",
-  },
-  {
-    text: "Backstage Pass brings the like-minded under a single roof. Our courses related to game development & game design were custom- tailored to meet the requirements of the game industry and I feel it is the right place to start for a successful career in the game industry.",
-    name: "Jithin Peter",
-    role: "Sr. Game Programmer, sumo digital, Bangalore",
-    avatar: "https://www.backstagepass.co.in/JithinPeter-bd2017d7.webp?img=4",
-  },
-  {
-    text: "One of the best aspects of Backstage Pass is that it gives you the option to interact with a lot of individuals who have a strong interest in game development and the freedom to work together with students from other streams, such as design or art, to create incredible outcomes.",
-    name: "Anand Dhavle",
-    role: "Gameplay Programmer, Tarsier Studios, Sweden",
-    avatar: "https://www.backstagepass.co.in/AnandDhwale-da6efb8f.webp?img=5",
-  },
-  {
-    text: "Innovation and adaptability are crucial for growth in the modern generation. Therefore, we require a creative and determined workforce. Students from Backstage Pass have excelled in both of these areas. We were very impressed with how they questioned the status quo and developed more effective working methods.",
-    name: "Navin Mandal",
-    role: "Co-Founder & CTO,  Immersive Labz",
-    avatar: "https://www.backstagepass.co.in/navinmandal-280e276b.webp?img=6",
-  },
-  {
-    text: "Backstage Pass is the first of its kind of gaming college in India with some great industry experts. I had the joy of learning from the people who work in the game industry and was taught about the working of the game industry that helped me a lot while working at EA Sports. So, Backstage Pass was a life-changing experience.",
-    name: "Anshul Soni",
-    role: "Software Engineer, EA Sports, Seattle, USA",
-    avatar: "https://backstagepass.co.in/AnshulSoni-cf9bf58b.webp?img=7",
-  },
-  {
-    text: "Our front-end lead Arsalan is a graduate from Backstage Pass and it is a pleasure to see how passionate he is about gaming. Whenever we interview a candidate from Backstage Pass, we find something unique that they bring in; their focus, understanding and knowledge about gaming even before they start working in a company.",
-    name: "Kashyap Reddy",
-    role: "Co-Founder, HitWicket",
-    avatar: "https://backstagepass.co.in/kashyapreddy-889e8da6.webp?img=8",
-  },
-  {
-    text: "While doing my Graduation at Backstage Pass, I started my own Game studio Seven Summits with the help of this gaming college. We learned concepts related to Game Art, Game Design, Level design, etc. from Industry Experts. In order to mark your footprint in the game industry, Backstage Pass is the best place to start.",
-    name: "Asar Dhandala",
-    role: "Founder/ Game Designer/ Producer, Seven Summits",
-    avatar: "https://backstagepass.co.in/Asar-268f6887.webp?img=9",
-  },
-  {
-    text: "When I was searching for colleges that offer Game Art and Design courses, Backstage Pass stood out as the best choice. Once I joined, I discovered the vast opportunities within the gaming industry. In just two years, my skills improved by 60%, thanks to the solid foundation provided. I also worked on a game called Infocus, which was recognized at IGDC. The one-on-one mentorship at Backstage Pass played a crucial role in my learning, as it helped identify and refine the specific skills I needed to develop.",
-    name: "Aniket Mukhi",
-    role: "4th-Year Student in Game Art & Design",
-    avatar: "https://www.backstagepass.co.in/AniketMukhi-c777716a.webp?img=10",
-  },
-  {
-    text: "My passion for gaming led me to pursue a course at Backstage Pass, and it completely transformed my understanding of game art. I learned how entertainment-focused artwork differs from traditional fine arts and how to approach art in a way that makes it a seamless part of the game world. This insight helped me develop a structured approach to game art, turning creativity into immersive gaming experiences.",
-    name: "Surya Shanka",
-    role: "Concept artist at Hitwicket",
-    avatar: "https://www.backstagepass.co.in/Suryashankha-5232eea7.webp?img=11",
-  },
-  {
-    text: "Backstage Pass is one of the few colleges in India that offers a game development course with computer science as a core subject and it truly stands out in this category. The mentors were incredibly supportive throughout my journey. After years of playing games, the ability to now create games that millions enjoy is a rewarding experience. Looking back, I can confidently say that my four years at Backstage Pass were well worth the effort.",
-    name: "Srivatsan Prativadibhayankara",
-    role: "Senior Unity Developer, Product Madness",
-    avatar: "https://www.backstagepass.co.in/Srivatsan-713173e3.webp?img=12",
-  },
-  {
-    text: "Backstage Pass was the catalyst that let me do bigger things as it provided me a very strong foundation. It was more than just exams. There is a lot of scope for knowledge sharing and it played a big role in how I was able to get good at my craft.",
-    name: "Joseph Kalathi",
-    role: "Gameplay Programmer Hacksaw studios,stockholm, sweden",
-    avatar: "https://www.backstagepass.co.in/JoesphKalathil-d9008f68.webp?img=13",
-  },
-];
+// Custom debounce function (no need for external libraries)
+const debounce = (func, delay) => {
+  let timeout;
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      func(...args);
+    }, delay);
+  };
+};
 
 const Testimonials = () => {
   const scrollRef = useRef();
@@ -91,54 +21,116 @@ const Testimonials = () => {
   const [expandedCards, setExpandedCards] = useState({});
   const maxVisibleDots = 4;
 
-  const getVisibleDotRange = () => {
-    if (window.innerWidth >= 768) {
-      // Desktop: show all dots
-      return Array.from({ length: totalPages }, (_, i) => i);
+  // Testimonials data (memoized to avoid unnecessary re-renders)
+  const testimonials = useMemo(() => [
+    {
+      text: "From being a student in the first batch of Backstage Pass to being a mentor later, I have seen BSP grow from a small ambitious game development & game design institute to a full-fledged gaming college. With the game industry's continued growth and future potential, I'm certain they're on the right track to impart the right knowledge and skills to produce competent professionals.",
+      name: "Sushil George",
+      role: "Sr. Game Developer, Product Madness, London, UK",
+      avatar: "https://www.backstagepass.co.in/SushilGeorge-028c91ea.webp?img=1",
+    },
+    {
+      text: "Backstage Pass has an advantage over other colleges since its students are industry-ready, meaning they are ready to begin their careers immediately after graduation, without additional training or fine-tuning. As far as I know, Backstage Pass is the only college dedicated exclusively to game development and game art & design.",
+      name: "Rajat Ojha",
+      role: "CEO & Co-Founder, Gamitronics",
+      avatar: "https://www.backstagepass.co.in/rajatojha-ed3d0983.webp?img=2",
+    },
+    {
+      text: "We have been recruiting from Backstage Pass for a couple of years now. They have a certain quality and their courses are amazing! We don't have to wait until the end of the academic year for us to be able to hire their students. Instead, we can hire them right in the middle because they are excellent in what they do. We definitely recommend Backstage Pass.",
+      name: "Sridhar",
+      role: "CEO, Purple Talk",
+      avatar: "https://www.backstagepass.co.in/shridhar-dd6c063d.webp?img=3",
+    },
+    {
+      text: "Backstage Pass brings the like-minded under a single roof. Our courses related to game development & game design were custom-tailored to meet the requirements of the game industry and I feel it is the right place to start for a successful career in the game industry.",
+      name: "Jithin Peter",
+      role: "Sr. Game Programmer, Sumo Digital, Bangalore",
+      avatar: "https://www.backstagepass.co.in/JithinPeter-bd2017d7.webp?img=4",
+    },
+    {
+      text: "One of the best aspects of Backstage Pass is that it gives you the option to interact with a lot of individuals who have a strong interest in game development and the freedom to work together with students from other streams, such as design or art, to create incredible outcomes.",
+      name: "Anand Dhavle",
+      role: "Gameplay Programmer, Tarsier Studios, Sweden",
+      avatar: "https://www.backstagepass.co.in/AnandDhwale-da6efb8f.webp?img=5",
+    },
+    {
+      text: "Innovation and adaptability are crucial for growth in the modern generation. Therefore, we require a creative and determined workforce. Students from Backstage Pass have excelled in both of these areas. We were very impressed with how they questioned the status quo and developed more effective working methods.",
+      name: "Navin Mandal",
+      role: "Co-Founder & CTO, Immersive Labz",
+      avatar: "https://www.backstagepass.co.in/navinmandal-280e276b.webp?img=6",
+    },
+    {
+      text: "Backstage Pass is the first of its kind of gaming college in India with some great industry experts. I had the joy of learning from the people who work in the game industry and was taught about the working of the game industry that helped me a lot while working at EA Sports. So, Backstage Pass was a life-changing experience.",
+      name: "Anshul Soni",
+      role: "Software Engineer, EA Sports, Seattle, USA",
+      avatar: "https://backstagepass.co.in/AnshulSoni-cf9bf58b.webp?img=7",
+    },
+    {
+      text: "Our front-end lead Arsalan is a graduate from Backstage Pass and it is a pleasure to see how passionate he is about gaming. Whenever we interview a candidate from Backstage Pass, we find something unique that they bring in; their focus, understanding and knowledge about gaming even before they start working in a company.",
+      name: "Kashyap Reddy",
+      role: "Co-Founder, HitWicket",
+      avatar: "https://backstagepass.co.in/kashyapreddy-889e8da6.webp?img=8",
+    },
+    {
+      text: "While doing my Graduation at Backstage Pass, I started my own Game studio Seven Summits with the help of this gaming college. We learned concepts related to Game Art, Game Design, Level design, etc. from Industry Experts. In order to mark your footprint in the game industry, Backstage Pass is the best place to start.",
+      name: "Asar Dhandala",
+      role: "Founder/ Game Designer/ Producer, Seven Summits",
+      avatar: "https://backstagepass.co.in/Asar-268f6887.webp?img=9",
+    },
+    {
+      text: "When I was searching for colleges that offer Game Art and Design courses, Backstage Pass stood out as the best choice. Once I joined, I discovered the vast opportunities within the gaming industry. In just two years, my skills improved by 60%, thanks to the solid foundation provided. I also worked on a game called Infocus, which was recognized at IGDC. The one-on-one mentorship at Backstage Pass played a crucial role in my learning, as it helped identify and refine the specific skills I needed to develop.",
+      name: "Aniket Mukhi",
+      role: "4th-Year Student in Game Art & Design",
+      avatar: "https://www.backstagepass.co.in/AniketMukhi-c777716a.webp?img=10",
+    },
+    {
+      text: "My passion for gaming led me to pursue a course at Backstage Pass, and it completely transformed my understanding of game art. I learned how entertainment-focused artwork differs from traditional fine arts and how to approach art in a way that makes it a seamless part of the game world. This insight helped me develop a structured approach to game art, turning creativity into immersive gaming experiences.",
+      name: "Surya Shanka",
+      role: "Concept artist at Hitwicket",
+      avatar: "https://www.backstagepass.co.in/Suryashankha-5232eea7.webp?img=11",
+    },
+    {
+      text: "Backstage Pass is one of the few colleges in India that offers a game development course with computer science as a core subject and it truly stands out in this category. The mentors were incredibly supportive throughout my journey. After years of playing games, the ability to now create games that millions enjoy is a rewarding experience. Looking back, I can confidently say that my four years at Backstage Pass were well worth the effort.",
+      name: "Srivatsan Prativadibhayankara",
+      role: "Senior Unity Developer, Product Madness",
+      avatar: "https://www.backstagepass.co.in/Srivatsan-713173e3.webp?img=12",
+    },
+    {
+      text: "Backstage Pass was the catalyst that let me do bigger things as it provided me a very strong foundation. It was more than just exams. There is a lot of scope for knowledge sharing and it played a big role in how I was able to get good at my craft.",
+      name: "Joseph Kalathi",
+      role: "Gameplay Programmer Hacksaw studios, Stockholm, Sweden",
+      avatar: "https://www.backstagepass.co.in/JoesphKalathil-d9008f68.webp?img=13",
     }
+  ], []); // Empty dependency array to ensure it's only computed once
 
-    let start = Math.max(0, activePage - Math.floor(maxVisibleDots / 2));
-    let end = start + maxVisibleDots;
-    if (end > totalPages) {
-      end = totalPages;
-      start = Math.max(0, end - maxVisibleDots);
-    }
-
-    return Array.from({ length: end - start }, (_, i) => start + i);
-  };
+  // Update layout based on screen width
   const updateLayout = () => {
     const screenWidth = window.innerWidth;
 
     if (screenWidth < 768) {
-      // ✅ Mobile
       setCardsPerPage(1);
       setScrollWidth(screenWidth);
     } else if (screenWidth < 1100) {
-      // ✅ Between 768px and 1100px → show 2 cards
       setCardsPerPage(2);
-      setScrollWidth(330 * 2 + 20); // adjust spacing
+      setScrollWidth(330 * 2 + 20); // Adjust spacing
     } else {
-      // ✅ Desktop
       setCardsPerPage(3);
       setScrollWidth(330 * 3 + 20 * 2);
     }
   };
 
+  const debouncedUpdateLayout = useMemo(() => debounce(updateLayout, 200), []);
+
   useEffect(() => {
-    updateLayout();
-    window.addEventListener("resize", updateLayout);
+    debouncedUpdateLayout();
+    window.addEventListener("resize", debouncedUpdateLayout);
 
-    // Reset to first page
-    if (scrollRef.current) {
-      scrollRef.current.scrollLeft = 0;
-    }
-
-    return () => window.removeEventListener("resize", updateLayout);
-  }, []);
-
+    return () => window.removeEventListener("resize", debouncedUpdateLayout);
+  }, [debouncedUpdateLayout]);
 
   const totalPages = Math.ceil(testimonials.length / cardsPerPage);
 
+  // Toggle expansion of testimonial text
   const toggleExpand = (index) => {
     setExpandedCards((prev) => ({
       ...prev,
@@ -146,6 +138,7 @@ const Testimonials = () => {
     }));
   };
 
+  // Scroll to specific page
   const scrollToPage = (pageIndex) => {
     const container = scrollRef.current;
     container.scrollTo({
@@ -155,6 +148,7 @@ const Testimonials = () => {
     setActivePage(pageIndex);
   };
 
+  // Handle scroll event to update active page
   useEffect(() => {
     const container = scrollRef.current;
     const handleScroll = () => {
@@ -224,7 +218,20 @@ const Testimonials = () => {
   };
   const onTouchEnd = () => onPointerUp();
 
-  const fullPagesOnly = testimonials;
+  const getVisibleDotRange = () => {
+    if (window.innerWidth >= 768) {
+      return Array.from({ length: totalPages }, (_, i) => i); // Show all dots on desktop
+    }
+
+    let start = Math.max(0, activePage - Math.floor(maxVisibleDots / 2));
+    let end = start + maxVisibleDots;
+    if (end > totalPages) {
+      end = totalPages;
+      start = Math.max(0, end - maxVisibleDots);
+    }
+
+    return Array.from({ length: end - start }, (_, i) => start + i);
+  };
 
   return (
     <section className="maintestimonial-section">
@@ -248,7 +255,7 @@ const Testimonials = () => {
           onTouchEnd={onTouchEnd}
         >
           <div className="maintestimonial-slider-inner">
-            {fullPagesOnly.map((item, index) => {
+            {testimonials.map((item, index) => {
               const isExpanded = expandedCards[index] || false;
               return (
                 <AnimatedText direction="up" delay={0.2} key={index}>
@@ -259,9 +266,7 @@ const Testimonials = () => {
                       maxWidth: `${100 / cardsPerPage}%`,
                     }}
                   >
-                    <h4>
-                      {item.title} <span>”</span>
-                    </h4>
+                    <h4> <span>”</span></h4>
                     <p className={`maintestimonial-text ${isExpanded ? "expanded" : ""}`}>
                       {item.text}
                     </p>
@@ -275,7 +280,7 @@ const Testimonials = () => {
                     )}
                     <div className="maintestimonial-profile">
                       <img
-                        srcSet={`${item.avatar}?w=70&h=70&fit=crop&auto=format 1x, ${item.avatar}?w=140&h=140&fit=crop&auto=format 2x`}
+                        srcSet={`${item.avatar}?w=70&h=70&fit=crop&auto=format 1x, ${item.avatar}`}
                         sizes="(max-width: 768px) 70px, 140px"
                         src={item.avatar}
                         alt={item.name}
@@ -295,7 +300,7 @@ const Testimonials = () => {
           </div>
         </div>
 
-        <div className="dots">
+            <div className="dots">
           {getVisibleDotRange().map((i) => (
             <span
               key={i}
@@ -304,8 +309,8 @@ const Testimonials = () => {
             ></span>
           ))}
         </div>
-
       </div>
+
     </section>
   );
 };

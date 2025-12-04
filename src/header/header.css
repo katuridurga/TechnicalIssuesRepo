@@ -5,39 +5,47 @@
     transition: all .5s ease;
 } */
 
+/* Flex container for the header */
 .head-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center; /* Ensures vertical alignment of the items */
+  justify-content: space-between; /* Space between logo and menu items */
 }
 
-
-
+/* Ensures the head container takes up full width */
 .head-container {
   width: 100%;
   margin: 0 auto;
-  padding: 0px 0;
+  padding: 0;
   background-color: #ffffff;
 }
 
+/* Adjusts the logo container to have the desired height */
 .mainLogo {
-  height: 50px;
+  height: 50px;  /* Height set to 50px */
+  display: flex;  /* Ensure it behaves as a flex container */
+  align-items: center; /* Vertically centers the logo inside the container */
+  justify-content: center; /* Ensures the logo itself is centered */
 }
 
+/* Styling the logo image */
 .logo {
-  height: 50px;
-  object-fit: contain;
+  height: 50px;  /* Sets the height of the logo */
+  object-fit: contain;  /* Ensures the logo is contained within its box */
+  display: block;  /* Prevents any space below the image */
 }
 
+/* Styling for top menu icons */
 .top-menu {
   display: flex;
-  align-items: center;
+  align-items: center; /* Vertically centers the items in the menu */
 }
 
 .topbar-icon {
   width: 22px;
   margin-right: 2px;
 }
+
 
 .social-connect {
   display: flex;

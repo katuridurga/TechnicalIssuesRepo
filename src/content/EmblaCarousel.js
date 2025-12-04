@@ -127,7 +127,7 @@ const EmblaCarousel = (props) => {
 
             <div className="embla__slide" key={0}>
               <picture>
-                <source srcSet={mbnewban0} media="(max-width: 768px)" />
+                <source srcSet={mbnewban0} type="image/webp"  media="(max-width: 768px)" />
                 <img
                   src={newban1}
                   alt="Home Banner"
@@ -147,30 +147,30 @@ const EmblaCarousel = (props) => {
 
 
             <div className="embla__slide" key={220}>
-          <picture>
-  {/* Mobile WebP Image for smaller screens (max-width: 768px) */}
-  <source srcSet={mbnewbanF} media="(max-width: 768px)" type="image/webp" />
+      <picture>
+  {/* Mobile Version */}
+  <source
+    srcSet={mbnewbanF}
+    media="(max-width: 768px)"
+    type="image/webp"
+  />
   
-  {/* Desktop WebP Image for larger screens */}
-  <source srcSet={newbanF} media="(min-width: 769px)" type="image/webp" />
-
-  {/* Mobile JPG Image fallback */}
-  <source srcSet={mbnewbanF.replace('.webp', '.jpg')} media="(max-width: 768px)" type="image/jpeg" />
-
-  {/* Desktop JPG Image fallback */}
-  <source srcSet={newbanF.replace('.webp', '.jpg')} media="(min-width: 769px)" type="image/jpeg" />
-
-  {/* Fallback image (WebP or JPG depending on the browser support) */}
+  {/* Desktop Version */}
   <img
-    src={newbanF} // Default image for browsers that don't support <picture> or <source> elements
+    src={newbanF}
     alt="Home Banner"
     width={1526}
     height={450}
-    fetchpriority="high"
     decoding="async"
-    style={{ width: "100%", margin: "0 auto", height: "auto" }}
+    fetchpriority="high"
+    style={{
+      width: "100%",
+      margin: "0 auto",
+      height: "auto",
+    }}
   />
 </picture>
+
 
 
             </div>

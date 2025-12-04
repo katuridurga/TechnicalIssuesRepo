@@ -27,27 +27,29 @@ export default function MenuLogo() {
  
   return (
     <>
-      {/* ✅ Single Link (no conditional mount) to avoid flicker */}
-      <Link to="/" className="mainLogo" aria-label="Backstage Pass Home">
-        <img
-          src={logo}
-          alt="Backstage Pass"
-          className="logo"
-          width="438"
-          height="75"
-          loading="eager"      // ✅ Load immediately on page load
-          decoding="sync"      // ✅ Render instantly (no async decode delay)
-          style={{
-            width: "438px",
-            height:"75px",
-            display: "block",
-            transition: "none",  // ✅ Disable fade/transition
-            opacity: 1,          // ✅ Always visible (no fade-in)
-          }}
-        />
-        
-        
-      </Link>
+   <Link to="/" className="mainLogo" aria-label="Backstage Pass Home">
+  <img
+    src={logo}
+    alt="Backstage Pass Homepage"
+    className="logo"
+    width="250"         // Width set to 250px
+    height="43"         // Height calculated to maintain aspect ratio
+    loading="eager"     // Load immediately on page load
+    decoding="sync"     // Sync decoding for immediate render
+    style={{
+      width: "250px",    // Fixed width of 250px
+      height: "43px",    // Fixed height of 43px
+      display: "block",  // Prevents unwanted space below the image
+      transition: "none", // Disable any transition animations
+      opacity: 1,        // Always visible
+    }}
+    // To optimize for different screen sizes, using `srcSet` and `sizes`
+    srcSet={`${logo}?w=250&h=43&fit=contain 1x, ${logo}?w=500&h=86&fit=contain 2x`} // Responsive image sources
+    sizes="(max-width: 768px) 250px, 500px"  // Adjust size based on screen width
+  />
+</Link>
+
+
     </>
   );
 }
