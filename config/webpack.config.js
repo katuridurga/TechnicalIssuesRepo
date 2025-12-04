@@ -23,8 +23,10 @@ const paths = require("./paths");
 const modules = require("./modules");
 const getClientEnvironment = require("./env");
 const ModuleNotFoundPlugin = require("react-dev-utils/ModuleNotFoundPlugin");
-const ForkTsCheckerWebpackPlugin = require("react-dev-utils/ForkTsCheckerWebpackPlugin");
-const typescriptFormatter = require("react-dev-utils/typescriptFormatter");
+
+// Removed TypeScript-related imports
+// const ForkTsCheckerWebpackPlugin = require("react-dev-utils/ForkTsCheckerWebpackPlugin");
+// const typescriptFormatter = require("react-dev-utils/typescriptFormatter");
 
 const postcssNormalize = require("postcss-normalize");
 
@@ -34,8 +36,8 @@ const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== "false";
 // makes for a smoother build process.
 const shouldInlineRuntimeChunk = process.env.INLINE_RUNTIME_CHUNK !== "false";
 
-// Check if TypeScript is setup
-const useTypeScript = fs.existsSync(paths.appTsConfig);
+// Check if TypeScript is setup (not needed anymore since we removed TypeScript)
+const useTypeScript = false; // No longer needed
 
 // style files regexes
 const cssRegex = /\.css$/;
@@ -211,7 +213,7 @@ module.exports = function(webpackEnv) {
       ),
       extensions: paths.moduleFileExtensions
         .map(ext => `.${ext}`)
-        .filter(ext => useTypeScript || !ext.includes("ts")),
+        .filter(ext => !ext.includes("ts") && !ext.includes("tsx")), // Removed TypeScript
       alias: {
         "react-native": "react-native-web"
       },
@@ -230,7 +232,7 @@ module.exports = function(webpackEnv) {
       rules: [
         { parser: { requireEnsure: false } },
         {
-          test: /\.(js|mjs|jsx|ts|tsx)$/,
+          test: /\.(js|mjs|jsx)$/g, // Removed TypeScript-related rule
           enforce: "pre",
           use: [
             {
@@ -254,7 +256,7 @@ module.exports = function(webpackEnv) {
               }
             },
             {
-              test: /\.(js|mjs|jsx|ts|tsx)$/,
+              test: /\.(js|mjs|jsx)$/g, // Removed TypeScript-related rule
               include: paths.appSrc,
               loader: require.resolve("babel-loader"),
               options: {
@@ -330,7 +332,7 @@ module.exports = function(webpackEnv) {
             },
             {
               loader: require.resolve("file-loader"),
-              exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
+              exclude: [/\.(js|mjs|jsx)$/, /\.html$/, /\.json$/],
               options: {
                 name: "static/media/[name]-[hash:8].[ext]"
               }
@@ -341,21 +343,6 @@ module.exports = function(webpackEnv) {
     },
     plugins: [
       ...plugins,
-      new ForkTsCheckerWebpackPlugin({
-        async: isEnvDevelopment,
-        typescript: {
-          typescriptPath: resolve.sync("typescript", {
-            basedir: paths.appNodeModules
-          }),
-          configFile: paths.appTsConfig
-        },
-        issue: {
-          include: [
-            paths.appSrc
-          ]
-        },
-        formatter: typescriptFormatter
-      }),
       isEnvProduction &&
         new MiniCssExtractPlugin({
           filename: "static/css/[name].[contenthash:8].css",

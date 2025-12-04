@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/img/newlogo.webp";
+import logo from "../assets/img/newlogow.webp";
 import { useSelector, shallowEqual } from "react-redux";
 
 export default function MenuLogo() {
@@ -34,12 +34,12 @@ export default function MenuLogo() {
           alt="Backstage Pass"
           className="logo"
           width="438"
-          height={isMobileState ? 43 : 50}
+          height="75"
           loading="eager"      // ✅ Load immediately on page load
           decoding="sync"      // ✅ Render instantly (no async decode delay)
           style={{
             width: "438px",
-            height: isMobileState ? "43px" : "50px",
+            height:"75px",
             display: "block",
             transition: "none",  // ✅ Disable fade/transition
             opacity: 1,          // ✅ Always visible (no fade-in)
