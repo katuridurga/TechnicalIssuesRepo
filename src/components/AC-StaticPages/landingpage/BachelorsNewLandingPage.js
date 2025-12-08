@@ -129,7 +129,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     shallowEqual
   );
 
- 
+
   const [isButtonVisible, setIsButtonVisible] = useState(true);
 
   // Function to scroll to the bottom of the container
@@ -359,7 +359,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
         </div>
       </a>
 
-      <div className="row mb0" id="scroll-container" >
+      <div className="row mb0" id="scroll-container">
         <div className="mainPanel1" style={{ background: "#222" }}>
 
           <div style={{ width: isMobileState ? "100%" : "100%", margin: isMobileState ? "0px 0px 0px 0px" : "0px auto" }}>
@@ -431,7 +431,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <div className="anidiv" onClick={scrollToBottom}>
                   <a href="#CounsellingOnGamingCareer" className="anidivli fullwidthinline">
                     <div className="listbtntext listbatchnumber">Enquire Now</div>
-
                   </a>
                 </div>
               </div>
@@ -1240,7 +1239,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
         <ReactWhatsappButton
           countryCode="91"
           phoneNumber="8977945705"
-          style={{ right: isMobileState ? "1.5rem" : "2rem !important", marginBottom: isMobileState ? "-7rem" : "1rem", zIndex: "11111", bottom:"0px !important" }}
+          style={{ right: isMobileState ? "1.5rem" : "2rem!important", marginBottom: isMobileState ? "3rem" : "-7rem", zIndex: "9999", bottom: "20px !important", position: "fixed", left: "20px" }}
           className="whatsappsivakl"
         />
 

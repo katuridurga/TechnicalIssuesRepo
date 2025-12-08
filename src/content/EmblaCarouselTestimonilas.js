@@ -123,8 +123,6 @@ const Testimonials = () => {
       setScrollWidth(330 * 3 + 20 * 2);
     }
   };
-
-
   useEffect(() => {
     updateLayout();
     window.addEventListener("resize", updateLayout);
@@ -133,20 +131,15 @@ const Testimonials = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollLeft = 0;
     }
-
     return () => window.removeEventListener("resize", updateLayout);
   }, []);
-
-
   const totalPages = Math.ceil(testimonials.length / cardsPerPage);
-
   const toggleExpand = (index) => {
     setExpandedCards((prev) => ({
       ...prev,
       [index]: !prev[index],
     }));
   };
-
   const scrollToPage = (pageIndex) => {
     const container = scrollRef.current;
     container.scrollTo({

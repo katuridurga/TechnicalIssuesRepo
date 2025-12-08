@@ -10,21 +10,6 @@ export default function MenuLogo() {
   );
 
   const path = window.location.pathname;
-
-  // ✅ All paths you had in your condition, fixed with .includes()
-  const landingLogoPaths = [
-    "/landingpage/diploma-and-advanced-diploma-game-development-courses/",
-    "/landingpage/gameart/",
-    "/landingpage/masters-and-bachelors-game-development-courses/",
-    "/landingpage/masters-and-bachelors-programs/",
-    "/landingpage/game-art-programs/",
-    "/landingpage/short-course/",
-    "/landingpage/short-course",
-    "/landingpage/game-development-with-unity-programs/",
-    "/landingpage/best-gaming-courses-in-india/",
-  ];
-
- 
   return (
     <>
       {/* ✅ Single Link (no conditional mount) to avoid flicker */}
@@ -35,14 +20,14 @@ export default function MenuLogo() {
           className="logo"
           width="250"
           height={isMobileState ? 43 : 50}
-          loading="eager"      // ✅ Load immediately on page load
-          decoding="sync"      // ✅ Render instantly (no async decode delay)
+          loading="eager"
+          decoding="sync"
           style={{
             width: "250px",
             height: isMobileState ? "43px" : "50px",
             display: "block",
-            transition: "none",  // ✅ Disable fade/transition
-            opacity: 1,          // ✅ Always visible (no fade-in)
+            transition: "none",
+            opacity: 1,
           }}
         />
       </Link>

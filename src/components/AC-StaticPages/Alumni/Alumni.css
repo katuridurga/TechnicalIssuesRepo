@@ -448,6 +448,7 @@ COLOR:#000 !important;
   .speakers-container {
     grid-template-columns: repeat(2, 1fr);
   }
+ 
 }
 
 
@@ -457,6 +458,10 @@ COLOR:#000 !important;
     transform:none !important;   /* enlarge visually, NO layout shift */
     
 }
+  .pagination-containera,
+  .pagination-inside {
+    display: none !important;
+  }
   .speakers-container {
     display: flex;
     overflow-x: auto;
@@ -492,3 +497,59 @@ COLOR:#000 !important;
         grid-template-columns: repeat(4, 1fr) !important;
     }
 }
+
+.pagination-containera {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.page-btna {
+  padding: 8px 14px;
+  background: #f9fafb;
+  border: none;
+  border-radius: 6px;
+  color: #ed1923;
+  font-size: 14px;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
+}
+
+.page-btna.active {
+  background: #ed1923;
+  color: #fff !important;
+}
+
+.page-btna:hover {
+  background: #ed1923;
+  color: #fff !important;
+}
+/* force pagination to come inside container and take full width */
+.pagination-inside {
+  grid-column: 1 / -1 !important;     /* FULL WIDTH ROW */
+  width: 100%;
+  display: flex;           /* horizontal alignment */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;                           /* spacing between buttons */
+  margin-top: 20px;
+}
+
+/* make buttons inline (not vertical bars) */
+.pagination-containera button {
+  display: inline-block !important;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* active page style */
+.pagination-containera .active {
+  background: #e31837;                /* your red color */
+  color: #fff;
+  border-color: #e31837;
+}
+
+
