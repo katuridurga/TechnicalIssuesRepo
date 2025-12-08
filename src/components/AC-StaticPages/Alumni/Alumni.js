@@ -32,7 +32,7 @@ import speaker18 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/
 import speaker19 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/TarunReddi.webp";
 import speaker20 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/VijaySivatejMareedu.webp";
 import speaker1 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AnicsChacko.webp";
-import speaker2 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/DevashishTiwari.webp";
+import speaker2 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/DivyanshuSoni.webp";
 import speaker3 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AnshulSoni.webp";
 import speaker4 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/JosephKalathil.webp";
 import speaker5 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AakashParameswaran.webp";
@@ -81,7 +81,6 @@ import speaker61 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/
 import speaker62 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/RahulHansda.webp";
 import speaker63 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/RiyazAkramShaik.webp";
 import speaker64 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/HarshKarangutkar.webp";
-import speaker65 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AnirudhB.webp";
 import speaker66 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/ManasChhetri.webp";
 import speaker67 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/NandeeshKhyalappa.webp";
 import speaker68 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/Deepanshusingh.webp";
@@ -94,6 +93,8 @@ import speaker74 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/
 import speaker75 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AdityaSharma.webp";
 import speaker76 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/Rishav.webp";
 import speaker77 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/MehulParakh.webp";
+import speaker78 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AkshatPuri.webp";
+
 
 import { useSelector, shallowEqual } from "react-redux";
 
@@ -265,7 +266,7 @@ function Alumni() {
   {
     img: speaker25,
     name: "Nagnath Chippa",
-    title: "Senior Performance Analysis Engineer",
+    title: "Senior Performance Analysis <br/> <br/> Engineer",
     subtitle: "Arm, USA",
     alt: "Nagnath Chippa - Senior Performance Analysis Engineer at Arm, USA"
   },
@@ -286,7 +287,7 @@ function Alumni() {
   {
     img: speaker27,
     name: "Agnibha Goswami",
-    title: "Specialist - Program Management",
+    title: "Specialist - Program <br/> <br/> Management",
     subtitle: "Core42, UAE",
     alt: "Agnibha Goswami - Specialist - Program Management at Core42, UAE"
   },
@@ -319,7 +320,7 @@ function Alumni() {
     alt: "Diksha Subba - Game Developer at Gape Labs, Bengaluru"
   },
   {
-    img: speaker30,
+    img: speaker78,
     name: "Akshat Puri",
     title: "Engineer, Engine",
     subtitle: "LightFuryGames, Bengaluru",
@@ -472,19 +473,34 @@ function Alumni() {
     subtitle: "Magadha Studio, Surat",
     alt: "Jatin Pandey - Game Developer at Magadha Studio, Surat"
   },
-  {
-    img: speaker12,
-    name: "Harshal Shinde",
-    title: "Game Developer",
-    subtitle: "Boo boo games, Ahemdabad",
-    alt: "Harshal Shinde - Game Developer at Boo Boo Games, Ahemdabad"
+    {
+    img: speaker77,
+    name: "Mehul Parakh",
+    title: "Senior Unity Developer",
+    subtitle: "Underpin Technology, UAE",
+    alt: "Mehul Parakh - Senior Unity Developer at Underpin Technology, UAE"
   },
+
   {
     img: speaker17,
     name: "Rishi Prakaash S M",
     title: "Software Developer",
     subtitle: "Mobilityware, USA",
     alt: "Rishi Prakaash S M - Software Developer at Mobilityware, USA"
+  },
+    {
+    img: speaker74,
+    name: "Abhi Astu",
+    title: "3D Artist",
+    subtitle: "SuperGaming, Pune",
+    alt: "Abhi Astu - 3D Artist at SuperGaming, Pune"
+  },
+    {
+    img: speaker12,
+    name: "Harshal Shinde",
+    title: "Game Developer",
+    subtitle: "Boo boo games, Ahemdabad",
+    alt: "Harshal Shinde - Game Developer at Boo Boo Games, Ahemdabad"
   },
   {
     img: speaker46,
@@ -507,13 +523,7 @@ function Alumni() {
     subtitle: "GameShastra, Hyderabad",
     alt: "Vijay Sivatej Mareedu - 3D Artist at GameShastra, Hyderabad"
   },
-  {
-    img: speaker77,
-    name: "Mehul Parakh",
-    title: "Senior Unity Developer",
-    subtitle: "Underpin Technology, UAE",
-    alt: "Mehul Parakh - Senior Unity Developer at Underpin Technology, UAE"
-  },
+
   {
     img: speaker1,
     name: "Anics Chacko",
@@ -594,7 +604,7 @@ function Alumni() {
   {
     img: speaker57,
     name: "Sandeep Kumar",
-    title: "Unity Developer and Game Designer",
+    title: "Unity Developer and Game <br/><br/> Designer",
     subtitle: "Striking Boltz, Hyderabad",
     alt: "Sandeep Kumar - Unity Developer and Game Designer at Striking Boltz, Hyderabad"
   },
@@ -668,13 +678,7 @@ function Alumni() {
     subtitle: "INF IDEAZZZZ CREATIVE PVT LTD, Mumbai",
     alt: "Harsh Karangutkar - 3D Artist at INF IDEAZZZZ CREATIVE PVT LTD, Mumbai"
   },
-  {
-    img: speaker65,
-    name: "Anirudh B",
-    title: "Video Game Designer",
-    subtitle: "INF IDEAZZZZ CREATIVE PVT LTD, Mumbai",
-    alt: "Anirudh B - Video Game Designer at INF IDEAZZZZ CREATIVE PVT LTD, Mumbai"
-  },
+ 
   {
     img: speaker69,
     name: "Arghya Samanta",
@@ -717,13 +721,7 @@ function Alumni() {
     subtitle: "Gameshstra, Hyderabad",
     alt: "Palash Parathe - Unity Game Developer at Gameshstra, Hyderabad"
   },
-  {
-    img: speaker74,
-    name: "Abhi Astu",
-    title: "3D Artist",
-    subtitle: "SuperGaming, Pune",
-    alt: "Abhi Astu - 3D Artist at SuperGaming, Pune"
-  },
+
   {
     img: speaker75,
     name: "Aditya Sharma",
@@ -743,6 +741,7 @@ function Alumni() {
   React.useEffect(() => {
     setData(speakers);
   }, []);
+const speakersRef = React.useRef(null);
 
   return (
     <>
@@ -831,42 +830,53 @@ function Alumni() {
             </Marquee>
 
             <h2 className="mainHeadingTotal">What Are They Working As?</h2>
-            <div className="speakers-container">
+           <div className="speakers-container" ref={speakersRef}>
+  {currentItems.map((s, i) => (
+    <div className="speaker-card" key={i}>
+      <div className="speaker-box">
+        <img src={s.img} alt={s.alt} />
+        <span className="speaker-border"></span>
+      </div>
 
-              {currentItems.map((s, i) => (
-                <div className="speaker-card" key={i}>
-                  <div className="speaker-box">
-                    <img src={s.img} alt={s.name} />
-                    <span className="speaker-border"></span>
-                  </div>
+      <h3 className="speaker-name">{s.name}</h3>
 
-                  <h3 className="speaker-name">{s.name}</h3>
+      <p
+        className="speaker-title"
+        dangerouslySetInnerHTML={{ __html: s.title }}
+      ></p>
 
-                  <p
-                    className="speaker-title"
-                    dangerouslySetInnerHTML={{ __html: s.title }}
-                  ></p>
+      <p style={{ color: "#000", opacity: "0.8", fontSize: "13px" }}>
+        {s.subtitle}
+      </p>
+    </div>
+  ))}
 
-                  <p style={{ color: "#000", opacity: "0.8", fontSize: "13px" }}>
-                    {s.subtitle}
-                  </p>
-                </div>
-              ))}
-{totalPages > 1 && (
-  <div className="pagination-containera pagination-inside">
-    {Array.from({ length: totalPages }).map((_, i) => (
-      <button
-        key={i}
-        className={`page-btna ${currentPage === i + 1 ? "active" : ""}`}
-        onClick={() => setCurrentPage(i + 1)}
-      >
-        {i + 1}
-      </button>
-    ))}
-  </div>
-)}
+  {totalPages > 1 && (
+    <div className="pagination-containera pagination-inside">
+      {Array.from({ length: totalPages }).map((_, i) => (
+        <button
+          key={i}
+          className={`page-btna ${currentPage === i + 1 ? "active" : ""}`}
+          onClick={() => {
+            setCurrentPage(i + 1);
 
-            </div>
+            requestAnimationFrame(() => {
+              if (speakersRef.current) {
+                speakersRef.current.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            });
+          }}
+        >
+          {i + 1}
+        </button>
+      ))}
+    </div>
+  )}
+</div>
+
 
 
 
