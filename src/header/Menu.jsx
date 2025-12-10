@@ -70,6 +70,7 @@ const UnityGame = () => < Async load={import("../components/AC-StaticPages/landi
 const CertifiedSkillUnity = () => < Async load={import("../components/AC-StaticPages/landingpage/CertifiedSkillUnity.js")} />
 
 const CertificateProgramInEssentialsOfGameDesign = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramInEssentialsOfGameDesign.js")} />
+const CertificateProgramInBasicslsOfMaya = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramInBasicslsOfMaya.js")} />
 
 
 const CertificateProgramIn3DGameDevelopmentWithUnity = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramIn3DGameDevelopmentWithUnity.js")} />
@@ -1134,7 +1135,35 @@ function Menu(props) {
     );
   }
 
+  else if (props.component === "CertificateProgramInBasicslsOfMaya") {
+    return (
+      <>
 
+        <React.Fragment>
+          <CssBaseline />
+          <ThemeProvider theme={darkTheme}>
+            <ElevationScroll  {...props}>
+
+              <AppBar>
+                <Toolbar style={toolbarStyle}>
+                  <MenuCore />
+                </Toolbar>
+              </AppBar>
+
+            </ElevationScroll >
+          </ThemeProvider>
+          <Toolbar />
+
+        </React.Fragment>
+        <CertificateProgramInBasicslsOfMaya />
+        <Footer />
+        <ScrollToTop
+          smooth
+          top={100}
+        />
+      </>
+    );
+  }
   else if (props.component === "CertificateProgramInStorytellingAndDesignDocumentationForGames") {
     return (
       <>

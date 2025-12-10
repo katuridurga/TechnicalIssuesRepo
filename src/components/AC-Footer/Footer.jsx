@@ -49,6 +49,7 @@ function Footer() {
     "/landingpage/game-development-programs/",
     "/landingpage/masters-and-bachelors-game-development-courses/",
     "/landingpage/certificate-program-in-essentials-of-game-design/",
+    "/landingpage/certificate-program-in-basics-of-maya/",
     "/landingpage/certificate-program-in-3DGame-development-with-unity/",
     "/landingpage/certificate-program-in-game-development-for-VR/",
     "/landingpage/certificate-program-in-prototyping-and-game-concept-development/",
@@ -103,7 +104,8 @@ function Footer() {
     "/landingpage/game-development-programs/",
     "/landingpage/game-development-with-unity-programs/",
     "/landingpage/game-development-with-unreal-programs/",
-    "/landingpage/certificate-program-in-prototyping-and-game-concept-development/"
+    "/landingpage/certificate-program-in-prototyping-and-game-concept-development/",
+"/landingpage/certificate-program-in-basics-of-maya/"
 
   ];
 

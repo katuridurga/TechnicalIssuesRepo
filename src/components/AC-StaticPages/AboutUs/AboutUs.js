@@ -8,6 +8,7 @@ import bgImage from "../../../assets/img/banners/make-different-img.webp";
 import n1 from "../../../assets/img/banners/nemonics.webp";
 import hwst from "../../../assets/img/test/howstrt.webp";
 import suryasir from "../../../assets/img/test/suryasir.webp";
+import balasir from "../../../assets/img/test/BalaSirimage.webp";
 import { Helmet } from "react-helmet";
 import m1 from "../../../assets/img/Icons/passion.webp";
 import m2 from "../../../assets/img/Icons/veterans.webp";
@@ -82,118 +83,209 @@ function Aboutus(props) {
       <h2 className="mainHeadingTotal fadeInUp anime-delay" style={{ marginTop: "-30px!important", textAlign: "center" }}>Our Story
       </h2>
       <h3 className='tagline tg1' style={{ color: "#ed1925" }}> To shape the future of global gaming education</h3>
-      <div className='courses-container'>
+      <div className='courses-container' >
         <div className="main-img" style={{ boxShadow: "none", backgroundColor: "#fff", marginBottom: "28px !important" }}>
-          
 
-        {isMobileState ? (
-          <>
-            <div className="sec-title">
-              <h2 className="courseHeading fadeInUp anime-delay" style={{ color: "#ed1925" }}>How It Started</h2>
-            </div>
-<div className="main-img2 brtopleft" style={{ boxShadow: "none", background: "none", padding: "0px" }}>
-    <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%" }}>
-      <div className="inner-column inner-column1 wow fadeInLeft">
-        <div className="image-1">
-          <a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images">
-            <img src={hwst} alt="hwst" />
-          </a>
+
+          {isMobileState ? (
+            <>
+              <div className="sec-title">
+                <h2 className="courseHeading fadeInUp anime-delay" style={{ color: "#ed1925" }}>How It Started</h2>
+              </div>
+              <div className="main-img2 brtopleft" style={{ boxShadow: "none", background: "none", padding: "0px" }}>
+                <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%" }}>
+                  <div className="inner-column inner-column1 wow fadeInLeft">
+                    <div className="image-1">
+                      <a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images">
+                        <img src={hwst} alt="hwst" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="text">
+                At a time when gaming enthusiasts didn’t have many game development colleges in India to turn to,
+                <b style={{ fontSize: "16px", color: '#ed1925' }}>
+                  <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">
+                    Backstage Pass Institute of Gaming
+                  </a>
+                </b>
+                rose as a beacon of hope. With a single motto to revolutionise the world of gaming in the country and transform this form of entertainment into a full-fledged source of earning, Backstage Pass has championed quality gaming education at an affordable price.
+              </div>
+
+              <div className="text">
+                The institute has welcomed students from all over the country, belonging to diverse backgrounds and unique mindsets, uniting them through their singular passion for gaming and making games. As one of the leading gaming colleges in India, Backstage Pass offers career-oriented bachelor's programs in India, making it one of the best video game development courses after 12th for aspiring game developers and creators.
+              </div>
+            </>
+          ) : (
+            <>
+
+              <div style={{ boxShadow: "none", padding: "0px" }} className="main-img2">
+                <div style={{ boxShadow: "none", background: "none", padding: "0px", width: "100%" }} >
+                  <div className="inner-column" style={{ padding: "0px" }}>
+
+                    <div className="sec-title">
+                      <h2 className="courseHeading fadeInUp anime-delay" style={{ color: "#ed1925" }}>How It Started</h2>
+                    </div>
+                    <div className="text">At a time when gaming enthusiasts didn’t have many game development colleges in India to turn to,<b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer"> Backstage Pass Institute of Gaming</a></b> rose as a beacon of hope. With a single motto to revolutionise the world of gaming in the country and transform this form of entertainment into a full-fledged source of earning, Backstage Pass has championed quality gaming education at an affordable price.
+                    </div>
+                    <div className="text">
+                      The institute has welcomed students from all over the country, belonging to diverse backgrounds and unique mindsets, uniting them through their singular passion for gaming and making games. As one of the leading gaming colleges in India, Backstage Pass offers career-oriented bachelor's programs in India, making it one of the best video game development courses after 12th for aspiring game developers and creators.
+                    </div>
+
+                  </div></div>
+              </div>
+
+              <div className="main-img2 brtopleft" style={{ boxShadow: "none", background: "none", padding: "0px" }} >
+                <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%" }}>
+                  <div className="inner-column inner-column1 wow fadeInLeft" style={{}}>
+                    <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={hwst} alt="hwst" /></a></div>
+
+                  </div></div>
+              </div>
+
+
+            </>
+          )}
+
+
+        </div>
+        <div className='courses-container bgcontainerv' style={{ marginTop: isMobileState ? "30px" : "20px" }}>
+
+          <h2 className="courseHeading fadeInUp anime-delay" style={{ marginTop: "-30px!important", textAlign: "center" }}>Vision
+          </h2>
+          <p className="text">
+            What began as my vision, has grown into a thriving academic and professional ecosystem uniting students, alumni, and industry experts.<br />
+            Our graduates join leading game studios, contribute to acclaimed titles, and earn recognition for their creative and technical excellence. <br />
+            These achievements reflect our spirit and standards. Join us in shaping the future of game development.
+          </p>
+
+        </div>
+        <div className="sec-title" style={{marginBottom:"0px"}}>
+          <h2 className="vision-section courseHeading fadeInUp anime-delay" style={{ color: "#ed1925", textAlign: "center", marginTop:"45px" }}>About Management </h2>
+        </div>
+        <div className="main-img" style={{ boxShadow: "none", marginBottom: "28px !important" }}>
+
+          {isMobileState ? (
+            <>
+
+            
+              <div className="main-img" style={{ boxShadow: "none", marginBottom: "28px !important", marginTop:"0px" }}>
+                  <div style={{ boxShadow: "none", background: "none", padding: "0px", marginBottom: isMobileState ? "0px" : "0px" }} className="main-img2 brtopleft1">
+                <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%", marginTop: isMobileState ? "0px" : "20px" }}>
+                  <div className="inner-column inner-column1 wow fadeInLeft" style={{ paddingBottom: "0px" }}>
+                    <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={suryasir} alt="suryasir" /></a></div>
+                    <div className='bg-red'>
+                      <p></p>
+                    </div>
+
+                  </div></div>
+              </div>
+                <div style={{ boxShadow: "none", padding: "0px" }} className="main-img2 mat">
+                  <div style={{ boxShadow: "none", background: "none", padding: "0px" }} >
+                    <div className="inner-column" style={{ padding: isMobileState ? '0px 0px 0px 0px' : '0px 0px 0px 30px' }}>
+
+                      <div className="text"> <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.linkedin.com/in/surya-p-99413b6/" rel="noopener noreferrer" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank">Mr. Surya</a></b> brings a unique blend of creative and
+                        business expertise to the gaming education
+                        ecosystem. He holds a Diploma in 3D Animation
+                        and Visual Effects, specialising in Character
+                        Animation from Vancouver Film School (2003),
+                        and a Bachelor's Degree in Foreign Trade from
+                        Nizam College.</div>
+                      <div className="text">With prior experience in the visual effects and
+                        gaming industry, he has navigated real-world
+                        challenges, built strong industry connections, and
+                        now leverages that experience to guide and
+                        empower students at Backstage Pass.</div>
+                      <div className="text">He strongly believes that with the right
+                        mentorship and tools, Indian game developers
+                        can succeed on the global stage.</div>
+
+                    </div></div>
+                </div>
+
+              </div>
+
+            </>
+          ) : (
+            <>
+
+              <div className="main-img" style={{ boxShadow: "none", marginBottom: "28px !important", display:"flex", alignItems:"center", justifyContent:"center", marginTop:"0px"  }}>
+                <div className="main-img2 brtopleft" style={{ boxShadow: "none", background: "none", padding: "0px" }} >
+                  <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%" }}>
+                    <div className="inner-column inner-column1 wow fadeInLeft" style={{}}>
+                      <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={suryasir} alt="suryasir" /></a></div>
+
+                    </div></div>
+                </div>
+                <div style={{ boxShadow: "none", padding: "0px" }} className="main-img2 mat">
+                  <div style={{ boxShadow: "none", background: "none", padding: "0px" }} >
+                    <div className="inner-column" style={{ padding: isMobileState ? '0px 0px 0px 0px' : '0px 0px 0px 30px' }}>
+
+                      <div className="text"> <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.linkedin.com/in/surya-p-99413b6/" rel="noopener noreferrer" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank">Mr. Surya</a></b> brings a unique blend of creative and
+                        business expertise to the gaming education
+                        ecosystem. He holds a Diploma in 3D Animation
+                        and Visual Effects, specialising in Character
+                        Animation from Vancouver Film School (2003),
+                        and a Bachelor's Degree in Foreign Trade from
+                        Nizam College.</div>
+                      <div className="text">With prior experience in the visual effects and
+                        gaming industry, he has navigated real-world
+                        challenges, built strong industry connections, and
+                        now leverages that experience to guide and
+                        empower students at Backstage Pass.</div>
+                      <div className="text">He strongly believes that with the right
+                        mentorship and tools, Indian game developers
+                        can succeed on the global stage.</div>
+
+                    </div></div>
+                </div>
+
+
+              </div>
+
+
+
+            </>
+          )}
         </div>
       </div>
-    </div>
-  </div>
-            <div className="text">
-              At a time when gaming enthusiasts didn’t have many game development colleges in India to turn to,
-              <b style={{ fontSize: "16px", color: '#ed1925' }}>
-                <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">
-                  Backstage Pass Institute of Gaming
-                </a>
-              </b>
-              rose as a beacon of hope. With a single motto to revolutionise the world of gaming in the country and transform this form of entertainment into a full-fledged source of earning, Backstage Pass has championed quality gaming education at an affordable price.
-            </div>
+      <div className='courses-container' style={{ marginTop: isMobileState ? "0px" : "20px" }}>
+        <div className="main-img" style={{ boxShadow: "none", marginBottom: "28px !important", display:"flex", alignItems:"center", justifyContent:"center" }}>
 
-            <div className="text">
-              The institute has welcomed students from all over the country, belonging to diverse backgrounds and unique mindsets, uniting them through their singular passion for gaming and making games. As one of the leading gaming colleges in India, Backstage Pass offers career-oriented bachelor's programs in India, making it one of the best video game development courses after 12th for aspiring game developers and creators.
-            </div>
-          </>
-        ) : (
-          <>
+          <div style={{ boxShadow: "none", padding: "0px" }} className="main-img2 mat">
+            <div style={{ boxShadow: "none", background: "none", padding: "0px" }} >
+              <div className="inner-column" style={{ padding: isMobileState ? '0px 0px 0px 0px' : '0px 0px 0px 30px' }}>
 
-          <div style={{ boxShadow: "none", padding: "0px" }} className="main-img2">
-            <div style={{ boxShadow: "none", background: "none", padding: "0px", width: "100%" }} >
-              <div className="inner-column" style={{ padding: "0px" }}>
-                
-                <div className="sec-title">
-                  <h2 className="courseHeading fadeInUp anime-delay" style={{ color: "#ed1925" }}>How It Started</h2>
-                </div>
-                <div className="text">At a time when gaming enthusiasts didn’t have many game development colleges in India to turn to,<b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer"> Backstage Pass Institute of Gaming</a></b> rose as a beacon of hope. With a single motto to revolutionise the world of gaming in the country and transform this form of entertainment into a full-fledged source of earning, Backstage Pass has championed quality gaming education at an affordable price.
-                </div>
-                <div className="text">
-                  The institute has welcomed students from all over the country, belonging to diverse backgrounds and unique mindsets, uniting them through their singular passion for gaming and making games. As one of the leading gaming colleges in India, Backstage Pass offers career-oriented bachelor's programs in India, making it one of the best video game development courses after 12th for aspiring game developers and creators.
-                </div>
+                <div className="text"> <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.linkedin.com/in/bala-krishna-annaluri-ba08321a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" rel="noopener noreferrer" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank">Dr. Bala Krishna Annaluri</a></b>  is a distinguished
+                  academic in Game Development and Interactive
+                  Technologies. He holds a PhD in Computer Science
+                  specializing in AI-driven NPC creation.</div>
+                <div className="text">With over 20+ years in higher and technical
+                  education, including 15+ years dedicated to
+
+                  gaming, he pioneered India’s first university-
+                  affiliated undergraduate and postgraduate
+
+                  programs in Game Art, Game Design, Game
+                  Development, and AR/VR Technologies.</div>
+                <div className="text">Under his leadership academic frameworks were
+                  built to align curriculum design, evaluation
+                  systems, and quality bench marks with industry
+                  standards. Serving on the Boards of Studies for
+                  JNAFAU and Osmania University, Dr. Annaluri
+                  continues to advance gaming education nationally.</div>
 
               </div></div>
           </div>
           <div className="main-img2 brtopleft" style={{ boxShadow: "none", background: "none", padding: "0px" }} >
             <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%" }}>
-              <div className="inner-column inner-column1 wow fadeInLeft" style={{}}>
-                <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={hwst} alt="hwst" /></a></div>
+              <div className="inner-column inner-column1 wow fadeInLeft" style={{paddingBottom:isMobileState?"0px":"20px"}}>
+                <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={balasir} alt="suryasir" /></a></div>
 
               </div></div>
           </div>
-</>
-)}
 
-
-        </div>
-
-        <div className="main-img" style={{ boxShadow: "none", marginBottom: "28px !important" }}>
-
-          {isMobileState ? (
-            <> 
-              <div className="sec-title">
-                      <h2 className="vision-section courseHeading fadeInUp anime-delay" style={{ color: "#ed1925", textAlign: "left" }}>Vision </h2>
-                    </div><div style={{ boxShadow: "none", background: "none", padding: "0px", marginBottom: isMobileState ? "0px" : "0px" }} className="main-img2 brtopleft1">
-              <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%", marginTop: isMobileState ? "0px" : "20px" }}>
-                <div className="inner-column inner-column1 wow fadeInLeft" style={{ paddingBottom: "0px" }}>
-                  <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={suryasir} alt="suryasir" /></a></div>
-
-                </div></div>
-            </div>
-              <div style={{ boxShadow: "none", padding: "0px" }} className="main-img2 mat">
-                <div style={{ boxShadow: "none", background: "none", padding: "0px" }} >
-                  <div className="inner-column" style={{ padding: isMobileState ? '0px 0px 0px 0px' : '0px 0px 0px 30px' }}>
-                  
-                    <div className="text"> What started as <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.linkedin.com/in/surya-p-99413b6/" rel="noopener noreferrer" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank">Mr. Surya's</a></b> simple vision has evolved into a thriving academic and professional ecosystem, bringing together a diverse gaming community of students, alumni, and industry experts.</div>
-                    <div className="text">Over the years, our graduates have joined some of the largest game studios, contributed to the development of innovative and acclaimed titles, and earned recognition for their creative and technical excellence. </div>
-                    <div className="text">These achievements reflect the enduring spirit and high standards of our institution. If you're motivated to shape the future of game development, we welcome you to embark on this journey with us.</div>
-
-                  </div></div>
-              </div>
-            </>
-          ) : (
-            <>
-              <div style={{ boxShadow: "none", background: "none", padding: "0px", marginBottom: isMobileState ? "0px" : "0px" }} className="main-img2 brtopleft1">
-                <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%", marginTop: isMobileState ? "0px" : "20px" }}>
-                  <div className="inner-column inner-column1 wow fadeInLeft" style={{ paddingBottom: "0px" }}>
-                    <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={suryasir} alt="suryasir" /></a></div>
-
-                  </div></div>
-              </div>
-              <div style={{ boxShadow: "none", padding: "0px" }} className="main-img2">
-                <div style={{ boxShadow: "none", background: "none", padding: "0px" }} >
-                  <div className="inner-column" style={{ padding: isMobileState ? '0px 0px 0px 0px' : '0px 0px 0px 30px' }}>
-                    <div className="sec-title">
-                      <h2 className="vision-section courseHeading fadeInUp anime-delay" style={{ color: "#ed1925", textAlign: "left" }}>Vision </h2>
-                    </div>
-                    <div className="text"> What started as <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.linkedin.com/in/surya-p-99413b6/" rel="noopener noreferrer" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank">Mr. Surya's</a></b> simple vision has evolved into a thriving academic and professional ecosystem, bringing together a diverse gaming community of students, alumni, and industry experts.</div>
-                    <div className="text">Over the years, our graduates have joined some of the largest game studios, contributed to the development of innovative and acclaimed titles, and earned recognition for their creative and technical excellence. </div>
-                    <div className="text">These achievements reflect the enduring spirit and high standards of our institution. If you're motivated to shape the future of game development, we welcome you to embark on this journey with us.</div>
-
-                  </div></div>
-              </div>
-            </>
-          )}
         </div>
       </div>
       <div className='courses-container' style={{ marginTop: isMobileState ? "0px" : "20px" }}>

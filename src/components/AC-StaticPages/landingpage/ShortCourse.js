@@ -126,6 +126,7 @@ function SkillDiplomaCourses({ active, props }) {
     if (referrer) {
       const urlParts = referrer.split('/').filter(Boolean);
       lastSegment = urlParts[urlParts.length - 1];
+      
       if (lastSegment === 'short-course') {
         lastSegment = "";
       }
@@ -542,13 +543,10 @@ function SkillDiplomaCourses({ active, props }) {
                 </div>
               </div>
               <div>
-                <div className='fom-ad-21' id="CounsellingOnGamingCareer">
+                <div className='fom-ad-21' id="CounsellingOnGamingCareer" style={{marginTop:"0px"}}>
 
 
-                  <div className='containers-21'>
-
-
-
+                  <div className='containers-21' style={{boxShadow:isMobileState? "0 0px 0px rgba(0, 0, 0, .6)":" 0 15px 20px rgba(0, 0, 0, .6)"}}>
 
                     {/* 
                     <form onSubmit={handleSubmit} className="formMain">
@@ -650,9 +648,10 @@ function SkillDiplomaCourses({ active, props }) {
                       encType="multipart/form-data"
                     >
 
-                      <p className="suprtsMobiless">ENROLLMENT FORM</p>
+                      <p className="mainHeadingTotall-2" style={{fontSize:isMobileState?"20px":"30px",color:"#ee1b24"}}>ENROLLMENT FORM</p>
 
-                      <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
+                      <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container" style={{
+    gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(2, 1fr)" }}>
                         <div className="">
                           <label className="" for="fullname">Full Name (as per official documents)</label>
                           <input
@@ -684,7 +683,8 @@ function SkillDiplomaCourses({ active, props }) {
                         </div>
                       </div>
 
-                      <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
+                      <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container" style={{
+    gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(2, 1fr)" }}>
                         <div className="">
                           <label className="" htmlFor="email">Email Address</label>
                           <input
@@ -725,7 +725,7 @@ function SkillDiplomaCourses({ active, props }) {
                             name="course"
                             id="course"
                             value={formData.course}
-                            style={{ width: "100%" }}
+                            style={{ width: "100%", marginBottom:"20px" }}
                             required
                           >
                             <option value="" disabled>
@@ -788,14 +788,14 @@ function SkillDiplomaCourses({ active, props }) {
                         </div>
                         {paymentDetails.originalPayment && (
                           <div className='paymentShortCourse'>
-                            <div>Payment (INR): <span>₹{paymentDetails.originalPayment}</span></div>
+                            <div style={{color:"#000"}}>Payment (INR): <span>₹{paymentDetails.originalPayment}</span></div>
                             {paymentDetails.discountValue > 0 && (
-                              <div>
+                              <div style={{color:"#000"}}>
                                 Discount (INR): <span>-₹{paymentDetails.discountValue}</span>
                               </div>
                             )}
 
-                            <div>Total Payment (INR): <span>₹{paymentDetails.finalAmount}</span></div>
+                            <div style={{color:"#000"}}>Total Payment (INR): <span>₹{paymentDetails.finalAmount}</span></div>
                           </div>
                         )}
                         <div className="checkbox-container" >
@@ -856,7 +856,7 @@ function SkillDiplomaCourses({ active, props }) {
               </div>
             </div>
             <div id="Career-Opportunitiesl" backgroundColor="brown" height="auto">
-              <h2 className='mainHeadingTotall-2'>you might also like
+              <h2 className='mainHeadingTotall-2' style={{color:"#ee1b24"}}>you might also like
               </h2>
               <div className="course-section">
                
@@ -869,7 +869,7 @@ function SkillDiplomaCourses({ active, props }) {
                 </div>
               </div>
 
-              <h2 className='mainHeadingTotall-2'>Explore Now</h2>
+              <h2 className='mainHeadingTotall-2' style={{color:"#ee1b24"}}>Explore Now</h2>
 
               <div className="course-section">
                
@@ -891,7 +891,7 @@ function SkillDiplomaCourses({ active, props }) {
 
 
 
-            <h2 className='mainHeadingTotall-2'>Why Choose Backstage Pass?
+            <h2 className='mainHeadingTotall-2' style={{color:"#ee1b24"}}>Why Choose Backstage Pass?
             </h2>
 
             <ul className='featuress3gl'>
@@ -933,7 +933,7 @@ function SkillDiplomaCourses({ active, props }) {
 
 
 
-            <h2 className='mainHeadingTotall-2'>A short course will help you be industry ready!
+            <h2 className='mainHeadingTotall-2'  style={{color:"#ee1b24"}}>A short course will help you be industry ready!
             </h2>
 
 
@@ -941,8 +941,8 @@ function SkillDiplomaCourses({ active, props }) {
 
 
 
-            <div className="footerin" style={{ height: "160px", padding: "30px" }}>
-              <div className="text-center foot-content fadeInUp anime-delay2" style={{ display: 'flex', alignItems: "center", justifyContent: "center", color: "#fff" }}>© A Subsidiary of PVR Memorial Educational Society 2025. All Rights Reserved</div>
+            <div className="footerin" style={{padding: "30px" }}>
+              <div className="text-center foot-content fadeInUp anime-delay2" style={{ display: 'flex', alignItems: "center", justifyContent: "center", color: "#000000" }}>© A Subsidiary of PVR Memorial Educational Society 2025. All Rights Reserved</div>
             </div>
           </div>
 

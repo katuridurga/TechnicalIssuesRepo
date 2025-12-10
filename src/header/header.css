@@ -358,6 +358,10 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .courseObj {
+    width: 85%;
+    margin: 10px auto !important;
+}
   .readmore-btn {
     margin-top: -12px !important;
     display: inline-flex;
@@ -1503,15 +1507,19 @@
   }
 
   .courseObj li:nth-child(odd) {
-    background-color: #222;
+    background-color: #f9fafb;
     border-radius: 4px;
     padding: 12px 10px 12px 40px !important;
+        color: #000;
+       box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
   }
 
   .courseObj li:nth-child(even) {
-    background-color: #222;
+    background-color: #f9fafb;
     border-radius: 4px;
     padding: 12px 10px 12px 40px !important;
+        color: #000;
+     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
   }
 
   .courseObj1 {
@@ -1797,6 +1805,7 @@
     padding: 0rem 0% 0rem 0% !important;
     margin-top: 20px;
     margin: 0 auto;
+        box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
   }
 
   .lefthd {
@@ -1821,7 +1830,7 @@
     align-items: center;
     justify-content: flex-start;
     padding: 0px 20px;
-    color: #fff;
+    color: #000;
     border-radius: 10px;
     width: 90%;
     font-size: 19px;
@@ -1847,7 +1856,7 @@
     align-items: center;
     justify-content: flex-start;
     padding: 0px 10px !important;
-    color: #fff;
+    color: #000;
     border-radius: 10px;
     width: 90%;
     font-size: 15px !important;
@@ -1981,7 +1990,7 @@
     margin: 0 10px !important;
     border-radius: 0px;
     overflow: hidden;
-    background: #222;
+    background: #f9fafb;
     box-shadow: 0 15px 20px rgba(0, 0, 0, .6);
   }
 
@@ -3519,7 +3528,16 @@ div.et_pb_section.et_pb_section_0 {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #0a0a0a 100%), url(./../assets/img/banners/ESSENTIALSOFGAMEDESIGN.webp) !important;
   height: 500px;
 }
-
+.basicsofmaya {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #0a0a0a 100%), url(./../assets/img/banners/MayaD.webp) !important;
+  background-size: 100% auto;   /* Fills width, keeps ratio */
+background-position: center top;
+background-repeat: no-repeat;
+width: 100%;
+height: auto;
+object-fit: contain;
+    background-size: 100% 100%;
+}
 .DGAMEDEVELOPMENTWITHUNITY {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #0a0a0a 100%), url(./../assets/img/banners/3DHardSurfaceB.webp) !important;
   height: 500px;
@@ -3587,7 +3605,17 @@ div.et_pb_section.et_pb_section_0 {
   height: 287px;
   background-size: cover !important;
 }
-
+.basicsofmayamc {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 100%, #0a0a0a 100%), url(./../assets/img/banners/Mayam.webp) !important;
+  height: 525px;
+  background-size: contain !important;
+    background-size: 100% auto;   /* Fills width, keeps ratio */
+background-position: center top;
+background-repeat: no-repeat;
+width: 100%;
+object-fit: contain;
+    background-size: 100% 100%;
+}
 
 .DGAMEDEVELOPMENTWITHUNITYmc {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 100%, #0a0a0a 100%), url(./../assets/img/banners/3DHardSurface.webp) !important;
@@ -5554,14 +5582,14 @@ video {
   grid-column-gap: 0rem;
   padding: 1rem 0% 1rem 0px;
   /* margin-top: 20px; */
-  background: #222;
+  background: #f9fafb;
   align-items: center;
   grid-row-gap: 0px;
-
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .4);
 }
 
 .featuress3u {
-  width: 54%;
+  width: 58%;
   margin: 0px auto;
   margin-bottom: 20px;
   display: grid;
@@ -5569,10 +5597,10 @@ video {
   grid-column-gap: 0rem;
   padding: 1rem 0% 1rem 0px;
   /* margin-top: 20px; */
-  background: #222;
+  background: #f9fafb;
   align-items: center;
   grid-row-gap: 0px;
-
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
 }
 
 .featuress2 li {
@@ -5629,7 +5657,7 @@ video {
   align-items: center;
   justify-content: flex-start;
   padding: 0px 20px;
-  color: #fff;
+  color: #000;
   border-radius: 10px;
   width: 90%;
   font-size: 19px;
@@ -5952,7 +5980,7 @@ video {
   margin: 0 28px;
   border-radius: 0px;
   overflow: hidden;
-  background: #222;
+  background: #f9fafb;
   box-shadow: 0 15px 20px rgba(0, 0, 0, .6);
 }
 
@@ -6445,6 +6473,7 @@ video {
     align-items: center;
   }
 }
+
 
 .left1 {
   display: flex;
@@ -8001,6 +8030,7 @@ body {
   justify-content: center;
   background: #ec1925;
   padding: 18px;
+  margin-top:0px;
 }
 
 .elm li {
@@ -8012,7 +8042,9 @@ body {
   font-size: 18px;
   font-weight: bold;
 }
-
+.dwnbtn:hover{
+  color:#fff !important;
+}
 .dwnbtn {
   color: #fff;
   letter-spacing: 1.6px;
@@ -8180,12 +8212,12 @@ body {
 
 .courseObj {
   width: 85%;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 
 .courseObj h2 {
   font-size: 32px;
-  color: #000;
+  color: #ee1b24;
   text-transform: capitalize;
   font-weight: 600;
   margin-top: 40px;
@@ -8193,7 +8225,7 @@ body {
   width: 85%;
   letter-spacing: 1px;
   text-align: center;
-  margin: 40px auto 30px auto;
+  margin: 40px auto 40px auto;
   z-index: 9;
   position: relative;
 }
@@ -8228,15 +8260,19 @@ body {
 }
 
 .courseObj li:nth-child(odd) {
-  background-color: #222;
+  background-color: #f9fafb;
   border-radius: 4px;
   padding: 12px 40px;
+      color: #000;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
 }
 
 .courseObj li:nth-child(even) {
-  background-color: #222;
+  background-color: #f9fafb;
   border-radius: 4px;
   padding: 12px 40px;
+       color: #000;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
 }
 
 
@@ -8256,7 +8292,7 @@ body {
 
 .courseObj1 h2 {
   font-size: 32px;
-  color: #000;
+  color: #ee1b24;
   text-transform: capitalize;
   font-weight: 600;
   margin-top: 40px;
@@ -8264,7 +8300,7 @@ body {
   width: 85%;
   letter-spacing: 1px;
   text-align: center;
-  margin: 40px auto 30px auto;
+  margin: 40px auto 40px auto;
   z-index: 9;
   position: relative;
 }
@@ -8300,15 +8336,19 @@ body {
 }
 
 .courseObj1 li:nth-child(odd) {
-  background-color: #222;
+  background-color: #f9fafb;
   border-radius: 4px;
   padding: 12px 40px;
+  color: #000;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
 }
 
 .courseObj1 li:nth-child(even) {
-  background-color: #222;
+  background-color: #f9fafb;
   border-radius: 4px;
   padding: 12px 40px;
+  color: #000;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
 }
 
 /* Custom Checkbox Styles */
@@ -8385,6 +8425,7 @@ body {
   filter: invert(1);
   /* This turns the icon white */
   cursor: pointer;
+  color:#000000;
 }
 
 .img-handler-bot {
@@ -9401,5 +9442,10 @@ td p {
 
   .counter-wrapper {
     margin-top: 3rem !important;
+  }
+}
+@media (max-width: 412px) {
+  .container1{
+    margin-top: 18px;
   }
 }

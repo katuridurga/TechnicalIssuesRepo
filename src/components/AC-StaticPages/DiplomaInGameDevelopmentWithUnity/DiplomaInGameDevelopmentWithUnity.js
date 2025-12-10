@@ -80,7 +80,7 @@ function Courses(props) {
 
   const faqs = [
     {
-      question: "Career Opportunities",
+      question: "Game Development",
       answer: [
 "Game Programmer",
 "Unity Developer",

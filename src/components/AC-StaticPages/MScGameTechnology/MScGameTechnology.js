@@ -104,7 +104,7 @@ function Courses(props) {
 
   const faqs = [
     {
-      question: "GAME PROGRAMMING",
+      question: "Game Programming",
       answer: [
         "Programmer",
         "Game Programmer",
@@ -118,7 +118,7 @@ function Courses(props) {
       ],
     },
     {
-      question: "GAME DESIGN",
+      question: "Game Design",
       answer: [
         "Game Designer",
         "Level Designer",
@@ -130,7 +130,7 @@ function Courses(props) {
       ],
     },
     {
-      question: "OTHER CAREERS",
+      question: "Other Careers",
       answer: [
         "Game Producer",
         "Quality Assurance Tester",

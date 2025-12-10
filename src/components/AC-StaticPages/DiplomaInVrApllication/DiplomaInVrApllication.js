@@ -64,7 +64,7 @@ function Courses(props) {
   ];
   const faqs = [
     {
-      question: "Career Opportunities",
+      question: "AR/VR & Game Programming",
       answer: [
         "AR /VR AppDeveloper",
         "AR/VR Game Developer",

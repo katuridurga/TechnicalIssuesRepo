@@ -150,7 +150,7 @@ function Courses(props) {
 
   const faqs = [
     {
-      question: "Graduates can pursue roles such as",
+      question: "Game Art / Game Design",
       answer: [
         "Game Designer / Level Designer",
         "3D Artist / Character Artist / Environment Artist",

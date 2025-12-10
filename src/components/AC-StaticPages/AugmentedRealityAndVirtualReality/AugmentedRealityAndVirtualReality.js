@@ -164,7 +164,7 @@ const semsecond = [
 
   const faqs = [
     {
-      question: "AR/VR & GAME PROGRAMMING",
+      question: "AR/VR & Game Programming",
       answer: [
 
        "AR/VR Application Developer",
@@ -179,7 +179,7 @@ const semsecond = [
       ],
     },
     {
-      question: "2D AND 3D ART",
+      question: "2D AND 3D Art",
       answer: [
       "3D Modeler",
 "Props Artist",
@@ -195,7 +195,7 @@ const semsecond = [
       ],
     },
     {
-      question: "GAME DESIGN & OTHERS",
+      question: "Game Design & Others",
       answer: [
        "Game Designer",
 "Technical Designer",
