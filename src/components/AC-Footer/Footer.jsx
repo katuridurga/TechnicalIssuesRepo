@@ -49,7 +49,6 @@ function Footer() {
     "/landingpage/game-development-programs/",
     "/landingpage/masters-and-bachelors-game-development-courses/",
     "/landingpage/certificate-program-in-essentials-of-game-design/",
-    "/landingpage/certificate-program-in-basics-of-maya/",
     "/landingpage/certificate-program-in-3DGame-development-with-unity/",
     "/landingpage/certificate-program-in-game-development-for-VR/",
     "/landingpage/certificate-program-in-prototyping-and-game-concept-development/",
@@ -105,21 +104,30 @@ function Footer() {
     "/landingpage/game-development-with-unity-programs/",
     "/landingpage/game-development-with-unreal-programs/",
     "/landingpage/certificate-program-in-prototyping-and-game-concept-development/",
-"/landingpage/certificate-program-in-basics-of-maya/"
+
+
+  ];
+    const specialHeightPaths1 = [
+    "/landingpage/certificate-program-in-basics-of-maya/",
 
   ];
 
-  const computedHeight = specialHeightPaths.includes(path)
+  const computedHeight =
+  path === "/landingpage/certificate-program-in-basics-of-maya/"
     ? isMobileState
-      ? "250px"
-      : "400px"
-    : isShortHeight
+        ? "750px"
+        : "550px"
+    : specialHeightPaths.includes(path)
       ? isMobileState
         ? "250px"
-        : "300px"
-      : isMobileState
-        ? "800px"
         : "400px"
+      : isShortHeight
+        ? isMobileState
+          ? "250px"
+          : "300px"
+        : isMobileState
+          ? "800px"
+          : "400px";
 
   const [formData, setFormData] = useState({
     name: "",
@@ -492,25 +500,28 @@ function Footer() {
                       </LazyLoad>
                     </div>
                   )}
+{/* 🔹 Download Brochure */}
+{!hideAllFooter &&
+  window.location.pathname !==
+    "/landingpage/certificate-program-in-basics-of-maya/" && (
+  <div className="foot-details brchrbtn">
+    <LazyLoad height={76} offset={100} fadein={true}>
+      <div className="foot-item fadeInUp anime-delay3">
+        <div
+          className="glowing-button1"
+          onClick={() => setOpenForm(true)}
+          style={{ cursor: "pointer" }}
+        >
+          <div className="call-info1">
+            <div className="call-title1">Download Brochure</div>
+          </div>
+        </div>
+      </div>
+    </LazyLoad>
+  </div>
+)}
 
-                  {/* 🔹 Download Brochure */}
-                  {!hideAllFooter && (
-                    <div className="foot-details brchrbtn">
-                      <LazyLoad height={76} offset={100} fadein={true}>
-                        <div className="foot-item fadeInUp anime-delay3">
-                          <div
-                            className="glowing-button1"
-                            onClick={() => setOpenForm(true)}
-                            style={{ cursor: "pointer" }}
-                          >
-                            <div className="call-info1">
-                              <div className="call-title1">Download Brochure</div>
-                            </div>
-                          </div>
-                        </div>
-                      </LazyLoad>
-                    </div>
-                  )}
+
 
                   {/* 🔹 Compact Contact Info for certain landing pages */}
                   {isTestFooter && (

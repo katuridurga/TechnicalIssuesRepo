@@ -14,7 +14,7 @@ import m1 from "../../../assets/img/Icons/passion.webp";
 import m2 from "../../../assets/img/Icons/veterans.webp";
 import m3 from "../../../assets/img/Icons/connections.webp";
 import m5 from "../../../assets/img/Icons/experience.webp";
-
+import linkedin from "../../../assets/img/Icons/linkedin.webp";
 
 
 
@@ -152,56 +152,136 @@ function Aboutus(props) {
         </div>
         <div className='courses-container bgcontainerv' style={{ marginTop: isMobileState ? "30px" : "20px" }}>
 
-          <h2 className="courseHeading fadeInUp anime-delay" style={{ marginTop: "-30px!important", textAlign: "center" }}>Vision
+          <h2 className="courseHeading fadeInUp anime-delay" style={{ textAlign: "center" }}>
+            Vision
           </h2>
-          <p className="text">
-            What began as my vision, has grown into a thriving academic and professional ecosystem uniting students, alumni, and industry experts.<br />
-            Our graduates join leading game studios, contribute to acclaimed titles, and earn recognition for their creative and technical excellence. <br />
-            These achievements reflect our spirit and standards. Join us in shaping the future of game development.
-          </p>
+
+          <div style={{ position: "relative", padding: "0px 40px" }}>
+
+            {/* BIG LEFT QUOTE ICON */}
+            <span
+              className='upq'
+            >
+              “
+            </span>
+
+            <p
+              style={{
+                lineHeight: "28px",
+                color: "#555",
+              
+              }}
+            >
+              What began as my vision has grown into a thriving academic and professional ecosystem uniting
+              students, alumni, and industry experts. <br />
+              Our graduates join leading game studios, contribute to acclaimed titles, and earn recognition
+              for their creative and technical excellence. <br />
+              These achievements reflect our spirit and standards. Join us in shaping the future of
+              game development.
+            </p>
+
+            {/* BIG RIGHT QUOTE ICON */}
+            <span
+
+              className='downq'
+            >
+              ”
+            </span>
+
+          </div>
+
+
+          {/* Signature Block — right aligned */}
+          <div style={{ textAlign: "right", marginTop: "0px", color: "#000000", alignSelf: "flex-end", flexDirection: "column", marginRight: "120px", marginTop: "-10px" }}>
+            <p style={{ margin: 0, fontWeight: "bold", fontSize: "18px", color: "#ed1f25" }}>— Surya P </p>
+            <p style={{ margin: 0, fontSize: "16px", opacity: 0.8, marginTop: "-17px", color: "#ed1f25", marginLeft: "14px" }}>Founder</p>
+          </div>
 
         </div>
-        <div className="sec-title" style={{marginBottom:"0px"}}>
-          <h2 className="vision-section courseHeading fadeInUp anime-delay" style={{ color: "#ed1925", textAlign: "center", marginTop:"45px" }}>About Management </h2>
+
+        <div className="sec-title" style={{ marginBottom: "0px" }}>
+          <h2 className="vision-section courseHeading fadeInUp anime-delay" style={{ color: "#ed1925", textAlign: "center", marginTop: "45px" }}>About Management </h2>
         </div>
         <div className="main-img" style={{ boxShadow: "none", marginBottom: "28px !important" }}>
 
           {isMobileState ? (
             <>
 
-            
-              <div className="main-img" style={{ boxShadow: "none", marginBottom: "28px !important", marginTop:"0px" }}>
-                  <div style={{ boxShadow: "none", background: "none", padding: "0px", marginBottom: isMobileState ? "0px" : "0px" }} className="main-img2 brtopleft1">
-                <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%", marginTop: isMobileState ? "0px" : "20px" }}>
-                  <div className="inner-column inner-column1 wow fadeInLeft" style={{ paddingBottom: "0px" }}>
-                    <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={suryasir} alt="suryasir" /></a></div>
-                    <div className='bg-red'>
-                      <p></p>
+
+              <div className="main-img" style={{ boxShadow: "none", marginBottom: "28px !important", marginTop: "0px" }}>
+
+                <div
+                  style={{ boxShadow: "none", background: "none", padding: "0px", marginBottom: isMobileState ? "0px" : "0px" }}
+                  className="main-img2 brtopleft1"
+                >
+                  <div
+                    style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%", marginTop: isMobileState ? "0px" : "20px" }}
+                  >
+                    <div className="inner-column inner-column1 wow fadeInLeft" style={{ paddingBottom: "0px" }}>
+
+                      <div className="image-1">
+                        <a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images">
+                          <img src={suryasir} alt="suryasir" style={{height:"auto"}} />
+                        </a>
+                      </div>
+
+                      <div className='bg-red'>
+                        <p></p>
+                      </div>
+
                     </div>
+                  </div>
+                </div>
 
-                  </div></div>
-              </div>
+                {/* RIGHT SIDE */}
+
                 <div style={{ boxShadow: "none", padding: "0px" }} className="main-img2 mat">
-                  <div style={{ boxShadow: "none", background: "none", padding: "0px" }} >
-                    <div className="inner-column" style={{ padding: isMobileState ? '0px 0px 0px 0px' : '0px 0px 0px 30px' }}>
+                  <div style={{ boxShadow: "none", background: "none", padding: "0px" }}>
+                    <div className="inner-column" style={{ padding: isMobileState ? "0px" : "0px 0px 0px 30px" }}>
 
-                      <div className="text"> <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.linkedin.com/in/surya-p-99413b6/" rel="noopener noreferrer" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank">Mr. Surya</a></b> brings a unique blend of creative and
-                        business expertise to the gaming education
-                        ecosystem. He holds a Diploma in 3D Animation
-                        and Visual Effects, specialising in Character
-                        Animation from Vancouver Film School (2003),
-                        and a Bachelor's Degree in Foreign Trade from
-                        Nizam College.</div>
-                      <div className="text">With prior experience in the visual effects and
-                        gaming industry, he has navigated real-world
-                        challenges, built strong industry connections, and
-                        now leverages that experience to guide and
-                        empower students at Backstage Pass.</div>
-                      <div className="text">He strongly believes that with the right
-                        mentorship and tools, Indian game developers
-                        can succeed on the global stage.</div>
+                      <div className="text">
+                        <b style={{ fontSize: "16px", color: "#ed1925" }}>
+                          <a
+                            href="https://www.linkedin.com/in/surya-p-99413b6/"
+                            rel="noopener noreferrer"
+                            style={{ fontSize: "16px", color: "#ed1925" }}
+                            target="_blank"
+                          >
+                            Mr. Surya P
+                          </a>
+                        </b>
+                        {" "}
+                        brings a unique blend of creative and business expertise to the gaming education
+                        ecosystem. He holds a Diploma in 3D Animation and Visual Effects, specialising in Character
+                        Animation from Vancouver Film School (2003), and a Bachelor's Degree in Foreign Trade from
+                        Nizam College.
+                      </div>
 
-                    </div></div>
+                      <div className="text">
+                        With prior experience in the visual effects and gaming industry, he has navigated real-world
+                        challenges, built strong industry connections, and now leverages that experience to guide and
+                        empower students at Backstage Pass.
+                      </div>
+
+                      <div className="text">
+                        He strongly believes that with the right mentorship and tools, Indian game developers
+                        can succeed on the global stage.
+                      </div>
+
+                      {/* ⭐ ADDING LINKEDIN HERE — NOTHING ELSE CHANGED */}
+
+                      <a
+                        href="https://www.linkedin.com/in/bala-krishna-annaluri-ba08321a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        className="linkdinpv"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span>Linkedin Profile :</span>
+                        <img src={linkedin} alt="linkedin" />
+                      </a>
+
+                    </div>
+                  </div>
                 </div>
 
               </div>
@@ -210,11 +290,11 @@ function Aboutus(props) {
           ) : (
             <>
 
-              <div className="main-img" style={{ boxShadow: "none", marginBottom: "28px !important", display:"flex", alignItems:"center", justifyContent:"center", marginTop:"0px"  }}>
+              <div className="main-img" style={{ boxShadow: "none", marginBottom: "28px !important", display: "flex", alignItems: "center", justifyContent: "center", marginTop: "0px" }}>
                 <div className="main-img2 brtopleft" style={{ boxShadow: "none", background: "none", padding: "0px" }} >
                   <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%" }}>
                     <div className="inner-column inner-column1 wow fadeInLeft" style={{}}>
-                      <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={suryasir} alt="suryasir" /></a></div>
+                      <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={suryasir} alt="suryasir" style={{height:"auto"}} /></a></div>
 
                     </div></div>
                 </div>
@@ -222,7 +302,7 @@ function Aboutus(props) {
                   <div style={{ boxShadow: "none", background: "none", padding: "0px" }} >
                     <div className="inner-column" style={{ padding: isMobileState ? '0px 0px 0px 0px' : '0px 0px 0px 30px' }}>
 
-                      <div className="text"> <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.linkedin.com/in/surya-p-99413b6/" rel="noopener noreferrer" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank">Mr. Surya</a></b> brings a unique blend of creative and
+                      <div className="text"> <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.linkedin.com/in/surya-p-99413b6/" rel="noopener noreferrer" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank">Mr. Surya P </a></b> brings a unique blend of creative and
                         business expertise to the gaming education
                         ecosystem. He holds a Diploma in 3D Animation
                         and Visual Effects, specialising in Character
@@ -237,7 +317,7 @@ function Aboutus(props) {
                       <div className="text">He strongly believes that with the right
                         mentorship and tools, Indian game developers
                         can succeed on the global stage.</div>
-
+                      <a href="https://www.linkedin.com/in/surya-p-99413b6/" className='linkdinp'><span>Linkedin Profile :</span> <img src={linkedin} /></a>
                     </div></div>
                 </div>
 
@@ -251,7 +331,7 @@ function Aboutus(props) {
         </div>
       </div>
       <div className='courses-container' style={{ marginTop: isMobileState ? "0px" : "20px" }}>
-        <div className="main-img" style={{ boxShadow: "none", marginBottom: "28px !important", display:"flex", alignItems:"center", justifyContent:"center" }}>
+        <div className="main-img" style={{ boxShadow: "none", marginBottom: "28px !important", display: "flex", alignItems: "center", justifyContent: "center" }}>
 
           <div style={{ boxShadow: "none", padding: "0px" }} className="main-img2 mat">
             <div style={{ boxShadow: "none", background: "none", padding: "0px" }} >
@@ -275,13 +355,13 @@ function Aboutus(props) {
                   standards. Serving on the Boards of Studies for
                   JNAFAU and Osmania University, Dr. Annaluri
                   continues to advance gaming education nationally.</div>
-
+                <a href="https://www.linkedin.com/in/bala-krishna-annaluri-ba08321a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className='linkdinp'><span>Linkedin Profile :</span> <img src={linkedin} /></a>
               </div></div>
           </div>
           <div className="main-img2 brtopleft" style={{ boxShadow: "none", background: "none", padding: "0px" }} >
             <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%" }}>
-              <div className="inner-column inner-column1 wow fadeInLeft" style={{paddingBottom:isMobileState?"0px":"20px"}}>
-                <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={balasir} alt="suryasir" /></a></div>
+              <div className="inner-column inner-column1 wow fadeInLeft" style={{ paddingBottom: isMobileState ? "0px" : "20px" }}>
+                <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={balasir} alt="balasir" style={{height:"auto"}}  /></a></div>
 
               </div></div>
           </div>
