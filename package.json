@@ -152,7 +152,7 @@
   "scripts": {
     "generate-build-version": "node generate-build-version",
     "prebuild": "npm run generate-build-version",
-    "start": "node generate-build-version & node scripts/start.js",
+    "start": "node generate-build-version && node scripts/start.js",
     "build": "node generate-build-version & node scripts/build.js",
     "buildShop": "node generate-build-version & node scripts/buildShop.js",
     "test": "node scripts/test.js",

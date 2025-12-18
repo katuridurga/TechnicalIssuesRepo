@@ -49,24 +49,29 @@ const config = configFactory("production");
 // browserslist defaults.
 const { checkBrowsers } = require("react-dev-utils/browsersHelper");
 checkBrowsers(paths.appPath, isInteractive)
-  .then(() => {
-    // First, read the current file sizes in build directory.
-    // This lets us display how much they changed later.
-    return measureFileSizesBeforeBuild(paths.appBuild);
-  })
   .then(previousFileSizes => {
-    // Remove all content but keep the directory so that
-    // if you're in it, you don't end up in Trash
-    fs.readdir("build").then(files => {
+  // Remove all content but keep the directory
+  if (fs.existsSync(paths.appBuild)) {
+    fs.readdir(paths.appBuild).then(files => {
       return Promise.all(
-        files.map(file => (file != ".git" ? fs.remove(`build/${file}`) : null))
+        files.map(file =>
+          file !== ".git"
+            ? fs.remove(path.join(paths.appBuild, file))
+            : null
+        )
       );
     });
-    // Merge with the public folder
-    copyPublicFolder();
-    // Start the webpack build
-    return build(previousFileSizes);
-  })
+  } else {
+    fs.mkdirSync(paths.appBuild);
+  }
+
+  // Merge with the public folder
+  copyPublicFolder();
+
+  // Start the webpack build
+  return build(previousFileSizes);
+})
+
   .then(
     ({ stats, previousFileSizes, warnings }) => {
       if (warnings.length) {
