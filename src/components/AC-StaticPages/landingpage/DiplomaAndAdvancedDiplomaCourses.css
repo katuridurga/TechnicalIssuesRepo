@@ -187,6 +187,26 @@
   }
 
   @media only screen and (max-width : 1024px){
+  
+  .course-info .row p {
+    padding: 0px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.certificate-point {
+    display: flex;
+    align-items: baseline;
+    grid-gap: 5px;
+    gap: 5px;
+    margin-bottom: 19px !important;
+}
+    .hero-title {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fa9f42;
+  margin-top: 0px !important;
+}
     .feature-gridcer1 {
     display: grid;
     grid-template-columns: repeat(1, 1fr) !important;
@@ -292,6 +312,7 @@
     padding: 0px;
     text-align: justify;
     line-height: 30px;
+    font-size: 14px !important;
 }
 
   
@@ -455,7 +476,7 @@ summary {
   position: relative;
   background-size: cover;
   background-position: center;
-  padding: 80px 20px;
+  padding: 58px 20px !important;
   background-color: #725254;
   background-image: url("../../../assets/img/mobilebanner/bannberm.webp");
 }
@@ -470,33 +491,40 @@ summary {
 .col-6 {
     flex: 0 0 50% !important;
     max-width: 50% !important;
+          padding-top: 10px;
+        padding-bottom: 10px;
 }
 .course-info {
-    background: #01241b;
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 8px;
-    margin: 2rem 0;
+    background: #ffffff;
+    color: #000;
+    padding: 18px 20px;
+    border-radius: 12px;
+    margin: 30px auto;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0px auto;
+    margin-left: 0px;
+    margin-top: 15px;
     width: 100% !important;
 }
 .course-info .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-    margin-bottom: 0px;
+  display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     align-items: center;
-    justify-content: flex-start !important;
+    margin: 0px !important;
+}
+.course-info [class^="col-"] {
+    max-width: 100% !important;
+    flex: unset !important;
+    padding: 6px 6px !important;
+    text-align: center;
 }
 }
 
-.hero-title {
-  font-size: 32px;
-  font-weight: 800;
-  line-height: 1.2;
-  color: #fa9f42;
-  margin-top: 20px;
-}
+
 .subheading{
 font-size: 28px;
     color: #fff;
@@ -525,6 +553,7 @@ font-size: 28px;
     padding: 0px;
     text-align: justify;
     line-height: 26px;
+    font-size: 15px;
 }
 
 .badge-row {
@@ -755,17 +784,17 @@ font-size: 16px;
     color: #ea0a0a;
 }
 .savingamto{
-    background-color: #fa9f42;
+    background-color: #ff000b;
     padding: 4px;
     border-radius: 4px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 900;
     /* display: flex; */
     align-items: center;
     justify-content: center;
     margin-left: 0px;
     text-align: center;
-    color: #000;
+    color: #ffffff;
     width: fit-content;
    height: 28px;
    width:145px;
@@ -780,57 +809,62 @@ font-size: 12px;
     justify-content: flex-start;
     margin-top: 10px;
 }
+/* MAIN BOX */
 .course-info {
-    background: #01241b;
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 8px;
-    margin: 2rem 0;
-    width: 60%;
+  background: #ffffff;
+  color: #000;
+  padding: 18px 24px;
+  border-radius: 12px;
+  margin: 30px auto;           /* CENTER HORIZONTALLY */
+  width: fit-content;          /* SHRINK TO CONTENT */
+ display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0px auto;
+    margin-left: 0px;
+    margin-top: 15px;
 }
+
+/* ROW RESET */
 .course-info .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-    margin-bottom: 0px;
-    align-items: center;
-    justify-content: center;
-    
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  margin: 0 !important;
 }
-.course-info .row .col-3 {
-    flex: 0 0 23%;
-    max-width: 23%;
+
+/* REMOVE BOOTSTRAP SIDE EFFECTS */
+.course-info [class^="col-"] {
+  max-width: 100% !important;
+  flex: unset !important;
+  padding: 0 6px;
+  text-align: center;
 }
-.course-info .row p {
-   padding:0px;
+
+/* TEXT */
+.course-info p {
+  margin: 0;
+  line-height: 2;
+  font-size: 14px;
 }
-.course-info .border-right {
-    border-right: 1px solid #dee2e6!important;
+
+.course-info-head {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  margin-bottom: 4px;
 }
+
+/* DIVIDERS */
 .course-info .border-rightc {
-    border-right: 1px solid #790101 !important;
+  border-right: 1px solid #d11;
+  padding-right: 24px;
 }
-.course-info .course-info-head {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: .5rem;
+
+/* REMOVE LAST BORDER */
+.course-info > .row > div:last-child .border-rightc {
+  border-right: none;
 }
-.course-info .col-lg-4 {
-    flex: 0 0 33.33333333%;
-    max-width: 33.33333333%;
-    position: relative;
-    width: 100%;
-    padding-right: 26px;
-    padding-left: 26px;
-}
-.course-info .col-2 {
-    flex: 0 0 16.66666667%;
-    max-width: 14.66666667%;
-}
-.course-info .col-2 div{
-  margin-left: 30px;
-}
+
 
 .previewcon{
   font-size: 32px;
@@ -1303,7 +1337,7 @@ details[open].style-1 summary::after {
 }
 .logo-grid-4 {
   display: grid;
-  grid-template-columns: repeat(6, auto); /* 4 images per row */
+  grid-template-columns: repeat(7, auto); /* 4 images per row */
 gap: 25px 5px;
     justify-content: center;
     align-items: center;
@@ -1357,18 +1391,18 @@ margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-row-gap: 40px;
-    row-gap: 40px;
+    row-gap: 10px;
     width: 100%;
     margin-top: 40px;
     grid-column-gap: 50px;
-    column-gap: 50px;
+    column-gap: 30px;
 }
 .courseUpdatescertificate ul li {
     border: 2px solid #fff;
     color: #000;
     border-radius: 15px;
     width: 100%;
-    padding: 20px;
+    padding: 8px;
     margin-left: 30px;
 }
 .BeyondLeftcer, .courseUpdatescertificate ul li {
@@ -1591,4 +1625,15 @@ flex: 0 0 40%;
 .feature-iconcercar img{
   width:40px;
   height: 40px;
+}
+.hero-title {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fa9f42;
+  margin-top: 20px;
+}
+.staricon{
+  width: 30px;
+  height: 30px;
 }

@@ -72,7 +72,7 @@ const CertifiedSkillUnity = () => < Async load={import("../components/AC-StaticP
 const CertificateProgramInEssentialsOfGameDesign = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramInEssentialsOfGameDesign.js")} />
 const CertificateProgramInBasicslsOfMaya = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramInBasicslsOfMaya.js")} />
 
-
+const CertificateProgramInBasicslsOfMayaformarketing = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramInBasicslsOfMayaformarketing.js")} />
 const CertificateProgramIn3DGameDevelopmentWithUnity = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramIn3DGameDevelopmentWithUnity.js")} />
 
 
@@ -1135,6 +1135,35 @@ function Menu(props) {
     );
   }
 
+  else if (props.component === "CertificateProgramInBasicslsOfMayaformarketing") {
+    return (
+      <>
+
+        <React.Fragment>
+          <CssBaseline />
+          <ThemeProvider theme={darkTheme}>
+            <ElevationScroll  {...props}>
+
+              <AppBar>
+                <Toolbar style={toolbarStyle}>
+                  <MenuCore />
+                </Toolbar>
+              </AppBar>
+
+            </ElevationScroll >
+          </ThemeProvider>
+          <Toolbar />
+
+        </React.Fragment>
+        <CertificateProgramInBasicslsOfMayaformarketing />
+        <Footer />
+        <ScrollToTop
+          smooth
+          top={100}
+        />
+      </>
+    );
+  }
   else if (props.component === "CertificateProgramInBasicslsOfMaya") {
     return (
       <>

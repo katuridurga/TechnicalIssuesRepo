@@ -9,9 +9,6 @@ import r2 from "../../../assets/img/partners/r2.webp";
 import r4 from "../../../assets/img/partners/r4.webp";
 import r5 from "../../../assets/img/partners/r5.webp";
 import r7 from "../../../assets/img/partners/r7.webp";
-import r6 from "../../../assets/img/partners/r6.webp";
-import rc2 from "../../../assets/img/partners/2.webp";
-import su from "../../../assets/img/partners/supergaming.png";
 import r8 from "../../../assets/img/partners/SumoDigital.webp";
 import r9 from "../../../assets/img/partners/Ubisoft.webp";
 import r10 from "../../../assets/img/partners/Sony.webp";
@@ -25,11 +22,10 @@ import wtaln from "../../../assets/img/banners/allyouneed.webp";
 import { FaLinkedin } from "react-icons/fa";
 import Ourawards from "../../../content/ourawards";
 import jobn from '../../../assets/img/placentsn.webp';
-import clockn from '../../../assets/img/star.webp';
 function Feature({ title, subtitle }) {
   return (
     <div className="feature-box">
-      <div className="feature-iconcer" style={{fontSize:"18px", fontWeight:"bold", background:"none"}}><img className="staricon" src={clockn}/></div>
+      <div className="feature-iconcer" style={{fontSize:"18px", fontWeight:"bold"}}>✓</div>
       <div>
         <div className="feature-title" style={{ color: "#000000" }}>{title}</div>
       </div>
@@ -366,7 +362,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
                   <div class="course-info" style={{ background: "#ffffff", color: "#000" }}><div class="row"><div class="col-3"><div class="border-rightc"><p class="module course-info-head">7 Modules</p><p>with Certifications</p></div></div>
                   <div class="col-6 col-lg-4 col-sm-3"><div class="border-rightc border-none"><p class="course-info-head"><span class="course_duration">6</span> Hours</p><p>of Recorded Content</p></div></div>
                     <div class="col-2">
-                      <div class="border-rightc" style={{marginLeft:"0px !important"}}><p class="module course-info-head">Online</p><p>Mode</p></div></div>
+                      <p class="border-rightc" style={{marginLeft:"0px !important"}}><p class="module course-info-head">Online</p><p>Mode</p></p></div>
 
                     <div class="col-2"><div className=""><p class="course-info-head"><span class="course_language">English</span></p><p>Language</p></div></div>
                   </div></div>
@@ -399,7 +395,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
                   <Feature title="Beginner-friendly Maya fundamentals
 " />
                   <Feature title="Practical, step-by-step asset creation" />
-                  <Feature title="7 compact learning modules" />
+                  <Feature title="9 compact learning modules" />
                   <Feature title="6 hours of recorded video lessons
 " />
                   <Feature title="100% online and self-paced
@@ -681,9 +677,6 @@ function DiplomaAndAdvancedDiplomaCourses() {
                 <h3 className="previewcon">Our Learners Work Across Top Companies</h3>
 
                 <div className="logo-grid-4">
-                    <img src={r6} alt="" width="85" />
-                      <img src={rc2} alt="" width="85" />
-                        <img src={su} alt="" width="85" />
                   <img src={r1} alt="" width="85" />
                   <img src={r2} alt="" width="90" />
                   <img src={r11} alt="" width="80" />
@@ -695,7 +688,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
                   <img src={r8} alt="" width="90" />
 
                   <img src={r12} alt="" width="85" />
-                  {/* <img src={r13} alt="" width="90" /> */}
+                  <img src={r13} alt="" width="90" />
                   <img src={r9} alt="" width="80" />
                   <img src={r14} alt="" width="80" />
                 </div>
@@ -715,7 +708,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
         {isMobileState && (
           <h3
             className="previewcon"
-            style={{ lineHeight: "30px", fontSize:isMobileState? "20px":"28px"}}
+            style={{ lineHeight: "30px" }}
           >
             System Requirements for Autodesk Maya 2024
           </h3>
@@ -733,7 +726,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
         {!isMobileState && (
           <h3
             className="previewcon"
-            style={{ lineHeight: "40px", fontSize:isMobileState? "20px":"28px" }}
+            style={{ lineHeight: "40px" }}
           >
             System Requirements for Autodesk Maya 2024
           </h3>
@@ -745,7 +738,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
               key={index}
               style={{
                 display: "flex",
-                marginBottom: isMobileState?"20px": "25px",
+                marginBottom: "30px",
                 fontSize: isMobileState ? "15px" : "18px",
                 gap: "10px",
                 alignItems: "flex-start",
@@ -900,7 +893,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
       <section className="bancer">
         <div class="small-banner1 ftbaner1"><div className="col-12 col-lg-8 col-md-7 col-sm-12 bottomcer"><div class="foot-ban"> <p class="didYouKnow h6 mb-3">Enroll in the Basics of Maya Course and Earn Certification @
         </p><div className="disdvi"><span className="actprice"><del>₹3000</del></span><span className="discountprice">₹2499</span> <span className="savingamt">84% Disc.</span></div>
-          <div className="savingamto" style={{width:"150px"}}><p className="" style={{margin:"0px", fontWeight:"bold",fontSize:"12px"}}>Limited Time Offer!</p></div></div></div></div></section>
+          <div className="savingamto" style={{width:"150px"}}><p className="" style={{margin:"0px", fontWeight:"600",fontSize:"12px"}}>Limited Time Offer!</p></div></div></div></div></section>
       {isButtonVisible && (
         <div className="CousellingButton1 tetstL1" style={{ marginBottom: "0px" }} onClick={scrollToBottom}> <button className="dwnbtn three w-full sm:w-auto" style={{ width: "450px" }} onClick={handleClickss}>Enroll Now
         </button> </div>
