@@ -100,6 +100,7 @@ function MenuCore(props) {
     "/landingpage/masters-and-bachelors-game-development-courses/",
     "/landingpage/certificate-program-in-essentials-of-game-design/",
     "/landingpage/certificate-program-in-basics-of-maya/",
+    "/landingpage/basics-of-maya-online-certification/",
     "/landingpage/certificate-program-in-3DGame-development-with-unity/",
     "/landingpage/certificate-program-in-game-development-for-VR/",
     "/landingpage/certificate-program-in-prototyping-and-game-concept-development/",

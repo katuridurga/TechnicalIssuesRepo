@@ -202,7 +202,7 @@ function Alumni() {
   const speakers = [
   {
     img: speaker3,
-    name: "AnshulSoni",
+    name: "Anshul Soni",
     title: "Engineering Manager",
     subtitle: "Electronic Arts (EA), Canada",
     alt: "Anshul Soni - Engineering Manager at Electronic Arts (EA), Canada"

@@ -48,7 +48,18 @@
   margin: 20px 0px !important;
   text-transform: capitalize !important;
   font-size: 27px !important;
+  font-weight: bold;
 }
+.suprts1 h3{
+  font-weight: bold;
+}
+.differenttext{
+  width: 100%;
+  border:1px solid#a51f1f;
+  color:#e91b21;
+  height: auto;
+}
+
 .suprts2{
   background: rgb(256, 256, 256, 0.9);
     padding: 10px 30px;
@@ -79,6 +90,9 @@
   font-size: 12px;
   margin-top: 10px;
   margin-left: 10px;
+}
+strong{
+  font-weight: bold;
 }
 .mainpost{
   display: flex !important;

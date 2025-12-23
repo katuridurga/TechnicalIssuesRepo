@@ -255,7 +255,7 @@ export default function App() {
                 />
                 <Route
                   exact
-                  path={"/landingpage/certificate-program-in-basics-of-maya-marketing/"}
+                  path={"/landingpage/basics-of-maya-online-certification/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="CertificateProgramInBasicslsOfMayaformarketing" />
                   )}
