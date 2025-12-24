@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./DiplomaAndAdvancedDiplomaCourses.css";
 import { Helmet } from "react-helmet";
+import PaymentC from "./Payment";
 import { useSelector, shallowEqual } from "react-redux";
 import cer from "../../../assets/img/test/certificate-with-badge.png";
 import { FaPlay } from "react-icons/fa";
@@ -19,6 +20,7 @@ import r10 from "../../../assets/img/partners/Sony.webp";
 import r11 from "../../../assets/img/partners/Qualcomm.webp";
 import r12 from "../../../assets/img/partners/Juego.webp";
 import r13 from "../../../assets/img/partners/Gamitronics.webp";
+import axios from 'axios';
 import r14 from "../../../assets/img/partners/GSNgames.webp";
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import wtwh from "../../../assets/img/banners/afterwtwillhappen.webp";
@@ -27,6 +29,14 @@ import { FaLinkedin } from "react-icons/fa";
 import Ourawards from "../../../content/ourawards";
 import jobn from '../../../assets/img/placentsn.webp';
 import clockn from '../../../assets/img/star.webp';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import EnrollNowButton from "./EnrollNowButton";
+
 function Feature({ title, subtitle }) {
   return (
     <div className="feature-box">
@@ -195,16 +205,16 @@ function DiplomaAndAdvancedDiplomaCourses() {
     {
       question: "What is the Certificate Program in Basics of Maya?",
       answer:
-        "This is a beginner-friendly online course designed to introduce students to Autodesk Maya. It covers interface navigation, essential modelling tools, UV mapping, and basic texturing, enabling learners to create simple 3D assets from scratch.",
+        "This is a beginner-friendly online course designed to introduce students to Autodesk Maya. It covers interface navigation, essential modeling  tools, UV mapping, and basic texturing, enabling learners to create simple 3D assets from scratch.",
     },
     {
       question: "Who is this course ideal for?",
       answer:
-        "The course is designed for absolute beginners, school or college students, aspiring 3D artists, game design enthusiasts, and anyone looking to start a career in 3D modelling or digital content creation.",
+        "The course is designed for absolute beginners, school or college students, aspiring 3D artists, game design enthusiasts, and anyone looking to start a career in 3D modeling  or digital content creation.",
     },
 
     {
-      question: "Do I need previous experience in 3D modelling or Maya?",
+      question: "Do I need previous experience in 3D modeling  or Maya?",
       answer:
         "No prior knowledge is required. The course starts with the fundamentals and gradually progresses through practical exercises suited for first-time users.",
     },
@@ -226,7 +236,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
     {
       question: "What are the career opportunities after completing this course?",
       answer:
-        "After completing the course, learners can pursue entry-level roles such as 3D Modelling Intern, Junior Asset Artist, Game Art Trainee, or continue advancing into animation, VFX, or game development specialities.",
+        "After completing the course, learners can pursue entry-level roles such as 3D Modeling Intern, Junior Asset Artist, Game Art Trainee, or continue advancing into animation, VFX, or game development specialities.",
     },
   ];
 
@@ -247,10 +257,20 @@ function DiplomaAndAdvancedDiplomaCourses() {
     // Hide the button after clicking
     setIsButtonVisible(true);
   };
+  const [openFormModal, setOpenFormModal] = useState(false);
+
   const handleClickss = () => {
-    // Redirect to the '/new-page' route
-    window.open('/landingpage/short-course/', '_blank');
+    console.log("Clicked!"); // Debug
+    setOpenFormModal(true);
   };
+
+
+const handleFormClose = () => {
+  setOpenFormModal(false);
+};
+
+
+
   useEffect(() => {
   const details = document.querySelectorAll(".modules-grid details");
 
@@ -283,6 +303,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
     }
   };
 
+
   return (
     <>
       <Helmet>
@@ -290,6 +311,9 @@ function DiplomaAndAdvancedDiplomaCourses() {
           Certificate Program in Essentials of Game Design | Backstage Pass
         </title>
       </Helmet>
+{openFormModal && (
+  <PaymentC onClose={handleFormClose} style={{width:"75%"}} />
+)}
 
       <div id="scroll-container" className="scroll-wrapper">
         <div className="mainPanel1">
@@ -326,7 +350,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
 
 
                   <p className="hero-text" style={{maxWidth:isMobileState?"100%":"100%"}}>
-                    The Certificate Program in Basics of Maya is a beginner-friendly course designed to introduce students to the core fundamentals of Autodesk Maya, including interface navigation, essential modelling tools, UV unwrapping, and basic texturing. Through guided lessons and practical, hands-on exercises, students will learn how to create 3D assets from scratch and understand the complete Maya workflow.
+                    The Certificate Program in Basics of Maya is a beginner-friendly course designed to introduce students to the core fundamentals of Autodesk Maya, including interface navigation, essential modeling  tools, UV unwrapping, and basic texturing. Through guided lessons and practical, hands-on exercises, students will learn how to create 3D assets from scratch and understand the complete Maya workflow.
                   </p>
                   <p className="discountpanel">Buy this Course @
 
@@ -379,12 +403,20 @@ function DiplomaAndAdvancedDiplomaCourses() {
               </div>
 <div className="col-4" style={{ width:isMobileState?"100%":"48%" }}>
   <div className="videomain2maya">
-  <video ref={videoRef} controls loop>
-    <source
-      src="https://www.backstagepass.co.in/landingpage/LmsTrailerFinalLowRender.mp4"
-      type="video/mp4"
-    />
-  </video>
+ <video
+  ref={videoRef}
+  controls
+  loop
+  controlsList="nodownload noplaybackrate"
+  disablePictureInPicture
+  onContextMenu={(e) => e.preventDefault()}
+>
+  <source
+    src="https://www.backstagepass.co.in/landingpage/LmsTrailerFinalLowRender.mp4"
+    type="video/mp4"
+  />
+</video>
+
 
   {!isPlaying && (
     <div className="overlay-wrapper" onClick={handlePlay}>
@@ -409,9 +441,9 @@ function DiplomaAndAdvancedDiplomaCourses() {
                 <h2 className="previewcon">Basics Of Maya Course Overview
    <span className="displaypath"></span><span className="designdisplay"></span></h2>
                 <p className="previewconp">
-                  Have you ever wanted to bring your ideas to life in 3D? Whether it’s game assets, props, or creative projects, Autodesk Maya is one of the most powerful tools for 3D modelling and texturing.</p>
+                  Have you ever wanted to bring your ideas to life in 3D? Whether it’s game assets, props, or creative projects, Autodesk Maya is one of the most powerful tools for 3D modeling  and texturing.</p>
                 <p className="previewconp">
-                  In this course, we’ll explore Maya 2024 step by step - perfect for complete beginners. You’ll learn how to navigate the Maya interface, work with essential modelling tools, create detailed props, unwrap UVs, and apply materials. We’ll also cover the basics of image-based texturing inside Maya so you can give your models realistic looks.</p>
+                  In this course, we’ll explore Maya 2024 step by step - perfect for complete beginners. You’ll learn how to navigate the Maya interface, work with essential modeling  tools, create detailed props, unwrap UVs, and apply materials. We’ll also cover the basics of image-based texturing inside Maya so you can give your models realistic looks.</p>
                 <p className="previewconp">
                   By the end of this course, you’ll be comfortable creating 3D assets from scratch, understanding the Maya workflow, and preparing your models with clean UVs and textures. No prior 3D experience is needed - just curiosity and creativity.
                 </p>
@@ -810,7 +842,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
 " />
                       <div className='BeyondRightcer'>
                        
-                        <p>Someone who wants to start learning 3D modelling from the basics.
+                        <p>Someone who wants to start learning 3D modeling  from the basics.
 
                         </p>
                       </div>
@@ -924,13 +956,22 @@ function DiplomaAndAdvancedDiplomaCourses() {
           </div>
         </div>
       </div>
+  
       <section className="bancer">
         <div class="small-banner1 ftbaner1"><div className="col-12 col-lg-8 col-md-7 col-sm-12 bottomcer"><div class="foot-ban"> <p class="didYouKnow h6 mb-3">Enroll in the Basics of Maya Course and Earn Certification @
         </p><div className="disdvi"><span className="actprice"><del>₹4999</del></span><span className="discountprice">₹799</span> <span className="savingamt">84% Disc.</span></div>
           <div className="savingamto" style={{width:"150px"}}><p className="" style={{margin:"0px", fontWeight:"bold",fontSize:"12px"}}>Limited Time Offer!</p></div></div></div></div></section>
       {isButtonVisible && (
-        <div className="CousellingButton1 tetstL1" style={{ marginBottom: "0px" }} onClick={scrollToBottom}> <button className="dwnbtn three w-full sm:w-auto" style={{ width: "450px" }} onClick={handleClickss}>Enroll Now
-        </button> </div>
+        <div className="CousellingButton1 tetstL1" style={{ marginBottom: "0px" }} onClick={scrollToBottom}>     
+     
+      {/* DIALOG FROM ANOTHER PAGE */}
+      <PaymentC
+       className="my-custom-class"
+        style={{ width: "450px" }}
+        open={openFormModal}
+        onClose={() => setOpenFormModal(false)}
+      />
+</div>
       )}
 
     </>

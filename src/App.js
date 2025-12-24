@@ -260,6 +260,13 @@ export default function App() {
                     <Menu {...routeProps} component="CertificateProgramInBasicslsOfMayaformarketing" />
                   )}
                 />
+                    <Route
+                  exact
+                  path={"/landingpage/payment/"}
+                  render={routeProps => (
+                    <Menu {...routeProps} component="Payment" />
+                  )}
+                />
                 <Route
                   exact
                   path={"/landingpage/certificate-program-in-3DGame-development-with-unity/"}

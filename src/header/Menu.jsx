@@ -71,7 +71,7 @@ const CertifiedSkillUnity = () => < Async load={import("../components/AC-StaticP
 
 const CertificateProgramInEssentialsOfGameDesign = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramInEssentialsOfGameDesign.js")} />
 const CertificateProgramInBasicslsOfMaya = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramInBasicslsOfMaya.js")} />
-
+const Payment = () => < Async load={import("../components/AC-StaticPages/landingpage/Payment.js")} />
 const CertificateProgramInBasicslsOfMayaformarketing = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramInBasicslsOfMayaformarketing.js")} />
 const CertificateProgramIn3DGameDevelopmentWithUnity = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramIn3DGameDevelopmentWithUnity.js")} />
 
@@ -1134,7 +1134,32 @@ function Menu(props) {
       </>
     );
   }
+ else if (props.component === "Payment") {
+    return (
+      <>
 
+        <React.Fragment>
+          <CssBaseline />
+          <ThemeProvider theme={darkTheme}>
+            <ElevationScroll  {...props}>
+
+              <AppBar>
+                <Toolbar style={toolbarStyle}>
+             
+                </Toolbar>
+              </AppBar>
+
+            </ElevationScroll >
+          </ThemeProvider>
+          <Toolbar />
+
+        </React.Fragment>
+        <Payment />
+     
+       
+      </>
+    );
+  }
   else if (props.component === "CertificateProgramInBasicslsOfMayaformarketing") {
     return (
       <>

@@ -461,7 +461,7 @@ const featureData = [
           <div className="row align-items-start sidebyd">
 
             {/* LEFT SIDE – col-8 */}
-            <div className="col-12 col-lg-8 hero-left">
+            <div className="left-content hero-left">
               <div className="col-4">
                 <h1 className="hero-title">Basics Of Maya for Beginners</h1>
 
@@ -528,22 +528,23 @@ const featureData = [
                   </div>
                 )}
               </div>
-              <div className="col-4" style={{ width: "43%" }}>
-                <div className="right-form">
-                  <div className="sticky-form">
-                         <div class="scene">
-              <h1>Last Chance! Offer Ends Jan 15, 2026
-</h1>
+              
+  
+
             </div>
-                    <h3 className="previewcon" style={{ textAlign: "center" }}>Get this Course @ 799</h3>
-                    <input type="text" placeholder="Name" />
-                    <input type="text" placeholder="Email" />
-                    <input type="tel" placeholder="Phone" />
-                    <button style={{ fontSize: isMobileState ? "14px" : "15px" }}>Enroll Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+                       <div className="right-form sticky-stop-wrapper">
+  <div className="sticky-form">
+    <h3 className="previewcon" style={{ textAlign: "center" }}>
+      Get this Course @ 799
+    </h3>
+    <input type="text" placeholder="Name" />
+    <input type="text" placeholder="Email" />
+    <input type="tel" placeholder="Phone" />
+    <button style={{ fontSize: isMobileState ? "14px" : "15px" }}>
+      Enroll Now
+    </button>
+  </div>
+</div>
             {/* 
       RIGHT SIDE – STICKY FORM
       {!isMobileState && (
@@ -580,7 +581,10 @@ const featureData = [
             </div>
           </section>
           <section className="" style={{ backgroundColor: "#ffffff" }}>
-       
+            <div class="scene">
+              <h1>Last Chance! Offer Ends Jan 15, 2026
+</h1>
+            </div>
           </section>
           <section className="" style={{marginBottom: "30px" }}>
             <div className="section-wrappercer">

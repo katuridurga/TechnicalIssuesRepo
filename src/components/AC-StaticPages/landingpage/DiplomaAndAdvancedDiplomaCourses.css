@@ -1528,6 +1528,7 @@ margin-top: 20px;
 .bancer .small-banner1 .didYouKnow {
     font-size: 2rem;
     font-weight: 700;
+    margin-bottom: 15px;
 }
 .bancer .small-banner .foot-ban .salary {
     margin-bottom: 0!important;
@@ -1689,15 +1690,7 @@ flex: 0 0 40%;
   width: 30px;
   height: 30px;
 }
-/* STICKY FORM */
-.sticky-form-wrapper {
-  position: sticky;
-  top: 90px; /* adjust if header height differs */
-  background: #ffffff;
-  padding: 24px;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-}
+
 
 /* FORM STYLES */
 .sticky-form-wrapper h3 {
@@ -1800,7 +1793,7 @@ display: flex;
   column-gap: 30px;
 }
 
-.sticky-form-wrapper input{
+.sticky-form input{
   border:1px solid #c6c3c3 !important;
 
 }
@@ -1810,28 +1803,16 @@ display: flex;
   height: auto !important;
 }
 
-/* Prevent parents from killing sticky */
 .hero-section,
 .hero-container,
 .sidebyd,
 .row,
-.col-lg-4,
-.mainPanel1,
 .course-wrappecer {
   overflow: visible !important;
   transform: none !important;
 }
 
-/* Sticky form */
-.sticky-form-wrapper {
-  position: sticky;
-  top: 107px;
-  background: #ffffff;
-  padding: 24px;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-  z-index: 10;
-}
+
 
 .scene h1 {
     text-align: center;
@@ -1887,36 +1868,39 @@ display: flex;
 
 /* ===== Right Form (20%) ===== */
 .right-form {
-  width: 26%;
+  width: 100%;
+align-self: flex-start;
+}
 
-  
+/* ===== Content Wrapper ===== */
+.content-wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  overflow: visible;
 }
 
 /* ===== Sticky Form ===== */
 .sticky-form {
-  position: fixed;
-  top: 170px; /* distance from top */
+  position: sticky;
+  top: 170px; /* start sticking here */
   padding: 20px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-  width:26%;
 }
 
-.sticky-form input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border:1px solid#8c8686!important;
-}
+/* ===== Mobile Fix ===== */
+@media (max-width: 991px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
 
-.sticky-form button {
-  width: 100%;
-  padding: 10px;
-  background: #ed1925;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+  .right-form {
+    width: 100%;
+  }
+
+
 }
 
 /* ===== Mobile ===== */
@@ -1930,10 +1914,6 @@ display: flex;
     width: 100%;
   }
 
-  .sticky-form {
-    position: relative;
-    top: auto;
-  }
 }
 .hero-left{
   display: flex;
