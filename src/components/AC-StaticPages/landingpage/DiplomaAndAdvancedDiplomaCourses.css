@@ -582,7 +582,7 @@ font-size: 28px;
 .hero-text {
      color: #ffffff;
     margin-top: 20px;
-    max-width: 66%;
+    max-width: 45%;
     padding: 0px;
     text-align: justify;
     line-height: 26px;
@@ -1517,9 +1517,10 @@ margin-top: 20px;
     width: 100%;
     margin: 0px auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 100px;
+  }
 
 .bancer .small-banner .didYouKnow {
     font-size: 2rem;
@@ -1636,6 +1637,12 @@ list-style: unset !important;
     flex-direction: column;
     align-items: center;
     max-width: 65.666667%;
+}
+.bottomcer1{   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 58.666667%;
 }
 .tick-list-cer {
   list-style: none;
@@ -1786,13 +1793,12 @@ display: flex;
   margin: 0;
   line-height: 1.4;
 }
-
-/* OPTIONAL: spacing from hero text */
 .sidebyd {
   display: flex;
-  column-gap: 30px;
+  align-items: flex-start;
+  gap: 40px;
+  overflow: visible !important;
 }
-
 .sticky-form input{
   border:1px solid #c6c3c3 !important;
 
@@ -1868,8 +1874,8 @@ display: flex;
 
 /* ===== Right Form (20%) ===== */
 .right-form {
-  width: 100%;
-align-self: flex-start;
+  width: 360px;
+  flex-shrink: 0;
 }
 
 /* ===== Content Wrapper ===== */
@@ -1878,16 +1884,6 @@ align-self: flex-start;
   gap: 24px;
   align-items: flex-start;
   overflow: visible;
-}
-
-/* ===== Sticky Form ===== */
-.sticky-form {
-  position: sticky;
-  top: 170px; /* start sticking here */
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 /* ===== Mobile Fix ===== */
@@ -1974,4 +1970,78 @@ display: flex;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.leftfrmv{
+width:100%;
+}
+.sticky-stop-wrapper {
+  position: relative;
+  height: 1200px;          /* 🔥 CONTROL STICKY RANGE HERE */
+}
+/* marketingpage css*/
+/* ===== STICKY BOUNDARY ===== */
+.page-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 97px;
+}
+
+/* LEFT CONTENT */
+.left-content {
+  width: 88%;
+}
+
+/* RIGHT COLUMN */
+.right-sticky {
+    width: 35%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* STICKY FORM */
+.sticky-form {
+  position: fixed;
+  top: 158px; /* adjust to header height */
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  width:25%;
+}
+
+/* MOBILE SAFETY */
+@media (max-width: 768px) {
+  .page-wrapper {
+    flex-direction: column;
+  }
+
+  .left-content,
+  .right-sticky {
+    width: 100%;
+  }
+
+  .sticky-form {
+    position: static;
+    box-shadow: none;
+    width:100% !important;
+  }
+  .leftfrmv {
+    width: 100%;
+    margin-bottom: 35px;
+}
+}
+.en-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+}
+.en-btn:hover{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+  color:#fff;
 }

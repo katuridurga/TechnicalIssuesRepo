@@ -29,13 +29,6 @@ import { FaLinkedin } from "react-icons/fa";
 import Ourawards from "../../../content/ourawards";
 import jobn from '../../../assets/img/placentsn.webp';
 import clockn from '../../../assets/img/star.webp';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-import EnrollNowButton from "./EnrollNowButton";
 
 function Feature({ title, subtitle }) {
   return (
@@ -67,6 +60,7 @@ function Featurecarrer({ title, subtitle }) {
     </div>
   );
 }
+
 function Module({ title, items = [] }) {
   return (
     <div className="module-block">

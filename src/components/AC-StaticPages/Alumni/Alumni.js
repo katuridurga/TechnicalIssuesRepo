@@ -246,8 +246,8 @@ function Alumni() {
     img: speaker4,
     name: "Joseph Kalathil",
     title: "Backend Platform Engineer",
-    subtitle: "Hacksaw Studios, Stockholm",
-    alt: "Joseph Kalathil - Backend Platform Engineer at Hacksaw Studios, Stockholm"
+    subtitle: "Hacksaw Studios,  Sweden",
+    alt: "Joseph Kalathil - Backend Platform Engineer at Hacksaw Studios"
   },
   {
     img: speaker7,
@@ -352,7 +352,7 @@ function Alumni() {
     name: "Surya Shankha Chakraborty",
     title: "Concept artist",
     subtitle: "Hitwicket, Hyderabad",
-    alt: "Surya Shankha Chakraborty - Concept Artist at Hitwicket, Hyderabad"
+    alt: "Surya Shankha Chakraborty - Concept Artist, Hitwicket, Hyderabad"
   },
   {
     img: speaker36,

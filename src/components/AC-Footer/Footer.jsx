@@ -46,6 +46,7 @@ function Footer() {
   const testFooterPaths = [
     "/landingpage/diploma-and-advanced-diploma-courses/",
     "/landingpage/diploma-and-advanced-diploma-game-development-courses/",
+    "/landingpage/basics-of-maya-online-certification/",
     "/landingpage/game-development-programs/",
     "/landingpage/masters-and-bachelors-game-development-courses/",
     "/landingpage/certificate-program-in-essentials-of-game-design/",
@@ -87,7 +88,8 @@ function Footer() {
     "/landingpage/game-development-programs/",
     "/landingpage/game-development-with-unity-programs/",
     "/landingpage/masters-and-bachelors-game-development-courses/",
-    "/landingpage/certified-diploma-3d-hard-surface-modeling-texturing/"
+    "/landingpage/certified-diploma-3d-hard-surface-modeling-texturing/",
+    "/landingpage/basics-of-maya-online-certification/"
   ];
 
 
@@ -104,7 +106,7 @@ function Footer() {
     "/landingpage/game-development-with-unity-programs/",
     "/landingpage/game-development-with-unreal-programs/",
     "/landingpage/certificate-program-in-prototyping-and-game-concept-development/",
-
+"/landingpage/basics-of-maya-online-certification/",
 
   ];
     const specialHeightPaths1 = [

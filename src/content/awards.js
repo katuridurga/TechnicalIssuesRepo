@@ -7,7 +7,7 @@ import aw22 from "../assets/img/awards/Times_Education_Excellence_2022.webp";
 import aw23 from "../assets/img/awards/Times_Education_Excellence_2023.webp";
 import aw24 from "../assets/img/awards/Times_Education_Excellence_2024.webp";
 import aw25 from "../assets/img/awards/ET_Achievers_2025.webp";
-
+import bui6 from "../assets/img/esa245.webp";
 
 import "./awards.css"
 
@@ -40,6 +40,14 @@ function Awards() {
 
                                         </div>
                                     </div>
+                                         <div class="cardsgawardh">
+                                        <img src={bui6} alt="awardfive" />
+                                        <p>2023</p>
+                                        <div class="overlaysawardh">
+                                            <h3>EduSpark Awards 2023 <br /><br />  2023</h3>
+
+                                        </div>
+                                    </div>
                                     <div class="cardsgawardh">
                                         <img src={aw23} alt="awardfive" />
                                         <p>2023</p>
@@ -48,6 +56,7 @@ function Awards() {
 
                                         </div>
                                     </div>
+
                                     <div class="cardsgawardh">
                                         <img src={aw22} alt="awardthree" />
                                         <p>2022</p>

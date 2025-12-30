@@ -322,7 +322,7 @@ function MenuCore(props) {
                     <Link to={""} onClick={(e) => e.preventDefault()} style={{ color: activeParent1 ? "#ee1b24" : "#000" }}>About us <FiChevronDown style={{ color: activeParent1 ? "#ee1b24" : "#000" }} /></Link>
                     <ul style={{ width: "320px" }}>
                       <div className="mainc"><Link to={"/about-us/our-story/"} onClick={() => setActiveParent1(true)} style={linkStyle}>Our story</Link></div>
-                      <div className="mainc"><Link to={"/about-us/affiliation-collaboration/"} onClick={() => setActiveParent1(true)} style={linkStyle}>Affiliation</Link></div>
+                      <div className="mainc"><Link to={"/about-us/affiliation-collaboration/"} onClick={() => setActiveParent1(true)} style={linkStyle}>Affiliations & Collaborations</Link></div>
                       <div className="mainc"><Link to={"/about-us/placement-support/"} onClick={() => setActiveParent1(true)} className="link-item" style={linkStyle}>Placement Support</Link></div>
                     </ul>
                   </li>
@@ -525,7 +525,7 @@ function MenuCore(props) {
                       window.scrollTo(0, 0);
                     }} onKeyDown={toggleDrawer(false)}>
                       <Link to={"/about-us/our-story/"}>Our story</Link>
-                      <Link to={"/about-us/affiliation-collaboration/"}>Affiliation</Link>
+                      <Link to={"/about-us/affiliation-collaboration/"}>Affiliations & Collaborations</Link>
                       <Link to={"/about-us/placement-support/"}>Placement Support</Link>
                     </div>
                   )}

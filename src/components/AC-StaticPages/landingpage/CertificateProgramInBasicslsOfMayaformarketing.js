@@ -1,16 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./DiplomaAndAdvancedDiplomaCourses.css";
 import { Helmet } from "react-helmet";
+import PaymentC from "./Payment";
 import { useSelector, shallowEqual } from "react-redux";
 import cer from "../../../assets/img/test/certificate-with-badge.png";
 import { FaPlay } from "react-icons/fa";
 import axios from 'axios';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-import Button from '@mui/material/Button';
+import modeling from "../../../assets/img/Environment.webp";
+import prop from "../../../assets/img/3D_Game_Asset.webp";
+import gameasst from "../../../assets/img/3D_Prop.webp";
+import envir from "../../../assets/img/3d-modelling.webp";
 import { useTheme } from '@mui/material/styles';
 import r1 from "../../../assets/img/partners/r1.webp";
 import r2 from "../../../assets/img/partners/r2.webp";
@@ -364,6 +363,46 @@ function DiplomaAndAdvancedDiplomaCourses() {
       </div>
     );
   }
+function Featurecarrer1({ title, subtitle }) {
+  return (
+    <div className="feature-boxcar" style={{padding:"8px"}}>
+      <div className="feature-iconcercar" style={{fontSize:"18px", fontWeight:"bold"}}><img src={modeling}/></div>
+      <div>
+        <div className="feature-titlecar" style={{fontSize:"14px"}}>{title}</div>
+      </div>
+    </div>
+  );
+}
+function Featurecarrer2({ title, subtitle }) {
+  return (
+    <div className="feature-boxcar">
+      <div className="feature-iconcercar" style={{fontSize:"18px", fontWeight:"bold"}}><img src={prop}/></div>
+      <div>
+        <div className="feature-titlecar" style={{fontSize:"14px"}}>{title}</div>
+      </div>
+    </div>
+  );
+}
+function Featurecarrer3({ title, subtitle }) {
+  return (
+    <div className="feature-boxcar">
+      <div className="feature-iconcercar" style={{fontSize:"18px", fontWeight:"bold"}}><img src={gameasst}/></div>
+      <div>
+        <div className="feature-titlecar" style={{fontSize:"14px"}}>{title}</div>
+      </div>
+    </div>
+  );
+}
+function Featurecarrer4({ title, subtitle }) {
+  return (
+    <div className="feature-boxcar">
+      <div className="feature-iconcercar" style={{fontSize:"18px", fontWeight:"bold"}}><img src={envir}/></div>
+      <div>
+        <div className="feature-titlecar" style={{fontSize:"14px"}}>{title}</div>
+      </div>
+    </div>
+  );
+}
   function Featureben({ title, subtitle, img }) {
     return (
       <div className="feature-boxcar">
@@ -444,6 +483,13 @@ const featureData = [
     img: icon10
   }
 ];
+ const [openFormModal, setOpenFormModal] = useState(false);
+
+ 
+const handleFormClose = () => {
+  setOpenFormModal(false);
+};
+
   return (
     <>
       <Helmet>
@@ -454,15 +500,17 @@ const featureData = [
         <meta name="description" content="Learn Autodesk Maya 2024 from scratch. Beginner-friendly online course covering 3D modelling, UV mapping & texturing. Certificate included." />
         <link rel="canonical" href="https://www.backstagepass.co.in/landingpage/basics-of-maya-online-certification/" />
       </Helmet>
+      {openFormModal && (
+        <PaymentC onClose={handleFormClose} style={{width:"75%"}} />
+      )}
+      
       {/* ===== Banner Section (100%) ===== */}
       <section className="banner-section hero-section" style={{ paddingBottom: "20px" }}>
-        <div className="hero-inner">
+     
 
-          <div className="row align-items-start sidebyd">
-
-            {/* LEFT SIDE – col-8 */}
-            <div className="left-content hero-left">
-              <div className="col-4">
+  <div className="left-content">
+   
+          <div className="col-4 leftfrmv">
                 <h1 className="hero-title">Basics Of Maya for Beginners</h1>
 
                 <p className="hero-text">
@@ -528,46 +576,45 @@ const featureData = [
                   </div>
                 )}
               </div>
-              
-  
+               {isMobileState && (
+  <aside className="right-sticky">
+    <div className="sticky-form">
+      <h3 className="previewcon" style={{ textAlign: "center" }}>
+        Get this Course @ 799
+      </h3>
 
-            </div>
-                       <div className="right-form sticky-stop-wrapper">
-  <div className="sticky-form">
-    <h3 className="previewcon" style={{ textAlign: "center" }}>
-      Get this Course @ 799
-    </h3>
-    <input type="text" placeholder="Name" />
-    <input type="text" placeholder="Email" />
-    <input type="tel" placeholder="Phone" />
-    <button style={{ fontSize: isMobileState ? "14px" : "15px" }}>
-      Enroll Now
-    </button>
+      <input
+        type="text"
+        placeholder="Name"
+      />
+
+      <input
+        type="text"
+        placeholder="Email"
+      />
+
+      <input
+        type="tel"
+        placeholder="Phone"
+      />
+
+      <button onClick={() => setOpenFormModal(true)}>
+        Enroll Now
+      </button>
+    </div>
+  </aside>
+)}
   </div>
-</div>
-            {/* 
-      RIGHT SIDE – STICKY FORM
-      {!isMobileState && (
-        <div className="col-lg-4 hero-right">
-          <div className="sticky-form-wrapper">
-            <h3 className="form-title">Get this Course @ ₹799</h3>
 
-            <input type="text" placeholder="Full Name" />
-            <input type="email" placeholder="Email Address" />
-            <input type="tel" placeholder="Mobile Number" />
 
-            <button onClick={handleClickss}>Enroll Now</button>
-          </div>
-        </div>
-      )} */}
+</section>
 
-          </div>
-        </div>
-      </section>
+     
+
 
 
       {/* ===== Content Section ===== */}
-      <section className="content-wrapper">
+      <section className="content-wrapper page-wrapper">
 
         {/* Left Content - 80% */}
         <div className="left-content">
@@ -580,13 +627,13 @@ const featureData = [
 
             </div>
           </section>
-          <section className="" style={{ backgroundColor: "#ffffff" }}>
+          <section className="" style={{ backgroundColor: "#ffffff", display:"flex", alignItems:"center", justifyContent:"center" }}>
             <div class="scene">
               <h1>Last Chance! Offer Ends Jan 15, 2026
 </h1>
             </div>
           </section>
-          <section className="" style={{marginBottom: "30px" }}>
+          <section className="" style={{marginBottom: "0px" }}>
             <div className="section-wrappercer">
 
               <h3 className="previewcon" style={{fontSize:isMobileState?"20px":"28px"}}>Key Features</h3>
@@ -765,7 +812,7 @@ const featureData = [
               </h3>
 
               <div className="courseUpdatescertificate">
-                <ul style={{ width: "100%", margin: "0px auto", paddingTop: "10px", paddingBottom: "30px" }}>
+                <ul style={{ width: "100%", margin: "0px auto", paddingTop: "10px", paddingBottom: "0px" }}>
                   <li style={{ marginLeft: "0px" }}>
 
                     <Feature1 title=" 
@@ -837,37 +884,29 @@ const featureData = [
             </div>
           </section>
           
-          <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "30px" }}>
-            <div className="section-wrappercer">
-
-              <h3 className="previewcon" style={{fontSize:isMobileState?"20px":"28px"}}>Career Opportunities
-              </h3>
-              <p style={{ fontSize: "16px" }}>Once you complete this course, you can begin your journey as</p>
-              <div className="feature-gridcer1" style={{ gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(2, 1fr)" }}>
-                <Feature
-                  title="3D Modeling & Texturing Artist"
-
-                />
-
-                <Feature
-                  title="3D Prop Artist"
-
-                />
-
-                <Feature
-                  title="3D Game Asset Artist"
-
-                />
-
-                <Feature
-                  title="Environment Artist"
-
-                />
-
-              </div>
-            </div>
-          </section>
         
+        
+            <section className="" style={{ backgroundColor: "#ffffff", marginBottom:"30px" }}>
+              <div className="section-wrappercer">
+
+                <h3 className="previewcon">Career Opportunities
+                </h3>
+<p style={{fontSize:"16px"}}>Once you complete this course, you can begin your journey as</p>
+                <div className="feature-gridcer1">
+                  <Featurecarrer1 title="3D Modeling & Texturing Artist
+" />
+                  <Featurecarrer2 title="3D Prop Artist
+" />
+                  <Featurecarrer3 title="3D Game Asset Artist
+" />
+                  <Featurecarrer4 title="Environment Artist
+
+" />
+
+                </div>
+              </div>
+            </section>
+           
           <section className="" style={{ backgroundColor: "#f6f7f8", marginBottom: "0px" }}>
             <div className="section-wrappercer">
               <h3 className="previewcon" style={{fontSize:isMobileState?"20px":"28px"}}>Our Learners Work Across Top Companies</h3>
@@ -1015,6 +1054,35 @@ const featureData = [
 
         {/* Right Sticky Form - 20% */}
 
+{/* ===== RIGHT STICKY FORM (DESKTOP ONLY) ===== */}
+{!isMobileState && (
+  <aside className="right-sticky">
+    <div className="sticky-form">
+      <h3 className="previewcon" style={{ textAlign: "center" }}>
+        Get this Course @ 799
+      </h3>
+
+      <input
+        type="text"
+        placeholder="Name"
+      />
+
+      <input
+        type="text"
+        placeholder="Email"
+      />
+
+      <input
+        type="tel"
+        placeholder="Phone"
+      />
+
+      <button className="en-btn" onClick={() => setOpenFormModal(true)}>
+        Enroll Now
+      </button>
+    </div>
+  </aside>
+)}
 
       </section>
 
@@ -1023,8 +1091,14 @@ const featureData = [
         </p><div className="disdvi"><span className="actprice"><del>₹3000</del></span><span className="discountprice">₹2499</span> <span className="savingamt">84% Disc.</span></div>
           <div className="savingamto" style={{ width: "150px" }}><p className="" style={{ margin: "0px", fontWeight: "600", fontSize: "12px" }}>Limited Time Offer!</p></div></div></div></div></section>
       {isButtonVisible && (
-        <div className="CousellingButton1 tetstL1" style={{ marginBottom: "0px" }} onClick={scrollToBottom}> <button className="dwnbtn three w-full sm:w-auto" style={{ width: "450px" }} onClick={handleClickss}>Enroll Now
-        </button> </div>
+        <div className="CousellingButton1 tetstL1" style={{ marginBottom: "0px", backgroundColor:"#ffffff" }} onClick={scrollToBottom}>
+              {/* DIALOG FROM ANOTHER PAGE */}
+              <PaymentC
+               className="my-custom-class"
+                style={{ width: "450px" }}
+                open={openFormModal}
+                onClose={() => setOpenFormModal(false)}
+              /> </div>
       )}
 
     </>

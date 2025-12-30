@@ -24,7 +24,7 @@ const testimonials = [
   {
     text: "Backstage Pass brings the like-minded under a single roof. Our courses related to game development & game design were custom- tailored to meet the requirements of the game industry and I feel it is the right place to start for a successful career in the game industry.",
     name: "Jithin Peter",
-    role: "Sr. Game Programmer, sumo digital, Bangalore",
+    role: "Sr. Game Programmer,  Sumo Digital, Bangalore",
     avatar: "https://www.backstagepass.co.in/JithinPeter-bd2017d7.webp?img=4",
   },
   {
@@ -66,19 +66,19 @@ const testimonials = [
   {
     text: "My passion for gaming led me to pursue a course at Backstage Pass, and it completely transformed my understanding of game art. I learned how entertainment-focused artwork differs from traditional fine arts and how to approach art in a way that makes it a seamless part of the game world. This insight helped me develop a structured approach to game art, turning creativity into immersive gaming experiences.",
     name: "Surya Shanka",
-    role: "Concept artist at Hitwicket",
+    role: "Concept artist, Hitwicket,  Hyderabad",
     avatar: "https://www.backstagepass.co.in/Suryashankha-5232eea7.webp?img=11",
   },
   {
     text: "Backstage Pass is one of the few colleges in India that offers a game development course with computer science as a core subject and it truly stands out in this category. The mentors were incredibly supportive throughout my journey. After years of playing games, the ability to now create games that millions enjoy is a rewarding experience. Looking back, I can confidently say that my four years at Backstage Pass were well worth the effort.",
     name: "Srivatsan Prativadibhayankara",
-    role: "Senior Unity Developer, Product Madness",
+    role: "Senior Unity Developer, Product Madness, UK",
     avatar: "https://www.backstagepass.co.in/Srivatsan-713173e3.webp?img=12",
   },
   {
     text: "Backstage Pass was the catalyst that let me do bigger things as it provided me a very strong foundation. It was more than just exams. There is a lot of scope for knowledge sharing and it played a big role in how I was able to get good at my craft.",
     name: "Joseph Kalathi",
-    role: "Gameplay Programmer Hacksaw studios,stockholm, sweden",
+    role: "Gameplay Programmer Hacksaw studios, Sweden",
     avatar: "https://www.backstagepass.co.in/JoesphKalathil-d9008f68.webp?img=13",
   },
 ];
