@@ -377,7 +377,11 @@
     font-size: 13px !important;
   }
 
-  
+  .pr9 {
+    position: relative;
+    z-index: 1;
+    min-height: 450px !important;
+  }
 
   .breadcrumbs {
 
@@ -9467,37 +9471,5 @@ td p {
     padding-top: 10px;
     color: #ec1923;
     text-align: center;
-  }
-}
-@media (max-width: 1024px) {
-  .pr9 {
-    min-height: 450px;
-  }
-}
-
-@media (max-width: 480px) and (max-height: 700px) {
-  .pr9 {
-    min-height: 65vh;
-  }
-}
-
-@media only screen 
-  and (max-width: 360px) 
-  and (max-height: 640px) {
-
-  .pr9 {
-    min-height: 70vh;        /* prevents extra gap */
-  
-  }
-
-  .banner .heading--white {
-    font-size: 26px;
-    line-height: 34px;
-    margin: 0 16px !important;
-  }
-}
-@media (min-width: 430px) {
-  .pr9 {
-    min-height: 53vh !important;
   }
 }
