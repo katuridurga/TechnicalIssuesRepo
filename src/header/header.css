@@ -341,6 +341,7 @@
 }
 
 @media (max-width: 768px) {
+
   .head-wrapper {
     flex-direction: column;
     /* OR switch to hamburger */
@@ -377,11 +378,7 @@
     font-size: 13px !important;
   }
 
-  .pr9 {
-    position: relative;
-    z-index: 1;
-    min-height: 450px !important;
-  }
+ 
 
   .breadcrumbs {
 
@@ -9472,4 +9469,12 @@ td p {
     color: #ec1923;
     text-align: center;
   }
+}
+@media (min-width: 431px) {
+    .pr9 {
+    position: relative;
+    z-index: 1;
+    min-height: 475px !important;
+  }
+
 }
