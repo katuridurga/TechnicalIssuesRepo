@@ -262,7 +262,7 @@ function Affilication() {
        
             </div>
             <p>
-              is a Backstage Pass Institute of Gaming and <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://jnafau.ac.in/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">  </a></b> have entered into a strategic MoU to offer industry-focused Diploma and Advanced Diploma programs in game development and related disciplines across India.
+            Backstage Pass Institute of Gaming and <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://jnafau.ac.in/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">  </a></b> have entered into a strategic MoU to offer industry-focused Diploma and Advanced Diploma programs in game development and related disciplines across India.
 
 
             </p>
@@ -306,7 +306,7 @@ function Affilication() {
               <h3 className="courseHeading fadeInUp anime-delay" style={{ color: "#ed1925", fontSize: isMobileState ? "24px" : "32px" }}> Frameboxx Animation & Visual Effects</h3>
             </div>
             <p>
-              is a Backstage Pass Institute of Gaming and <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://jnafau.ac.in/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer"> Frameboxx Animation & Visual Effects </a></b> have entered into a strategic MoU to offer industry-focused Diploma and Advanced Diploma programs in game development and related disciplines across India.
+           Backstage Pass Institute of Gaming and <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://frameboxx.in/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer"> Frameboxx Animation & Visual Effects </a></b> have entered into a strategic MoU to offer industry-focused Diploma and Advanced Diploma programs in game development and related disciplines across India.
 
 
             </p>

@@ -296,7 +296,7 @@ useEffect(() => {
             </div>
 
             <div className="incontent">
-               <p>Backstage Pass students at IGDC 2025 </p>
+               <p> Backstage Pass Collaborated with Frameboxx </p>
 
               <a
                 className="readmore-btn"
@@ -323,7 +323,7 @@ useEffect(() => {
 
             <div className="incontent">
            
-  <p>Backstage Pass Collaborated with Frameboxx </p>
+  <p> Backstage Pass students at IGDC 2025</p>
               <a
                 className="readmore-btn"
                 href="https://www.animationxpress.com/latest-news/double-win-for-backstage-pass-students-at-igdc-2025/"
