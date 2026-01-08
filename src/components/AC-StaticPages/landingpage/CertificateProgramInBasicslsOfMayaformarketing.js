@@ -439,18 +439,18 @@ useEffect(() => {
   /* 🔹 Save data to localStorage whenever formData changes */
   const EXPIRY_TIME = 5 * 60 * 1000; // 5 minutes
 
-  // useEffect(() => {
-  //   localStorage.setItem("stickyFormData", JSON.stringify(formData1));
-  // }, [formData1]);
-  // const clearStickyForm = () => {
-  //   setFormData1({
-  //     name: "",
-  //     email: "",
-  //     phone: "",
-  //   });
+  useEffect(() => {
+    localStorage.setItem("stickyFormData", JSON.stringify(formData1));
+  }, [formData1]);
+  const clearStickyForm = () => {
+    setFormData1({
+      name: "",
+      email: "",
+      phone: "",
+    });
 
-  //   localStorage.removeItem("stickyFormData");
-  // };
+  
+  };
 
   /* 🔹 Handle input change */
   const handleEnrollNow = () => {
