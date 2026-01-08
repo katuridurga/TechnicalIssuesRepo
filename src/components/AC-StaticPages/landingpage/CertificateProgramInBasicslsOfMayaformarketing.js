@@ -560,9 +560,29 @@ useEffect(() => {
                   Get this Course @ ₹799
                 </h3>
                 <form className="mble-form">
-                  <input type="text" placeholder="Name" />
-                  <input type="text" placeholder="Email" />
-                  <input type="tel" placeholder="Phone" />
+                    <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData1.name}
+                onChange={handleChange}
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData1.email}
+                onChange={handleChange}
+              />
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone"
+                value={formData1.phone}
+                onChange={handleChange}
+              />
 
                   <PaymentC
                     className="my-custom-class"
@@ -570,6 +590,7 @@ useEffect(() => {
                     onClose={() => setOpenFormModal(false)}
                     onClick={handleEnrollNow}
                   />
+                  
                 </form>
 
 
@@ -775,7 +796,7 @@ useEffect(() => {
           </section>
           <section className="" style={{ backgroundColor: "", marginBottom: "0px", marginTop: "20px" }}>
             <div className="section-wrappercer">
-              <h3 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px" }}>This is the One for You, If You are
+              <h3 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px" }}>This Course is for You, If You are
               </h3>
 
               <div className="courseUpdatescertificate">
