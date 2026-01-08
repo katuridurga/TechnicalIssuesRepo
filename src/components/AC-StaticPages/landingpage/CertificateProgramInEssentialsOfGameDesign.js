@@ -336,22 +336,22 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             <ul className='featuress3u'>
               <li><img src={ic9} alt="ic1" />
 
-                <div className='featuresscon2'>Game Designer
+                <div className='featuresscon2' style={{color:"#000"}}>Game Designer
 
                 </div></li>
 
               <li><img src={ic8} alt="ic1" />
-                <div className='featuresscon2'>Level Designer
+                <div className='featuresscon2' style={{color:"#000"}}>Level Designer
                 </div></li>
 
               <li><img src={ic7} alt="ic1" />
 
-                <div className='featuresscon2'>Gameplay Tester
+                <div className='featuresscon2' style={{color:"#000"}}>Gameplay Tester
 
 
                 </div></li>
               <li><img src={ic13} alt="ic1" />
-                <div className='featuresscon2'>Narrative Designer
+                <div className='featuresscon2' style={{color:"#000"}}>Narrative Designer
 
                 </div></li>
 
@@ -359,7 +359,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
               <li><img src={ic10} alt="ic1" />
 
-                <div className='featuresscon2'>Game Writer
+                <div className='featuresscon2' style={{color:"#000"}}>Game Writer
 
 
                 </div></li>

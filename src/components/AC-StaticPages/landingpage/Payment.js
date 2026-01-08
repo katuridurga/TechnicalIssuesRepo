@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
+import { withRouter } from "react-router-dom";
 import "./ShortCourse.css";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import axios from "axios";
 import { useSelector, shallowEqual } from "react-redux";
-
+import { useForm, Controller } from 'react-hook-form';
 import Box from "@mui/material/Box";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
@@ -13,6 +14,7 @@ import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
+
 
 /* -------------------- UTIL COMPONENTS -------------------- */
 
@@ -50,11 +52,28 @@ function TabPanel(props) {
 
 /* -------------------- ENROLL BUTTON -------------------- */
 
-const EnrollNowButton = ({ onClick }) => (
-  <button type="button" className="dwnbtn three w-full sm:w-auto" onClick={onClick} style={{ width: "450px" }}>
-    Enroll Now
-  </button>
-);
+
+
+const EnrollNowButtonBase = ({ onClick, location }) => {
+  const isMayaLanding =
+    location.pathname === "/landingpage/basics-of-maya-online-certification/";
+
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={
+        isMayaLanding
+          ? "alt-enroll-btn"
+          : "dwnbtn three w-full sm:w-auto"
+      }
+      style={isMayaLanding ? {} : { width: "450px" }}
+    >
+      ENROLL NOW
+    </button>
+  );
+};
+const EnrollNowButton = withRouter(EnrollNowButtonBase);
 
 /* -------------------- MAIN COMPONENT -------------------- */
 
@@ -67,7 +86,7 @@ function SkillDiplomaCourses() {
   const [openFormModal, setOpenFormModal] = useState(false);
   const [courses, setCourses] = useState([]);
   const formRef = useRef();
-
+  const { control, watch, formState: { }, setValue } = useForm();
   const [formData, setFormData] = useState({
     fullname: "",
     dob: "",
@@ -80,6 +99,21 @@ function SkillDiplomaCourses() {
     declaration: false,
     url: window.location.href,
   });
+  /* 🔹 Auto-fill popup form from sticky form localStorage */
+  useEffect(() => {
+    const savedData = localStorage.getItem("stickyFormData");
+
+    if (savedData) {
+      const parsed = JSON.parse(savedData);
+
+      setFormData((prev) => ({
+        ...prev,
+        fullname: prev.fullname || parsed.name || "",
+        email: prev.email || parsed.email || "",
+        PhoneNumber: prev.PhoneNumber || parsed.phone || "",
+      }));
+    }
+  }, [openFormModal]);
 
   const [paymentDetails, setPaymentDetails] = useState({
     originalPayment: "",
@@ -91,13 +125,13 @@ function SkillDiplomaCourses() {
 
   useEffect(() => {
     const referrer = document.referrer;
-    let lastSegment = "";
+    let lastSegment = "certificate-program-in-basics-of-maya";
 
-    if (referrer) {
-      const parts = referrer.split("/").filter(Boolean);
-      lastSegment = parts[parts.length - 1];
-      if (lastSegment === "short-course") lastSegment = "";
-    }
+    // if (referrer) {
+    //   const parts = referrer.split("/").filter(Boolean);
+    //   lastSegment = parts[parts.length - 1];
+    //   if (lastSegment === "short-course") lastSegment = "";
+    // }
 
     axios
       .get(
@@ -124,20 +158,26 @@ function SkillDiplomaCourses() {
   const handleFormClose = () => setOpenFormModal(false);
 
   const handleMainCategoryChange = (e) => {
-    const value = e.target.value;
-    const selected = courses.find((c) => c.value === value);
 
-    setFormData((prev) => ({ ...prev, course: value }));
+    const selectedCourse = e.target.value;
+    const selectedOption = courses.find((course) => course.value === selectedCourse);
 
-    if (selected) {
+    setFormData({
+      ...formData,
+      course: selectedCourse,
+      specialization: "", // You can set specialization if needed
+    });
+
+    // Update payment details based on the selected course
+    if (selectedOption) {
       setPaymentDetails({
-        originalPayment: selected.orignialpayment,
-        discountValue: "",
-        finalAmount: selected.gstpayment,
+        originalPayment: selectedOption.orignialpayment,
+        gstPayment: '18%',
+        discountValue: '',
+        finalAmount: selectedOption.gstpayment,
       });
     }
   };
-
   const handleInputChange = async (e) => {
     const { name, type, value, checked, files } = e.target;
 
@@ -176,6 +216,53 @@ function SkillDiplomaCourses() {
         type === "checkbox" ? checked : type === "file" ? files[0] : value,
     }));
   };
+  const handleEnrollClick = () => {
+    setFormData((prev) => ({
+      ...prev,
+      fullname: "",
+      email: "",
+      PhoneNumber: "",
+    }));
+    setOpenFormModal(true);
+  };
+  const [formData1, setFormData1] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+
+  // const handlePayNow = (e) => {
+  //   e.preventDefault();
+
+  //   // ✅ Clear POPUP form
+  //   setFormData({
+  //     fullname: "",
+  //     dob: "",
+  //     PhoneNumber: "",
+  //     email: "",
+  //     course: "",
+  //     city: "",
+  //     school: "",
+  //     coupon: "",
+  //     declaration: false,
+  //     url: window.location.href,
+  //   });
+
+  //   // ✅ Clear STICKY FORM (React state)
+  //   setFormData1({
+  //     name: "",
+  //     email: "",
+  //     phone: "",
+  //   });
+
+  //   // ✅ Clear STICKY FORM (localStorage)
+  //   localStorage.removeItem("stickyFormData");
+
+  //   // ✅ Close popup
+  //   setOpenFormModal(false);
+  // };
+
+
 
   /* -------------------- JSX -------------------- */
 
@@ -185,24 +272,25 @@ function SkillDiplomaCourses() {
         <title>Skill Diploma Course</title>
       </Helmet>
 
-      <EnrollNowButton onClick={() => setOpenFormModal(true)} />
+      <EnrollNowButton onClick={handleEnrollClick} />
 
-     <Dialog
-  open={openFormModal}
-  onClose={handleFormClose}
-  disableScrollLock
-  fullWidth
-  maxWidth={false}   
-  PaperProps={{
-    sx: {
-      width: isMobileState ? "95%" : "750px",  
-      maxWidth: "95%",
-      margin: "0 auto",
-    },
-  }}
->
 
-        <DialogActions style={{backgroundColor:"#fa9f42"}}>
+      <Dialog
+        open={openFormModal}
+        onClose={handleFormClose}
+        disableScrollLock
+        fullWidth
+        maxWidth={false}
+        PaperProps={{
+          sx: {
+            width: isMobileState ? "95%" : "750px",
+            maxWidth: "95%",
+            margin: "0 auto",
+          },
+        }}
+      >
+
+        <DialogActions style={{ backgroundColor: "#fa9f42" }}>
           <p className="mainHeadingTotall-2" style={{ fontSize: isMobileState ? "20px" : "30px", color: "#fff", margin: "16px auto" }}>ENROLLMENT FORM</p>
           <Button onClick={handleFormClose} className="hvcls" style={{ fontSize: "35px", color: "#fff", fontWeight: "bold" }}> &times;</Button>
 
@@ -214,6 +302,7 @@ function SkillDiplomaCourses() {
             method="POST"
             action="https://www.backstagepass.co.in/payment_process.php"
             encType="multipart/form-data"
+           // onSubmit={handlePayNow}
           >
 
 
@@ -239,7 +328,7 @@ function SkillDiplomaCourses() {
 
               <div className="">
                 <label className="" for="dob">Date of Birth (as per official documents)</label>
-                <input
+                {/* <input
                   className="custom-datepicker"
                   placeholder="Date of Birth"
                   id="dob"
@@ -248,6 +337,59 @@ function SkillDiplomaCourses() {
                   value={formData.dob}
                   onChange={handleInputChange}
                   required
+                /> */}
+                <Controller
+                  name="dob"
+                  control={control}
+                  render={({ field }) => (
+                    <input
+
+                      fullWidth
+                      //label="Date Of Birth (dd/mm/yyyy)"
+                      label="Date of Birth"
+                      type="date"
+                      variant="outlined"
+                      {...field}
+
+                      InputProps={{
+
+                        sx: {
+
+                          '& input[type="date"]::-webkit-calendar-picker-indicator': {
+
+                            filter: 'invert(0)', // Inverts the icon to white
+
+                          },
+                          color: '#000',
+                          '& .MuiOutlinedInput-notchedOutline': {
+                            borderColor: '#555', // Default border color
+                          },
+                          '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                            borderColor: '#555', // Focused border color
+                          },
+                          '&:hover .MuiOutlinedInput-notchedOutline': {
+                            borderColor: '#555', // Hover border color
+                          },
+
+                        },
+
+                      }}
+
+                      value={formData.dob}
+                      onChange={handleInputChange}
+                      InputLabelProps={{
+                        sx: {
+                          color: 'white', // Label text color
+                          background: '#f9fafb',
+                          px: 1,
+                          '& .MuiInputLabel-asterisk': {
+                            color: 'red', // Asterisk color
+                            fontSize: '21px',
+                          },
+                        },
+                      }}
+                    />
+                  )}
                 />
               </div>
             </div>
@@ -391,9 +533,15 @@ function SkillDiplomaCourses() {
               </div>
             </div>
             <div style={{ padding: "20px" }}>
-              <button className="three button brand size200 w-full sm:w-auto" data-form-id="need-guidance" data-form="step1-button-continue" type="submit">
+              <button
+                type="submit"
+                className="three button brand size200 w-full sm:w-auto"
+               // onClick={handlePayNow}
+              >
                 Pay Now
               </button>
+
+
             </div>
           </form>
 

@@ -16,6 +16,7 @@ import fourteen from "../../src/assets/img/banners/14-fa50a1ea.webp";
 import years from "../../src/assets/img/banners/LAPTOPVIEW.webp";
 import yearss from "../../src/assets/img/banners/MOBILEVERSION.webp";
 import "./header.css";
+import LastChanceStripe from "../components/AC-StaticPages/landingpage/LastChanceStripe";
 
 // Styled Accordions
 const Accordion = styled((props) => (
@@ -92,6 +93,10 @@ function MenuCore(props) {
   };
 
 
+const showLastChanceStrip =
+  window.location.pathname.startsWith(
+    "/landingpage/basics-of-maya-online-certification"
+  );
 
   const selectTab = index => dispatch(selectedTab(index));
   const hiddenPaths = [
@@ -158,6 +163,7 @@ function MenuCore(props) {
     padding: "0px 10px",
     margin: "0"
   };
+  
   const renderCourses = () => (
     <div>
       {/* Bachelor's */}
@@ -228,11 +234,28 @@ function MenuCore(props) {
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
-
+   
       {/* ===== DESKTOP MENU ===== */}
       {!isMobileState ? (
-        <div className="head-container" style={{ background: "#ffffff" }}>
-          <div className="head-wrapper">
+      
+    
+    
+        <div className="head-container" style={{ background: "#ffffff"}}>
+          {showLastChanceStrip && (
+    <div className="header-strip-row">
+      <LastChanceStripe />
+    </div>
+  )}
+          <div className="head-wrapper"   style={
+    showLastChanceStrip
+      ? {
+          paddingLeft: isMobileState ? "16px" : "24px",
+          paddingRight: isMobileState ? "16px" : "24px",
+        }
+      : {}
+  }
+>
+         
             <MenuLogo />
             <div>
 
@@ -365,20 +388,35 @@ function MenuCore(props) {
             </div>
           </div>
         </div>
+
       ) : (
+ 
 
-
-        <div className="head-container">
-          <div className="mobile-menu">
+        <div className="head-container"  
+>
+                         {showLastChanceStrip && (
+    <div className="header-strip-row">
+      <LastChanceStripe />
+    </div>
+  )}
+          <div className="mobile-menu" style={
+    showLastChanceStrip
+      ? {
+          paddingLeft: isMobileState ? "16px" : "24px",
+          paddingRight: isMobileState ? "16px" : "24px",
+        }
+      : {}
+  }>
             {isMobileState ? <FiAlignLeft style={{
-              display: window.location.pathname === "/landingpage/diploma-and-advanced-diploma-courses/" || window.location.pathname === "/landingpage/diploma-and-advanced-diploma-game-development-courses/" || window.location.pathname === "/landingpage/masters-and-bachelors-game-development-courses/" || window.location.pathname === "/landingpage/certificate-program-in-essentials-of-game-design/"|| window.location.pathname === "/landingpage/certificate-program-in-basics-of-maya/" || window.location.pathname === "/landingpage/certificate-program-in-3DGame-development-with-unity/" || window.location.pathname === "/landingpage/certificate-program-in-game-development-for-VR/" || window.location.pathname === "/landingpage/certificate-program-in-prototyping-and-game-concept-development/" || window.location.pathname === "/landingpage/certificate-program-in-storytelling-and-design-documentation-for-games/" ||
+              display: window.location.pathname === "/landingpage/diploma-and-advanced-diploma-courses/" || window.location.pathname === "/landingpage/diploma-and-advanced-diploma-game-development-courses/" || window.location.pathname === "/landingpage/masters-and-bachelors-game-development-courses/" || window.location.pathname === "/landingpage/certificate-program-in-essentials-of-game-design/"|| window.location.pathname === "/landingpage/certificate-program-in-basics-of-maya/" || window.location.pathname === "/landingpage/basics-of-maya-online-certification/" || window.location.pathname === "/landingpage/certificate-program-in-3DGame-development-with-unity/" || window.location.pathname === "/landingpage/certificate-program-in-game-development-for-VR/" || window.location.pathname === "/landingpage/certificate-program-in-prototyping-and-game-concept-development/" || window.location.pathname === "/landingpage/certificate-program-in-storytelling-and-design-documentation-for-games/" ||
                 window.location.pathname === "/landingpage/masters-and-bachelors-programs/" || window.location.pathname === "/landingpage/bachelors-degree-courses-in-gaming/" || window.location.pathname === "/landingpage/game-art-programs/" || window.location.pathname === "/landingpage/short-course/" ||
                 window.location.pathname === "/landingpage/3DHard-surface-modelling-game-art/" || window.location.pathname === "/landingpage/game-design-with-unreal-blue-prints/" || window.location.pathname === "/landingpage/game-development-with-unity/" || window.location.pathname === "/landingpage/game-development-with-unreal/" || window.location.pathname === "/landingpage/ai-powered-game-design-and-level-building/" || window.location.pathname === "/landingpage/short-course" || window.location.pathname === "/landingpage/game-development-with-unity-programs/" || window.location.pathname === "/landingpage/game-development-with-unreal-programs/" || window.location.pathname === "/landingpage/game-development-programs/" || window.location.pathname === "/landingpage/certified-diploma-unity-game-development/" || window.location.pathname === "/landingpage/top-game-development-programs/" || window.location.pathname === "/landingpage/certified-diploma-unreal-game-development/" ||
                 window.location.pathname === "/intermediate-board-results/" || window.location.pathname === "/landingpage/certified-diploma-3d-hard-surface-modeling-texturing/" || window.location.pathname === "/landingpage/certified-diploma-game-design-with-unreal-blueprints/" || window.location.pathname === "/landingpage/best-gaming-courses-in-india/" || window.location.pathname === "/shortcourses/form/" ? "none" : "block"
             }} className="mt-menu-icon" alt="menú" onClick={toggleDrawer(true)} /> : null}
+     
             <MenuLogo />
             <div>
-              {window.location.pathname === "/landingpage/diploma-and-advanced-diploma-game-development-courses/" || window.location.pathname === "/landingpage/masters-and-bachelors-game-development-courses/" || window.location.pathname === "/landingpage/certificate-program-in-essentials-of-game-design/" || window.location.pathname === "/landingpage/certificate-program-in-basics-of-maya/"|| window.location.pathname === "/landingpage/certificate-program-in-3DGame-development-with-unity/" || window.location.pathname === "/landingpage/certificate-program-in-game-development-for-VR/" || window.location.pathname === "/landingpage/certificate-program-in-prototyping-and-game-concept-development/" || window.location.pathname === "/landingpage/certificate-program-in-storytelling-and-design-documentation-for-games/" || window.location.pathname === "/landingpage/bachelors-degree-courses-in-gaming/" ||
+              {window.location.pathname === "/landingpage/diploma-and-advanced-diploma-game-development-courses/" || window.location.pathname === "/landingpage/masters-and-bachelors-game-development-courses/" || window.location.pathname === "/landingpage/certificate-program-in-essentials-of-game-design/" || window.location.pathname === "/landingpage/certificate-program-in-basics-of-maya/" || window.location.pathname === "/landingpage/basics-of-maya-online-certification/"|| window.location.pathname === "/landingpage/certificate-program-in-3DGame-development-with-unity/" || window.location.pathname === "/landingpage/certificate-program-in-game-development-for-VR/" || window.location.pathname === "/landingpage/certificate-program-in-prototyping-and-game-concept-development/" || window.location.pathname === "/landingpage/certificate-program-in-storytelling-and-design-documentation-for-games/" || window.location.pathname === "/landingpage/bachelors-degree-courses-in-gaming/" ||
                 window.location.pathname === "/landingpage/3DHard-surface-modelling-game-art/" || window.location.pathname === "/landingpage/game-design-with-unreal-blue-prints/" || window.location.pathname === "/landingpage/game-development-with-unity/" || window.location.pathname === "/landingpage/game-development-with-unreal/" || window.location.pathname === "/landingpage/ai-powered-game-design-and-level-building/" || window.location.pathname === "/landingpage/game-art-programs/" || window.location.pathname === "/landingpage/short-course/" || window.location.pathname === "/landingpage/short-course" || window.location.pathname === "/landingpage/game-development-with-unity-programs/" || window.location.pathname === "/landingpage/game-development-with-unreal-programs/" || window.location.pathname === "/landingpage/game-development-programs/" || window.location.pathname === "/landingpage/certified-diploma-unity-game-development/" || window.location.pathname === "/landingpage/certified-diploma-3d-hard-surface-modeling-texturing/" || window.location.pathname === "/landingpage/top-game-development-programs/" ||
                 window.location.pathname === "/landingpage/masters-and-bachelors-programs/" ||
                 window.location.pathname === "/intermediate-board-results/" || window.location.pathname === "/landingpage/certified-diploma-game-design-with-unreal-blueprints/" || window.location.pathname === "/landingpage/certified-diploma-unreal-game-development/" || window.location.pathname === "/landingpage/best-gaming-courses-in-india/" ? <div className="Celebratingd" style={{ margin: "10px auto", display: "flex", alignItems: "center", flexDirection: "column", justifyContent: isMobileState ? "space-between" : "right", width: isMobileState ? "88px" : "100%" }}><img alt="fourteen" width="44" height="44" style={{ marginBottom: "4px" }} src={fourteen} /><img alt="Years" width="88" height="44" src={years} /></div> : null}
@@ -628,6 +666,7 @@ function MenuCore(props) {
                 onKeyDown={toggleDrawer(false)}
               >
                 <div className="menu-divider"></div>
+                
                 <MenuLogo />
 
               </div>
@@ -637,6 +676,7 @@ function MenuCore(props) {
 
       )}
     </>
+    
   );
 }
 

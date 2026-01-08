@@ -342,7 +342,7 @@ function Aboutus(props) {
                   Technologies. He holds a PhD in Computer Science
                   specializing in AI-driven NPC creation.</div>
                 <div className="text">With over 20+ years in higher and technical
-                  education, including 15+ years dedicated to
+                  education, including 16+ years dedicated to
 
                   gaming, he pioneered India’s first university-
                   affiliated undergraduate and postgraduate

@@ -96,7 +96,7 @@ function HomeContent() {
                 </div>
                 <div className="number">
                   <div className="num-line">
-                    {counterState && <CountUp start={0} end={15} duration={5} />}
+                    {counterState && <CountUp start={0} end={16} duration={5} />}
                     <span className="plus">+</span>
                   </div>
 

@@ -306,7 +306,7 @@ const handleFormClose = () => {
         </title>
       </Helmet>
 {openFormModal && (
-  <PaymentC onClose={handleFormClose} style={{width:"75%"}} />
+  <PaymentC onClose={handleFormClose} style={{width:"75%"}} courseName="certificate-program-in-basics-of-maya"/>
 )}
 
       <div id="scroll-container" className="scroll-wrapper">
