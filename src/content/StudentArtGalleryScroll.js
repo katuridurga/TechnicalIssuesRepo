@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import AnimatedText from "../components/AC-StaticPages/landingpage/AnimatedText";
 import "./StudentArtGalleryScroll.css";
 
 /* Images */
@@ -29,15 +28,15 @@ const ResponsiveGallery = () => {
   ];
 
   const trackRef = useRef(null);
-  const speed = 0.35;
+  const isPaused = useRef(false); // 🔥 pause flag
+  const speed = 0.95;
 
-  /* 🔥 START SCROLL AFTER PAINT */
   useEffect(() => {
     let x = 0;
     let raf;
 
-    const start = () => {
-      const animate = () => {
+    const animate = () => {
+      if (!isPaused.current) {
         x -= speed;
 
         if (Math.abs(x) >= trackRef.current.scrollWidth / 2) {
@@ -45,20 +44,22 @@ const ResponsiveGallery = () => {
         }
 
         trackRef.current.style.transform = `translateX(${x}px)`;
-        raf = requestAnimationFrame(animate);
-      };
+      }
 
       raf = requestAnimationFrame(animate);
     };
 
-    // allow DOM + images to paint first
-    setTimeout(start, 0);
+    raf = requestAnimationFrame(animate);
 
     return () => cancelAnimationFrame(raf);
   }, []);
 
   return (
-    <div className="containergbn responsive-gallery">
+    <div
+      className="containergbn responsive-gallery"
+      onMouseEnter={() => (isPaused.current = true)}
+      onMouseLeave={() => (isPaused.current = false)}
+    >
       <div className="gallery-track-grid" ref={trackRef}>
         {[...images, ...images].map((img, idx) => (
           <div className="gallery-itembn" key={idx}>
@@ -66,7 +67,7 @@ const ResponsiveGallery = () => {
               src={img}
               alt="student-art"
               className="gallery-image1"
-              loading="lazy"   /* 🔥 IMPORTANT */
+              loading="lazy"
               decoding="async"
             />
           </div>

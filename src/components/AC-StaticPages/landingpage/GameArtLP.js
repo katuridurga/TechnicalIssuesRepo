@@ -485,7 +485,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                     <form onSubmit={handleSubmit} className="formMain">
 
-                      <p className="suprtsMobiless" style={{color:"#fff"}}>Get <b>a Counselling</b> Session on Gaming Career</p>
+                      <p className="suprtsMobiless" style={{color:"#000"}}>Get <b>a Counselling</b> Session on Gaming Career</p>
                       <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
 
 
@@ -1239,6 +1239,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 </div></li>
             </ul>
+            
             <h2 className='mainHeadingTotall-2' style={{ display: "none" }}>FAQ's</h2>
 
             <div className="faq-containerlg">

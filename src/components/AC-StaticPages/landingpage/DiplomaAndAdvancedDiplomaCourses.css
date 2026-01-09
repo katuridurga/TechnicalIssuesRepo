@@ -187,6 +187,14 @@
   }
 
   @media only screen and (max-width : 1024px){
+    .show-grid .maind {
+    margin-bottom: 6px;
+    display: flex;
+    text-align: left;
+    grid-gap: 10px;
+    gap: 10px;
+    flex-direction: column;
+}
   .hero-left {
     display: flex;
     width: 100%;
@@ -2044,4 +2052,30 @@ width:100%;
   justify-content: center;
   margin: 0px auto;
   color:#fff;
+}
+.show-grid .maind {
+    margin-bottom: 6px;
+    display: flex;
+    text-align: left;
+    gap:10px;
+}
+.mainic {
+    font-size: 17px;
+    color: #000;
+}
+.mainic p {
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 4px;
+    margin-top: 0;
+    text-align: left;
+    width: 100%;
+    color: #ec1923;
+}
+.desg {
+    padding: 20px;
+}
+.icn{
+  display:flex;
+  height:fit-content;
 }

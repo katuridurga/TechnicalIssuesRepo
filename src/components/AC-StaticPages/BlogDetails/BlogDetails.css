@@ -53,12 +53,19 @@
 .suprts1 h3{
   font-weight: bold;
 }
-.differenttext{
-  width: 100%;
- 
-  color:#e91b21 !important;
-  height: auto;
+
+  .differenttext {
+    width: 100%;
+    color: #eb0808 !important;
+    height: auto;
+    /* border: 1px solid #e91b21; */
+    padding: 10px;
+    background-color: #f6f7f8;
+    border-radius: 7px;
+   
+    box-shadow: 0 20px 20px 5px rgba(0, 0, 0, .1), 0 10px 10px 5px rgba(0, 0, 0, .04);
 }
+
 
 .suprts2{
   background: rgb(256, 256, 256, 0.9);
