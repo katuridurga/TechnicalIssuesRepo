@@ -87,6 +87,7 @@ function SkillDiplomaCourses() {
   const [courses, setCourses] = useState([]);
   const formRef = useRef();
   const { control, watch, formState: { }, setValue } = useForm();
+  const [couponRemarks, setCouponRemarks] = useState("");
   const [formData, setFormData] = useState({
     fullname: "",
     dob: "",
@@ -182,6 +183,9 @@ function SkillDiplomaCourses() {
     const { name, type, value, checked, files } = e.target;
 
     if (name === "coupon") {
+       if (value.length <= 4) {
+      setCouponRemarks("");
+    }
       if (!formData.course) {
         alert("Please select a course first");
         return;
@@ -199,11 +203,24 @@ function SkillDiplomaCourses() {
 
         const data = await res.json();
         if (data?.length) {
+         
+          
           setPaymentDetails({
             originalPayment: data[0].orignialpayment,
             discountValue: data[0].discountvalue,
             finalAmount: data[0].finalamount,
+            
           });
+          if(data[0].remarkscoupon!='' && value.length >= 4){
+             setCouponRemarks(data?.[0]?.remarkscoupon || "Invalid Coupon Code");
+          }
+          else{
+         
+           setCouponRemarks(""); // clear error
+            
+          
+        }
+        
         }
       } catch {
         alert("Coupon error");
@@ -498,8 +515,11 @@ function SkillDiplomaCourses() {
                   onChange={handleInputChange}
                 />
               </div>
+              <p style={{ color: "#f52525" }}><span>{couponRemarks}</span></p>
               {paymentDetails.originalPayment && (
+                
                 <div className='paymentShortCourse'>
+                  
                   <div style={{ color: "#000" }}>Payment (INR): <span>₹{paymentDetails.originalPayment}</span></div>
                   {paymentDetails.discountValue > 0 && (
                     <div style={{ color: "#000" }}>
@@ -508,6 +528,8 @@ function SkillDiplomaCourses() {
                   )}
 
                   <div style={{ color: "#000" }}>Total Payment (INR): <span>₹{paymentDetails.finalAmount}</span></div>
+                
+                
                 </div>
               )}
               <div className="checkbox-container" >
