@@ -483,9 +483,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 </div></li>
             </ul>
 
-            <h2 className='mainHeadingTotall-2'>Learn from scratch to advanced level and build games like...</h2>
+            {/* <h2 className='mainHeadingTotall-2'>Learn from scratch to advanced level and build games like...</h2>
 
-            <StudentGamesList />
+            <StudentGamesList /> */}
             <div className={isMobileState ? "CousellingButton1 ismobtest" : "CousellingButton1"} onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>
 
 

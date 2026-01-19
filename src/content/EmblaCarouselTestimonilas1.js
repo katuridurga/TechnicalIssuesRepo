@@ -12,7 +12,7 @@ const testimonials = [
   {
     text: "Backstage Pass brings the like-minded under a single roof. Our courses related to game development & game design were custom- tailored to meet the requirements of the game industry and I feel it is the right place to start for a successful career in the game industry.",
     name: "Jithin Peter",
-    role: "Sr. Game Programmer, sumo digital, Bangalore",
+    role: "Sr. Game Programmer,  Sumo Digital, Bangalore",
     avatar: "https://www.backstagepass.co.in/JithinPeter-bd2017d7.webp?img=4",
   },
   {

@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./DiplomaAndAdvancedDiplomaCourses.css";
 import { Helmet } from "react-helmet";
+import PaymentC from "./Payment";
 import { useSelector, shallowEqual } from "react-redux";
 import cer from "../../../assets/img/test/certificate-with-badge.png";
 import { FaPlay } from "react-icons/fa";
+import advdip from '../../../assets/img/banners/Thumbnailformaya.png';
 import r1 from "../../../assets/img/partners/r1.webp";
 import r2 from "../../../assets/img/partners/r2.webp";
 import r4 from "../../../assets/img/partners/r4.webp";
@@ -18,6 +20,7 @@ import r10 from "../../../assets/img/partners/Sony.webp";
 import r11 from "../../../assets/img/partners/Qualcomm.webp";
 import r12 from "../../../assets/img/partners/Juego.webp";
 import r13 from "../../../assets/img/partners/Gamitronics.webp";
+import axios from 'axios';
 import r14 from "../../../assets/img/partners/GSNgames.webp";
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import wtwh from "../../../assets/img/banners/afterwtwillhappen.webp";
@@ -26,6 +29,7 @@ import { FaLinkedin } from "react-icons/fa";
 import Ourawards from "../../../content/ourawards";
 import jobn from '../../../assets/img/placentsn.webp';
 import clockn from '../../../assets/img/star.webp';
+
 function Feature({ title, subtitle }) {
   return (
     <div className="feature-box">
@@ -56,6 +60,7 @@ function Featurecarrer({ title, subtitle }) {
     </div>
   );
 }
+
 function Module({ title, items = [] }) {
   return (
     <div className="module-block">
@@ -194,16 +199,16 @@ function DiplomaAndAdvancedDiplomaCourses() {
     {
       question: "What is the Certificate Program in Basics of Maya?",
       answer:
-        "This is a beginner-friendly online course designed to introduce students to Autodesk Maya. It covers interface navigation, essential modelling tools, UV mapping, and basic texturing, enabling learners to create simple 3D assets from scratch.",
+        "This is a beginner-friendly online course designed to introduce students to Autodesk Maya. It covers interface navigation, essential modeling  tools, UV mapping, and basic texturing, enabling learners to create simple 3D assets from scratch.",
     },
     {
       question: "Who is this course ideal for?",
       answer:
-        "The course is designed for absolute beginners, school or college students, aspiring 3D artists, game design enthusiasts, and anyone looking to start a career in 3D modelling or digital content creation.",
+        "The course is designed for absolute beginners, school or college students, aspiring 3D artists, game design enthusiasts, and anyone looking to start a career in 3D modeling  or digital content creation.",
     },
 
     {
-      question: "Do I need previous experience in 3D modelling or Maya?",
+      question: "Do I need previous experience in 3D modeling  or Maya?",
       answer:
         "No prior knowledge is required. The course starts with the fundamentals and gradually progresses through practical exercises suited for first-time users.",
     },
@@ -225,7 +230,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
     {
       question: "What are the career opportunities after completing this course?",
       answer:
-        "After completing the course, learners can pursue entry-level roles such as 3D Modelling Intern, Junior Asset Artist, Game Art Trainee, or continue advancing into animation, VFX, or game development specialities.",
+        "After completing the course, learners can pursue entry-level roles such as 3D Modeling Intern, Junior Asset Artist, Game Art Trainee, or continue advancing into animation, VFX, or game development specialities.",
     },
   ];
 
@@ -246,10 +251,20 @@ function DiplomaAndAdvancedDiplomaCourses() {
     // Hide the button after clicking
     setIsButtonVisible(true);
   };
+  const [openFormModal, setOpenFormModal] = useState(false);
+
   const handleClickss = () => {
-    // Redirect to the '/new-page' route
-    window.open('/landingpage/short-course/', '_blank');
+    console.log("Clicked!"); // Debug
+    setOpenFormModal(true);
   };
+
+
+const handleFormClose = () => {
+  setOpenFormModal(false);
+};
+
+
+
   useEffect(() => {
   const details = document.querySelectorAll(".modules-grid details");
 
@@ -271,6 +286,18 @@ function DiplomaAndAdvancedDiplomaCourses() {
     });
   };
 }, []);
+  const videoRef = useRef(null); // To reference the video element
+  const [isPlaying, setIsPlaying] = useState(false); // To manage the play state
+
+  const handlePlay = () => {
+    // Play the video when the image is clicked
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true); // Update the state to hide the image
+    }
+  };
+
+
   return (
     <>
       <Helmet>
@@ -278,17 +305,19 @@ function DiplomaAndAdvancedDiplomaCourses() {
           Certificate Program in Essentials of Game Design | Backstage Pass
         </title>
       </Helmet>
+{openFormModal && (
+  <PaymentC onClose={handleFormClose} style={{width:"75%"}} courseName="certificate-program-in-basics-of-maya"/>
+)}
 
       <div id="scroll-container" className="scroll-wrapper">
         <div className="mainPanel1">
           <div className="course-wrappecer">
 
             <section
-              className="hero-section"
-
-            >
-              <div className="hero-container">
-                <div>
+              className="hero-section" style={{padding:"50px 0px"}}
+>
+              <div className="hero-container" style={{display:"flex", flexDirection:isMobileState?"column-reverse":""}}>
+                <div className="col-8" style={{width:isMobileState?"100%":"52%"}}>
                   {/* <nav aria-label="breadcrumb" className="bc-wrap">
                     <ol className="bc">
                       <li className="bc-item">
@@ -308,71 +337,95 @@ function DiplomaAndAdvancedDiplomaCourses() {
                     </ol>
                   </nav> */}
 
-                  <h1 className="hero-title">
+                  <h1 className="hero-title" style={{fontSize:isMobileState?"35px":"40px"}}>
                    Basics Of Maya for Beginners
 
                   </h1>
 
 
-                  <p className="hero-text">
-                    The Certificate Program in Basics of Maya is a beginner-friendly course designed to introduce students to the core fundamentals of Autodesk Maya, including interface navigation, essential modelling tools, UV unwrapping, and basic texturing. Through guided lessons and practical, hands-on exercises, students will learn how to create 3D assets from scratch and understand the complete Maya workflow.
+                  <p className="hero-text" style={{maxWidth:isMobileState?"100%":"100%"}}>
+                    The Certificate Program in Basics of Maya is a beginner-friendly course designed to introduce students to the core fundamentals of Autodesk Maya, including interface navigation, essential modeling  tools, UV unwrapping, and basic texturing. Through guided lessons and practical, hands-on exercises, students will learn how to create 3D assets from scratch and understand the complete Maya workflow.
                   </p>
                   <p className="discountpanel">Buy this Course @
 
                   </p><div className="disdvi"><span className="actprice"><del>₹4999</del></span><span className="discountprice">₹799</span> <span className="savingamt">84% Disc.</span> </div>
                   <div className="savingamto"><p className="">Limited Time Offer!</p></div>
-          {isMobileState ? (
-          <>
-                  <div class="course-info" style={{ background: "#ffffff", color: "#000" }}>
-  <div class="row text-center align-items-center">
+         {/* COURSE INFO */}
+                {isMobileState ? (
+                  <div className="course-info">
+                    <div className="row text-center">
+                      <div className="col-6 border-rightc">
+                        <p className="course-info-head">7 Modules</p>
+                        <p>with Certifications</p>
+                      </div>
+                      <div className="col-6">
+                        <p className="course-info-head">6 Hours</p>
+                        <p>Recorded Content</p>
+                      </div>
+                      <div className="col-6 border-rightc">
+                        <p className="course-info-head">Online</p>
+                        <p>Mode</p>
+                      </div>
+                      <div className="col-6">
+                        <p className="course-info-head">English</p>
+                        <p>Language</p>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="course-info1">
+                    <div className="row text-center">
+                      <div className="col-3 border-rightc">
+                        <p className="course-info-head">7 Modules</p>
+                        <p>with Certifications</p>
+                      </div>
+                      <div className="col-4 border-rightc">
+                        <p className="course-info-head">6 Hours</p>
+                        <p>Recorded Content</p>
+                      </div>
+                      <div className="col-2 border-rightc">
+                        <p className="course-info-head">Online</p>
+                        <p>Mode</p>
+                      </div>
+                      <div className="col-3">
+                        <p className="course-info-head">English</p>
+                        <p>Language</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+<div className="col-4" style={{ width:isMobileState?"100%":"48%" }}>
+  <div className="videomain2maya">
+ <video
+  ref={videoRef}
+  controls
+  loop
+  controlsList="nodownload noplaybackrate"
+  disablePictureInPicture
+  onContextMenu={(e) => e.preventDefault()}
+>
+  <source
+    src="https://www.backstagepass.co.in/landingpage/LmsTrailerFinalLowRender.mp4"
+    type="video/mp4"
+  />
+</video>
 
-    <div class="col-6 col-md-3">
-      <div class="border-rightc">
-        <p class="course-info-head">7 Modules</p>
-        <p>with <br/> Certifications</p>
-      </div>
+
+  {!isPlaying && (
+    <div className="overlay-wrapper" onClick={handlePlay}>
+      <img
+        src={advdip}
+        className="overlay-image2maya-1"
+        alt="advdip"
+      />
+
+      <div className="play-icon">▶</div>
     </div>
-
-    <div class="col-6 col-md-3">
-      <div>
-        <p class="course-info-head">
-          <span class="course_duration">6</span> Hours
-        </p>
-        <p>of Recorded <br/> Content</p>
-      </div>
-    </div>
-
-    <div class="col-6 col-md-3">
-      <div class="border-rightc">
-        <p class="course-info-head">Online</p>
-        <p>Mode</p>
-      </div>
-    </div>
-
-    <div class="col-6 col-md-3">
-      <div>
-        <p class="course-info-head">
-          <span class="course_language">English</span>
-        </p>
-        <p>Language</p>
-      </div>
-    </div>
-
-  </div>
+  )}
 </div>
-       </>
-        ) : (
-          <>
-                  <div class="course-info" style={{ background: "#ffffff", color: "#000" }}><div class="row"><div class="col-3"><div class="border-rightc"><p class="module course-info-head">7 Modules</p><p>with Certifications</p></div></div>
-                  <div class="col-6 col-lg-4 col-sm-3"><div class="border-rightc border-none"><p class="course-info-head"><span class="course_duration">6</span> Hours</p><p>of Recorded Content</p></div></div>
-                    <div class="col-2">
-                      <div class="border-rightc" style={{marginLeft:"0px !important"}}><p class="module course-info-head">Online</p><p>Mode</p></div></div>
 
-                    <div class="col-2"><div className=""><p class="course-info-head"><span class="course_language">English</span></p><p>Language</p></div></div>
-                  </div></div>
-                  </>
-)}
-                </div>
+</div>
 
 
               </div>
@@ -382,9 +435,9 @@ function DiplomaAndAdvancedDiplomaCourses() {
                 <h2 className="previewcon">Basics Of Maya Course Overview
    <span className="displaypath"></span><span className="designdisplay"></span></h2>
                 <p className="previewconp">
-                  Have you ever wanted to bring your ideas to life in 3D? Whether it’s game assets, props, or creative projects, Autodesk Maya is one of the most powerful tools for 3D modelling and texturing.</p>
+                  Have you ever wanted to bring your ideas to life in 3D? Whether it’s game assets, props, or creative projects, Autodesk Maya is one of the most powerful tools for 3D modeling  and texturing.</p>
                 <p className="previewconp">
-                  In this course, we’ll explore Maya 2024 step by step - perfect for complete beginners. You’ll learn how to navigate the Maya interface, work with essential modelling tools, create detailed props, unwrap UVs, and apply materials. We’ll also cover the basics of image-based texturing inside Maya so you can give your models realistic looks.</p>
+                  In this course, we’ll explore Maya 2024 step by step - perfect for complete beginners. You’ll learn how to navigate the Maya interface, work with essential modeling  tools, create detailed props, unwrap UVs, and apply materials. We’ll also cover the basics of image-based texturing inside Maya so you can give your models realistic looks.</p>
                 <p className="previewconp">
                   By the end of this course, you’ll be comfortable creating 3D assets from scratch, understanding the Maya workflow, and preparing your models with clean UVs and textures. No prior 3D experience is needed - just curiosity and creativity.
                 </p>
@@ -504,7 +557,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
                     <details className="style-1">
                       <summary>UV Mapping Fundamentals</summary>
                       <ul>
-                        <li>What is UV Mapping – Texture Coordinates Explained</li>
+                        <li>What is UV Mapping? – Texture Coordinates Explained</li>
                         <li>Understanding UV Shells and Layouts</li>
                         <li>Auto vs Manual UV Unwrapping Techniques</li>
                         <li>Using the UV Editor – Navigating and Editing</li>
@@ -539,7 +592,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
 
                 <div className='coppertunitiescer'>
                    {isMobileState && (
-                      <h2 className='previewcon' style={{ textAlign:isMobileState?"left": "left", width: isMobileState ? "100%" : "100%" }}>Let Your Certificates Speak </h2>
+                      <h2 className='previewcon' style={{ textAlign:isMobileState?"left": "left", width: isMobileState ? "100%" : "100%" }}>Let Your Certificate Speak </h2>
    )}
                   <div className='left'>
                     <img src={cer} alt="careerop" />
@@ -569,7 +622,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
 
                         <div className="certificate-point">
                           <FaPlay color="#d11" size={20} />
-                          <p>Certificates are awarded immediately upon successfully completing
+                          <p>Certificate are awarded immediately upon successfully completing
                             all course modules. </p>
                         </div>
 
@@ -783,7 +836,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
 " />
                       <div className='BeyondRightcer'>
                        
-                        <p>Someone who wants to start learning 3D modelling from the basics.
+                        <p>Someone who wants to start learning 3D modeling  from the basics.
 
                         </p>
                       </div>
@@ -897,13 +950,22 @@ function DiplomaAndAdvancedDiplomaCourses() {
           </div>
         </div>
       </div>
+  
       <section className="bancer">
         <div class="small-banner1 ftbaner1"><div className="col-12 col-lg-8 col-md-7 col-sm-12 bottomcer"><div class="foot-ban"> <p class="didYouKnow h6 mb-3">Enroll in the Basics of Maya Course and Earn Certification @
-        </p><div className="disdvi"><span className="actprice"><del>₹3000</del></span><span className="discountprice">₹2499</span> <span className="savingamt">84% Disc.</span></div>
+        </p><div className="disdvi"><span className="actprice"><del>₹4999</del></span><span className="discountprice">₹799</span> <span className="savingamt">84% Disc.</span></div>
           <div className="savingamto" style={{width:"150px"}}><p className="" style={{margin:"0px", fontWeight:"bold",fontSize:"12px"}}>Limited Time Offer!</p></div></div></div></div></section>
       {isButtonVisible && (
-        <div className="CousellingButton1 tetstL1" style={{ marginBottom: "0px" }} onClick={scrollToBottom}> <button className="dwnbtn three w-full sm:w-auto" style={{ width: "450px" }} onClick={handleClickss}>Enroll Now
-        </button> </div>
+        <div className="CousellingButton1 tetstL1" style={{ marginBottom: "0px" }} onClick={scrollToBottom}>     
+     
+      {/* DIALOG FROM ANOTHER PAGE */}
+      <PaymentC
+       className="my-custom-class"
+        style={{ width: "450px" }}
+        open={openFormModal}
+        onClose={() => setOpenFormModal(false)}
+      />
+</div>
       )}
 
     </>

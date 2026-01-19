@@ -10,6 +10,7 @@ import "./assets/css/dk.css";
 export default function App() {
 
   return (
+    
     <CacheBuster>
       {({ loading, isLatestVersion, refreshCacheAndReload }) => {
         if (loading) return null;
@@ -255,9 +256,16 @@ export default function App() {
                 />
                 <Route
                   exact
-                  path={"/landingpage/certificate-program-in-basics-of-maya-marketing/"}
+                  path={"/landingpage/basics-of-maya-online-certification/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="CertificateProgramInBasicslsOfMayaformarketing" />
+                  )}
+                />
+                    <Route
+                  exact
+                  path={"/landingpage/payment/"}
+                  render={routeProps => (
+                    <Menu {...routeProps} component="Payment" />
                   )}
                 />
                 <Route

@@ -15,8 +15,7 @@ import Fade from '@mui/material/Fade';
 import { Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 import ScrollToTop from "react-scroll-to-top";
 import { useSelector, shallowEqual } from "react-redux";
-
-
+import LastChanceStripe from "../components/AC-StaticPages/landingpage/LastChanceStripe";
 
 const Main = () => <Async load={import("../content/Main.jsx")} />;
 const InsuranceTypes = () => < Async load={import("../components/AC-StaticPages/InsuranceTypes/InsuraceTypes")} />;
@@ -49,11 +48,6 @@ const StudentShowcase = () => < Async load={import("../components/AC-StaticPages
 const DiplomaInVrApllication = () => < Async load={import("../components/AC-StaticPages/DiplomaInVrApllication/DiplomaInVrApllication")} />;
 const HomeContentForm = () => < Async load={import("../content/HomeContentFrom.js")} />;
 
-
-
-
-
-
 const DiplomaAndAdvancedDiplomaCourses = () => < Async load={import("../components/AC-StaticPages/landingpage/DiplomaAndAdvancedDiplomaCourses")} />;
 const TopGameDevelopmentPrograms = () => < Async load={import("../components/AC-StaticPages/landingpage/TopGameDevelopmentPrograms")} />;
 const DiplomaAndAdvancedDiplomaCourses2 = () => < Async load={import("../components/AC-StaticPages/landingpage/DiplomaAndAdvancedDiplomaCourses2")} />;
@@ -71,10 +65,10 @@ const CertifiedSkillUnity = () => < Async load={import("../components/AC-StaticP
 
 const CertificateProgramInEssentialsOfGameDesign = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramInEssentialsOfGameDesign.js")} />
 const CertificateProgramInBasicslsOfMaya = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramInBasicslsOfMaya.js")} />
+const Payment = () => < Async load={import("../components/AC-StaticPages/landingpage/Payment.js")} />
 
 const CertificateProgramInBasicslsOfMayaformarketing = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramInBasicslsOfMayaformarketing.js")} />
 const CertificateProgramIn3DGameDevelopmentWithUnity = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramIn3DGameDevelopmentWithUnity.js")} />
-
 
 const CertificateProgramInGameDevelopmentForVR = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramInGameDevelopmentForVR.js")} />
 
@@ -82,20 +76,11 @@ const CertificateProgramInPrototypingAndGameConceptDevelopment = () => < Async l
 
 const CertificateProgramInStorytellingAndDesignDocumentationForGames = () => < Async load={import("../components/AC-StaticPages/landingpage/CertificateProgramInStorytellingAndDesignDocumentationForGames.js")} />
 
-
-
-
-
 const DHardSurfaceModellingGameArt = () => < Async load={import("../components/AC-StaticPages/landingpage/3DHardSurfaceModellingGameArt.js")} />
 const GameDesignWithUnrealBlueprints = () => < Async load={import("../components/AC-StaticPages/landingpage/GameDesignWithUnrealBlueprints.js")} />
 const GameDevelopmentWithUnity = () => < Async load={import("../components/AC-StaticPages/landingpage/GameDevelopmentWithUnity.js")} />
 const GameDevelopmentWithUnreal = () => < Async load={import("../components/AC-StaticPages/landingpage/GameDevelopmentWithUnreal.js")} />
 const AIPoweredGameDesignAndLevelBuilding = () => < Async load={import("../components/AC-StaticPages/landingpage/AIPoweredGameDesignAndLevelBuilding.js")} />
-
-
-
-
-
 
 
 const CertifiedSkillUnreal = () => < Async load={import("../components/AC-StaticPages/landingpage/CertifiedSkillUnreal.js")} />
@@ -236,11 +221,21 @@ function Menu(props) {
     state => state.mainReducer.isMobile,
     shallowEqual
   );
+const showLastChanceStrip =
+  window.location.pathname.startsWith(
+    "/landingpage/basics-of-maya-online-certification"
+  );
 
-  const toolbarStyle = {
-    minHeight: '80px',
-    backgroundColor: '#ffffff',
-  };
+const toolbarStyle = {
+  minHeight: "80px",
+  backgroundColor: "#ffffff",
+  padding: showLastChanceStrip
+    ? "0px 0px"
+    : isMobileState
+    ? "0px 16px"
+    : "0px 24px",
+};
+
 
   useEffect(() => {
 
@@ -266,6 +261,8 @@ function Menu(props) {
 
 
 
+
+
   if (props.component === "tiposDeSeguros") {
     return (
       <>
@@ -273,6 +270,7 @@ function Menu(props) {
 
         <div className="" style={{ boxShadow: '0 0 4px #cdcdcd' }}>
           <div>
+           
             <div >
               <MenuCore />
             </div>
@@ -291,6 +289,7 @@ function Menu(props) {
 
         <div className="" style={{ boxShadow: '0 0 4px #cdcdcd', backgroundColor: "#f9fafb" }}>
           <div>
+  
             <div >
               <MenuCore />
             </div>
@@ -309,6 +308,7 @@ function Menu(props) {
 
         <div className="" style={{ boxShadow: '0 0 4px #cdcdcd' }}>
           <div>
+              
             <div >
               <MenuCore />
             </div>
@@ -323,8 +323,9 @@ function Menu(props) {
   else if (props.component === "ComingSoon") {
     return (
       <>
-
+     
         <React.Fragment>
+            
           <CssBaseline />
           <ThemeProvider theme={darkTheme}>
             <ElevationScroll  {...props}>
@@ -354,6 +355,7 @@ function Menu(props) {
       <>
 
         <React.Fragment>
+            
           <CssBaseline />
           <ThemeProvider theme={darkTheme}>
             <ElevationScroll  {...props}>
@@ -384,6 +386,7 @@ function Menu(props) {
       <>
 
         <React.Fragment>
+            
           <CssBaseline />
           <ThemeProvider theme={darkTheme}>
             <ElevationScroll  {...props}>
@@ -1135,6 +1138,32 @@ function Menu(props) {
     );
   }
 
+ else if (props.component === "Payment") {
+    return (
+      <>
+
+        <React.Fragment>
+          <CssBaseline />
+          <ThemeProvider theme={darkTheme}>
+            <ElevationScroll  {...props}>
+
+              <AppBar>
+                <Toolbar style={toolbarStyle}>
+             
+                </Toolbar>
+              </AppBar>
+
+            </ElevationScroll >
+          </ThemeProvider>
+          <Toolbar />
+
+        </React.Fragment>
+        <Payment />
+     
+       
+      </>
+    );
+  }
   else if (props.component === "CertificateProgramInBasicslsOfMayaformarketing") {
     return (
       <>
@@ -2363,6 +2392,7 @@ function Menu(props) {
       <>
 
         <React.Fragment>
+            
           <CssBaseline />
           <ThemeProvider theme={darkTheme}>
             <ElevationScroll  {...props}>
@@ -2393,6 +2423,7 @@ function Menu(props) {
       <>
 
         <React.Fragment>
+            
           <CssBaseline />
           <ThemeProvider theme={darkTheme}>
             <ElevationScroll  {...props}>
@@ -2423,6 +2454,7 @@ function Menu(props) {
       <>
 
         <React.Fragment>
+  
           <CssBaseline />
           <ThemeProvider theme={darkTheme}>
             <ElevationScroll  {...props}>
@@ -2450,23 +2482,28 @@ function Menu(props) {
   else {
     return (
       <>
+  <React.Fragment>
+  <CssBaseline />
 
-        <React.Fragment>
-          <CssBaseline />
-          <ThemeProvider theme={darkTheme}>
-            <ElevationScroll  {...props}>
+  {/* 🔥 FIXED HEADER STACK */}
+    {showLastChanceStrip && <LastChanceStripe />}
 
-              <AppBar>
-                <Toolbar style={toolbarStyle}>
-                  <MenuCore />
-                </Toolbar>
-              </AppBar>
+    <ThemeProvider theme={darkTheme}>
+      <ElevationScroll {...props}>
+        <AppBar className="main-appbar">
+          <Toolbar style={toolbarStyle}>
+            <MenuCore />
+          </Toolbar>
+        </AppBar>
+      </ElevationScroll>
+    </ThemeProvider>
 
-            </ElevationScroll >
-          </ThemeProvider>
-          <Toolbar />
 
-        </React.Fragment>
+  {/* 🔥 Spacer to push page content down */}
+  <div className="header-spacer" />
+
+</React.Fragment>
+
         <Main />
         <ScrollToTop
           smooth

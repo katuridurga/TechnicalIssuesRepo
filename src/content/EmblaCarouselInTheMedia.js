@@ -12,7 +12,9 @@ import awardfive from "../assets/img/PR5.webp"
 import awardfour from "../assets/img/PR4.webp"
 import { FiArrowRight } from "react-icons/fi";
 import awardig from "../assets/img/igdc2024.webp";
-
+import animationexp from "../assets/img/animationexp.jpg";
+import bui1f from "../assets/img/bspframebox.jpg";
+  
 const TWEEN_FACTOR_BASE = 0.2
 
 const EmblaCarousel = (props) => {
@@ -91,7 +93,7 @@ useEffect(() => {
     }
   }
 
-  autoScrollInterval = setInterval(autoScrollLeft, 30000000) // scroll every 3 seconds
+  autoScrollInterval = setInterval(autoScrollLeft, 3000) // scroll every 3 seconds
 
   // --- Existing Logic ---
   setTweenNodes(emblaApi)
@@ -283,7 +285,58 @@ useEffect(() => {
           </div>
         </div>
       </div>
+ <div className="embla__slidebaM imgm" key={7}>
+        <div className="embla__parallaxbaM">
+          <div className="embla__parallax__layerbaM incontent1">
 
+            <div>
+              <img className="embla__slide__imgbaM embla__parallax__imgbaM"
+                src={bui1f}
+                alt="bui1f" />
+            </div>
+
+            <div className="incontent">
+               <p> Backstage Pass Collaborated with Frameboxx </p>
+
+              <a
+                className="readmore-btn"
+                href="https://www.animationxpress.com/latest-news/backstage-pass-and-frameboxx-sign-mou-to-launch-diplomas-in-game-development/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read more <FiArrowRight className="arros" />
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+       <div className="embla__slidebaM imgm" key={8}>
+        <div className="embla__parallaxbaM">
+          <div className="embla__parallax__layerbaM incontent1">
+
+            <div>
+              <img className="embla__slide__imgbaM embla__parallax__imgbaM"
+                src={animationexp}
+                alt="animationexp" />
+            </div>
+
+            <div className="incontent">
+           
+  <p> Backstage Pass students at IGDC 2025</p>
+              <a
+                className="readmore-btn"
+                href="https://www.animationxpress.com/latest-news/double-win-for-backstage-pass-students-at-igdc-2025/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read more <FiArrowRight className="arros" />
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

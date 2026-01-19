@@ -14,12 +14,15 @@ import { useSelector, shallowEqual } from "react-redux";
 import { Helmet } from "react-helmet";
 import { FaHome, FaArrowRight } from 'react-icons/fa';
 
-
+  
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-function BlogDetail({ match }) {
+
+ 
+
+function BlogDetail({ history,match }) {
   const { id } = match.params; // Get the `id` from URL params
   const [event, setEvent] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -37,7 +40,10 @@ function BlogDetail({ match }) {
     firstname: '',
     PhoneNumber: '', email: '', city: '', comments: '', url: window.location.href, from: 'blog'
   });
-
+  
+ const redirectTo = (url) => {
+    history.push(url);
+  };
   const handleClose = () => {
     setOpen(false);
   };
@@ -309,6 +315,13 @@ function BlogDetail({ match }) {
   if (!event) {
     return <p>No event data available.</p>;
   }
+// Source - https://stackoverflow.com/a
+// Posted by cybering
+// Retrieved 2025-12-30, License - CC BY-SA 4.0
+
+window.addEventListener('beforeunload', function (event) {
+  event.stopImmediatePropagation();
+});
 
 
   return (
@@ -683,22 +696,26 @@ function BlogDetail({ match }) {
             <div className="textposth">Recent Posts</div>
             <ul>
               {recentPosts.map((post, index) => (
-                <Link
-                  to={`/blogs/${post.event_title_url}`}
-                  key={post.id}
-                  onClick={() => window.location.href = `/blogs/${post.event_title_url}`} // Forces reload
-                >
-                  <li key={index}>
-
+                // <Link
+                //   to={`/blogs/${post.event_title_url}`}
+                //   key={post.id}
+                //   onClick={() => window.location.href = `/blogs/${post.event_title_url}`} // Forces reload
+                // >
+                  <li key={index} >
+<Link
+        to={`/blogs/${post.event_title_url}`}
+        className="post-link"
+      >
                     <div className="left imagel">
-                      <img src={`https://www.backstagepass.co.in/blog_new/uploads/events/${post.card_image}`} alt={post.tittle_event} />
+                      <img src={`https://www.backstagepass.co.in/blog_new/uploads/events/${post.card_image}`} alt={post.tittle_event} loading="lazy"
+  decoding="async" />
                     </div>
                     <div className="right textrightp">
                       <p>{post.tittle_event}</p>
                     </div>
-
+</Link>
                   </li>
-                </Link>
+                // </Link>
               ))}
             </ul>
           </div>

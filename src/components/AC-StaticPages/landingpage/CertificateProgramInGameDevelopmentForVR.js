@@ -337,9 +337,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
             <h2 className='mainHeadingTotall-2'>Career Opportunities</h2>
             <div className='courseObj1'>
-            <p>Upon completion, participants can pursue entry-level roles such as:</p>
+            <p style={{color:"#000"}}>Upon completion, participants can pursue entry-level roles such as:</p>
             </div>
-            <ul className='featuress3u'>
+            <ul className='featuress3u' style={{backgroundColor:"#222"}}>
               <li><img src={ic9} alt="ic1" />
 
                 <div className='featuresscon2'>VR Game Developer

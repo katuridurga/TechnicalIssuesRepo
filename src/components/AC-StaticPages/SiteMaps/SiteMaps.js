@@ -146,7 +146,7 @@ function Courses(props) {
       <li style={{marginBottom:"10px"}}><span style={boldStyle}>About Us</span>  </li>
          <ul className='innerc'>
        <li style={liStyle} ><a href="/about-us/our-story/">Our story</a></li>
-       <li style={liStyle}><a href="/about-us/affiliation-collaboration/">Affiliation</a></li>
+       <li style={liStyle}><a href="/about-us/affiliation-collaboration/">Affiliations & Collaborations</a></li>
        <li style={liStyle}><a href="/about-us/placement-support/">Placement Support</a></li>
        </ul>
        <li style={{marginBottom:"10px"}}><span style={boldStyle}>Admissions</span>  </li>

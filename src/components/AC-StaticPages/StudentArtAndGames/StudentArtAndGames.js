@@ -57,7 +57,7 @@ import Framet1 from "../../../assets/img/StudentGames/Student Games/Framet.webp"
 import Frame388 from "../../../assets/img/StudentGames/Student Games/Frame388.webp";
 import orbit from "../../../assets/img/StudentGames/Student Games/Frameo.webp";
 
-import  {useSelector, shallowEqual}  from "react-redux";
+import { useSelector, shallowEqual } from "react-redux";
 
 
 
@@ -68,7 +68,7 @@ import { Helmet } from "react-helmet";
 function Courses(props) {
   useEffect(() => {
     const images = document.querySelectorAll(".photos img");
-  
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -83,101 +83,104 @@ function Courses(props) {
         threshold: 0.2, // Trigger when 20% of the image is visible
       }
     );
-  
+
     images.forEach((img) => observer.observe(img));
-  
+
     return () => observer.disconnect();
   }, []);
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
     shallowEqual
-);
-// const images = [
-//   art1, art2, art4, art3,
-//   art1, art2, art4, art3,
-//   art1, art2, art4, art3,
-//   art1, art2, art4, art3
-// ];
+  );
+  // const images = [
+  //   art1, art2, art4, art3,
+  //   art1, art2, art4, art3,
+  //   art1, art2, art4, art3,
+  //   art1, art2, art4, art3
+  // ];
 
 
-const [showMore, setShowMore] = useState(false);
+  const [showMore, setShowMore] = useState(false);
 
-const gameCards = [
-  { img: orbit, title: "Orbital Outbreak", desc: "Dive into Orbital Outbreak, a chaotic roguelite top-down shooter where alien swarms test your reflexes in nonstop action." },
-  { img: b5, title: "Slunkey", desc: "Play as a cheeky monkey turned into slime in Slunkey — a quirky slingshot puzzle platformer." },
-   { img: b13, title: "ESC Sim", desc: "Esc Sim is a quirky first-person escape game where you explore a study, solve puzzles, uncover clues, and enjoy surprises." },
-     { img: b3, title: "Resonance", desc: "Resonance is a serene puzzle game where you form rhythmic loops, match shifting patterns, and solve meditative challenges through timing." },
-  { img: b1, title: "Stone Wall", desc: "Stonewall is a fast-paced tower-defence auto-battler where you build defences, outsmart enemies, and protect your kingdom." },
-  { img: b2, title: "Void Within", desc: "Void Within is a fast-paced FPS where you wall-run, slide, and unleash devastating weapons to survive chaotic arenas and relentless hordes." },
-  { img: b4, title: "Feny Frenzy", desc: "Feni Frenzy is a cel-shaded co-op shooter set in COVID-era Goa, where you raid monster-filled parties, loot, level up, and enjoy seasonal live-ops." },
-  { img: b6, title: "Infocus", desc: "A 2-player first-person co-op puzzle game where you manipulate time with special cameras to solve challenges and uncover civilisation’s downfall." },
-  { img: b7, title: "Disengage", desc: "Disengage is an adventure puzzle game where you start with nothing, using simple controls to overcome challenges in a unique, immersive experience." },
-  { img: b9, title: "Russ, Fight the Power!", desc: "Fight the Power! It is a cartoon, chaotic rogue-like where you battle classroom monsters, survive waves, and defeat corrupted education." },
-  { img: b10, title: "Capital Quest", desc: "Capital Quest is a cyberpunk board game where you build a corporate empire, outsmart rivals with hacking and corruption, and dominate Neo-City." },
-  { img: b11, title: "Stellar Wings", desc: "Stellar Wings is a fast-paced space shooter where you pilot advanced starfighters, perform daring manoeuvres, and battle foes across stunning cosmic worlds." },
-  { img: b15, title: "Glyph", desc: "GLYPH is a puzzle game where you decode ancient symbols, solving pattern-based challenges to uncover the secrets of a lost civilisation." },
+  const gameCards = [
+    { img: orbit, title: "Orbital Outbreak", desc: "Dive into Orbital Outbreak, a chaotic roguelite top-down shooter where alien swarms test your reflexes in nonstop action.", href: "https://play.google.com/store/apps/details?id=com.orbital.kyodaigameworks&hl=en" },
+    { img: b5, title: "Slunkey", desc: "Play as a cheeky monkey turned into slime in Slunkey — a quirky slingshot puzzle platformer.", href: "https://play.google.com/store/apps/details?id=com.KyodaiGameworks.Slunkey&hl=en" },
+    { img: b13, title: "ESC Sim", desc: "Esc Sim is a quirky first-person escape game where you explore a study, solve puzzles, uncover clues, and enjoy surprises.", href: "https://itiskiruhere.itch.io/esc-sim" },
+    { img: b3, title: "Resonance", desc: "Resonance is a serene puzzle game where you form rhythmic loops, match shifting patterns, and solve meditative challenges through timing.", href: "https://anya-musk.itch.io/resonance" },
+    { img: Framew1, title: "Warbound", desc: "WARBOUND blends deckbuilding and real-time strategy as you build, command, and conquer with a custom battle deck and powerful armies.", href: "https://store.steampowered.com/app/3119640/Warbound/" },
+    { img: b22, title: "Keep Sake", desc: "Tapestries of Memory is a cozy point-and-click puzzle where you relive warm memories through simple mouse interactions in a heartfelt narrative.", href: "https://monty500500.itch.io/keepsake" },
+    { img: b1, title: "Stone Wall", desc: "Stonewall is a fast-paced tower-defence auto-battler where you build defences, outsmart enemies, and protect your kingdom.", href: "https://monty500500.itch.io/stonewall" },
+    { img: b20, title: "Are You Stupid??", desc: "Are U Stupid is a tricky 2D brain-teaser where you tap buttons, solve unexpected puzzles, and think outside the box to progress.", href: "https://lazy-wizard-studio.itch.io/are-you-stupid" },
+    { img: b2, title: "Void Within", desc: "Void Within is a fast-paced FPS where you wall-run, slide, and unleash devastating weapons to survive chaotic arenas and relentless hordes." },
+    { img: b4, title: "Feny Frenzy", desc: "Feni Frenzy is a cel-shaded co-op shooter set in COVID-era Goa, where you raid monster-filled parties, loot, level up, and enjoy seasonal live-ops." },
+    { img: b6, title: "Infocus", desc: "A 2-player first-person co-op puzzle game where you manipulate time with special cameras to solve challenges and uncover civilisation’s downfall." },
+    { img: b7, title: "Disengage", desc: "Disengage is an adventure puzzle game where you start with nothing, using simple controls to overcome challenges in a unique, immersive experience." },
+    { img: b9, title: "Russ, Fight the Power!", desc: "Fight the Power! It is a cartoon, chaotic rogue-like where you battle classroom monsters, survive waves, and defeat corrupted education." },
+    { img: b10, title: "Capital Quest", desc: "Capital Quest is a cyberpunk board game where you build a corporate empire, outsmart rivals with hacking and corruption, and dominate Neo-City." },
+    { img: b11, title: "Stellar Wings", desc: "Stellar Wings is a fast-paced space shooter where you pilot advanced starfighters, perform daring manoeuvres, and battle foes across stunning cosmic worlds." },
+    { img: b15, title: "Glyph", desc: "GLYPH is a puzzle game where you decode ancient symbols, solving pattern-based challenges to uncover the secrets of a lost civilisation." },
 
-  // NOW ADD ALL NEW IMAGES BELOW
-  { img: b12, title: "The Echo of Two Goodbyes", desc: "A first-person escape horror puzzle where you explore a haunted house, solve eerie mysteries, and uncover the tragic truth behind a restless spirit." },
- 
-  { img: b16, title: "Bhoomi", desc: "Bhoomi is a mythological action narrative set in 1950s Adilabad, where Ramu battles oppression and supernatural forces to avenge his family." },
-  { img: b17, title: "Bricker", desc: "Bricker is a quirky voxel action game where you sneak, collect gold, survive as a brick, then activate King Mode for chaotic power." },
-  { img: b18, title: "Meteor Strike", desc: "Meteor Strike is an 8-bit space shooter where you blast asteroids, collect coins, fight bosses, dodge patrol ships, and upgrade your craft." },
-  { img: b19, title: "Crown Jump", desc: "Crown Jump is a fast, timing-based platformer where a sliding crown must jump perfectly to dodge spikes and reach its throne." },
-  { img: b20, title: "Are You Stupid??", desc: "Are U Stupid is a tricky 2D brain-teaser where you tap buttons, solve unexpected puzzles, and think outside the box to progress." },
-  { img: b21, title: "Squishy", desc: "Squishy is a precision jumping platformer where a jelly leaps upward, aiming perfect jumps or falling back down with no checkpoints." },
-  { img: b22, title: "Keep Sake", desc: "Tapestries of Memory is a cozy point-and-click puzzle where you relive warm memories through simple mouse interactions in a heartfelt narrative." },
-  { img: b23, title: "Portal Drifters", desc: "Portal Drifters is a powered-up arcade racer where you drift through portals, transition between worlds mid-race, and speed through dynamic dimensions." },
-  { img: b24, title: "Last Stand: Wasteland", desc: "Last Stand: Wasteland is a top-down survival shooter where a lone robot battles endless corrupted machines in a post-apocalyptic desert." },
-  { img: b25, title: "Lost in the Dungeons", desc: "Lost in the Dungeons is a fantasy puzzle adventure where a brave duck rotates platforms, shifts water, and solves traps to escape a mysterious labyrinth." },
-  { img: b26, title: "Death Spiral", desc: "Death Spiral is a casual dungeon adventure where you navigate brutal traps and tough levels that constantly test your patience." },
-  { img: b27, title: "Sermon", desc: "SERMON is a psychological horror where sleep-paralysis nightmares unfold, revealing unseen terrors, haunting memories, and quiet horrors of isolation and regret." },
-  { img: b28, title: "Echoes of the Dead", desc: "Echoes of the Dead is a 2D roguelike where Tanzo, a vengeful wizard, battles monsters with precise projectile combat through procedural levels." },
-  { img: b29, title: "Console Rift", desc: "Shrunk to toy size, battle swarms of insects, collect your friend’s soul fragments, and fight through your room in a tiny adventure." },
-  { img: b30, title: "Flux Eternum", desc: "A first-person parkour platformer where you wall-run, climb, grapple, and jump-pad your way upward, mastering movement to reach the sky." },
-  { img: b31, title: "Evolve", desc: "A Unity retro-style 2D/3D platformer where you travel through time, exploring humanity’s history across stages themed around major eras." },
-  { img: b32, title: "Traumatized", desc: "Enter Rose’s warped reality as a babysitter returning to her old orphanage, where shadows whisper and past fears resurface." },
-  { img: b33, title: "Gravitality", desc: "Gravitality is a mind-bending puzzle game with intricate challenges that push your problem-solving skills to the limit." },
-  { img: b34, title: "The Haunting of Belle Islands", desc: "A first-person horror set on a remote island where you explore an abandoned mansion, uncover dark secrets, and survive a vengeful spirit." },
-  { img: b35, title: "Battle M.A.Y.H.E.M", desc: "BATTLE M.A.Y.H.E.M is a chaotic arena brawler packed with lasers, rockets, and wild physics where you outlast friends in explosive battles." },
-  { img: Frame61, title: "Chaos Reborn", desc: "Dash, wall-run, slide, and create stylish chaos to earn points, unlock power-ups, control crowds with black holes, and freeze time." },
-  { img: Framell, title: "Laser Tanks ", desc: "In Laser Tanks, a pixel roguelike RPG, battle alien forces and eliminate enemies to reclaim Earth’s vital chip and save the world." },
-  { img: Framew1, title: "Warbound", desc: "WARBOUND blends deckbuilding and real-time strategy as you build, command, and conquer with a custom battle deck and powerful armies." },
-  { img: Framet1, title: "Trox", desc: "TROX is a psychological narrative where Marco faces brutal choices and dark truths in a post-World War III world driven by survival." },
-  { img: Frame388, title: "Wobble Gobble", desc: "Guide a bouncy jelly cube through colourful isometric levels, using physics-based movement to solve adorable puzzles and explore whimsical worlds." },
-];
-// Hook 1 — detect which card is centered and add “active” class
-useEffect(() => {
-  if (window.innerWidth > 1024) return; // only mobile
+    // NOW ADD ALL NEW IMAGES BELOW
+    { img: b12, title: "The Echo of Two Goodbyes", desc: "A first-person escape horror puzzle where you explore a haunted house, solve eerie mysteries, and uncover the tragic truth behind a restless spirit." },
 
-  const container = document.querySelector(".containerga");
-  const cards = container.querySelectorAll(".cardsg");
+    { img: b16, title: "Bhoomi", desc: "Bhoomi is a mythological action narrative set in 1950s Adilabad, where Ramu battles oppression and supernatural forces to avenge his family." },
+    { img: b17, title: "Bricker", desc: "Bricker is a quirky voxel action game where you sneak, collect gold, survive as a brick, then activate King Mode for chaotic power." },
+    { img: b18, title: "Meteor Strike", desc: "Meteor Strike is an 8-bit space shooter where you blast asteroids, collect coins, fight bosses, dodge patrol ships, and upgrade your craft." },
+    { img: b19, title: "Crown Jump", desc: "Crown Jump is a fast, timing-based platformer where a sliding crown must jump perfectly to dodge spikes and reach its throne." },
 
-  const setActiveCard = () => {
-    const centerX = window.innerWidth / 2;
+    { img: b21, title: "Squishy", desc: "Squishy is a precision jumping platformer where a jelly leaps upward, aiming perfect jumps or falling back down with no checkpoints." },
 
-    cards.forEach(card => {
-      const rect = card.getBoundingClientRect();
-      if (rect.left < centerX && rect.right > centerX) {
-        card.classList.add("active");
-      } else {
-        card.classList.remove("active");
-      }
-    });
-  };
+    { img: b23, title: "Portal Drifters", desc: "Portal Drifters is a powered-up arcade racer where you drift through portals, transition between worlds mid-race, and speed through dynamic dimensions." },
+    { img: b24, title: "Last Stand: Wasteland", desc: "Last Stand: Wasteland is a top-down survival shooter where a lone robot battles endless corrupted machines in a post-apocalyptic desert." },
+    { img: b25, title: "Lost in the Dungeons", desc: "Lost in the Dungeons is a fantasy puzzle adventure where a brave duck rotates platforms, shifts water, and solves traps to escape a mysterious labyrinth." },
+    { img: b26, title: "Death Spiral", desc: "Death Spiral is a casual dungeon adventure where you navigate brutal traps and tough levels that constantly test your patience." },
+    { img: b27, title: "Sermon", desc: "SERMON is a psychological horror where sleep-paralysis nightmares unfold, revealing unseen terrors, haunting memories, and quiet horrors of isolation and regret." },
+    { img: b28, title: "Echoes of the Dead", desc: "Echoes of the Dead is a 2D roguelike where Tanzo, a vengeful wizard, battles monsters with precise projectile combat through procedural levels." },
+    { img: b29, title: "Console Rift", desc: "Shrunk to toy size, battle swarms of insects, collect your friend’s soul fragments, and fight through your room in a tiny adventure." },
+    { img: b30, title: "Flux Eternum", desc: "A first-person parkour platformer where you wall-run, climb, grapple, and jump-pad your way upward, mastering movement to reach the sky." },
+    { img: b31, title: "Evolve", desc: "A Unity retro-style 2D/3D platformer where you travel through time, exploring humanity’s history across stages themed around major eras." },
+    { img: b32, title: "Traumatized", desc: "Enter Rose’s warped reality as a babysitter returning to her old orphanage, where shadows whisper and past fears resurface." },
+    { img: b33, title: "Gravitality", desc: "Gravitality is a mind-bending puzzle game with intricate challenges that push your problem-solving skills to the limit." },
+    { img: b34, title: "The Haunting of Belle Islands", desc: "A first-person horror set on a remote island where you explore an abandoned mansion, uncover dark secrets, and survive a vengeful spirit." },
+    { img: b35, title: "Battle M.A.Y.H.E.M", desc: "BATTLE M.A.Y.H.E.M is a chaotic arena brawler packed with lasers, rockets, and wild physics where you outlast friends in explosive battles." },
+    { img: Frame61, title: "Chaos Reborn", desc: "Dash, wall-run, slide, and create stylish chaos to earn points, unlock power-ups, control crowds with black holes, and freeze time." },
+    { img: Framell, title: "Laser Tanks ", desc: "In Laser Tanks, a pixel roguelike RPG, battle alien forces and eliminate enemies to reclaim Earth’s vital chip and save the world." },
 
-  container.addEventListener("scroll", setActiveCard);
-  // initial call
-  setActiveCard();
+    { img: Framet1, title: "Trox", desc: "TROX is a psychological narrative where Marco faces brutal choices and dark truths in a post-World War III world driven by survival." },
+    { img: Frame388, title: "Wobble Gobble", desc: "Guide a bouncy jelly cube through colourful isometric levels, using physics-based movement to solve adorable puzzles and explore whimsical worlds." },
+  ];
+  // Hook 1 — detect which card is centered and add “active” class
+  useEffect(() => {
+    if (window.innerWidth > 1024) return; // only mobile
 
-  return () => container.removeEventListener("scroll", setActiveCard);
-}, []);
+    const container = document.querySelector(".containerga");
+    const cards = container.querySelectorAll(".cardsg");
 
-useEffect(() => {
-  if (window.innerWidth > 1024) return; // only mobile
+    const setActiveCard = () => {
+      const centerX = window.innerWidth / 2;
 
-  // WAIT for ViewMore DOM to finish rendering
-  
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.left < centerX && rect.right > centerX) {
+          card.classList.add("active");
+        } else {
+          card.classList.remove("active");
+        }
+      });
+    };
+
+    container.addEventListener("scroll", setActiveCard);
+    // initial call
+    setActiveCard();
+
+    return () => container.removeEventListener("scroll", setActiveCard);
+  }, []);
+
+  useEffect(() => {
+    if (window.innerWidth > 1024) return; // only mobile
+
+    // WAIT for ViewMore DOM to finish rendering
+
     const container = document.querySelector(".containerga");
     if (!container) return;
 
@@ -199,27 +202,27 @@ useEffect(() => {
 
     return () => clearInterval(autoScroll);
 
-}, [showMore, gameCards]); 
+  }, [showMore, gameCards]);
 
   return (
     <>
-  
+
       <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'MobileClassstang' : 'starng'}`}>
         <div className="et_pb_row et_pb_row_0">
-        
+
           <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
             <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
               <div className="et_pb_text_inner"><h1 className="title white-txt">Student Portfolio
-</h1></div>
+              </h1></div>
             </div>
           </div>
         </div>
       </div>
       <div className="courses-container">
         <Helmet>
-   
-        <script type="application/ld+json">
-              {`
+
+          <script type="application/ld+json">
+            {`
 {
   "@context": "https://schema.org/", 
   "@type": "BreadcrumbList", 
@@ -236,9 +239,9 @@ useEffect(() => {
   }]
 }
 `}
-</script>
-<script type="application/ld+json">
-      {`
+          </script>
+          <script type="application/ld+json">
+            {`
 {
   "@context": "https://schema.org/",
   "@type": "WebSite",
@@ -251,44 +254,44 @@ useEffect(() => {
   }
 }
   `}
-</script>
+          </script>
           <title>Explore Backstage Pass Institute Students arts and games</title>
           <meta property="og:title" content="Explore Backstage Pass Institute Students Arts and Games" />
-<meta property="og:description" name="description" content="See what students at Backstage Pass are building—from concept art to full-fledged games. A creative space where learning turns into real projects." />
-<meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/student-portfolio/" />
-          <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/student-portfolio/"/>
+          <meta property="og:description" name="description" content="See what students at Backstage Pass are building—from concept art to full-fledged games. A creative space where learning turns into real projects." />
+          <meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/student-portfolio/" />
+          <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/student-portfolio/" />
 
         </Helmet>
 
         <div className="courses-wrapper">
           <h2 className="mainHeadingTotal">Student Artwork
-        </h2>
+          </h2>
 
           <p className='suprts'>Explore the creativity and talent of our students through their stunning artwork. From digital designs to traditional pieces, each creation represents the dedication and passion that drives our artistic community. Dive into a world of innovation, skill, and imagination!
           </p>
-        
+
         </div>
-      <section className="photos">
-  <div className="ph" data-type="3D Artwork"><img src={art17} alt="art4" /></div>
-   <div className="ph" data-type="2D Artwork"><img src={art27} alt="art7" /></div>
-  <div className="ph" data-type="3D Artwork"><img src={art18} alt="art5" /></div>
-  <div className="ph" data-type="3D Artwork"><img src={art19} alt="art7" /></div>
-  <div className="ph" data-type="3D Artwork"><img src={art20} alt="art6" /></div>
-  <div className="ph" data-type="3D Artwork"><img src={art21} alt="art8" /></div>
-  <div className="ph" data-type="3D Artwork"><img src={art22} alt="art2" /></div>
-  <div className="ph" data-type="3D Artwork"><img src={art23} alt="art3" /></div>
-  <div className="ph" data-type="2D Artwork"><img src={art33} alt="art10" /></div>
-  <div className="ph" data-type="3D Artwork"><img src={art24} alt="art9" /></div>
-  <div className="ph" data-type="3D Artwork"><img src={art25} alt="art10" /></div>
-  <div className="ph" data-type="3D Artwork"><img src={art26} alt="art11" /></div>
- 
-  <div className="ph" data-type="2D Artwork"><img src={art28} alt="art6" /></div>
-  <div className="ph" data-type="2D Artwork"><img src={art29} alt="art8" /></div>
-  <div className="ph" data-type="2D Artwork"><img src={art30} alt="art2" /></div>
-  <div className="ph" data-type="2D Artwork"><img src={art31} alt="art3" /></div>
-  <div className="ph" data-type="2D Artwork"><img src={art32} alt="art9" /></div>
-  
-  {/* <div className="ph" data-type="3D Artwork"><img src={art1} alt="art1" /></div>
+        <section className="photos">
+          <div className="ph" data-type="3D Artwork"><img src={art17} alt="art4" /></div>
+          <div className="ph" data-type="2D Artwork"><img src={art27} alt="art7" /></div>
+          <div className="ph" data-type="3D Artwork"><img src={art18} alt="art5" /></div>
+          <div className="ph" data-type="3D Artwork"><img src={art19} alt="art7" /></div>
+          <div className="ph" data-type="3D Artwork"><img src={art20} alt="art6" /></div>
+          <div className="ph" data-type="3D Artwork"><img src={art21} alt="art8" /></div>
+          <div className="ph" data-type="3D Artwork"><img src={art22} alt="art2" /></div>
+          <div className="ph" data-type="3D Artwork"><img src={art23} alt="art3" /></div>
+          <div className="ph" data-type="2D Artwork"><img src={art33} alt="art10" /></div>
+          <div className="ph" data-type="3D Artwork"><img src={art24} alt="art9" /></div>
+          <div className="ph" data-type="3D Artwork"><img src={art25} alt="art10" /></div>
+          <div className="ph" data-type="3D Artwork"><img src={art26} alt="art11" /></div>
+
+          <div className="ph" data-type="2D Artwork"><img src={art28} alt="art6" /></div>
+          <div className="ph" data-type="2D Artwork"><img src={art29} alt="art8" /></div>
+          <div className="ph" data-type="2D Artwork"><img src={art30} alt="art2" /></div>
+          <div className="ph" data-type="2D Artwork"><img src={art31} alt="art3" /></div>
+          <div className="ph" data-type="2D Artwork"><img src={art32} alt="art9" /></div>
+
+          {/* <div className="ph" data-type="3D Artwork"><img src={art1} alt="art1" /></div>
   <div className="ph" data-type="2D Artwork"><img src={art4} alt="art4" /></div>
   <div className="ph" data-type="3D Artwork"><img src={art5} alt="art5" /></div>
   <div className="ph" data-type="2D Artwork"><img src={art7} alt="art7" /></div>
@@ -304,64 +307,88 @@ useEffect(() => {
   <div className="ph" data-type="2D Artwork"><img src={art14} alt="art14" /></div>
   <div className="ph" data-type="3D Artwork"><img src={art15} alt="art15" /></div>
   <div className="ph" data-type="2D Artwork"><img src={art16} alt="art16" /></div> */}
-</section>
+        </section>
 
 
-  
-  
- 
-        
-                 <h2 className="mainHeadingTotal">Student Games
+
+
+
+
+        <h2 className="mainHeadingTotal">Student Games
         </h2>
         <p className='suprts'> At Backstage Pass, we celebrate and recognize exceptional achievements in game art, design, and development. Our awards honor students for their innovation, dedication, and talent, distinguishing them as future leaders in the industry. These awards extend beyond internal recognition, encompassing students who excel in external competitions.</p>
-   {isMobileState ? (
-  /* MOBILE → Show all cards */
-  <div className="containerga">
-    {gameCards.map((g, i) => (
-      <div className="cardsg" key={i}>
-        <img src={g.img} alt={g.title} />
-        <h3>{g.title}</h3>
+        {isMobileState ? (
+          /* MOBILE → Show all cards */
+          <div className="containerga">
+            {gameCards.map((g, i) => (
+              <div className="cardsg" key={i}>
+                <img src={g.img} alt={g.title} />
+                <h3>{g.title}</h3>
 
-        <div className="overlaysg">
-          <h3>{g.title}</h3>
-          <p>{g.desc}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-) : (
-  /* DESKTOP → Show limited + View More */
-  <>
-    <div className="containerga">
-      {(showMore ? gameCards : gameCards.slice(0, 15)).map((g, i) => (
-        <div className="cardsg" key={i}>
-          <img src={g.img} alt={g.title} />
-          <h3>{g.title}</h3>
+                <div className="overlaysg">
+                  <h3>{g.title}</h3>
+                  <p>{g.desc}</p>
+                  {g?.href && (
+                    <a
+                      href={g.href}
+                      className="capplynow"
+                      style={{ padding: "12px", fontSize: "16px" }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Download
+                    </a>
+                  )}
 
-          <div className="overlaysg">
-            <h3>{g.title}</h3>
-            <p>{g.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-      ))}
-    </div>
+        ) : (
+          /* DESKTOP → Show limited + View More */
+          <>
+            <div className="containerga">
+              {(showMore ? gameCards : gameCards.slice(0, 15)).map((g, i) => (
+                <div className="cardsg" key={i}>
+                  <img src={g.img} alt={g.title} />
+                  <h3>{g.title}</h3>
 
-    <div className="viewmore-btn-wrapper">
-      <button
-        className="viewmore-btn"
-        onClick={() => setShowMore(!showMore)}
-      >
-        {showMore ? "View Less" : "View More"}
-      </button>
-    </div>
-  </>
-)}
+                  <div className="overlaysg">
+                    <h3>{g.title}</h3>
+                    <p>{g.desc}</p>
+                    {g?.href && (
+                      <a
+                        href={g.href}
+                        className="capplynow"
+                        style={{ padding: "12px", fontSize: "16px" }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Download
+                      </a>
+                    )}
+
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="viewmore-btn-wrapper">
+              <button
+                className="viewmore-btn"
+                onClick={() => setShowMore(!showMore)}
+              >
+                {showMore ? "View Less" : "View More"}
+              </button>
+            </div>
+          </>
+        )}
 
 
-        </div>
+      </div>
 
-      </>
-    )
+    </>
+  )
 }
 
 

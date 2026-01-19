@@ -1,14 +1,24 @@
-import React, { useState, useEffect } from "react";
-import "./DiplomaAndAdvancedDiplomaCourses.css";
+import React, { useState, useRef, useEffect } from "react";
+import "./Marketing.css";
 import { Helmet } from "react-helmet";
+import PaymentC from "./Payment";
 import { useSelector, shallowEqual } from "react-redux";
 import cer from "../../../assets/img/test/certificate-with-badge.png";
 import { FaPlay } from "react-icons/fa";
+import axios from 'axios';
+import modeling from "../../../assets/img/Environment.webp";
+import prop from "../../../assets/img/3D_Game_Asset.webp";
+import gameasst from "../../../assets/img/3D_Prop.webp";
+import envir from "../../../assets/img/3d-modelling.webp";
+import { useTheme } from '@mui/material/styles';
 import r1 from "../../../assets/img/partners/r1.webp";
 import r2 from "../../../assets/img/partners/r2.webp";
+import r15 from "../../../assets/img/partners/supergaming.png";
+import r16 from "../../../assets/img/partners/r6.webp";
 import r4 from "../../../assets/img/partners/r4.webp";
 import r5 from "../../../assets/img/partners/r5.webp";
 import r7 from "../../../assets/img/partners/r7.webp";
+import rc2 from "../../../assets/img/partners/2.webp";
 import r8 from "../../../assets/img/partners/SumoDigital.webp";
 import r9 from "../../../assets/img/partners/Ubisoft.webp";
 import r10 from "../../../assets/img/partners/Sony.webp";
@@ -16,71 +26,19 @@ import r11 from "../../../assets/img/partners/Qualcomm.webp";
 import r12 from "../../../assets/img/partners/Juego.webp";
 import r13 from "../../../assets/img/partners/Gamitronics.webp";
 import r14 from "../../../assets/img/partners/GSNgames.webp";
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import wtwh from "../../../assets/img/banners/afterwtwillhappen.webp";
-import wtaln from "../../../assets/img/banners/allyouneed.webp";
 import { FaLinkedin } from "react-icons/fa";
-import Ourawards from "../../../content/ourawards";
-import jobn from '../../../assets/img/placentsn.webp';
-function Feature({ title, subtitle }) {
-  return (
-    <div className="feature-box">
-      <div className="feature-iconcer" style={{fontSize:"18px", fontWeight:"bold"}}>✓</div>
-      <div>
-        <div className="feature-title" style={{ color: "#000000" }}>{title}</div>
-      </div>
-    </div>
-  );
-}
-function Feature1({ title, subtitle }) {
-  return (
-    <div className="feature-box1">
-      <div className="feature-iconcer" style={{fontSize:"18px", fontWeight:"bold"}}>✓</div>
-      <div>
-        <div className="feature-title">{title}</div>
-      </div>
-    </div>
-  );
-}
-function Featurecarrer({ title, subtitle }) {
-  return (
-    <div className="feature-boxcar">
-      <div className="feature-iconcercar" style={{fontSize:"18px", fontWeight:"bold"}}><img src={jobn}/></div>
-      <div>
-        <div className="feature-titlecar">{title}</div>
-      </div>
-    </div>
-  );
-}
-function Module({ title, items = [] }) {
-  return (
-    <div className="module-block">
-      <h4 className="module-title">{title}</h4>
-      <ul className="module-list">
-        {items.map((it, i) => (
-          <li key={i}>{it}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function FAQItem({ q, a }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div className="faq-box">
-      <button className="faq-btn" onClick={() => setOpen(!open)}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <span>{q}</span>
-          <span>{open ? "-" : "+"}</span>
-        </div>
-      </button>
-
-      {open && <div className="faq-answercer">{a}</div>}
-    </div>
-  );
-}
+import icon1 from "../../../assets/img/Icons/Career_Counselling.webp";
+import icon2 from "../../../assets/img/Icons/Industry_Led.webp";
+import icon3 from "../../../assets/img/Icons/Placement.webp";
+import icon4 from "../../../assets/img/Icons/learning_Modules.webp";
+import icon5 from "../../../assets/img/Icons/Beginner.webp";
+import icon6 from "../../../assets/img/Icons/Practical.webp";
+import icon7 from "../../../assets/img/Icons/learning_Modules.webp";
+import icon8 from "../../../assets/img/Icons/6_Hours.webp";
+import icon9 from "../../../assets/img/Icons/onlinetotal.webp";
+import icon10 from "../../../assets/img/Icons/Certificate.webp";
+import Slide from '@mui/material/Slide';
 
 function DiplomaAndAdvancedDiplomaCourses() {
   const isMobileState = useSelector(
@@ -114,11 +72,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
     };
   }, []);
 
-  const handlePayNow = () =>
-    window.open(
-      "https://backstagepass.co.in/landingpage/short-course/",
-      "_blank"
-    );
+
   const awardsData = [
     {
       imgMain: "https://backstagepass.co.in/ET_Achievers_2025-a03e9ae8.webp",
@@ -161,74 +115,10 @@ function DiplomaAndAdvancedDiplomaCourses() {
       text: "Best Education Brand Award Economic Times 2018"
     },
   ];
-  const items = ["Confidently navigate the Maya 2024 interface and essential tools.",
-    "Create clean and detailed 3D props and assets from scratch.",
-    "Understand and apply UV unwrapping for game-ready models.",
-    "Work with materials and shaders inside Maya.",
-    "Apply image-based texturing to bring your models to life.",
-    "Build a solid foundation for moving into advanced 3D workflows or portfolio projects."];
-  const itemssys = ["Operating System: Windows®, Apple®, Linux®",
-    "RAM: 8 GB of RAM (16 GB or more recommended) ",
-    "CPU: 64-bit Intel® or AMD® with SSE4.2 instruction set, For macOS, Apple Silicon arm64 or Intel x86",
-    "GPU: Certified graphics card (e.g., NVIDIA RTX series, Quadro) for smooth viewport.",
-    "Storage: SSD for faster loading and performance.",
-    "Disk Space: 7 GB of free disk space for installation"];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
 
-  // AUTOPLAY
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % awardsData.length);
-    }, 4000); // autoplay speed
 
-    return () => clearInterval(interval);
-  }, []);
-  const [activeIndex, setActiveIndex] = useState(null);
 
-  const faqs = [
-    {
-      question: "What is the Certificate Program in Basics of Maya?",
-      answer:
-        "This is a beginner-friendly online course designed to introduce students to Autodesk Maya. It covers interface navigation, essential modelling tools, UV mapping, and basic texturing, enabling learners to create simple 3D assets from scratch.",
-    },
-    {
-      question: "Who is this course ideal for?",
-      answer:
-        "The course is designed for absolute beginners, school or college students, aspiring 3D artists, game design enthusiasts, and anyone looking to start a career in 3D modelling or digital content creation.",
-    },
-
-    {
-      question: "Do I need previous experience in 3D modelling or Maya?",
-      answer:
-        "No prior knowledge is required. The course starts with the fundamentals and gradually progresses through practical exercises suited for first-time users.",
-    },
-    {
-      question: "Will I receive a certificate upon completion?",
-      answer:
-        "Yes. After completing all modules and required activities, students will receive a Certificate of Completion.",
-    },
-    {
-      question: "What software do I need for this course?",
-      answer:
-        "You will need Autodesk Maya, which offers an educational version for students or a free trial for beginners.",
-    },
-    {
-      question: "How is the course conducted?",
-      answer:
-        "This is a self-paced online course, allowing students to learn at their convenience through pre-recorded videos and practical demonstrations.",
-    },
-    {
-      question: "What are the career opportunities after completing this course?",
-      answer:
-        "After completing the course, learners can pursue entry-level roles such as 3D Modelling Intern, Junior Asset Artist, Game Art Trainee, or continue advancing into animation, VFX, or game development specialities.",
-    },
-  ];
-
-  const toggleFAQ = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-  const [isOpenM, setIsOpenM] = useState(false);
   // Function to scroll to the bottom of the container
   const scrollToBottom = () => {
     const container = document.getElementById('scroll-container');
@@ -247,657 +137,983 @@ function DiplomaAndAdvancedDiplomaCourses() {
     window.open('/landingpage/short-course/', '_blank');
   };
   useEffect(() => {
-  const details = document.querySelectorAll(".modules-grid details");
+    const details = document.querySelectorAll(".modules-grid details");
 
-  details.forEach((targetDetail) => {
-    targetDetail.addEventListener("toggle", () => {
-      if (targetDetail.open) {
-        details.forEach((detail) => {
-          if (detail !== targetDetail) {
-            detail.removeAttribute("open");
-          }
-        });
-      }
+    details.forEach((targetDetail) => {
+      targetDetail.addEventListener("toggle", () => {
+        if (targetDetail.open) {
+          details.forEach((detail) => {
+            if (detail !== targetDetail) {
+              detail.removeAttribute("open");
+            }
+          });
+        }
+      });
     });
+
+    return () => {
+      details.forEach((detail) => {
+        detail.replaceWith(detail.cloneNode(true));
+      });
+    };
+  }, []);
+
+
+  const [open, setOpen] = React.useState(false);
+
+
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+  const handleSubCategoryChange = (event) => {
+    const selectedsubCategory = event.target.value;
+    setFormData((prevData) => ({
+      ...prevData,
+      specialization: selectedsubCategory,
+    }));
+  };
+  const handleInputChange = async (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    if (name === "PhoneNumber" && /^[0-9]{10}$/.test(value)) {
+      try {
+        const response = await fetch(`https://www.backstagepass.co.in/reactapi/checklandingpagemobile.php?contactNumber=${value}`);
+
+
+        if (response.status === 200) {
+          alert('This mobile number is already registered with in the last 3 months our team will get back to you.');
+          setFormData((prevData) => ({
+            ...prevData,
+            PhoneNumber: '',  // Reset the contact number field to an empty string
+          }));
+        }
+      } catch (error) {
+        console.error('Error checking mobile number:', error);
+        alert('Failed to validate mobile number. Please try again.');
+      }
+    }
+
+  };
+  const [formData, setFormData] = useState({
+    firstname: '',
+    lastname: '',
+    PhoneNumber: '',
+    email: '',
+    city: '',
+    course: '',
+    specialization: '',
+    qualification: '',
+    comments: '',
+    url: window.location.href,
+    course_ttl: 1,// Initialize URL in state
   });
 
-  return () => {
-    details.forEach((detail) => {
-      detail.replaceWith(detail.cloneNode(true));
-    });
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setOpen(true); // Assuming you want to show a modal upon submission
+
+    try {
+      const response = await axios.post("https://www.backstagepass.co.in/reactapi/landing_adv.php", formData);
+      console.log(response);
+
+      // Assuming the response indicates success
+      // alert("Your data was submitted successfully!");
+
+      // Reset form data
+      setFormData({
+        firstname: '',
+        lastname: '',
+        PhoneNumber: '',
+        email: '',
+        city: '',
+        qualification: '',
+        comments: '',
+        course: '',
+        specialization: '',
+        url: window.location.href, // Reset URL
+      });
+    } catch (error) {
+      console.error('Error adding data:', error);
+      alert('An error occurred while submitting the form. Please try again.');
+    }
   };
+  function Feature({ title, subtitle }) {
+    return (
+      <div className="feature-box">
+        <div className="feature-iconcer" style={{ fontWeight: "bold" }}><img /></div>
+        <div>
+          <div className="feature-title" style={{ fontSize: isMobileState ? "14px" : "15px", color: "#000000" }}>{title}</div>
+        </div>
+      </div>
+    );
+  }
+  function Feature1({ title, subtitle }) {
+    return (
+      <div className="feature-box1">
+        <div className="feature-iconcer" style={{ fontWeight: "bold" }}>✓</div>
+        <div>
+          <div className="feature-title" style={{ fontSize: isMobileState ? "14px" : "15px", fontWeight: "bold" }}>{title}</div>
+        </div>
+      </div>
+    );
+  }
+  function Featurecarrer({ title, subtitle, img }) {
+    return (
+      <div className="feature-boxcar">
+
+        <div>
+          <div
+            className="feature-titlecar"
+            style={{ fontSize: isMobileState ? "14px" : "15px" }}
+          > <img className="feature-iconcercar"
+            style={{ fontWeight: "bold", marginRight: "20px", objectFit: "contain" }} src={img} alt={title} />
+            {title}
+          </div>
+
+          {subtitle && <p className="feature-subtitlecar">{subtitle}</p>}
+        </div>
+      </div>
+    );
+  }
+  function Featurecarrer1({ title, subtitle }) {
+    return (
+      <div className="feature-boxcar" style={{ padding: "8px", flexDirection: "column", backgroundColor: "#faebd7" }}>
+        <div className="feature-iconcercar" style={{ fontSize: "18px", fontWeight: "bold" }}><img src={modeling} /></div>
+        <div>
+          <div className="feature-titlecar" style={{ fontSize: "14px" }}>{title}</div>
+        </div>
+      </div>
+    );
+  }
+  function Featurecarrer2({ title, subtitle }) {
+    return (
+      <div className="feature-boxcar" style={{ flexDirection: "column", backgroundColor: "#fbe4ec" }}>
+        <div className="feature-iconcercar" style={{ fontSize: "18px", fontWeight: "bold" }}><img src={prop} /></div>
+        <div>
+          <div className="feature-titlecar" style={{ fontSize: "14px" }}>{title}</div>
+        </div>
+      </div>
+    );
+  }
+  function Featurecarrer3({ title, subtitle }) {
+    return (
+      <div className="feature-boxcar" style={{ flexDirection: "column", backgroundColor: "#fae9e1" }}>
+        <div className="feature-iconcercar" style={{ fontSize: "18px", fontWeight: "bold" }}><img src={gameasst} /></div>
+        <div>
+          <div className="feature-titlecar" style={{ fontSize: "14px" }}>{title}</div>
+        </div>
+      </div>
+    );
+  }
+  function Featurecarrer4({ title, subtitle }) {
+    return (
+      <div className="feature-boxcar" style={{ flexDirection: "column", backgroundColor: "#cedeff" }}>
+        <div className="feature-iconcercar" style={{ fontSize: "18px", fontWeight: "bold" }}><img src={envir} /></div>
+        <div>
+          <div className="feature-titlecar" style={{ fontSize: "14px" }}>{title}</div>
+        </div>
+      </div>
+    );
+  }
+  function Featureben({ title, subtitle, img }) {
+    return (
+      <div className="feature-boxcar" style={{ backgroundColor: "#f6f7f8" }}>
+        <div>
+          <div
+            className="feature-titlecar"
+            style={{ fontSize: isMobileState ? "14px" : "15px" }}
+          > <img className="feature-iconcercar"
+            style={{ fontWeight: "bold", display: "flex", marginRight: "20px" }} src={img} alt={title} />
+            {title}
+          </div>
+
+          {subtitle && <p className="feature-subtitlecar">{subtitle}</p>}
+        </div>
+      </div>
+    );
+  }
+
+  function Module({ title, items = [] }) {
+    return (
+      <div className="module-block">
+        <h4 className="module-title">{title}</h4>
+        <ul className="module-list">
+          {items.map((it, i) => (
+            <li key={i}>{it}</li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
+  function FAQItem({ q, a }) {
+    const [open, setOpen] = useState(false);
+
+    return (
+      <div className="faq-box">
+        <button className="faq-btn" onClick={() => setOpen(!open)}>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <span>{q}</span>
+            <span>{open ? "-" : "+"}</span>
+          </div>
+        </button>
+
+        {open && <div className="faq-answercer">{a}</div>}
+      </div>
+    );
+  }
+  const featureData = [
+    {
+      title: "Beginner-friendly Maya fundamentals",
+      img: icon5
+    },
+
+    {
+      title: "Practical, step-by-step asset creation",
+      img: icon6
+    },
+    {
+      title: "7 compact learning modules",
+      img: icon7
+    },
+    {
+      title: "6 hours of recorded video lessons",
+      img: icon8
+    },
+    {
+      title: "100% online and self-paced",
+      img: icon9
+    },
+    {
+      title: "Certificate on completion",
+      img: icon10
+    }
+  ];
+  const [openFormModal, setOpenFormModal] = useState(false);
+
+
+  const handleFormClose = () => {
+    setOpenFormModal(false);
+  };
+  const [formData1, setFormData1] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+
+const [enableStorage, setEnableStorage] = useState(false);
+
+  /* 🔹 Load data from localStorage on first render */
+  // useEffect(() => {
+  //   const savedData = localStorage.getItem("stickyFormData");
+  //   if (savedData) {
+  //     setFormData1(JSON.parse(savedData));
+  //   }
+  // }, []);
+useEffect(() => {
+  const stored = localStorage.getItem("stickyFormData");
+
+  if (!stored) return;
+
+  const { expiry } = JSON.parse(stored);
+
+  if (Date.now() > expiry) {
+    localStorage.removeItem("stickyFormData");
+  }
 }, []);
+useEffect(() => {
+  if (!enableStorage) return;
+
+  const payload = {
+    data: formData1,
+    expiry: Date.now() + EXPIRY_TIME,
+  };
+
+  localStorage.setItem("stickyFormData", JSON.stringify(payload));
+}, [formData1, enableStorage]);
+
+  /* 🔹 Save data to localStorage whenever formData changes */
+  const EXPIRY_TIME = 5 * 60 * 1000; // 5 minutes
+
+  useEffect(() => {
+    localStorage.setItem("stickyFormData", JSON.stringify(formData1));
+  }, [formData1]);
+  const clearStickyForm = () => {
+    setFormData1({
+      name: "",
+      email: "",
+      phone: "",
+    });
+
+  
+  };
+
+  /* 🔹 Handle input change */
+  const handleEnrollNow = () => {
+  localStorage.removeItem("stickyFormData"); // reset old data
+  setEnableStorage(true);                    // start saving
+  setOpenFormModal(true);                    // open modal
+};
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData1((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
   return (
     <>
       <Helmet>
         <title>
-          Certificate Program in Essentials of Game Design | Backstage Pass
+          Basics of Maya Course for Beginners | Learn Maya 2024 Online
         </title>
+
+        <meta name="description" content="Learn Autodesk Maya 2024 from scratch. Beginner-friendly online course covering 3D modelling, UV mapping & texturing. Certificate included." />
+        <link rel="canonical" href="https://www.backstagepass.co.in/landingpage/basics-of-maya-online-certification/" />
       </Helmet>
 
-      <div id="scroll-container" className="scroll-wrapper">
-        <div className="mainPanel1">
-          <div className="course-wrappecer">
+      {openFormModal && (
+        <PaymentC onClose={handleFormClose} style={{ width: "75%" }} onClick={handleEnrollNow} />
+      )}
 
-            <section
-              className="hero-section"
 
-            >
-              <div className="hero-container">
+      {/* ===== Banner Section (100%) ===== */}
+      <section className="banner-section hero-section" style={{ paddingBottom: "20px" }}>
+        <div class="containerm">
+          <div className="left-content">
+            <div className="col-4 leftfrmv">
+              <h1 className="hero-title" style={{marginTop:isMobileState?"60px":"20px"}}>Basics Of Maya for Beginners</h1>
+
+              <p className="hero-text">
+                A beginner-friendly course that teaches the essentials of Autodesk Maya.
+                Learn the interface, basic 3D modelling, UV unwrapping, and simple texturing
+                through hands-on practice.
+              </p>
+
+              <p className="discountpanel">Buy this Course @</p>
+
+              <div className="disdvi">
+                <span className="actprice"><del>₹4999</del></span>
+                <span className="discountprice">₹799</span>
+                <span className="savingamt">84% Disc.</span>
+              </div>
+
+              <div className="savingamto">
+                <p>Limited Time Offer!</p>
+              </div>
+
+              {/* COURSE INFO */}
+              {isMobileState ? (
+                <div className="course-info">
+                  <div className="row text-center">
+                    <div className="col-6 border-rightc">
+                      <p className="course-info-head">7 Modules</p>
+                      <p>with Certifications</p>
+                    </div>
+                    <div className="col-6">
+                      <p className="course-info-head">6 Hours</p>
+                      <p>Recorded Content</p>
+                    </div>
+                    <div className="col-6 border-rightc">
+                      <p className="course-info-head">Online</p>
+                      <p>Mode</p>
+                    </div>
+                    <div className="col-6">
+                      <p className="course-info-head">English</p>
+                      <p>Language</p>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="course-info1">
+                  <div className="row text-center">
+                    <div className="col-3 border-rightc">
+                      <p className="course-info-head">7 Modules</p>
+                      <p>with Certifications</p>
+                    </div>
+                    <div className="col-4 border-rightc">
+                      <p className="course-info-head">6 Hours</p>
+                      <p>Recorded Content</p>
+                    </div>
+                    <div className="col-2 border-rightc">
+                      <p className="course-info-head">Online</p>
+                      <p>Mode</p>
+                    </div>
+                    <div className="col-3">
+                      <p className="course-info-head">English</p>
+                      <p>Language</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* MOBILE FORM ONLY (UNCHANGED) */}
+            {isMobileState && (
+              <div className="" style={{ marginTop: "30px", backgroundColor: "#ffffff", borderRadius: "10px", padding: "10px" }}>
+                <h3 className="previewcon1" style={{ textAlign: "center", padding:"0px", margin:"0px" }}>
+                  Get this Course @ ₹799
+                </h3>
+                <form className="mble-form">
+                    <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData1.name}
+                onChange={handleChange}
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData1.email}
+                onChange={handleChange}
+              />
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone"
+                value={formData1.phone}
+                onChange={handleChange}
+              />
+
+                  <PaymentC
+                    className="my-custom-class"
+                    open={openFormModal}
+                    onClose={() => setOpenFormModal(false)}
+                    onClick={handleEnrollNow}
+                  />
+                  
+                </form>
+
+
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+      {/* ===== Content Section ===== */}
+      <section className="content-wrapper page-wrapper">
+
+        {/* Left Content */}
+        <div className="left-content">
+
+          <section className="maya-overview-section" style={{ backgroundColor: "#f6f7f8" }}>
+            <div className="section-wrappercer" >
+              <h2 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px", paddingBottom: "0px", marginTop: isMobileState ? "4px" : "50px", paddingTop: "20px" }}>
+                Basics Of Maya Course Overview
+                <span className="displaypath"></span>
+                <span className="designdisplay"></span>
+              </h2>
+
+              <p className="previewconp">
+                Ever wanted to bring your ideas to life in 3D? This beginner-friendly course introduces Autodesk Maya 2024 step by step.
+                Learn the interface, basic modelling, UV unwrapping, and simple texturing to create your own 3D assets from scratch—no prior
+                3D experience needed, just curiosity and creativity.
+              </p>
+            </div>
+          </section>
+
+          {/* <section style={{width:"100%", backgroundColor: "#ffffff", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <div className="scene">
+              <h1>Last Chance! Offer Ends Jan 15, 2026</h1>
+            </div>
+          </section> */}
+
+          <section className="" style={{ marginBottom: "0px", backgroundColor: "" }}>
+            <div className="section-wrappercer">
+
+              <h3 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px", paddingTop: "0px", marginTop: "0px" }}>Key Features</h3>
+
+              <div className="feature-gridcer">
+
+                {featureData.map((item, index) => (
+                  <Featureben
+                    key={index}
+                    title={item.title}
+                    img={item.img}
+                  />
+                ))}
+              </div>
+            </div>
+          </section>
+
+
+
+          <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "30px", marginTop: "15px" }}>
+            <div className="section-wrappercer modules-section">
+
+              <div className="modules-grid">
                 <div>
-                  {/* <nav aria-label="breadcrumb" className="bc-wrap">
-                    <ol className="bc">
-                      <li className="bc-item">
-                        <a href="/" className="bc-link">Home</a>
+                  <h2 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px" }}>Course Topics You will Learn
+
+                  </h2>
+
+                  <details className="style-1" style={{ borderLeft: "5px solid#d11" }}>
+
+                    <summary style={{ fontSize: "15px" }}>Introduction to 3D and Maya</summary>
+                    <ul>
+                      <li>An introduction to 3D fundamentals and the Maya interface, covering basic navigation, tools, and how 3D assets are created.
                       </li>
 
-                      <li className="bc-item bc-highlight">
-                        <a href="/courses/" className="bc-link">Courses</a>
+                    </ul>
+                  </details>
+
+                  <details className="style-1" style={{ borderLeft: "5px solid#d11" }}>
+                    <summary style={{ fontSize: "15px" }}>Working with Geometry Scene</summary>
+                    <ul>
+                      <li>Learn how to create and edit 3D geometry in Maya using primitives, component editing, and essential modelling tools like bevel, extrude, etc., to add detail, shape, and clean structure to your models.
                       </li>
 
-                      <li
-                        className="bc-item bc-current"
-                        aria-current="page"
-                      >
-                        Maya for Basics
+                    </ul>
+                  </details>
+
+                  <details className="style-1" style={{ borderLeft: "5px solid#d11" }}>
+                    <summary style={{ fontSize: "15px" }}>Organization & Planning</summary>
+                    <ul>
+                      <li>Learn how to organise and plan your Maya scenes using proper naming, layers, grouping, and reference images, while maintaining correct scale, proportions, and clean workflows.</li>
+
+                    </ul>
+                  </details>
+
+                  <details className="style-1" style={{ borderLeft: "5px solid#d11" }}>
+                    <summary style={{ fontSize: "15px" }}>Overview of the Prop</summary>
+                    <ul>
+                      <li>An overview of the complete prop creation process, from setting up references and blocking the main shapes to modelling details, refining topology,  roof modelling, fence modelling, and preparing the final asset.</li>
+
+                    </ul>
+                  </details>
+
+                  <details className="style-1" style={{ borderLeft: "5px solid#d11" }}>
+                    <summary style={{ fontSize: "15px" }}>Model Review, Cleanup, and Export</summary>
+                    <ul>
+                      <li>Learn how to review and clean your model by fixing geometry issues, preparing for UV mapping, and exporting the asset correctly for texturing and other workflows.</li>
+
+                    </ul>
+                  </details>
+
+                  <details className="style-1" style={{ borderLeft: "5px solid#d11" }}>
+                    <summary style={{ fontSize: "15px" }}>UV Mapping Fundamentals</summary>
+                    <ul>
+                      <li>Learn the fundamentals of UV mapping, including unwrapping models, organising UV shells, fixing stretching and overlaps, and preparing clean UV layouts for texturing.</li>
+
+                    </ul>
+                  </details>
+
+                  <details className="style-1" style={{ borderLeft: "5px solid#d11" }}>
+                    <summary style={{ fontSize: "15px" }}>Basic Texturing in Maya</summary>
+                    <ul>
+                      <li>This module introduces the basics of texturing in Maya, understanding shaders, material attributes, applying texture maps, and using Hypershade to create and combine simple materials.
                       </li>
-                    </ol>
-                  </nav> */}
 
-                  <h1 className="hero-title">
-                   Basics Of Maya for Beginners
+                    </ul>
+                  </details>
 
-                  </h1>
-
-
-                  <p className="hero-text">
-                    The Certificate Program in Basics of Maya is a beginner-friendly course designed to introduce students to the core fundamentals of Autodesk Maya, including interface navigation, essential modelling tools, UV unwrapping, and basic texturing. Through guided lessons and practical, hands-on exercises, students will learn how to create 3D assets from scratch and understand the complete Maya workflow.
-                  </p>
-                  <p className="discountpanel">Buy this Course @
-
-                  </p><div className="disdvi"><span className="actprice"><del>₹4999</del></span><span className="discountprice">₹799</span> <span className="savingamt">84% Disc.</span> </div>
-                  <div className="savingamto"><p className="">Limited Time Offer!</p></div>
-          {isMobileState ? (
-          <>
-                  <div class="course-info" style={{ background: "#ffffff", color: "#000" }}>
-  <div class="row text-center align-items-center">
-
-    <div class="col-6 col-md-3">
-      <div class="border-rightc">
-        <p class="course-info-head">7 Modules</p>
-        <p>with <br/> Certifications</p>
-      </div>
-    </div>
-
-    <div class="col-6 col-md-3">
-      <div>
-        <p class="course-info-head">
-          <span class="course_duration">6</span> Hours
-        </p>
-        <p>of Recorded <br/> Content</p>
-      </div>
-    </div>
-
-    <div class="col-6 col-md-3">
-      <div class="border-rightc">
-        <p class="course-info-head">Online</p>
-        <p>Mode</p>
-      </div>
-    </div>
-
-    <div class="col-6 col-md-3">
-      <div>
-        <p class="course-info-head">
-          <span class="course_language">English</span>
-        </p>
-        <p>Language</p>
-      </div>
-    </div>
-
-  </div>
-</div>
-       </>
-        ) : (
-          <>
-                  <div class="course-info" style={{ background: "#ffffff", color: "#000" }}><div class="row"><div class="col-3"><div class="border-rightc"><p class="module course-info-head">7 Modules</p><p>with Certifications</p></div></div>
-                  <div class="col-6 col-lg-4 col-sm-3"><div class="border-rightc border-none"><p class="course-info-head"><span class="course_duration">6</span> Hours</p><p>of Recorded Content</p></div></div>
-                    <div class="col-2">
-                      <p class="border-rightc" style={{marginLeft:"0px !important"}}><p class="module course-info-head">Online</p><p>Mode</p></p></div>
-
-                    <div class="col-2"><div className=""><p class="course-info-head"><span class="course_language">English</span></p><p>Language</p></div></div>
-                  </div></div>
-                  </>
-)}
                 </div>
 
-
               </div>
-            </section>
-            <section className="" style={{ backgroundColor: "#f6f7f8" }}>
-              <div className="section-wrappercer">
-                <h2 className="previewcon">Basics Of Maya Course Overview
-   <span className="displaypath"></span><span className="designdisplay"></span></h2>
-                <p className="previewconp">
-                  Have you ever wanted to bring your ideas to life in 3D? Whether it’s game assets, props, or creative projects, Autodesk Maya is one of the most powerful tools for 3D modelling and texturing.</p>
-                <p className="previewconp">
-                  In this course, we’ll explore Maya 2024 step by step - perfect for complete beginners. You’ll learn how to navigate the Maya interface, work with essential modelling tools, create detailed props, unwrap UVs, and apply materials. We’ll also cover the basics of image-based texturing inside Maya so you can give your models realistic looks.</p>
-                <p className="previewconp">
-                  By the end of this course, you’ll be comfortable creating 3D assets from scratch, understanding the Maya workflow, and preparing your models with clean UVs and textures. No prior 3D experience is needed - just curiosity and creativity.
-                </p>
-              </div>
-            </section>
-            <section className="" style={{ backgroundColor: "#ffffff", marginBottom:"30px" }}>
-              <div className="section-wrappercer">
-
-                <h3 className="previewcon">Key Features</h3>
-
-                <div className="feature-gridcer">
-                  <Feature title="Beginner-friendly Maya fundamentals
-" />
-                  <Feature title="Practical, step-by-step asset creation" />
-                  <Feature title="9 compact learning modules" />
-                  <Feature title="6 hours of recorded video lessons
-" />
-                  <Feature title="100% online and self-paced
-
-" />
-                  <Feature title="Certificate on completion
+            </div>
+          </section>
 
 
-" />
-                </div>
-              </div>
-            </section>
-            <section className="" style={{ backgroundColor: "#f6f7f8", marginBottom:"0px" }}>
-              <div className="section-wrappercer" style={{paddingBottom:"0px"}}>
-               <h3 className="previewcon" style={{marginBottom:"0px"}}>Our Awards</h3>
-                   </div>
-            <Ourawards />
-        
-            </section>
+
+          <section style={{ backgroundColor: "#f6f7f8", marginTop: isMobileState ? "4px" : "30px", borderRadius: "10px", padding: isMobileState ? "10px" : "0px" }}>
+            <div className="section-wrappercer modules-section">
+
+              <div className='coppertunitiescer'>
+                {isMobileState && (
+                  <h2 className='previewcon1' style={{ textAlign: isMobileState ? "left" : "left", width: isMobileState ? "100%" : "100%", fontSize: isMobileState ? "24px" : "28px" }}>Let Your Certificate Speak </h2>
+                )}
+                <div className='left'>
+                  <img src={cer} alt="careerop" />
 
 
-            <section className="" style={{ backgroundColor: "#ffffff", marginBottom:"0px" }}>
-              <div className="section-wrappercer modules-section">
+                  <div className="linkedinicon">
+                    <span style={{ verticalAlign: "bottom" }}>Shareable on</span>
 
-                <div className="modules-grid">
-                  <div>
-                    <h2 className="previewcon">Course Topics You will Learn
-
-                    </h2>
-
-                    <details className="style-1">
-                      <summary>Introduction to 3D and Maya</summary>
-                      <ul>
-                        <li>What is 3D? Uses in Games, Film, and Design</li>
-                        <li>Types of 3D Assets – Props, Environments, Characters</li>
-                        <li>Introduction to Maya 2024 – Installation and Setup</li>
-                        <li>Exploring the Maya Interface – Menus, Shelves, Panels</li>
-                        <li>Navigating the Viewport – Orbit, Pan, Zoom</li>
-                        <li>Transform Tools – Move, Rotate, Scale</li>
-                        <li>Channel Box & Attribute Editor – Understanding Object Data</li>
-                      </ul>
-                    </details>
-
-                    <details className="style-1">
-                      <summary>Working with Geometry Scene</summary>
-                      <ul>
-                        <li>Creating Primitives – Cube, Sphere, Cylinder, Plane</li>
-                        <li>Transformations – Pivots, Snapping Tools, Local vs World Space</li>
-                        <li>Editable Components – Vertex, Edge, Face Overview</li>
-                        <li>Soft Selection – Editing Multiple Components Smoothly</li>
-                        <li>Extrude Tool – Adding Depth and Complexity</li>
-                        <li>Bevel Tool – Smoothening Edges</li>
-                        <li>Insert Edge Loop & Multi-Cut Tool – Adding Detail</li>
-                        <li>Boolean Operations – Combine and Subtract Shapes</li>
-                        <li>Normals – Correct vs Reverse Normals</li>
-                      </ul>
-                    </details>
-
-                    <details className="style-1">
-                      <summary>Organization & Planning</summary>
-                      <ul>
-                        <li>Naming Conventions – Keeping Your Scene Organized</li>
-                        <li>Using Layers for Asset Management</li>
-                        <li>Grouping Objects – Hierarchies and Parent-Child Relationships</li>
-                        <li>Image Plane Setup – Reference Images for Accurate Modeling</li>
-                        <li>Scale and Unit Setup – Real-World Measurements</li>
-                        <li>Proportion Planning – Matching Reference and Scale</li>
-                        <li>Smooth Mesh Preview – Previewing Subdivision Surfaces</li>
-                        <li>Local Orientation – Transforming Objects in Their Space</li>
-                      </ul>
-                    </details>
-
-                    <details className="style-1">
-                      <summary>Overview of the Prop</summary>
-                      <ul>
-                        <li>Introduction & Reference Setup</li>
-                        <li>Blocking the Main Body</li>
-                        <li>Roof Modeling – Base Structure</li>
-                        <li>Roof Detailing – Planks & Overlaps</li>
-                        <li>Main Body & Platform Base Modeling</li>
-                        <li>Window Modeling</li>
-                        <li>Door Modeling</li>
-                        <li>Circular Entry & Flower Frame</li>
-                        <li>Fence Modeling</li>
-                        <li>Support Beams & Small Additions</li>
-                        <li>Final Topology</li>
-                      </ul>
-                    </details>
-
-                    <details className="style-1">
-                      <summary>Model Review, Cleanup, and Export</summary>
-                      <ul>
-                        <li>Checking Geometry – Identifying Problem Areas</li>
-                        <li>Cleaning Up Geometry Problems – Using Cleanup Tool to Find and Fix Errors</li>
-                        <li>Freeze Transform – Cleaning Up Object History</li>
-                        <li>Retopology Introduction – Why Clean Geometry Matters</li>
-                        <li>Preparing for UV Mapping – Correcting Topology Issues</li>
-                        <li>FBX Export – File Setup for Texturing Software</li>
-                      </ul>
-                    </details>
-
-                    <details className="style-1">
-                      <summary>UV Mapping Fundamentals</summary>
-                      <ul>
-                        <li>What is UV Mapping – Texture Coordinates Explained</li>
-                        <li>Understanding UV Shells and Layouts</li>
-                        <li>Auto vs Manual UV Unwrapping Techniques</li>
-                        <li>Using the UV Editor – Navigating and Editing</li>
-                        <li>Texel Density – Matching Texture Resolution</li>
-                        <li>Common Issues – Stretching and Overlaps</li>
-                        <li>Fixing UV Problems – Aligning, Merging, and Splitting</li>
-                        <li>Exporting UV Layouts for External Texturing</li>
-                      </ul>
-                    </details>
-
-                    <details className="style-1">
-                      <summary>Basic Texturing in Maya</summary>
-                      <ul>
-                        <li>Understanding Shaders – Lambert, Blinn, Phong</li>
-                        <li>Material Attributes – Color, Specular, Bump</li>
-                        <li>Applying Textures – Base Color and Maps</li>
-                        <li>Hypershade Overview – Node Editor Walkthrough</li>
-                        <li>Combining Textures Using Nodes</li>
-                      </ul>
-                    </details>
-
+                    <FaLinkedin
+                      size={28}
+                      color="#0A66C2"
+                      style={{ marginLeft: "8px", verticalAlign: "middle" }}
+                    />
                   </div>
 
                 </div>
+
+                <div className="right career-tabs-container">
+                  {/* Tabs */}
+
+
+                  <section className="max-w-3xl mx-auto p-6 iconsv" style={{ color: "#000", width: isMobileState ? "100%" : "100%", margin: "0px" }}>
+                    {!isMobileState && (
+                      <h2 className='previewcon1' style={{ textAlign: "left", fontSize: isMobileState ? "24px" : "28px", width: isMobileState ? "100%" : "100%" }}>Let Your Certificate Speak </h2>
+                    )}
+                    <section className="certificatedisplay ">
+
+                      <div className="certificate-point">
+                        <FaPlay color="#d11" size={20} />
+                        <p style={{ fontSize: isMobileState ? "14px" : "15px" }}>Certificate are awarded immediately upon successfully completing
+                          all course modules. </p>
+                      </div>
+
+                      <div className="certificate-point">
+                        <FaPlay color="#d11" size={20} />
+                        <p style={{ fontSize: isMobileState ? "14px" : "15px" }}>You receive an official completion certificate that validates your
+                          foundational Maya skills. </p>
+                      </div>
+
+                      <div className="certificate-point">
+                        <FaPlay color="#d11" size={20} />
+                        <p style={{ fontSize: isMobileState ? "14px" : "15px" }}>Your certificate serves as proof of learning and can be added to your
+                          resume or portfolio.</p>
+                      </div>
+
+
+
+
+                    </section>
+
+
+
+                  </section>
+
+                </div>
               </div>
-            </section>
+            </div>
+          </section>
+          <section className="" style={{ backgroundColor: "", marginBottom: "0px", marginTop: "20px" }}>
+            <div className="section-wrappercer">
+              <h3 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px" }}>This Course is for You, If You are
+              </h3>
 
+              <div className="courseUpdatescertificate">
+                <ul style={{ width: "100%", margin: "0px auto", paddingTop: "10px", paddingBottom: "0px" }}>
+                  <li style={{ marginLeft: "0px" }}>
 
+                    <Feature1 title=" 
+" />
+                    <div className='BeyondRightcer'>
 
-            <section style={{ backgroundColor: "#f6f7f8" }}>
-              <div className="section-wrappercer modules-section">
+                      <p>Someone who wants to start learning 3D modelling from the basics.
 
-                <div className='coppertunitiescer'>
-                   {isMobileState && (
-                      <h2 className='previewcon' style={{ textAlign:isMobileState?"left": "left", width: isMobileState ? "100%" : "100%" }}>Let Your Certificates Speak </h2>
-   )}
-                  <div className='left'>
-                    <img src={cer} alt="careerop" />
+                      </p>
+                    </div>
+                  </li>
+                  <li style={{ marginLeft: "0px" }}>
+                    <Feature1 title=" 
+" />
+                    <div className='BeyondRightcer'>
 
-
-                    <div className="linkedinicon">
-                      <span style={{ verticalAlign: "bottom" }}>Shareable on</span>
-
-                      <FaLinkedin
-                        size={28}
-                        color="#0A66C2"
-                        style={{ marginLeft: "8px", verticalAlign: "middle" }}
-                      />
+                      <p>A complete beginner with no prior experience in Autodesk Maya</p>
                     </div>
 
-                  </div>
 
-                  <div className="right career-tabs-container">
-                    {/* Tabs */}
+                  </li>
 
-
-                    <section className="max-w-3xl mx-auto p-6 iconsv" style={{ color: "#000", width: isMobileState ? "100%" : "100%", margin: "0px" }}>
-   {!isMobileState && (
-                      <h2 className='previewcon' style={{ textAlign: "left", width: isMobileState ? "100%" : "100%" }}>Let Your Certificates Speak </h2>
-   )}
-                      <section className="certificatedisplay ">
-
-                        <div className="certificate-point">
-                          <FaPlay color="#d11" size={20} />
-                          <p>Certificates are awarded immediately upon successfully completing
-                            all course modules. </p>
-                        </div>
-
-                        <div className="certificate-point">
-                          <FaPlay color="#d11" size={20} />
-                          <p>You receive an official completion certificate that validates your
-                            foundational Maya skills. </p>
-                        </div>
-
-                        <div className="certificate-point">
-                          <FaPlay color="#d11" size={20} />
-                          <p>Your certificate serves as proof of learning and can be added to your
-                            resume or portfolio.</p>
-                        </div>
-
-
-
-
-                      </section>
-
-
-
-                    </section>
-
-                  </div>
-                </div>
-              </div>
-            </section>
-  <section className="" style={{ backgroundColor: "#ffffff", marginBottom:"0px" }}>
-
-              <div className="section-wrappercer modules-section">
-                <div className='coppertunitiescer1' style={{gap:isMobileState?"0px":"47px"}}>
-
-                
-
-                  <div className="left career-tabs-container" style={{ alignItems: "flex-start", justifyContent: "flex-start" }}>
-                    {/* Tabs */}
-
-
-                    <section className="max-w-3xl mx-auto p-6 iconsv" style={{ color: "#000", width: isMobileState ? "100%" : "100%", margin: "0px" }}>
-                            {!isMobileState && (
-                      <h2 className='previewcon' style={{ textAlign: "left", width: isMobileState ? "100%" : "100%" }}>After this Course, You will be Able to
-
-                      </h2>
-                           )}
-
-                      <section className="certificatedisplay ">
-
-
-                        <div className="certificate-point">
-                          <FaPlay color="#d11" size={20} />
-                          <p>Confidently navigate the Maya 2024 interface and essential tools.
-
-                          </p>
-                        </div>
-
-                        <div className="certificate-point">
-                          <FaPlay color="#d11" size={20} />
-                          <p>Create clean and detailed 3D props and assets from scratch.
-                          </p>
-                        </div>
-
-                        <div className="certificate-point">
-                          <FaPlay color="#d11" size={20} />
-                          <p>Understand and apply UV unwrapping for game-ready models.
-                          </p>
-                        </div>
-                        <div className="certificate-point">
-                          <FaPlay color="#d11" size={20} />
-                          <p>Work with materials and shaders inside Maya.
-
-                          </p>
-                        </div>
-                        <div className="certificate-point">
-                          <FaPlay color="#d11" size={20} />
-                          <p>Apply image-based texturing to bring your models to life.
-
-                          </p>
-                        </div>
-                        <div className="certificate-point">
-                          <FaPlay color="#d11" size={20} />
-                          <p>Build a solid foundation for moving into advanced 3D workflows or portfolio projects.
-                          </p>
-                        </div>
-
-
-
-                      </section>
-
-
-
-                    </section>
-
-                  </div>
-  <div className='right'>
-        {isMobileState && (
-       <h2 className='previewcon' style={{ textAlign: "left", width: isMobileState ? "100%" : "100%" }}>After this Course, You will be Able to
-
-                      </h2>
-)}
-                    <img src={wtwh} alt="careerop"  style={{width:isMobileState?"100%":"100%"}}/>
-                  </div>
-                </div>
-              </div>
-            </section>
-
- <section className="" style={{ backgroundColor: "#f6f7f8", marginBottom:"0px" }}>
-              <div className="section-wrappercer">
-                <h3 className="previewcon">Our Learners Work Across Top Companies</h3>
-
-                <div className="logo-grid-4">
-                  <img src={r1} alt="" width="85" />
-                  <img src={r2} alt="" width="90" />
-                  <img src={r11} alt="" width="80" />
-                  <img src={r10} alt="" width="80" />
-
-                  <img src={r4} alt="" width="85" />
-                  <img src={r5} alt="" width="90" />
-                  <img src={r7} alt="" width="85" />
-                  <img src={r8} alt="" width="90" />
-
-                  <img src={r12} alt="" width="85" />
-                  <img src={r13} alt="" width="90" />
-                  <img src={r9} alt="" width="80" />
-                  <img src={r14} alt="" width="80" />
-                </div>
-              </div>
-            </section>
-          
-           
- <section style={{ backgroundColor: "#ffffff", marginBottom: "0px" }}>
-  <div className="section-wrappercer">
-    <div
-      className="coppertunitiescer"
-      style={{ gap: isMobileState ? "0px" : "47px" }}
-    >
-
-      {/* LEFT */}
-      <div className="left">
-        {isMobileState && (
-          <h3
-            className="previewcon"
-            style={{ lineHeight: "30px" }}
-          >
-            System Requirements for Autodesk Maya 2024
-          </h3>
-        )}
-
-        <img
-          src={wtaln}
-          alt="careerop"
-          style={{ width: isMobileState ? "100%" : "80%" }}
-        />
-      </div>
-
-      {/* RIGHT */}
-      <div className="right">
-        {!isMobileState && (
-          <h3
-            className="previewcon"
-            style={{ lineHeight: "40px" }}
-          >
-            System Requirements for Autodesk Maya 2024
-          </h3>
-        )}
-
-        <ul style={{ listStyle: "none", padding: 0 }}>
-          {itemssys.map((itemsys, index) => (
-            <li
-              key={index}
-              style={{
-                display: "flex",
-                marginBottom: "30px",
-                fontSize: isMobileState ? "15px" : "18px",
-                gap: "10px",
-                alignItems: "flex-start",
-              }}
-            >
-              <CheckBoxIcon
-                style={{
-                  color: "#ec1923",
-                  marginRight: "12px",
-                  fontSize: "22px",
-                  marginTop: "3px",
-                }}
-              />
-              {itemsys}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-            
-            <section className="" style={{ backgroundColor: "#f6f7f8", marginBottom:"0px" }}>
-              <div className="section-wrappercer">
-                <h3 className="previewcon">This is the One for You, If You are
- </h3>
-
-                <div className="courseUpdatescertificate">
-                  <ul style={{ width: "100%", margin: "0px auto", paddingTop: "10px", paddingBottom:"30px" }}>
-                    <li>
-
-                      <Feature1 title=" 
+                  <li style={{ marginLeft: "0px" }}>
+                    <Feature1 title=" 
 " />
-                      <div className='BeyondRightcer'>
-                       
-                        <p>Someone who wants to start learning 3D modelling from the basics.
+                    <div className='BeyondRightcer'>
+
+                      <p>A student exploring career options in animation, gaming, or VFX.</p>
+                    </div>
+
+
+                  </li>
+
+                  <li style={{ marginLeft: "0px" }}>
+                    <Feature1 title=" 
+" />
+                    <div className='BeyondRightcer'>
+
+                      <p>An aspiring 3D artist looking to build foundational skills.
+                      </p>
+                    </div>
+
+
+                  </li>
+                  <li style={{ marginLeft: "0px" }}>
+                    <Feature1 title=" 
+" />
+                    <div className='BeyondRightcer'>
+
+                      <p>A game design enthusiast who wants to create 3D assets.
+                      </p>
+                    </div>
+
+
+                  </li>
+                  <li style={{ marginLeft: "0px" }}>
+                    <Feature1 title=" 
+" />
+                    <div className='BeyondRightcer'>
+
+                      <p> A professional from another field wanting to switch to 3D or CG workflows.</p>
+                    </div>
+
+
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </section>
+
+
+
+          <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "30px", marginTop: "20px" }}>
+            <div className="section-wrappercer">
+
+              <h3 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px" }}>Career Opportunities
+              </h3>
+              <p style={{ fontSize: "16px" }}>Once you complete this course, you can begin your journey as</p>
+              <div className="feature-gridcer1">
+                <Featurecarrer1 title="3D Modeling & Texturing Artist
+" />
+                <Featurecarrer2 title="3D Prop Artist
+" />
+                <Featurecarrer3 title="3D Game Asset Artist
+" />
+                <Featurecarrer4 title="Environment Artist
+
+" />
+
+              </div>
+            </div>
+          </section>
+
+          <section className="" style={{ padding: "10px", backgroundColor: "#f6f7f8", marginBottom: "0px", borderRadius: "10px" }}>
+            <div className="section-wrappercer">
+              <h3 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px" }}>Our Learners Work Across Top Companies</h3>
+
+              <div className="logo-grid-45">
+                   <img src={r15} alt="r15" width="80" />
+                <img src={r16} alt="r16" width="80" />
+                 <img src={rc2} alt="rc2" width="80" />
+                <img src={r1} alt="r1" width="85" />
+                <img src={r2} alt="r2" width="90" />
+                <img src={r11} alt="r11" width="80" />
+                <img src={r10} alt="r10" width="80" />
+
+                <img src={r4} alt="r4" width="85" />
+                <img src={r5} alt="r5" width="90" />
+                <img src={r7} alt="r7" width="85" />
+                <img src={r8} alt="r8" width="90" />
+
+                <img src={r12} alt="r12" width="85" />
+                <img src={r13} alt="r13" width="90" />
+                <img src={r9} alt="r9" width="80" />
+                <img src={r14} alt="r14" width="80" />
+              
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+
+
+          <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "0px", marginTop: "15px" }}>
+
+            <div className="section-wrappercer modules-section">
+              <div className='coppertunitiescer1' style={{ gap: isMobileState ? "0px" : "47px" }}>
+
+
+
+                <div className="left career-tabs-container" style={{ alignItems: "flex-start", justifyContent: "flex-start" }}>
+                  {/* Tabs */}
+
+
+                  <section className="max-w-3xl mx-auto p-6 iconsv" style={{ color: "#000", width: isMobileState ? "100%" : "100%", margin: "0px" }}>
+                    {!isMobileState && (
+                      <h2 className='previewcon1' style={{ textAlign: "left", width: isMobileState ? "100%" : "100%", fontSize: isMobileState ? "24px" : "28px" }}>Why Backstage Pass Certification Course?
+
+
+                      </h2>
+                    )}
+
+                    <section className="certificatedisplay" style={{ padding: isMobileState ? "0px 20px" : "0px 20px" }}>
+
+
+                      <div className="certificate-point">
+                        <FaPlay color="#d11" size={20} />
+                        <p style={{ fontSize: isMobileState ? "14px" : "15px" }}>Beginner-friendly and industry-focused curriculum
+
 
                         </p>
                       </div>
-                    </li>
-                    <li>
-                      <Feature1 title=" 
-" />
-                      <div className='BeyondRightcer'>
-                       
-                        <p>A complete beginner with no prior experience in Autodesk Maya</p>
+
+                      <div className="certificate-point">
+                        <FaPlay color="#d11" size={20} />
+                        <p style={{ fontSize: isMobileState ? "14px" : "15px" }}>Learn through hands-on, practical projects
+                        </p>
+                      </div>
+
+                      <div className="certificate-point">
+                        <FaPlay color="#d11" size={20} />
+                        <p style={{ fontSize: isMobileState ? "14px" : "15px" }}>Step-by-step guidance from experienced mentors
+
+                        </p>
+                      </div>
+                      <div className="certificate-point">
+                        <FaPlay color="#d11" size={20} />
+                        <p style={{ fontSize: isMobileState ? "14px" : "15px" }}>Real production workflows, not just theory
+
+                        </p>
+                      </div>
+                      <div className="certificate-point">
+                        <FaPlay color="#d11" size={20} />
+                        <p style={{ fontSize: isMobileState ? "14px" : "15px" }}>Builds strong fundamentals and job-ready skills
+
+                        </p>
                       </div>
 
 
-                    </li>
-
-                    <li>
-                      <Feature1 title=" 
-" />
-                      <div className='BeyondRightcer'>
-                        
-                        <p>A student exploring career options in animation, gaming, or VFX.</p>
-                      </div>
 
 
-                    </li>
-
-                    <li>
-                      <Feature1 title=" 
-" />
-                      <div className='BeyondRightcer'>
-                        
-                        <p>An aspiring 3D artist looking to build foundational skills.
-</p>
-                      </div>
+                    </section>
 
 
-                    </li>
-                    <li>
-                      <Feature1 title=" 
-" />
-                      <div className='BeyondRightcer'>
-                      
-                        <p>A game design enthusiast who wants to create 3D assets.
-</p>
-                      </div>
 
-
-                    </li>
-                    <li>
-                      <Feature1 title=" 
-" />
-                      <div className='BeyondRightcer'>
-                       
-                        <p> A professional from another field wanting to switch to 3D or CG workflows.</p>
-                      </div>
-
-
-                    </li>
-
-                  </ul>
-                </div>
-              </div>
-            </section>
-            
-
-            <section className="" style={{ backgroundColor: "#ffffff", marginBottom:"30px" }}>
-              <div className="section-wrappercer">
-
-                <h3 className="previewcon">Career Opportunities
-                </h3>
-<p style={{fontSize:"16px"}}>Once you complete this course, you can begin your journey as</p>
-                <div className="feature-gridcer1">
-                  <Featurecarrer title="3D Modeling & Texturing Artist
-" />
-                  <Featurecarrer title="3D Prop Artist
-" />
-                  <Featurecarrer title="3D Game Asset Artist
-" />
-                  <Featurecarrer title="Environment Artist
-
-" />
+                  </section>
 
                 </div>
-              </div>
-            </section>
-           
-                <section className="" style={{ backgroundColor: "#f6f7f8" }}>
-              <div className="section-wrappercer">
-              <div className="section-wrappercer bancer">
-                <div class="small-banner"><div class="container"><p class="didYouKnow" style={{marginTop:"10px"}}>Did You Know?</p><div class="foot-ban"><p>The average salary is</p><p class="salary h6">4L <p style={{fontSize:"20px", fontWeight:"600", color:"#fff"}}>/year in India</p></p></div></div></div>
-              </div></div></section>
-        <section className="" style={{ backgroundColor: "#ffffff", marginBottom:"30px" }}>
-              <div className="section-wrappercer">
-              <h2 className="previewcon">Frequently Asked Questions</h2>
+                <div className='right'>
+                  {isMobileState && (
+                    <h2 className='previewcon1' style={{ textAlign: "left", fontSize: isMobileState ? "24px" : "28px", width: isMobileState ? "100%" : "100%" }}>Why Backstage Pass Certification Course?
 
-              {faqs.map((faq, index) => (
-                <div
-                  key={index}
-                  className={`faq-itemcer ${activeIndex === index ? "active" : ""}`}
-                >
-                  <button className="faq-questioncer" onClick={() => toggleFAQ(index)}>
-                    {faq.question}
-                    <span className="faq-icon">+</span>
-                  </button>
 
-                  <div className="faq-answercer">{faq.answer}</div>
+                    </h2>
+                  )}
+                  <img src={wtwh} alt="careerop" style={{ width: isMobileState ? "100%" : "100%" }} />
                 </div>
-              ))}
               </div>
-            </section>
-          </div>
+            </div>
+          </section>
+          <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "30px", marginTop: "15px", padding: isMobileState ? "0px" : "0px" }}>
+            <div className="section-wrappercer">
+
+              <h3 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px" }}>Benefits of the Course
+
+              </h3>
+              <p style={{ fontSize: "16px" }}>Once you complete this course, you can begin your journey as</p>
+              <div className="feature-gridcer1" style={{ gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(2, 1fr)" }}>
+                <Featurecarrer
+                  title="Career Counselling & Mentorship"
+                  img={icon1}
+                />
+
+                <Featurecarrer
+                  title="Industry-led & Comprehensive Curriculum"
+                  img={icon2}
+                />
+
+                <Featurecarrer
+                  title="Placement Preparation & Support"
+                  img={icon3}
+                />
+
+                <Featurecarrer
+                  title="Training Mode of Your Choice"
+                  img={icon4}
+                />
+
+
+
+
+
+              </div>
+            </div>
+          </section>
+
         </div>
-      </div>
+
+        {/* ===== RIGHT STICKY FORM (DESKTOP ONLY) ===== */}
+        {!isMobileState && (
+          <aside className="right-sticky">
+            <div className="sticky-form">
+              <h3 className="previewcon1" style={{ textAlign: "center" }}>
+                Get this Course @ ₹799
+              </h3>
+
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData1.name}
+                onChange={handleChange}
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData1.email}
+                onChange={handleChange}
+              />
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone"
+                value={formData1.phone}
+                onChange={handleChange}
+              />
+
+              <PaymentC
+                className="my-custom-class"
+                open={openFormModal}
+                onClose={() => setOpenFormModal(false)}
+               onClick={handleEnrollNow}
+              />
+            </div>
+          </aside>
+        )}
+
+
+      </section>
+
+
       <section className="bancer">
-        <div class="small-banner1 ftbaner1"><div className="col-12 col-lg-8 col-md-7 col-sm-12 bottomcer"><div class="foot-ban"> <p class="didYouKnow h6 mb-3">Enroll in the Basics of Maya Course and Earn Certification @
-        </p><div className="disdvi"><span className="actprice"><del>₹3000</del></span><span className="discountprice">₹2499</span> <span className="savingamt">84% Disc.</span></div>
-          <div className="savingamto" style={{width:"150px"}}><p className="" style={{margin:"0px", fontWeight:"600",fontSize:"12px"}}>Limited Time Offer!</p></div></div></div></div></section>
+        <div class="small-banner1 ftbaner1" style={{ paddingLeft: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}><div className="col-12 col-lg-8 col-md-7 col-sm-12 bottomcer"><div class="foot-ban"> <p class="didYouKnow h6 mb-3">Enroll in the Basics of Maya Course and <br /> Earn Certification @
+        </p><div className="disdvi"><span className="actprice"><del>₹4999</del></span><span className="discountprice">₹799</span> <span className="savingamt">84% Disc.</span></div>
+          <div className="savingamto" style={{ width: "150px" }}><p className="" style={{ margin: "0px", fontWeight: "600", fontSize: "12px" }}>Limited Time Offer!</p></div></div></div></div></section>
       {isButtonVisible && (
-        <div className="CousellingButton1 tetstL1" style={{ marginBottom: "0px" }} onClick={scrollToBottom}> <button className="dwnbtn three w-full sm:w-auto" style={{ width: "450px" }} onClick={handleClickss}>Enroll Now
-        </button> </div>
+        <div
+          className="CousellingButton1 tetstL1"
+          style={{ marginBottom: "0px", backgroundColor: "#ffffff", border:"1px solid#e4d8d8", boxShadow:"rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px" }}
+          onClick={scrollToBottom}
+        >
+
+         
+            <PaymentC
+              type="button"
+              className="dwnbtn three w-full sm:w-auto"
+              style={{ width: "350px", borderRadius:"20px", padding:"20px"}}
+              open={openFormModal}
+              onClose={() => setOpenFormModal(false)}
+             onClick={handleEnrollNow}
+            />
+
+
+        </div>
       )}
+
 
     </>
   );

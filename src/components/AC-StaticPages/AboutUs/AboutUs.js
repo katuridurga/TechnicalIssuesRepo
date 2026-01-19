@@ -317,7 +317,7 @@ function Aboutus(props) {
                       <div className="text">He strongly believes that with the right
                         mentorship and tools, Indian game developers
                         can succeed on the global stage.</div>
-                      <a href="https://www.linkedin.com/in/surya-p-99413b6/" className='linkdinp'><span>Linkedin Profile :</span> <img src={linkedin} /></a>
+                      <a href="https://www.linkedin.com/in/surya-prakash-patallapalli-99413b6/" className='linkdinp'><span>Linkedin Profile :</span> <img src={linkedin} /></a>
                     </div></div>
                 </div>
 
@@ -342,7 +342,7 @@ function Aboutus(props) {
                   Technologies. He holds a PhD in Computer Science
                   specializing in AI-driven NPC creation.</div>
                 <div className="text">With over 20+ years in higher and technical
-                  education, including 15+ years dedicated to
+                  education, including 16+ years dedicated to
 
                   gaming, he pioneered India’s first university-
                   affiliated undergraduate and postgraduate
@@ -355,7 +355,7 @@ function Aboutus(props) {
                   standards. Serving on the Boards of Studies for
                   JNAFAU and Osmania University, Dr. Annaluri
                   continues to advance gaming education nationally.</div>
-                <a href="https://www.linkedin.com/in/bala-krishna-annaluri-ba08321a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className='linkdinp'><span>Linkedin Profile :</span> <img src={linkedin} /></a>
+                <a href="https://www.linkedin.com/in/dr-bala-krishna-annaluri-ba08321a/" className='linkdinp'><span>Linkedin Profile :</span> <img src={linkedin} /></a>
               </div></div>
           </div>
           <div className="main-img2 brtopleft" style={{ boxShadow: "none", background: "none", padding: "0px" }} >
