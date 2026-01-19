@@ -11,18 +11,15 @@ import award4 from "../assets/img/awards/Times_Education_Excellence_2021.webp";
 import award5 from "../assets/img/awards/Times_Education_Excellence_2022.webp";
 import award6 from "../assets/img/banners/2023.webp";
 import award7 from "../assets/img/awards/Times_Education_Excellence_2023.webp";
-import aw24 from "../assets/img/awards/Times_Education_Excellence_2024.webp";
-import aw25 from "../assets/img/awards/ET_Achievers_2025.webp";
+
 const awardsimg = [
   { img: award1, text: "Best Education Brand Award – Economic Times 2018" },
-  { img: award2, text: "Times Education Excellence Awards 2019" },
-  { img: award3, text: "Times Excellence Award 2020" },
-  { img: award4, text: "Times Education Excellence Award 2021" },
+  { img: award2, text: "Times Education Excellence Awards 2018-19" },
+  { img: award3, text: "Times Excellence Award 2019-20" },
+  { img: award4, text: "Times Education Excellence Award 2020-21" },
   { img: award5, text: "Times Education Excellence Awards 2022" },
   { img: award6, text: "Emerging Leader Award – Eduspark Awards 2023" },
   { img: award7, text: "Times Education Excellence Awards 2023" },
-    { img: aw24, text: "Times Education Excellence Award 2024" },
-  { img: aw25, text: "ET Industry Achievers 2025" },
 ];
 
 const EmblaCarousel = () => {

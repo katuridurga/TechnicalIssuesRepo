@@ -33,6 +33,12 @@ import artimage5 from "../../../assets/img/art/chaos.webp";
 import artimage6 from "../../../assets/img/art/stellar.webp";
 import artimage7 from "../../../assets/img/art/rift.webp";
 import artimage8 from "../../../assets/img/art/gobble.webp";
+import choose from '../../../assets/img/banners/global-network.png';
+import choose1 from '../../../assets/img/banners/expert.png';
+import choose2 from '../../../assets/img/banners/medal.png';
+import choose3 from '../../../assets/img/banners/mindset.png';
+import choose4 from '../../../assets/img/banners/loan-to-value.png';
+import choose5 from '../../../assets/img/banners/business-man.png';
 import recimg from '../../../assets/img/banners/Times-Award.webp';
 import Typography from '@mui/material/Typography';
 import { Link } from "react-router-dom";
@@ -47,13 +53,6 @@ import DialogTitle from '@mui/material/DialogTitle';
 import infog from '../../../assets/img/banners/info.webp';
 import advdip from '../../../assets/img/banners/advdip.webp';
 import gade from "../../../assets/img/art/gad.webp";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import awic1 from '../../../assets/img/banners/expertn.webp';
-import awic2 from '../../../assets/img/banners/medaln.webp';
-import awic3 from '../../../assets/img/banners/mindsetn.webp';
-import awic4 from '../../../assets/img/banners/loan-to-valuen.webp';
-import awic5 from '../../../assets/img/banners/business-mann.webp';
-import awic from '../../../assets/img/banners/global-networkn.webp';
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
@@ -142,7 +141,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
   const handleClose = () => {
     setOpen(false);
   };
-
+ 
   const [subOptions, setSubOptions] = useState([]);
   const [formData, setFormData] = useState({
     firstname: '',
@@ -150,8 +149,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     PhoneNumber: '',
     email: '',
     city: '',
-    course: '',
-    specialization: '',
+    course:'',
+    specialization:'',
     qualification: '',
     comments: '',
     url: window.location.href,
@@ -163,7 +162,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       { value: "3dgame", label: "3D Game Art & Digital Sculpting" },
       { value: "tdca", label: "Traditional & Digital Concept Art" }
     ],
-
+    
     diploma: [
       { value: "gdp", label: "Game Design & Production" },
       { value: "gdu", label: "Game Development with Unity" },
@@ -174,8 +173,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
   const handleMainCategoryChange = (event) => {
     const selectedCategory = event.target.value;
-
-
+   
+   
     setSubOptions(options[selectedCategory] || []);
     setFormData((prevData) => ({
       ...prevData,
@@ -197,8 +196,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     }));
     if (name === "PhoneNumber" && /^[0-9]{10}$/.test(value)) {
       try {
-        const response = await fetch(`https://www.backstagepass.co.in/reactapi/checklandingpagemobile.php?contactNumber=${value}`);
-
+const response = await fetch(`https://www.backstagepass.co.in/reactapi/checklandingpagemobile.php?contactNumber=${value}`);
+           
 
         if (response.status === 200) {
           alert('This mobile number is already registered with in the last 3 months our team will get back to you.');
@@ -234,8 +233,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
         city: '',
         qualification: '',
         comments: '',
-        course: '',
-        specialization: '',
+        course:'',
+        specialization:'',
         url: window.location.href, // Reset URL
       });
     } catch (error) {
@@ -260,7 +259,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     <>
       <Helmet>
         <title>Best Game Development College In India</title>
-        <meta name="description" content="Join the top game design and development college in Hyderabad. Explore game development courses & game design courses to kickstart your gaming career." />
+        <meta  name="description" content="Join the top game design and development college in Hyderabad. Explore game development courses & game design courses to kickstart your gaming career." />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
       <div className="row mb0">
@@ -312,7 +311,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   className='tabcenter'
                   style={{ background: "#222", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", width: isMobileState ? "100%" : "max-content", margin: "0px auto" }}
                 >
-                  <Tab style={{ color: "#fff", fontSize: isMobileState ? "12px" : "15px", width: isMobileState ? "50%" : "fit-content", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center" }} label="Diploma Courses" />
+                  <Tab style={{ color: "#fff", fontSize: isMobileState ? "12px" : "15px",width: isMobileState ? "50%" : "fit-content", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center" }} label="Diploma Courses"  />
                   <Tab style={{ color: "#fff", fontSize: isMobileState ? "12px" : "15px", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center" }} label="Advanced Diploma Courses" />
 
                 </Tabs>
@@ -321,9 +320,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   <div className='courseUpdatesl'>
                     <ul>
                       <li><img src={m3} alt="Duration icon" />
-                        <span style={{ color: "#000" }}>Duration : 6 months</span></li>
+                        <span style={{color:"#000"}}>Duration : 6 months</span></li>
                       <li><img src={m4} alt="Eligibility icon" />
-                        <span style={{ color: "#000" }}>Eligibility : 10+2 or Equivalent</span></li>
+                        <span style={{color:"#000"}}>Eligibility : 10+2 or Equivalent</span></li>
 
 
                     </ul>
@@ -354,7 +353,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       </div>
                     </div>
                   </Link>
-                  <Link to={"/courses/diploma-in-game-development-with-unreal/"}>
+                   <Link to={"/courses/diploma-in-game-development-with-unreal/"}>
                     <div className="mainCourse1">
                       <div className="mainCourseLeft1">
                         <img src={Diploma_in_Game_Development_with_Unreal} alt="Diploma in Game Development with Unreal" className="img-circle" />
@@ -396,9 +395,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   <div className='courseUpdatesl'>
                     <ul>
                       <li><img src={m3} alt="Duration icon" />
-                        <span style={{ color: "#000" }}>Duration :1 Year</span></li>
+                        <span style={{color:"#000"}}>Duration :1 Year</span></li>
                       <li><img src={m4} alt="Eligibility icon" />
-                        <span style={{ color: "#000" }}>Eligibility : 10+2 or Equivalent</span></li>
+                        <span style={{color:"#000"}}>Eligibility : 10+2 or Equivalent</span></li>
 
 
                     </ul>
@@ -446,10 +445,10 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
               </Box>
 
-
+         
             </div>
             <div className="mainrec">
-              <img src={infog} alt="infog" style={{ width: "100%", height: "100%" }} />
+              <img src={infog} alt="infog" style={{ width: "100%", height:"100%" }} />
             </div>
             <div style={{ background: "#ffffff", padding: "20px" }}>
               <h2 className='mainHeadingTotall-2 mt-top'>YOU SHOULD TAKE THIS COURSE IF </h2>
@@ -542,175 +541,75 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             </div>
             <div className='chapters' id="chapterss2">
               <div className="mainrec">
-                <img src={recimg} alt="recimg" style={{ width: "100%", height: "100%" }} />
+                <img src={recimg} alt="recimg" style={{ width: "100%", height:"100%"  }} />
               </div>
-
-              <div className="show-grid desg">
-                <h3 className="mainHeadingTotal3">
-                  Why choose backstage Pass?
-                </h3>
+              <div className="show-grid">
+                <h2 className="mainHeadingTotall-2">
+                  Why choose us?
+                </h2>
                 <div className="maind">
 
-                  <div className="bgchange left w-100 icn" style={{ width: isMobileState ? "95%" : "50%" }}>
+                  <div className="left w-100 icn">
                     <div style={{
-                      flexShrink: "0",
-                      position: "relative",
-                      background: "#fff",
-                      borderRadius: "50%",
-                      padding: "10px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "40px",
-                      height: "40px",
-                      boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
-                    }}><LazyLoadImage effect="blur"
-                      src={awic2}
-                      alt="icon"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        maxWidth: "30px",
-                        maxHeight: "30px",
-                        objectFit: "contain",
-                        display: "block",
-                      }} /></div>
-                    <div className="mainic" style={{ marginLeft: isMobileState ? "10px" : "5px", width: "90%" }}>
+                      border: "1px solid#fff", height: "40px", display: "flex",
+                      justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
+                    }}><img width="30px" height="30px" src={choose2} alt="icons" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
+                    <div className="mainic" style={{ marginLeft: "5px", width: "90%" }}>
                       <p className="suprts">#1 Gaming Institute</p>
                       Specialized education in gaming with industry-aligned curriculum
                     </div>
                   </div>
-                  <div className="bgchange left w-100 icn" style={{ width: isMobileState ? "95%" : "50%" }}>
+                  <div className="left w-100 icn">
                     <div style={{
-                      flexShrink: "0",
-                      position: "relative",
-                      background: "#fff",
-                      borderRadius: "50%",
-                      padding: "10px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "40px",
-                      height: "40px",
-                      boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
-                    }}><LazyLoadImage effect="blur" width="30" height="30" src={awic} alt="icons" style={{
-                      width: "100%",
-                      height: "100%",
-                      maxWidth: "30px",
-                      maxHeight: "30px",
-                      objectFit: "contain",
-                      display: "block",
-                    }} /></div>
-                    <div className="mainic" style={{ marginLeft: isMobileState ? "10px" : "5px", width: "90%" }}>
+                      border: "1px solid#fff", height: "40px", display: "flex",
+                      justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
+                    }}><img width="30px" height="30px" src={choose} alt="icons" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
+                    <div className="mainic" style={{ marginLeft: "5px", width: "90%" }}>
                       <p className="suprts">Industry Exposure</p>
 
                       Networking opportunities and strategic tie-ups with top gaming studios</div></div>
 
                 </div>
                 <div className="maind">
-                  <div className="bgchange left w-100 icn" style={{ width: isMobileState ? "95%" : "50%" }}>
+                  <div className="left w-100 icn">
                     <div style={{
-                      flexShrink: "0",
-                      position: "relative",
-                      background: "#fff",
-                      borderRadius: "50%",
-                      padding: "10px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "40px",
-                      height: "40px",
-                      boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
-                    }}><LazyLoadImage effect="blur" width="30" height="30" src={awic1} alt="icons" style={{
-                      width: "100%",
-                      height: "100%",
-                      maxWidth: "30px",
-                      maxHeight: "30px",
-                      objectFit: "contain",
-                      display: "block",
-                    }} /></div>
-                    <div className="mainic" style={{ marginLeft: isMobileState ? "10px" : "5px", width: "90%" }}>
+                      border: "1px solid#fff", height: "40px", display: "flex",
+                      justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
+                    }}><img width="30px" height="30px" src={choose1} alt="icons" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
+                    <div className="mainic" style={{ marginLeft: "5px", width: "90%" }}>
                       <p className="suprts">Industry-experienced Mentors</p>
 
                       Guidance from industry veterans with an experience of 10+ years</div>
                   </div>
-                  <div className="bgchange left w-100 icn" style={{ width: isMobileState ? "95%" : "50%" }}>
+                  <div className="left w-100 icn">
                     <div style={{
-                      flexShrink: "0",
-                      position: "relative",
-                      background: "#fff",
-                      borderRadius: "50%",
-                      padding: "10px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "40px",
-                      height: "40px",
-                      boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
-                    }}><LazyLoadImage effect="blur" width="30" height="30" src={awic3} alt="icons" style={{
-                      width: "100%",
-                      height: "100%",
-                      maxWidth: "30px",
-                      maxHeight: "30px",
-                      objectFit: "contain",
-                      display: "block",
-                    }} /></div>
-                    <div className="mainic" style={{ marginLeft: isMobileState ? "10px" : "5px", width: "90%" }}>
+                      border: "1px solid#fff", height: "40px", display: "flex",
+                      justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
+                    }}><img width="30px" height="30px" src={choose3} alt="icons" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
+                    <div className="mainic" style={{ marginLeft: "5px", width: "90%" }}>
                       <p className="suprts">Hands-on Learning</p>
 
                       Mimicked real-world scenarios for practical learning
                     </div></div>
                 </div>
                 <div className="maind">
-                  <div className="bgchange left w-100 icn" style={{ width: isMobileState ? "95%" : "50%" }}>
+                  <div className="left w-100 icn">
                     <div style={{
-                      flexShrink: "0",
-                      position: "relative",
-                      background: "#fff",
-                      borderRadius: "50%",
-                      padding: "10px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "40px",
-                      height: "40px",
-                      boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
-                    }}><LazyLoadImage effect="blur" width="30" height="30" src={awic4} alt="icons" style={{
-                      width: "100%",
-                      height: "100%",
-                      maxWidth: "30px",
-                      maxHeight: "30px",
-                      objectFit: "contain",
-                      display: "block",
-                    }} /></div>
-                    <div className="mainic" style={{ marginLeft: isMobileState ? "10px" : "5px", width: "90%" }}>
+                      border: "1px solid#fff", height: "40px", display: "flex",
+                      justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
+                    }}><img width="30px" height="30px" src={choose4} alt="icons" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
+                    <div className="mainic" style={{ marginLeft: "5px", width: "90%" }}>
                       <p className="suprts">Financial Aid</p>
 
                       Flexible financial aid options for affordable quality learning
                     </div>
                   </div>
-                  <div className="bgchange left w-100 icn" style={{ width: isMobileState ? "95%" : "50%" }}>
+                  <div className="left w-100 icn">
                     <div style={{
-                      flexShrink: "0",
-                      position: "relative",
-                      background: "#fff",
-                      borderRadius: "50%",
-                      padding: "10px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "40px",
-                      height: "40px",
-                      boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
-                    }}><LazyLoadImage effect="blur" width="30" height="30" src={awic5} alt="icons" style={{
-                      width: "100%",
-                      height: "100%",
-                      maxWidth: "30px",
-                      maxHeight: "30px",
-                      objectFit: "contain",
-                      display: "block",
-                    }} /></div>
-                    <div className="mainic" style={{ marginLeft: isMobileState ? "10px" : "5px", width: "90%" }}>
+                      border: "1px solid#fff", height: "40px", display: "flex",
+                      justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
+                    }}><img width="30px" height="30px" src={choose5} alt="icons" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
+                    <div className="mainic" style={{ marginLeft: "5px", width: "90%" }}>
                       <p className="suprts">Professional Readiness</p>
 
                       Portfolio development for the competitive market
@@ -718,7 +617,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   </div>
                 </div>
               </div>
-
             </div>
             <h2 className='mainHeadingTotall-2'>Student Showcase</h2>
 
@@ -727,14 +625,14 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               {isMobileState ? <div>
                 <div>
                   <ul className='mbimgart'>
-                    <li><a href="https://ram-manohar.itch.io/slunkey" target="_blank" rel="noopener noreferrer"><img src={artimage1} alt="artimage1" style={{ width: "100%", height: "100%" }} /></a></li>
-                    <li><a href="https://vicvijay2129.itch.io/gravitality" target="_blank" rel="noopener noreferrer"><img src={artimage2} alt="artimage2" style={{ width: "100%", height: "100%" }} /></a></li>
-                    <li><a href="https://anoushmistry.itch.io/byte-the-cyber-dog" target="_blank" rel="noopener noreferrer"><img src={artimage3} alt="artimage3" style={{ width: "100%", height: "100%" }} /></a></li>
-                    <li><a href="https://unknown-coder.itch.io/battle-mayhem" target="_blank" rel="noopener noreferrer"><img src={artimage4} alt="artimage4" style={{ width: "100%", height: "100%" }} /></a></li>
-                    <li><a href="https://rishikesh-1.itch.io/chaos-reborn" target="_blank" rel="noopener noreferrer"><img src={artimage5} alt="artimage5" style={{ width: "100%", height: "100%" }} /></a></li>
+                    <li><a href="https://ram-manohar.itch.io/slunkey" target="_blank" rel="noopener noreferrer"><img src={artimage1} alt="artimage1" style={{width:"100%", height:"100%"}} /></a></li>
+                    <li><a href="https://vicvijay2129.itch.io/gravitality" target="_blank" rel="noopener noreferrer"><img src={artimage2} alt="artimage2" style={{width:"100%", height:"100%"}}/></a></li>
+                    <li><a href="https://anoushmistry.itch.io/byte-the-cyber-dog" target="_blank" rel="noopener noreferrer"><img src={artimage3} alt="artimage3" style={{width:"100%", height:"100%"}}/></a></li>
+                    <li><a href="https://unknown-coder.itch.io/battle-mayhem" target="_blank" rel="noopener noreferrer"><img src={artimage4} alt="artimage4" style={{width:"100%", height:"100%"}} /></a></li>
+                    <li><a href="https://rishikesh-1.itch.io/chaos-reborn" target="_blank" rel="noopener noreferrer"><img src={artimage5} alt="artimage5" style={{width:"100%", height:"100%"}} /></a></li>
                     <li><a href="https://luckylikii.itch.io/stellar-wings" target="_blank" rel="noopener noreferrer"><img src={artimage6} alt="artimage6" /></a></li>
-                    <li><a href="https://dynamicv.itch.io/lost-souls-the-console-rift" target="_blank" rel="noopener noreferrer"><img src={artimage7} alt="artimage7" style={{ width: "100%", height: "100%" }} /></a></li>
-                    <li><a href="https://saji002.itch.io/wobblegobble" target="_blank" rel="noopener noreferrer"><img src={artimage8} alt="artimage8" style={{ width: "100%", height: "100%" }} /></a></li>
+                    <li><a href="https://dynamicv.itch.io/lost-souls-the-console-rift" target="_blank" rel="noopener noreferrer"><img src={artimage7} alt="artimage7" style={{width:"100%", height:"100%"}}/></a></li>
+                    <li><a href="https://saji002.itch.io/wobblegobble" target="_blank" rel="noopener noreferrer"><img src={artimage8} alt="artimage8" style={{width:"100%", height:"100%"}} /></a></li>
                   </ul>
                 </div>
               </div> :
@@ -743,30 +641,30 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <div className="gllart">
 
                   <div className="gart">
-                    <a href="https://ram-manohar.itch.io/slunkey" target="_blank" rel="noopener noreferrer"><img src={artimage1} alt="artimage1" style={{ objectPosition: "left", width: "100%", height: "100%" }} /></a>
+                    <a href="https://ram-manohar.itch.io/slunkey" target="_blank" rel="noopener noreferrer"><img src={artimage1} alt="artimage1" style={{ objectPosition: "left", width:"100%", height:"100%" }} /></a>
                   </div>
                   <div className="gart">
                     <a href="https://vicvijay2129.itch.io/gravitality" target="_blank" rel="noopener noreferrer">
-                      <img src={artimage2} alt="artimage2" style={{ width: "100%", height: "100%" }} /></a>
+                      <img src={artimage2} alt="artimage2" style={{width:"100%", height:"100%"}} /></a>
                   </div>
                   <div className="gart">
                     <a href="https://anoushmistry.itch.io/byte-the-cyber-dog" target="_blank" rel="noopener noreferrer">
-                      <img src={artimage3} alt="artimage3" className='lngartimg' style={{ width: "100%", height: "100%" }} /></a>
+                      <img src={artimage3} alt="artimage3" className='lngartimg' style={{width:"100%", height:"100%"}}/></a>
                   </div>
                   <div className="gart">
-                    <a href="https://unknown-coder.itch.io/battle-mayhem" target="_blank" rel="noopener noreferrer"><img src={artimage4} alt="artimage4" style={{ objectPosition: "left", width: "100%", height: "100%" }} /></a>
+                    <a href="https://unknown-coder.itch.io/battle-mayhem" target="_blank" rel="noopener noreferrer"><img src={artimage4} alt="artimage4" style={{ objectPosition: "left", width:"100%", height:"100%" }} /></a>
                   </div>
                   <div className="gart">
-                    <a href="https://rishikesh-1.itch.io/chaos-reborn" target="_blank" rel="noopener noreferrer"><img src={artimage5} alt="artimage5" style={{ width: "100%", height: "100%" }} /></a>
+                    <a href="https://rishikesh-1.itch.io/chaos-reborn" target="_blank" rel="noopener noreferrer"><img src={artimage5} alt="artimage5" style={{width:"100%", height:"100%"}}/></a>
                   </div>
                   <div className="gart">
-                    <a href="https://luckylikii.itch.io/stellar-wings" target="_blank" rel="noopener noreferrer"><img src={artimage6} alt="artimage6" className='martimg' style={{ width: "100%", height: "100%" }} /></a>
+                    <a href="https://luckylikii.itch.io/stellar-wings" target="_blank" rel="noopener noreferrer"><img src={artimage6} alt="artimage6" className='martimg' style={{width:"100%", height:"100%"}} /></a>
                   </div>
                   <div className="gart">
-                    <a href="https://dynamicv.itch.io/lost-souls-the-console-rift" target="_blank" rel="noopener noreferrer"><img src={artimage7} alt="artimage7" style={{ width: "100%", height: "100%" }} /></a>
+                    <a href="https://dynamicv.itch.io/lost-souls-the-console-rift" target="_blank" rel="noopener noreferrer"><img src={artimage7} alt="artimage7" style={{width:"100%", height:"100%"}}/></a>
                   </div>
                   <div className="gart">
-                    <a href="https://saji002.itch.io/wobblegobble" target="_blank" rel="noopener noreferrer"><img src={artimage8} alt="artimage8" style={{ width: "100%", height: "100%" }} /></a>
+                    <a href="https://saji002.itch.io/wobblegobble" target="_blank" rel="noopener noreferrer"><img src={artimage8} alt="artimage8" style={{width:"100%", height:"100%"}}/></a>
                   </div>
 
 
@@ -822,7 +720,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       </div>
                       <div className="">
                         <label className="" for="qualification">Highest Qualification</label>
-                        <select className="input-gray" name="qualification" id="qualification" value={formData.qualification} onChange={handleInputChange} required style={{ marginBottom: "10px" }}>
+                        <select className="input-gray" name="qualification" id="qualification" value={formData.qualification} onChange={handleInputChange} required style={{marginBottom:"10px"}}>
                           <option value="">Highest Qualification</option>
                           <option value="10th">10th Pass</option>
                           <option value="12th">12th Pursuing</option>
@@ -833,42 +731,42 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                         </select>
                       </div>
                       <div className="">
-                        <label className="" for="course">Course <span style={{ color: "red", marginLeft: "4px", marginTop: "2px" }}>*</span></label>
-                        <select onChange={handleMainCategoryChange} name="course" id="course" value={formData.course} style={{ marginBottom: "10px" }} required>
-                          <option value="" disabled>Select Course</option>
-                          <option value="diploma">Diploma</option>
-                          <option value="advancedDiploma">Advanced Diploma</option>
-                        </select>
+                  <label className="" for="course">Course <span style={{color:"red", marginLeft:"4px", marginTop:"2px"}}>*</span></label>
+      <select onChange={handleMainCategoryChange} name="course" id="course" value={formData.course}  style={{marginBottom:"10px"}} required>
+        <option value="" disabled>Select Course</option>
+        <option value="diploma">Diploma</option>
+        <option value="advancedDiploma">Advanced Diploma</option>
+      </select>
 
-                        {subOptions.length > 0 && (
-                          <>
-                            <label>Specialization</label>
-                            <select onChange={handleSubCategoryChange} value={formData.specialization} name="specialization" id="specialization" style={{ marginBottom: "10px" }} required>
-                              <option value="">Select Specialization</option>
-                              {subOptions.map((sub) => (
-                                <option key={sub.value} value={sub.value}>{sub.label}</option>
-                              ))}
-                            </select>
-                          </>
-                        )}
-                      </div>
-                      <div className="" style={{ width: isMobileState ? "100%" : "100%" }}>
-                        <label className="" for="comments" style={{ marginBottom: "10px" }}>Comments</label>
-                        <textarea
-                          className="input-gray"
-                          name="comments"
-                          id="comments"
-                          placeholder="Enter your comments here..."
-                          value={formData.comments}
-                          onChange={handleInputChange}
+      {subOptions.length > 0 && (
+        <>
+          <label>Specialization</label>
+          <select onChange={handleSubCategoryChange}  value={formData.specialization}name="specialization" id="specialization" style={{marginBottom:"10px"}} required>
+            <option value="">Select Specialization</option>
+            {subOptions.map((sub) => (
+              <option key={sub.value} value={sub.value}>{sub.label}</option>
+            ))}
+          </select>
+        </>
+      )}
+    </div>
+    <div className="" style={{ width: isMobileState ? "100%" : "100%" }}>
+                    <label className="" for="comments" style={{marginBottom:"10px"}}>Comments</label>
+                    <textarea
+                      className="input-gray"
+                      name="comments"
+                      id="comments"
+                      placeholder="Enter your comments here..."
+                      value={formData.comments}
+                      onChange={handleInputChange}
 
-                          rows="6"
-                          maxLength={40}
-                          style={{ color: '#5a555a' }}
-                          title="max 40 characters allowed"
-                        ></textarea>
-                        <small style={{ color: '#888', fontSize: '12px' }}>Allow maximum 40 characters</small>
-                      </div>
+                      rows="6"
+                      maxLength={40}
+                      style={{ color: '#5a555a' }}
+                      title="max 40 characters allowed"
+                    ></textarea>
+                    <small style={{ color: '#888', fontSize: '12px' }}>Allow maximum 40 characters</small>
+                  </div>
                     </div>
 
                     <div style={{ padding: "20px" }}>
@@ -944,7 +842,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                     <form onSubmit={handleSubmit} className="formMain">
 
-                      <p className="suprtsMobiless" style={{ color: "#fff" }}>Get <b>a Counselling</b> Session on Gaming Career</p>
+                      <p className="suprtsMobiless" style={{color:"#fff"}}>Get <b>a Counselling</b> Session on Gaming Career</p>
                       <div className="formGrid1" data-form-id="need-guidance" data-form="step1-container">
 
 
@@ -978,7 +876,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                         </div>
                         <div className="">
                           <label className="" for="qualification">Highest Qualification</label>
-                          <select className="input-gray" name="qualification" id="qualification" value={formData.qualification} onChange={handleInputChange} required style={{ marginBottom: "10px" }}>
+                          <select className="input-gray" name="qualification" id="qualification" value={formData.qualification} onChange={handleInputChange} required style={{marginBottom:"10px"}}>
                             <option value="" className='Testoptions'>Highest Qualification</option>
                             <option value="10th">10th Pass</option>
                             <option value="12th">12th Pursuing</option>
@@ -989,43 +887,43 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                           </select>
                         </div>
                         <div className="">
-                          <label className="" for="course">Course <span style={{ color: "red", marginLeft: "4px", marginTop: "2px" }}>*</span></label>
-                          <select onChange={handleMainCategoryChange} name="course" id="course" value={formData.course} style={{ marginBottom: "10px" }} required>
-                            <option value="" disabled>Select Course</option>
-                            <option value="AdvancedDiploma">Advanced Diploma</option>
-                            <option value="Diploma">Diploma</option>
-                          </select>
+                  <label className="" for="course">Course <span style={{color:"red", marginLeft:"4px", marginTop:"2px"}}>*</span></label>
+      <select onChange={handleMainCategoryChange} name="course" id="course" value={formData.course}  style={{marginBottom:"10px"}} required>
+        <option value="" disabled>Select Course</option>
+        <option value="AdvancedDiploma">Advanced Diploma</option>
+        <option value="Diploma">Diploma</option>
+      </select>
 
-                          {subOptions.length > 0 && (
-                            <>
-                              <label>Specialization</label>
-                              <select onChange={handleSubCategoryChange} value={formData.specialization} name="specialization" id="specialization" required style={{ marginBottom: "10px" }}>
-                                <option value="">Select Specialization</option>
-                                {subOptions.map((sub) => (
-                                  <option key={sub.value} value={sub.value}>{sub.label}</option>
-                                ))}
-                              </select>
-                            </>
-                          )}
-                        </div>
+      {subOptions.length > 0 && (
+        <>
+          <label>Specialization</label>
+          <select onChange={handleSubCategoryChange}  value={formData.specialization}name="specialization" id="specialization" required style={{marginBottom:"10px"}}>
+            <option value="">Select Specialization</option>
+            {subOptions.map((sub) => (
+              <option key={sub.value} value={sub.value}>{sub.label}</option>
+            ))}
+          </select>
+        </>
+      )}
+    </div>
 
-                        <div className="" style={{ width: isMobileState ? "100%" : "100%" }}>
-                          <label className="" for="comments" style={{ marginBottom: "10px" }}>Comments</label>
-                          <textarea
-                            className="input-gray"
-                            name="comments"
-                            id="comments"
-                            placeholder="Enter your comments here..."
-                            value={formData.comments}
-                            onChange={handleInputChange}
+    <div className="" style={{ width: isMobileState ? "100%" : "100%" }}>
+                    <label className="" for="comments" style={{marginBottom:"10px"}}>Comments</label>
+                    <textarea
+                      className="input-gray"
+                      name="comments"
+                      id="comments"
+                      placeholder="Enter your comments here..."
+                      value={formData.comments}
+                      onChange={handleInputChange}
 
-                            rows="6"
-                            maxLength={40}
-                            style={{ color: '#5a555a' }}
-                            title="max 40 characters allowed"
-                          ></textarea>
-                          <small style={{ color: '#888', fontSize: '12px' }}>Allow maximum 40 characters</small>
-                        </div>
+                      rows="6"
+                      maxLength={40}
+                      style={{ color: '#5a555a' }}
+                      title="max 40 characters allowed"
+                    ></textarea>
+                    <small style={{ color: '#888', fontSize: '12px' }}>Allow maximum 40 characters</small>
+                  </div>
                       </div>
 
                       <div style={{ padding: "20px" }}>
@@ -1066,15 +964,15 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
         </div>
       </div>
-      <div className="App">
+<div className="App">
         <a
           countryCode="91"
           phoneNumber="8977945705"
           style={{ right: isMobileState ? "1.5rem" : "4rem!important", marginBottom: isMobileState ? "-7rem" : "-1rem", zIndex: "11111" }}
           className="whatsappsivakl">
-          <FaWhatsapp style={{ color: "#fff", fontSize: "32px" }} />
+        <FaWhatsapp  style={{ color: "#fff", fontSize: "32px" }} />
 
-        </a>
+          </a>
 
       </div>
 

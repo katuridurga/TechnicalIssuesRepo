@@ -443,7 +443,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
             </h2>
 
-            <ul className='featuress3u' style={{backgroundColor:"#222"}}>
+            <ul className='featuress3u'>
               <li><img src={ic7} alt="ic1" />
 
                 <div className='featuresscon2'>3D Artist
@@ -478,10 +478,10 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
             </ul>
 
-            {/* <h2 className='mainHeadingTotall-2'>Learn from scratch to advanced level and build games like...
+            <h2 className='mainHeadingTotall-2'>Learn from scratch to advanced level and build games like...
             </h2>
 
-            <StudentGamesList /> */}
+            <StudentGamesList />
 
 
 

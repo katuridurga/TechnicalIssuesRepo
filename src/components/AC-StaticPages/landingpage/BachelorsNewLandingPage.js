@@ -10,15 +10,21 @@ import FeaturedProductsb from "../../../content/FeaturedProductsb.js";
 import StudentArtGalleryS from "../../../content/StudentArtGalleryScroll.js";
 
 import r1 from "../../../assets/img/partners/r1.png";
-import superg from "../../../assets/img/partners/supergaming.png";
-import rock from "../../../assets/img/partners/2.webp";
 import bachg from "../../../assets/img/mobilebanner/bgeneric.webp";
 import r2 from "../../../assets/img/partners/r2.png";
 import r4 from "../../../assets/img/partners/r4.png";
 import r5 from "../../../assets/img/partners/r5.png";
 import r6 from "../../../assets/img/partners/r6.svg";
 import r7 from "../../../assets/img/partners/r7.png";
-
+import lc1 from "../../../assets/img/logos/TerminatorGenisys.webp";
+import lc2 from "../../../assets/img/logos/starwars.webp";
+import lc3 from "../../../assets/img/logos/Spyder.webp";
+import lc4 from "../../../assets/img/logos/sniper.webp";
+import lc5 from "../../../assets/img/logos/sackboy.webp";
+import lc6 from "../../../assets/img/logos/crackdown3.webp";
+import lc7 from "../../../assets/img/logos/Pac-man.webp";
+import lc8 from "../../../assets/img/logos/Forza7.webp";
+import lc9 from "../../../assets/img/logos/Thetexaschainsawmassacre.webp";
 
 
 import { Helmet } from "react-helmet";
@@ -442,7 +448,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                     <div className="counterba">
                       <div className="countba">
 
-                        <div> 16 Years</div></div>
+                        <div> 15 Years</div></div>
                       <p>Academic Excellence </p>
                     </div>
                   </AnimatedText>
@@ -774,7 +780,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
               </a>
             </div></section>
-            {/* <section className='o-h' style={{ background: "#fff", padding: "1px" }}>
+            <section className='o-h' style={{ background: "#fff", padding: "1px" }}>
               <AnimatedText direction="up" delay={0.2}>
 
                 <h2 className='mainHeadingTotall-2' style={{ color: "#000" }}>Our Alumni had worked on games like
@@ -816,7 +822,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 </li>
               </ul>
 
-            </section> */}
+            </section>
 
             <section style={{ background: "#fff", padding: "1px", marginBottom: "20px" }}>
               <AnimatedText direction="up" delay={0.2}>
@@ -883,7 +889,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 gradient={false}
                 className="recruitersList-20"
               >
-                {[r1, rock, superg, r2, r7, r4, r5, r6].map((logo, index) => (
+                {[r1, r2, r7, r4, r5, r6].map((logo, index) => (
                   <img
                     key={`logo-${index}`}
                     src={logo}
@@ -893,7 +899,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                     style={{ marginRight: "70px" }}
                   />
                 ))}
-                {[r1, rock, superg, r2, r7, r4, r5, r6].map((logo, index) => (
+                {[r1, r2, r7, r4, r5, r6].map((logo, index) => (
                   <img
                     key={`logo-dup-${index}`}
                     src={logo}
@@ -1216,7 +1222,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 </AnimatedText>
               </div>
               <AnimatedText direction="up" delay={0.2}>
-                <div className="text-center foot-content fadeInUp anime-delay2" id="pvrnm" style={{ color: "#fff", height: "136px", display: "flex", alignItems: "center", justifyContent: "center" }}>© A Subsidiary of PVR Memorial Educational Society 2026. All Rights Reserved</div>
+                <div className="text-center foot-content fadeInUp anime-delay2" id="pvrnm" style={{ color: "#fff", height: "136px", display: "flex", alignItems: "center", justifyContent: "center" }}>© A Subsidiary of PVR Memorial Educational Society 2025. All Rights Reserved</div>
               </AnimatedText>
             </section>
 

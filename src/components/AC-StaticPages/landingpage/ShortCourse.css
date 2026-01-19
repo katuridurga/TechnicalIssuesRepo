@@ -187,21 +187,6 @@
   }
 
   @media only screen and (max-width : 1024px){
-    .alt-enroll-btn {
-    background-color: #ee1b24 !important;
-    color: #fff;
-    padding: 12px 80px;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: 600;
-    height: 55px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px auto !important;
-}
     .col1c{
      grid-template-columns: repeat(1, 1fr) !important;
     }
@@ -325,22 +310,4 @@
       height: 140px;
     }
   }
-  .hvcls:hover{
-    color:#fff !important;
-  }
-  /* Simple button style ONLY for Maya landing page */
-.alt-enroll-btn {
-  background-color: #ee1b24 !important;
-  color: #fff;
-  padding: 12px 80px;
-  border-radius: 50px;
-  font-size: 16px;
-  font-weight: 600;
-  height: 55px;
-  border: none;
-  cursor: pointer;
-}
-.alt-enroll-btn:hover {
-  background-color: #ee1b24 !important;
-  color: #fff !important;
-}
+  

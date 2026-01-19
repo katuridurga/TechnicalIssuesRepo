@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import { FaWhatsapp } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
 import r1 from "../../../assets/img/partners/r1.png";
-import superg from "../../../assets/img/partners/supergaming.png";
-import rock from "../../../assets/img/partners/2.webp";
 import r2 from "../../../assets/img/partners/r2.png";
 import r4 from "../../../assets/img/partners/r4.png";
 import r5 from "../../../assets/img/partners/r5.png";
@@ -30,7 +28,6 @@ import B1 from "../../../assets/img/banners/business-standard-logo.png";
 import B2 from "../../../assets/img/banners/forbes-logo.webp";
 import B3 from "../../../assets/img/banners/et-logo.webp";
 import B4 from "../../../assets/img/banners/thehindu-logo.svg";
-import StudentArtGalleryS from "../../../content/StudentArtGalleryScroll.js";
 
 import { Helmet } from "react-helmet";
 
@@ -485,7 +482,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                     <form onSubmit={handleSubmit} className="formMain">
 
-                      <p className="suprtsMobiless" style={{color:"#000"}}>Get <b>a Counselling</b> Session on Gaming Career</p>
+                      <p className="suprtsMobiless" style={{color:"#fff"}}>Get <b>a Counselling</b> Session on Gaming Career</p>
                       <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
 
 
@@ -913,7 +910,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
               <h2 className="mainHeadingTotall-2">Student Artwork</h2>
 
-              {/* {isMobileState ? <div>
+              {isMobileState ? <div>
                 <div>
                   <ul className='mbimg1g'>
                     <li><img src={art11} alt="art11" style={{ width: "100%", height: "100%" }} /></li>
@@ -965,8 +962,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                   </div>
 
-                </div>} */}
-      <StudentArtGalleryS />
+                </div>}
+
             </div>
             <h2 className='mainHeadingTotall-2'>What Our Alumni And Game Companies Say</h2>
 
@@ -1112,9 +1109,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
             </ul>
 
-            {/* <h2 className='mainHeadingTotall-2'>Our Alumni had worked on games like</h2>
+            <h2 className='mainHeadingTotall-2'>Our Alumni had worked on games like</h2>
 
-            <StudentGamesList1 /> */}
+            <StudentGamesList1 />
             <div className={isMobileState ? "ismobtest" : "CousellingButton1"} onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>
 
 
@@ -1162,10 +1159,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             <Marquee speed={100} style={{ Padding: "0px 20px" }} className='recuitersList-20'>
               <img alt="r1" src={r1} height="61"
                 width="210" />
-                 <img alt="superg" src={superg} height="61"
-                width="210" />
-                 <img alt="rock" src={rock} height="61"
-                width="210" />
               <img alt="r2" src={r2} height="61"
                 width="210" />
               <img alt="r4" src={r4} height="61"
@@ -1187,59 +1180,58 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               <li ><img src={wc1} alt="wc1" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
-                <div className='featuresscon2' style={{color:"#000"}}>16+ Years Experience
+                <div className='featuresscon2'>15+ Years Experience
 
                 </div></li>
               <li><img src={wc2} alt="wc2" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
-                <div className='featuresscon2'style={{color:"#000"}}>Award-Winning Gaming College
+                <div className='featuresscon2'>Award-Winning Gaming College
                 </div></li>
               <li><img src={wc3} alt="wc3" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
-                <div className='featuresscon2' style={{color:"#000"}}>Industry-Aligned Curriculum
+                <div className='featuresscon2'>Industry-Aligned Curriculum
                 </div></li>
               <li><img src={wc4} alt="wc4" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
-                <div className='featuresscon2' style={{color:"#000"}}>Taught by Industry Experienced Professionals
+                <div className='featuresscon2'>Taught by Industry Experienced Professionals
                 </div></li>
 
 
 
               <li><img src={wc5} alt="wc5" />
 
-                <div className='featuresscon2' style={{color:"#000"}}>Hands-on Training
+                <div className='featuresscon2'>Hands-on Training
 
 
                 </div></li>
 
               <li><img src={wc6} alt="wc6" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
-                <div className='featuresscon2' style={{color:"#000"}}>Strong Industry Connections
+                <div className='featuresscon2'>Strong Industry Connections
 
                 </div></li>
               <li><img src={wc7} alt="wc7" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
-                <div className='featuresscon2' style={{color:"#000"}}>100% Placement Assistance
+                <div className='featuresscon2'>100% Placement Assistance
 
                 </div></li>
               <li><img src={wc8} alt="wc8" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
-                <div className='featuresscon2' style={{color:"#000"}}>Access to Free Webinars/Workshops
+                <div className='featuresscon2'>Access to Free Webinars/Workshops
 
 
                 </div></li>
               <li><img src={wc9} alt="wc9" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
-                <div className='featuresscon2' style={{color:"#000"}}>Global Alumni Community
+                <div className='featuresscon2'>Global Alumni Community
 
 
                 </div></li>
             </ul>
-            
             <h2 className='mainHeadingTotall-2' style={{ display: "none" }}>FAQ's</h2>
 
             <div className="faq-containerlg">
@@ -1316,7 +1308,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
             <div className="footerin" style={{ height: "160px", padding: "30px" }}>
-              <div className="text-center foot-content fadeInUp anime-delay2" style={{ display: 'flex', alignItems: "center", justifyContent: "center", color: "#000" }}>© A Subsidiary of PVR Memorial Educational Society 2026. All Rights Reserved</div>
+              <div className="text-center foot-content fadeInUp anime-delay2" style={{ display: 'flex', alignItems: "center", justifyContent: "center", color: "#000" }}>© A Subsidiary of PVR Memorial Educational Society 2025. All Rights Reserved</div>
             </div>
           </div>
 

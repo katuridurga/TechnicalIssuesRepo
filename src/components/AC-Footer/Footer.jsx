@@ -46,7 +46,6 @@ function Footer() {
   const testFooterPaths = [
     "/landingpage/diploma-and-advanced-diploma-courses/",
     "/landingpage/diploma-and-advanced-diploma-game-development-courses/",
-    "/landingpage/basics-of-maya-online-certification/",
     "/landingpage/game-development-programs/",
     "/landingpage/masters-and-bachelors-game-development-courses/",
     "/landingpage/certificate-program-in-essentials-of-game-design/",
@@ -88,8 +87,7 @@ function Footer() {
     "/landingpage/game-development-programs/",
     "/landingpage/game-development-with-unity-programs/",
     "/landingpage/masters-and-bachelors-game-development-courses/",
-    "/landingpage/certified-diploma-3d-hard-surface-modeling-texturing/",
-    "/landingpage/basics-of-maya-online-certification/"
+    "/landingpage/certified-diploma-3d-hard-surface-modeling-texturing/"
   ];
 
 
@@ -106,7 +104,7 @@ function Footer() {
     "/landingpage/game-development-with-unity-programs/",
     "/landingpage/game-development-with-unreal-programs/",
     "/landingpage/certificate-program-in-prototyping-and-game-concept-development/",
-"/landingpage/basics-of-maya-online-certification/",
+
 
   ];
     const specialHeightPaths1 = [
@@ -579,7 +577,7 @@ function Footer() {
             {path === "/intermediate-board-results/" && (
               <LazyLoad height={76} offset={100} fadein={true}>
                 <div className="text-center foot-content fadeInUp anime-delay2" style={{ color: "#fff" }}>
-                  © A Subsidiary of PVR Memorial Educational Society 2026. All Rights Reserved
+                  © A Subsidiary of PVR Memorial Educational Society 2025. All Rights Reserved
                 </div>
               </LazyLoad>
             )}
@@ -664,7 +662,7 @@ function Footer() {
                     className="text-center foot-content fadeInUp anime-delay2"
                     style={{ marginBottom: isMobileState ? "5rem" : "0rem" }}
                   >
-                    © A Subsidiary of PVR Memorial Educational Society 2026. All Rights Reserved
+                    © A Subsidiary of PVR Memorial Educational Society 2025. All Rights Reserved
                   </div>
                 </LazyLoad>
               )}

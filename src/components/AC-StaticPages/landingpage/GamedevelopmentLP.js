@@ -33,7 +33,7 @@ import Slide from '@mui/material/Slide';
 
 import recimg from '../../../assets/img/banners/Times-Award.webp';
 import Typography from '@mui/material/Typography';
-import StudentArtGalleryS from "../../../content/StudentArtGalleryScroll.js";
+
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
@@ -66,8 +66,6 @@ import gd77 from "../../../assets/img/art/Slunkey.webp";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { Link } from "react-router-dom";
-import rock from "../../../assets/img/partners/2.webp";
-import superg from "../../../assets/img/partners/supergaming.png";
 import m3 from "../../../assets/img/test/d1.webp";
 import m4 from "../../../assets/img/test/eli.webp";
 import flag7 from "../../../assets/img/partners/software-logo/Maya.webp";
@@ -730,7 +728,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
 
             </h2>
 
-            <ul className='featuress3u' style={{backgroundColor:"#222"}}>
+            <ul className='featuress3u'>
               <li><img src={ic7} alt="ic7" height={isMobileState ? "30" : "50"} 
               width={isMobileState ? "30" : "50"}/>
 
@@ -778,9 +776,9 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
                 </div></li>
             </ul>
 
-            {/* <h2 className='mainHeadingTotall-2'>Learn from scratch to advanced level and build games like...</h2>
+            <h2 className='mainHeadingTotall-2'>Learn from scratch to advanced level and build games like...</h2>
 
-            <StudentGamesList /> */}
+            <StudentGamesList />
             {/* <div className={isMobileState ? "CousellingButton1 ismobtest" : "CousellingButton1"} onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career Test</a></div> */}
 
 
@@ -1054,8 +1052,8 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
  <div className="" style={{flexDirection:"column",marginTop: isMobileState ? "-22px":"0px"}}>
    
             <h2 className="mainHeadingTotall-2">Student Artwork</h2>
- <StudentArtGalleryS />
-{/* {isMobileState ? <div>
+
+{isMobileState ? <div>
   <div>
     <ul className='mbimg1g'>
       <li><img src={gd11} alt="gd11" style={{width:"100%", height:"100%"}}/></li>
@@ -1107,7 +1105,7 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
   
   </div>
 
-</div>} */}
+</div>}
 
 </div>
 
@@ -1143,12 +1141,11 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
             <h2 className='mainHeadingTotall-2'>Our Students are working at Companies like</h2>
 
             <Marquee speed={100} style={{ Padding: "0px 20px" }} className='recuitersList-20'>
-                     <img alt="superg" src={superg} width={"300"} height={"81"} />
               <img alt="r1" src={r1} height="61"  
               width="210"/>
               <img alt="r2" src={r2} height="61"  
               width="210"/>
-              <img alt="rock" src={rock} width={"300"} height={"81"} />
+              {/* <img alt="rec3" src={r3} width={"300"} height={"81"} /> */}
               <img alt="r4" src={r4} height="61"  
               width="210"/>
               <img alt="r5" src={r5} height="61"  

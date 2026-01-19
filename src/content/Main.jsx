@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import { Helmet } from "react-helmet";
-import LastChanceStripe from "../components/AC-StaticPages/landingpage/LastChanceStripe";
 
 // Lazy-loaded Components
 const Footer = lazy(() => import("../components/AC-Footer/Footer.jsx"));
@@ -94,6 +93,7 @@ function Main({ active, props }) {
         <meta name="keywords" content="game programming, best gaming colleges in india, best game development colleges in india, game development, game art & design, game design courses, unity game development, game development courses, gaming colleges in india, gaming courses in india, game design colleges, bsc gaming colleges​​" />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
+
       <>
         {isReady && window.location.pathname === '/' && (
           <a href="#ribbon">

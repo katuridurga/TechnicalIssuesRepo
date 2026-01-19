@@ -336,7 +336,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
             <h2 className='mainHeadingTotall-2'>Career Opportunities</h2>
             
-            <ul className='featuress3u' style={{backgroundColor:"#222"}}>
+            <ul className='featuress3u'>
               <li><img src={ic9} alt="ic1" />
 
                 <div className='featuresscon2'>Game Narrative Designer

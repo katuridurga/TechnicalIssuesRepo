@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import logo from "../assets/img/newlogo.webp";
 import { useSelector, shallowEqual } from "react-redux";
 
-
 export default function MenuLogo() {
   const isMobileState = useSelector(
     (state) => state.mainReducer.isMobile,

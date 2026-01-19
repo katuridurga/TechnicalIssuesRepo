@@ -100,7 +100,7 @@ function StudentResult(props) {
   return (
     <>
     <div className='resulttag'>
-<marquee behavior="scroll" direction="left" scrollamount="12">Bachelor's Admissions Open for 2026!</marquee>
+<marquee behavior="scroll" direction="left" scrollamount="12">Bachelor's Admissions Open for 2025!</marquee>
 </div>
 <a  onClick={() => setIsOpenM(true)}>
       <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'intermobile' : 'interbanner'}`}>
@@ -115,15 +115,15 @@ function StudentResult(props) {
       <Helmet>
          
       
-          <title>Telangana Intermediate Results 2026 | backstage Pass Institute of Gaming
+          <title>Telangana Intermediate Results 2025 | backstage Pass Institute of Gaming
           </title>
-          <meta  name="description" content="Get the results of Intermediate Public Examinations I & II Year (General) 2026 Results & Vocational Results with marks and Intermediate Public Examinations II Year (General) 2024 Results & Vocational Results with marks."/>
+          <meta  name="description" content="Get the results of Intermediate Public Examinations I & II Year (General) 2025 Results & Vocational Results with marks and Intermediate Public Examinations II Year (General) 2024 Results & Vocational Results with marks."/>
           <link rel="canonical" href="https://www.backstagepass.co.in/intermediate-board-results/"/>
         </Helmet>
      
 
       <div className='courses-container'>
-    <a class="playbtn" href="#" onClick={handleClick}>Intermediate Results 2026
+    <a class="playbtn" href="#" onClick={handleClick}>Intermediate Results 2025
      <span></span>
   <span></span>
   <span></span>

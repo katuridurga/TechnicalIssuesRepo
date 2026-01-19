@@ -1029,7 +1029,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             <ul className='featuress3gl'>
               <li ><img src={wc1} alt="ic1" />
 
-                <div className='featuresscon2'>16+ Years Experience
+                <div className='featuresscon2'>15+ Years Experience
 
                 </div></li>
               <li><img src={wc2} alt="ic1" />
@@ -1150,7 +1150,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
          <div className="footerin" style={{height:"160px", padding:"30px"}}>
-            <div className="text-center foot-content fadeInUp anime-delay2" style={{display:'flex',alignItems:"center",justifyContent:"center",color:"#fff"}}>© 2026 All Rights Reserved</div>
+            <div className="text-center foot-content fadeInUp anime-delay2" style={{display:'flex',alignItems:"center",justifyContent:"center",color:"#fff"}}>© 2025 All Rights Reserved</div>
             </div>
           </div>
 

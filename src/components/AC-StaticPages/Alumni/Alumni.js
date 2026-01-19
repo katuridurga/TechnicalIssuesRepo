@@ -202,7 +202,7 @@ function Alumni() {
   const speakers = [
   {
     img: speaker3,
-    name: "Anshul Soni",
+    name: "AnshulSoni",
     title: "Engineering Manager",
     subtitle: "Electronic Arts (EA), Canada",
     alt: "Anshul Soni - Engineering Manager at Electronic Arts (EA), Canada"
@@ -246,8 +246,8 @@ function Alumni() {
     img: speaker4,
     name: "Joseph Kalathil",
     title: "Backend Platform Engineer",
-    subtitle: "Hacksaw Studios,  Sweden",
-    alt: "Joseph Kalathil - Backend Platform Engineer at Hacksaw Studios"
+    subtitle: "Hacksaw Studios, Stockholm",
+    alt: "Joseph Kalathil - Backend Platform Engineer at Hacksaw Studios, Stockholm"
   },
   {
     img: speaker7,
@@ -352,7 +352,7 @@ function Alumni() {
     name: "Surya Shankha Chakraborty",
     title: "Concept artist",
     subtitle: "Hitwicket, Hyderabad",
-    alt: "Surya Shankha Chakraborty - Concept Artist, Hitwicket, Hyderabad"
+    alt: "Surya Shankha Chakraborty - Concept Artist at Hitwicket, Hyderabad"
   },
   {
     img: speaker36,

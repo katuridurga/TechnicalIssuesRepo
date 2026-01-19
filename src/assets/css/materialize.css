@@ -6093,6 +6093,7 @@ select:focus {
 
 button:focus {
   outline: none;
+  background-color: transparent;
 }
 
 label {

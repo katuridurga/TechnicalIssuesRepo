@@ -8,8 +8,7 @@ import r4 from "../../../assets/img/partners/r4.png";
 import r5 from "../../../assets/img/partners/r5.png";
 import r6 from "../../../assets/img/partners/r6.svg";
 import r7 from "../../../assets/img/partners/r7.png";
-import rock from "../../../assets/img/partners/2.webp";
-import superg from "../../../assets/img/partners/supergaming.png";
+
 import B1 from "../../../assets/img/banners/business-standard-logo.png";
 import B2 from "../../../assets/img/banners/forbes-logo.webp";
 import B3 from "../../../assets/img/banners/et-logo.webp";
@@ -713,10 +712,10 @@ VR Application Development" className="img-circle" />
 
                 </div></li>
             </ul>
-{/* 
+
             <h2 className='mainHeadingTotall-2' style={{ color: "#000" }}>Learn from scratch to advanced level and build games like...</h2>
 
-            <StudentGamesList /> */}
+            <StudentGamesList />
             <div id="nopadding" className={isMobileState ? "CousellingButton1 ismobtest" : "CousellingButton1"} onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>
 
 
@@ -752,10 +751,9 @@ VR Application Development" className="img-circle" />
             <h2 className='mainHeadingTotall-2' style={{ color: "#000" }}>Our Students are working at Companies like</h2>
 
             <Marquee speed={100} style={{ Padding: "0px 20px" }} className='recuitersList-20'>
-                 <img alt="rock" src={rock} width={"300"} height={"81"} />
-                    <img alt="superg" src={superg} width={"300"} height={"81"} />
               <img alt="rec1" src={r1} width={"300"} height={"81"} />
               <img alt="rec2" src={r2} width={"300"} height={"81"} />
+              {/* <img alt="rec3" src={r3} width={"300"} height={"81"} /> */}
               <img alt="rec4" src={r4} width={"300"} height={"81"} />
               <img alt="rec5" src={r5} width={"300"} height={"81"} />
               <img alt="rec9" src={r6} width={"300"} height={"81"} />
