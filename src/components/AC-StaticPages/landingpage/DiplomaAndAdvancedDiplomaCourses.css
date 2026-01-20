@@ -493,8 +493,20 @@ summary {
   .hero-container {
   gap: 10px !important;
 }
+.twotags {
+    display: flex;
+    /* grid-gap: 10px; */
+    /* gap: 10px; */
+    flex-direction: column;
+}
   .savingamto{
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+  }
+  .pricetags{
+    margin-bottom: 1px;
+        padding: 7px !important;
+    border-radius: 4px;
+    width: fit-content;
   }
   .sidebyd {
     display: flex;
@@ -849,7 +861,7 @@ font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 /* MAIN BOX */
 .course-info {
@@ -2078,4 +2090,21 @@ width:100%;
 .icn{
   display:flex;
   height:fit-content;
+}
+.twotags{
+  display: flex;
+    gap: 10px;
+}
+.pricetags{
+     display: flex;
+    align-items: center;
+    padding: 3px;
+    border-radius: 4px;
+}
+.pricetags span{
+  color:#fff;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom:15px;      
 }

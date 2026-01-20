@@ -92,9 +92,9 @@ import wc3 from '../../../assets/img/Icons/WEBSITE-ICON/Industryalignedcurriculu
 import wc4 from '../../../assets/img/Icons/WEBSITE-ICON/TaughtbyindustryExperiencedprofessionals.webp';
 import wc5 from '../../../assets/img/Icons/WEBSITE-ICON/HandsonTraining.webp';
 import wc6 from '../../../assets/img/Icons/WEBSITE-ICON/StrongIndustryConnection.webp';
-import wc7 from '../../../assets/img/Icons/WEBSITE-ICON/Placementassistance.webp';
-import wc8 from '../../../assets/img/Icons/WEBSITE-ICON/Accesstofreewebinars_workshops.webp';
-import wc9 from '../../../assets/img/Icons/WEBSITE-ICON/GlobalAluminicommunity.webp';
+import wc7 from '../../../assets/img/Icons/WEBSITE-ICON/Placementassistance3.webp';
+import wc8 from '../../../assets/img/Icons/WEBSITE-ICON/Accesstofreewebinars_workshops2.webp';
+import wc9 from '../../../assets/img/Icons/WEBSITE-ICON/GlobalAluminicommunity2.webp';
 import icg from '../../../assets/img/logos/console.webp';
 import GameArtDesign from "../../../assets/img/Courses/GameArt&Design.webp"
 

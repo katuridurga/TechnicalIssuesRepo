@@ -349,7 +349,10 @@ const handleFormClose = () => {
                   <p className="discountpanel">Buy this Course @
 
                   </p><div className="disdvi"><span className="actprice"><del>₹4999</del></span><span className="discountprice">₹799</span> <span className="savingamt">84% Disc.</span> </div>
-                  <div className="savingamto"><p className="">Limited Time Offer!</p></div>
+                  <div className="pricetags"><span className="">*Price inclusive of all applicable taxes (GST)</span></div>
+                   <div className="savingamto"><p className="">Limited Time Offer!</p></div> 
+                  {/* <div className="twotags">
+                  <div className="savingamto"><p className="">Limited Time Offer!</p></div> <div className="pricetags"><span className="">*Price inclusive of all applicable taxes <span style={{fontStyle:"italic"}}>(GST)</span></span></div></div> */}
          {/* COURSE INFO */}
                 {isMobileState ? (
                   <div className="course-info">
@@ -954,6 +957,7 @@ const handleFormClose = () => {
       <section className="bancer">
         <div class="small-banner1 ftbaner1"><div className="col-12 col-lg-8 col-md-7 col-sm-12 bottomcer"><div class="foot-ban"> <p class="didYouKnow h6 mb-3">Enroll in the Basics of Maya Course and Earn Certification @
         </p><div className="disdvi"><span className="actprice"><del>₹4999</del></span><span className="discountprice">₹799</span> <span className="savingamt">84% Disc.</span></div>
+        <div className="pricetags"><span className="">*Price inclusive of all applicable taxes (GST)</span></div>
           <div className="savingamto" style={{width:"150px"}}><p className="" style={{margin:"0px", fontWeight:"bold",fontSize:"12px"}}>Limited Time Offer!</p></div></div></div></div></section>
       {isButtonVisible && (
         <div className="CousellingButton1 tetstL1" style={{ marginBottom: "0px" }} onClick={scrollToBottom}>     

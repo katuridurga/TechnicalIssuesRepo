@@ -89,7 +89,8 @@ function Footer() {
     "/landingpage/game-development-with-unity-programs/",
     "/landingpage/masters-and-bachelors-game-development-courses/",
     "/landingpage/certified-diploma-3d-hard-surface-modeling-texturing/",
-    "/landingpage/basics-of-maya-online-certification/"
+    "/landingpage/basics-of-maya-online-certification/",
+    "/landingpage/certificate-program-in-basics-of-maya/"
   ];
 
 

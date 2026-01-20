@@ -302,7 +302,7 @@ function Aboutus(props) {
                   <div style={{ boxShadow: "none", background: "none", padding: "0px" }} >
                     <div className="inner-column" style={{ padding: isMobileState ? '0px 0px 0px 0px' : '0px 0px 0px 30px' }}>
 
-                      <div className="text"> <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.linkedin.com/in/surya-p-99413b6/" rel="noopener noreferrer" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank">Mr. Surya P </a></b> brings a unique blend of creative and
+                      <div className="text"> Mr. Surya P  brings a unique blend of creative and
                         business expertise to the gaming education
                         ecosystem. He holds a Diploma in 3D Animation
                         and Visual Effects, specialising in Character
@@ -337,7 +337,7 @@ function Aboutus(props) {
             <div style={{ boxShadow: "none", background: "none", padding: "0px" }} >
               <div className="inner-column" style={{ padding: isMobileState ? '0px 0px 0px 0px' : '0px 0px 0px 30px' }}>
 
-                <div className="text"> <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.linkedin.com/in/bala-krishna-annaluri-ba08321a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" rel="noopener noreferrer" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank">Dr. Bala Krishna Annaluri</a></b>  is a distinguished
+                <div className="text"> Dr. Bala Krishna Annaluri   is a distinguished
                   academic in Game Development and Interactive
                   Technologies. He holds a PhD in Computer Science
                   specializing in AI-driven NPC creation.</div>

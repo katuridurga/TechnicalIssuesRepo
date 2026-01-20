@@ -502,7 +502,7 @@ useEffect(() => {
                 <span className="discountprice">₹799</span>
                 <span className="savingamt">84% Disc.</span>
               </div>
-
+   <div className="pricetags"><span className="">*Price inclusive of all applicable taxes (GST)</span></div>
               <div className="savingamto">
                 <p>Limited Time Offer!</p>
               </div>
@@ -1092,6 +1092,7 @@ useEffect(() => {
       <section className="bancer">
         <div class="small-banner1 ftbaner1" style={{ paddingLeft: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}><div className="col-12 col-lg-8 col-md-7 col-sm-12 bottomcer"><div class="foot-ban"> <p class="didYouKnow h6 mb-3">Enroll in the Basics of Maya Course and <br /> Earn Certification @
         </p><div className="disdvi"><span className="actprice"><del>₹4999</del></span><span className="discountprice">₹799</span> <span className="savingamt">84% Disc.</span></div>
+           <div className="pricetags"><span className="">*Price inclusive of all applicable taxes (GST)</span></div>
           <div className="savingamto" style={{ width: "150px" }}><p className="" style={{ margin: "0px", fontWeight: "600", fontSize: "12px" }}>Limited Time Offer!</p></div></div></div></div></section>
       {isButtonVisible && (
         <div

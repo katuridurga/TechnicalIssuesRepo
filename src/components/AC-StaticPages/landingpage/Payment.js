@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import axios from "axios";
 import { useSelector, shallowEqual } from "react-redux";
-import { useForm, Controller } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import Box from "@mui/material/Box";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
@@ -35,20 +35,6 @@ HideOnScroll.propTypes = {
   children: PropTypes.element.isRequired,
   window: PropTypes.func,
 };
-
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div role="tabpanel" hidden={value !== index} {...other}>
-      {value === index && (
-        <Box sx={{ p: 1 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
 
 /* -------------------- ENROLL BUTTON -------------------- */
 
@@ -86,7 +72,7 @@ function SkillDiplomaCourses() {
   const [openFormModal, setOpenFormModal] = useState(false);
   const [courses, setCourses] = useState([]);
   const formRef = useRef();
-  const { control, watch, formState: { }, setValue } = useForm();
+  const { formState: { }, setValue } = useForm();
   const [couponRemarks, setCouponRemarks] = useState("");
   const [formData, setFormData] = useState({
     fullname: "",
@@ -125,7 +111,7 @@ function SkillDiplomaCourses() {
   /* -------------------- FETCH COURSES -------------------- */
 
   useEffect(() => {
-    const referrer = document.referrer;
+   
     let lastSegment = "certificate-program-in-basics-of-maya";
 
     // if (referrer) {
@@ -325,7 +311,7 @@ function SkillDiplomaCourses() {
 
 
             <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container" style={{
-              gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(2, 1fr)"
+              gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(1, 1fr)"
             }}>
               <div className="">
                 <label className="" for="fullname">Full Name (as per official documents)</label>
@@ -343,18 +329,9 @@ function SkillDiplomaCourses() {
                 <input type="hidden" name="course_ttl" value={formData.course_ttl} />
               </div>
 
-              <div className="">
+              {/* <div className="">
                 <label className="" for="dob">Date of Birth (as per official documents)</label>
-                {/* <input
-                  className="custom-datepicker"
-                  placeholder="Date of Birth"
-                  id="dob"
-                  name="dob"
-                  type="date"
-                  value={formData.dob}
-                  onChange={handleInputChange}
-                  required
-                /> */}
+               
                 <Controller
                   name="dob"
                   control={control}
@@ -408,7 +385,7 @@ function SkillDiplomaCourses() {
                     />
                   )}
                 />
-              </div>
+              </div> */}
             </div>
 
             <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container" style={{
@@ -472,7 +449,7 @@ function SkillDiplomaCourses() {
                   ))}
                 </select>
               </div>
-
+{/* 
               <div className="">
                 <label className="" for="school">Last School/ College Attended</label>
                 <input
@@ -489,9 +466,9 @@ function SkillDiplomaCourses() {
               <div className="">
                 <label className="" for="Phone Number">City</label>
                 <input className="" placeholder="Location" id="city" name="city" type="text" value={formData.city} onChange={handleInputChange} required />
-              </div>
+              </div> */}
 
-              <div className="">
+              {/* <div className="">
                 <label className="" for="document">Upload Document (Marksheet/ Certificate)</label>
                 <input
                   className=""
@@ -501,7 +478,7 @@ function SkillDiplomaCourses() {
                   accept=".jpg,.png,.pdf"
                   onChange={handleInputChange}
                 />
-              </div>
+              </div> */}
 
               <div className="">
                 <label className="" for="coupon">Coupon Code</label>

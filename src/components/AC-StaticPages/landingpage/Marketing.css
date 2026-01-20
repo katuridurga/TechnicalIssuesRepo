@@ -126,6 +126,7 @@ white-space: nowrap;
 
 
   @media only screen and (max-width : 1024px){
+
     .mainribbonbc {
     position: sticky;
     top: 110px !important;
@@ -430,8 +431,20 @@ summary {
   .hero-container {
   gap: 10px !important;
 }
+.twotags {
+    display: flex;
+    /* grid-gap: 10px; */
+    /* gap: 10px; */
+    flex-direction: column;
+}
   .savingamto{
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+  }
+  .pricetags{
+    margin-bottom: 1px;
+        padding: 7px !important;
+    border-radius: 4px;
+    width: fit-content;
   }
   .sidebyd {
     display: flex;
@@ -2047,4 +2060,21 @@ width: 100%;
 .scene{
   width:100%;
   overflow: hidden;
+}
+.twotags{
+  display: flex;
+    gap: 10px;
+}
+.pricetags{
+     display: flex;
+    align-items: center;
+    padding: 3px;
+    border-radius: 4px;
+}
+.pricetags span{
+  color:#fff;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom:15px;      
 }

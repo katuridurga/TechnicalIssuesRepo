@@ -16,6 +16,16 @@
   flex-direction: column;
   margin-bottom: 20px;
 }
+.iconsv strong,
+.iconsv b {
+  font-weight: 700;
+}
+
+.iconsv ul > li {
+  list-style: none;
+  padding-left: 0;
+}
+
 .featuress li{
   display: flex;
   align-items: center;

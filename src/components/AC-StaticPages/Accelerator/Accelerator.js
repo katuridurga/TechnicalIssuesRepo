@@ -40,8 +40,8 @@ function Courses(props) {
       question: "Hands-On Game Development",
       answer: [
 
-        "Practical Experience: Work on real-world projects that simulate industry challenges.",
-        "Creative Freedom: Design, develop, and refine your unique ideas into market-ready games.",
+        "<strong>Practical Experience:</strong> Work on real-world projects that simulate industry challenges.",
+        "<strong>Creative Freedom:</strong> Design, develop, and refine your unique ideas into market-ready games.",
       ],
     },
     {
@@ -51,21 +51,24 @@ function Courses(props) {
         "Career Guidance: Receive advice on navigating the gaming industry and building a successful career.",
       ],
     },
-    {
-      question: "Recognition & Opportunities",
-      answer: [
-        "Award-Winning Projects: Contribute to games that have received recognition at:",
-        "a. Shortlisted in Indie 40 Games at IGDC 2024",
-        "b. Student Game of the Year nominations at IGDC 2024",
-        "c. Showcased at prestigious Gaming Expos.",
-        "Global Exposure: Showcase your games on global platforms and connect with industry leaders.",
-      ],
-    },
+ {
+  question: "Recognition & Opportunities",
+  answer: [
+    "<strong>Award-Winning Projects:</strong> Contribute to games that have received recognition at:",
+    "<ol type='a' class='inner-list'>\
+      <li>Shortlisted in Indie 40 Games at IGDC 2024</li>\
+      <li>Student Game of the Year nominations at IGDC 2024</li>\
+      <li>Showcased at prestigious Gaming Expos</li>\
+    </ol>",
+    "<strong>Global Exposure:</strong> Showcase your games on global platforms and connect with industry leaders."
+  ],
+},
+
     {
       question: "Professional Portfolio",
       answer: [
-        "Showcase Your Work: Develop a striking portfolio that showcases refined, professional-quality projects.",
-        "Future-Ready: Engage potential employers and collaborators with your varied skills and accomplishments.",
+        "<strong>Showcase Your Work:</strong> Develop a striking portfolio that showcases refined, professional-quality projects.",
+        "<strong>Future-Ready:</strong> Engage potential employers and collaborators with your varied skills and accomplishments.",
       ],
     },
     {
@@ -271,7 +274,18 @@ function Courses(props) {
                       {openIndex === index && (
                         <ul style={{ paddingLeft: "6.5rem", lineHeight: "1.9" }}>
                           {faq.answer.map((point, i) => (
-                            <li key={i} style={{ listStyle: "disc", fontSize:"14px" }}>{point}</li>
+ <li
+  key={i}
+  style={{
+    listStyle: point.includes("<ol") ? "none" : "disc",
+    fontSize: "14px",
+    paddingLeft: point.includes("<ol") ? "0" : undefined,
+  }}
+  dangerouslySetInnerHTML={{ __html: point }}
+/>
+
+
+                            
                           ))}
                         </ul>
                       )}
@@ -357,6 +371,8 @@ function Courses(props) {
                           {faqw.answer.map((pointw, p) => (
                             <li key={p} style={{ listStyle: "disc", fontSize:"14px" }}>{pointw}</li>
                           ))}
+     
+
                         </ul>
                       )}
                     </div>
