@@ -6,7 +6,6 @@ import f3 from "../assets/img/art/gad.webp";
 import f4 from "../assets/img/art/arvr.webp";
 import f5 from "../assets/img/art/msc.webp";
 import f6 from "../assets/img/art/adgd.webp";
-import f9 from "../assets/img/art/adtd.webp";
 import f10 from "../assets/img/art/dcac.webp";
 import f11 from "../assets/img/art/dgdp.webp";
 import f7 from "../assets/img/art/3dart.webp";

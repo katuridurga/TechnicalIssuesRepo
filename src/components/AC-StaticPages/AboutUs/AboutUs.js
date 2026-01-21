@@ -192,7 +192,7 @@ function Aboutus(props) {
 
 
           {/* Signature Block — right aligned */}
-          <div style={{ textAlign: "right", marginTop: "0px", color: "#000000", alignSelf: "flex-end", flexDirection: "column", marginRight: "120px", marginTop: "-10px" }}>
+          <div style={{ textAlign: "right", color: "#000000", alignSelf: "flex-end", flexDirection: "column", marginRight: "120px", marginTop: "-10px" }}>
             <p style={{ margin: 0, fontWeight: "bold", fontSize: "18px", color: "#ed1f25" }}>— Surya P </p>
             <p style={{ margin: 0, fontSize: "16px", opacity: 0.8, marginTop: "-17px", color: "#ed1f25", marginLeft: "14px" }}>Founder</p>
           </div>
@@ -317,7 +317,7 @@ function Aboutus(props) {
                       <div className="text">He strongly believes that with the right
                         mentorship and tools, Indian game developers
                         can succeed on the global stage.</div>
-                      <a href="https://www.linkedin.com/in/surya-prakash-patallapalli-99413b6/" className='linkdinp'><span>Linkedin Profile :</span> <img src={linkedin} /></a>
+                      <a href="https://www.linkedin.com/in/surya-prakash-patallapalli-99413b6/" className='linkdinp'><span>Linkedin Profile :</span> <img src={linkedin} alt="linkedin"/></a>
                     </div></div>
                 </div>
 
@@ -355,7 +355,7 @@ function Aboutus(props) {
                   standards. Serving on the Boards of Studies for
                   JNAFAU and Osmania University, Dr. Annaluri
                   continues to advance gaming education nationally.</div>
-                <a href="https://www.linkedin.com/in/dr-bala-krishna-annaluri-ba08321a/" className='linkdinp'><span>Linkedin Profile :</span> <img src={linkedin} /></a>
+                <a href="https://www.linkedin.com/in/dr-bala-krishna-annaluri-ba08321a/" className='linkdinp'><span>Linkedin Profile :</span> <img src={linkedin} alt="linkedin"/></a>
               </div></div>
           </div>
           <div className="main-img2 brtopleft" style={{ boxShadow: "none", background: "none", padding: "0px" }} >

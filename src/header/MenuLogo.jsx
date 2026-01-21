@@ -10,7 +10,7 @@ export default function MenuLogo() {
     shallowEqual
   );
 
-  const path = window.location.pathname;
+
   return (
     <>
       {/* ✅ Single Link (no conditional mount) to avoid flicker */}

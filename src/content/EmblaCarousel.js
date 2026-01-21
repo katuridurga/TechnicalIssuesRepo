@@ -113,22 +113,25 @@ const EmblaCarousel = (props) => {
                   style={{ width: "100%", margin: "0 auto", height: "auto" }}
                 />
               </picture> */}
-              <picture>
+            <picture>
   <source
     srcSet={mbnewban0}
     media="(max-width: 768px)"
   />
   <img
     src={newban1}
+    srcSet={`${newban1} 1526w`}
+    sizes="100vw"
     alt="Home Banner"
     width={1526}
     height={450}
+    loading="eager"
     decoding="async"
     fetchpriority="high"
-    loading="eager"
-    style={{ width: "100%", margin: "0 auto", height: "auto" }}
+    style={{ width: "100%", height: "auto" }}
   />
 </picture>
+
 
             </div>
             <div className="embla__slide" key={220}>

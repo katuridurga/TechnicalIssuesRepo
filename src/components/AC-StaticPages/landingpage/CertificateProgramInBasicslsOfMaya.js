@@ -19,8 +19,6 @@ import r9 from "../../../assets/img/partners/Ubisoft.webp";
 import r10 from "../../../assets/img/partners/Sony.webp";
 import r11 from "../../../assets/img/partners/Qualcomm.webp";
 import r12 from "../../../assets/img/partners/Juego.webp";
-import r13 from "../../../assets/img/partners/Gamitronics.webp";
-import axios from 'axios';
 import r14 from "../../../assets/img/partners/GSNgames.webp";
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import wtwh from "../../../assets/img/banners/afterwtwillhappen.webp";
@@ -33,7 +31,7 @@ import clockn from '../../../assets/img/star.webp';
 function Feature({ title, subtitle }) {
   return (
     <div className="feature-box">
-      <div className="feature-iconcer" style={{fontSize:"18px", fontWeight:"bold", background:"none"}}><img className="staricon" src={clockn}/></div>
+      <div className="feature-iconcer" style={{fontSize:"18px", fontWeight:"bold", background:"none"}}><img className="staricon" src={clockn} alt="clockn"/></div>
       <div>
         <div className="feature-title" style={{ color: "#000000" }}>{title}</div>
       </div>
@@ -53,7 +51,7 @@ function Feature1({ title, subtitle }) {
 function Featurecarrer({ title, subtitle }) {
   return (
     <div className="feature-boxcar">
-      <div className="feature-iconcercar" style={{fontSize:"18px", fontWeight:"bold"}}><img src={jobn}/></div>
+      <div className="feature-iconcercar" style={{fontSize:"18px", fontWeight:"bold"}}><img src={jobn} alt="jobn"/></div>
       <div>
         <div className="feature-titlecar">{title}</div>
       </div>
@@ -61,35 +59,7 @@ function Featurecarrer({ title, subtitle }) {
   );
 }
 
-function Module({ title, items = [] }) {
-  return (
-    <div className="module-block">
-      <h4 className="module-title">{title}</h4>
-      <ul className="module-list">
-        {items.map((it, i) => (
-          <li key={i}>{it}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
 
-function FAQItem({ q, a }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div className="faq-box">
-      <button className="faq-btn" onClick={() => setOpen(!open)}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <span>{q}</span>
-          <span>{open ? "-" : "+"}</span>
-        </div>
-      </button>
-
-      {open && <div className="faq-answercer">{a}</div>}
-    </div>
-  );
-}
 
 function DiplomaAndAdvancedDiplomaCourses() {
   const isMobileState = useSelector(
@@ -123,11 +93,6 @@ function DiplomaAndAdvancedDiplomaCourses() {
     };
   }, []);
 
-  const handlePayNow = () =>
-    window.open(
-      "https://backstagepass.co.in/landingpage/short-course/",
-      "_blank"
-    );
   const awardsData = [
     {
       imgMain: "https://backstagepass.co.in/ET_Achievers_2025-a03e9ae8.webp",
@@ -170,12 +135,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
       text: "Best Education Brand Award Economic Times 2018"
     },
   ];
-  const items = ["Confidently navigate the Maya 2024 interface and essential tools.",
-    "Create clean and detailed 3D props and assets from scratch.",
-    "Understand and apply UV unwrapping for game-ready models.",
-    "Work with materials and shaders inside Maya.",
-    "Apply image-based texturing to bring your models to life.",
-    "Build a solid foundation for moving into advanced 3D workflows or portfolio projects."];
+
   const itemssys = ["Operating System: Windows®, Apple®, Linux®",
     "RAM: 8 GB of RAM (16 GB or more recommended) ",
     "CPU: 64-bit Intel® or AMD® with SSE4.2 instruction set, For macOS, Apple Silicon arm64 or Intel x86",

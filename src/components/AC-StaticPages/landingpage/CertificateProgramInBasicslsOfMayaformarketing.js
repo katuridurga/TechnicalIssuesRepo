@@ -1,16 +1,14 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Marketing.css";
 import { Helmet } from "react-helmet";
 import PaymentC from "./Payment";
 import { useSelector, shallowEqual } from "react-redux";
 import cer from "../../../assets/img/test/certificate-with-badge.png";
 import { FaPlay } from "react-icons/fa";
-import axios from 'axios';
 import modeling from "../../../assets/img/Environment.webp";
 import prop from "../../../assets/img/3D_Game_Asset.webp";
 import gameasst from "../../../assets/img/3D_Prop.webp";
 import envir from "../../../assets/img/3d-modelling.webp";
-import { useTheme } from '@mui/material/styles';
 import r1 from "../../../assets/img/partners/r1.webp";
 import r2 from "../../../assets/img/partners/r2.webp";
 import r15 from "../../../assets/img/partners/supergaming.png";
@@ -38,7 +36,6 @@ import icon7 from "../../../assets/img/Icons/learning_Modules.webp";
 import icon8 from "../../../assets/img/Icons/6_Hours.webp";
 import icon9 from "../../../assets/img/Icons/onlinetotal.webp";
 import icon10 from "../../../assets/img/Icons/Certificate.webp";
-import Slide from '@mui/material/Slide';
 
 function DiplomaAndAdvancedDiplomaCourses() {
   const isMobileState = useSelector(
@@ -73,48 +70,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
   }, []);
 
 
-  const awardsData = [
-    {
-      imgMain: "https://backstagepass.co.in/ET_Achievers_2025-a03e9ae8.webp",
-      imgTitle: "https://backstagepass.co.in/Times_Education_Excellence_2024-16ffaa61.webp",
-      text: "ET Industry Achievers 2025"
-    },
-    {
-      imgMain: "https://backstagepass.co.in/Times_Education_Excellence_2024-16ffaa61.webp",
-      imgTitle: "https://backstagepass.co.in/Times_Education_Excellence_2024-16ffaa61.webp",
-      text: "Times Education Excellence Award 2024"
-    },
-    {
-      imgMain: "https://backstagepass.co.in/Times_Education_Excellence_2023-8eaeed8f.webp",
-      imgTitle: "https://backstagepass.co.in/Times_Education_Excellence_2023-8eaeed8f.webp",
-      text: "Times Education Excellence Award 2023"
-    },
-    {
-      imgMain: "https://backstagepass.co.in/Times_Education_Excellence_2022-2718b806.webp",
-      imgTitle: "https://backstagepass.co.in/Times_Education_Excellence_2022-2718b806.webp",
-      text: "Times Education Excellence Award 2022"
-    },
-    {
-      imgMain: "https://backstagepass.co.in/Times_Education_Excellence_2021-b7ba6b9f.webp",
-      imgTitle: "https://backstagepass.co.in/Times_Education_Excellence_2021-b7ba6b9f.webp",
-      text: "Times Education Excellence Award 2021"
-    },
-    {
-      imgMain: "https://backstagepass.co.in/Time_Excellence_Awards_2020-9b0861f1.webp",
-      imgTitle: "https://backstagepass.co.in/Time_Excellence_Awards_2020-9b0861f1.webp",
-      text: "Times Excellence Award 2020"
-    },
-    {
-      imgMain: "https://backstagepass.co.in/Times_Education_Excellence_2019-c24c65ad.webp",
-      imgTitle: "https://backstagepass.co.in/Times_Education_Excellence_2019-c24c65ad.webp",
-      text: "Times Education Excellence Award 2019"
-    },
-    {
-      imgMain: "https://backstagepass.co.in/Best_Education_Brand_2018-8ffd3a56.webp",
-      imgTitle: "https://backstagepass.co.in/Best_Education_Brand_2018-8ffd3a56.webp",
-      text: "Best Education Brand Award Economic Times 2018"
-    },
-  ];
+
 
 
 
@@ -132,10 +88,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
     // Hide the button after clicking
     setIsButtonVisible(true);
   };
-  const handleClickss = () => {
-    // Redirect to the '/new-page' route
-    window.open('/landingpage/short-course/', '_blank');
-  };
+ 
   useEffect(() => {
     const details = document.querySelectorAll(".modules-grid details");
 
@@ -159,98 +112,8 @@ function DiplomaAndAdvancedDiplomaCourses() {
   }, []);
 
 
-  const [open, setOpen] = React.useState(false);
 
 
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-  const handleSubCategoryChange = (event) => {
-    const selectedsubCategory = event.target.value;
-    setFormData((prevData) => ({
-      ...prevData,
-      specialization: selectedsubCategory,
-    }));
-  };
-  const handleInputChange = async (event) => {
-    const { name, value } = event.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-    if (name === "PhoneNumber" && /^[0-9]{10}$/.test(value)) {
-      try {
-        const response = await fetch(`https://www.backstagepass.co.in/reactapi/checklandingpagemobile.php?contactNumber=${value}`);
-
-
-        if (response.status === 200) {
-          alert('This mobile number is already registered with in the last 3 months our team will get back to you.');
-          setFormData((prevData) => ({
-            ...prevData,
-            PhoneNumber: '',  // Reset the contact number field to an empty string
-          }));
-        }
-      } catch (error) {
-        console.error('Error checking mobile number:', error);
-        alert('Failed to validate mobile number. Please try again.');
-      }
-    }
-
-  };
-  const [formData, setFormData] = useState({
-    firstname: '',
-    lastname: '',
-    PhoneNumber: '',
-    email: '',
-    city: '',
-    course: '',
-    specialization: '',
-    qualification: '',
-    comments: '',
-    url: window.location.href,
-    course_ttl: 1,// Initialize URL in state
-  });
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setOpen(true); // Assuming you want to show a modal upon submission
-
-    try {
-      const response = await axios.post("https://www.backstagepass.co.in/reactapi/landing_adv.php", formData);
-      console.log(response);
-
-      // Assuming the response indicates success
-      // alert("Your data was submitted successfully!");
-
-      // Reset form data
-      setFormData({
-        firstname: '',
-        lastname: '',
-        PhoneNumber: '',
-        email: '',
-        city: '',
-        qualification: '',
-        comments: '',
-        course: '',
-        specialization: '',
-        url: window.location.href, // Reset URL
-      });
-    } catch (error) {
-      console.error('Error adding data:', error);
-      alert('An error occurred while submitting the form. Please try again.');
-    }
-  };
-  function Feature({ title, subtitle }) {
-    return (
-      <div className="feature-box">
-        <div className="feature-iconcer" style={{ fontWeight: "bold" }}><img /></div>
-        <div>
-          <div className="feature-title" style={{ fontSize: isMobileState ? "14px" : "15px", color: "#000000" }}>{title}</div>
-        </div>
-      </div>
-    );
-  }
   function Feature1({ title, subtitle }) {
     return (
       <div className="feature-box1">
@@ -282,7 +145,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
   function Featurecarrer1({ title, subtitle }) {
     return (
       <div className="feature-boxcar" style={{ padding: "8px", flexDirection: "column", backgroundColor: "#faebd7" }}>
-        <div className="feature-iconcercar" style={{ fontSize: "18px", fontWeight: "bold" }}><img src={modeling} /></div>
+        <div className="feature-iconcercar" style={{ fontSize: "18px", fontWeight: "bold" }}><img src={modeling} alt="modeling" /></div>
         <div>
           <div className="feature-titlecar" style={{ fontSize: "14px" }}>{title}</div>
         </div>
@@ -292,7 +155,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
   function Featurecarrer2({ title, subtitle }) {
     return (
       <div className="feature-boxcar" style={{ flexDirection: "column", backgroundColor: "#fbe4ec" }}>
-        <div className="feature-iconcercar" style={{ fontSize: "18px", fontWeight: "bold" }}><img src={prop} /></div>
+        <div className="feature-iconcercar" style={{ fontSize: "18px", fontWeight: "bold" }}><img src={prop} alt="prop"/></div>
         <div>
           <div className="feature-titlecar" style={{ fontSize: "14px" }}>{title}</div>
         </div>
@@ -302,7 +165,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
   function Featurecarrer3({ title, subtitle }) {
     return (
       <div className="feature-boxcar" style={{ flexDirection: "column", backgroundColor: "#fae9e1" }}>
-        <div className="feature-iconcercar" style={{ fontSize: "18px", fontWeight: "bold" }}><img src={gameasst} /></div>
+        <div className="feature-iconcercar" style={{ fontSize: "18px", fontWeight: "bold" }}><img src={gameasst} alt="gameasst" /></div>
         <div>
           <div className="feature-titlecar" style={{ fontSize: "14px" }}>{title}</div>
         </div>
@@ -312,7 +175,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
   function Featurecarrer4({ title, subtitle }) {
     return (
       <div className="feature-boxcar" style={{ flexDirection: "column", backgroundColor: "#cedeff" }}>
-        <div className="feature-iconcercar" style={{ fontSize: "18px", fontWeight: "bold" }}><img src={envir} /></div>
+        <div className="feature-iconcercar" style={{ fontSize: "18px", fontWeight: "bold" }}><img src={envir} alt="envir"/></div>
         <div>
           <div className="feature-titlecar" style={{ fontSize: "14px" }}>{title}</div>
         </div>
@@ -337,35 +200,8 @@ function DiplomaAndAdvancedDiplomaCourses() {
     );
   }
 
-  function Module({ title, items = [] }) {
-    return (
-      <div className="module-block">
-        <h4 className="module-title">{title}</h4>
-        <ul className="module-list">
-          {items.map((it, i) => (
-            <li key={i}>{it}</li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
 
-  function FAQItem({ q, a }) {
-    const [open, setOpen] = useState(false);
 
-    return (
-      <div className="faq-box">
-        <button className="faq-btn" onClick={() => setOpen(!open)}>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <span>{q}</span>
-            <span>{open ? "-" : "+"}</span>
-          </div>
-        </button>
-
-        {open && <div className="faq-answercer">{a}</div>}
-      </div>
-    );
-  }
   const featureData = [
     {
       title: "Beginner-friendly Maya fundamentals",

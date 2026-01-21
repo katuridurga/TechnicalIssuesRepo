@@ -5,7 +5,6 @@ import {
   PrevButton,
   usePrevNextButtons
 } from './EmblaCarouselArrowButtonsInTheMedia';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import '../assets/css/EmblaCarousel.css'; // 👈 Create this CSS file (below)
 import b2 from "../assets/img/board_game.webp";
@@ -143,8 +142,7 @@ const EmblaCarousel = (props) => {
  
  
    const {
-     prevBtnDisabled,
-     nextBtnDisabled,
+     
      onPrevButtonClick,
      onNextButtonClick
    } = usePrevNextButtons(emblaApi)
