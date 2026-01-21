@@ -100,7 +100,7 @@ const EmblaCarousel = (props) => {
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
             <div className="embla__slide" key={0}>
-              {/* <picture>
+              <picture>
                 <source srcSet={mbnewban0} media="(max-width: 768px)" />
                 <img
                   src={newban1}
@@ -112,32 +112,12 @@ const EmblaCarousel = (props) => {
                   loading="lazy"
                   style={{ width: "100%", margin: "0 auto", height: "auto" }}
                 />
-              </picture> */}
-            <picture>
-  <source
-    srcSet={mbnewban0}
-    media="(max-width: 768px)"
-  />
-  <img
-    src={newban1}
-    srcSet={`${newban1} 1526w`}
-    sizes="100vw"
-    alt="Home Banner"
-    width={1526}
-    height={450}
-    loading="eager"
-    decoding="async"
-    fetchpriority="high"
-    style={{ width: "100%", height: "auto" }}
-  />
-</picture>
-
-
+              </picture>
             </div>
             <div className="embla__slide" key={220}>
               <picture>
                 <source srcSet={mbnewbanF} media="(max-width: 768px)" />
-                {/* <img
+                <img
                   src={newbanF}
                   alt="Home Banner"
                   width={1526}
@@ -145,20 +125,7 @@ const EmblaCarousel = (props) => {
                   fetchpriority="high"
                   decoding="async"
                   style={{ width: "100%" }}
-                /> */}
-                <img
-                  src="NewCampus-1200.webp"
-                  srcset="
-    NewCampus-390.webp 390w,
-    NewCampus-768.webp 768w,
-    NewCampus-1200.webp 1200w
-  "
-                  sizes="(max-width: 768px) 100vw, 1200px"
-                  alt="Home Banner"
-                  fetchpriority="high"
-                  decoding="async"
                 />
-
               </picture>
             </div>
             <div className="embla__slide" key={3}>

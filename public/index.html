@@ -20,20 +20,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" />
   </noscript>
 
- <link
-  rel="preload"
-  as="image"
-  href="/images/banners/NewCampus.webp"
-  media="(max-width: 768px)"
-  fetchpriority="high"
-/>
-<link
-  rel="preload"
-  as="image"
-  href="/img/mobilebanner/homepagebanner/NewCampus.webp"
-  media="(min-width: 769px)"
-  fetchpriority="high"
-/>
+  <!-- ✅ LCP Image Preloads -->
+  <!-- Mobile -->
+  <link rel="preload" as="image" href="/images/mobile/NewCampus.webp" media="(max-width:768px)" fetchpriority="high" />
+  <!-- Desktop -->
+  <link rel="preload" as="image" href="/images/banners/NewCampus.webp" media="(min-width:769px)" fetchpriority="high" />
 
   <!-- Defer GTM -->
   <script>
@@ -62,11 +53,8 @@
     }
   </script>
 
-  <!-- ... Clarity Script ... -->
-
   <!-- Facebook Pixel Script -->
   <script>
-    // Define fbq function safely
     window.fbq = function () {
       window.fbq.callMethod
         ? window.fbq.callMethod.apply(window.fbq, arguments)
@@ -77,7 +65,6 @@
     window.fbq.version = '2.0';
     window.fbq.queue = [];
 
-    // Lazy-load the FB Pixel script
     window.addEventListener('load', () => {
       const fb = document.createElement('script');
       fb.async = true;
@@ -94,6 +81,7 @@
     <img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=8236983926348899&ev=PageView&noscript=1" />
   </noscript>
+
   <!-- Matomo Tag Manager -->
   <script>
     var _mtm = window._mtm = window._mtm || [];
@@ -103,7 +91,7 @@
       g.async = true; g.src = 'https://cdn.matomo.cloud/backstagepass.matomo.cloud/container_Fa2LaVPH.js'; s.parentNode.insertBefore(g, s);
     })();
   </script>
-  <!-- End Matomo Tag Manager -->
+
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       requestIdleCallback(() => {
@@ -136,8 +124,16 @@
       style="display:none;visibility:hidden"></iframe>
   </noscript>
 
+  <!-- ✅ LCP Banner -->
+  <picture>
+    <source srcset="/images/mobile/NewCampus.webp" media="(max-width:768px)" />
+    <img src="/images/banners/NewCampus.webp" alt="Home Banner" width="1526" height="450" loading="eager"
+      fetchpriority="high" style="width:100%;height:auto;" />
+  </picture>
+
   <div id="root"></div>
 
+  <!-- React chunk cache cleanup -->
   <script>
     (async function () {
       try {
