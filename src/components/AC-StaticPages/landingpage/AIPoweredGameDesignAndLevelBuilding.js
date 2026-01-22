@@ -1,26 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./DiplomaAndAdvancedDiplomaCourses.css";
 import PropTypes from 'prop-types';
 import { Helmet } from "react-helmet";
 import ic13 from '../../../assets/img/Icons/WEBSITE-ICON/short-term.webp';
 import Box from '@mui/material/Box';
-
-
-import axios from 'axios';
 import { useSelector, shallowEqual } from "react-redux";
-
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import Typography from '@mui/material/Typography';
-
 import ic7 from '../../../assets/img/Icons/WEBSITE-ICON/gaming-career.webp';
 import ic8 from '../../../assets/img/Icons/WEBSITE-ICON/switch-gaming-career.webp';
 import ic9 from '../../../assets/img/Icons/WEBSITE-ICON/career-opt.webp';
-
-
-
-
-
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -79,20 +69,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     window.localStorage.setItem('MY_APP_STATE', JSON.stringify(showBanner));
   }, [showBanner]);
 
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowBanner(false);
-      setLoading(false);
-    }, 3000);
-
-  }, []);
-
-  const OPTIONS = { loop: true }
-  const SLIDE_COUNT = 5
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
-
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
     shallowEqual
@@ -115,9 +91,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     // Hide the button after clicking
     setIsButtonVisible(true);
   };
-
-
-
 
   const handleClickss = () => {
     // Redirect to the '/new-page' route
@@ -157,92 +130,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     };
   }, []);
 
-  const [open, setOpen] = React.useState(false);
-
-
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const [formData, setFormData] = useState({
-    firstname: '',
-    lastname: '',
-    PhoneNumber: '',
-    email: '',
-    url: window.location.href,
-    course_ttl: 11,// Initialize URL in state
-    course_duration: 'shortterm',
-  });
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setOpen(true); // Assuming you want to show a modal upon submission
-
-    try {
-      const response = await axios.post("https://www.backstagepass.co.in/reactapi/downloadbroucher.php", formData);
-      console.log(response);
-      if (response.status === 200) {
-        setOpen(true);
-        setTimeout(() => {
-          window.location.reload();
-        }, 3000);
-      }
-      // Assuming the response indicates success
-      // alert("Your data was submitted successfully!");
-
-      // Reset form data
-      setFormData({
-        firstname: '',
-        lastname: '',
-        PhoneNumber: '',
-        email: '',
-        url: window.location.href, // Reset URL
-        course_duration: 'shortterm',
-      });
-    } catch (error) {
-      console.error('Error adding data:', error);
-      alert('An error occurred while submitting the form. Please try again.');
-    }
-  };
-
-  const videoRef = useRef(null); // To reference the video element
-  const [isPlaying, setIsPlaying] = useState(false); // To manage the play state
-
-  const handlePlay = () => {
-    // Play the video when the image is clicked
-    if (videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true); // Update the state to hide the image
-    }
-  };
-  // const handleDownload = () => {
-  //   // For example, triggering a download of a file (replace with your own file URL or logic)
-  //   const fileUrl = 'https://www.backstagepass.co.in/brouchers/UNITY-compressed.pdf'; // Replace with your file URL or logic
-  //   const link = document.createElement('a');
-  //   link.href = fileUrl;
-  //   link.download = 'UNITY-compressed.pdf'; // You can specify the name of the file you want to download
-  //   link.click();
-  // };
-  const downloadLink = 'https://www.backstagepass.co.in/brouchers/UNITY-compressed.pdf';
-  const handleDownload = () => {
-    const fileContent = "This is the content of your file"; // Example content
-    const blob = new Blob([fileContent], { type: 'text/plain' });
-    const downloadLink = URL.createObjectURL(blob); // Create a URL for the Blob
-
-    // Create an anchor element programmatically to trigger the download
-    const a = document.createElement('a');
-    a.href = downloadLink;
-    a.target = "_blank";
-    a.download = "UNITY-compressed.pdf"; // Set the default file name
-    document.body.appendChild(a);
-    a.click(); // Simulate click to download
-    document.body.removeChild(a); // Clean up
-    handleClose();
-    window.location.reload();
-  };
-
-
 
 
 
@@ -251,16 +138,13 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       <Helmet>
         <title>AI-Powered Game Design and Level Building | Backstage Pass
         </title>
-        <meta  name="description" content="AI-Powered Game Design and Level Building" />
+        <meta name="description" content="AI-Powered Game Design and Level Building" />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
       <div className="row mb0" id="scroll-container" >
         <div className="mainPanel1">
 
           <div style={{ width: isMobileState ? "100%" : "100%", margin: isMobileState ? "50px auto" : "0px auto" }}>
-
-
-
             <a onClick={scrollToBottom}>
               <div className={`et_pb_section bgimage et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'DGAMEDEVELOPMENTWITHUNITY4mc' : 'DGAMEDEVELOPMENTWITHUNITY4'}`}>
 
@@ -275,11 +159,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
             </a>
 
-
-            {/* <div className="mainrec22s">
-              <img src={recimg} alt="recimg" style={{ width: "100%", height: "100%" }} />
-
-            </div> */}
             <div className='eldiv'>
               <ul className='elm'>
                 <li><b>Duration</b>: 3 months (120 hours)</li>
@@ -289,10 +168,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 </li>
               </ul>
             </div>
-
-
-
-
             <div className='courseObj'>
               <h2>Course Modules</h2>
               <ul>
@@ -303,7 +178,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
               </ul>
             </div>
-
             <div className='courseObj'>
               <h2>Key Takeaways</h2>
               <ul>
@@ -311,24 +185,12 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <li>Procedural content creation skills</li>
                 <li>Dynamic and immersive world-building</li>
                 <li>Adaptive storytelling and NPC behavior design</li>
-
-
               </ul>
             </div>
 
-
-
-
-
-
-
-
-
-
-
             <h2 className='mainHeadingTotall-2'>Career Opportunities</h2>
 
-            <ul className="featuress3u" style={{backgroundColor:"#222"}}>
+            <ul className="featuress3u" style={{ backgroundColor: "#222" }}>
               <li>
                 <img src={ic9} alt="Game Designer" />
                 <div className="featuresscon2">Game Designer</div>
@@ -349,32 +211,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <div className="featuresscon2">AI Game Content Designer</div>
               </li>
             </ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
             <div className="CousellingButton1 tetstL1" onClick={scrollToBottom}><button className="dwnbtn three w-full sm:w-auto" style={{ width: "450px" }} onClick={() => setIsOpenM(true)}>Download Brochure
             </button> </div>
-
-
-
-
-
-
-
-
           </div>
-
-
         </div>
       </div>
       {isButtonVisible && (
