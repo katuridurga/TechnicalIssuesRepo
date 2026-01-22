@@ -51,8 +51,8 @@ const slides = [
   { src: bui5, alt: "ET Achievers", text: "ET achievers 2025" },
   { src: bui6, alt: "EduSpark Awards", text: "EduSpark Awards 2023" },
   { src: bui7, alt: "BSP Students", text: "BSP Students at IGDC" },
-    { src: animationexp, alt: "animationexp", text: "Backstage Pass students at IGDC 2025", href:"https://www.animationxpress.com/latest-news/backstage-pass-and-frameboxx-sign-mou-to-launch-diplomas-in-game-development/" },
-  { src: bui1f, alt: "bui1f", text: "Backstage Pass Collaborated with Frameboxx", href:"https://www.animationxpress.com/latest-news/double-win-for-backstage-pass-students-at-igdc-2025/" },
+  { src: animationexp, alt: "animationexp", text: "Backstage Pass students at IGDC 2025", href: "https://www.animationxpress.com/latest-news/backstage-pass-and-frameboxx-sign-mou-to-launch-diplomas-in-game-development/" },
+  { src: bui1f, alt: "bui1f", text: "Backstage Pass Collaborated with Frameboxx", href: "https://www.animationxpress.com/latest-news/double-win-for-backstage-pass-students-at-igdc-2025/" },
   {
     src: awardfour,
     alt: "Student Game of the Year IGDC 2025",
@@ -89,7 +89,7 @@ const slides = [
     alt: "In-house Competition 2023",
     text: "In house Game development competition 2023",
   },
-   {
+  {
     src: awardig,
     alt: "IGDC Hyderabad developers",
     text: "Hyderabad-based game developers shine at IGDC",
@@ -125,111 +125,111 @@ const slides = [
     text: "Backstage Pass brings world-class gaming education right to your doorstep",
     href: "https://yourstory.com/2020/06/backstage-world-class-gaming-education",
   },
-    {
+  {
     src: bui3,
     alt: "Nazara Technologies Studio Visit",
     text: "Nazara Technologies Studio Visit",
-    
+
   },
 ];
- 
+
 const TWEEN_FACTOR_BASE = 0.2
 const EmblaCarousel = (props) => {
-   const { options } = props
+  const { options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
-   const tweenFactor = useRef(0)
-   const tweenNodes = useRef([])
- 
- 
-   const {
-     
-     onPrevButtonClick,
-     onNextButtonClick
-   } = usePrevNextButtons(emblaApi)
- 
-   const setTweenNodes = useCallback((emblaApi) => {
-     tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
-       return slideNode.querySelector('.embla__parallax__layerbM')
-     })
-   }, [])
- 
-   const setTweenFactor = useCallback((emblaApi) => {
-     tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
-   }, [])
- 
-   const tweenParallax = useCallback((emblaApi, eventName) => {
-     const engine = emblaApi.internalEngine()
-     const scrollProgress = emblaApi.scrollProgress()
-     const slidesInView = emblaApi.slidesInView()
-     const isScrollEvent = eventName === 'scroll'
- 
-     emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
-       let diffToTarget = scrollSnap - scrollProgress
-       const slidesInSnap = engine.slideRegistry[snapIndex]
- 
-       slidesInSnap.forEach((slideIndex) => {
-         if (isScrollEvent && !slidesInView.includes(slideIndex)) return
- 
-         if (engine.options.loop) {
-           engine.slideLooper.loopPoints.forEach((loopItem) => {
-             const target = loopItem.target()
- 
-             if (slideIndex === loopItem.index && target !== 0) {
-               const sign = Math.sign(target)
- 
-               if (sign === -1) {
-                 diffToTarget = scrollSnap - (1 + scrollProgress)
-               }
-               if (sign === 1) {
-                 diffToTarget = scrollSnap + (1 - scrollProgress)
-               }
-             }
-           })
-         }
- 
-         // const translate = diffToTarget * (-1 * tweenFactor.current) * 100
-         // const tweenNode = tweenNodes.current[slideIndex]
-         // tweenNode.style.transform = `translateX(${translate}%)`
-       })
-     })
-   }, [])
- 
- useEffect(() => {
-   if (!emblaApi) return
- 
-   // --- Auto Scroll Left Loop ---
-   let autoScrollInterval
- 
-   const autoScrollLeft = () => {
-     if (!emblaApi) return
-     if (emblaApi.canScrollPrev()) {
-       emblaApi.scrollPrev()
-     }
-   }
- 
-   autoScrollInterval = setInterval(autoScrollLeft, 3000) // scroll every 3 seconds
- 
-   // --- Existing Logic ---
-   setTweenNodes(emblaApi)
-   setTweenFactor(emblaApi)
-   tweenParallax(emblaApi)
- 
-   emblaApi
-     .on('reInit', setTweenNodes)
-     .on('reInit', setTweenFactor)
-     .on('reInit', tweenParallax)
-     .on('scroll', tweenParallax)
-     .on('slideFocus', tweenParallax)
- 
-   // Cleanup on unmount
-   return () => {
-     clearInterval(autoScrollInterval)
-   }
- }, [emblaApi, setTweenFactor, setTweenNodes, tweenParallax])
-   
+  const tweenFactor = useRef(0)
+  const tweenNodes = useRef([])
+
+
+  const {
+
+    onPrevButtonClick,
+    onNextButtonClick
+  } = usePrevNextButtons(emblaApi)
+
+  const setTweenNodes = useCallback((emblaApi) => {
+    tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
+      return slideNode.querySelector('.embla__parallax__layerbM')
+    })
+  }, [])
+
+  const setTweenFactor = useCallback((emblaApi) => {
+    tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
+  }, [])
+
+  const tweenParallax = useCallback((emblaApi, eventName) => {
+    const engine = emblaApi.internalEngine()
+    const scrollProgress = emblaApi.scrollProgress()
+    const slidesInView = emblaApi.slidesInView()
+    const isScrollEvent = eventName === 'scroll'
+
+    emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
+      let diffToTarget = scrollSnap - scrollProgress
+      const slidesInSnap = engine.slideRegistry[snapIndex]
+
+      slidesInSnap.forEach((slideIndex) => {
+        if (isScrollEvent && !slidesInView.includes(slideIndex)) return
+
+        if (engine.options.loop) {
+          engine.slideLooper.loopPoints.forEach((loopItem) => {
+            const target = loopItem.target()
+
+            if (slideIndex === loopItem.index && target !== 0) {
+              const sign = Math.sign(target)
+
+              if (sign === -1) {
+                diffToTarget = scrollSnap - (1 + scrollProgress)
+              }
+              if (sign === 1) {
+                diffToTarget = scrollSnap + (1 - scrollProgress)
+              }
+            }
+          })
+        }
+
+        // const translate = diffToTarget * (-1 * tweenFactor.current) * 100
+        // const tweenNode = tweenNodes.current[slideIndex]
+        // tweenNode.style.transform = `translateX(${translate}%)`
+      })
+    })
+  }, [])
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    // --- Auto Scroll Left Loop ---
+    let autoScrollInterval
+
+    const autoScrollLeft = () => {
+      if (!emblaApi) return
+      if (emblaApi.canScrollPrev()) {
+        emblaApi.scrollPrev()
+      }
+    }
+
+    autoScrollInterval = setInterval(autoScrollLeft, 3000) // scroll every 3 seconds
+
+    // --- Existing Logic ---
+    setTweenNodes(emblaApi)
+    setTweenFactor(emblaApi)
+    tweenParallax(emblaApi)
+
+    emblaApi
+      .on('reInit', setTweenNodes)
+      .on('reInit', setTweenFactor)
+      .on('reInit', tweenParallax)
+      .on('scroll', tweenParallax)
+      .on('slideFocus', tweenParallax)
+
+    // Cleanup on unmount
+    return () => {
+      clearInterval(autoScrollInterval)
+    }
+  }, [emblaApi, setTweenFactor, setTweenNodes, tweenParallax])
+
   return (
     <div className="emblabuzz">
-  
+
 
       <div className="embla__viewportbuzz" ref={emblaRef}>
         <div className="embla__containerbuzz">
@@ -260,15 +260,15 @@ const EmblaCarousel = (props) => {
         </div>
       </div>
 
-     <div className="embla__controlsbaM">
-        <div className="embla__buttonsbaM"  style={{background:"none"}}>
-          <PrevButton onClick={onPrevButtonClick} style={{color:"#fff"}} />
-          <NextButton onClick={onNextButtonClick}  style={{color:"#fff"}} />
+      <div className="embla__controlsbaM">
+        <div className="embla__buttonsbaM" style={{ background: "none" }}>
+          <PrevButton onClick={onPrevButtonClick} style={{ color: "#fff" }} />
+          <NextButton onClick={onNextButtonClick} style={{ color: "#fff" }} />
         </div>
       </div>
     </div>
-   
- 
+
+
   );
 };
 

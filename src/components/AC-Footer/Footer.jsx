@@ -13,7 +13,7 @@ import Youtube from "../../assets/img/Icons/Youtube.webp";
 import { CiYoutube } from "react-icons/ci";
 import { RiDiscordLine } from "react-icons/ri";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
-import { RiLinkedinLine, RiTwitterXLine } from "react-icons/ri";
+import { RiLinkedinLine} from "react-icons/ri";
 import { FaPaperPlane, FaPhone } from "react-icons/fa";
 import { CiPhone, CiMail } from "react-icons/ci";
 import axios from "axios";
@@ -110,10 +110,10 @@ function Footer() {
 "/landingpage/basics-of-maya-online-certification/",
 
   ];
-    const specialHeightPaths1 = [
-    "/landingpage/certificate-program-in-basics-of-maya/",
+  //   const specialHeightPaths1 = [
+  //   "/landingpage/certificate-program-in-basics-of-maya/",
 
-  ];
+  // ];
 
   const computedHeight =
   path === "/landingpage/certificate-program-in-basics-of-maya/"

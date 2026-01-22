@@ -6,10 +6,8 @@ import { Helmet } from "react-helmet";
 import axios from "axios";
 import { useSelector, shallowEqual } from "react-redux";
 import { useForm } from 'react-hook-form';
-import Box from "@mui/material/Box";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
@@ -111,7 +109,7 @@ function SkillDiplomaCourses() {
   /* -------------------- FETCH COURSES -------------------- */
 
   useEffect(() => {
-   
+
     let lastSegment = "certificate-program-in-basics-of-maya";
 
     // if (referrer) {
@@ -169,9 +167,9 @@ function SkillDiplomaCourses() {
     const { name, type, value, checked, files } = e.target;
 
     if (name === "coupon") {
-       if (value.length <= 4) {
-      setCouponRemarks("");
-    }
+      if (value.length <= 4) {
+        setCouponRemarks("");
+      }
       if (!formData.course) {
         alert("Please select a course first");
         return;
@@ -189,24 +187,24 @@ function SkillDiplomaCourses() {
 
         const data = await res.json();
         if (data?.length) {
-         
-          
+
+
           setPaymentDetails({
             originalPayment: data[0].orignialpayment,
             discountValue: data[0].discountvalue,
             finalAmount: data[0].finalamount,
-            
+
           });
-          if(data[0].remarkscoupon!='' && value.length >= 4){
-             setCouponRemarks(data?.[0]?.remarkscoupon || "Invalid Coupon Code");
+          if (data[0].remarkscoupon != '' && value.length >= 4) {
+            setCouponRemarks(data?.[0]?.remarkscoupon || "Invalid Coupon Code");
           }
-          else{
-         
-           setCouponRemarks(""); // clear error
-            
-          
-        }
-        
+          else {
+
+            setCouponRemarks(""); // clear error
+
+
+          }
+
         }
       } catch {
         alert("Coupon error");
@@ -228,11 +226,6 @@ function SkillDiplomaCourses() {
     }));
     setOpenFormModal(true);
   };
-  const [formData1, setFormData1] = useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
 
   // const handlePayNow = (e) => {
   //   e.preventDefault();
@@ -305,7 +298,7 @@ function SkillDiplomaCourses() {
             method="POST"
             action="https://www.backstagepass.co.in/payment_process.php"
             encType="multipart/form-data"
-           // onSubmit={handlePayNow}
+          // onSubmit={handlePayNow}
           >
 
 
@@ -449,7 +442,7 @@ function SkillDiplomaCourses() {
                   ))}
                 </select>
               </div>
-{/* 
+              {/* 
               <div className="">
                 <label className="" for="school">Last School/ College Attended</label>
                 <input
@@ -494,9 +487,9 @@ function SkillDiplomaCourses() {
               </div>
               <p style={{ color: "#f52525" }}><span>{couponRemarks}</span></p>
               {paymentDetails.originalPayment && (
-                
+
                 <div className='paymentShortCourse'>
-                  
+
                   <div style={{ color: "#000" }}>Payment (INR): <span>₹{paymentDetails.originalPayment}</span></div>
                   {paymentDetails.discountValue > 0 && (
                     <div style={{ color: "#000" }}>
@@ -505,8 +498,8 @@ function SkillDiplomaCourses() {
                   )}
 
                   <div style={{ color: "#000" }}>Total Payment (INR): <span>₹{paymentDetails.finalAmount}</span></div>
-                
-                
+
+
                 </div>
               )}
               <div className="checkbox-container" >
@@ -535,7 +528,7 @@ function SkillDiplomaCourses() {
               <button
                 type="submit"
                 className="three button brand size200 w-full sm:w-auto"
-               // onClick={handlePayNow}
+              // onClick={handlePayNow}
               >
                 Pay Now
               </button>
