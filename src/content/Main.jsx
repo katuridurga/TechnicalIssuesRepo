@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import { Helmet } from "react-helmet";
-import LastChanceStripe from "../components/AC-StaticPages/landingpage/LastChanceStripe";
+
 
 // Lazy-loaded Components
 const Footer = lazy(() => import("../components/AC-Footer/Footer.jsx"));
