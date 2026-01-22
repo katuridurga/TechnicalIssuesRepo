@@ -100,19 +100,19 @@ const EmblaCarousel = (props) => {
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
             <div className="embla__slide" key={0}>
-              <picture>
-                <source srcSet={mbnewban0} media="(max-width: 768px)" />
-                <img
-                  src={newban1}
-                  alt="Home Banner"
-                  width={1526}
-                  height={450}
-                  decoding="async"
-                  fetchpriority="high"
-                  loading="lazy"
-                  style={{ width: "100%", margin: "0 auto", height: "auto" }}
-                />
-              </picture>
+            <picture>
+  <source srcSet={mbnewban0} media="(max-width: 768px)" />
+  <img
+    src={newban1}
+    alt="Home Banner"
+    width={1526}
+    height={450}
+    loading="eager"          // ✅ REQUIRED for LCP
+    fetchpriority="high"     // ✅ GOOD
+    style={{ width: "100%", margin: "0 auto", height: "auto" }}
+  />
+</picture>
+
             </div>
             <div className="embla__slide" key={220}>
               <picture>
