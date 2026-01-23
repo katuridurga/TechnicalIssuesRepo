@@ -793,6 +793,7 @@ const speakersRef = React.useRef(null);
           <title>Alumni Success | Backstage Pass Institute of Gaming</title>
           <meta property="og:title" content="Alumni Success | Backstage Pass Institute of Gaming" />
           <meta property="og:description" name="description" content="Backstage Pass graduates are making an impact in the gaming industry. Explore inspiring success stories and connect with our alumni network for career growth." />
+            <meta name="description" content="Backstage Pass graduates are making an impact in the gaming industry. Explore inspiring success stories and connect with our alumni network for career growth." />
           <meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/alumni-success/" />
           <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/alumni-success/" />
         </Helmet>

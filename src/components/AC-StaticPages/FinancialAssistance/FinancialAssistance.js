@@ -235,6 +235,7 @@ function Courses(props) {
           <title> Financial Assistance & Scholarships | Backstage Pass Institute of Gaming</title>
           <meta property="og:title" content=" Financial Assistance & Scholarships | Backstage Pass Institute of Gaming" />
           <meta property="og:description" name="description" content="Make your gaming education affordable with student loan options, scholarships, and financial aid from Backstage Pass Institute of Gaming. Our program features 0% interest and quick processing." />
+          <meta name="description" content="Make your gaming education affordable with student loan options, scholarships, and financial aid from Backstage Pass Institute of Gaming. Our program features 0% interest and quick processing." />
           <meta property="og:url" content="https://www.backstagepass.co.in/admissions/financial-assistance-and-scholarship/" />
 
           <link rel="canonical" href="https://www.backstagepass.co.in/admissions/financial-assistance-and-scholarship/" />
@@ -245,7 +246,7 @@ function Courses(props) {
         <div className="">
           <h2 className="mainHeadingTotal fadeInUp anime-delay">Financial Assistance</h2>
 
-          <p className='adminissionPTag1' style={{marginBottom:"20px"}}>Financing your education shouldn't hold you back from achieving your dreams. At Backstage Pass, we're dedicated to providing accessible and affordable student loan options to empower your academic journey.
+          <p className='adminissionPTag1' style={{ marginBottom: "20px" }}>Financing your education shouldn't hold you back from achieving your dreams. At Backstage Pass, we're dedicated to providing accessible and affordable student loan options to empower your academic journey.
           </p>
 
 
@@ -261,94 +262,94 @@ function Courses(props) {
 
       </div>
 
-<div className="mainbenfits">
-      <h2 className="mainHeadingTotal fadeInUp anime-delay">Benefits</h2>
+      <div className="mainbenfits">
+        <h2 className="mainHeadingTotal fadeInUp anime-delay">Benefits</h2>
 
 
-      <div className='courseUpdates3'>
+        <div className='courseUpdates3'>
 
-        <ul>
-          <li><div className="bgicofin"><img alt="Zero Interest Rate" src={zero} /></div>
-            <p style={{ color: "#000" }}>Zero<br />Interest Rate</p></li>
-          <li><div className="bgicofin"><img alt="No Collateral Required" src={collat} /></div>
-            <p style={{ color: "#000" }}>No Collateral<br />Required</p></li>
-          <li><div className="bgicofin"><img alt="No Hidden Charges" src={charge} /></div>
-            <p style={{ color: "#000" }}>No Hidden<br />Charges</p></li>
-          <li><div className="bgicofin"><img alt="No Cost EMIs" src={cost} /></div>
-            <p style={{ color: "#000" }}>No Cost<br />EMIs</p></li>
+          <ul>
+            <li><div className="bgicofin"><img alt="Zero Interest Rate" src={zero} /></div>
+              <p style={{ color: "#000" }}>Zero<br />Interest Rate</p></li>
+            <li><div className="bgicofin"><img alt="No Collateral Required" src={collat} /></div>
+              <p style={{ color: "#000" }}>No Collateral<br />Required</p></li>
+            <li><div className="bgicofin"><img alt="No Hidden Charges" src={charge} /></div>
+              <p style={{ color: "#000" }}>No Hidden<br />Charges</p></li>
+            <li><div className="bgicofin"><img alt="No Cost EMIs" src={cost} /></div>
+              <p style={{ color: "#000" }}>No Cost<br />EMIs</p></li>
 
-        </ul>
+          </ul>
+        </div>
       </div>
-</div>
       <div className="courses-container">
 
         <div className="courses-wrapper">
-                <h2
-        className="mainHeadingTotal fadeInUp anime-delay"
-      
-      ><span>
-        What’s More?</span>
-      
-      </h2>
+          <h2
+            className="mainHeadingTotal fadeInUp anime-delay"
 
-      {isOpen && (
-        <>
-          <div className="whtsmain">
-            <div
-              style={{
-                width: isMobileState ? "100%" : "50%",
-                margin: "0px auto",
-                textAlign: "center",
-                marginBottom: isMobileState ? "0px" : "30px",
-              }}
-            >
-              <p style={{ color: "#000", fontSize: "16px", marginTop: "0px" }}>
-                Apart from the above, our strategic partnership with these leading
-                financial institutions lets you enjoy many exclusive benefits!
+          ><span>
+              What’s More?</span>
+
+          </h2>
+
+          {isOpen && (
+            <>
+              <div className="whtsmain">
+                <div
+                  style={{
+                    width: isMobileState ? "100%" : "50%",
+                    margin: "0px auto",
+                    textAlign: "center",
+                    marginBottom: isMobileState ? "0px" : "30px",
+                  }}
+                >
+                  <p style={{ color: "#000", fontSize: "16px", marginTop: "0px" }}>
+                    Apart from the above, our strategic partnership with these leading
+                    financial institutions lets you enjoy many exclusive benefits!
+                  </p>
+                </div>
+
+                <div>
+                  <ul className="benfits">
+                    <li>
+
+                      <div className="benfitContent">
+                        <div className="benfitIcon">
+                          <img src={insurance} alt="accidental insurance icon" />
+                        </div>
+                        Accidental insurance coverage of INR 5L
+                      </div>
+                    </li>
+                    <li>
+
+                      <div className="benfitContent">
+                        <div className="benfitIcon">
+                          <img src={cash} alt="voucher icon" />
+                        </div>
+                        Voucher worth INR 10,000</div>
+                    </li>
+                    <li>
+
+                      <div className="benfitContent">
+                        <div className="benfitIcon">
+                          <img src={time} alt="Quick loan icon" />
+                        </div>
+                        Quick loan processing within 24 hours
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <br />
+
+              <p className="adminissionPTag1">
+                For those who prefer to apply for a student loan through nationalized banks
+                in India, we'll provide necessary documents to ensure a seamless
+                application process.
               </p>
-            </div>
-
-            <div>
-              <ul className="benfits">
-                <li>
-                
-                  <div className="benfitContent">
-                      <div className="benfitIcon">
-                    <img src={insurance} alt="accidental insurance icon" />
-                  </div>
-                    Accidental insurance coverage of INR 5L
-                  </div>
-                </li>
-                <li>
-                 
-                  <div className="benfitContent">
-                     <div className="benfitIcon">
-                    <img src={cash} alt="voucher icon" />
-                  </div>
-                    Voucher worth INR 10,000</div>
-                </li>
-                <li>
-               
-                  <div className="benfitContent">
-                       <div className="benfitIcon">
-                    <img src={time} alt="Quick loan icon" />
-                  </div>
-                    Quick loan processing within 24 hours
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <br />
-
-          <p className="adminissionPTag1">
-            For those who prefer to apply for a student loan through nationalized banks
-            in India, we'll provide necessary documents to ensure a seamless
-            application process.
-          </p>
-  </>
-      )}
+            </>
+          )}
           <h2 className="mainHeadingTotal fadeInUp anime-delay">Loan Application Process</h2>
 
           <ul className="process">
@@ -389,26 +390,26 @@ function Courses(props) {
             </li>
           </ul>
 
-          <p className='adminissionPTag1' style={{marginTop:isMobileState?"20px":"0px", marginBottom:"0px"}}>Take the first step towards securing your academic future. Apply now and let us help you achieve your goals!</p>
+          <p className='adminissionPTag1' style={{ marginTop: isMobileState ? "20px" : "0px", marginBottom: "0px" }}>Take the first step towards securing your academic future. Apply now and let us help you achieve your goals!</p>
 
           {/* <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}><button className=" three button brand size200 w-full sm:w-auto" style={{ width: "320px", fontSize: "17px" }}>APPLY FOR LOAN NOW</button></div> */}
 
- <h2 className="mainHeadingTotal fadeInUp anime-delay">Financial Assistance Partners
-</h2>
+          <h2 className="mainHeadingTotal fadeInUp anime-delay">Financial Assistance Partners
+          </h2>
 
           <ul className="processpartner">
-           
+
             <li className="process__itempartner">
-          
-           <img src={partner1} alt="partner1"/>
+
+              <img src={partner1} alt="partner1" />
             </li>
 
             <li className="process__itempartner">
-           
-           <img src={partner2} alt="partner2"/>
+
+              <img src={partner2} alt="partner2" />
             </li>
 
-          
+
           </ul>
 
           <h2 className="mainHeadingTotal fadeInUp anime-delay">Got Questions? Ask Us</h2>
@@ -418,8 +419,8 @@ function Courses(props) {
             <li><p className="callu"><a href="mailto:admin@backstagepass.co.in"><CiMail /> Mail Us</a></p></li>
           </ul>
         </div>
-        <form onSubmit={handleSubmit} className="formMain" style={{ background: "#f9fafb", boxShadow:"0 2px 15px 0px rgba(0, 0, 0, 0.1)" }}>
-           <h3 className="mainHeadingTotal">Loan Application Form </h3>
+        <form onSubmit={handleSubmit} className="formMain" style={{ background: "#f9fafb", boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)" }}>
+          <h3 className="mainHeadingTotal">Loan Application Form </h3>
           <div className="formGridfs mgrid" data-form-id="need-guidance" data-form="step1-container">
 
             <div className="">
@@ -515,43 +516,43 @@ function Courses(props) {
                 loading={loading}
                 loadingText="Loading cities..."
                 renderInput={(params) => (
-                 <StyledTextField
-        {...params}
-        required
-        variant="outlined"
-        placeholder="City"
-        InputLabelProps={{
-          sx: {
-            color: "#5a555a",              
-            "&.Mui-focused": { color: "#5a555a" }, 
-            "& .MuiInputLabel-asterisk": {
-              color: "red",
-              fontSize: "21px",
-            },
-          },
-        }}
-        InputProps={{
-          ...params.InputProps,
-          sx: {
-            color: "#5a555a",              
-            "& .MuiOutlinedInput-notchedOutline": {
-              borderColor: "#5a555a",      
-            },
-            "&:hover .MuiOutlinedInput-notchedOutline": {
-              borderColor: "#5a555a",      
-            },
-            "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-              borderColor: "#5a555a",      
-            },
-            "& input::placeholder": {
-              color: "#5a555a",             
-              opacity: 1,
-            },
-          },
-        }}
-      />
-    )}
-  />
+                  <StyledTextField
+                    {...params}
+                    required
+                    variant="outlined"
+                    placeholder="City"
+                    InputLabelProps={{
+                      sx: {
+                        color: "#5a555a",
+                        "&.Mui-focused": { color: "#5a555a" },
+                        "& .MuiInputLabel-asterisk": {
+                          color: "red",
+                          fontSize: "21px",
+                        },
+                      },
+                    }}
+                    InputProps={{
+                      ...params.InputProps,
+                      sx: {
+                        color: "#5a555a",
+                        "& .MuiOutlinedInput-notchedOutline": {
+                          borderColor: "#5a555a",
+                        },
+                        "&:hover .MuiOutlinedInput-notchedOutline": {
+                          borderColor: "#5a555a",
+                        },
+                        "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                          borderColor: "#5a555a",
+                        },
+                        "& input::placeholder": {
+                          color: "#5a555a",
+                          opacity: 1,
+                        },
+                      },
+                    }}
+                  />
+                )}
+              />
             </div>
 
           </div>

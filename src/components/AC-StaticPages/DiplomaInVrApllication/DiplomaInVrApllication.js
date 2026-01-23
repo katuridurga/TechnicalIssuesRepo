@@ -199,7 +199,7 @@ function Courses(props) {
 
           <meta property="og:title" content=" Diploma in VR Application Development | Backstage Pass" />
           <meta property="og:description" name="description" content="Step into the world of VR! Enroll in a Diploma in Virtual Reality Application Development and start your creative tech career today." />
-
+          <meta name="description" content="Step into the world of VR! Enroll in a Diploma in Virtual Reality Application Development and start your creative tech career today." />
           <meta property="og:url" content="https://www.backstagepass.co.in/courses/diploma-in-vr-application-development/" />
           <meta name="keywords" content="3D Environment Art Diploma India, Game Environment Art Course Hyderabad, Diploma in 3D Game Environment Art India, Environment Design for Games Diploma Hyderabad, 3D Art for Games Environment Training India, 3D Level Design Diploma,  Unreal Engine Environment Art Diploma, Career in 3D Environment Art India, Advanced 3D Environment Art Techniques​" />
           <link rel="canonical" href="https://www.backstagepass.co.in/courses/diploma-in-vr-application-development/" />

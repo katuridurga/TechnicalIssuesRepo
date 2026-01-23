@@ -78,8 +78,6 @@ const EmblaCarousel = (props) => {
   const tweenNodes = useRef([]);
 
   const {
-    prevBtnDisabled,
-    nextBtnDisabled,
     onPrevButtonClick,
     onNextButtonClick
   } = usePrevNextButtons(emblaApi);

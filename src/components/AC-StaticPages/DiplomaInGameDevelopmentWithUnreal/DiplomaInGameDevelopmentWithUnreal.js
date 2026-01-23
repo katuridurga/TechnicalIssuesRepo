@@ -154,6 +154,8 @@ function Courses(props) {
 
         <meta property="og:title" content="Best Game Development with Unreal Course in India - Backstage Pass College" />
         <meta property="og:description" name="description" content="Learn game development with Unreal Engine Diploma by Backstage Pass. Master C++, Blueprints, AI, level design, ⁠Game systems, Gameplay Programming. 6-month diploma. Online & offline modes." />
+
+         <meta name="description" content="Learn game development with Unreal Engine Diploma by Backstage Pass. Master C++, Blueprints, AI, level design, ⁠Game systems, Gameplay Programming. 6-month diploma. Online & offline modes." />
         <meta property="og:url" content="https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unreal/" />
 
         <meta name="keywords" content="unreal engine course, game development course, unreal game development training, learn unreal engine, game development with unreal, best unreal engine course in India, how to become unreal engine developer, career in unreal engine game development, game development course with placement, unreal engine certification course​" />

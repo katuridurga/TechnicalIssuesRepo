@@ -68,6 +68,7 @@ function Courses(props) {
           <title>Backstage Pass Institute of Gaming, college hostel facilities </title>
           <meta property="og:title" content="Backstage Pass Institute of Gaming, College Hostel Facilities" />
           <meta property="og:description" name="description" content="Live close to campus with our student-friendly hostel facilities. Spacious AC & Non-AC rooms, meals included, and a secure environment for a hassle-free stay." />
+            <meta name="description" content="Live close to campus with our student-friendly hostel facilities. Spacious AC & Non-AC rooms, meals included, and a secure environment for a hassle-free stay." />
           <meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/facilities/" />
           <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/facilities/" />
         </Helmet>

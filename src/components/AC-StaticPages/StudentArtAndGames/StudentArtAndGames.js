@@ -258,6 +258,7 @@ function Courses(props) {
           <title>Explore Backstage Pass Institute Students arts and games</title>
           <meta property="og:title" content="Explore Backstage Pass Institute Students Arts and Games" />
           <meta property="og:description" name="description" content="See what students at Backstage Pass are building—from concept art to full-fledged games. A creative space where learning turns into real projects." />
+          <meta name="description" content="See what students at Backstage Pass are building—from concept art to full-fledged games. A creative space where learning turns into real projects." />
           <meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/student-portfolio/" />
           <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/student-portfolio/" />
 

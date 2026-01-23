@@ -270,6 +270,7 @@ const semsecond = [
 
           <meta property="og:title" content="Bachelor's in Augmented & Virtual Reality (AR/VR) | Backstage Pass Institute of Gaming" />
           <meta property="og:description" name="description" content="Learn AR/VR game development and interactive design through Backstage Pass Bachelor’s program. Create interactive Games & Designs with Augmented and Virtual reality" />
+           <meta name="description" content="Learn AR/VR game development and interactive design through Backstage Pass Bachelor’s program. Create interactive Games & Designs with Augmented and Virtual reality" />
           <meta property="og:url" content="https://www.backstagepass.co.in/courses/bachelors-in-augmented-reality-and-virtual-reality/" />
           <meta name="keywords" content="augmented reality vs virtual reality, ar vr courses, augmented reality courses, ar and vr course, ar and vr courses, augmented reality and virtual reality courses​, ar vr courses in hyderabad, ar vr courses in india, augmented and virtual reality courses​, ar and vr courses in india, ar & vr courses, ar vr design courses, ar vr training course, best ar vr courses in india​" />
 

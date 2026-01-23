@@ -116,6 +116,7 @@ function Placementsupport(props) {
 
         <meta property="og:title" content="Placement Support for Gaming Jobs & Internships | Backstage Pass Institute of Gaming" />
         <meta property="og:description" name="description" content="Backstage Pass Institute of Gaming offers 100% placement support. Get mentorship, portfolio-building guidance, and direct access to top gaming companies and studios for internships and job placements." />
+         <meta name="description" content="Backstage Pass Institute of Gaming offers 100% placement support. Get mentorship, portfolio-building guidance, and direct access to top gaming companies and studios for internships and job placements." />
         <meta property="og:url" content="https://www.backstagepass.co.in/about-us/placement-support/" />
         <link rel="canonical" href="https://www.backstagepass.co.in/about-us/placement-support/" />
       </Helmet>

@@ -68,7 +68,7 @@ function App() {
   //     }
   //   }
   // };
- 
+
   const theme = createTheme({
     components: {
       MuiOutlinedInput: {
@@ -557,7 +557,10 @@ function App() {
       <Helmet>
         <title> Apply Now for Game Development Courses | Backstage Pass</title>
         <meta property="og:title" content="Apply Now for Game Development Courses | Backstage Pass" />
-        <meta property="og:description" name="description" content=" Applying to Backstage Pass is simple and fast. Fill out our online application form to get started with your game development education today." />
+
+        <meta name="description" content="Applying to Backstage Pass is simple and fast. Fill out our online application form to get started with your game development education today." />
+
+        <meta property="og:description" content="Applying to Backstage Pass is simple and fast. Fill out our online application form to get started with your game development education today." />
         <meta property="og:url" content="https://www.backstagepass.co.in/Application-form/" />
 
         <link rel="canonical" href="https://www.backstagepass.co.in/Application-form/" />
@@ -588,7 +591,7 @@ function App() {
 
             }}
           >
-            <h2 className='mainHeadingTotal'>Application form - 2026</h2>
+            <h1 className='mainHeadingTotal'>Application form - 2026</h1>
             {/* <Tabs value={activeTab} onChange={handleTabChange} sx={{
             display: 'flex',
             flexDirection: { xs: 'column', sm: 'row' },
@@ -2633,7 +2636,7 @@ function App() {
                     <Box mt={2} style={{ fontSize: isMobileState ? "17px" : "24px", color: '#000' }}>
                       {/* How did you find out about us */}
                       <Typography variant="subtitle1" style={{ fontSize: isMobileState ? "17px" : "24px", color: '#000' }}>
-                     Before submitting, please let us know how you heard about us:
+                        Before submitting, please let us know how you heard about us:
                       </Typography>
                       <RadioGroup
                         value={foundBy} // Keep it synced with foundBy state

@@ -411,6 +411,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
         <meta property="og:title" content="Build Your Career in Game Art" />
         <meta property="og:description" name="description" content="Learn 3D modeling, character design, and more. Start from scratch and master game art to create stunning game worlds and characters." />
+         <meta name="description" content="Learn 3D modeling, character design, and more. Start from scratch and master game art to create stunning game worlds and characters." />
         <meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/student-awards/" />
         <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/student-awards/" />
       </Helmet>

@@ -197,6 +197,7 @@ function Courses(props) {
 
         <meta property="og:title" content="Master’s in Game Technology | Advanced Game Development & Design" />
         <meta property="og:description" name="description" content="Take your game development skills to the next level with a Master's in Game Technology. Learn & gain in-depth training in C++, Unity, Unreal Engine, AI programming & Gameplay Programming for a top gaming career." />
+          <meta name="description" content="Take your game development skills to the next level with a Master's in Game Technology. Learn & gain in-depth training in C++, Unity, Unreal Engine, AI programming & Gameplay Programming for a top gaming career." />
         <meta property="og:url" content="https://www.backstagepass.co.in/courses/masters-in-game-technology/" />
         <meta name="keywords" content="masters in game development​,masters in game design, masters in game design india​, masters in computer science game development​, masters in game design and development​, masters in game development india, masters in game programming​, masters in gaming​, masters in video game design​" />
         <link rel="canonical" href="https://www.backstagepass.co.in/courses/masters-in-game-technology/" />

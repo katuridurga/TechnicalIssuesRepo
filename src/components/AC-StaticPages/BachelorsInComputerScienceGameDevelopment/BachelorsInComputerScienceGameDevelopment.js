@@ -256,6 +256,7 @@ function Courses(props) {
 
         <meta property="og:title" content="Bachelor's Degree in Computer Science & Game Development | Backstage Pass Institute of Gaming, Hyderabad, India" />
         <meta property="og:description" name="description" content="Backstage Pass Institute of Gaming is offering a Bachelor's Degree in Computer Science & Game Development. Master game design, game programming, and top game engines like Unity & Unreal. Enroll Now & Build a Career in Gaming!" />
+         <meta name="description" content="Backstage Pass Institute of Gaming is offering a Bachelor's Degree in Computer Science & Game Development. Master game design, game programming, and top game engines like Unity & Unreal. Enroll Now & Build a Career in Gaming!" />
         <meta property="og:url" content="https://www.backstagepass.co.in/courses/bachelors-in-computer-science-game-development/" />
         <meta name="keywords" content="game development courses, game development colleges in india, game development courses in india, Computer Science in Gaming, game programming courses, bsc game design and development, game development degree, game development degree in india, game developer courses in india, video game developer course​, video game development courses​, video game development courses in india​" />
         <link rel="canonical" href="https://www.backstagepass.co.in/courses/bachelors-in-computer-science-and-game-development/" />

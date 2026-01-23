@@ -101,6 +101,7 @@ function StudentShowcase(props) {
 
           <meta property="og:title" content="Student Awards & Achievements | Backstage Pass" />
           <meta property="og:description" name="description" content="From classroom to competition stage—see how Backstage Pass students are winning awards and getting noticed in the gaming world." />
+           <meta name="description" content="From classroom to competition stage—see how Backstage Pass students are winning awards and getting noticed in the gaming world." />
           <meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/student-awards/" />
           <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/student-awards/" />
         </Helmet>

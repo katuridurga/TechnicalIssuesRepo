@@ -153,6 +153,7 @@ function Courses(props) {
         <meta property="og:title" content="Best Game Design & Production Diploma Course in India | Backstage Pass Institute of Gaming" />
         <meta property="og:description" name="description" content="Backstage Pass Institute of Gaming is India’s leading Game Design college in Hyderabad. Our Diploma in Game Design and Production covers - genres, high-level design & hands-on Unity/Unreal Engine experience" />
         <meta property="og:url" content="https://www.backstagepass.co.in/courses/diploma-in-game-design-production/" />
+         <meta name="description" content="Backstage Pass Institute of Gaming is India’s leading Game Design college in Hyderabad. Our Diploma in Game Design and Production covers - genres, high-level design & hands-on Unity/Unreal Engine experience" />
         <meta name="keywords" content="Game Design Diploma India, Game Production Diploma India, Game Design and Production Course Hyderabad, Diploma in Game Development India, Game Production Training India, Game Design Fundamentals Diploma, Game Production Management Diploma, Introduction to Game Design Course​" />
         <link rel="canonical" href="https://www.backstagepass.co.in/courses/diploma-in-game-design-production/" />
       </Helmet>

@@ -236,6 +236,7 @@ function Courses(props) {
 
         <meta property="og:title" content="Bachelor's in Game Art & Design | Backstage Pass Institute of Gaming Hyderabad" />
         <meta property="og:description" name="description" content="Enroll in the Bachelor's in Game Art & Design program at Backstage Pass Institute of Gaming. Learn 2D & 3D game art, traditional Art, concept art, and game design. Master industry tools like Maya & ZBrush." />
+        <meta name="description" content="Enroll in the Bachelor's in Game Art & Design program at Backstage Pass Institute of Gaming. Learn 2D & 3D game art, traditional Art, concept art, and game design. Master industry tools like Maya & ZBrush." />
         <meta property="og:url" content="https://www.backstagepass.co.in/courses/bachelors-in-game-art-and-design/" />
         <meta name="keywords" content="game design courses, game designing courses after 12th, game design courses in india​, game design and development courses, game designing courses fees, game design and development courses​, game designing courses after 12th science, video game designer courses in india, game design courses near me, game design degree in india​, game design and development courses, game designing courses fees, game design colleges​" />
         <link rel="canonical" href="https://www.backstagepass.co.in/courses/bachelors-in-game-art-and-design/" />

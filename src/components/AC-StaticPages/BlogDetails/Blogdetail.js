@@ -629,6 +629,7 @@ window.addEventListener('beforeunload', function (event) {
         <title>{event.meta_tittle}</title>
         <meta property="og:title" content={event.meta_tittle} />
         <meta property="og:description" name="description" content={event.meta_des} />
+         <meta name="description"  content={event.meta_des} />
         <meta property="og:url" content={event.event_title_url} />
         <link rel="canonical" href={window.location.href} />
       </Helmet>

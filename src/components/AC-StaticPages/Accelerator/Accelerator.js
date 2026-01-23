@@ -176,6 +176,7 @@ function Courses(props) {
 
           <meta property="og:title" content="Game Development Accelerator Program | Backstage Pass Institute of Gaming" />
           <meta property="og:description" name="description" content="With Backstage Pass Gaming Accelerator Program, students have developed & published award-winning games. They also gained global exposure & mentorship to launch their own gaming studios." />
+           <meta name="description" content="With Backstage Pass Gaming Accelerator Program, students have developed & published award-winning games. They also gained global exposure & mentorship to launch their own gaming studios." />
           <meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/accelerator-program/" />
           <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/accelerator-program/" />
 

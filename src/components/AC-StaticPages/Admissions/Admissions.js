@@ -95,6 +95,7 @@ function Courses(props) {
 
           <meta property="og:title" content="Enroll Now | Top Gaming College in Hyderabad, India - Backstage Pass Institute of Gaming" />
           <meta property="og:description" name="description" content="Gain game development skills at Backstage Pass Institute of Gaming, Hyderabad's leading gaming college. Get practical training, expert guidance, and career support. Admissions open." />
+              <meta name="description" content="Gain game development skills at Backstage Pass Institute of Gaming, Hyderabad's leading gaming college. Get practical training, expert guidance, and career support. Admissions open." />
           <meta property="og:url" content="https://www.backstagepass.co.in/admissions/admission-process/" />
           <link rel="canonical" href="https://www.backstagepass.co.in/admissions/admission-process/" />
 

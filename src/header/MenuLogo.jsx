@@ -14,7 +14,12 @@ export default function MenuLogo() {
   return (
     <>
       {/* ✅ Single Link (no conditional mount) to avoid flicker */}
-      <Link to="/" className="mainLogo" aria-label="Backstage Pass Home">
+      <Link
+        to="/"
+        className="mainLogo"
+        aria-label="Backstage Pass Home"
+        title="Backstage Pass – Home"
+      >
         <img
           src={logo}
           alt="Backstage Pass"
@@ -32,6 +37,7 @@ export default function MenuLogo() {
           }}
         />
       </Link>
+
     </>
   );
 }
