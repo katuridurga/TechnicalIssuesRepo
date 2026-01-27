@@ -20,16 +20,12 @@ import { Helmet } from "react-helmet";
 import Box from '@mui/material/Box';
 
 import Dialog from '@mui/material/Dialog';
-import StudentGamesList from "../../../content/StudentGamesList";
 import MIntheMedia from "../../../content/MIntheMedia";
 
 import Flag1 from "../../../assets/img/banners/usa.webp";
 import Flag2 from "../../../assets/img/banners/uk.webp";
 import Flag3 from "../../../assets/img/banners/canada.webp";
 import Flag4 from "../../../assets/img/banners/sweden.webp";
-
-
-
 
 import axios from 'axios';
 import FeaturedProductL from "../../../content/FeaturedProductL.js";
@@ -129,19 +125,15 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
   }, []);
 
-  const OPTIONS = { loop: true }
-  const SLIDE_COUNT = 5
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+
+
+
 
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
     shallowEqual
   );
-  const [isActive, setIsActive] = useState(true);
-  const [isActives, setIsActives] = useState(true);
-  const [isActivess, setIsActivess] = useState(true);
-  const [isActivesss, setIsActivesss] = useState(true);
-  const theme = useTheme();
+
   const [value, setValue] = React.useState(0);
 
 
@@ -151,7 +143,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
   const handleClickOpen = () => {
     setOpen(true);
   };
- 
+
   // Function to scroll to the bottom of the container
   const scrollToBottom = () => {
     const container = document.getElementById('scroll-container');
@@ -199,11 +191,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     };
   }, []);
 
-  const [value1, setValue1] = React.useState(0);
-
-  const handleChange1 = (event, newValue) => {
-    setValue1(newValue);
-  };
   const [open, setOpen] = React.useState(false);
 
 
@@ -214,7 +201,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
   const [formData, setFormData] = useState({
     firstname: '',
-    lastname:'',
+    lastname: '',
     PhoneNumber: '',
     email: '',
     url: window.location.href,
@@ -223,7 +210,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
   });
 
   const handleInputChange = (event) => {
-   const { name, value } = event.target;
+    const { name, value } = event.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -239,9 +226,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       console.log(response);
       if (response.status === 200) {
         setOpen(true);
-            setTimeout(() => { 
-              window.location.reload(); 
-            }, 3000);
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
       }
       // Assuming the response indicates success
       // alert("Your data was submitted successfully!");
@@ -249,7 +236,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       // Reset form data
       setFormData({
         firstname: '',
-        lastname:'',
+        lastname: '',
         PhoneNumber: '',
         email: '',
         url: window.location.href, // Reset URL
@@ -261,16 +248,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     }
   };
 
-  const videoRef = useRef(null); // To reference the video element
-  const [isPlaying, setIsPlaying] = useState(false); // To manage the play state
-
-  const handlePlay = () => {
-    // Play the video when the image is clicked
-    if (videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true); // Update the state to hide the image
-    }
-  };
   // const handleDownload = () => {
   //   // For example, triggering a download of a file (replace with your own file URL or logic)
   //   const fileUrl = 'https://www.backstagepass.co.in/brouchers/UNITY-compressed.pdf'; // Replace with your file URL or logic
@@ -284,7 +261,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     const fileContent = "This is the content of your file"; // Example content
     const blob = new Blob([fileContent], { type: 'text/plain' });
     const downloadLink = URL.createObjectURL(blob); // Create a URL for the Blob
-    
+
     // Create an anchor element programmatically to trigger the download
     const a = document.createElement('a');
     a.href = downloadLink;
@@ -353,7 +330,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       <Helmet>
         <title> Short Course on Game Development with Unity | Certified Skills | Backstage Pass
         </title>
-        <meta  name="description" content="Learn to develop games with Unity. Gain industry-relevant skills and build a portfolio. Earn your Skill Diploma at Backstage Pass Institute.
+        <meta name="description" content="Learn to develop games with Unity. Gain industry-relevant skills and build a portfolio. Earn your Skill Diploma at Backstage Pass Institute.
 " />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
@@ -362,25 +339,25 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
           <div style={{ width: isMobileState ? "100%" : "100%", margin: isMobileState ? "50px auto" : "0px auto" }}>
 
-           
-           
-            <a onClick={scrollToBottom}>
-            <div className={`et_pb_section bgimage et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'Unity-Developermc' : 'Unity-Developerc'}`}>
-              
-              <div className="et_pb_row et_pb_row_0">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">Certified Skill Diploma in Game Development with Unity
 
-</h1></div>
-            </div>
-          </div>
-        </div>
-            </div>
-            
+
+            <a onClick={scrollToBottom}>
+              <div className={`et_pb_section bgimage et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'Unity-Developermc' : 'Unity-Developerc'}`}>
+
+                <div className="et_pb_row et_pb_row_0">
+                  <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                    <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+                      <div className="et_pb_text_inner"><h1 className="title white-txt">Certified Skill Diploma in Game Development with Unity
+
+                      </h1></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </a>
-       
-   
+
+
             {/* <div className='MainVideoSection'>
               <h3 style={{ textTransform: "capitalize" }}>Make a Career in Gaming that pays you from 3 LPA to  30 LPA*</h3>
               <div className="videomain2">
@@ -402,17 +379,17 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             </div> */}
 
             <div className="mainrec22s">
-              <img src={recimg} alt="recimg" style={{ width: "100%", height: "100%"}} />
+              <img src={recimg} alt="recimg" style={{ width: "100%", height: "100%" }} />
 
             </div>
-<div className='eldiv'>
-  <ul className='elm'>
-    <li><b>Eligibility</b>: 10+2 	</li>
-    <li><b>Duration</b>: 3 Months – 120 Hours</li>
-    <li><b>Mode</b>: Online Live & Interactive
-    </li>
-  </ul>
-</div>
+            <div className='eldiv'>
+              <ul className='elm'>
+                <li><b>Eligibility</b>: 10+2 	</li>
+                <li><b>Duration</b>: 3 Months – 120 Hours</li>
+                <li><b>Mode</b>: Online Live & Interactive
+                </li>
+              </ul>
+            </div>
             <h2 className='mainHeadingTotall-2'>What This Course Offers
 
             </h2>
@@ -420,34 +397,34 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             <ul className='featuress2'>
               <li><img src={ic1} alt="ic1" />
 
-                <div className='featuresscon2'>Foundation of C# Programming 	
+                <div className='featuresscon2'>Foundation of C# Programming
 
                 </div></li>
               <li><img src={ic2} alt="ic1" />
 
-                <div className='featuresscon2'>Unity Basic Concepts 	
+                <div className='featuresscon2'>Unity Basic Concepts
 
 
                 </div></li>
               <li><img src={icg} alt="ic1" style={{ height: isMobileState ? "30px" : "50px", width: isMobileState ? "30px" : "50px" }} />
 
-                <div className='featuresscon2'>Unity Intermediate Concepts 
+                <div className='featuresscon2'>Unity Intermediate Concepts
 
 
                 </div></li>
               <li><img src={ic4} alt="ic1" />
 
-                <div className='featuresscon2'>Developing 2D Games Using Unity 
+                <div className='featuresscon2'>Developing 2D Games Using Unity
 
 
                 </div></li>
               <li><img src={ic5} alt="ic1" />
 
-                <div className='featuresscon2'>Developing 3D Games Using Unity 
+                <div className='featuresscon2'>Developing 3D Games Using Unity
 
 
                 </div></li>
-            
+
             </ul>
 
             {/* <div className='chapters' id="chapters1" style={{height:isMobileState ? '1140px':'480px' }}>
@@ -463,81 +440,81 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               <FeaturedProductL />
               {/* <Awards /> */}
 
-              <div className="CousellingButton1 tetstL1" onClick={scrollToBottom}><button className="dwnbtn three w-full sm:w-auto" style={{ width: "450px"}}  onClick={() => setIsOpenM(true)}>Download Brochure
+              <div className="CousellingButton1 tetstL1" onClick={scrollToBottom}><button className="dwnbtn three w-full sm:w-auto" style={{ width: "450px" }} onClick={() => setIsOpenM(true)}>Download Brochure
               </button> </div>
             </div>
             {isOpenM && (
-        <div className="overlayM">
-          <div className="popupM">
-          <form onSubmit={handleSubmit} className="formMain">
+              <div className="overlayM">
+                <div className="popupM">
+                  <form onSubmit={handleSubmit} className="formMain">
 
-<div className="formGrid-2M" data-form-id="need-guidance" data-form="step1-container">
+                    <div className="formGrid-2M" data-form-id="need-guidance" data-form="step1-container">
 
-<button className="close-btnM" onClick={() => setIsOpenM(false)}>
-            <HighlightOffIcon/>
-            </button>
-  <div className="close-btnMd">
-    <label className="" for="firstname">First Name  <span style={{color:"#ec1923"}}>*</span></label>
-    <input  className="inputm"  placeholder="First Name" id="firstname" name="firstname" type="text" value={formData.firstname} onChange={handleInputChange} required />
-  </div>
-  <div className="close-btnMd">
-    <label className="" for="lastname">Last Name <span style={{color:"#ec1923"}}>*</span></label>
-    <input  className="inputm"  placeholder="Last Name" id="lastname" name="lastname" type="text" value={formData.lastname} onChange={handleInputChange} required />
-  </div>
-  <div className="close-btnMd">
-                      <label className="" for="Phone Number">Phone Number <span style={{color:"#ec1923"}}>*</span></label>
-                      <input className="inputm" placeholder="Phone Number" id="PhoneNumber" name="PhoneNumber" type="tel" pattern="[6-9][0-9]{9}" minlength="10" maxlength="10" value={formData.PhoneNumber} onChange={handleInputChange} required />
+                      <button className="close-btnM" onClick={() => setIsOpenM(false)}>
+                        <HighlightOffIcon />
+                      </button>
+                      <div className="close-btnMd">
+                        <label className="" for="firstname">First Name  <span style={{ color: "#ec1923" }}>*</span></label>
+                        <input className="inputm" placeholder="First Name" id="firstname" name="firstname" type="text" value={formData.firstname} onChange={handleInputChange} required />
+                      </div>
+                      <div className="close-btnMd">
+                        <label className="" for="lastname">Last Name <span style={{ color: "#ec1923" }}>*</span></label>
+                        <input className="inputm" placeholder="Last Name" id="lastname" name="lastname" type="text" value={formData.lastname} onChange={handleInputChange} required />
+                      </div>
+                      <div className="close-btnMd">
+                        <label className="" for="Phone Number">Phone Number <span style={{ color: "#ec1923" }}>*</span></label>
+                        <input className="inputm" placeholder="Phone Number" id="PhoneNumber" name="PhoneNumber" type="tel" pattern="[6-9][0-9]{9}" minlength="10" maxlength="10" value={formData.PhoneNumber} onChange={handleInputChange} required />
+                      </div>
+                      <div className="close-btnMd">
+                        <label className="" for="Phone Number">Email <span style={{ color: "#ec1923" }}>*</span></label>
+                        <input className="inputm" placeholder="Email" id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} required />
+                      </div>
+
                     </div>
-                    <div className="close-btnMd">
-                      <label className="" for="Phone Number">Email <span style={{color:"#ec1923"}}>*</span></label>
-                      <input className="inputm" placeholder="Email" id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} required />
-                    </div>
 
-  </div>
-  
-  <div>
-                    <button className=" three button brand size200m w-full sm:w-auto" data-form-id="need-guidance" data-form="step1-button-continue" type="submit">
-                      Submit
-                    </button>
+                    <div>
+                      <button className=" three button brand size200m w-full sm:w-auto" data-form-id="need-guidance" data-form="step1-button-continue" type="submit">
+                        Submit
+                      </button>
 
-                  </div> </form>
+                    </div> </form>
 
                   <React.Fragment>
-                  
-                                    <Dialog
-                                      open={open}
-                                      TransitionComponent={Transition}
-                                      keepMounted
-                                      onClose={handleClose}
-                                      aria-describedby="alert-dialog-slide-description"
-                                    >
-                                      <DialogContent>
-                                     
-                                        <DialogContentText id="alert-dialog-slide-description" style={{ fontSize: "19px", fontWeight: "500", color:"#ec1923", fontFamily: "'Montserrat', sans-serif" }}>
-                                        Brochure download link has been sent to your email.                  
-                                        </DialogContentText>
-                                      </DialogContent>
-                                 
-                                    </Dialog>
-                                  </React.Fragment>
-                                  {/* <button className="close-btnM" onClick={() => setIsOpenM(false)}>
+
+                    <Dialog
+                      open={open}
+                      TransitionComponent={Transition}
+                      keepMounted
+                      onClose={handleClose}
+                      aria-describedby="alert-dialog-slide-description"
+                    >
+                      <DialogContent>
+
+                        <DialogContentText id="alert-dialog-slide-description" style={{ fontSize: "19px", fontWeight: "500", color: "#ec1923", fontFamily: "'Montserrat', sans-serif" }}>
+                          Brochure download link has been sent to your email.
+                        </DialogContentText>
+                      </DialogContent>
+
+                    </Dialog>
+                  </React.Fragment>
+                  {/* <button className="close-btnM" onClick={() => setIsOpenM(false)}>
               Download
             </button> */}
-           
-          </div>
-        </div>
-      )}
+
+                </div>
+              </div>
+            )}
 
             <h2 className='mainHeadingTotall-2'>In the Media</h2>
 
             {isMobileState ? <MIntheMedia /> :
 
               <ul className='CountryLogoss'>
-                <li><img src={B1} alt="b1"/>
+                <li><img src={B1} alt="b1" />
 
                 </li>
 
-                <li><img src={B2} alt="b2"/>
+                <li><img src={B2} alt="b2" />
 
                 </li>
 
@@ -555,7 +532,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
             </h2>
 
-            <ul className='featuress3u' style={{backgroundColor:"#222"}}>
+            <ul className='featuress3u' style={{ backgroundColor: "#222" }}>
               <li><img src={ic7} alt="ic1" />
 
                 <div className='featuresscon2'>Game Developer
@@ -585,71 +562,71 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <div className='featuresscon2'>AR/VR Developer
 
                 </div></li>
-                <li><img src={ic8} alt="ic1" />
+              <li><img src={ic8} alt="ic1" />
                 <div className='featuresscon2'>Game Tester & QA Analyst
                 </div></li>
-                
+
             </ul>
-{/* 
+            {/* 
             <h2 className='mainHeadingTotall-2'>Learn from scratch to advanced level and build games like...</h2>
 
             <StudentGamesList /> */}
-           
+
 
 
 
 
             <div id="Career-Opportunitiesl" backgroundColor="brown" height="auto">
-             
-             
-                <div>
+
+
+              <div>
                 <h2 className='mainHeadingTotall-2'>What You’ll Achieve
-                 		 				
-                  </h2>
+
+                </h2>
                 <ul className='featuress3'>
-                  
-              <li><img src={ic7} alt="ic1" />
 
-                <div className='featuresscon2'>Master C# for game development
+                  <li><img src={ic7} alt="ic1" />
 
-
-                </div></li>
-              <li><img src={ic13} alt="ic1" />
-                <div className='featuresscon2'>Expertise in Unity tools & workflows
+                    <div className='featuresscon2'>Master C# for game development
 
 
-                </div></li>
-              <li><img src={ic9} alt="ic1" />
-
-                <div className='featuresscon2'>Build 2D & 3D games
-
-
-                </div></li>
-              <li><img src={ic8} alt="ic1" />
-                <div className='featuresscon2'>Hands-on experience in physics, AI & UI
+                    </div></li>
+                  <li><img src={ic13} alt="ic1" />
+                    <div className='featuresscon2'>Expertise in Unity tools & workflows
 
 
+                    </div></li>
+                  <li><img src={ic9} alt="ic1" />
 
-                </div></li>
-
-              <li><img src={ic10} alt="ic1" />
-
-                <div className='featuresscon2'>Optimize & deploy games
+                    <div className='featuresscon2'>Build 2D & 3D games
 
 
-                </div></li>
-          
-                <li><img src={ic13} alt="ic1" />
-                <div className='featuresscon2'>Create a game portfolio
+                    </div></li>
+                  <li><img src={ic8} alt="ic1" />
+                    <div className='featuresscon2'>Hands-on experience in physics, AI & UI
 
 
 
-                </div></li>
+                    </div></li>
 
-            </ul>
-            </div>
+                  <li><img src={ic10} alt="ic1" />
 
-          
+                    <div className='featuresscon2'>Optimize & deploy games
+
+
+                    </div></li>
+
+                  <li><img src={ic13} alt="ic1" />
+                    <div className='featuresscon2'>Create a game portfolio
+
+
+
+                    </div></li>
+
+                </ul>
+              </div>
+
+
 
             </div>
 
@@ -659,21 +636,21 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
             <div style={{ margin: '0px auto' }}>
               <ul className='CountryLogos'>
-                <li><img src={Flag1}  style={{width:"100%", height:isMobileState ?"100%":"130px"}} alt="Flag1"/>
+                <li><img src={Flag1} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag1" />
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United States</div>}</li>
 
-                <li><img src={Flag2}  style={{width:"100%", height:isMobileState ?"100%":"130px"}} alt="Flag2"/>
+                <li><img src={Flag2} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag2" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United Kingdom</div>}</li>
 
-                <li><img src={Flag3}  style={{width:"100%", height:isMobileState ?"100%":"130px"}} alt="Flag3"/>
+                <li><img src={Flag3} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag3" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Canada</div>}</li>
 
-                <li><img src={Flag4}  style={{width:"100%", height:isMobileState ?"100%":"130px"}} alt="Flag4"/>
+                <li><img src={Flag4} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag4" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Sweden</div>}</li>
@@ -692,25 +669,25 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
             </Marquee>
 
-            <div className="CousellingButton1 tetstL1" onClick={scrollToBottom}><button className="dwnbtn three w-full sm:w-auto" style={{ width: "450px"}}  onClick={() => setIsOpenM(true)}>Download Brochure
+            <div className="CousellingButton1 tetstL1" onClick={scrollToBottom}><button className="dwnbtn three w-full sm:w-auto" style={{ width: "450px" }} onClick={() => setIsOpenM(true)}>Download Brochure
             </button> </div>
-           
 
 
 
 
 
 
-          
+
+
           </div>
 
 
         </div>
       </div>
       {isButtonVisible && (
-         <div className="CousellingButton1 tetstL1" style={{marginBottom:"0px"}} onClick={scrollToBottom}><button className="dwnbtn three w-full sm:w-auto" style={{ width: "450px"}}  onClick={() => setIsOpenM(true)}>Download Brochure
-              </button> </div>
-       )}
+        <div className="CousellingButton1 tetstL1" style={{ marginBottom: "0px" }} onClick={scrollToBottom}><button className="dwnbtn three w-full sm:w-auto" style={{ width: "450px" }} onClick={() => setIsOpenM(true)}>Download Brochure
+        </button> </div>
+      )}
 
     </>
   )

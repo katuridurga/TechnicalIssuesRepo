@@ -234,8 +234,9 @@ function Courses(props) {
         <Helmet>
           <title> Financial Assistance & Scholarships | Backstage Pass Institute of Gaming</title>
           <meta property="og:title" content=" Financial Assistance & Scholarships | Backstage Pass Institute of Gaming" />
+           <meta name="description" content="Make your gaming education affordable with student loan options, scholarships, and financial aid from Backstage Pass Institute of Gaming. Our program features 0% interest and quick processing." />
           <meta property="og:description" name="description" content="Make your gaming education affordable with student loan options, scholarships, and financial aid from Backstage Pass Institute of Gaming. Our program features 0% interest and quick processing." />
-          <meta name="description" content="Make your gaming education affordable with student loan options, scholarships, and financial aid from Backstage Pass Institute of Gaming. Our program features 0% interest and quick processing." />
+         
           <meta property="og:url" content="https://www.backstagepass.co.in/admissions/financial-assistance-and-scholarship/" />
 
           <link rel="canonical" href="https://www.backstagepass.co.in/admissions/financial-assistance-and-scholarship/" />

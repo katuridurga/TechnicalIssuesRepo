@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import { Helmet } from "react-helmet";
 import ic13 from '../../../assets/img/Icons/WEBSITE-ICON/Narrative.webp';
 import Box from '@mui/material/Box';
-
-
 import axios from 'axios';
 import { useSelector, shallowEqual } from "react-redux";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
@@ -16,11 +14,6 @@ import ic7 from '../../../assets/img/Icons/WEBSITE-ICON/Tester.webp';
 import ic8 from '../../../assets/img/Icons/WEBSITE-ICON/Level.webp';
 import ic9 from '../../../assets/img/Icons/WEBSITE-ICON/Game.webp';
 import ic10 from '../../../assets/img/Icons/WEBSITE-ICON/Writer.webp';
-
-
-
-
-
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -116,9 +109,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     setIsButtonVisible(true);
   };
 
-
-
-
   const handleClickss = () => {
     // Redirect to the '/new-page' route
     window.open('/landingpage/short-course/', '_blank');
@@ -158,8 +148,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
   }, []);
 
   const [open, setOpen] = React.useState(false);
-
-
 
   const handleClose = () => {
     setOpen(false);
@@ -242,24 +230,18 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     window.location.reload();
   };
 
-
-
-
-
   return (
     <>
       <Helmet>
         <title> Certificate Program in Essentials of Game Design | Backstage Pass
         </title>
-        <meta  name="description" content="Certificate Program in Essentials of Game Design" />
+        <meta name="description" content="Certificate Program in Essentials of Game Design" />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
       <div className="row mb0" id="scroll-container" >
         <div className="mainPanel1">
 
           <div style={{ width: isMobileState ? "100%" : "100%", margin: isMobileState ? "50px auto" : "0px auto" }}>
-
-
 
             <a onClick={scrollToBottom}>
               <div className={`et_pb_section bgimage et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'ESSENTIALSOFGAMEDESIGNmc' : 'ESSENTIALSOFGAMEDESIGN'}`}>
@@ -287,8 +269,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               <p>The Certificate Program in Essentials of Game Design is a 20-hour beginner-friendly course designed to introduce students to core game design concepts, pre-production planning, and system design. Through interactive sessions and hands-on exercises, students will learn how to conceptualize, plan, and design engaging games.</p>
               <p>This course, mentored by industry experts, provides a strong foundation in game mechanics, storytelling, and level design, helping students develop a game concept document and prototype by the end of the program.</p>
             </div>
-
-
             <div className='courseObj'>
               <h2>Course Objectives</h2>
               <ul>
@@ -310,8 +290,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <li>Build a basic game prototype as a portfolio piece.</li>
               </ul>
             </div>
-
-
             <div className='courseObj1'>
               <h2>Course Modules</h2>
               <ul>
@@ -322,36 +300,29 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               </ul>
             </div>
 
-
-
-
-
-
-
-
             <h2 className='mainHeadingTotall-2'>Career Opportunities</h2>
             <div className='courseObj1'>
-              <p style={{color:"#000000"}}>Upon completing this course, students will have the foundational knowledge to explore roles such as:</p>
+              <p style={{ color: "#000000" }}>Upon completing this course, students will have the foundational knowledge to explore roles such as:</p>
             </div>
             <ul className='featuress3u'>
               <li><img src={ic9} alt="ic1" />
 
-                <div className='featuresscon2' style={{color:"#000"}}>Game Designer
+                <div className='featuresscon2' style={{ color: "#000" }}>Game Designer
 
                 </div></li>
 
               <li><img src={ic8} alt="ic1" />
-                <div className='featuresscon2' style={{color:"#000"}}>Level Designer
+                <div className='featuresscon2' style={{ color: "#000" }}>Level Designer
                 </div></li>
 
               <li><img src={ic7} alt="ic1" />
 
-                <div className='featuresscon2' style={{color:"#000"}}>Gameplay Tester
+                <div className='featuresscon2' style={{ color: "#000" }}>Gameplay Tester
 
 
                 </div></li>
               <li><img src={ic13} alt="ic1" />
-                <div className='featuresscon2' style={{color:"#000"}}>Narrative Designer
+                <div className='featuresscon2' style={{ color: "#000" }}>Narrative Designer
 
                 </div></li>
 
@@ -359,7 +330,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
               <li><img src={ic10} alt="ic1" />
 
-                <div className='featuresscon2' style={{color:"#000"}}>Game Writer
+                <div className='featuresscon2' style={{ color: "#000" }}>Game Writer
 
 
                 </div></li>
@@ -371,22 +342,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             </div>
 
 
-
-
-
-
-
-
-
             <div className="CousellingButton1 tetstL1" onClick={scrollToBottom}><button className="dwnbtn three w-full sm:w-auto" style={{ width: "450px" }} onClick={() => setIsOpenM(true)}>Download Brochure
             </button> </div>
-
-
-
-
-
-
-
 
           </div>
 

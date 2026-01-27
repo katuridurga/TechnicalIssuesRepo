@@ -11,7 +11,6 @@ import r4 from "../../../assets/img/partners/r4.png";
 import r5 from "../../../assets/img/partners/r5.png";
 import r6 from "../../../assets/img/partners/r6.svg";
 import r7 from "../../../assets/img/partners/r7.png";
-import artad1 from "../../../assets/img/art/art1.webp";
 import MscGameTechnology3d from "../../../assets/img/Courses/3dgameartandgamedesign.webp"
 import GAIMG from "../../../assets/img/partners/Icons/3DModelingenthusiast.webp";
 import GAIMG1 from "../../../assets/img/partners/Icons/AFineArtsstudent.webp";

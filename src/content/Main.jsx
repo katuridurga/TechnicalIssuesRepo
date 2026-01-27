@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet";
 
 
 // Lazy-loaded Components
-const Footer = lazy(() => import("../components/AC-Footer/Footer.jsx"));
+
 const Buzzing = lazy(() => import("./Buzzing"));
 const Awards = lazy(() => import("./awards"));
 const HomeContent = lazy(() => import("./HomeContent"));
@@ -19,7 +19,7 @@ const FeaturedProduct = lazy(() => import("./FeaturedProduct"));
 const FeaturedProducts = lazy(() => import("./FeaturedProducts"));
 const TopRequiters = lazy(() => import("./topRequiters"));
 const EmblaCarousel = lazy(() => import('./EmblaCarousel.js'));
-
+const Footer = lazy(() => import("../components/AC-Footer/Footer.jsx"));
 // Loader fallback
 const Loader = () => (
   <div className="loader-container">

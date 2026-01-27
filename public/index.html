@@ -22,7 +22,8 @@
 
   <!-- ✅ LCP Image Preloads -->
   <!-- Mobile -->
-  <link rel="preload" as="image" href="/img/mobilebanner/homepagebanner/NewCampus.webp" media="(max-width:768px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/img/mobilebanner/homepagebanner/NewCampus.webp" media="(max-width:768px)"
+    fetchpriority="high" />
   <!-- Desktop -->
   <link rel="preload" as="image" href="/img/banners/NewCampus.webp" media="(min-width:769px)" fetchpriority="high" />
 
@@ -124,18 +125,30 @@
       style="display:none;visibility:hidden"></iframe>
   </noscript>
 
-  <!-- ✅ LCP Banner -->
-<picture>
-  <source srcset="/img/mobilebanner/homepagebanner/NewCampus.webp" media="(max-width:768px)" />
+<!-- ✅ LCP Banner (Safari safe) -->
+<!-- <picture>
+  <source
+    srcset="/img/mobilebanner/homepagebanner/NewCampus.webp"
+    type="image/webp"
+    media="(max-width:768px)"
+  />
+
+  <source
+    srcset="/img/mobilebanner/homepagebanner/NewCampus.jpg"
+    media="(max-width:768px)"
+  />
+
   <img
-    src="/img/banners/NewCampus.webp"
+    src="/img/banners/NewCampus.jpg"
     alt="Home Banner"
     width="1526"
+    height="860"
     loading="eager"
+    decoding="sync"
     fetchpriority="high"
     style="width:100%;height:auto;"
   />
-</picture>
+</picture> -->
 
 
   <div id="root"></div>

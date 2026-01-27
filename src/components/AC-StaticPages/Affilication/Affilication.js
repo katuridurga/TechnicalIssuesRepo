@@ -52,12 +52,13 @@ function Affilication() {
           property="og:title"
           content="Backstage Pass Institute of Gaming is Accredited by JNAFAU & Lincoln University"
         />
+        <meta name="description" content="Backstage Pass is affiliated with top universities like JNAFAU and Lincoln University to offer globally recognized programs in gaming and digital arts." />
         <meta
           property="og:description"
           name="description"
           content="Backstage Pass is affiliated with top universities like JNAFAU and Lincoln University to offer globally recognized programs in gaming and digital arts."
         />
-           <meta name="description" content="Backstage Pass is affiliated with top universities like JNAFAU and Lincoln University to offer globally recognized programs in gaming and digital arts." />
+           
         <meta
           property="og:url"
           content="https://www.backstagepass.co.in/about-us/affiliation-collaboration/"
