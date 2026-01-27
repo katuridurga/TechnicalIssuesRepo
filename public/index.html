@@ -135,7 +135,6 @@
 
   <div id="root"></div>
 
-  <!-- React chunk cache cleanup -->
   <script>
     (async function () {
       try {
@@ -144,25 +143,35 @@
           .sort()
           .join(',');
 
-        const previousChunks = localStorage.getItem('react_build_chunks');
+      const previousChunks = localStorage.getItem('react_build_chunks');  // Retrieve the previous chunks from localStorage
 
-        if (previousChunks && previousChunks !== currentChunks) {
-          console.log('🧹 New React build detected — clearing old cached chunks...');
-          if ('caches' in window) {
-            const cacheNames = await caches.keys();
-            await Promise.all(cacheNames.map(name => caches.delete(name)));
-          }
-          localStorage.clear();
-          sessionStorage.clear();
-          location.reload(true);
+      // If the chunks are different, a new build is detected
+      if (previousChunks && previousChunks !== currentChunks) {
+        console.log('🧹 New React build detected — clearing old cached chunks...');
+        
+        // Clear cache and storage for the old build
+        if ('caches' in window) {
+          const cacheNames = await caches.keys();
+          await Promise.all(cacheNames.map(name => caches.delete(name)));  // Delete all caches
         }
+        
+        localStorage.clear();  // Clear localStorage
+        sessionStorage.clear();  // Clear sessionStorage
 
-        localStorage.setItem('react_build_chunks', currentChunks);
-      } catch (e) {
-        console.warn('Cache cleanup failed:', e);
+        // Ask the user if they want to reload the page instead of forcing it immediately
+        if (confirm('A new version of the app is available. Would you like to reload?')) {
+          location.reload(true);  // Reload the page if the user agrees
+        }
       }
-    })();
-  </script>
+
+      // Store the current chunk list in localStorage for future checks
+      localStorage.setItem('react_build_chunks', currentChunks);
+    } catch (e) {
+      console.warn('Cache cleanup failed:', e);  // Log any errors
+    }
+  });
+</script>
+
 
 </body>
 
