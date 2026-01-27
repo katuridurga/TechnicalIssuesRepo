@@ -114,35 +114,20 @@ const EmblaCarousel = (props) => {
               </picture>
 
             </div>
-           <div className="embla__slide" key={220}>
-  <picture>
-    {/* Mobile WebP */}
-    <source
-      srcSet={mbnewbanF}
-      type="image/webp"
-      media="(max-width: 768px)"
-    />
-
-    {/* Mobile JPG fallback */}
-    <source
-      srcSet={mbnewbanF.replace(".webp", ".jpg")}
-      media="(max-width: 768px)"
-    />
-
-    {/* Desktop fallback */}
-    <img
-      src={newbanF.replace(".webp", ".jpg")}
-      alt="Home Banner"
-      width={1526}
-      height={450}
-      loading="eager"
-      decoding="sync"
-      fetchpriority="high"
-      style={{ width: "100%", height: "auto" }}
-    />
-  </picture>
-</div>
-
+            <div className="embla__slide" key={220}>
+              <picture>
+                <source srcSet={mbnewbanF} media="(max-width: 768px)" />
+                <img
+                  src={newbanF}
+                  alt="Home Banner"
+                  width={1526}
+                  height={450}
+                  fetchpriority="high"
+                  decoding="async"
+                  style={{ width: "100%" }}
+                />
+              </picture>
+            </div>
             <div className="embla__slide" key={3}>
               <picture>
                 <source srcSet={mbnewban3} media="(max-width: 768px)" />
