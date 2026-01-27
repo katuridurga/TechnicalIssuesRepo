@@ -22,7 +22,8 @@
 
   <!-- ✅ LCP Image Preloads -->
   <!-- Mobile -->
-  <link rel="preload" as="image" href="/img/mobilebanner/homepagebanner/NewCampus.webp" media="(max-width:768px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/img/mobilebanner/homepagebanner/NewCampus.webp" media="(max-width:768px)"
+    fetchpriority="high" />
   <!-- Desktop -->
   <link rel="preload" as="image" href="/img/banners/NewCampus.webp" media="(min-width:769px)" fetchpriority="high" />
 
@@ -92,7 +93,7 @@
     })();
   </script>
 
-  <script>
+  <!-- <script>
     window.addEventListener('DOMContentLoaded', () => {
       requestIdleCallback(() => {
         document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
@@ -114,7 +115,7 @@
         });
       });
     });
-  </script>
+  </script> -->
 
 </head>
 
@@ -125,17 +126,11 @@
   </noscript>
 
   <!-- ✅ LCP Banner -->
-<picture>
-  <source srcset="/img/mobilebanner/homepagebanner/NewCampus.webp" media="(max-width:768px)" />
-  <img
-    src="/img/banners/NewCampus.webp"
-    alt="Home Banner"
-    width="1526"
-    loading="eager"
-    fetchpriority="high"
-    style="width:100%;height:auto;"
-  />
-</picture>
+  <picture>
+    <source srcset="/img/mobilebanner/homepagebanner/NewCampus.webp" media="(max-width:768px)" />
+    <img src="/img/banners/NewCampus.webp" alt="Home Banner" width="1526" loading="eager" fetchpriority="high"
+      style="width:100%;height:auto;" />
+  </picture>
 
 
   <div id="root"></div>
