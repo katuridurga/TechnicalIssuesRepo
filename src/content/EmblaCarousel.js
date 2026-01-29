@@ -104,7 +104,7 @@ const EmblaCarousel = (props) => {
                 <source srcSet={mbnewban0} media="(max-width: 768px)" />
                 <img
                   src={newban1}
-                  alt="Home Banner"
+                  alt="newban1"
                   width={1526}
                   height={450}
                   loading="eager"          // ✅ REQUIRED for LCP

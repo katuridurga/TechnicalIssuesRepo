@@ -84,38 +84,46 @@
   </noscript>
 
   <!-- Matomo Tag Manager -->
-  <script>
+  <!-- <script>
     var _mtm = window._mtm = window._mtm || [];
     _mtm.push({ 'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start' });
     (function () {
       var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
       g.async = true; g.src = 'https://cdn.matomo.cloud/backstagepass.matomo.cloud/container_Fa2LaVPH.js'; s.parentNode.insertBefore(g, s);
     })();
-  </script>
-
-  <!-- <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      requestIdleCallback(() => {
-        document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
-          const href = link.getAttribute('href');
-          if (href && href.includes('.chunk.css')) {
-            const preload = document.createElement('link');
-            preload.rel = 'preload';
-            preload.as = 'style';
-            preload.href = href;
-            preload.onload = function () {
-              this.rel = 'stylesheet';
-            };
-            preload.onerror = function () {
-              this.rel = 'stylesheet';
-            };
-            link.remove();
-            document.head.appendChild(preload);
-          }
-        });
-      });
-    });
   </script> -->
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      var _mtm = window._mtm = window._mtm || [];
+      _mtm.push({ 'mtm.startTime': Date.now(), 'event': 'mtm.Start' });
+
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.async = true;
+      g.src = 'https://cdn.matomo.cloud/backstagepass.matomo.cloud/container_Fa2LaVPH.js';
+      s.parentNode.insertBefore(g, s);
+    }, 3000);
+  });
+</script>
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && href.includes('.chunk.css')) {
+          const preload = document.createElement('link');
+          preload.rel = 'preload';
+          preload.as = 'style';
+          preload.href = href;
+          preload.onload = () => preload.rel = 'stylesheet';
+          document.head.appendChild(preload);
+          link.remove();
+        }
+      });
+    }, 2000);
+  });
+</script>
+
 
 </head>
 
@@ -125,54 +133,64 @@
       style="display:none;visibility:hidden"></iframe>
   </noscript>
 
-  <!-- ✅ LCP Banner -->
-  <picture>
-    <source srcset="/img/mobilebanner/homepagebanner/NewCampus.webp" media="(max-width:768px)" />
-    <img src="/img/banners/NewCampus.webp" alt="Home Banner" width="1526" loading="eager" fetchpriority="high"
-      style="width:100%;height:auto;" />
-  </picture>
+<!-- ✅ LCP Banner
+<picture>
+ 
+  <source
+    srcset="/img/mobilebanner/homepagebanner/NewCampus.webp"
+    media="(max-width: 768px)"
+    type="image/webp"
+  />
+
+  <img
+    src="/img/banners/NewCampus.webp"
+    alt="Backstage Pass Institute of Gaming – New Campus"
+    title="Backstage Pass Institute of Gaming New Campus – Hyderabad"
+    width="1600"
+    height="900"
+    loading="eager"
+    decoding="async"
+    style="width:100%;height:auto;"
+  />
+</picture> -->
 
 
   <div id="root"></div>
 
+  <!-- React chunk cache cleanup (delayed + safe for mobile) -->
   <script>
-    (async function () {
+    let cacheCleaned = false;
+
+    const cleanCache = async () => {
+      if (cacheCleaned) return;
+      cacheCleaned = true;
+
       try {
-        const currentChunks = Array.from(document.querySelectorAll('script[src*=".chunk."]'))
+        const currentChunks = Array.from(
+          document.querySelectorAll('script[src*=".chunk."]')
+        )
           .map(s => s.src.split('/').pop())
           .sort()
           .join(',');
 
-      const previousChunks = localStorage.getItem('react_build_chunks');  // Retrieve the previous chunks from localStorage
+        const previousChunks = localStorage.getItem('react_build_chunks');
 
-      // If the chunks are different, a new build is detected
-      if (previousChunks && previousChunks !== currentChunks) {
-        console.log('🧹 New React build detected — clearing old cached chunks...');
-        
-        // Clear cache and storage for the old build
-        if ('caches' in window) {
-          const cacheNames = await caches.keys();
-          await Promise.all(cacheNames.map(name => caches.delete(name)));  // Delete all caches
+        if (previousChunks && previousChunks !== currentChunks) {
+          if ('caches' in window) {
+            const cacheNames = await caches.keys();
+            await Promise.all(cacheNames.map(name => caches.delete(name)));
+          }
+          localStorage.clear();
+          sessionStorage.clear();
+          location.reload();
         }
-        
-        localStorage.clear();  // Clear localStorage
-        sessionStorage.clear();  // Clear sessionStorage
 
-        // Ask the user if they want to reload the page instead of forcing it immediately
-        if (confirm('A new version of the app is available. Would you like to reload?')) {
-          location.reload(true);  // Reload the page if the user agrees
-        }
-      }
+        localStorage.setItem('react_build_chunks', currentChunks);
+      } catch (e) {}
+    };
 
-      // Store the current chunk list in localStorage for future checks
-      localStorage.setItem('react_build_chunks', currentChunks);
-    } catch (e) {
-      console.warn('Cache cleanup failed:', e);  // Log any errors
-    }
-  });
-</script>
-
+    window.addEventListener('click', cleanCache, { once: true });
+  </script>
 
 </body>
-
 </html>
