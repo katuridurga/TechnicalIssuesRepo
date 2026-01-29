@@ -264,3 +264,8 @@ border-bottom: 1px solid#ccc;
   text-transform: capitalize;
   margin: 5px 0px;
 }
+.post-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
