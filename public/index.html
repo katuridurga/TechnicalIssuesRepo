@@ -10,7 +10,7 @@
   <meta property="og:image" content="https://backstagepass.co.in/newlogo.webp" />
   <meta property="og:type" content="website">
 
-  <!-- Font Optimization -->
+  <!-- ===== Fonts Optimization ===== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" />
@@ -20,29 +20,42 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" />
   </noscript>
 
-  <!-- ✅ LCP Image Preloads -->
-  <!-- Mobile -->
+  <!-- ===== Preload LCP Hero Images ===== -->
+  <link rel="preload" as="image" href="/img/banners/NewCampus.webp" fetchpriority="high" />
   <link rel="preload" as="image" href="/img/mobilebanner/homepagebanner/NewCampus.webp" media="(max-width:768px)"
     fetchpriority="high" />
-  <!-- Desktop -->
-  <link rel="preload" as="image" href="/img/banners/NewCampus.webp" media="(min-width:769px)" fetchpriority="high" />
 
-  <!-- Defer GTM -->
+  <!-- ===== Inline Critical CSS for Hero Banner ===== -->
+  <style>
+    .hero-banner {
+      width: 100%;
+      max-width: 1600px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+
+  <!-- ===== Deferred Analytics Scripts ===== -->
   <script>
+    // GTM deferred
     window.addEventListener('load', () => {
       (function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({
-          'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-        }); var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
       })(window, document, 'script', 'dataLayer', 'GTM-P8SQ3BS');
     });
-  </script>
 
-  <!-- Defer Microsoft Clarity -->
-  <script>
+    // Microsoft Clarity deferred
     if ('requestIdleCallback' in window) {
       requestIdleCallback(() => {
         (function (c, l, a, r, i, t, y) {
@@ -52,129 +65,62 @@
         })(window, document, "clarity", "script", "mo8baddgve");
       });
     }
-  </script>
 
-  <!-- Facebook Pixel Script -->
-  <script>
+    // Facebook Pixel deferred
     window.fbq = function () {
-      window.fbq.callMethod
-        ? window.fbq.callMethod.apply(window.fbq, arguments)
-        : window.fbq.queue.push(arguments);
+      window.fbq.callMethod ? window.fbq.callMethod.apply(window.fbq, arguments) : window.fbq.queue.push(arguments);
     };
     window.fbq.push = window.fbq;
     window.fbq.loaded = true;
     window.fbq.version = '2.0';
     window.fbq.queue = [];
-
     window.addEventListener('load', () => {
       const fb = document.createElement('script');
       fb.async = true;
       fb.src = 'https://connect.facebook.net/en_US/fbevents.js';
-      fb.onload = () => {
-        fbq('init', '8236983926348899');
-        fbq('track', 'PageView');
-      };
+      fb.onload = () => { fbq('init', '8236983926348899'); fbq('track', 'PageView'); };
       document.head.appendChild(fb);
     });
-  </script>
 
+    // Matomo deferred
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        var _mtm = window._mtm = window._mtm || [];
+        _mtm.push({ 'mtm.startTime': Date.now(), 'event': 'mtm.Start' });
+
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.async = true;
+        g.src = 'https://cdn.matomo.cloud/backstagepass.matomo.cloud/container_Fa2LaVPH.js';
+        s.parentNode.insertBefore(g, s);
+      }, 3000);
+    });
+  </script>
   <noscript>
     <img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=8236983926348899&ev=PageView&noscript=1" />
-  </noscript>
-
-  <!-- Matomo Tag Manager -->
-  <!-- <script>
-    var _mtm = window._mtm = window._mtm || [];
-    _mtm.push({ 'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start' });
-    (function () {
-      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-      g.async = true; g.src = 'https://cdn.matomo.cloud/backstagepass.matomo.cloud/container_Fa2LaVPH.js'; s.parentNode.insertBefore(g, s);
-    })();
-  </script> -->
-<script>
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      var _mtm = window._mtm = window._mtm || [];
-      _mtm.push({ 'mtm.startTime': Date.now(), 'event': 'mtm.Start' });
-
-      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-      g.async = true;
-      g.src = 'https://cdn.matomo.cloud/backstagepass.matomo.cloud/container_Fa2LaVPH.js';
-      s.parentNode.insertBefore(g, s);
-    }, 3000);
-  });
-</script>
-<script>
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
-        const href = link.getAttribute('href');
-        if (href && href.includes('.chunk.css')) {
-          const preload = document.createElement('link');
-          preload.rel = 'preload';
-          preload.as = 'style';
-          preload.href = href;
-          preload.onload = () => preload.rel = 'stylesheet';
-          document.head.appendChild(preload);
-          link.remove();
-        }
-      });
-    }, 2000);
-  });
-</script>
-
-
-</head>
-
-<body>
-  <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8SQ3BS" height="0" width="0"
       style="display:none;visibility:hidden"></iframe>
   </noscript>
 
-<!-- ✅ LCP Banner
-<picture>
- 
-  <source
-    srcset="/img/mobilebanner/homepagebanner/NewCampus.webp"
-    media="(max-width: 768px)"
-    type="image/webp"
-  />
+</head>
 
-  <img
-    src="/img/banners/NewCampus.webp"
-    alt="Backstage Pass Institute of Gaming – New Campus"
-    title="Backstage Pass Institute of Gaming New Campus – Hyderabad"
-    width="1600"
-    height="900"
-    loading="eager"
-    decoding="async"
-    style="width:100%;height:auto;"
-  />
-</picture> -->
+<body>
 
-
+  <!-- React Root -->
   <div id="root"></div>
 
-  <!-- React chunk cache cleanup (delayed + safe for mobile) -->
+  <!-- ===== React Chunk Cache Cleanup ===== -->
   <script>
     let cacheCleaned = false;
-
     const cleanCache = async () => {
       if (cacheCleaned) return;
       cacheCleaned = true;
-
       try {
-        const currentChunks = Array.from(
-          document.querySelectorAll('script[src*=".chunk."]')
-        )
+        const currentChunks = Array.from(document.querySelectorAll('script[src*=".chunk."]'))
           .map(s => s.src.split('/').pop())
           .sort()
           .join(',');
-
         const previousChunks = localStorage.getItem('react_build_chunks');
-
         if (previousChunks && previousChunks !== currentChunks) {
           if ('caches' in window) {
             const cacheNames = await caches.keys();
@@ -184,13 +130,11 @@
           sessionStorage.clear();
           location.reload();
         }
-
         localStorage.setItem('react_build_chunks', currentChunks);
-      } catch (e) {}
+      } catch (e) { console.error(e); }
     };
-
     window.addEventListener('click', cleanCache, { once: true });
   </script>
-
 </body>
+
 </html>
