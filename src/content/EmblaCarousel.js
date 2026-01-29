@@ -104,7 +104,7 @@ const EmblaCarousel = (props) => {
                 <source srcSet={mbnewban0} media="(max-width: 768px)" />
                 <img
                   src={newban1}
-                  alt="newban1"
+                  alt="Backstage pass students at IGDC 2025"
                   width={1526}
                   height={450}
                   loading="eager"          // ✅ REQUIRED for LCP
@@ -119,7 +119,7 @@ const EmblaCarousel = (props) => {
                 <source srcSet={mbnewbanF} media="(max-width: 768px)" />
                 <img
                   src={newbanF}
-                  alt="Home Banner"
+                  alt="Backtage Pass New campaus"
                   width={1526}
                   height={450}
                   fetchpriority="high"
@@ -133,7 +133,7 @@ const EmblaCarousel = (props) => {
                 <source srcSet={mbnewban3} media="(max-width: 768px)" />
                 <img
                   src={newban3}
-                  alt="Home Banner"
+                  alt="Alumni Success Stories"
                   width={1526}
                   height={450}
                   loading="lazy"  // ✅ Native lazy loading

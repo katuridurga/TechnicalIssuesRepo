@@ -208,7 +208,7 @@ function Courses(props) {
 
           <div className='coppertunitiesacce'>
             <div className='left'>
-              <img src={c1a} alt="careerop" />
+              <img src={c1a} alt="What You’ll Gain" />
             </div>
 
             <div className="right career-tabs-container">
@@ -386,7 +386,7 @@ function Courses(props) {
 
             </div>
             <div className='right'>
-              <img src={c2a} alt="careerop" />
+              <img src={c2a} alt="Why Choose Us?" />
             </div>
           </div>
         </div>

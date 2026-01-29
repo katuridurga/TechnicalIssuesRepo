@@ -115,35 +115,35 @@ function StudentShowcase(props) {
 
             <div class="containergaward">
                     <div class="cardsgaward">
-                <img src={awardfour} alt="awardtwo" style={{ objectFit: isMobileState ? "cover" : "contain" }} />
+                <img src={awardfour} alt="IGDC 2025" style={{ objectFit: isMobileState ? "cover" : "contain" }} />
                 <div class="overlaysaward">
                   <h3>Student Game of the year at IGDC 2025</h3>
 
                 </div>
               </div>
                   <div class="cardsgaward">
-                <img src={awardeight} alt="awardtwo" style={{ objectFit: isMobileState ? "cover" : "contain" }} />
+                <img src={awardeight} alt="runner-up at IGDC 2025" style={{ objectFit: isMobileState ? "cover" : "contain" }} />
                 <div class="overlaysaward">
                   <h3>Student Game of the year - <br/>runner-up at IGDC 2025</h3>
 
                 </div>
               </div>
               <div class="cardsgaward">
-                <img src={awardseven} alt="awardseven" />
+                <img src={awardseven} alt="GEM Award 2025" />
                 <div class="overlaysaward">
                   <h3>GEM Award 2025 - Best Hyper Casual Game</h3>
 
                 </div>
               </div>
               <div class="cardsgaward">
-                <img src={awardsix} alt="awardsix" />
+                <img src={awardsix} alt="IGDC 2023" />
                 <div class="overlaysaward">
                   <h3>Student Game of the Year at IGDC 2023</h3>
 
                 </div>
               </div>
               <div class="cardsgaward">
-                <img src={awardone} alt="awardone" />
+                <img src={awardone} alt="Casual connect 2015" />
                 <div class="overlaysaward">
                   <h3>Casual connect 2015</h3>
 
@@ -151,14 +151,14 @@ function StudentShowcase(props) {
               </div>
         
               <div class="cardsgaward">
-                <img src={awardthree} alt="awardthree" style={{ height: isMobileState ? "187px" : "100%" }} />
+                <img src={awardthree} alt="IGDC 2019" style={{ height: isMobileState ? "187px" : "100%" }} />
                 <div class="overlaysaward">
                   <h3>Student game of the year at IGDC 2019</h3>
                 </div>
               </div>
              
               <div class="cardsgaward">
-                <img src={awardfive} alt="awardfive" />
+                <img src={awardfive} alt="In house Game development competition 2023" />
                 <div class="overlaysaward">
                   <h3>In house Game development competition 2023 </h3>
 

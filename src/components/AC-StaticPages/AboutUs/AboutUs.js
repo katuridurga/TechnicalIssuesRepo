@@ -389,7 +389,7 @@ function Aboutus(props) {
 
       <section className="wtmakesbsp">
 
-        <div className="bg-image" style={{ backgroundImage: `url(${bgImage})` }}></div>
+        <div className="bg-image" style={{ backgroundImage: `url(${bgImage})`}}></div>
 
 
         <div className="container">

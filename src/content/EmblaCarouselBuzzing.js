@@ -47,7 +47,7 @@ const slides = [
   { src: b9, alt: "IGDC", text: "IGDC" },
   { src: epa, alt: "Times Education", text: "Times Education E-paper Article 2024" },
   { src: bui2, alt: "IGDC 2023", text: "IGDC 2023" },
-  { src: bui4, alt: "GAME Awards 2021", text: "GAME Awards 2021" },
+  // { src: bui4, alt: "GAME Awards 2021", text: "GAME Awards 2021" },
   { src: bui5, alt: "ET Achievers", text: "ET achievers 2025" },
   { src: bui6, alt: "EduSpark Awards", text: "EduSpark Awards 2023" },
   { src: bui7, alt: "BSP Students", text: "BSP Students at IGDC" },

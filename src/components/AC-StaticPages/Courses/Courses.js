@@ -23,17 +23,17 @@ function Courses(props) {
     {
       heading: "Bachelor’s Courses",
       cards: [
-        { title: "Bachelor’s in Computer Science & Game Development", description: "Explore the science behind games with Computer Science & Game Development Courses. Master game programming, design, and development through theory...", link: "/courses/bachelors-in-computer-science-and-game-development/", image: csgd },
-        { title: "Bachelor’s in Game Art & Design", description: "Discover the harmony of art and technology with a Bachelor’s in Game Art and Design. Learn 3D video game art, game design, and production to craft visually stunning...", link: "/courses/bachelors-in-game-art-and-design/", image: GameArtDesign },
-        { title: "Bachelor’s in Augmented Reality & Virtual Reality", description: "A course for bold innovators, uniting art, design, and game engine programming to master the science of augmented and virtual reality. You will learn to transform...", link: "/courses/bachelors-in-augmented-reality-and-virtual-reality/", image: AugmentedRealityandVirtualReality }
+        { title: "Bachelor’s in Computer Science & Game Development", alt:"Computer Science & Game Development", description: "Explore the science behind games with Computer Science & Game Development Courses. Master game programming, design, and development through theory...", link: "/courses/bachelors-in-computer-science-and-game-development/", image: csgd },
+        { title: "Bachelor’s in Game Art & Design", alt:"Game Art & Design", description: "Discover the harmony of art and technology with a Bachelor’s in Game Art and Design. Learn 3D video game art, game design, and production to craft visually stunning...", link: "/courses/bachelors-in-game-art-and-design/", image: GameArtDesign },
+        { title: "Bachelor’s in Augmented Reality & Virtual Reality", alt:"Augmented Reality & Virtual Reality", description: "A course for bold innovators, uniting art, design, and game engine programming to master the science of augmented and virtual reality. You will learn to transform...", link: "/courses/bachelors-in-augmented-reality-and-virtual-reality/", image: AugmentedRealityandVirtualReality }
       ]
     },
 
     {
       heading: "Advanced Diploma Courses",
       cards: [
-        { title: "Advanced Diploma in Game Development", description: "The Advanced Diploma in Game Development unites the precision of C++, the versatility of C#, and the power of OpenGL. Guiding students to master game...", link: "/courses/advanced-diploma-in-game-development/", image: AdvancedDiplomainGameDevelopment },
-        { title: "Advanced Diploma in 3D Game Art & Digital Sculpting", description: "The Advanced Diploma in 3D Game Art & Digital Sculpting trains artists to master environment modelling and craft immersive characters and lifelike worlds for modern...", link: "/courses/bachelors-in-game-art-and-design/", image: AdvancedDiplomain3DGameArtDigitalSculpting },
+        { title: "Advanced Diploma in Game Development", alt:"Game Development", description: "The Advanced Diploma in Game Development unites the precision of C++, the versatility of C#, and the power of OpenGL. Guiding students to master game...", link: "/courses/advanced-diploma-in-game-development/", image: AdvancedDiplomainGameDevelopment },
+        { title: "Advanced Diploma in 3D Game Art & Digital Sculpting", alt:"3D Game Art & Digital Sculpting", description: "The Advanced Diploma in 3D Game Art & Digital Sculpting trains artists to master environment modelling and craft immersive characters and lifelike worlds for modern...", link: "/courses/bachelors-in-game-art-and-design/", image: AdvancedDiplomain3DGameArtDigitalSculpting },
         // { title: "Advanced Diploma in Traditional & Digital Concept Art", description: "A hands-on 12-month advanced diploma that builds strong fundamentals in advancing to character and environment design.", link: "/courses/advanced-diploma-in-traditional-digital-art/", image: AdvancedDiplomainTraditionalDigitalConceptArt }
       ]
     },
@@ -41,18 +41,18 @@ function Courses(props) {
     {
       heading: "Diploma Courses",
       cards: [
-        { title: "Diploma in Game Design & Production", description: "The Diploma in Game Design & Production explores Unity, Unreal Engine, and project-based training to build visionary designers and industry-ready game design portfolios.", link: "/courses/diploma-in-game-design-production/", image: DiplomainGameDesignProduction },
-        { title: "Diploma in Game Development with Unity", description: "The Diploma in Game Development with Unity empowers creators to master both 2D and 3D game development by blending logic...", link: "/courses/diploma-in-game-development-with-unity/", image: DiplomainGameDevelopmentwithUnity },
-        { title: "Diploma in Game Development with Unreal", description: "With the Diploma in Game Development with Unreal, students will learn the real science behind making games. The course will guide students through Unreal Engine...", link: "/courses/diploma-in-game-development-with-unreal/", image: Diploma_in_Game_Development_with_Unreal },
-        { title: "Diploma In 3D Environment Art For Games", description: "The Diploma in 3D Environment Art Creation for Games explores the harmony of art in 3D modelling, texturing, and digital sculpting to craft breathtaking, immersive game worlds.", link: "/courses/diploma-in-3d-environment-art-creation-for-games/", image: Diplomain3DEnvironmentArtCreationforGames },
-        { title: "Diploma in VR Application Development", description: "The Diploma in VR Application Development Course unlocks the future of technology, where students master VR programming with Unity and Unreal to design, develop, and innovate...", link: "/courses/diploma-in-vr-application-development/", image: dvrc }
+        { title: "Diploma in Game Design & Production", alt:"Game Design & Production", description: "The Diploma in Game Design & Production explores Unity, Unreal Engine, and project-based training to build visionary designers and industry-ready game design portfolios.", link: "/courses/diploma-in-game-design-production/", image: DiplomainGameDesignProduction },
+        { title: "Diploma in Game Development with Unity", alt:"Game Development with Unity Engine", description: "The Diploma in Game Development with Unity empowers creators to master both 2D and 3D game development by blending logic...", link: "/courses/diploma-in-game-development-with-unity/", image: DiplomainGameDevelopmentwithUnity },
+        { title: "Diploma in Game Development with Unreal", alt:"Game Development with Unreal Engine", description: "With the Diploma in Game Development with Unreal, students will learn the real science behind making games. The course will guide students through Unreal Engine...", link: "/courses/diploma-in-game-development-with-unreal/", image: Diploma_in_Game_Development_with_Unreal },
+        { title: "Diploma In 3D Environment Art For Games", alt:"3D Environment Art For Games Course",description: "The Diploma in 3D Environment Art Creation for Games explores the harmony of art in 3D modelling, texturing, and digital sculpting to craft breathtaking, immersive game worlds.", link: "/courses/diploma-in-3d-environment-art-creation-for-games/", image: Diplomain3DEnvironmentArtCreationforGames },
+        { title: "Diploma in VR Application Development", alt:"VR Application Development Course", description: "The Diploma in VR Application Development Course unlocks the future of technology, where students master VR programming with Unity and Unreal to design, develop, and innovate...", link: "/courses/diploma-in-vr-application-development/", image: dvrc }
       ]
     },
     {
       heading: "Master’s Courses",
       cards: [
-        { title: "Master’s in Game Technology", description: "The Master’s in Game Technology unites art, logic, and physics, immersing learners in C++ engine development, graphics programming, and Unity & Unreal mastery to craft intelligent, high-performance games...", link: "/courses/masters-in-game-technology/", image: MscGameTechnology },
-        { title: "Master’s in 3D Game Art & Game Design ", description: "With the Master's in 3D Game Art & Design, students will learn 3D modelling, texturing, and animation so they can develop immersive, meaningful video game worlds that blend art with intelligent design.", link: "/courses/masters-in-3d-game-art-design/", image: MscGameTechnology3d }
+        { title: "Master’s in Game Technology", alt:"Master’s in Game Technology", description: "The Master’s in Game Technology unites art, logic, and physics, immersing learners in C++ engine development, graphics programming, and Unity & Unreal mastery to craft intelligent, high-performance games...", link: "/courses/masters-in-game-technology/", image: MscGameTechnology },
+        { title: "Master’s in 3D Game Art & Game Design ", alt:"Master’s in Game Art & Game Design", description: "With the Master's in 3D Game Art & Design, students will learn 3D modelling, texturing, and animation so they can develop immersive, meaningful video game worlds that blend art with intelligent design.", link: "/courses/masters-in-3d-game-art-design/", image: MscGameTechnology3d }
       ]
     },
   ];
@@ -135,7 +135,7 @@ function Courses(props) {
                   <div className="programs-grid">
                     {cardsToShow.map((card, idx) => (
                       <div key={idx} className="program-card">
-                        <img src={card.image} alt={card.title} />
+                        <img src={card.image} alt={card.alt} />
                         <div className="program-content">
                           <h4>{card.title}</h4>
                           <p>{card.description}</p>
