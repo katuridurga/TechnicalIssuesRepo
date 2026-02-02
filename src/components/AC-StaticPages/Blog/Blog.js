@@ -165,7 +165,7 @@ const currentItems = data.slice(indexOfFirst, indexOfLast);
           <div className='right-column'>
             <div className='textpostc'>
               <div className='textposthc'>Categories</div>
-              <ul className='catext'>
+              {/* <ul className='catext'>
                 {categories.map((category) => (
                   <li key={category.cat_id}>
                     <div className='textrightpc'>
@@ -179,8 +179,26 @@ const currentItems = data.slice(indexOfFirst, indexOfLast);
                     </div>
                   </li>
                 ))}
+              </ul> */}
+    <ul className='catext'>
+                {categories.map((category) => (
+                  <li key={category.cat_id}>
+                    <div className='textrightpc'>
+                      <p
+                        onClick={() =>
+                          setSelectedCatId(
+                            selectedCatId === category.cat_id ? null : category.cat_id
+                          )
+                        }
+                        className={selectedCatId === category.cat_id ? 'selected' : ''}
+                        style={{ userSelect: 'none', cursor: 'pointer' }}
+                      >
+                        {category.cat_name}
+                      </p>
+                    </div>
+                  </li>
+                ))}
               </ul>
-
             </div>
           </div>
         </div>
