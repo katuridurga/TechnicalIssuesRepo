@@ -81,12 +81,12 @@ function Blog() {
     state => state.mainReducer.isMobile,
     shallowEqual
   );
-const [currentPage, setCurrentPage] = useState(1);
-const itemsPerPage = isMobileState ? 5 :12 ;
-const totalPages = Math.ceil(data.length / itemsPerPage);
-const indexOfLast = currentPage * itemsPerPage;
-const indexOfFirst = indexOfLast - itemsPerPage;
-const currentItems = data.slice(indexOfFirst, indexOfLast);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = isMobileState ? 5 : 12;
+  const totalPages = Math.ceil(data.length / itemsPerPage);
+  const indexOfLast = currentPage * itemsPerPage;
+  const indexOfFirst = indexOfLast - itemsPerPage;
+  const currentItems = data.slice(indexOfFirst, indexOfLast);
 
   return (
     <>
@@ -115,46 +115,46 @@ const currentItems = data.slice(indexOfFirst, indexOfLast);
                   </div>
                 ) : (
                   <>
-        <div className='main-blg'>
-  {currentItems.map((item) => (
-    <Link to={`/blogs/${item.event_title_url}`} key={item.id}>
-      <div className="maind">
-        <div className="blog">
-          <div className="blog-image">
-            <img
-              src={`https://www.backstagepass.co.in/blog_new/uploads/events/${item.card_image}`}
-              alt={item.tittle_event}
-            />
-            <span className='t-icon'><IoMdTime /> {item.duration}mins</span>
-          </div>
-          <div className="blog-content">
-            <div>
-              <span>Published Date : {formatDateToDMY(item.event_s_dt)}</span>
-              <h2>{item.tittle_event}</h2>
-              <p dangerouslySetInnerHTML={{ __html: truncateHtml(item.description, wordLimit) }} />
-              <Link to={`/blogs/${item.event_title_url}`}>Read more</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Link>
-  ))}
-</div>
+                    <div className='main-blg'>
+                      {currentItems.map((item) => (
+                        <Link to={`/blogs/${item.event_title_url}`} key={item.id}>
+                          <div className="maind">
+                            <div className="blog">
+                              <div className="blog-image">
+                                <img
+                                  src={`https://www.backstagepass.co.in/blog_new/uploads/events/${item.card_image}`}
+                                  alt={item.tittle_event}
+                                />
+                                <span className='t-icon'><IoMdTime /> {item.duration}mins</span>
+                              </div>
+                              <div className="blog-content">
+                                <div>
+                                  <span>Published Date : {formatDateToDMY(item.event_s_dt)}</span>
+                                  <h2>{item.tittle_event}</h2>
+                                  <p dangerouslySetInnerHTML={{ __html: truncateHtml(item.description, wordLimit) }} />
+                                  <Link to={`/blogs/${item.event_title_url}`}>Read more</Link>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
 
 
-                  {totalPages > 1 && (
-  <div className="pagination-container">
-    {[...Array(totalPages)].map((_, i) => (
-      <button
-        key={i}
-        className={`page-btn ${currentPage === i + 1 ? "active" : ""}`}
-        onClick={() => setCurrentPage(i + 1)}
-      >
-        {i + 1}
-      </button>
-    ))}
-  </div>
-)}
+                    {totalPages > 1 && (
+                      <div className="pagination-container">
+                        {[...Array(totalPages)].map((_, i) => (
+                          <button
+                            key={i}
+                            className={`page-btn ${currentPage === i + 1 ? "active" : ""}`}
+                            onClick={() => setCurrentPage(i + 1)}
+                          >
+                            {i + 1}
+                          </button>
+                        ))}
+                      </div>
+                    )}
 
                   </>
                 )}
@@ -180,7 +180,7 @@ const currentItems = data.slice(indexOfFirst, indexOfLast);
                   </li>
                 ))}
               </ul> */}
-    <ul className='catext'>
+              <ul className='catext'>
                 {categories.map((category) => (
                   <li key={category.cat_id}>
                     <div className='textrightpc'>
