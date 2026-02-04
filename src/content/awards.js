@@ -25,7 +25,7 @@ function Awards() {
 
                                 <div class="containergawardh">
                                     <div class="cardsgawardh">
-                                        <img src={aw25} alt="ET Industry Achievers 2025" />
+                                        <img src={aw25} alt="ET Industry Achievers 2025" width="365" height="298" />
                                         <p>2025</p>
                                         <div class="overlaysawardh">
                                             <h3>ET Industry Achievers <br /><br /> 2025 </h3>
@@ -33,7 +33,7 @@ function Awards() {
                                         </div>
                                     </div>
                                     <div class="cardsgawardh">
-                                        <img src={aw24} alt="Times Education Award 2024" />
+                                        <img src={aw24} alt="Times Education Award 2024" width="365" height="298" />
                                         <p>2024</p>
                                         <div class="overlaysawardh">
                                             <h3>Times Education Excellence Award <br /><br />  2024</h3>
@@ -41,7 +41,7 @@ function Awards() {
                                         </div>
                                     </div>
                                          <div class="cardsgawardh">
-                                        <img src={bui6} alt="EduSpark Awards 2023" />
+                                        <img src={bui6} alt="EduSpark Awards 2023" width="365" height="298"/>
                                         <p>2023</p>
                                         <div class="overlaysawardh">
                                             <h3>EduSpark Awards  <br /><br />  2023</h3>
@@ -49,7 +49,7 @@ function Awards() {
                                         </div>
                                     </div>
                                     <div class="cardsgawardh">
-                                        <img src={aw23} alt="Times Education Award 2023" />
+                                        <img src={aw23} alt="Times Education Award 2023" width="365" height="298"/>
                                         <p>2023</p>
                                         <div class="overlaysawardh">
                                             <h3>Times Education Excellence Award <br /><br />  2023</h3>
@@ -58,14 +58,14 @@ function Awards() {
                                     </div>
 
                                     <div class="cardsgawardh">
-                                        <img src={aw22} alt="Times Education Award 2022" />
+                                        <img src={aw22} alt="Times Education Award 2022" width="365" height="298" />
                                         <p>2022</p>
                                         <div class="overlaysawardh">
                                             <h3>Times Education Excellence Award <br /><br />  2022</h3>
                                         </div>
                                     </div>
                                     <div class="cardsgawardh">
-                                        <img src={aw21} alt="Times Education Award 2021" />
+                                        <img src={aw21} alt="Times Education Award 2021" width="365" height="298" />
                                         <p>2021</p>
                                         <div class="overlaysawardh">
                                             <h3>Times Education Excellence Award <br /><br />  2021</h3>
@@ -73,7 +73,7 @@ function Awards() {
                                         </div>
                                     </div>
                                     <div class="cardsgawardh">
-                                        <img src={aw20} alt="Times Education Award 2020" />
+                                        <img src={aw20} alt="Times Education Award 2020" width="365" height="298"/>
                                         <p>2020</p>
                                         <div class="overlaysawardh">
                                             <h3>Times Excellence Award <br /><br />  2020</h3>
@@ -81,7 +81,7 @@ function Awards() {
                                         </div>
                                     </div>
                                     <div class="cardsgawardh">
-                                        <img src={aw19} alt="Times Education Award 2019" />
+                                        <img src={aw19} alt="Times Education Award 2019" width="365" height="298" />
                                         <p>2019</p>
                                         <div class="overlaysawardh">
                                             <h3>Times Education Excellence Award <br /><br />  2019</h3>
@@ -90,7 +90,7 @@ function Awards() {
                                     </div>
 
                                     <div class="cardsgawardh">
-                                        <img src={aw18} alt="Best Education Brand Award 2018" />
+                                        <img src={aw18} alt="Best Education Brand Award 2018" width="365" height="298" />
                                         <p>2018</p>
                                         <div class="overlaysawardh">
                                             <h3>Best Education Brand Award Economic Times <br /><br />  2018</h3>

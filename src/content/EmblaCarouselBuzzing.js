@@ -17,7 +17,9 @@ import b9 from "../assets/img/awards/newgdc.webp";
 import animationexp from "../assets/img/animationexp.jpg";
 import bui1f from "../assets/img/bspframebox.jpg";
 import bui2 from "../assets/img/IGDC2023.webp";
-import bui3 from "../assets/img/nazara.jpg";
+import bui3 from "../assets/img/nazara.webp"; // original
+import bui3_400 from "../assets/img/nazara-400.webp"; // optimized small
+import bui3_800 from "../assets/img/nazara-800.webp"; // optimized large
 import bui4 from "../assets/img/ga21.webp";
 import bui5 from "../assets/img/eta24.webp";
 import bui6 from "../assets/img/esa24.webp";
@@ -47,7 +49,6 @@ const slides = [
   { src: b9, alt: "IGDC", text: "IGDC" },
   { src: epa, alt: "Times Education", text: "Times Education E-paper Article 2024" },
   { src: bui2, alt: "IGDC 2023", text: "IGDC 2023" },
-  // { src: bui4, alt: "GAME Awards 2021", text: "GAME Awards 2021" },
   { src: bui5, alt: "ET Achievers", text: "ET achievers 2025" },
   { src: bui6, alt: "EduSpark Awards", text: "EduSpark Awards 2023" },
   { src: bui7, alt: "BSP Students", text: "BSP Students at IGDC" },
@@ -66,7 +67,13 @@ const slides = [
   { src: awardfoura, alt: "Backstage Pass College", text: "How Backstage Pass Gaming College Prepare Students to Join the Top Game and Technology Companies", href: "https://www.dnaindia.com/education/report-how-backstage-pass-gaming-college-prepare-students-to-join-the-top-game-and-technology-companies-2897946" },
   { src: awardfivea, alt: "Gaming Education India", text: "This gaming college in India is revolutionising gaming education", href: "https://www.forbesindia.com/article/brand-connect/this-gaming-college-in-india-is-revolutionising-gaming-education/60133/1" },
   { src: awardthreea, alt: "World-class gaming education", text: "Backstage Pass brings world-class gaming education right to your doorstep", href: "https://yourstory.com/2020/06/backstage-world-class-gaming-education" },
-  { src: bui3, alt: "Nazara Technologies Studio Visit", text: "Nazara Technologies Studio Visit" },
+  {
+    src: bui3, 
+    srcSet: `${bui3_400} 400w, ${bui3_800} 800w`,
+    sizes: "(max-width: 768px) 90vw, 730px",
+    alt: "Nazara Technologies Studio Visit",
+    text: "Nazara Technologies Studio Visit"
+  },
 ];
 
 const TWEEN_FACTOR_BASE = 0.2;
@@ -151,15 +158,18 @@ const EmblaCarousel = (props) => {
           {slides.map((slide, index) => (
             <div className="embla__slidebuzz" key={index}>
               <img
-                src={slide.src}
+                src={slide.srcSet ? bui3_800 : slide.src}
+                srcSet={slide.srcSet}
+                sizes={slide.sizes}
                 alt={slide.alt}
                 width={586}
                 height={330}
-                loading="eager" // ✅ Fully LCP-friendly
-                fetchpriority={index === 0 ? "high" : undefined} // ✅ only first slide
+                loading={index === 0 ? "eager" : "lazy"}
+                fetchpriority={index === 0 ? "high" : undefined}
                 className="embla__slide__imgbuzz"
                 style={{ width: "100%", height: "auto" }}
               />
+
               <p className="embla__captionbuzz">
                 {slide.text}
                 {slide.href && (

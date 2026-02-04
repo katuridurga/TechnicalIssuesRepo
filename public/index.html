@@ -84,19 +84,19 @@
   </noscript>
 
   <!-- Matomo Tag Manager -->
-  <script>
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        var _mtm = window._mtm = window._mtm || [];
-        _mtm.push({ 'mtm.startTime': Date.now(), 'event': 'mtm.Start' });
+   <script>
+   window.addEventListener('load', () => {
+  setTimeout(() => {
+    var _mtm = window._mtm = window._mtm || [];
+    _mtm.push({ 'mtm.startTime': Date.now(), 'event': 'mtm.Start' });
 
-        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-        g.async = true;
-        g.src = 'https://cdn.matomo.cloud/backstagepass.matomo.cloud/container_Fa2LaVPH.js';
-        s.parentNode.insertBefore(g, s);
-      }, 3000);
-    });
-  </script>
+    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+    g.async = true;
+    g.src = 'https://cdn.matomo.cloud/backstagepass.matomo.cloud/container_Fa2LaVPH.js';
+    s.parentNode.insertBefore(g, s);
+  }, 3000);
+});
+</script>
   <!-- <script>
     var _mtm = window._mtm = window._mtm || [];
     _mtm.push({ 'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start' });
@@ -138,7 +138,7 @@
       style="display:none;visibility:hidden"></iframe>
   </noscript>
 
-  <!-- ✅ LCP Banner
+<!-- ✅ LCP Banner
 <picture>
  
   <source
@@ -164,41 +164,41 @@
   <div id="root"></div>
 
   <!-- React chunk cache cleanup -->
-  <script>
-    (async function () {
-      try {
-        const currentChunks = Array.from(
-          document.querySelectorAll('script[src*=".chunk."]')
-        )
-          .map(s => s.src.split('/').pop())
-          .sort()
-          .join(',');
+ <script>
+  (async function () {
+    try {
+      const currentChunks = Array.from(
+        document.querySelectorAll('script[src*=".chunk."]')
+      )
+        .map(s => s.src.split('/').pop())
+        .sort()
+        .join(',');
 
-        const previousChunks = localStorage.getItem('react_build_chunks');
+      const previousChunks = localStorage.getItem('react_build_chunks');
 
-        if (previousChunks && previousChunks !== currentChunks) {
-          console.log('🧹 New build detected — clearing old caches');
+      if (previousChunks && previousChunks !== currentChunks) {
+        console.log('🧹 New build detected — clearing old caches');
 
-          if ('caches' in window) {
-            const names = await caches.keys();
-            await Promise.all(
-              names
-                .filter(n =>
-                  n.includes('react') ||
-                  n.includes('static') ||
-                  n.includes('workbox')
-                )
-                .map(n => caches.delete(n))
-            );
-          }
+        if ('caches' in window) {
+          const names = await caches.keys();
+          await Promise.all(
+            names
+              .filter(n =>
+                n.includes('react') ||
+                n.includes('static') ||
+                n.includes('workbox')
+              )
+              .map(n => caches.delete(n))
+          );
         }
-
-        localStorage.setItem('react_build_chunks', currentChunks);
-      } catch (e) {
-        console.warn('Cache cleanup failed:', e);
       }
-    })();
-  </script>
+
+      localStorage.setItem('react_build_chunks', currentChunks);
+    } catch (e) {
+      console.warn('Cache cleanup failed:', e);
+    }
+  })();
+</script>
 
 
 </body>
