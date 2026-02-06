@@ -31,16 +31,35 @@ const EmblaCarousel = () => {
     align: "start",
   });
 
+
 useEffect(() => {
   if (!emblaApi) return;
 
-  const id = setInterval(() => {
-    emblaApi.scrollNext();   // RIGHT → LEFT for your layout
-  }, 2500);
+  let id;
 
-  return () => clearInterval(id);
+  const start = () => {
+    stop(); // ⬅️ important
+    id = setInterval(() => {
+      emblaApi.scrollNext();
+    }, 2500);
+  };
+
+  const stop = () => {
+    if (id) clearInterval(id);
+  };
+
+  start();
+
+  const root = emblaApi.rootNode();
+  root.addEventListener("mouseenter", stop);
+  root.addEventListener("mouseleave", start);
+
+  return () => {
+    stop();
+    root.removeEventListener("mouseenter", stop);
+    root.removeEventListener("mouseleave", start);
+  };
 }, [emblaApi]);
-
 
   return (
     <div className="emblaaward">

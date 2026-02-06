@@ -81,21 +81,38 @@ const EmblaCarousel = (props) => {
 useEffect(() => {
   if (!emblaApi) return
 
-  // --- Auto Scroll Left Loop ---
   let autoScrollInterval
 
   const autoScrollLeft = () => {
-    if (!emblaApi) return
     if (emblaApi.canScrollPrev()) {
       emblaApi.scrollPrev()
     } else {
-      emblaApi.scrollTo(emblaApi.scrollSnapList().length - 1) // Jump to last slide when at first
+      emblaApi.scrollTo(emblaApi.scrollSnapList().length - 1)
     }
   }
 
-  autoScrollInterval = setInterval(autoScrollLeft, 3000) // scroll every 3 seconds
+  const startAutoScroll = () => {
+    stopAutoScroll()
+    autoScrollInterval = setInterval(autoScrollLeft, 3000)
+  }
 
-  // --- Existing Logic ---
+  const stopAutoScroll = () => {
+    if (autoScrollInterval) {
+      clearInterval(autoScrollInterval)
+      autoScrollInterval = null
+    }
+  }
+
+  // Start scrolling
+  startAutoScroll()
+
+  // --- Hover logic ---
+  const emblaRoot = emblaApi.rootNode()
+
+  emblaRoot.addEventListener('mouseenter', stopAutoScroll)
+  emblaRoot.addEventListener('mouseleave', startAutoScroll)
+
+  // --- Existing logic ---
   setTweenNodes(emblaApi)
   setTweenFactor(emblaApi)
   tweenParallax(emblaApi)
@@ -107,12 +124,13 @@ useEffect(() => {
     .on('scroll', tweenParallax)
     .on('slideFocus', tweenParallax)
 
-  // Cleanup on unmount
   return () => {
-    clearInterval(autoScrollInterval)
+    stopAutoScroll()
+    emblaRoot.removeEventListener('mouseenter', stopAutoScroll)
+    emblaRoot.removeEventListener('mouseleave', startAutoScroll)
   }
 }, [emblaApi, setTweenFactor, setTweenNodes, tweenParallax])
-  
+
   return (
    <div className="emblabaM">
   <div className="embla__viewportbaM" ref={emblaRef}>

@@ -143,28 +143,70 @@ const EmblaCarousel = (props) => {
     });
   }, []);
 
-  useEffect(() => {
-    if (!emblaApi) return;
+  // useEffect(() => {
+  //   if (!emblaApi) return;
 
-    // --- Auto Scroll Left Loop ---
-    const autoScrollInterval = setInterval(() => {
-      if (emblaApi.canScrollPrev()) emblaApi.scrollPrev();
+  //   // --- Auto Scroll Left Loop ---
+  //   const autoScrollInterval = setInterval(() => {
+  //     if (emblaApi.canScrollPrev()) emblaApi.scrollPrev();
+  //   }, 3000);
+
+  //   // --- Existing Logic ---
+  //   setTweenNodes(emblaApi);
+  //   setTweenFactor(emblaApi);
+  //   tweenParallax(emblaApi);
+
+  //   emblaApi
+  //     .on('reInit', setTweenNodes)
+  //     .on('reInit', setTweenFactor)
+  //     .on('reInit', tweenParallax)
+  //     .on('scroll', tweenParallax)
+  //     .on('slideFocus', tweenParallax);
+
+  //   return () => clearInterval(autoScrollInterval);
+  // }, [emblaApi, setTweenFactor, setTweenNodes, tweenParallax]);
+useEffect(() => {
+  if (!emblaApi) return;
+
+  let autoScrollInterval;
+
+  const startAutoScroll = () => {
+    autoScrollInterval = setInterval(() => {
+      if (emblaApi.canScrollPrev()) {
+        emblaApi.scrollPrev();
+      }
     }, 3000);
+  };
 
-    // --- Existing Logic ---
-    setTweenNodes(emblaApi);
-    setTweenFactor(emblaApi);
-    tweenParallax(emblaApi);
+  const stopAutoScroll = () => {
+    clearInterval(autoScrollInterval);
+  };
 
-    emblaApi
-      .on('reInit', setTweenNodes)
-      .on('reInit', setTweenFactor)
-      .on('reInit', tweenParallax)
-      .on('scroll', tweenParallax)
-      .on('slideFocus', tweenParallax);
+  // start autoplay
+  startAutoScroll();
 
-    return () => clearInterval(autoScrollInterval);
-  }, [emblaApi, setTweenFactor, setTweenNodes, tweenParallax]);
+  // --- Existing Logic ---
+  setTweenNodes(emblaApi);
+  setTweenFactor(emblaApi);
+  tweenParallax(emblaApi);
+
+  emblaApi
+    .on('reInit', setTweenNodes)
+    .on('reInit', setTweenFactor)
+    .on('reInit', tweenParallax)
+    .on('scroll', tweenParallax)
+    .on('slideFocus', tweenParallax);
+
+  const emblaRoot = emblaApi.rootNode();
+  emblaRoot.addEventListener('mouseenter', stopAutoScroll);
+  emblaRoot.addEventListener('mouseleave', startAutoScroll);
+
+  return () => {
+    stopAutoScroll();
+    emblaRoot.removeEventListener('mouseenter', stopAutoScroll);
+    emblaRoot.removeEventListener('mouseleave', startAutoScroll);
+  };
+}, [emblaApi, setTweenFactor, setTweenNodes, tweenParallax]);
 
   return (
     <div className="emblabuzz">
@@ -183,6 +225,7 @@ const EmblaCarousel = (props) => {
                 fetchpriority={index === 0 ? "high" : undefined}
                 className="embla__slide__imgbuzz"
                 style={{ width: "100%", height: "auto" }}
+                pauseOnHover={true}
               />
 
               <p className="embla__captionbuzz">
