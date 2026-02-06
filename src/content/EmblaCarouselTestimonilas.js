@@ -1,6 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Mainbpstestimonial.css";
 import AnimatedText from "../components/AC-StaticPages/landingpage/AnimatedText";
+import anand84 from "../assets/img/test/AnandDhwale-84w.webp";
+import anand168 from "../assets/img/test/AnandDhwale-168w.webp";
+import anand42 from "../assets/img/test/AnandDhwale-42w.webp";
 
 const testimonials = [
   {
@@ -31,7 +34,13 @@ const testimonials = [
     text: "One of the best aspects of Backstage Pass is that it gives you the option to interact with a lot of individuals who have a strong interest in game development and the freedom to work together with students from other streams, such as design or art, to create incredible outcomes.",
     name: "Anand Dhavle",
     role: "Gameplay Programmer, Tarsier Studios, Sweden",
-    avatar: "https://www.backstagepass.co.in/AnandDhwale-da6efb8f.webp?img=5",
+    // avatar: "https://www.backstagepass.co.in/AnandDhwale-da6efb8f.webp?img=5",
+     avatar: {
+    "42": anand42,
+    "84": anand84,
+    "168": anand168,
+    alt: "Anand Dhwale"
+  },
   },
   {
     text: "Innovation and adaptability are crucial for growth in the modern generation. Therefore, we require a creative and determined workforce. Students from Backstage Pass have excelled in both of these areas. We were very impressed with how they questioned the status quo and developed more effective working methods.",
@@ -267,13 +276,31 @@ const Testimonials = () => {
                         {isExpanded ? "Show Less" : "Show More"}
                       </button>
                     )}
-                    <div className="maintestimonial-profile">
-                      <img src={item.avatar} alt={item.name} />
-                      <div>
-                        <strong>{item.name}</strong>
-                        <p>{item.role}</p>
-                      </div>
-                    </div>
+             <div className="maintestimonial-profile">
+  {item.name === "Anand Dhavle" ? (
+    <img
+      src={anand42} // small version
+      srcSet={`
+        ${anand42} 42w,
+        ${anand84} 84w,
+        ${anand168} 168w
+      `}
+      sizes="42px"
+      width="42"
+      height="50"
+      alt="Anand Dhwale"
+      loading="eager"
+      fetchpriority="high"
+    />
+  ) : (
+    <img src={item.avatar} alt={item.name} />
+  )}
+  <div>
+    <strong>{item.name}</strong>
+    <p>{item.role}</p>
+  </div>
+</div>
+
                   </div>
                 </AnimatedText>
               );

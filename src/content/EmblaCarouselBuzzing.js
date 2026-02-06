@@ -6,8 +6,12 @@ import {
   usePrevNextButtons
 } from './EmblaCarouselArrowButtonsInTheMedia';
 import '../assets/css/EmblaCarousel.css'; // Your CSS file
-
+import b3400 from "../assets/img/global-400w.webp";
+import b3600 from "../assets/img/global-600w.webp";
+import b31200 from "../assets/img/global-1200w.webp";
 import b2 from "../assets/img/board_game.webp";
+import b2400 from "../assets/img/board_game-400w.webp"; // optimized small
+import b2600 from "../assets/img/board_game-600w.webp"; // optimized large
 import b3 from "../assets/img/global.webp";
 import b4 from "../assets/img/awards/Purple.webp";
 import b5 from "../assets/img/awards/session2.webp";
@@ -41,8 +45,19 @@ import awardthreea from "../assets/img/PR3.webp";
 
 const slides = [
   { src: b4, alt: "Purple Talk", text: "Purple Talk" },
-  { src: b2, alt: "Board Game Workshop", text: "Board Game Workshop" },
-  { src: b3, alt: "Global Game Jam", text: "Global Game Jam" },
+  { src: b2, 
+    srcSet: `${b2400} 400w, ${b2600} 600w`,
+    sizes: "(max-width: 768px) 90vw, 623px",
+  alt: "Board Game Workshop", text: "Board Game Workshop" },
+  {
+  src: b3, // global.webp fallback
+  srcSet: `
+    ${b3400} 400w,
+    ${b3600} 600w
+  `,
+  sizes: "(max-width: 768px) 90vw, 623px",
+  alt: "Global Game Jam",
+   },
   { src: b5, alt: "Interactive sessions", text: "Interactive sessions" },
   { src: b6, alt: "AR VR Workshop", text: "AR VR Workshop" },
   { src: b8, alt: "Nazara", text: "Nazara" },
@@ -158,7 +173,7 @@ const EmblaCarousel = (props) => {
           {slides.map((slide, index) => (
             <div className="embla__slidebuzz" key={index}>
               <img
-                src={slide.srcSet ? bui3_800 : slide.src}
+                src={slide.srcSet ? bui3_800 || b2600 ||b3600 : slide.src}
                 srcSet={slide.srcSet}
                 sizes={slide.sizes}
                 alt={slide.alt}
