@@ -72,15 +72,15 @@ function HomeContent() {
     advancedDiploma: [
       { src: f6, title: "Advanced Diploma in Game Development", link: "/courses/advanced-diploma-in-game-development/" },
       { src: f7, title: "Advanced Diploma in 3D Game Art & Digital Sculpting", link: "/courses/advanced-diploma-in-3d-game-art-digital-sculpting/" },
-    
+
     ],
 
     diploma: [
       { src: f11, title: "Diploma in Game Design & Production", link: "/courses/diploma-in-game-design-production/" },
       { src: f8, title: "Diploma in Game Development with Unity", link: "/courses/diploma-in-game-development-with-unity/" },
       { src: funrm, title: "Diploma in Game Development with Unreal", link: "/courses/diploma-in-game-development-with-unreal/" },
-       { src: f10, title: "Diploma in 3D Environment Art For Games", link: "/courses/diploma-in-3d-environment-art-creation-for-games/" },
-          { src: dvr, title: "Diploma in VR Application Development", link: "/courses/diploma-in-vr-application-development/" },
+      { src: f10, title: "Diploma in 3D Environment Art For Games", link: "/courses/diploma-in-3d-environment-art-creation-for-games/" },
+      { src: dvr, title: "Diploma in VR Application Development", link: "/courses/diploma-in-vr-application-development/" },
     ],
     masters: [
       { src: f5, title: "Master's in Game Technology", link: "/courses/masters-in-game-technology/" },
@@ -202,7 +202,7 @@ function HomeContent() {
                       </figcaption>
                     </figure>
                   </div>
-  <div className="cardssf maincolltwo">
+                  <div className="cardssf maincolltwo">
                     <figure className="figures">
                       <LazyLoadImage effect="blur" src={f6} placeholderSrc={thumbnail} alt="Dip Game Development" style={{ width: "100%", borderRadius: "8px" }} />
                       <figcaption className="figcaptionss">
@@ -214,8 +214,8 @@ function HomeContent() {
                   </div>
                 </div>
                 <div className="maincoll clear-fix">
-                  
-                
+
+
 
                   <div className="cardssf maincolltwo">
                     <figure className="figures">
@@ -237,7 +237,7 @@ function HomeContent() {
                       </figcaption>
                     </figure>
                   </div> */}
-                   <div className="cardssf maincolltwo">
+                  <div className="cardssf maincolltwo">
                     <figure className="figures">
                       <LazyLoadImage effect="blur" src={f11} placeholderSrc={thumbnail} alt="Game Design & Productio" style={{ width: "100%", borderRadius: "8px" }} />
                       <figcaption className="figcaptionss">
@@ -246,7 +246,7 @@ function HomeContent() {
                       </figcaption>
                     </figure>
                   </div>
-              <div className="cardssf maincolltwo">
+                  <div className="cardssf maincolltwo">
                     <figure className="figures">
                       <LazyLoadImage effect="blur" src={f8} placeholderSrc={thumbnail} alt="Game Development with Unity" style={{ width: "100%", borderRadius: "8px" }} />
                       <figcaption className="figcaptionss">
@@ -255,7 +255,7 @@ function HomeContent() {
                       </figcaption>
                     </figure>
                   </div>
-                   <div className="cardssf maincolltwo">
+                  <div className="cardssf maincolltwo">
                     <figure className="figures">
                       <LazyLoadImage effect="blur" src={funr} placeholderSrc={thumbnail} alt="Game Development with Unreal" style={{ width: "100%", borderRadius: "8px" }} />
                       <figcaption className="figcaptionss">
@@ -266,8 +266,8 @@ function HomeContent() {
                   </div>
                 </div>
                 <div className="maincoll clear-fix">
-    
-                      
+
+
                   <div className="cardssf maincolltwo">
                     <figure className="figures">
                       <LazyLoadImage effect="blur" src={f10} placeholderSrc={thumbnail} alt="3D Environment Art For Games" style={{ width: "100%", borderRadius: "8px" }} />
@@ -278,7 +278,7 @@ function HomeContent() {
                       </figcaption>
                     </figure>
                   </div>
-                 
+
                   <div className="cardssf maincolltwo">
                     <figure className="figures">
                       <LazyLoadImage effect="blur" src={dvr} placeholderSrc={thumbnail} alt="VR Application Development" style={{ width: "100%", borderRadius: "8px" }} />
@@ -288,7 +288,7 @@ function HomeContent() {
                       </figcaption>
                     </figure>
                   </div>
-                  
+
                   <div className="cardssf maincolltwo">
                     <figure className="figures">
                       <LazyLoadImage effect="blur" src={f5} placeholderSrc={thumbnail} alt="Msc Game Development" style={{ borderRadius: "8px" }} />
@@ -299,7 +299,7 @@ function HomeContent() {
                       </figcaption>
                     </figure>
                   </div>
-<div className="cardssf maincolltwo">
+                  <div className="cardssf maincolltwo">
                     <figure className="figures">
                       <LazyLoadImage effect="blur" src={f3d} placeholderSrc={thumbnail} alt="MA Game Art & Design" style={{ borderRadius: "8px" }} />
                       <figcaption className="figcaptionss">
