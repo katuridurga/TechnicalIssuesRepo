@@ -28,14 +28,19 @@
   <link rel="preload" as="image" href="/img/banners/NewCampus.webp" media="(min-width:769px)" fetchpriority="high" />
 
   <!-- Defer GTM -->
-   <!---vijetha gtm code-->
-   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PSDKPTHZ');</script>
-<!-- End Google Tag Manager -->
+  <!---vijetha gtm code-->
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PSDKPTHZ');</script>
+
+
+  <!-- End Google Tag Manager -->
   <!-- <script>
     window.addEventListener('load', () => {
       (function (w, d, s, l, i) {
@@ -61,32 +66,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       });
     }
   </script> -->
-<!-- Defer Microsoft Clarity (Safari, Edge, Chrome, Firefox) -->
-<script>
-  (function () {
-    function loadClarity() {
-      if (window.clarity) return;
+  <!-- Defer Microsoft Clarity (Safari, Edge, Chrome, Firefox) -->
+  <!-- <script>
+    (function () {
+      function loadClarity() {
+        if (window.clarity) return;
 
-      (function (c, l, a, r, i, t, y) {
-        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
-        t = l.createElement(r);
-        t.async = 1;
-        t.src = "https://www.clarity.ms/tag/" + i;
-        y = l.getElementsByTagName(r)[0];
-        y.parentNode.insertBefore(t, y);
-      })(window, document, "clarity", "script", "mo8baddgve");
-    }
+        (function (c, l, a, r, i, t, y) {
+          c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+          t = l.createElement(r);
+          t.async = 1;
+          t.src = "https://www.clarity.ms/tag/" + i;
+          y = l.getElementsByTagName(r)[0];
+          y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "mo8baddgve");
+      }
 
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(loadClarity, { timeout: 2000 });
-    } else {
-      setTimeout(loadClarity, 2000);
-    }
-  })();
-</script>
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadClarity, { timeout: 2000 });
+      } else {
+        setTimeout(loadClarity, 2000);
+      }
+    })();
+  </script> -->
 
   <!-- Facebook Pixel Script -->
-  <script>
+  <!-- <script>
     window.fbq = function () {
       window.fbq.callMethod
         ? window.fbq.callMethod.apply(window.fbq, arguments)
@@ -107,27 +112,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       };
       document.head.appendChild(fb);
     });
-  </script>
+  </script> -->
 
-  <noscript>
+  <!-- <noscript>
     <img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=8236983926348899&ev=PageView&noscript=1" />
-  </noscript>
+  </noscript> -->
 
   <!-- Matomo Tag Manager -->
-   <script>
-   window.addEventListener('load', () => {
-  setTimeout(() => {
-    var _mtm = window._mtm = window._mtm || [];
-    _mtm.push({ 'mtm.startTime': Date.now(), 'event': 'mtm.Start' });
+  <!-- <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        var _mtm = window._mtm = window._mtm || [];
+        _mtm.push({ 'mtm.startTime': Date.now(), 'event': 'mtm.Start' });
 
-    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-    g.async = true;
-    g.src = 'https://cdn.matomo.cloud/backstagepass.matomo.cloud/container_Fa2LaVPH.js';
-    s.parentNode.insertBefore(g, s);
-  }, 3000);
-});
-</script>
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.async = true;
+        g.src = 'https://cdn.matomo.cloud/backstagepass.matomo.cloud/container_Fa2LaVPH.js';
+        s.parentNode.insertBefore(g, s);
+      }, 3000);
+    });
+  </script> -->
   <!-- <script>
     var _mtm = window._mtm = window._mtm || [];
     _mtm.push({ 'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start' });
@@ -137,105 +142,63 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     })();
   </script> -->
 
-  <!-- <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      requestIdleCallback(() => {
-        document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
-          const href = link.getAttribute('href');
-          if (href && href.includes('.chunk.css')) {
-            const preload = document.createElement('link');
-            preload.rel = 'preload';
-            preload.as = 'style';
-            preload.href = href;
-            preload.onload = function () {
-              this.rel = 'stylesheet';
-            };
-            preload.onerror = function () {
-              this.rel = 'stylesheet';
-            };
-            link.remove();
-            document.head.appendChild(preload);
-          }
-        });
-      });
-    });
-  </script> -->
+
 
 </head>
 
 <body>
-<!---vijetha gtm code-->
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSDKPTHZ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!---vijetha gtm code-->
+  <!---Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSDKPTHZ" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript)-->
 
-  <noscript>
+  <!-- <noscript> 
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8SQ3BS" height="0" width="0"
       style="display:none;visibility:hidden"></iframe>
-  </noscript>
+  </noscript> -->
 
-<!-- ✅ LCP Banner
-<picture>
- 
-  <source
-    srcset="/img/mobilebanner/homepagebanner/NewCampus.webp"
-    media="(max-width: 768px)"
-    type="image/webp"
-  />
-
-  <img
-    src="/img/banners/NewCampus.webp"
-    alt="Backstage Pass Institute of Gaming – New Campus"
-    title="Backstage Pass Institute of Gaming New Campus – Hyderabad"
-    width="1600"
-    height="900"
-    loading="eager"
-    decoding="async"
-    style="width:100%;height:auto;"
-  />
-</picture> -->
 
 
 
   <div id="root"></div>
 
   <!-- React chunk cache cleanup -->
- <script>
-  (async function () {
-    try {
-      const currentChunks = Array.from(
-        document.querySelectorAll('script[src*=".chunk."]')
-      )
-        .map(s => s.src.split('/').pop())
-        .sort()
-        .join(',');
+  <script>
+    (async function () {
+      try {
+        const currentChunks = Array.from(
+          document.querySelectorAll('script[src*=".chunk."]')
+        )
+          .map(s => s.src.split('/').pop())
+          .sort()
+          .join(',');
 
-      const previousChunks = localStorage.getItem('react_build_chunks');
+        const previousChunks = localStorage.getItem('react_build_chunks');
 
-      if (previousChunks && previousChunks !== currentChunks) {
-        console.log('🧹 New build detected — clearing old caches');
+        if (previousChunks && previousChunks !== currentChunks) {
+          console.log('New build detected — clearing old caches');
 
-        if ('caches' in window) {
-          const names = await caches.keys();
-          await Promise.all(
-            names
-              .filter(n =>
-                n.includes('react') ||
-                n.includes('static') ||
-                n.includes('workbox')
-              )
-              .map(n => caches.delete(n))
-          );
+          if ('caches' in window) {
+            const names = await caches.keys();
+            await Promise.all(
+              names
+                .filter(n =>
+                  n.includes('react') ||
+                  n.includes('static') ||
+                  n.includes('workbox')
+                )
+                .map(n => caches.delete(n))
+            );
+          }
         }
-      }
 
-      localStorage.setItem('react_build_chunks', currentChunks);
-    } catch (e) {
-      console.warn('Cache cleanup failed:', e);
-    }
-  })();
-</script>
+        localStorage.setItem('react_build_chunks', currentChunks);
+      } catch (e) {
+        console.warn('Cache cleanup failed:', e);
+      }
+    })();
+  </script>
 
 
 </body>

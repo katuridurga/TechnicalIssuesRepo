@@ -8,7 +8,6 @@ import {
 import '../assets/css/EmblaCarousel.css'; // Your CSS file
 import b3400 from "../assets/img/global-400w.webp";
 import b3600 from "../assets/img/global-600w.webp";
-import b31200 from "../assets/img/global-1200w.webp";
 import b2 from "../assets/img/board_game.webp";
 import b2400 from "../assets/img/board_game-400w.webp"; // optimized small
 import b2600 from "../assets/img/board_game-600w.webp"; // optimized large
@@ -24,7 +23,6 @@ import bui2 from "../assets/img/IGDC2023.webp";
 import bui3 from "../assets/img/nazara.webp"; // original
 import bui3_400 from "../assets/img/nazara-400.webp"; // optimized small
 import bui3_800 from "../assets/img/nazara-800.webp"; // optimized large
-import bui4 from "../assets/img/ga21.webp";
 import bui5 from "../assets/img/eta24.webp";
 import bui6 from "../assets/img/esa24.webp";
 import bui7 from "../assets/img/BSPsIGDC.webp";

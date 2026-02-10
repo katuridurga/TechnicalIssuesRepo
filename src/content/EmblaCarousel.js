@@ -7,7 +7,13 @@ import {
 } from './EmblaCarouselArrowButtons'
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import newbanF from "../assets/img/banners/NewCampus.webp";
+import newban400 from "../assets/img/banners/NewCampus-400w.webp";
+import newban800 from "../assets/img/banners/NewCampus-800w.webp";
+import newban1200 from "../assets/img/banners/NewCampus-1200w.webp";
 import newban1 from "../assets/img/banners/igdcb.webp";
+import newban1400 from "../assets/img/banners/igdcb-400w.webp";
+import newban1800 from "../assets/img/banners/igdcb-800w.webp";
+import newban11200 from "../assets/img/banners/igdcb-1200w.webp";
 import newban3 from "../assets/img/banners/alumni.webp";
 import mbnewban0 from "../assets/img/mobilebanner/homepagebanner/igdcbm.webp";
 import mbnewbanF from "../assets/img/mobilebanner/homepagebanner/NewCampus.webp";
@@ -100,7 +106,7 @@ const EmblaCarousel = (props) => {
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
             <div className="embla__slide" key={0}>
-              <picture>
+              {/* <picture>
                 <source srcSet={mbnewban0} media="(max-width: 768px)" />
                 <img
                   src={newban1}
@@ -111,11 +117,40 @@ const EmblaCarousel = (props) => {
                   fetchpriority="high"     // ✅ GOOD
                   style={{ width: "100%", margin: "0 auto", height: "auto" }}
                 />
+              </picture> */}
+  <picture>
+                {/* Mobile banner */}
+                <source
+                  srcSet={mbnewban0}
+                  media="(max-width: 768px)"
+                />
+
+                {/* Desktop responsive images */}
+                <source
+                  srcSet={`
+                ${newban1400} 400w,
+                ${newban1800} 800w,
+                ${newban1200} 1200w,
+                ${newban1} 1500w
+              `}
+                sizes="1340px"
+                />
+
+                {/* Fallback image */}
+                <img
+                  src={newban1800}
+                  alt="Backstage Pass New campus"
+                  width="1526"
+                  height="450"
+                  fetchPriority="high"
+                  decoding="async"
+                  style={{ width: "100%", height: "auto" }}
+                />
               </picture>
 
             </div>
             <div className="embla__slide" key={220}>
-              <picture>
+              {/* <picture>
                 <source srcSet={mbnewbanF} media="(max-width: 768px)" />
                 <img
                   src={newbanF}
@@ -126,7 +161,38 @@ const EmblaCarousel = (props) => {
                   decoding="async"
                   style={{ width: "100%" }}
                 />
+              </picture> */}
+              <picture>
+                {/* Mobile banner */}
+                <source
+                  srcSet={mbnewbanF}
+                  media="(max-width: 768px)"
+                />
+
+                {/* Desktop responsive images */}
+                <source
+                  srcSet={`
+                ${newban400} 400w,
+                ${newban800} 800w,
+                ${newban1200} 1200w,
+                ${newbanF} 1500w
+              `}
+                sizes="1340px"
+                />
+
+                {/* Fallback image */}
+                <img
+                  src={newban800}
+                  alt="Backstage Pass New campus"
+                  width="1526"
+                  height="450"
+                  fetchPriority="high"
+                  decoding="async"
+                  style={{ width: "100%", height: "auto" }}
+                />
               </picture>
+
+
             </div>
             <div className="embla__slide" key={3}>
               <picture>

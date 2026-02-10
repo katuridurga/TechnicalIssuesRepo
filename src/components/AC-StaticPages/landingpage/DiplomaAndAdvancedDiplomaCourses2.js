@@ -113,15 +113,6 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
     window.localStorage.setItem('MY_APP_STATE', JSON.stringify(showBanner));
   }, [showBanner]);
 
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowBanner(false);
-      setLoading(false);
-    }, 3000);
-
-  }, []);
 
 
 
@@ -941,6 +932,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
 
 <div className="App">
         <a
+        href=''
           countryCode="91"
           phoneNumber="8977945705"
           style={{ right: isMobileState ? "1.5rem" : "1rem!impoirtant", marginBottom: isMobileState ? "-7rem" : "9rem", zIndex: "11111", position:"fixed" }}
