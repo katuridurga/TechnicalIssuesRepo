@@ -126,7 +126,7 @@ function SkillDiplomaCourses({ active, props }) {
     if (referrer) {
       const urlParts = referrer.split('/').filter(Boolean);
       lastSegment = urlParts[urlParts.length - 1];
-      
+
       if (lastSegment === 'short-course') {
         lastSegment = "";
       }
@@ -367,7 +367,7 @@ function SkillDiplomaCourses({ active, props }) {
   //   document.body.appendChild(formElement);
   //   formElement.submit();
   // };
-  
+
 
 
 
@@ -471,11 +471,11 @@ function SkillDiplomaCourses({ active, props }) {
           <p><strong>Duration:</strong> {duration}</p>
           <p><strong>Mode:</strong> {mode}</p>
           {batch ? (
-        <p><strong>Upcoming Batch:</strong> {batch}</p>
+            <p><strong>Upcoming Batch:</strong> {batch}</p>
           ) : (
             <p><strong>Coming Soon</strong></p>
           )}
-          
+
         </div>
 
         <a href={url} target='_blank' rel="noopener noreferrer">
@@ -504,7 +504,7 @@ function SkillDiplomaCourses({ active, props }) {
     <>
       <Helmet>
         <title>Skill Diploma Course</title>
-        <meta  name="description" content="Learn 3D modeling, character design, and more. Start from scratch and master game art to create stunning game worlds and characters." />
+        <meta name="description" content="Learn 3D modeling, character design, and more. Start from scratch and master game art to create stunning game worlds and characters." />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
       <div className="row mb0" id="scroll-container" >
@@ -543,10 +543,10 @@ function SkillDiplomaCourses({ active, props }) {
                 </div>
               </div>
               <div>
-                <div className='fom-ad-21' id="CounsellingOnGamingCareer" style={{marginTop:"0px"}}>
+                <div className='fom-ad-21' id="CounsellingOnGamingCareer" style={{ marginTop: "0px" }}>
 
 
-                  <div className='containers-21' style={{boxShadow:isMobileState? "0 0px 0px rgba(0, 0, 0, .6)":" 0 15px 20px rgba(0, 0, 0, .6)"}}>
+                  <div className='containers-21' style={{ boxShadow: isMobileState ? "0 0px 0px rgba(0, 0, 0, .6)" : " 0 15px 20px rgba(0, 0, 0, .6)" }}>
 
                     {/* 
                     <form onSubmit={handleSubmit} className="formMain">
@@ -648,10 +648,11 @@ function SkillDiplomaCourses({ active, props }) {
                       encType="multipart/form-data"
                     >
 
-                      <p className="mainHeadingTotall-2" style={{fontSize:isMobileState?"20px":"30px",color:"#ee1b24"}}>ENROLLMENT FORM</p>
+                      <p className="mainHeadingTotall-2" style={{ fontSize: isMobileState ? "20px" : "30px", color: "#ee1b24" }}>ENROLLMENT FORM</p>
 
                       <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container" style={{
-    gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(2, 1fr)" }}>
+                        gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(2, 1fr)"
+                      }}>
                         <div className="">
                           <label className="" for="fullname">Full Name (as per official documents)</label>
                           <input
@@ -684,7 +685,8 @@ function SkillDiplomaCourses({ active, props }) {
                       </div>
 
                       <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container" style={{
-    gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(2, 1fr)" }}>
+                        gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(2, 1fr)"
+                      }}>
                         <div className="">
                           <label className="" htmlFor="email">Email Address</label>
                           <input
@@ -725,7 +727,7 @@ function SkillDiplomaCourses({ active, props }) {
                             name="course"
                             id="course"
                             value={formData.course}
-                            style={{ width: "100%", marginBottom:"20px" }}
+                            style={{ width: "100%", marginBottom: "20px" }}
                             required
                           >
                             <option value="" disabled>
@@ -788,18 +790,18 @@ function SkillDiplomaCourses({ active, props }) {
                         </div>
                         {paymentDetails.originalPayment && (
                           <div className='paymentShortCourse'>
-                            <div style={{color:"#000"}}>Payment (INR): <span>₹{paymentDetails.originalPayment}</span></div>
+                            <div style={{ color: "#000" }}>Payment (INR): <span>₹{paymentDetails.originalPayment}</span></div>
                             {paymentDetails.discountValue > 0 && (
-                              <div style={{color:"#000"}}>
+                              <div style={{ color: "#000" }}>
                                 Discount (INR): <span>-₹{paymentDetails.discountValue}</span>
                               </div>
                             )}
 
-                            <div style={{color:"#000"}}>Total Payment (INR): <span>₹{paymentDetails.finalAmount}</span></div>
+                            <div style={{ color: "#000" }}>Total Payment (INR): <span>₹{paymentDetails.finalAmount}</span></div>
                           </div>
                         )}
                         <div className="checkbox-container" >
-                          <label className="checkbox-label" style={{fontSize: "14px"}}>
+                          <label className="checkbox-label" style={{ fontSize: "14px" }}>
                             <input
                               type="checkbox"
                               name="declaration"
@@ -856,29 +858,29 @@ function SkillDiplomaCourses({ active, props }) {
               </div>
             </div>
             <div id="Career-Opportunitiesl" backgroundColor="brown" height="auto">
-              <h2 className='mainHeadingTotall-2' style={{color:"#ee1b24"}}>you might also like
+              <h2 className='mainHeadingTotall-2' style={{ color: "#ee1b24" }}>you might also like
               </h2>
               <div className="course-section">
-               
+
                 <div className="course-grid">
-                {coursesData
-        .filter(course => course.duration === '3 months (120 Hours)')
-        .map((course, index) => (
-          <CourseCard key={`pro-${index}`} {...course} />
-        ))}
+                  {coursesData
+                    .filter(course => course.duration === '3 months (120 Hours)')
+                    .map((course, index) => (
+                      <CourseCard key={`pro-${index}`} {...course} />
+                    ))}
                 </div>
               </div>
 
-              <h2 className='mainHeadingTotall-2' style={{color:"#ee1b24"}}>Explore Now</h2>
+              <h2 className='mainHeadingTotall-2' style={{ color: "#ee1b24" }}>Explore Now</h2>
 
               <div className="course-section">
-               
+
                 <div className="course-grid">
-                {coursesData
-        .filter(course => course.duration === '20 Hours')
-        .map((course, index) => (
-          <CourseCard key={`cert-${index}`} {...course} />
-        ))}
+                  {coursesData
+                    .filter(course => course.duration === '20 Hours')
+                    .map((course, index) => (
+                      <CourseCard key={`cert-${index}`} {...course} />
+                    ))}
                 </div>
               </div>
 
@@ -891,7 +893,7 @@ function SkillDiplomaCourses({ active, props }) {
 
 
 
-            <h2 className='mainHeadingTotall-2' style={{color:"#ee1b24"}}>Why Choose Backstage Pass?
+            <h2 className='mainHeadingTotall-2' style={{ color: "#ee1b24" }}>Why Choose Backstage Pass?
             </h2>
 
             <ul className='featuress3gl'>
@@ -933,7 +935,7 @@ function SkillDiplomaCourses({ active, props }) {
 
 
 
-            <h2 className='mainHeadingTotall-2'  style={{color:"#ee1b24"}}>A short course will help you be industry ready!
+            <h2 className='mainHeadingTotall-2' style={{ color: "#ee1b24" }}>A short course will help you be industry ready!
             </h2>
 
 
@@ -941,7 +943,7 @@ function SkillDiplomaCourses({ active, props }) {
 
 
 
-            <div className="footerin" style={{padding: "30px" }}>
+            <div className="footerin" style={{ padding: "30px" }}>
               <div className="text-center foot-content fadeInUp anime-delay2" style={{ display: 'flex', alignItems: "center", justifyContent: "center", color: "#000000" }}>© A Subsidiary of PVR Memorial Educational Society 2025. All Rights Reserved</div>
             </div>
           </div>
