@@ -8,7 +8,6 @@ import Marquee from "react-fast-marquee";
 import { CiPhone } from "react-icons/ci";
 import FeaturedProductsb from "../../../content/FeaturedProductsb.js";
 import StudentArtGalleryS from "../../../content/StudentArtGalleryScroll.js";
-
 import r1 from "../../../assets/img/partners/r1.png";
 import superg from "../../../assets/img/partners/supergaming.png";
 import rock from "../../../assets/img/partners/2.webp";
@@ -18,11 +17,7 @@ import r4 from "../../../assets/img/partners/r4.png";
 import r5 from "../../../assets/img/partners/r5.png";
 import r6 from "../../../assets/img/partners/r6.svg";
 import r7 from "../../../assets/img/partners/r7.png";
-
-
-
 import { Helmet } from "react-helmet";
-
 import Flag1 from "../../../assets/img/banners/usa.webp";
 import Flag2 from "../../../assets/img/banners/uk.webp";
 import Flag3 from "../../../assets/img/banners/canada.webp";

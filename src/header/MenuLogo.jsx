@@ -1,18 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/img/newlogo.webp";
+//import logo from "../assets/img/newlogo.webp";
 import logo313 from "../assets/img/newlogo-313w.webp";
 import logo626 from "../assets/img/newlogo-626w.webp";
-import { useSelector, shallowEqual } from "react-redux";
+//import { useSelector, shallowEqual } from "react-redux";
 
 
 export default function MenuLogo() {
-  const isMobileState = useSelector(
-    (state) => state.mainReducer.isMobile,
-    shallowEqual
-  );
-
-
+  // const isMobileState = useSelector(
+  //   (state) => state.mainReducer.isMobile,
+  //   shallowEqual
+  // );
   return (
     <>
       {/* ✅ Single Link (no conditional mount) to avoid flicker */}

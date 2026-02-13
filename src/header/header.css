@@ -8103,55 +8103,30 @@ body {
 /* Checkbox Styling */
 
 .MuiFormControlLabel-label {
-
   font-size: 0.9rem;
-
   /* color: #555; */
-
   color: #fff;
-
 }
-
-
-
 /* Error Message Styling */
-
 .MuiFormHelperText-root {
-
   color: #d32f2f;
-
   font-size: 0.8rem;
-
 }
-
-
 
 /* Typography Styling */
 
 .MuiTypography-h6 {
-
   font-size: 1.5rem;
-
   font-weight: 600;
-
   margin-bottom: 12px;
-
   color: #000;
-
 }
-
-
-
 /* Modal Styling */
 
 .MuiModal-root {
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
 }
 
 .loader-container {
@@ -8181,15 +8156,12 @@ body {
     transform: rotate(360deg);
   }
 }
-
-
 .paymentShortCourse {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: self-start;
 }
-
 .paymentShortCourse div {
   color: #fff;
   font-size: 16px;
@@ -8254,7 +8226,6 @@ body {
   line-height: 1.6;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-
 .courseObj li::before {
   content: '✔';
   position: absolute;
@@ -8284,9 +8255,6 @@ body {
        color: #000;
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
 }
-
-
-
 
 .courseObj1 {
   width: 54%;

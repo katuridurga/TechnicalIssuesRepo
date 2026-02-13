@@ -13,14 +13,9 @@ import Slide from '@mui/material/Slide';
 import { useSelector, shallowEqual } from "react-redux";
 import { Helmet } from "react-helmet";
 import { FaHome, FaArrowRight } from 'react-icons/fa';
-
-  
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
-
-
- 
 
 function BlogDetail({ history,match }) {
   const { id } = match.params; // Get the `id` from URL params
@@ -41,9 +36,7 @@ function BlogDetail({ history,match }) {
     PhoneNumber: '', email: '', city: '', comments: '', url: window.location.href, from: 'blog'
   });
   
- const redirectTo = (url) => {
-    history.push(url);
-  };
+
   const handleClose = () => {
     setOpen(false);
   };
@@ -104,7 +97,6 @@ function BlogDetail({ history,match }) {
 
   const handleScroll = () => {
     if (!bannerRef.current) return;
-
     const bannerHeight = 500; // Fixed height of the banner
     const scrollTop = window.scrollY;
     const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -126,8 +118,6 @@ function BlogDetail({ history,match }) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-
   useEffect(() => {
     // Get the current page URL
     const pageUrl = window.location.href;
@@ -138,7 +128,6 @@ function BlogDetail({ history,match }) {
       currentSessionId = uuidv4();  // Generate new session ID
       sessionStorage.setItem('sessionId', currentSessionId); // Store session ID in sessionStorage
     }
-
     // Set sessionId in state
     setSessionId(currentSessionId);
 
@@ -168,8 +157,6 @@ function BlogDetail({ history,match }) {
       });
   }, [id]); // Make sure to add `id` to the dependency array
 
-
-
   useEffect(() => {
     // Set the start time when the page loads
     const startTime = new Date().getTime();
@@ -182,7 +169,6 @@ function BlogDetail({ history,match }) {
       currentSessionId = uuidv4();  // Generate new session ID
       sessionStorage.setItem('sessionId', currentSessionId); // Store session ID in sessionStorage
     }
-
     // Set sessionId in state
     setSessionId(currentSessionId);
 
@@ -328,9 +314,6 @@ window.addEventListener('beforeunload', function (event) {
 
     <div>
       <Helmet>
-
-
-
 
         <script type="application/ld+json">
           {JSON.stringify({

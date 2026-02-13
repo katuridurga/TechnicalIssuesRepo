@@ -3,7 +3,6 @@ import "./DiplomaAndAdvancedDiplomaCourses.css";
 import PropTypes from 'prop-types';
 
 import { FaWhatsapp } from "react-icons/fa";
-
 import Marquee from "react-fast-marquee";
 import r1 from "../../../assets/img/partners/r1.png";
 import r2 from "../../../assets/img/partners/r2.png";
@@ -13,14 +12,12 @@ import r6 from "../../../assets/img/partners/r6.svg";
 import r7 from "../../../assets/img/partners/r7.png";
 import rock from "../../../assets/img/partners/2.webp";
 import superg from "../../../assets/img/partners/supergaming.png";
-
 import B1 from "../../../assets/img/banners/business-standard-logo.png";
 import B2 from "../../../assets/img/banners/forbes-logo.webp";
 import B3 from "../../../assets/img/banners/et-logo.webp";
 import B4 from "../../../assets/img/banners/thehindu-logo.svg";
 import MscGameTechnology from "../../../assets/img/Courses/MscGameTechnology.webp"
 import { Helmet } from "react-helmet";
-import StudentGamesList from "../../../content/StudentGamesList";
 import MIntheMedia from "../../../content/MIntheMedia";
 
 import Flag1 from "../../../assets/img/banners/usa.webp";
@@ -372,7 +369,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     <>
       <Helmet>
         <title>Best Game Development College In India</title>
-        <meta  name="description" content="Join the top game design and development college in Hyderabad. Explore game development courses & game design courses to kickstart your gaming career." />
+        <meta name="description" content="Join the top game design and development college in Hyderabad. Explore game development courses & game design courses to kickstart your gaming career." />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
       <div className="row mb0" id="scroll-container" >
@@ -548,9 +545,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   <div className='courseUpdatesl'>
                     <ul>
                       <li><img src={m3} alt="Duration icon" />
-                        <span style={{color:"#000"}}>Duration: 4 Years</span></li>
+                        <span style={{ color: "#000" }}>Duration: 4 Years</span></li>
                       <li><img src={m4} alt="Eligibility icon" />
-                        <span style={{color:"#000"}}>Eligibility: 10+2 or Equivalent *</span></li>
+                        <span style={{ color: "#000" }}>Eligibility: 10+2 or Equivalent *</span></li>
 
                     </ul>
                     <p style={{ color: "#000", textAlign: "center" }}>*The eligibility criteria for each Bachelor's course varies based the curriculum. Please check the criteria for the course you want to opt for before applying.</p>
@@ -599,9 +596,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   <div className='courseUpdatesl'>
                     <ul>
                       <li><img src={m3} alt="Duration icon" />
-                        <span style={{color:"#000"}}>Duration: 2 Years</span></li>
+                        <span style={{ color: "#000" }}>Duration: 2 Years</span></li>
                       <li><img src={m4} alt="Eligibility icon" />
-                        <span style={{color:"#000"}}>Eligibility:  As mentioned in the course</span></li>
+                        <span style={{ color: "#000" }}>Eligibility:  As mentioned in the course</span></li>
 
                     </ul>
                   </div>
@@ -617,14 +614,14 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       </div>
                     </div>
                   </Link>
-<Link to={"/courses/masters-in-3d-game-art-design/"}>
+                  <Link to={"/courses/masters-in-3d-game-art-design/"}>
                     <div className="mainCourse1" style={{ marginBottom: "-14px" }}>
                       <div className="mainCourseLeft1">
                         <img src={MscGameTechnology3d} alt="MASTER’Sin3DGameArt&GameDesign" className="img-circle" />
                       </div>
                       <div className="mainCourseRight1">
                         <h2 className="CourseHead1" style={{ fontFamily: "'Montserrat', sans-serif" }}>MASTER’S in 3D Game Art & Game Design </h2>
-                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>Looking for a master's degree in game design? If you're passionate about 3D modeling, texturing, and animation, this course is perfect for turning your artistic skills into a successful career in the gaming industry. 
+                        <p style={{ fontFamily: "'Montserrat', sans-serif" }}>Looking for a master's degree in game design? If you're passionate about 3D modeling, texturing, and animation, this course is perfect for turning your artistic skills into a successful career in the gaming industry.
                         </p>
 
                       </div>
@@ -673,11 +670,11 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             <h2 className='mainHeadingTotall-2'>Our Students are working at Companies like</h2>
 
             <Marquee speed={100} style={{ Padding: "0px 20px" }} className='recuitersList-20'>
-                <img alt="superg" src={superg} width={"300"} height={"81"} />
-                  <img alt="rock" src={rock} width={"300"} height={"81"} />
+              <img alt="superg" src={superg} width={"300"} height={"81"} />
+              <img alt="rock" src={rock} width={"300"} height={"81"} />
               <img alt="rec1" src={r1} width={"300"} height={"81"} />
               <img alt="rec2" src={r2} width={"300"} height={"81"} />
-            
+
               <img alt="rec4" src={r4} width={"300"} height={"81"} />
               <img alt="rec5" src={r5} width={"300"} height={"81"} />
               <img alt="rec9" src={r6} width={"300"} height={"81"} />
@@ -756,7 +753,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 <form onSubmit={handleSubmit} className="formMain">
 
-                  <p className="suprtsMobiless" style={{color:"#fff"}}>Get <b>a Counselling</b> Session on Gaming Career</p>
+                  <p className="suprtsMobiless" style={{ color: "#fff" }}>Get <b>a Counselling</b> Session on Gaming Career</p>
                   <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
 
 
@@ -886,16 +883,25 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
         </div>
       </div>
       <div className="App">
-              <a
+        {/* <a
                 countryCode="91"
                 phoneNumber="8977945705"
                 style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "4rem" : "-1rem", zIndex: "11111" }}
                 className="whatsappsivakl">
 
                   <FaWhatsapp  style={{ color: "#fff", fontSize: "32px" }} />
-                </a>
-    
-            </div>
+                </a> */}
+        <a
+          href="https://wa.me/918977945705"
+          target="_blank"
+          rel="noopener noreferrer"
+           style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "4rem" : "-1rem", zIndex: "11111" }}
+          className="whatsappsivakl"
+        >
+          <FaWhatsapp style={{ color: "#fff", fontSize: "32px" }} />
+        </a>
+
+      </div>
       {isButtonVisible && (
         <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{ zIndex: "1" }}>Enroll Now</a></div>)}
 

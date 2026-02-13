@@ -23,7 +23,6 @@ import bannerimgunrealc from "../../../assets/img/banners/Diploma_in_Game_Develo
 
 import { Helmet } from "react-helmet";
 import { FaWhatsapp } from "react-icons/fa";
-import StudentGamesList from "../../../content/StudentGamesList";
 import MIntheMedia from "../../../content/MIntheMedia";
 import axios from 'axios';
 import FeaturedProductL from "../../../content/FeaturedProductL.js";
@@ -34,7 +33,6 @@ import AdvancedDiplomain3DGameArtDigitalSculpting from "../../../assets/img/Cour
 import DiplomainGameDesignProduction from "../../../assets/img/Courses/DiplomainGameDesignProduction.webp"
 import DiplomainGameDevelopmentwithUnity from "../../../assets/img/Courses/DiplomainGameDevelopmentwithUnity.webp"
 import Diplomain3DEnvironmentArtCreationforGames from "../../../assets/img/Courses/Diplomain3DEnvironmentArtCreationforGames.webp"
-import AdvancedDiplomainTraditionalDigitalConceptArt from "../../../assets/img/Courses/AdvancedDiplomainTraditionalDigitalConceptArt.webp"
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -987,13 +985,22 @@ VR Application Development" className="img-circle" />
       {isButtonVisible && (
         <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Enroll Now</a></div>)}
       <div className="App">
-        <a
+        {/* <a
           countryCode="91"
           phoneNumber="8977945705"
           style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "4rem" : "-1rem", zIndex: "11111" }}
           className="whatsappsivakl">
           <FaWhatsapp style={{ color: "#fff", fontSize: "32px" }} />
-        </a>
+        </a> */}
+           <a
+                  href="https://wa.me/918977945705"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                     style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "4rem" : "-1rem", zIndex: "11111" }}
+                  className="whatsappsivakl"
+                >
+                  <FaWhatsapp style={{ color: "#fff", fontSize: "32px" }} />
+                </a>
       </div>
     </>
   )

@@ -1,11 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import "./DiplomaAndAdvancedDiplomaCourses.css";
 import PropTypes from 'prop-types';
-
-
-
 import { Helmet } from "react-helmet";
-
 import { FaWhatsapp } from "react-icons/fa";
 import axios from 'axios';
 import { BsDot } from "react-icons/bs";
@@ -57,10 +53,6 @@ import awic from '../../../assets/img/banners/global-networkn.webp';
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
-
-
-
-
 function HideOnScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({
@@ -92,20 +84,15 @@ function TabPanel(props) {
     </div>
   );
 }
-
 TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.number.isRequired,
   value: PropTypes.number.isRequired,
 };
-
-
 HideOnScroll.propTypes = {
   children: PropTypes.element.isRequired,
-
   window: PropTypes.func,
 };
-
 function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
   const [showBanner, setShowBanner] = useState(true);
 
@@ -117,28 +104,17 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
   useEffect(() => {
     window.localStorage.setItem('MY_APP_STATE', JSON.stringify(showBanner));
   }, [showBanner]);
-
-
-
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
     shallowEqual
   );
-  const [isActives, setIsActives] = useState(true);
+  const [isActives] = useState(true);
   const theme = useTheme();
-
-
-
-
   const [value1, setValue1] = React.useState(0);
-
   const handleChange1 = (event, newValue) => {
     setValue1(newValue);
   };
   const [open, setOpen] = React.useState(false);
-
-
-
   const handleClose = () => {
     setOpen(false);
   };
@@ -171,11 +147,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       { value: 'gdunreal', label: 'Game Development with Unreal' }
     ]
   };
-
   const handleMainCategoryChange = (event) => {
     const selectedCategory = event.target.value;
-
-
     setSubOptions(options[selectedCategory] || []);
     setFormData((prevData) => ({
       ...prevData,
@@ -243,10 +216,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       alert('An error occurred while submitting the form. Please try again.');
     }
   };
-
   const videoRef = useRef(null); // To reference the video element
   const [isPlaying, setIsPlaying] = useState(false); // To manage the play state
-
   const handlePlay = () => {
     // Play the video when the image is clicked
     if (videoRef.current) {
@@ -254,8 +225,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       setIsPlaying(true); // Update the state to hide the image
     }
   };
-
-
   return (
     <>
       <Helmet>
@@ -1067,13 +1036,22 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
         </div>
       </div>
       <div className="App">
-        <a
+        {/* <a
           countryCode="91"
           phoneNumber="8977945705"
           style={{ right: isMobileState ? "1.5rem" : "4rem!important", marginBottom: isMobileState ? "-7rem" : "-1rem", zIndex: "11111" }}
           className="whatsappsivakl">
           <FaWhatsapp style={{ color: "#fff", fontSize: "32px" }} />
 
+        </a> */}
+    <a
+          href="https://wa.me/918977945705"
+          target="_blank"
+          rel="noopener noreferrer"
+            style={{ right: isMobileState ? "1.5rem" : "4rem!important", marginBottom: isMobileState ? "-7rem" : "-1rem", zIndex: "11111" }}
+          className="whatsappsivakl"
+        >
+          <FaWhatsapp style={{ color: "#fff", fontSize: "32px" }} />
         </a>
 
       </div>

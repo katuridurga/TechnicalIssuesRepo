@@ -1,14 +1,6 @@
 import React from 'react'
 import "./Facilities.css";
-import hstl2 from "../../../assets/img/test/hstl2.webp"
-import hstl3 from "../../../assets/img/test/hstl3.webp"
-import hstl5 from "../../../assets/img/test/hstl5.webp"
-import location from "../../../assets/img/Location.webp";
 import { FaHome } from "react-icons/fa";
-
-
-
-
 import { useSelector, shallowEqual } from "react-redux";
 import { Helmet } from "react-helmet";
 
@@ -20,7 +12,7 @@ function Courses(props) {
   return (
     <>
       {/* <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'MobileClasshstl' : 'HostelB'}`}> */}
-        <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? '' : ''}`}>
+      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? '' : ''}`}>
         <div className="et_pb_row et_pb_row_0">
           <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
             <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";

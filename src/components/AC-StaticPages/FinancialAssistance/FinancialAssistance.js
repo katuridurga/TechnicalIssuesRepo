@@ -89,6 +89,7 @@ function Courses(props) {
       .get(`https://www.backstagepass.co.in/reactapi/getcity.php?state=${selectedState}`)
       .then((response) => {
         setCities(response.data); // Assuming response is like [{ value: 'Hyderabad', label: 'Hyderabad' }, ...]
+        
         setLoading(false);
       })
       .catch((err) => {
@@ -249,26 +250,11 @@ function Courses(props) {
 
           <p className='adminissionPTag1' style={{ marginBottom: "20px" }}>Financing your education shouldn't hold you back from achieving your dreams. At Backstage Pass, we're dedicated to providing accessible and affordable student loan options to empower your academic journey.
           </p>
-
-
-
-
-
         </div>
-
-
-
-
-
-
       </div>
-
       <div className="mainbenfits">
         <h2 className="mainHeadingTotal fadeInUp anime-delay">Benefits</h2>
-
-
         <div className='courseUpdates3'>
-
           <ul>
             <li><div className="bgicofin"><img alt="Zero Interest Rate" src={zero} /></div>
               <p style={{ color: "#000" }}>Zero<br />Interest Rate</p></li>
@@ -283,16 +269,13 @@ function Courses(props) {
         </div>
       </div>
       <div className="courses-container">
-
         <div className="courses-wrapper">
           <h2
             className="mainHeadingTotal fadeInUp anime-delay"
 
           ><span>
               What’s More?</span>
-
           </h2>
-
           {isOpen && (
             <>
               <div className="whtsmain">
@@ -309,12 +292,10 @@ function Courses(props) {
                     financial institutions lets you enjoy many exclusive benefits!
                   </p>
                 </div>
-
                 <div>
                   <ul className="benfits">
                     <li>
-
-                      <div className="benfitContent">
+                    <div className="benfitContent">
                         <div className="benfitIcon">
                           <img src={insurance} alt="accidental insurance icon" />
                         </div>
@@ -322,7 +303,6 @@ function Courses(props) {
                       </div>
                     </li>
                     <li>
-
                       <div className="benfitContent">
                         <div className="benfitIcon">
                           <img src={cash} alt="voucher icon" />
@@ -330,7 +310,6 @@ function Courses(props) {
                         Voucher worth INR 10,000</div>
                     </li>
                     <li>
-
                       <div className="benfitContent">
                         <div className="benfitIcon">
                           <img src={time} alt="Quick loan icon" />
@@ -341,9 +320,7 @@ function Courses(props) {
                   </ul>
                 </div>
               </div>
-
-              <br />
-
+             <br />
               <p className="adminissionPTag1">
                 For those who prefer to apply for a student loan through nationalized banks
                 in India, we'll provide necessary documents to ensure a seamless
@@ -372,18 +349,14 @@ function Courses(props) {
                   <li style={{ marginBottom: "7px" }}><FiArrowRight /> 3 months' pay slips</li>
                   <li style={{}}><FiArrowRight /> Pan and Aadhar copy</li>
                 </ul>
-
-
               </span>
             </li>
-
             <li className="process__itemf">
               <div id="infinity"><span className="process__numberfinance">02</span></div>
               <span className="process__titlef">Processing</span>
               <span className="process__subtitlef">of the loan amount will be done within maximum 24 working hours</span>
             </li>
-
-            <li className="process__itemf">
+          <li className="process__itemf">
               <div id="infinity"><span className="process__numberfinance">03</span></div>
               <span className="process__titlef">Disbursement</span>
               <span className="process__subtitlef">Of the loan will take another 24 working hours after approval

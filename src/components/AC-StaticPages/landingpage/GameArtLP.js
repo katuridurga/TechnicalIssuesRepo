@@ -19,25 +19,13 @@ import GAIMG3 from "../../../assets/img/partners/Icons/AnimationVFXenthusiast.we
 import GAIMG4 from "../../../assets/img/partners/Icons/CharacterArtDigitalSculpting.webp";
 import GAIMG5 from "../../../assets/img/partners/Icons/HardSurfaceModeler.webp";
 import GAIMG6 from "../../../assets/img/partners/Icons/Fundamentalsofgamedesign.webp";
-import art11 from "../../../assets/img/art/Vishnusai.webp"
-import art33 from "../../../assets/img/art/VijaySivatej1.webp"
-import art44 from "../../../assets/img/art/SuryaShankha2.webp"
-import art55 from "../../../assets/img/art/AbhiAstu1.webp"
-import art66 from "../../../assets/img/art/Frame37.webp"
-import art77 from "../../../assets/img/art/Frame19.webp"
 import B1 from "../../../assets/img/banners/business-standard-logo.png";
 import B2 from "../../../assets/img/banners/forbes-logo.webp";
 import B3 from "../../../assets/img/banners/et-logo.webp";
 import B4 from "../../../assets/img/banners/thehindu-logo.svg";
 import StudentArtGalleryS from "../../../content/StudentArtGalleryScroll.js";
-
 import { Helmet } from "react-helmet";
-
-
-
-import StudentGamesList1 from "../../../content/StudentGamesList1";
 import MIntheMedia from "../../../content/MIntheMedia";
-
 import Flag1 from "../../../assets/img/banners/usa.webp";
 import Flag2 from "../../../assets/img/banners/uk.webp";
 import Flag3 from "../../../assets/img/banners/canada.webp";
@@ -58,10 +46,8 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
-
 import recimg from '../../../assets/img/banners/Times-Award.webp';
 import Typography from '@mui/material/Typography';
-
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import m3 from "../../../assets/img/test/d1.webp";
@@ -96,14 +82,9 @@ import wc8 from '../../../assets/img/Icons/WEBSITE-ICON/Accesstofreewebinars_wor
 import wc9 from '../../../assets/img/Icons/WEBSITE-ICON/GlobalAluminicommunity2.webp';
 import icg from '../../../assets/img/logos/console.webp';
 import GameArtDesign from "../../../assets/img/Courses/GameArt&Design.webp"
-
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
-
-
-
-
 function HideOnScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({
@@ -175,12 +156,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     state => state.mainReducer.isMobile,
     shallowEqual
   );
-
   const theme = useTheme();
-
-
   const [isButtonVisible, setIsButtonVisible] = useState(true);
-
   // Function to scroll to the bottom of the container
   const scrollToBottom = () => {
     const container = document.getElementById('scroll-container');
@@ -194,7 +171,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     // Hide the button after clicking
     setIsButtonVisible(true);
   };
-
   // Handle scroll event
   const handleScroll = () => {
     const container = document.getElementById('scroll-container');
@@ -211,32 +187,23 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       }
     }
   };
-
   useEffect(() => {
     const container = document.getElementById('scroll-container');
     if (container) {
       container.addEventListener('scroll', handleScroll);
-
     }
-
     // Clean up the event listener
     return () => {
       if (container) {
         container.removeEventListener('scroll', handleScroll);
-
       }
     };
   }, []);
-
   const [value1, setValue1] = React.useState(0);
-
   const handleChange1 = (event, newValue) => {
     setValue1(newValue);
   };
   const [open, setOpen] = React.useState(false);
-
-
-
   const handleClose = () => {
     setOpen(false);
   };
@@ -365,7 +332,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       setIsPlayingI(true); // Update the state to hide the image
     }
   };
-
   const handlePlayStudent = () => {
     // Play the video when the image is clicked
     if (videoRefS.current) {
@@ -373,9 +339,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       setIsPlayingS(true); // Update the state to hide the image
     }
   };
-
-
-
   const faqData = [
     {
       id: 0,
@@ -418,15 +381,10 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       answer: "Salaries range from ₹3,00,000 to ₹8,00,000 annually, depending on experience, location, and the studio's size."
     }
   ];
-
-
   const [activeIndex, setActiveIndex] = useState(null);
-
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
-
   return (
     <>
       <Helmet>
@@ -455,8 +413,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       <source src="https://www.backstagepass.co.in/landingpage/game-artv.mp4" type="video/mp4" />
 
                     </video>
-
-
                     {!isPlaying && (
                       <img
                         src={advdip}
@@ -474,20 +430,11 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               </div>
               <div>
                 <div className='fom-ad-21' id="CounsellingOnGamingCareer">
-
-
                   <div className='containers-21'>
-
-
-
-
-
                     <form onSubmit={handleSubmit} className="formMain">
 
                       <p className="suprtsMobiless" style={{color:"#000"}}>Get <b>a Counselling</b> Session on Gaming Career</p>
                       <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
-
-
                         <div className="">
                           <label className="" for="firstname">First Name</label>
                           <input className="" placeholder="First Name" id="firstname" name="firstname" type="text" value={formData.firstname} onChange={handleInputChange} required />
@@ -499,7 +446,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                           <label className="" for="lastname">Last Name</label>
                           <input className="" placeholder="Last Name" id="lastname" name="lastname" type="text" value={formData.lastname} onChange={handleInputChange} required />
                         </div>
-
                       </div>
                       <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
                         <div className="">
@@ -537,9 +483,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                             <option value="bachelor">Bachelor's</option>
                             <option value="masters">Master's</option>
                             <option value="diploma">Diploma</option>
-
                           </select>
-
                           {subOptions.length > 0 && (
                             <>
                               <label>Specialization</label>
@@ -602,23 +546,16 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                         </DialogActions>
                       </Dialog>
                     </React.Fragment>
-
-
-
                   </div>
                 </div>
               </div>
             </div>
-
             <div className="mainrec22g">
               <img src={recimg} alt="recimg" height={isMobileState ? "166" : "611"}
                 width={isMobileState ? "414" : "1526"} />
-
             </div>
-
             <h2 className='mainHeadingTotall-2'>Who is This Course for?
             </h2>
-
             <ul className='featuress2'>
               <li><img src={ic1} alt="ic1" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
@@ -626,26 +563,19 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <div className='featuresscon2'>10th or 12th Pass</div></li>
               <li><img src={ic2} alt="ic2" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
-
                 <div className='featuresscon2'>Pursuing Graduation
                 </div></li>
               <li><img src={GAIMG2} alt="GAIMG2" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
-
                 <div className='featuresscon2'>An Art Enthusiast
-
                 </div></li>
               <li><img src={GAIMG1} alt="GAIMG1" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
-
                 <div className='featuresscon2'>A Fine Arts student
-
                 </div></li>
               <li><img src={icg} alt="icg" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
-
                 <div className='featuresscon2'>A Gamer
-
                 </div></li>
               <li><img src={ic6} alt="ic6" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
@@ -655,10 +585,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 </div></li>
               <li><img src={GAIMG3} alt="GAIMG3" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
-
                 <div className='featuresscon2'>Animation & VFX enthusiast
-
-
                 </div></li>
               <li><img src={GAIMG} alt="GAIMG" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
@@ -1326,13 +1253,23 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       {isButtonVisible && (
         <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Enroll Now</a></div>)}
    <div className="App">
-        <a
+        {/* <a
           countryCode="91"
           phoneNumber="8977945705"
           style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-1rem" : "-1rem", zIndex: "11111" }}
           className="whatsappsivakl">
             <FaWhatsapp  style={{ color: "#fff", fontSize: "32px" }} />
-</a>
+</a> */}
+
+   <a
+          href="https://wa.me/918977945705"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "-1rem" : "-1rem", zIndex: "11111" }}
+          className="whatsappsivakl"
+        >
+          <FaWhatsapp style={{ color: "#fff", fontSize: "32px" }} />
+        </a>
       </div>
     </>
   )

@@ -931,7 +931,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
       </div>
 
 <div className="App">
-        <a
+        {/* <a
         href=''
           countryCode="91"
           phoneNumber="8977945705"
@@ -939,7 +939,16 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
           className="whatsappsivakl">
         
         <FaWhatsapp  style={{ color: "#fff", fontSize: "32px" }} />
-</a>
+</a> */}
+ <a
+          href="https://wa.me/918977945705"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ right: isMobileState ? "1.5rem" : "1rem!impoirtant", marginBottom: isMobileState ? "-7rem" : "9rem", zIndex: "11111", position:"fixed" }}
+          className="whatsappsivakl"
+        >
+          <FaWhatsapp style={{ color: "#fff", fontSize: "32px" }} />
+        </a>
       </div>
     </>
   )

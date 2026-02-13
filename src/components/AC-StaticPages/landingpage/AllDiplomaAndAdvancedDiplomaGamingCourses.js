@@ -17,8 +17,6 @@ import B4 from "../../../assets/img/banners/thehindu-logo.svg";
 import MscGameTechnology from "../../../assets/img/Courses/MscGameTechnology.webp"
 import { Helmet } from "react-helmet";
 
-
-import StudentGamesList from "../../../content/StudentGamesList";
 import MIntheMedia from "../../../content/MIntheMedia";
 
 import Flag1 from "../../../assets/img/banners/usa.webp";
@@ -80,9 +78,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-
-
-
 function HideOnScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({
@@ -140,18 +135,12 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     window.localStorage.setItem('MY_APP_STATE', JSON.stringify(showBanner));
   }, [showBanner]);
 
-  
-
-
-
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
     shallowEqual
   );
   
   const theme = useTheme();
-  
-
 
   const [isButtonVisible, setIsButtonVisible] = useState(true);
 
@@ -192,29 +181,21 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       container.addEventListener('scroll', handleScroll);
 
     }
-
     // Clean up the event listener
     return () => {
       if (container) {
         container.removeEventListener('scroll', handleScroll);
-
       }
     };
   }, []);
-
   const [value1, setValue1] = React.useState(0);
-
   const handleChange1 = (event, newValue) => {
     setValue1(newValue);
   };
   const [open, setOpen] = React.useState(false);
-
-
-
   const handleClose = () => {
     setOpen(false);
   };
-
   const [formData, setFormData] = useState({
     firstname: '',
     lastname: '',
@@ -271,8 +252,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       setIsPlaying(true); // Update the state to hide the image
     }
   };
-
-
   const faqData = [
     {
       id: 0,
@@ -315,15 +294,10 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       answer: "The Backstage Pass alumni are currently working at top gaming companies like EA Sports, Ubisoft, and Sumo."
     }
   ];
-
-
   const [activeIndex, setActiveIndex] = useState(null);
-
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
-
   return (
     <>
       <Helmet>
@@ -346,8 +320,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   <source src="https://www.backstagepass.co.in/landingpage/GCV.mp4" type="video/mp4" />
 
                 </video>
-
-
                 {!isPlaying && (
                   <img
                     src={advdip}
@@ -431,8 +403,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 </li>
               </ul>}
-
-
             <h2 className='mainHeadingTotall-2'>This course is for you if you…</h2>
 
             <ul className='featuress3'>
@@ -586,8 +556,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       </div>
                     </div>
                   </Link>
-
-
                 </TabPanel>
                 <TabPanel value={value1} index={2} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
                   <div className='courseUpdatesl'>
@@ -697,8 +665,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       </div> */}
 
             </div>
-
-
             <h2 className='mainHeadingTotall-2'>Our Students are working in Countries Like
             </h2>
 
@@ -773,12 +739,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                       <p> Backstage Pass Institute’s diploma courses open career paths in game design, development, and 3D art, with roles like game designer, Unity developer, and 3D environment artist.</p>
 
-
-
                     </div> : null}
-
-
-
 
                     {faq.id === "7" ? <div className='faq2'>
                       The Backstage Pass alumni are currently working at top gaming companies like EA Sports, Ubisoft, and Sumo.
@@ -792,19 +753,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               ))}
             </div>
 
-
-
-
-
-
             <div className='fom-ad-2' id="CounsellingOnGamingCareer">
-
-
               <div className='containers-2'>
-
-
-
-
 
                 <form onSubmit={handleSubmit} className="formMain">
 
@@ -882,16 +832,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                     </DialogActions>
                   </Dialog>
                 </React.Fragment>
-
-
-
               </div>
             </div>
-
-
           </div>
-
-
         </div>
       </div>
       {isButtonVisible && (

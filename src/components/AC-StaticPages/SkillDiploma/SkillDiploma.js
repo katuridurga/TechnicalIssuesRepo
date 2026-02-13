@@ -3,13 +3,8 @@ import axios from 'axios';
 import "./SkillDiploma.css";
 import { useForm } from 'react-hook-form';
 import { TextField, Button, MenuItem, Container, Typography, Paper, Modal, Box } from '@mui/material';
-
-
 import { useSelector, shallowEqual } from "react-redux";
-
-
 import { Helmet } from "react-helmet";
-
 function Courses(props) {
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
@@ -27,13 +22,9 @@ function Courses(props) {
     location: '',
     comments: '',
     url: window.location.href,
-
   });
   const onSubmit = async (data) => {
-    //setOpen(true); // Assuming you want to show a modal
-
     try {
-      // Log the form data received from the handleSubmit
       console.log("Submitting data:", data);
       const formDataWithUrl = { ...data, url: window.location.href };
 
@@ -47,10 +38,6 @@ function Courses(props) {
           window.location.reload();
         }, 3000);
       }
-      // Assuming the response indicates success
-      //alert("Your data was submitted successfully!");
-
-      // Reset form data
       setFormData({
         name: '',
         phone: '',

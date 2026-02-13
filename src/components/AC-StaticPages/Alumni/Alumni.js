@@ -46,7 +46,6 @@ import speaker26 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/
 import speaker27 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AgnibhaGoswami.webp";
 import speaker28 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/Amitprem.webp";
 import speaker29 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/BadepallyAjay.webp";
-import speaker30 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/SrivatsanP.webp";
 import speaker31 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/MDArsalaan.webp";
 import speaker32 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AnmolNikam.webp";
 import speaker33 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/SravyaReddy.webp";
@@ -122,12 +121,6 @@ CustomTabPanel.propTypes = {
   index: PropTypes.number.isRequired,
   value: PropTypes.number.isRequired,
 };
-
-
-
-
-
-
 
 function Alumni() {
   const isMobileState = useSelector(
@@ -740,7 +733,7 @@ function Alumni() {
 
   React.useEffect(() => {
     setData(speakers);
-  }, []);
+  }, [speakers]);
 const speakersRef = React.useRef(null);
 
   return (

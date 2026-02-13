@@ -36,7 +36,7 @@ import icon7 from "../../../assets/img/Icons/learning_Modules.webp";
 import icon8 from "../../../assets/img/Icons/6_Hours.webp";
 import icon9 from "../../../assets/img/Icons/onlinetotal.webp";
 import icon10 from "../../../assets/img/Icons/Certificate.webp";
-
+  const EXPIRY_TIME = 5 * 60 * 1000;
 function DiplomaAndAdvancedDiplomaCourses() {
   const isMobileState = useSelector(
     (state) => state.mainReducer.isMobile,
@@ -68,11 +68,6 @@ function DiplomaAndAdvancedDiplomaCourses() {
       }
     };
   }, []);
-
-
-
-
-
 
 
   // Function to scroll to the bottom of the container
@@ -110,9 +105,6 @@ function DiplomaAndAdvancedDiplomaCourses() {
       });
     };
   }, []);
-
-
-
 
   function Feature1({ title, subtitle }) {
     return (
@@ -200,8 +192,6 @@ function DiplomaAndAdvancedDiplomaCourses() {
     );
   }
 
-
-
   const featureData = [
     {
       title: "Beginner-friendly Maya fundamentals",
@@ -272,21 +262,19 @@ useEffect(() => {
   localStorage.setItem("stickyFormData", JSON.stringify(payload));
 }, [formData1, enableStorage]);
 
-  /* 🔹 Save data to localStorage whenever formData changes */
-  const EXPIRY_TIME = 5 * 60 * 1000; // 5 minutes
+ // 5 minutes
 
   useEffect(() => {
     localStorage.setItem("stickyFormData", JSON.stringify(formData1));
   }, [formData1]);
-  const clearStickyForm = () => {
-    setFormData1({
-      name: "",
-      email: "",
-      phone: "",
-    });
+  // const clearStickyForm = () => {
+  //   setFormData1({
+  //     name: "",
+  //     email: "",
+  //     phone: "",
+  //   });
 
-  
-  };
+  // };
 
   /* 🔹 Handle input change */
   const handleEnrollNow = () => {
@@ -435,11 +423,6 @@ useEffect(() => {
           </div>
         </div>
       </section>
-
-
-
-
-
 
       {/* ===== Content Section ===== */}
       <section className="content-wrapper page-wrapper">
@@ -616,16 +599,8 @@ useEffect(() => {
                         <p style={{ fontSize: isMobileState ? "14px" : "15px" }}>Your certificate serves as proof of learning and can be added to your
                           resume or portfolio.</p>
                       </div>
-
-
-
-
                     </section>
-
-
-
                   </section>
-
                 </div>
               </div>
             </div>
@@ -707,9 +682,6 @@ useEffect(() => {
               </div>
             </div>
           </section>
-
-
-
           <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "30px", marginTop: "20px" }}>
             <div className="section-wrappercer">
 
@@ -757,40 +729,21 @@ useEffect(() => {
               </div>
             </div>
           </section>
-
-
-
-
-
-
-
           <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "0px", marginTop: "15px" }}>
 
             <div className="section-wrappercer modules-section">
               <div className='coppertunitiescer1' style={{ gap: isMobileState ? "0px" : "47px" }}>
-
-
-
                 <div className="left career-tabs-container" style={{ alignItems: "flex-start", justifyContent: "flex-start" }}>
                   {/* Tabs */}
-
-
                   <section className="max-w-3xl mx-auto p-6 iconsv" style={{ color: "#000", width: isMobileState ? "100%" : "100%", margin: "0px" }}>
                     {!isMobileState && (
                       <h2 className='previewcon1' style={{ textAlign: "left", width: isMobileState ? "100%" : "100%", fontSize: isMobileState ? "24px" : "28px" }}>Why Backstage Pass Certification Course?
-
-
                       </h2>
                     )}
-
                     <section className="certificatedisplay" style={{ padding: isMobileState ? "0px 20px" : "0px 20px" }}>
-
-
                       <div className="certificate-point">
                         <FaPlay color="#d11" size={20} />
                         <p style={{ fontSize: isMobileState ? "14px" : "15px" }}>Beginner-friendly and industry-focused curriculum
-
-
                         </p>
                       </div>
 
@@ -818,16 +771,8 @@ useEffect(() => {
 
                         </p>
                       </div>
-
-
-
-
                     </section>
-
-
-
                   </section>
-
                 </div>
                 <div className='right'>
                   {isMobileState && (
@@ -868,10 +813,6 @@ useEffect(() => {
                   title="Training Mode of Your Choice"
                   img={icon4}
                 />
-
-
-
-
 
               </div>
             </div>

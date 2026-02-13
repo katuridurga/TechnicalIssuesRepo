@@ -12,11 +12,6 @@ import ic7 from '../../../assets/img/Icons/WEBSITE-ICON/gaming-career.webp';
 import ic8 from '../../../assets/img/Icons/WEBSITE-ICON/switch-gaming-career.webp';
 import ic9 from '../../../assets/img/Icons/WEBSITE-ICON/career-opt.webp';
 
-
-
-
-
-
 function HideOnScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({
@@ -74,7 +69,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     window.localStorage.setItem('MY_APP_STATE', JSON.stringify(showBanner));
   }, [showBanner]);
 
- 
+
 
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
@@ -99,10 +94,10 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     setIsButtonVisible(true);
   };
 
-    const handleClickss = () => {
-      // Redirect to the '/new-page' route
-      window.open('https://backstagepass.co.in/landingpage/short-course/', '_blank'); 
-    };
+  const handleClickss = () => {
+    // Redirect to the '/new-page' route
+    window.open('https://backstagepass.co.in/landingpage/short-course/', '_blank');
+  };
 
   // Handle scroll event
   const handleScroll = () => {
@@ -137,13 +132,13 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     };
   }, []);
 
- 
+
   return (
     <>
       <Helmet>
         <title>Game Development with Unity | Backstage Pass
         </title>
-        <meta  name="description" content="Game Development with Unity" />
+        <meta name="description" content="Game Development with Unity" />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
       <div className="row mb0" id="scroll-container" >
@@ -151,9 +146,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
           <div style={{ width: isMobileState ? "100%" : "100%", margin: isMobileState ? "50px auto" : "0px auto" }}>
 
-
-
-            <a onClick={scrollToBottom}>
+            {/* <a onClick={scrollToBottom}>
               <div className={`et_pb_section bgimage et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'DGAMEDEVELOPMENTWITHUNITY2mc' : 'DGAMEDEVELOPMENTWITHUNITY2'}`}>
 
                 <div className="et_pb_row et_pb_row_0">
@@ -165,7 +158,30 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 </div>
               </div>
 
-            </a>
+            </a> */}
+<button
+  type="button"
+  onClick={scrollToBottom}
+  style={{ all: "unset", cursor: "pointer" }}
+>
+  <div
+    className={`et_pb_section bgimage et_pb_section_0 et_pb_with_background et_section_regular ${
+      isMobileState ? "DGAMEDEVELOPMENTWITHUNITY2mc" : "DGAMEDEVELOPMENTWITHUNITY2"
+    }`}
+  >
+    <div className="et_pb_row et_pb_row_0">
+      <div className="et_pb_column et_pb_column_4_4 et_pb_column_0 et_pb_css_mix_blend_mode_passthrough et-last-child">
+        <div className="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_light">
+          <div className="et_pb_text_inner">
+            <h1 className="title white-txt">
+              Game Development with Unity
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</button>
 
 
             {/* <div className="mainrec22s">
@@ -182,94 +198,64 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               </ul>
             </div>
 
-            
-
-
             <div className='courseObj'>
               <h2>Course Modules</h2>
               <ul>
-              <li>Foundation of C# Programming</li>
-    <li>Unity Basics</li>
-    <li>Unity Intermediate Concepts</li>
-    <li>2D Game Development</li>
-    <li>3D Game Development</li>
+                <li>Foundation of C# Programming</li>
+                <li>Unity Basics</li>
+                <li>Unity Intermediate Concepts</li>
+                <li>2D Game Development</li>
+                <li>3D Game Development</li>
               </ul>
             </div>
 
             <div className='courseObj'>
               <h2>Key Takeaways</h2>
               <ul>
-              <li>Strong C# programming and Unity skills</li>
-<li>Develop 2D/3D games from scratch</li>
-<li>Game physics, AI, UI design experience</li>
-<li>Game optimization & deployment</li>
-<li>Finished game projects portfolio</li>
+                <li>Strong C# programming and Unity skills</li>
+                <li>Develop 2D/3D games from scratch</li>
+                <li>Game physics, AI, UI design experience</li>
+                <li>Game optimization & deployment</li>
+                <li>Finished game projects portfolio</li>
               </ul>
             </div>
 
-
-            
-
-
-
-
-
-
-
-
             <h2 className='mainHeadingTotall-2'>Career Opportunities</h2>
-            
+
             <ul className="featuress3u">
-  <li>
-    <img src={ic9} alt="Game Developer" />
-    <div className="featuresscon2">Game Developer</div>
-  </li>
+              <li>
+                <img src={ic9} alt="Game Developer" />
+                <div className="featuresscon2">Game Developer</div>
+              </li>
 
-  <li>
-    <img src={ic8} alt="Unity Developer" />
-    <div className="featuresscon2">Unity Developer</div>
-  </li>
+              <li>
+                <img src={ic8} alt="Unity Developer" />
+                <div className="featuresscon2">Unity Developer</div>
+              </li>
 
-  <li>
-    <img src={ic7} alt="Mobile Game Developer" />
-    <div className="featuresscon2">Mobile Game Developer</div>
-  </li>
+              <li>
+                <img src={ic7} alt="Mobile Game Developer" />
+                <div className="featuresscon2">Mobile Game Developer</div>
+              </li>
 
-  <li>
-    <img src={ic13} alt="AR/VR Developer" />
-    <div className="featuresscon2">AR/VR Developer</div>
-  </li>
+              <li>
+                <img src={ic13} alt="AR/VR Developer" />
+                <div className="featuresscon2">AR/VR Developer</div>
+              </li>
 
-  <li>
-    <img src={ic9} alt="Indie Game Developer" />
-    <div className="featuresscon2">Indie Game Developer</div>
-  </li>
+              <li>
+                <img src={ic9} alt="Indie Game Developer" />
+                <div className="featuresscon2">Indie Game Developer</div>
+              </li>
 
-  <li>
-    <img src={ic8} alt="Game QA Analyst" />
-    <div className="featuresscon2">Game QA Analyst</div>
-  </li>
-</ul>
-
-            
-
-
-
-
-
-
-
-
+              <li>
+                <img src={ic8} alt="Game QA Analyst" />
+                <div className="featuresscon2">Game QA Analyst</div>
+              </li>
+            </ul>
 
             <div className="CousellingButton1 tetstL1" onClick={scrollToBottom}><button className="dwnbtn three w-full sm:w-auto" style={{ width: "450px" }} onClick={() => setIsOpenM(true)}>Download Brochure
             </button> </div>
-
-
-
-
-
-
-
 
           </div>
 

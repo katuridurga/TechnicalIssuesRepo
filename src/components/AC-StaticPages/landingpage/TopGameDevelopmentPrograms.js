@@ -124,18 +124,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     window.localStorage.setItem('MY_APP_STATE', JSON.stringify(showBanner));
   }, [showBanner]);
 
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowBanner(false);
-      setLoading(false);
-    }, 3000);
-
-  }, []);
-
- 
-
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
     shallowEqual

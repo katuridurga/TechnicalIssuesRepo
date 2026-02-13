@@ -11,8 +11,6 @@ import Autocomplete from '@mui/material/Autocomplete';
 
 function App() {
   const [open, setOpen] = React.useState(false);
-
-
   const [activeTab, setActiveTab] = useState(0);
   const [openModal, setOpenModal] = useState(false);
   const { control, watch, formState: { }, setValue } = useForm();
@@ -424,8 +422,6 @@ function App() {
       setValue('city1', newValue.value); // Update react-hook-form state with city value
     }
   };
-
-
 
   const handleChange = (e) => {
     const { name, value } = e.target;

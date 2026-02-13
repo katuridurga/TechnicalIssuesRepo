@@ -21,7 +21,6 @@ import { Helmet } from "react-helmet";
 import Box from '@mui/material/Box';
 
 import Dialog from '@mui/material/Dialog';
-import StudentGamesList from "../../../content/StudentGamesList";
 import MIntheMedia from "../../../content/MIntheMedia";
 
 import Flag1 from "../../../assets/img/banners/usa.webp";

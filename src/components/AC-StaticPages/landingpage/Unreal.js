@@ -15,18 +15,12 @@ import B2 from "../../../assets/img/banners/forbes-logo.webp";
 import B3 from "../../../assets/img/banners/et-logo.webp";
 import B4 from "../../../assets/img/banners/thehindu-logo.svg";
 import { Helmet } from "react-helmet";
-
-import StudentGamesList from "../../../content/StudentGamesList";
 import MIntheMedia from "../../../content/MIntheMedia";
-
 import Flag1 from "../../../assets/img/banners/usa.webp";
 import Flag2 from "../../../assets/img/banners/uk.webp";
 import Flag3 from "../../../assets/img/banners/canada.webp";
 import Flag4 from "../../../assets/img/banners/sweden.webp";
 import { FaWhatsapp } from "react-icons/fa";
-
-
-
 import axios from 'axios';
 import FeaturedProductL from "../../../content/FeaturedProductL.js";
 import { useSelector, shallowEqual } from "react-redux";
@@ -35,9 +29,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import recimg from '../../../assets/img/banners/Times-Award.webp';
 import Typography from '@mui/material/Typography';
-
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
-
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -58,12 +50,9 @@ import ic12 from '../../../assets/img/Icons/WEBSITE-ICON/hands-on.webp';
 import ic13 from '../../../assets/img/Icons/WEBSITE-ICON/short-term.webp';
 import ic14 from '../../../assets/img/Icons/WEBSITE-ICON/actually-fun.webp';
 import icg from '../../../assets/img/logos/console.webp';
-
-
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
-
 function HideOnScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({
@@ -126,9 +115,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     state => state.mainReducer.isMobile,
     shallowEqual
   );
-
-
-
   const [isButtonVisible, setIsButtonVisible] = useState(true);
 
   // Function to scroll to the bottom of the container
@@ -161,14 +147,12 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       }
     }
   };
-
   useEffect(() => {
     const container = document.getElementById('scroll-container');
     if (container) {
       container.addEventListener('scroll', handleScroll);
 
     }
-
     // Clean up the event listener
     return () => {
       if (container) {
@@ -177,12 +161,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       }
     };
   }, []);
-
-  
   const [open, setOpen] = React.useState(false);
-
-
-
   const handleClose = () => {
     setOpen(false);
   };
@@ -198,8 +177,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       { value: "Diploma in game development with unreal", label: "Diploma in game development with unreal" },
       { value: "Diploma in design & production", label: "Diploma in design & production" }
     ]
-
-
   };
  
   const [subOptions, setSubOptions] = useState([]);
@@ -244,7 +221,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       try {
         const response = await fetch(`https://www.backstagepass.co.in/reactapi/checklandingpagemobile.php?contactNumber=${value}`);
        
-
         if (response.status === 200) {
           alert('This mobile number is already registered with in the last 3 months our team will get back to you.');
           setFormData((prevData) => ({
@@ -259,8 +235,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     }
 
   };
-
-
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -291,9 +265,6 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       alert('An error occurred while submitting the form. Please try again.');
     }
   };
-
- 
-
 
   const faqData = [
     {
@@ -338,13 +309,10 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     }
   ];
 
-
   const [activeIndex, setActiveIndex] = useState(null);
-
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
 
   return (
     <>
@@ -408,22 +376,12 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 </div></li>
             </ul>
-
-            {/* <div className='chapters' id="chapters1" style={{height:isMobileState ? '1140px':'480px' }}>
-
-                
-
-                <FeaturedProducts />
-
-              </div> */}
-
+       
             <div className='' id="">
               <FeaturedProductL />
-              {/* <Awards /> */}
-
+        
               <div className="CousellingButton1 tetstL1" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>
             </div>
-
 
             <h2 className='mainHeadingTotall-2'>In the Media</h2>
 
@@ -503,14 +461,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 </div></li>
             </ul>
 
-            {/* <h2 className='mainHeadingTotall-2'>Learn from scratch to advanced level and build games like...</h2>
-
-            <StudentGamesList /> */}
             <div className={isMobileState ? "ismobtest" : "CousellingButton1"} onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Get a Counselling Session on Gaming Career</a></div>
-
-
-
-
             <div id="Career-Opportunitiesl" backgroundColor="brown" height="auto">
               <h2 className='mainHeadingTotall-2'>What will you learn?
               </h2>
@@ -562,16 +513,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                     <div className='featuresscon2'>Optimization techniques for performance
                     </div></li>
-
-
                 </ul>
               </div>
-
-
-
             </div>
-
-
             <h2 className='mainHeadingTotall-2'>Our Students are working in Countries Like
             </h2>
 
@@ -641,26 +585,15 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                     {faq.id === "4" ? <div className='faq2'>
 
                       <p> </p>
-
-
-
                     </div> : null}
-
-
                     {faq.id === "5" ? <div className='faq2'>
 
                       <p> </p>
 
-
-
                     </div> : null}
-
-
-
 
                     {faq.id === "7" ? <div className='faq2'>
                       Challenges can include managing large, complex projects, optimizing performance, and handling Unreal's steep learning curve for new users.
-
 
                     </div> : null}
 
@@ -686,19 +619,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               ))}
             </div>
 
-
-
-
-
-
             <div className='fom-ad-2' id="CounsellingOnGamingCareer">
-
-
               <div className='containers-2'>
-
-
-
-
 
                 <form onSubmit={handleSubmit} className="formMain">
 
@@ -816,28 +738,31 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   </Dialog>
                 </React.Fragment>
 
-
-
               </div>
             </div>
-
-
           </div>
-
-
         </div>
       </div>
       {isButtonVisible && (
         <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Enroll Now</a></div>)}
 <div className="App">
-        <a
+        {/* <a
           countryCode="91"
           phoneNumber="8977945705"
           style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "4rem" : "-1rem", zIndex: "11111" }}
           className="whatsappsivakl">
 <FaWhatsapp  style={{ color: "#fff", fontSize: "32px" }} />
 
-</a>
+</a> */}
+   <a
+          href="https://wa.me/918977945705"
+          target="_blank"
+          rel="noopener noreferrer"
+           style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "4rem" : "-1rem", zIndex: "11111" }}
+          className="whatsappsivakl"
+        >
+          <FaWhatsapp style={{ color: "#fff", fontSize: "32px" }} />
+        </a>
       </div>
     </>
   )

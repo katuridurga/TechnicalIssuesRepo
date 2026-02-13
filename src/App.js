@@ -232,21 +232,21 @@ export default function App() {
                     <Menu {...routeProps} component="UnityGame" />
                   )}
                 />
-                <Route
+                {/* <Route
                   exact
                   path={"/landingpage/certified-diploma-unity-game-development/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="CertifiedSkillUnity" />
                   )}
-                />
+                /> */}
 
-                <Route
+                {/* <Route
                   exact
                   path={"/landingpage/certificate-program-in-essentials-of-game-design/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="CertificateProgramInEssentialsOfGameDesign" />
                   )}
-                />
+                /> */}
 <Route
                   exact
                   path={"/landingpage/certificate-program-in-basics-of-maya/"}
@@ -268,40 +268,38 @@ export default function App() {
                     <Menu {...routeProps} component="Payment" />
                   )}
                 />
-                <Route
+                {/* <Route
                   exact
                   path={"/landingpage/certificate-program-in-3DGame-development-with-unity/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="CertificateProgramIn3DGameDevelopmentWithUnity" />
                   )}
-                />
+                /> */}
 
-
-
-                <Route
+                {/* <Route
                   exact
                   path={"/landingpage/certificate-program-in-game-development-for-VR/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="CertificateProgramInGameDevelopmentForVR" />
                   )}
-                />
-
+                /> */}
+{/* 
                 <Route
                   exact
                   path={"/landingpage/certificate-program-in-prototyping-and-game-concept-development/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="CertificateProgramInPrototypingAndGameConceptDevelopment" />
                   )}
-                />
+                /> */}
 
 
-                <Route
+                {/* <Route
                   exact
                   path={"/landingpage/certificate-program-in-storytelling-and-design-documentation-for-games/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="CertificateProgramInStorytellingAndDesignDocumentationForGames" />
                   )}
-                />
+                /> */}
 
 
                 <Route
@@ -312,51 +310,44 @@ export default function App() {
                   )}
                 />
 
-                <Route
+                {/* <Route
                   exact
                   path={"/landingpage/game-design-with-unreal-blue-prints/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="GameDesignWithUnrealBlueprints" />
                   )}
-                />
+                /> */}
 
-                <Route
+                {/* <Route
                   exact
                   path={"/landingpage/game-development-with-unity/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="GameDevelopmentWithUnity" />
                   )}
-                />
+                /> */}
 
-                <Route
+                {/* <Route
                   exact
                   path={"/landingpage/game-development-with-unreal/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="GameDevelopmentWithUnreal" />
                   )}
-                />
+                /> */}
 
-                <Route
+                {/* <Route
                   exact
                   path={"/landingpage/ai-powered-game-design-and-level-building/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="AIPoweredGameDesignAndLevelBuilding" />
                   )}
-                />
-
-
-
-
-
-
-
-                <Route
+                /> */}
+                {/* <Route
                   exact
                   path={"/landingpage/certified-diploma-unreal-game-development/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="CertifiedSkillUnreal" />
                   )}
-                />
+                /> */}
                 <Route
                   exact
                   path={"/landingpage/certified-diploma-game-design-with-unreal-blueprints/"}
@@ -364,13 +355,13 @@ export default function App() {
                     <Menu {...routeProps} component="UnrealBluePrint" />
                   )}
                 />
-                <Route
+                {/* <Route
                   exact
                   path={"/landingpage/certified-diploma-3d-hard-surface-modeling-texturing/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="CertifiedSkillHardSurface" />
                   )}
-                />
+                /> */}
                 <Route
                   exact
                   path={"/landingpage/game-development-with-unreal-programs/"}
@@ -468,6 +459,12 @@ export default function App() {
                   render={routeProps => (
                     <Menu {...routeProps} component="Facilities" />
                   )}
+                />        {/* <Route
+                  exact
+                  path={"/intermediate-board-results/"}
+                  render={routeProps => (
+                    <Menu {...routeProps} component="StudentResult" />
+                  )}
                 />
                 <Route
                   exact
@@ -476,13 +473,7 @@ export default function App() {
                     <Menu {...routeProps} component="ComingSoon" />
                   )}
                 />
-                <Route
-                  exact
-                  path={"/intermediate-board-results/"}
-                  render={routeProps => (
-                    <Menu {...routeProps} component="StudentResult" />
-                  )}
-                />
+         */}
                 <Route
                   exact
                   path={"/about-us/our-mentors/"}

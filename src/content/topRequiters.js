@@ -18,7 +18,6 @@ import r14 from "../assets/img/partners/GSNgames.webp";
 import { useSelector, shallowEqual } from "react-redux";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import thumbnail from "../assets/img/thumbnail.webp";
 import "./topRequiters.css"
 
 

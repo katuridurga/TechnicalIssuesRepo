@@ -16,21 +16,14 @@ import B2 from "../../../assets/img/banners/forbes-logo.webp";
 import B3 from "../../../assets/img/banners/et-logo.webp";
 import B4 from "../../../assets/img/banners/thehindu-logo.svg";
 import { Helmet } from "react-helmet";
-
 import Box from '@mui/material/Box';
-
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
-import StudentGamesList from "../../../content/StudentGamesList";
 import MIntheMedia from "../../../content/MIntheMedia";
-
 import Flag1 from "../../../assets/img/banners/usa.webp";
 import Flag2 from "../../../assets/img/banners/uk.webp";
 import Flag3 from "../../../assets/img/banners/canada.webp";
 import Flag4 from "../../../assets/img/banners/sweden.webp";
-
-
-
 import axios from 'axios';
 import FeaturedProductL from "../../../content/FeaturedProductL.js";
 import { useSelector, shallowEqual } from "react-redux";
@@ -38,9 +31,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import recimg from '../../../assets/img/banners/Times-Award.webp';
 import Typography from '@mui/material/Typography';
-
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
-
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
@@ -59,14 +50,9 @@ import ic12 from '../../../assets/img/Icons/WEBSITE-ICON/hands-on.webp';
 import ic13 from '../../../assets/img/Icons/WEBSITE-ICON/short-term.webp';
 import ic14 from '../../../assets/img/Icons/WEBSITE-ICON/actually-fun.webp';
 import icg from '../../../assets/img/logos/console.webp';
-
-
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
-
-
-
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -99,13 +85,11 @@ function TabPanel(props) {
     </div>
   );
 }
-
 TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.number.isRequired,
   value: PropTypes.number.isRequired,
 };
-
 
 HideOnScroll.propTypes = {
   children: PropTypes.element.isRequired,
@@ -125,14 +109,10 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     window.localStorage.setItem('MY_APP_STATE', JSON.stringify(showBanner));
   }, [showBanner]);
 
-
-
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
     shallowEqual
   );
-
-
 
   const [isButtonVisible, setIsButtonVisible] = useState(true);
 
@@ -166,14 +146,11 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       }
     }
   };
-
   useEffect(() => {
     const container = document.getElementById('scroll-container');
     if (container) {
       container.addEventListener('scroll', handleScroll);
-
     }
-
     // Clean up the event listener
     return () => {
       if (container) {
@@ -821,14 +798,23 @@ const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkland
       {isButtonVisible && (
         <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Enroll Now</a></div>)}
 <div className="App">
-        <a
+        {/* <a
           countryCode="91"
           phoneNumber="8977945705"
           style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "4rem" : "-1rem", zIndex: "11111" }}
           className="whatsappsivakl">
           <FaWhatsapp  style={{ color: "#fff", fontSize: "32px" }} />
 
-</a>
+</a> */}
+      <a
+                  href="https://wa.me/918977945705"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                   style={{ right: isMobileState ? "1.5rem" : "2rem", marginBottom: isMobileState ? "4rem" : "-1rem", zIndex: "11111" }}
+                  className="whatsappsivakl"
+                >
+                  <FaWhatsapp style={{ color: "#fff", fontSize: "32px" }} />
+                </a>
       </div>
     </>
   )

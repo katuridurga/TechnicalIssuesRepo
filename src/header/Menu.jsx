@@ -2516,8 +2516,6 @@ const toolbarStyle = {
     <a onClick={scrollTo}>Scroll to 100px from the top</a>
     <br/>
     <a onClick={scrollMore}>Scroll 100px more from the current position!</a> */}
-
-
       </>
     );
   }

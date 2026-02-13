@@ -4,9 +4,6 @@ import c1a from "../../../assets/img/Courses/Acceleratorimagea.webp";
 import c2a from "../../../assets/img/Courses/WhyChooseUsImagea.webp";
 import { useSelector, shallowEqual } from "react-redux";
 import { FaPlus, FaMinus } from "react-icons/fa";
-
-
-
 import { Helmet } from "react-helmet";
 const ulStyle = {
   listStyleType: 'disc',  // Set the bullet point style
@@ -27,8 +24,6 @@ const boldStyle = {
   fontWeight: 'bold',     // Bold text
   fontSize: '18px',       // Larger font size
 };
-
-
 
 function Courses(props) {
   const isMobileState = useSelector(
@@ -54,15 +49,18 @@ function Courses(props) {
  {
   question: "Recognition & Opportunities",
   answer: [
-    "<strong>Award-Winning Projects:</strong> Contribute to games that have received recognition at:",
-    "<ol type='a' class='inner-list'>\
-      <li>Shortlisted in Indie 40 Games at IGDC 2024</li>\
-      <li>Student Game of the Year nominations at IGDC 2024</li>\
-      <li>Showcased at prestigious Gaming Expos</li>\
-    </ol>",
-    "<strong>Global Exposure:</strong> Showcase your games on global platforms and connect with industry leaders."
-  ],
+  "<strong>Award-Winning Projects:</strong> Contribute to games that have received recognition at:",
+  `
+  <ol type="a" class="inner-list">
+    <li>Shortlisted in Indie 40 Games at IGDC 2024</li>
+    <li>Student Game of the Year nominations at IGDC 2024</li>
+    <li>Showcased at prestigious Gaming Expos</li>
+  </ol>
+  `,
+  "<strong>Global Exposure:</strong> Showcase your games on global platforms and connect with industry leaders."
+],
 },
+
 
     {
       question: "Professional Portfolio",
