@@ -126,7 +126,9 @@ white-space: nowrap;
 
 
   @media only screen and (max-width : 1024px){
-
+    #mbopen{
+  display: block;
+}
     .mainribbonbc {
     position: sticky;
     top: 110px !important;
@@ -479,7 +481,7 @@ summary {
   }
 
   .course-info [class^="col-"] {
-    text-align: left !important;
+    text-align: center !important;
     padding: 0;
   }
 
@@ -828,7 +830,7 @@ font-size: 12px;
 .course-info [class^="col-"] {
   max-width: 100% !important;
   flex: unset !important;
-  padding: 0 6px;
+  padding: 0 20px;
   text-align: center;
 }
 
@@ -848,7 +850,7 @@ font-size: 12px;
 /* DIVIDERS */
 .course-info .border-rightc {
   border-right: 1px solid #d11;
-  padding-right: 24px;
+  padding-right: 41px;
 }
 
 /* REMOVE LAST BORDER */
@@ -1468,7 +1470,7 @@ margin-top: 20px;
 }
 .bancer .small-banner1 {
     background-size: cover;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem 1.5rem 1rem;
     color: #fff;
     width: 100%;
     margin: 0px auto;
@@ -1510,7 +1512,7 @@ color: #fff;
 margin: 0px;
     font-size: 14px;
     font-weight: 500;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 
@@ -2077,4 +2079,7 @@ width: 100%;
   font-weight: 700;
   font-style: italic;
   margin-bottom:15px;      
+}
+#mbopen{
+  display: none;
 }

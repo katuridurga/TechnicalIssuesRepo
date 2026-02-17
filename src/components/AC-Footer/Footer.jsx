@@ -42,6 +42,11 @@ function Footer() {
     "/landingpage/certificate-program-in-prototyping-and-game-concept-development/"
 
   ];
+const isMayaMobile =
+  path === "/landingpage/basics-of-maya-online-certification/" &&
+  isMobileState;
+const isMayaPage =
+  path === "/landingpage/basics-of-maya-online-certification/";
 
   const testFooterPaths = [
     "/landingpage/diploma-and-advanced-diploma-courses/",
@@ -115,8 +120,12 @@ function Footer() {
 
   // ];
 
-  const computedHeight =
-  path === "/landingpage/certificate-program-in-basics-of-maya/"
+const computedHeight =
+  path === "/landingpage/basics-of-maya-online-certification/"
+    ? isMobileState
+        ? "250px"       // mobile height (keep as you want)
+        : "200px"       // ✅ desktop min-height
+    : path === "/landingpage/certificate-program-in-basics-of-maya/"
     ? isMobileState
         ? "750px"
         : "550px"
@@ -312,7 +321,12 @@ function Footer() {
           <div className="sm:max-w-[480px] lg:max-w-[560px]" style={{ maxWidth: "100%" }}>
             <div className="">
               <div className="grid-cols-1 sm:grid-cols-2 gap-3 mt-3 sm:mt-5" style={{ width: "100%" }}>
-                <div className={isTestFooter ? "testfooter" : "footer-wrapper"}>
+              <div
+  className={`${
+    isTestFooter ? "testfooter" : "footer-wrapper"
+  } ${isMayaPage ? "maya-footer-reset" : ""}`}
+>
+
 
                   {/* 🔹 Mobile Footer */}
                   {isMobileState && (
@@ -528,7 +542,12 @@ function Footer() {
 
                   {/* 🔹 Compact Contact Info for certain landing pages */}
                   {isTestFooter && (
-                    <div className="foot-details lfootdetails">
+                    <div
+  className={`foot-details lfootdetails ${
+    isMayaPage ? "maya-foot-spacing" : ""
+  }`}
+>
+
                       <LazyLoad height={76} offset={100} fadein={true}>
                         <div className="foot-item fadeInUp anime-delay3">
                           <h3 className="footer-title" style={{ textAlign: "center" }}>
@@ -587,7 +606,12 @@ function Footer() {
 
             <div>
               <LazyLoad height={76} offset={100} fadein={true}>
-                <div className="foot-item fadeInUp anime-delay3 socialiconsmt">
+                  <div
+  className={`foot-item fadeInUp anime-delay3 ${
+    isMayaMobile ? "socialiconsmt5" : "socialiconsmt20"
+  }`}
+>
+
                   {!hideAllFooter && (
                     <div className="contact-wrapper ftr">
                       {/* Discord */}

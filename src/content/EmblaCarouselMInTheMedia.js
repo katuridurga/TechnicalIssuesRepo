@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useRef } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-
 import { useSelector, shallowEqual } from "react-redux";
 import {
   NextButton,
@@ -11,9 +10,7 @@ import B1 from "../assets/img/banners/business-standard-logo.png";
 import B2 from "../assets/img/banners/forbes-logo.webp";
 import B3 from "../assets/img/banners/et-logo.webp";
 import B4 from "../assets/img/banners/thehindu-logo.svg";
-
 const TWEEN_FACTOR_BASE = 0.2
-
 const EmblaCarousel = (props) => {
   const { options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
@@ -88,7 +85,6 @@ const EmblaCarousel = (props) => {
     state => state.mainReducer.isMobile,
     shallowEqual
   );
-
   return (
     <div className="emblaba-2">
       <div className="embla__viewportba-2" ref={emblaRef}>
@@ -110,7 +106,6 @@ const EmblaCarousel = (props) => {
               </div>
             </div>
           </div>
-
           <div className=".embla__slideba imgp-2" key={2}>
             <div className="embla__parallaxba-2">
               <div className="embla__parallax__layerba-2-21">
@@ -125,7 +120,6 @@ const EmblaCarousel = (props) => {
               </div>
             </div>
           </div>
-
           <div className=".embla__slideba imgp-2" key={3}>
             <div className="embla__parallaxba-2" style={{ background: isMobileState ? "#fff" : "#222" }}>
               <div className="embla__parallax__layerba-2-21">
@@ -141,7 +135,6 @@ const EmblaCarousel = (props) => {
               </div>
             </div>
           </div>
-
           <div className=".embla__slideba imgp-2" key={4}>
             <div className="embla__parallaxba-2" style={{ background: isMobileState ? "#fff" : "#222" }}>
               <div className="embla__parallax__layerba-2-21">
@@ -157,22 +150,15 @@ const EmblaCarousel = (props) => {
               </div>
             </div>
           </div>
-
-
-
         </div>
       </div>
-
       <div className="embla__controlsba-2">
         <div className="embla__buttonsba-2">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
-
-
       </div>
     </div>
   )
 }
-
 export default EmblaCarousel

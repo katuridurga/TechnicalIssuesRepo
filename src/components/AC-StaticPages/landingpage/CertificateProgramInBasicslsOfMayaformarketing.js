@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Marketing.css";
 import { Helmet } from "react-helmet";
 import PaymentC from "./Payment";
 import { useSelector, shallowEqual } from "react-redux";
-import cer from "../../../assets/img/test/certificate-with-badge.png";
 import { FaPlay } from "react-icons/fa";
+import cer from "../../../assets/img/test/certificate-with-badge.png";
 import modeling from "../../../assets/img/Environment.webp";
 import prop from "../../../assets/img/3D_Game_Asset.webp";
 import gameasst from "../../../assets/img/3D_Prop.webp";
@@ -25,6 +25,7 @@ import r12 from "../../../assets/img/partners/Juego.webp";
 import r13 from "../../../assets/img/partners/Gamitronics.webp";
 import r14 from "../../../assets/img/partners/GSNgames.webp";
 import wtwh from "../../../assets/img/banners/afterwtwillhappen.webp";
+import advdip from '../../../assets/img/banners/Thumbnailformaya.png';
 import { FaLinkedin } from "react-icons/fa";
 import icon1 from "../../../assets/img/Icons/Career_Counselling.webp";
 import icon2 from "../../../assets/img/Icons/Industry_Led.webp";
@@ -290,6 +291,17 @@ useEffect(() => {
       [name]: value,
     }));
   };
+  const videoRef = useRef(null); // To reference the video element
+    const [isPlaying, setIsPlaying] = useState(false); // To manage the play state
+  
+    const handlePlay = () => {
+      // Play the video when the image is clicked
+      if (videoRef.current) {
+        videoRef.current.play();
+        setIsPlaying(true); // Update the state to hide the image
+      }
+    };
+  
   return (
     <>
       <Helmet>
@@ -297,7 +309,7 @@ useEffect(() => {
           Basics of Maya Course for Beginners | Learn Maya 2024 Online
         </title>
 
-        <meta name="description" content="Learn Autodesk Maya 2024 from scratch. Beginner-friendly online course covering 3D modelling, UV mapping & texturing. Certificate included." />
+        <meta name="description" content="Learn Autodesk Maya 2024 from scratch. Beginner-friendly online course covering 3D modeling, UV mapping & texturing. Certificate included." />
         <link rel="canonical" href="https://www.backstagepass.co.in/landingpage/basics-of-maya-online-certification/" />
       </Helmet>
 
@@ -315,7 +327,7 @@ useEffect(() => {
 
               <p className="hero-text">
                 A beginner-friendly course that teaches the essentials of Autodesk Maya.
-                Learn the interface, basic 3D modelling, UV unwrapping, and simple texturing
+                Learn the interface, basic 3D modeling, UV unwrapping, and simple texturing
                 through hands-on practice.
               </p>
 
@@ -429,7 +441,36 @@ useEffect(() => {
 
         {/* Left Content */}
         <div className="left-content">
+          <section className="maya-overview-section" style={{ backgroundColor: "" }}>
+  <div className="videomain2maya">
+ <video
+  ref={videoRef}
+  controls
+  loop
+  controlsList="nodownload noplaybackrate"
+  disablePictureInPicture
+  onContextMenu={(e) => e.preventDefault()}
+>
+  <source
+    src="https://backstagepass.co.in/Marketing-Video.mp4"
+    type="video/mp4"
+  />
+</video>
 
+
+  {!isPlaying && (
+    <div className="overlay-wrapper" onClick={handlePlay}>
+      <img
+        src={advdip}
+        className="overlay-image2maya-1"
+        alt="advdip"
+      />
+
+      <div className="play-icon">▶</div>
+    </div>
+  )}
+</div>
+</section>
           <section className="maya-overview-section" style={{ backgroundColor: "#f6f7f8" }}>
             <div className="section-wrappercer" >
               <h2 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px", paddingBottom: "0px", marginTop: isMobileState ? "4px" : "50px", paddingTop: "20px" }}>
@@ -440,7 +481,7 @@ useEffect(() => {
 
               <p className="previewconp">
                 Ever wanted to bring your ideas to life in 3D? This beginner-friendly course introduces Autodesk Maya 2024 step by step.
-                Learn the interface, basic modelling, UV unwrapping, and simple texturing to create your own 3D assets from scratch—no prior
+                Learn the interface, basic modeling, UV unwrapping, and simple texturing to create your own 3D assets from scratch—no prior
                 3D experience needed, just curiosity and creativity.
               </p>
             </div>
@@ -494,7 +535,7 @@ useEffect(() => {
                   <details className="style-1" style={{ borderLeft: "5px solid#d11" }}>
                     <summary style={{ fontSize: "15px" }}>Working with Geometry Scene</summary>
                     <ul>
-                      <li>Learn how to create and edit 3D geometry in Maya using primitives, component editing, and essential modelling tools like bevel, extrude, etc., to add detail, shape, and clean structure to your models.
+                      <li>Learn how to create and edit 3D geometry in Maya using primitives, component editing, and essential modeling tools like bevel, extrude, etc., to add detail, shape, and clean structure to your models.
                       </li>
 
                     </ul>
@@ -511,7 +552,7 @@ useEffect(() => {
                   <details className="style-1" style={{ borderLeft: "5px solid#d11" }}>
                     <summary style={{ fontSize: "15px" }}>Overview of the Prop</summary>
                     <ul>
-                      <li>An overview of the complete prop creation process, from setting up references and blocking the main shapes to modelling details, refining topology,  roof modelling, fence modelling, and preparing the final asset.</li>
+                      <li>An overview of the complete prop creation process, from setting up references and blocking the main shapes to modeling details, refining topology,  roof modeling, fence modeling, and preparing the final asset.</li>
 
                     </ul>
                   </details>
@@ -618,7 +659,7 @@ useEffect(() => {
 " />
                     <div className='BeyondRightcer'>
 
-                      <p>Someone who wants to start learning 3D modelling from the basics.
+                      <p>Someone who wants to start learning 3D modeling from the basics.
 
                       </p>
                     </div>
@@ -729,7 +770,7 @@ useEffect(() => {
               </div>
             </div>
           </section>
-          <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "0px", marginTop: "15px" }}>
+          <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "30px", marginTop: "15px" }}>
 
             <div className="section-wrappercer modules-section">
               <div className='coppertunitiescer1' style={{ gap: isMobileState ? "0px" : "47px" }}>
@@ -786,7 +827,7 @@ useEffect(() => {
               </div>
             </div>
           </section>
-          <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "30px", marginTop: "15px", padding: isMobileState ? "0px" : "0px" }}>
+          {/* <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "30px", marginTop: "15px", padding: isMobileState ? "0px" : "0px" }}>
             <div className="section-wrappercer">
 
               <h3 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px" }}>Benefits of the Course
@@ -816,7 +857,7 @@ useEffect(() => {
 
               </div>
             </div>
-          </section>
+          </section> */}
 
         </div>
 
@@ -867,13 +908,14 @@ useEffect(() => {
 
 
       <section className="bancer">
-        <div class="small-banner1 ftbaner1" style={{ paddingLeft: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}><div className="col-12 col-lg-8 col-md-7 col-sm-12 bottomcer"><div class="foot-ban"> <p class="didYouKnow h6 mb-3">Enroll in the Basics of Maya Course and <br /> Earn Certification @
+        <div class="small-banner1 ftbaner1" style={{ paddingLeft: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}><div className="col-12 col-lg-8 col-md-7 col-sm-12 bottomcer"><div class="foot-ban"> <p class="didYouKnow h6 mb-3">Enroll in the Basics of Maya Course and Earn Certification @
         </p><div className="disdvi"><span className="actprice"><del>₹4999</del></span><span className="discountprice">₹799</span> <span className="savingamt">84% Disc.</span></div>
            <div className="pricetags"><span className="">*Price inclusive of all applicable taxes (GST)</span></div>
           <div className="savingamto" style={{ width: "150px" }}><p className="" style={{ margin: "0px", fontWeight: "600", fontSize: "12px" }}>Limited Time Offer!</p></div></div></div></div></section>
       {isButtonVisible && (
         <div
           className="CousellingButton1 tetstL1"
+         id="mbopen"
           style={{ marginBottom: "0px", backgroundColor: "#ffffff", border:"1px solid#e4d8d8", boxShadow:"rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px" }}
           onClick={scrollToBottom}
         >

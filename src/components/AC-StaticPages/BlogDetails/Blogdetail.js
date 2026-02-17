@@ -197,7 +197,7 @@ function BlogDetail({ history,match }) {
           console.log('Time sent to server:', data);
         })
         .catch(error => {
-          console.error('Error sending time:', error);
+         // console.error('Error sending time:', error);
         });
 
       // Update lastTimeSent so the next interval measures from the correct time
@@ -206,6 +206,7 @@ function BlogDetail({ history,match }) {
     }, 30000); // Run the function every 30 seconds
 
     // Cleanup the interval when the component unmounts or when the page is about to unload
+      
     const handleBeforeUnload = (event) => {
       const endTime = new Date().getTime();
       const timeSpent = (endTime - startTime) / 1000; // Time in seconds
@@ -308,7 +309,6 @@ function BlogDetail({ history,match }) {
 window.addEventListener('beforeunload', function (event) {
   event.stopImmediatePropagation();
 });
-
 
   return (
 
@@ -615,6 +615,7 @@ window.addEventListener('beforeunload', function (event) {
          <meta name="description"  content={event.meta_des} />
         <meta property="og:url" content={event.event_title_url} />
         <link rel="canonical" href={window.location.href} />
+       
       </Helmet>
       {/* <div className='courseBanner'>
         <img
@@ -690,6 +691,8 @@ window.addEventListener('beforeunload', function (event) {
         to={`/blogs/${post.event_title_url}`}
         className="post-link"
       >
+        
+              
                     <div className="left imagel">
                       <img src={`https://www.backstagepass.co.in/blog_new/uploads/events/${post.card_image}`} alt={post.tittle_event} loading="lazy"
   decoding="async" />
@@ -702,6 +705,7 @@ window.addEventListener('beforeunload', function (event) {
                 // </Link>
               ))}
             </ul>
+            
           </div>
 
           {/* Blog Form */}

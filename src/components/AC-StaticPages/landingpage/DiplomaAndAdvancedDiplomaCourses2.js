@@ -513,7 +513,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
                 </h2>
                 <div className="maind">
 
-                  <div className="left w-100 icn">
+                  <div className="bgchange left w-100 icn">
                     <div style={{
                       border: "1px solid#fff", height: "40px", display: "flex",
                       justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
@@ -523,7 +523,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
                       Specialized education in gaming with industry-aligned curriculum
                     </div>
                   </div>
-                  <div className="left w-100 icn">
+                  <div className="bgchange left w-100 icn">
                     <div style={{
                       border: "1px solid#fff", height: "40px", display: "flex",
                       justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
@@ -535,7 +535,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
 
                 </div>
                 <div className="maind">
-                  <div className="left w-100 icn">
+                  <div className="bgchange left w-100 icn">
                     <div style={{
                       border: "1px solid#fff", height: "40px", display: "flex",
                       justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
@@ -545,7 +545,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
 
                       Guidance from industry veterans with an experience of 10+ years</div>
                   </div>
-                  <div className="left w-100 icn">
+                  <div className="bgchange left w-100 icn">
                     <div style={{
                       border: "1px solid#fff", height: "40px", display: "flex",
                       justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
@@ -557,7 +557,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
                     </div></div>
                 </div>
                 <div className="maind">
-                  <div className="left w-100 icn">
+                  <div className="bgchange left w-100 icn">
                     <div style={{
                       border: "1px solid#fff", height: "40px", display: "flex",
                       justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
@@ -568,7 +568,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
                       Flexible financial aid options for affordable quality learning
                     </div>
                   </div>
-                  <div className="left w-100 icn">
+                  <div className="bgchange left w-100 icn">
                     <div style={{
                       border: "1px solid#fff", height: "40px", display: "flex",
                       justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"

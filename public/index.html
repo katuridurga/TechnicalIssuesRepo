@@ -30,9 +30,9 @@
   <!-- Defer GTM -->
   <!---vijetha gtm code-->
   <!-- Google Tag Manager -->
-  <script>
+  <!-- <script>
 
-  (function (w, d, s, l, i) {
+    (function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
         'gtm.start':
           new Date().getTime(), event: 'gtm.js'
@@ -41,7 +41,24 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-PSDKPTHZ');
 
-    </script>
+  </script> -->
+<script>
+window.addEventListener("load", function () {
+  (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+
+    j.async = true;
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+
+  })(window, document, 'script', 'dataLayer', 'GTM-PSDKPTHZ');
+});
+</script>
 
 </head>
 
@@ -51,74 +68,72 @@
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSDKPTHZ" height="0" width="0"
       style="display:none;visibility:hidden"></iframe>
-    </noscript>
+  </noscript>
   <!-- End Google Tag Manager (noscript)-->
   <div id="root"></div>
 
   <!-- React chunk cache cleanup -->
-<!-- React chunk cache cleanup -->
-<script>
-  (async function () {
-    try {
-      // Get the current list of React chunks in the document
-      const currentChunks = Array.from(
-        document.querySelectorAll('script[src*=".chunk."]')
-      )
-        .map(s => s.src.split('/').pop())
-        .sort()
-        .join(',');
+  <!-- React chunk cache cleanup -->
+  <script>
+    (async function () {
+      try {
+        // Get the current list of React chunks in the document
+        const currentChunks = Array.from(
+          document.querySelectorAll('script[src*=".chunk."]')
+        )
+          .map(s => s.src.split('/').pop())
+          .sort()
+          .join(',');
 
-      const previousChunks = localStorage.getItem('react_build_chunks');
+        const previousChunks = localStorage.getItem('react_build_chunks');
 
-      if (previousChunks && previousChunks !== currentChunks) {
-        console.log('New build detected — clearing old caches');
+        if (previousChunks && previousChunks !== currentChunks) {
+          console.log('New build detected — clearing old caches');
 
-        // Clear the caches related to React, static files, and workbox
-        if ('caches' in window) {
-          const names = await caches.keys();
-          await Promise.all(
-            names
-              .filter(n =>
-                n.includes('react') ||
-                n.includes('static') ||
-                n.includes('workbox')
-              )
-              .map(n => caches.delete(n))
-          );
+          // Clear the caches related to React, static files, and workbox
+          if ('caches' in window) {
+            const names = await caches.keys();
+            await Promise.all(
+              names
+                .filter(n =>
+                  n.includes('react') ||
+                  n.includes('static') ||
+                  n.includes('workbox')
+                )
+                .map(n => caches.delete(n))
+            );
+          }
         }
-      }
 
-      // Store the current chunk list for the next time
-      localStorage.setItem('react_build_chunks', currentChunks);
+        // Store the current chunk list for the next time
+        localStorage.setItem('react_build_chunks', currentChunks);
 
-      // Additional logic for cleaning up image cache
-      const currentImageVersion = 'v2';  
+        // Additional logic for cleaning up image cache
+        const currentImageVersion = 'v2';
 
-      // Check if the image version has changed and cleanup old images
-      const previousImageVersion = localStorage.getItem('image_version');
-      if (previousImageVersion && previousImageVersion !== currentImageVersion) {
-        console.log('New image version detected — clearing old image cache');
+        // Check if the image version has changed and cleanup old images
+        const previousImageVersion = localStorage.getItem('image_version');
+        if (previousImageVersion && previousImageVersion !== currentImageVersion) {
+          console.log('New image version detected — clearing old image cache');
 
-        if ('caches' in window) {
-          const names = await caches.keys();
-          await Promise.all(
-            names
-              .filter(n => n.includes('image') || n.includes('assets'))
-              .map(n => caches.delete(n))
-          );
+          if ('caches' in window) {
+            const names = await caches.keys();
+            await Promise.all(
+              names
+                .filter(n => n.includes('image') || n.includes('assets'))
+                .map(n => caches.delete(n))
+            );
+          }
         }
+
+        // Update the stored image version
+        localStorage.setItem('image_version', currentImageVersion);
+
+      } catch (e) {
+        console.warn('Cache cleanup failed:', e);
       }
-
-      // Update the stored image version
-      localStorage.setItem('image_version', currentImageVersion);
-
-    } catch (e) {
-      console.warn('Cache cleanup failed:', e);
-    }
-  })();
-</script>
+    })();
+  </script>
 </body>
 
 </html>
-
-

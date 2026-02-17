@@ -95,7 +95,14 @@ function Blog() {
       </div>
       <div className="courses-containerb">
         <Helmet>
-          {/* full Helmet untouched */}
+          <title>Backstage Pass Gaming Blogs | Learn Game Design, Art & Development</title>
+
+          <meta property="og:title" content="Backstage Pass Gaming Blogs | Learn Game Design, Art & Development
+" />
+          <meta name="description" content="Explore game development insights, gaming careers, AR/VR, design trends, and student success stories from Backstage Pass Institute of Gaming." />
+          <meta property="og:description" name="description" content="Explore game development insights, gaming careers, AR/VR, design trends, and student success stories from Backstage Pass Institute of Gaming." />
+          <meta property="og:url" content="https://backstagepass.co.in/blogs/" />
+          <link rel="canonical" href="https://backstagepass.co.in/blogs/" />
         </Helmet>
 
         <div className="courses-wrapperblog" style={{ flexDirection: isMobileState ? "column" : "row" }}>

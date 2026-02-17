@@ -2108,3 +2108,9 @@ width:100%;
   font-style: italic;
   margin-bottom:15px;      
 }
+.show-grid {
+    padding-top: 10px;
+    padding-bottom: 24px;
+    background-color: #f9fafb;
+    box-shadow: 2px 2px 15px 5px rgba(0,0,0,.1);
+}

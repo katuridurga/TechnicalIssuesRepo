@@ -8,7 +8,6 @@ import axios from 'axios';
 import "./Applicationform.css"
 import Autocomplete from '@mui/material/Autocomplete';
 
-
 function App() {
   const [open, setOpen] = React.useState(false);
   const [activeTab, setActiveTab] = useState(0);
@@ -22,8 +21,6 @@ function App() {
       ...prevData,
       [name]: value,
     }));
-
-
 
     if (name === "contactNumber" && /^[0-9]{10}$/.test(value)) {
       try {
@@ -43,9 +40,6 @@ function App() {
       }
     }
   };
-
-
-
   // Handle state change and fetch cities
 
   // const handleBluremail = (event) => {
@@ -88,8 +82,6 @@ function App() {
     },
   });
 
-
-
   const [files, setFiles] = useState({
     tenthMarkSheet: null,
     twelfthMarkSheet: null,
@@ -101,14 +93,11 @@ function App() {
     // aadhar: null,
     passportPhotos: null,
   });
-
   const [program, setProgram] = useState('');
   const [specialization, setSpecialization] = useState('');
   const [state, setState] = useState('');
   const [selectedState, setSelectedState] = useState('');
   const [cities, setCities] = useState([]);
-
-
 
   const handleProgramChange = (event) => {
     const selectedProgram = event.target.value;
@@ -121,34 +110,19 @@ function App() {
     }));
   };
 
-
-
   const selectedQualification = watch('qualification', '');
-
-
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
   };
-
   const onSubmit = (data) => {
     console.log(data);
-
   };
-
   const handleNext = () => {
-
-
-
-
     const form = document.querySelector('form');
-
-
     if (!form.checkValidity()) {
-
       form.reportValidity();
       return;
     }
-
     const emailField = form.querySelector('input[name="email"]');
 
     // if (emailField) {  // If the email field exists, validate it
@@ -178,18 +152,12 @@ function App() {
         return; // Prevent moving to the next tab if email is invalid
       }
     }
-
     setActiveTab((prev) => prev + 1);
-
     window.scrollTo({
-
       top: 0,
-
       behavior: "smooth", // This makes the scroll smooth
-
     });
   };
-
 
   const handleBack = () => {
     setActiveTab((prev) => prev - 1);

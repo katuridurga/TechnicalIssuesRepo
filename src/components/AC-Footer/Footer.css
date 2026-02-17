@@ -854,3 +854,19 @@ button.extended-background-gradient-linkedin {
   border-radius: 50% !important;
   /* keep circle size stable */
 }
+.socialiconsmt5 {
+  margin-top: 5px;
+  margin-bottom: -28px;
+}
+
+.socialiconsmt20 {
+  margin-top: 20px;
+}
+.maya-footer-reset{
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+.maya-foot-spacing{
+top: 34px;
+  margin-bottom: 4px;
+}

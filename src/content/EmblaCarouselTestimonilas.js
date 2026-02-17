@@ -1,9 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useMemo } from "react";
 import "./Mainbpstestimonial.css";
 import AnimatedText from "../components/AC-StaticPages/landingpage/AnimatedText";
 import anand84 from "../assets/img/test/AnandDhwale-84w.webp";
 import anand168 from "../assets/img/test/AnandDhwale-168w.webp";
 import anand42 from "../assets/img/test/AnandDhwale-42w.webp";
+
+/* =========================
+   TESTIMONIAL DATA
+========================= */
 
 const testimonials = [
   {
@@ -34,13 +38,7 @@ const testimonials = [
     text: "One of the best aspects of Backstage Pass is that it gives you the option to interact with a lot of individuals who have a strong interest in game development and the freedom to work together with students from other streams, such as design or art, to create incredible outcomes.",
     name: "Anand Dhavle",
     role: "Gameplay Programmer, Tarsier Studios, Sweden",
-    // avatar: "https://www.backstagepass.co.in/AnandDhwale-da6efb8f.webp?img=5",
-     avatar: {
-    "42": anand42,
-    "84": anand84,
-    "168": anand168,
-    alt: "Anand Dhwale"
-  },
+    avatar: "https://www.backstagepass.co.in/AnandDhwale-da6efb8f.webp?img=5",
   },
   {
     text: "Innovation and adaptability are crucial for growth in the modern generation. Therefore, we require a creative and determined workforce. Students from Backstage Pass have excelled in both of these areas. We were very impressed with how they questioned the status quo and developed more effective working methods.",
@@ -91,6 +89,10 @@ const testimonials = [
     avatar: "https://www.backstagepass.co.in/JoesphKalathil-d9008f68.webp?img=13",
   },
 ];
+
+/* =========================
+   COMPONENT
+========================= */
 
 const Testimonials = () => {
   const scrollRef = useRef();
@@ -254,7 +256,7 @@ const Testimonials = () => {
             {fullPagesOnly.map((item, index) => {
               const isExpanded = expandedCards[index] || false;
               return (
-                <AnimatedText direction="up" delay={0.2} key={index} >
+                <AnimatedText direction="up" delay={0.2} key={index}>
                   <div
                     className="maintestimonial-card"
                     style={{
@@ -262,12 +264,13 @@ const Testimonials = () => {
                       maxWidth: `${100 / cardsPerPage}%`,
                     }}
                   >
-                    <h4>
-                      {item.title} <span>”</span>
-                    </h4>
-                    <p className={`maintestimonial-text ${isExpanded ? "expanded" : ""}`}>
+                    <p
+                      className={`maintestimonial-text ${isExpanded ? "expanded" : ""
+                        }`}
+                    >
                       {item.text}
                     </p>
+
                     {item.text.split(" ").length > 30 && (
                       <button
                         className="show-more-btn"
@@ -276,31 +279,26 @@ const Testimonials = () => {
                         {isExpanded ? "Show Less" : "Show More"}
                       </button>
                     )}
-             <div className="maintestimonial-profile">
-  {item.name === "Anand Dhavle" ? (
-    <img
-      src={anand42} // small version
-      srcSet={`
-        ${anand42} 42w,
-        ${anand84} 84w,
-        ${anand168} 168w
-      `}
-      sizes="42px"
-      width="42"
-      height="50"
-      alt="Anand Dhwale"
-      loading="eager"
-      fetchpriority="high"
-    />
-  ) : (
-    <img src={item.avatar} alt={item.name} />
-  )}
-  <div>
-    <strong>{item.name}</strong>
-    <p>{item.role}</p>
-  </div>
-</div>
 
+                    <div className="maintestimonial-profile">
+                      {item.avatar === "anand" ? (
+                        <img
+                          src={anand42}
+                          srcSet={`${anand42} 42w, ${anand84} 84w, ${anand168} 168w`}
+                          sizes="42px"
+                          width="42"
+                          height="50"
+                          alt="Anand Dhwale"
+                        />
+                      ) : (
+                        <img src={item.avatar} alt={item.name} />
+                      )}
+
+                      <div>
+                        <strong>{item.name}</strong>
+                        <p>{item.role}</p>
+                      </div>
+                    </div>
                   </div>
                 </AnimatedText>
               );
@@ -324,5 +322,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-
-
