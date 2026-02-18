@@ -38,26 +38,7 @@ HideOnScroll.propTypes = {
 
 
 
-const EnrollNowButtonBase = ({ onClick, location }) => {
-  const isMayaLanding =
-    location.pathname === "/landingpage/basics-of-maya-online-certification/";
 
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={
-        isMayaLanding
-          ? "alt-enroll-btn"
-          : "dwnbtn three w-full sm:w-auto"
-      }
-      style={isMayaLanding ? {} : { width: "450px" }}
-    >
-      ENROLL NOW
-    </button>
-  );
-};
-const EnrollNowButton = withRouter(EnrollNowButtonBase);
 
 /* -------------------- MAIN COMPONENT -------------------- */
 
@@ -68,6 +49,7 @@ function SkillDiplomaCourses() {
   );
 
   const [openFormModal, setOpenFormModal] = useState(false);
+  const [alreadyEnrolled, setAlreadyEnrolled] = useState(false);
   const [courses, setCourses] = useState([]);
   const formRef = useRef();
   const { formState: { }, setValue } = useForm();
@@ -163,6 +145,94 @@ function SkillDiplomaCourses() {
       });
     }
   };
+  useEffect(() => {
+  const autoCheckEnrollment = async () => {
+    if (!formData.email || !isValidEmail(formData.email)) return;
+    if (!formData.course) return;
+
+    try {
+      const enrollment = await checkAlreadyEnrolled(
+        formData.email,
+        formData.course
+      );
+
+      if (enrollment?.alreadyEnrolled) {
+        setAlreadyEnrolled(true);
+        setCouponRemarks("You are already enrolled in this course");
+      } else {
+        setAlreadyEnrolled(false);
+        setCouponRemarks("");
+      }
+    } catch (error) {
+      console.error("Enrollment check failed:", error);
+    }
+  };
+
+  autoCheckEnrollment();
+}, [formData.email, formData.course]);
+
+  const isValidEmail = (email) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+const handleEmailBlur = async () => {
+ 
+  if (!formData.email || !isValidEmail(formData.email)) return;
+  if (!formData.course) return;
+
+  const enrollment = await checkAlreadyEnrolled(
+    formData.email,
+    formData.course
+  );
+
+ if (enrollment.alreadyEnrolled) {
+  setAlreadyEnrolled(true);
+  setCouponRemarks("You are already enrolled in this course");
+} else {
+  setAlreadyEnrolled(false);
+  setCouponRemarks("");
+}
+};
+
+
+
+const EnrollNowButtonBase = ({ onClick, location }) => {
+  const isMayaLanding =
+    location.pathname === "/landingpage/basics-of-maya-online-certification/";
+
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={
+        isMayaLanding
+          ? "alt-enroll-btn"
+          : "dwnbtn three w-full sm:w-auto"
+      }
+      style={isMayaLanding ? {} : { width: "450px" }}
+    >
+      ENROLL NOW
+      
+    </button>
+  );
+};
+const EnrollNowButton = withRouter(EnrollNowButtonBase);
+
+const checkAlreadyEnrolled = async (email, course) => {
+  const res = await fetch(
+    "https://www.backstagepass.co.in/reactapi/check_enrollment.php",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Cache-Control": "no-cache",
+      },
+      cache: "no-store",
+      body: JSON.stringify({ email, course }),
+    }
+  );
+
+  return res.json();
+};
+
   const handleInputChange = async (e) => {
     const { name, type, value, checked, files } = e.target;
 
@@ -174,6 +244,17 @@ function SkillDiplomaCourses() {
         alert("Please select a course first");
         return;
       }
+      if (!formData.email) {
+    alert("Please enter email first");
+    return;
+  }
+       const enrollment = await checkAlreadyEnrolled(formData.email, formData.course);
+console.log('enrolled',enrollment?.alreadyEnrolled);
+  if (enrollment?.alreadyEnrolled) {
+    setCouponRemarks("You are already enrolled in this course");
+    return;
+  }
+
 
       try {
         const res = await fetch(
@@ -265,7 +346,7 @@ function SkillDiplomaCourses() {
   return (
     <>
       <Helmet>
-        <title>Skill Diploma Course</title>
+        <title> Basics of Maya Course for Beginners | Learn Maya 2024 Online</title>
       </Helmet>
 
       <EnrollNowButton onClick={handleEnrollClick} />
@@ -394,7 +475,9 @@ function SkillDiplomaCourses() {
                   type="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  required
+                     onBlur={handleEmailBlur}
+             required={!alreadyEnrolled}
+                  
                 />
               </div>
 
@@ -490,7 +573,7 @@ function SkillDiplomaCourses() {
 
                 <div className='paymentShortCourse'>
 
-                  <div style={{ color: "#000" }}>Payment (INR): <span>₹{paymentDetails.originalPayment}</span></div>
+                  <div style={{ color: "#000" }}>Payment (INR):  <span><span className="actprice" style={{color:"#000"}}><del>₹4999</del></span> ₹{paymentDetails.originalPayment}</span></div>
                   {paymentDetails.discountValue > 0 && (
                     <div style={{ color: "#000" }}>
                       Discount (INR): <span>-₹{paymentDetails.discountValue}</span>
@@ -525,13 +608,26 @@ function SkillDiplomaCourses() {
               </div>
             </div>
             <div style={{ padding: "20px" }}>
-              <button
+              {/* <button
                 type="submit"
                 className="three button brand size200 w-full sm:w-auto"
               // onClick={handlePayNow}
               >
                 Pay Now
-              </button>
+              </button> */}
+              <button
+  type="submit"
+  disabled={alreadyEnrolled}
+  className={`w-full py-3 rounded-xl font-semibold transition
+    ${
+      alreadyEnrolled
+        ? "bg-gray-400 cursor-not-allowed"
+        : "bg-black text-white hover:bg-gray-800"
+    }
+  `}
+>
+  {alreadyEnrolled ? "Already Enrolled" : "Proceed to Payment"}
+</button>
 
 
             </div>

@@ -37,7 +37,7 @@ import icon7 from "../../../assets/img/Icons/learning_Modules.webp";
 import icon8 from "../../../assets/img/Icons/6_Hours.webp";
 import icon9 from "../../../assets/img/Icons/onlinetotal.webp";
 import icon10 from "../../../assets/img/Icons/Certificate.webp";
-  const EXPIRY_TIME = 5 * 60 * 1000;
+const EXPIRY_TIME = 5 * 60 * 1000;
 function DiplomaAndAdvancedDiplomaCourses() {
   const isMobileState = useSelector(
     (state) => state.mainReducer.isMobile,
@@ -45,6 +45,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
   );
 
   const [isButtonVisible, setIsButtonVisible] = useState(true);
+  
 
   useEffect(() => {
     const container = document.getElementById("scroll-container");
@@ -84,7 +85,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
     // Hide the button after clicking
     setIsButtonVisible(true);
   };
- 
+
   useEffect(() => {
     const details = document.querySelectorAll(".modules-grid details");
 
@@ -148,7 +149,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
   function Featurecarrer2({ title, subtitle }) {
     return (
       <div className="feature-boxcar" style={{ flexDirection: "column", backgroundColor: "#fbe4ec" }}>
-        <div className="feature-iconcercar" style={{ fontSize: "18px", fontWeight: "bold" }}><img src={prop} alt="prop"/></div>
+        <div className="feature-iconcercar" style={{ fontSize: "18px", fontWeight: "bold" }}><img src={prop} alt="prop" /></div>
         <div>
           <div className="feature-titlecar" style={{ fontSize: "14px" }}>{title}</div>
         </div>
@@ -168,7 +169,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
   function Featurecarrer4({ title, subtitle }) {
     return (
       <div className="feature-boxcar" style={{ flexDirection: "column", backgroundColor: "#cedeff" }}>
-        <div className="feature-iconcercar" style={{ fontSize: "18px", fontWeight: "bold" }}><img src={envir} alt="envir"/></div>
+        <div className="feature-iconcercar" style={{ fontSize: "18px", fontWeight: "bold" }}><img src={envir} alt="envir" /></div>
         <div>
           <div className="feature-titlecar" style={{ fontSize: "14px" }}>{title}</div>
         </div>
@@ -232,7 +233,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
     phone: "",
   });
 
-const [enableStorage, setEnableStorage] = useState(false);
+  const [enableStorage, setEnableStorage] = useState(false);
 
   /* 🔹 Load data from localStorage on first render */
   // useEffect(() => {
@@ -241,29 +242,29 @@ const [enableStorage, setEnableStorage] = useState(false);
   //     setFormData1(JSON.parse(savedData));
   //   }
   // }, []);
-useEffect(() => {
-  const stored = localStorage.getItem("stickyFormData");
+  useEffect(() => {
+    const stored = localStorage.getItem("stickyFormData");
 
-  if (!stored) return;
+    if (!stored) return;
 
-  const { expiry } = JSON.parse(stored);
+    const { expiry } = JSON.parse(stored);
 
-  if (Date.now() > expiry) {
-    localStorage.removeItem("stickyFormData");
-  }
-}, []);
-useEffect(() => {
-  if (!enableStorage) return;
+    if (Date.now() > expiry) {
+      localStorage.removeItem("stickyFormData");
+    }
+  }, []);
+  useEffect(() => {
+    if (!enableStorage) return;
 
-  const payload = {
-    data: formData1,
-    expiry: Date.now() + EXPIRY_TIME,
-  };
+    const payload = {
+      data: formData1,
+      expiry: Date.now() + EXPIRY_TIME,
+    };
 
-  localStorage.setItem("stickyFormData", JSON.stringify(payload));
-}, [formData1, enableStorage]);
+    localStorage.setItem("stickyFormData", JSON.stringify(payload));
+  }, [formData1, enableStorage]);
 
- // 5 minutes
+  // 5 minutes
 
   useEffect(() => {
     localStorage.setItem("stickyFormData", JSON.stringify(formData1));
@@ -277,12 +278,16 @@ useEffect(() => {
 
   // };
 
-  /* 🔹 Handle input change */
-  const handleEnrollNow = () => {
+
+
+
+
+ const handleEnrollNow = () => {
   localStorage.removeItem("stickyFormData"); // reset old data
   setEnableStorage(true);                    // start saving
   setOpenFormModal(true);                    // open modal
 };
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -292,16 +297,21 @@ useEffect(() => {
     }));
   };
   const videoRef = useRef(null); // To reference the video element
-    const [isPlaying, setIsPlaying] = useState(false); // To manage the play state
-  
-    const handlePlay = () => {
-      // Play the video when the image is clicked
-      if (videoRef.current) {
-        videoRef.current.play();
-        setIsPlaying(true); // Update the state to hide the image
-      }
-    };
-  
+  const [isPlaying, setIsPlaying] = useState(false); // To manage the play state
+
+  const handlePlay = () => {
+    // Play the video when the image is clicked
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true); // Update the state to hide the image
+    }
+  };
+
+
+
+
+
+
   return (
     <>
       <Helmet>
@@ -323,7 +333,7 @@ useEffect(() => {
         <div class="containerm">
           <div className="left-content">
             <div className="col-4 leftfrmv">
-              <h1 className="hero-title" style={{marginTop:isMobileState?"60px":"20px"}}>Basics Of Maya for Beginners</h1>
+              <h1 className="hero-title" style={{ marginTop: isMobileState ? "60px" : "20px" }}>Basics Of Maya for Beginners</h1>
 
               <p className="hero-text">
                 A beginner-friendly course that teaches the essentials of Autodesk Maya.
@@ -338,7 +348,7 @@ useEffect(() => {
                 <span className="discountprice">₹799</span>
                 <span className="savingamt">84% Disc.</span>
               </div>
-   <div className="pricetags"><span className="">*Price inclusive of all applicable taxes (GST)</span></div>
+              <div className="pricetags"><span className="">*Price inclusive of all applicable taxes (GST)</span></div>
               <div className="savingamto">
                 <p>Limited Time Offer!</p>
               </div>
@@ -392,41 +402,43 @@ useEffect(() => {
             {/* MOBILE FORM ONLY (UNCHANGED) */}
             {isMobileState && (
               <div className="" style={{ marginTop: "30px", backgroundColor: "#ffffff", borderRadius: "10px", padding: "10px" }}>
-                <h3 className="previewcon1" style={{ textAlign: "center", padding:"0px", margin:"0px" }}>
-                  Get this Course @ ₹799
+                <h3 className="previewcon1" style={{ textAlign: "center", padding: "0px", margin: "0px" }}>
+                  Get this Course <span className="actprice" style={{color:"rgb(68 68 68)"}}>@  <del>  ₹4999</del></span> <span style={{color:"#e42929"}}>₹799</span>
                 </h3>
                 <form className="mble-form">
-                    <input
-                type="text"
-                name="name"
-                placeholder="Name"
-                value={formData1.name}
-                onChange={handleChange}
-              />
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    value={formData1.name}
+                    onChange={handleChange}
+                  />
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={formData1.email}
-                onChange={handleChange}
-              />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={formData1.email}
+                    onChange={handleChange}
+                    required
+                  />
 
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Phone"
-                value={formData1.phone}
-                onChange={handleChange}
-              />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone"
+                    value={formData1.phone}
+                    onChange={handleChange}
+                  />
 
-                  <PaymentC
+                <PaymentC
                     className="my-custom-class"
                     open={openFormModal}
                     onClose={() => setOpenFormModal(false)}
                     onClick={handleEnrollNow}
                   />
                   
+
                 </form>
 
 
@@ -442,35 +454,35 @@ useEffect(() => {
         {/* Left Content */}
         <div className="left-content">
           <section className="maya-overview-section" style={{ backgroundColor: "" }}>
-  <div className="videomain2maya">
- <video
-  ref={videoRef}
-  controls
-  loop
-  controlsList="nodownload noplaybackrate"
-  disablePictureInPicture
-  onContextMenu={(e) => e.preventDefault()}
->
-  <source
-    src="https://backstagepass.co.in/Marketing-Video.mp4"
-    type="video/mp4"
-  />
-</video>
+            <div className="videomain2maya">
+              <video
+                ref={videoRef}
+                controls
+                loop
+                controlsList="nodownload noplaybackrate"
+                disablePictureInPicture
+                onContextMenu={(e) => e.preventDefault()}
+              >
+                <source
+                  src="https://backstagepass.co.in/Marketing-Video.mp4"
+                  type="video/mp4"
+                />
+              </video>
 
 
-  {!isPlaying && (
-    <div className="overlay-wrapper" onClick={handlePlay}>
-      <img
-        src={advdip}
-        className="overlay-image2maya-1"
-        alt="advdip"
-      />
+              {!isPlaying && (
+                <div className="overlay-wrapper" onClick={handlePlay}>
+                  <img
+                    src={advdip}
+                    className="overlay-image2maya-1"
+                    alt="advdip"
+                  />
 
-      <div className="play-icon">▶</div>
-    </div>
-  )}
-</div>
-</section>
+                  <div className="play-icon">▶</div>
+                </div>
+              )}
+            </div>
+          </section>
           <section className="maya-overview-section" style={{ backgroundColor: "#f6f7f8" }}>
             <div className="section-wrappercer" >
               <h2 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px", paddingBottom: "0px", marginTop: isMobileState ? "4px" : "50px", paddingTop: "20px" }}>
@@ -493,7 +505,7 @@ useEffect(() => {
             </div>
           </section> */}
 
-          <section className="" style={{ marginBottom: "0px", backgroundColor: "" }}>
+          <section className="" style={{ marginBottom: "40px", backgroundColor: "",marginTop:"40px" }}>
             <div className="section-wrappercer">
 
               <h3 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px", paddingTop: "0px", marginTop: "0px" }}>Key Features</h3>
@@ -513,7 +525,7 @@ useEffect(() => {
 
 
 
-          <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "30px", marginTop: "15px" }}>
+          <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "40px", marginTop: "40px" }}>
             <div className="section-wrappercer modules-section">
 
               <div className="modules-grid">
@@ -590,7 +602,7 @@ useEffect(() => {
 
 
 
-          <section style={{ backgroundColor: "#f6f7f8", marginTop: isMobileState ? "4px" : "30px", borderRadius: "10px", padding: isMobileState ? "10px" : "0px" }}>
+          <section style={{ backgroundColor: "#f6f7f8", marginTop: isMobileState ? "4px" : "40px", borderRadius: "10px", padding: isMobileState ? "10px" : "0px" }}>
             <div className="section-wrappercer modules-section">
 
               <div className='coppertunitiescer'>
@@ -646,7 +658,7 @@ useEffect(() => {
               </div>
             </div>
           </section>
-          <section className="" style={{ backgroundColor: "", marginBottom: "0px", marginTop: "20px" }}>
+          <section className="" style={{ backgroundColor: "", marginBottom: "0px", marginTop: "40px" }}>
             <div className="section-wrappercer">
               <h3 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px" }}>This Course is for You, If You are
               </h3>
@@ -723,7 +735,7 @@ useEffect(() => {
               </div>
             </div>
           </section>
-          <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "30px", marginTop: "20px" }}>
+          <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "50px", marginTop: "50px" }}>
             <div className="section-wrappercer">
 
               <h3 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px" }}>Career Opportunities
@@ -749,9 +761,9 @@ useEffect(() => {
               <h3 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px" }}>Our Learners Work Across Top Companies</h3>
 
               <div className="logo-grid-45">
-                   <img src={r15} alt="r15" width="80" />
+                <img src={r15} alt="r15" width="80" />
                 <img src={r16} alt="r16" width="80" />
-                 <img src={rc2} alt="rc2" width="80" />
+                <img src={rc2} alt="rc2" width="80" />
                 <img src={r1} alt="r1" width="85" />
                 <img src={r2} alt="r2" width="90" />
                 <img src={r11} alt="r11" width="80" />
@@ -766,11 +778,11 @@ useEffect(() => {
                 <img src={r13} alt="r13" width="90" />
                 <img src={r9} alt="r9" width="80" />
                 <img src={r14} alt="r14" width="80" />
-              
+
               </div>
             </div>
           </section>
-          <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "30px", marginTop: "15px" }}>
+          <section className="" style={{ backgroundColor: "#ffffff", marginBottom: "50px", marginTop: "50px" }}>
 
             <div className="section-wrappercer modules-section">
               <div className='coppertunitiescer1' style={{ gap: isMobileState ? "0px" : "47px" }}>
@@ -866,7 +878,7 @@ useEffect(() => {
           <aside className="right-sticky">
             <div className="sticky-form">
               <h3 className="previewcon1" style={{ textAlign: "center" }}>
-                Get this Course @ ₹799
+                Get this Course @ <span className="actprice" style={{color:"#000"}}><del>₹4999</del></span>  <span style={{color:"#e42929"}}>₹799</span>
               </h3>
 
               <input
@@ -876,15 +888,14 @@ useEffect(() => {
                 value={formData1.name}
                 onChange={handleChange}
               />
-
               <input
                 type="email"
                 name="email"
                 placeholder="Email"
                 value={formData1.email}
                 onChange={handleChange}
+                required
               />
-
               <input
                 type="tel"
                 name="phone"
@@ -892,13 +903,14 @@ useEffect(() => {
                 value={formData1.phone}
                 onChange={handleChange}
               />
-
               <PaymentC
                 className="my-custom-class"
                 open={openFormModal}
                 onClose={() => setOpenFormModal(false)}
-               onClick={handleEnrollNow}
+                onClick={handleEnrollNow}
               />
+
+
             </div>
           </aside>
         )}
@@ -910,25 +922,23 @@ useEffect(() => {
       <section className="bancer">
         <div class="small-banner1 ftbaner1" style={{ paddingLeft: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}><div className="col-12 col-lg-8 col-md-7 col-sm-12 bottomcer"><div class="foot-ban"> <p class="didYouKnow h6 mb-3">Enroll in the Basics of Maya Course and Earn Certification @
         </p><div className="disdvi"><span className="actprice"><del>₹4999</del></span><span className="discountprice">₹799</span> <span className="savingamt">84% Disc.</span></div>
-           <div className="pricetags"><span className="">*Price inclusive of all applicable taxes (GST)</span></div>
+          <div className="pricetags"><span className="">*Price inclusive of all applicable taxes (GST)</span></div>
           <div className="savingamto" style={{ width: "150px" }}><p className="" style={{ margin: "0px", fontWeight: "600", fontSize: "12px" }}>Limited Time Offer!</p></div></div></div></div></section>
       {isButtonVisible && (
         <div
           className="CousellingButton1 tetstL1"
-         id="mbopen"
-          style={{ marginBottom: "0px", backgroundColor: "#ffffff", border:"1px solid#e4d8d8", boxShadow:"rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px" }}
+          id="mbopen"
+          style={{ marginBottom: "0px", backgroundColor: "#ffffff", border: "1px solid#e4d8d8", boxShadow: "rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px" }}
           onClick={scrollToBottom}
         >
+ <PaymentC
+                className="my-custom-class"
+                open={openFormModal}
+                onClose={() => setOpenFormModal(false)}
+                onClick={handleEnrollNow}
+              />
 
-         
-            <PaymentC
-              type="button"
-              className="dwnbtn three w-full sm:w-auto"
-              style={{ width: "350px", borderRadius:"20px", padding:"20px"}}
-              open={openFormModal}
-              onClose={() => setOpenFormModal(false)}
-             onClick={handleEnrollNow}
-            />
+  
 
 
         </div>

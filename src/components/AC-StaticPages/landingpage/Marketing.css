@@ -3,6 +3,16 @@
   display: block;
   text-decoration: none;
 }
+.actprice {
+  margin-right: 8px;
+  color: #999;
+}
+
+.discountprice {
+  font-weight: bold;
+  color: #fff;
+  font-size: 18px;
+}
 
 /* Ribbon base */
 .stripdbc {
@@ -126,6 +136,11 @@ white-space: nowrap;
 
 
   @media only screen and (max-width : 1024px){
+    .containerm {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 0px !important;
+}
     #mbopen{
   display: block;
 }
@@ -1656,11 +1671,11 @@ flex: 0 0 40%;
 /* FORM STYLES */
 .sticky-form h3 {
   margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 700;
   color: #000;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .sticky-form input {
