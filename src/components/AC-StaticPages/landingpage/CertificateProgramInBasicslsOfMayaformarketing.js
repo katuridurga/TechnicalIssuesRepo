@@ -629,8 +629,10 @@ const handleEmailBlur = async () => {
             {/* MOBILE FORM ONLY (UNCHANGED) */}
             {isMobileState && (
               <div className="" style={{ marginTop: "30px", backgroundColor: "#ffffff", borderRadius: "10px", padding: "10px" }}>
-                <h3 className="previewcon1" style={{ textAlign: "center", padding: "0px", margin: "0px" }}>
-                  Get this Course <span className="actprice" style={{color:"rgb(68 68 68)"}}>@  <del>  ₹4999</del></span> <span style={{color:"#e42929"}}>₹799</span>
+                <h3 className="previewcon1" style={{ textAlign: "center", padding: "0px", margin: "0px", fontSize:"22px" }}>
+                  Get this Course @ <del style={{ color: "#000", textDecorationColor: "#000", fontSize:"22px", fontWeight:"600" }}>
+  ₹4999
+</del> <span style={{color:"#e42929", fontSize:"25px"}}>₹799</span>
                 </h3>
                 <form className="mble-form">
                   <input
@@ -1105,7 +1107,9 @@ const handleEmailBlur = async () => {
           <aside className="right-sticky">
             <div className="sticky-form">
               <h3 className="previewcon1" style={{ textAlign: "center" }}>
-                Get this Course @ <span className="actprice" style={{color:"#000"}}><del>₹4999</del></span>  <span style={{color:"#e42929"}}>₹799</span>
+                Get this Course@ <del style={{ color: "#000", textDecorationColor: "#000", fontSize:"25px", fontWeight:"600" }}>
+  ₹4999
+</del>  <span style={{color:"#e42929", fontSize:"25px"}}>₹799</span>
               </h3>
 
               <input

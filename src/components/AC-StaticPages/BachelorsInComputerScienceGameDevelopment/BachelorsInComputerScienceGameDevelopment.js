@@ -111,7 +111,7 @@ function Courses(props) {
         "Gamification",
       ],
     },
-   
+
     {
       title: "Humanities",
       subjects: [
@@ -133,7 +133,7 @@ function Courses(props) {
         },
       ],
     },
- {
+    {
       title: "AR & VR courses – Electives",
       subjects: [
         "Introduction to Augmented Reality",
@@ -256,7 +256,7 @@ function Courses(props) {
 
         <meta property="og:title" content="Bachelor's Degree in Computer Science & Game Development | Backstage Pass Institute of Gaming, Hyderabad, India" />
         <meta property="og:description" name="description" content="Backstage Pass Institute of Gaming is offering a Bachelor's Degree in Computer Science & Game Development. Master game design, game programming, and top game engines like Unity & Unreal. Enroll Now & Build a Career in Gaming!" />
-         <meta name="description" content="Backstage Pass Institute of Gaming is offering a Bachelor's Degree in Computer Science & Game Development. Master game design, game programming, and top game engines like Unity & Unreal. Enroll Now & Build a Career in Gaming!" />
+        <meta name="description" content="Backstage Pass Institute of Gaming is offering a Bachelor's Degree in Computer Science & Game Development. Master game design, game programming, and top game engines like Unity & Unreal. Enroll Now & Build a Career in Gaming!" />
         <meta property="og:url" content="https://www.backstagepass.co.in/courses/bachelors-in-computer-science-game-development/" />
         <meta name="keywords" content="game development courses, game development colleges in india, game development courses in india, Computer Science in Gaming, game programming courses, bsc game design and development, game development degree, game development degree in india, game developer courses in india, video game developer course​, video game development courses​, video game development courses in india​" />
         <link rel="canonical" href="https://www.backstagepass.co.in/courses/bachelors-in-computer-science-and-game-development/" />
@@ -270,7 +270,7 @@ function Courses(props) {
           {/* Info Card */}
           <div className="info-card slanted-info">
             <div className="info-item">
-            <span className="info-subtitle">Course Duration</span>
+              <span className="info-subtitle">Course Duration</span>
               <span className="info-title">4 Years</span>
             </div>
             <div className="info-item">
@@ -284,7 +284,7 @@ function Courses(props) {
             <div className="info-item">
               <span className="info-subtitle">Affiliated</span>
               <span className="info-title">JNAFAU</span>
-              
+
             </div>
           </div>
         </div>
@@ -293,11 +293,12 @@ function Courses(props) {
       {/* Course Overview */}
       <div className="overviewsection">
         <h2 className='courseHeading'>Course Overview</h2>
-         <div className="brname"></div>
+        <div className="brname"></div>
         <p>
-        The B.Sc (Hons) - Computer Science & Game Development program blends Computer Science, Game Design, and Game Programming skills. This course provides students with a strong foundation in core computer science topics, including software development and programming, while also focusing on video game design and game development principles. Students will gain both theoretical knowledge and practical experience, preparing them for careers in both the IT and Game Development industries.</p>
-       <p>
-       Whether you are passionate about crafting immersive gaming experiences or advancing in the IT industry, Backstage Pass Institute of Gaming is the ideal choice. As the best game development college in India, we provide students opportunities to excel and thrive in the gaming and IT industries.
+          The B.Sc (Hons) - Computer Science & Game Development program blends Computer Science, <b style={{ fontSize: "16px", color: '#ed1925' }}><a href=" https://www.backstagepass.co.in/courses/bachelors-in-game-art-and-design/
+" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}> Game Design</a></b>, and Game Programming skills. This course provides students with a strong foundation in core computer science topics, including software development and programming, while also focusing on video game design and game development principles. Students will gain both theoretical knowledge and practical experience, preparing them for careers in both the IT and Game Development industries.</p>
+        <p>
+          Whether you are passionate about crafting immersive gaming experiences or advancing in the IT industry, Backstage Pass Institute of Gaming is the ideal choice. As the  <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.backstagepass.co.in/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}> best game development college in India</a></b>, we provide students opportunities to excel and thrive in the gaming and IT industries.
 
         </p>
       </div>
@@ -305,11 +306,11 @@ function Courses(props) {
       {/* Course Objectives / Curriculum */}
       <div className="curriculum-section" style={{ marginTop: "24px" }}>
         <h2 className='courseHeading'>Course Objectives</h2>
-         <div className="brname"></div>
+        <div className="brname"></div>
         <div className="">
           <ul style={{ listStyle: "none", padding: 0 }}>
             {items.map((item, index) => (
-              <li key={index} style={{ display: "flex", marginBottom: "14px", fontSize:"16px",gap:"10px", alignItems:"flex-start", justifyContent:"flex-start", lineHeight:"1.6"}}>
+              <li key={index} style={{ display: "flex", marginBottom: "14px", fontSize: "16px", gap: "10px", alignItems: "flex-start", justifyContent: "flex-start", lineHeight: "1.6" }}>
                 <CheckBoxIcon style={{ color: "#ec1923", marginRight: "12px", fontSize: "22px", marginTop: "3px" }} />
                 {item}
               </li>
@@ -398,7 +399,7 @@ function Courses(props) {
       </div>
       <div id="Beyond-The-Course" backgroundColor="blue" height="180vh" style={{ padding: "0px 0px", marginBottom: "20px" }}>
         <h2 className='courseHeading' style={{ color: "#ec1923", marginTop: "0px" }}>Beyond The Course</h2>
- <div className="brname"></div>
+        <div className="brname"></div>
         <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At Backstage Pass, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.
         </p>
 
@@ -406,17 +407,17 @@ function Courses(props) {
           <ul style={{ width: "80%", margin: "0px auto", paddingTop: "10px" }}>
             <li>
               <div className='BeyondLeft'>
-                <img src={m5} alt="m5"/>
+                <img src={m5} alt="m5" />
               </div>
               <div className='BeyondRight'>
-               <h4 className='lsh'>Studio Visits</h4>
+                <h4 className='lsh'>Studio Visits</h4>
                 <p>Visits to game studios allow students to witness how a game company truly works
                 </p>
               </div>
             </li>
             <li>
               <div className='BeyondLeft'>
-                <img src={m6} alt="m6"/>
+                <img src={m6} alt="m6" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Jams & Conferences</h4>
@@ -440,7 +441,7 @@ function Courses(props) {
 
             <li>
               <div className='BeyondLeft'>
-                <img src={m7} alt="m7"/>
+                <img src={m7} alt="m7" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Make Your Own Game</h4>
@@ -466,10 +467,10 @@ function Courses(props) {
             {/* Tabs */}
 
 
-            <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
-              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"100%" }}>Career Opportunities</h2>
- <div className="brname"></div>
-              <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
+            <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width: isMobileState ? "100%" : "80%", margin: "0px" }}>
+              <h2 className='courseHeading' style={{ textAlign: "left", width: isMobileState ? "100%" : "100%" }}>Career Opportunities</h2>
+              <div className="brname"></div>
+              <div className="border rounded-lg bg-white" style={{ marginTop: "30px" }}>
                 {faqs.map((faq, index) => (
                   <div
                     key={index}
@@ -506,7 +507,7 @@ function Courses(props) {
                         paddingLeft: "20px",
                         textAlign: "justify",
                         lineHeight: "24px",
-                        fontSize:"16px"
+                        fontSize: "16px"
                       }}>
                         {faq.question}
                       </span>
@@ -517,7 +518,7 @@ function Courses(props) {
                     {openIndex === index && (
                       <ul style={{ paddingLeft: "6.5rem", lineHeight: "1.9" }}>
                         {faq.answer.map((point, i) => (
-                          <li key={i} style={{ listStyle: "disc", fontSize:"14px" }}>{point}</li>
+                          <li key={i} style={{ listStyle: "disc", fontSize: "14px" }}>{point}</li>
                         ))}
                       </ul>
                     )}
@@ -535,7 +536,7 @@ function Courses(props) {
 
 
 
-      <div id="Enquire-Now" style={{marginTop:"30px"}}>
+      <div id="Enquire-Now" style={{ marginTop: "30px" }}>
         <HomeContentForm />
       </div>
 

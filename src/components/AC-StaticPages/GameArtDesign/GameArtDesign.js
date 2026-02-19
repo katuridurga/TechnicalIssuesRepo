@@ -276,7 +276,8 @@ function Courses(props) {
         <p>
           The Bachelor’s in Game Art & Design program prepares students for success with a curriculum that covers Traditional Art, Concept Art, 2D and 3D Game Art, and Game Design.</p>
         <p>
-          We, at Backstage Pass Institute of Gaming, designed this course for aspiring artists and designers who aim to combine their artistic talents with cutting-edge technology to create visually stunning and immersive games. It focuses on developing core skills in both traditional and digital mediums, offering a comprehensive education that balances theory and practical application.
+          We, at <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.backstagepass.co.in/
+" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}> Backstage Pass Institute of Gaming</a></b>, designed this course for aspiring artists and designers who aim to combine their artistic talents with cutting-edge technology to create visually stunning and immersive games. It focuses on developing core skills in both traditional and digital mediums, offering a comprehensive education that balances theory and practical application.
         </p>
       </div>
 
