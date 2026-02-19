@@ -569,7 +569,9 @@ const handleEmailBlur = async () => {
               <p className="discountpanel">Buy this Course @</p>
 
               <div className="disdvi">
-                <span className="actprice"><del>₹4999</del></span>
+<del style={{ color: "#fff", textDecorationColor: "#fff", fontSize:"25px", fontWeight:"600" }}>
+  ₹4999
+</del>
                 <span className="discountprice">₹799</span>
                 <span className="savingamt">84% Disc.</span>
               </div>
@@ -1144,11 +1146,52 @@ const handleEmailBlur = async () => {
       </section>
 
 
-      <section className="bancer">
-        <div class="small-banner1 ftbaner1" style={{ paddingLeft: "0px", display: "flex", alignItems: "center", justifyContent: "center" }}><div className="col-12 col-lg-8 col-md-7 col-sm-12 bottomcer"><div class="foot-ban"> <p class="didYouKnow h6 mb-3">Enroll in the Basics of Maya Course and Earn Certification @
-        </p><div className="disdvi"><span className="actprice"><del>₹4999</del></span><span className="discountprice">₹799</span> <span className="savingamt">84% Disc.</span></div>
-          <div className="pricetags"><span className="">*Price inclusive of all applicable taxes (GST)</span></div>
-          <div className="savingamto" style={{ width: "150px" }}><p className="" style={{ margin: "0px", fontWeight: "600", fontSize: "12px" }}>Limited Time Offer!</p></div></div></div></div></section>
+<section className="bancer">
+  <div className="small-banner1 ftbaner1">
+    <div className="banner-wrapper">
+
+      <div className="foot-ban">
+        <p className="didYouKnow">
+          Enroll in the Basics of Maya Course and Earn Certification @
+        </p>
+
+        <div className="disdvi">
+          <span
+  style={{
+    color: "#fff",
+    textDecoration: "line-through",
+    textDecorationColor: "#fff",
+    fontSize: "25px",
+    fontWeight: "600"
+  }}
+>
+  ₹4999
+</span>
+
+        
+          <span className="discountprice">
+            ₹799
+          </span>
+
+          <span className="savingamt">
+            84% Disc.
+          </span>
+        </div>
+
+        <div className="pricetags">
+          *Price inclusive of all applicable taxes (GST)
+        </div>
+
+        <div className="savingamto">
+          Limited Time Offer!
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
       {isButtonVisible && (
         <div
           className="CousellingButton1 tetstL1"
@@ -1454,7 +1497,7 @@ const handleEmailBlur = async () => {
   className="alt-enroll-btn1"
   onClick={handleEnrollNow}
 >
-  ENROLL NOW @  <span className="actprice1"> <del>₹4999</del></span> <span className="discountprice1">₹799</span>
+  ENROLL NOW  @ <span className="actprice1" ><del>₹4999</del></span> <span className="discountprice1">₹799</span>
 </button>
 
 
