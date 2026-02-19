@@ -626,7 +626,7 @@ console.log('enrolled',enrollment?.alreadyEnrolled);
     }
   `}
 >
-  {alreadyEnrolled ? "Already Enrolled" : "Proceed to Payment"}
+  {alreadyEnrolled ? "Already Enrolled" : "ENROLL NOW"}
 </button>
 
 

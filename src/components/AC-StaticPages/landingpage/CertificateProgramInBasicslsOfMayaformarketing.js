@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import PaymentC from "./Payment";
 import { useSelector, shallowEqual } from "react-redux";
 import { FaPlay } from "react-icons/fa";
+import axios from "axios";
 import cer from "../../../assets/img/test/certificate-with-badge.png";
 import modeling from "../../../assets/img/Environment.webp";
 import prop from "../../../assets/img/3D_Game_Asset.webp";
@@ -37,6 +38,11 @@ import icon7 from "../../../assets/img/Icons/learning_Modules.webp";
 import icon8 from "../../../assets/img/Icons/6_Hours.webp";
 import icon9 from "../../../assets/img/Icons/onlinetotal.webp";
 import icon10 from "../../../assets/img/Icons/Certificate.webp";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+
 const EXPIRY_TIME = 5 * 60 * 1000;
 function DiplomaAndAdvancedDiplomaCourses() {
   const isMobileState = useSelector(
@@ -283,9 +289,18 @@ function DiplomaAndAdvancedDiplomaCourses() {
 
 
  const handleEnrollNow = () => {
-  localStorage.removeItem("stickyFormData"); // reset old data
-  setEnableStorage(true);                    // start saving
-  setOpenFormModal(true);                    // open modal
+  localStorage.removeItem("stickyFormData");
+  setEnableStorage(true);
+
+  // 🔥 Copy sticky form data into popup form
+  setFormData((prev) => ({
+    ...prev,
+    fullname: formData1.name || "",
+    email: formData1.email || "",
+    PhoneNumber: formData1.phone || "",
+  }));
+
+  setOpenFormModal(true);
 };
 
 
@@ -307,7 +322,217 @@ function DiplomaAndAdvancedDiplomaCourses() {
     }
   };
 
+ const [alreadyEnrolled, setAlreadyEnrolled] = useState(false);
+  const [courses, setCourses] = useState([]);
+  const formRef = useRef();
+    const [couponRemarks, setCouponRemarks] = useState("");
+  
+  const [formData, setFormData] = useState({
+    fullname: "",
+    dob: "",
+    PhoneNumber: "",
+    email: "",
+    course: "",
+    city: "",
+    school: "",
+    coupon: "",
+    declaration: false,
+    url: window.location.href,
+  });
+ const [paymentDetails, setPaymentDetails] = useState({
+    originalPayment: "",
+    discountValue: "",
+    finalAmount: "",
+  });
 
+  useEffect(() => {
+
+    let lastSegment = "certificate-program-in-basics-of-maya";
+
+    // if (referrer) {
+    //   const parts = referrer.split("/").filter(Boolean);
+    //   lastSegment = parts[parts.length - 1];
+    //   if (lastSegment === "short-course") lastSegment = "";
+    // }
+
+    axios
+      .get(
+        `https://www.backstagepass.co.in/reactapi/courses_api.php?slug=${lastSegment}`
+      )
+      .then((res) => {
+        const data = res.data || [];
+        setCourses(data);
+
+        if (data.length === 1) {
+          setFormData((prev) => ({ ...prev, course: data[0].value }));
+          setPaymentDetails({
+            originalPayment: data[0].orignialpayment,
+            discountValue: "",
+            finalAmount: data[0].gstpayment,
+          });
+        }
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
+  const checkAlreadyEnrolled = async (email, course) => {
+  const res = await fetch(
+    "https://www.backstagepass.co.in/reactapi/check_enrollment.php",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Cache-Control": "no-cache",
+      },
+      cache: "no-store",
+      body: JSON.stringify({ email, course }),
+    }
+  );
+
+  return res.json();
+};
+
+  const handleInputChange = async (e) => {
+    const { name, type, value, checked, files } = e.target;
+
+    if (name === "coupon") {
+      if (value.length <= 4) {
+        setCouponRemarks("");
+      }
+      if (!formData.course) {
+        alert("Please select a course first");
+        return;
+      }
+      if (!formData.email) {
+    alert("Please enter email first");
+    return;
+  }
+       const enrollment = await checkAlreadyEnrolled(formData.email, formData.course);
+console.log('enrolled',enrollment?.alreadyEnrolled);
+  if (enrollment?.alreadyEnrolled) {
+    setCouponRemarks("You are already enrolled in this course");
+    return;
+  }
+
+
+      try {
+        const res = await fetch(
+          "https://www.backstagepass.co.in/reactapi/getpaymentapi.php",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ course: formData.course, coupon: value }),
+          }
+        );
+
+        const data = await res.json();
+        if (data?.length) {
+
+
+          setPaymentDetails({
+            originalPayment: data[0].orignialpayment,
+            discountValue: data[0].discountvalue,
+            finalAmount: data[0].finalamount,
+
+          });
+          if (data[0].remarkscoupon != '' && value.length >= 4) {
+            setCouponRemarks(data?.[0]?.remarkscoupon || "Invalid Coupon Code");
+          }
+          else {
+
+            setCouponRemarks(""); // clear error
+
+
+          }
+
+        }
+      } catch {
+        alert("Coupon error");
+      }
+    }
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]:
+        type === "checkbox" ? checked : type === "file" ? files[0] : value,
+    }));
+  };
+  const handleEnrollClick = () => {
+    setFormData((prev) => ({
+      ...prev,
+      fullname: "",
+      email: "",
+      PhoneNumber: "",
+    }));
+    setOpenFormModal(true);
+  };
+const handleMainCategoryChange = (e) => {
+
+    const selectedCourse = e.target.value;
+    const selectedOption = courses.find((course) => course.value === selectedCourse);
+
+    setFormData({
+      ...formData,
+      course: selectedCourse,
+      specialization: "", // You can set specialization if needed
+    });
+
+    // Update payment details based on the selected course
+    if (selectedOption) {
+      setPaymentDetails({
+        originalPayment: selectedOption.orignialpayment,
+        gstPayment: '18%',
+        discountValue: '',
+        finalAmount: selectedOption.gstpayment,
+      });
+    }
+  };
+ useEffect(() => {
+  const autoCheckEnrollment = async () => {
+    if (!formData.email || !isValidEmail(formData.email)) return;
+    if (!formData.course) return;
+
+    try {
+      const enrollment = await checkAlreadyEnrolled(
+        formData.email,
+        formData.course
+      );
+
+      if (enrollment?.alreadyEnrolled) {
+        setAlreadyEnrolled(true);
+        setCouponRemarks("You are already enrolled in this course");
+      } else {
+        setAlreadyEnrolled(false);
+        setCouponRemarks("");
+      }
+    } catch (error) {
+      console.error("Enrollment check failed:", error);
+    }
+  };
+
+  autoCheckEnrollment();
+}, [formData.email, formData.course]);
+
+  const isValidEmail = (email) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+const handleEmailBlur = async () => {
+ 
+  if (!formData.email || !isValidEmail(formData.email)) return;
+  if (!formData.course) return;
+
+  const enrollment = await checkAlreadyEnrolled(
+    formData.email,
+    formData.course
+  );
+
+ if (enrollment.alreadyEnrolled) {
+  setAlreadyEnrolled(true);
+  setCouponRemarks("You are already enrolled in this course");
+} else {
+  setAlreadyEnrolled(false);
+  setCouponRemarks("");
+}
+};
 
 
 
@@ -931,14 +1156,306 @@ function DiplomaAndAdvancedDiplomaCourses() {
           style={{ marginBottom: "0px", backgroundColor: "#ffffff", border: "1px solid#e4d8d8", boxShadow: "rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px" }}
           onClick={scrollToBottom}
         >
- <PaymentC
+ {/* <PaymentC
                 className="my-custom-class"
                 open={openFormModal}
                 onClose={() => setOpenFormModal(false)}
                 onClick={handleEnrollNow}
-              />
+              /> */}
 
+
+      <Dialog
+        open={openFormModal}
+        onClose={handleFormClose}
+        disableScrollLock
+        fullWidth
+        maxWidth={false}
+        PaperProps={{
+          sx: {
+            width: isMobileState ? "95%" : "750px",
+            maxWidth: "95%",
+            margin: "0 auto",
+          },
+        }}
+      >
+
+        <DialogActions style={{ backgroundColor: "#fa9f42" }}>
+          <p className="mainHeadingTotall-2" style={{ fontSize: isMobileState ? "20px" : "30px", color: "#fff", margin: "16px auto" }}>ENROLLMENT FORM</p>
+          <Button onClick={handleFormClose} className="hvcls" style={{ fontSize: "35px", color: "#fff", fontWeight: "bold" }}> &times;</Button>
+
+        </DialogActions>
+
+        <DialogContent dividers>
+          <form
+            ref={formRef} className="formMain"
+            method="POST"
+            action="https://www.backstagepass.co.in/payment_process.php"
+            encType="multipart/form-data"
+          // onSubmit={handlePayNow}
+          >
+
+
+
+            <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container" style={{
+              gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(1, 1fr)"
+            }}>
+              <div className="">
+                <label className="" for="fullname">Full Name (as per official documents)</label>
+                <input
+                  className=""
+                  placeholder="Full Name"
+                  id="fullname"
+                  name="fullname"
+                  type="text"
+                  value={formData.fullname}
+                  onChange={handleInputChange}
+                  required
+                />
+                <input type="hidden" name="url" value={formData.url} />
+                <input type="hidden" name="course_ttl" value={formData.course_ttl} />
+              </div>
+
+              {/* <div className="">
+                <label className="" for="dob">Date of Birth (as per official documents)</label>
+               
+                <Controller
+                  name="dob"
+                  control={control}
+                  render={({ field }) => (
+                    <input
+
+                      fullWidth
+                      //label="Date Of Birth (dd/mm/yyyy)"
+                      label="Date of Birth"
+                      type="date"
+                      variant="outlined"
+                      {...field}
+
+                      InputProps={{
+
+                        sx: {
+
+                          '& input[type="date"]::-webkit-calendar-picker-indicator': {
+
+                            filter: 'invert(0)', // Inverts the icon to white
+
+                          },
+                          color: '#000',
+                          '& .MuiOutlinedInput-notchedOutline': {
+                            borderColor: '#555', // Default border color
+                          },
+                          '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                            borderColor: '#555', // Focused border color
+                          },
+                          '&:hover .MuiOutlinedInput-notchedOutline': {
+                            borderColor: '#555', // Hover border color
+                          },
+
+                        },
+
+                      }}
+
+                      value={formData.dob}
+                      onChange={handleInputChange}
+                      InputLabelProps={{
+                        sx: {
+                          color: 'white', // Label text color
+                          background: '#f9fafb',
+                          px: 1,
+                          '& .MuiInputLabel-asterisk': {
+                            color: 'red', // Asterisk color
+                            fontSize: '21px',
+                          },
+                        },
+                      }}
+                    />
+                  )}
+                />
+              </div> */}
+            </div>
+
+            <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container" style={{
+              gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(2, 1fr)"
+            }}>
+              <div className="">
+                <label className="" htmlFor="email">Email Address</label>
+                <input
+                  className=""
+                  placeholder="Email Address"
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                     onBlur={handleEmailBlur}
+             required={!alreadyEnrolled}
+                  
+                />
+              </div>
+
+              <div className="">
+                <label className="" for="PhoneNumber">Mobile Number</label>
+                <input
+                  className=""
+                  placeholder="Mobile Number"
+                  id="PhoneNumber"
+                  name="PhoneNumber"
+                  type="tel"
+                  pattern="[6-9][0-9]{9}"
+                  minlength="10"
+                  maxlength="10"
+                  value={formData.PhoneNumber}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="formGrid-c" data-form-id="need-guidance" data-form="step1-container">
+              <div className="" style={{ width: isMobileState ? "100%" : "100%" }}>
+                <label className="" htmlFor="course">Course <span style={{ color: "red", marginLeft: "4px", marginTop: "2px" }}>*</span></label>
+                <select
+                  onChange={handleMainCategoryChange}
+                  name="course"
+                  id="course"
+                  value={formData.course}
+                  style={{ width: "100%", marginBottom: "20px" }}
+                  required
+                >
+                  <option value="" disabled>
+                    Select Course
+                  </option>
+                  {courses.map((course) => (
+                    <option
+                      key={course.id}
+                      value={course.value}
+                      data-original-payment={course.orignialpayment} // Store original payment in data attribute
+                      data-gst-payment={course.gstpayment} // Store GST payment in data attribute
+                    >
+                      {course.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              {/* 
+              <div className="">
+                <label className="" for="school">Last School/ College Attended</label>
+                <input
+                  className=""
+                  placeholder="Last School/ College Attended"
+                  id="school"
+                  name="school"
+                  type="text"
+                  value={formData.school}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div className="">
+                <label className="" for="Phone Number">City</label>
+                <input className="" placeholder="Location" id="city" name="city" type="text" value={formData.city} onChange={handleInputChange} required />
+              </div> */}
+
+              {/* <div className="">
+                <label className="" for="document">Upload Document (Marksheet/ Certificate)</label>
+                <input
+                  className=""
+                  id="document"
+                  name="document"
+                  type="file"
+                  accept=".jpg,.png,.pdf"
+                  onChange={handleInputChange}
+                />
+              </div> */}
+
+              <div className="">
+                <label className="" for="coupon">Coupon Code</label>
+                <input
+                  className=""
+                  placeholder="Coupon Code (Optional)"
+                  id="coupon"
+                  name="coupon"
+                  type="text"
+                  value={formData.coupon}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <p style={{ color: "#f52525" }}><span>{couponRemarks}</span></p>
+              {paymentDetails.originalPayment && (
+
+                <div className='paymentShortCourse'>
+
+                  <div style={{ color: "#000" }}>Payment (INR):  <span><span className="actprice" style={{color:"#000"}}><del>₹4999</del></span> ₹{paymentDetails.originalPayment}</span></div>
+                  {paymentDetails.discountValue > 0 && (
+                    <div style={{ color: "#000" }}>
+                      Discount (INR): <span>-₹{paymentDetails.discountValue}</span>
+                    </div>
+                  )}
+
+                  <div style={{ color: "#000" }}>Total Payment (INR): <span>₹{paymentDetails.finalAmount}</span></div>
+
+
+                </div>
+              )}
+              <div className="checkbox-container" >
+                <label className="checkbox-label" style={{ fontSize: "14px" }}>
+                  <input
+                    type="checkbox"
+                    name="declaration"
+                    checked={formData.declaration}
+                    onChange={handleInputChange}
+                    required
+                    style={{
+                      marginTop: '4px',
+                      marginRight: '100px !important',
+                      display: 'inline-block',
+                      width: '16px',
+                      height: '16px',
+                      opacity: 1,
+                      position: "relative"
+                    }}
+                  />
+                  I hereby declare that all the information provided above is true to the best of my knowledge. I understand that submitting false documents or details may result in cancellation of my enrollment.
+                </label>
+              </div>
+            </div>
+            <div style={{ padding: "20px" }}>
+              {/* <button
+                type="submit"
+                className="three button brand size200 w-full sm:w-auto"
+              // onClick={handlePayNow}
+              >
+                Pay Now
+              </button> */}
+              <button
+  type="submit"
+  disabled={alreadyEnrolled}
+  className={`w-full py-3 rounded-xl font-semibold transition
+    ${
+      alreadyEnrolled
+        ? "bg-gray-400 cursor-not-allowed"
+        : "bg-black text-white hover:bg-gray-800"
+    }
+  `}
+>
+  {alreadyEnrolled ? "Already Enrolled" : "Proceed to Payment"}
+</button>
+
+
+            </div>
+          </form>
+
+
+        </DialogContent>
+      </Dialog>
   
+    <button
+  type="button"
+  className="alt-enroll-btn1"
+  onClick={handleEnrollNow}
+>
+  ENROLL NOW @  <span className="actprice1"> <del>₹4999</del></span> <span className="discountprice1">₹799</span>
+</button>
 
 
         </div>

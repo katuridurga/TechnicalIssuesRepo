@@ -2098,3 +2098,29 @@ width: 100%;
 #mbopen{
   display: none;
 }
+.actprice1{
+    font-size: 20px;
+    margin-left: 8px;
+     color: #1d1915;
+}
+.discountprice1 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+.alt-enroll-btn1 {
+    background-color: #ee1b24 !important;
+    color: #fff;
+    padding: 12px 38px !important;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 55px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto !important;
+}
