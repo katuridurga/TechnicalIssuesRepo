@@ -31,7 +31,7 @@ const testimonials = [
     text: "One of the best aspects of Backstage Pass is that it gives you the option to interact with a lot of individuals who have a strong interest in game development and the freedom to work together with students from other streams, such as design or art, to create incredible outcomes.",
     name: "Anand Dhavle",
     role: "Gameplay Programmer, Tarsier Studios, Sweden",
-    avatar: "https://www.backstagepass.co.in/AnandDhwale-da6efb8f.webp?img=5",
+   avatar: "https://www.backstagepass.co.in/AnandDhwale-da6efb8f.webp?img=5&w=60&h=70",
   },
   {
     text: "Innovation and adaptability are crucial for growth in the modern generation. Therefore, we require a creative and determined workforce. Students from Backstage Pass have excelled in both of these areas. We were very impressed with how they questioned the status quo and developed more effective working methods.",

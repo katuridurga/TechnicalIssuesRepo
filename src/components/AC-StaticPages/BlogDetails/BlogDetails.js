@@ -32,11 +32,6 @@ function Courses(props) {
 
                 </div>
 
-
-
-
-
-
             </div>
 
             <HomeContent />

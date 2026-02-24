@@ -197,7 +197,7 @@ function Courses(props) {
         <h2 className='courseHeading'>Course Overview</h2>
         <div className="brname"></div>
         <p>
-          The Diploma in Game Design and Production program offers a comprehensive curriculum that covers every aspect of game design and production, from understanding the history and genres of games to mastering high-level design principles and practical tools like Unity/Unreal Engine.</p>
+          The Diploma in Game Design and Production program offers a comprehensive curriculum that covers every aspect of <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/courses/bachelors-in-game-art-and-design/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}> game design</a></b> and production, from understanding the history and genres of games to mastering high-level design principles and practical tools like Unity/Unreal Engine.</p>
         <p>
           This program is designed to equip students with the skills needed to conceptualize, design, and produce engaging and innovative games.
         </p>
@@ -255,7 +255,7 @@ function Courses(props) {
       <div id="Beyond-The-Course" backgroundColor="blue" height="180vh" style={{ padding: "0px 0px", marginBottom: "20px" }}>
         <h2 className='courseHeading' style={{ color: "#ec1923", marginTop: "0px" }}>Beyond The Course</h2>
         <div className="brname"></div>
-        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At Backstage Pass, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.
+        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://backstagepass.co.in/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}> Backstage Pass</a></b>, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.
 
 
         </p>

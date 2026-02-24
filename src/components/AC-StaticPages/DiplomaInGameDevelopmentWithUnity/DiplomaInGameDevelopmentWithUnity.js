@@ -55,44 +55,44 @@ function Courses(props) {
     {
       title: "CS & Game Programming",
       subjects: [
-    "C++ , Adv C++ & STL",
-"Unity 3D Game Engine – Basic & Advanced",
-"Shadder Programming",
-"Graphic Programming with OpenGL",
-"AI Programming",
-"Game Networking",
-"Gameplay Programming",
-"Code Optimization",
-     ],
+        "C++ , Adv C++ & STL",
+        "Unity 3D Game Engine – Basic & Advanced",
+        "Shadder Programming",
+        "Graphic Programming with OpenGL",
+        "AI Programming",
+        "Game Networking",
+        "Gameplay Programming",
+        "Code Optimization",
+      ],
     },
-   
+
   ];
 
   const items = ["Develop proficiency in C++ and C#, focusing on programming concepts such as object-oriented programming, inheritance, polymorphism, and advanced features.",
-"Gain an understanding of Unity's basic features, including UI components, input systems, camera operations, 2D physics, animation, and audio systems, to create functional and engaging games.",
-"Learn advanced Unity topics like AI navigation, timeline, render pipeline, post-processing effects, lighting techniques, and optimization strategies, enabling you to create sophisticated and high-performance games.",
-"Understand the basics of modern computer graphics, focusing on OpenGL and shader programming, to enhance your game development skills and create visually compelling games.",
-"Learn optimization techniques to ensure your games run efficiently, enhancing performance across different platforms and devices.",
-"Benefit from the knowledge and experience of seasoned professionals who will guide you through both theoretical and practical aspects of Unity game development.",
-"Build a strong portfolio showcasing your unique style and technical skills, making you a competitive candidate in the job market."];
+    "Gain an understanding of Unity's basic features, including UI components, input systems, camera operations, 2D physics, animation, and audio systems, to create functional and engaging games.",
+    "Learn advanced Unity topics like AI navigation, timeline, render pipeline, post-processing effects, lighting techniques, and optimization strategies, enabling you to create sophisticated and high-performance games.",
+    "Understand the basics of modern computer graphics, focusing on OpenGL and shader programming, to enhance your game development skills and create visually compelling games.",
+    "Learn optimization techniques to ensure your games run efficiently, enhancing performance across different platforms and devices.",
+    "Benefit from the knowledge and experience of seasoned professionals who will guide you through both theoretical and practical aspects of Unity game development.",
+    "Build a strong portfolio showcasing your unique style and technical skills, making you a competitive candidate in the job market."];
 
- 
+
 
   const faqs = [
     {
       question: "Game Development",
       answer: [
-"Game Programmer",
-"Unity Developer",
-"Gameplay Programmer",
-"Graphic Programmer",
-"AI Programmer",
-"Game Engine Programmer",
-"AR-VR Developer",
-"Game Designer",
+        "Game Programmer",
+        "Unity Developer",
+        "Gameplay Programmer",
+        "Graphic Programmer",
+        "AI Programmer",
+        "Game Engine Programmer",
+        "AR-VR Developer",
+        "Game Designer",
       ],
     },
-  
+
 
   ];
 
@@ -104,7 +104,7 @@ function Courses(props) {
 
   return (
     <>
-   <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'Diploma-in-Game-Development-with-Unitymm' : 'Diploma-in-Game-Development-with-Unity'}`}>
+      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'Diploma-in-Game-Development-with-Unitymm' : 'Diploma-in-Game-Development-with-Unity'}`}>
         <div className="et_pb_row et_pb_row_0">
           <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
             <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
@@ -113,11 +113,11 @@ function Courses(props) {
           </div>
         </div>
       </div>
-      
-               
-        <Helmet>
-            <script type="application/ld+json">
-            {`
+
+
+      <Helmet>
+        <script type="application/ld+json">
+          {`
               {
                 "@context": "https://schema.org/", 
                 "@type": "BreadcrumbList", 
@@ -134,8 +134,8 @@ function Courses(props) {
                 }]
               }
                 `}
-              </script>
-          <script type="application/ld+json">
+        </script>
+        <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org/",
@@ -149,16 +149,16 @@ function Courses(props) {
               }
             }
               `}
-            </script>
-            
-          <title>Best Unity Game Development Diploma Courses with Backstage Pass Institute of Gaming</title>
-          <meta property="og:title" content="Best Unity Game Development Diploma Courses with Backstage Pass Institute of Gaming" />
-           <meta name="description" content="Unity game development in 6 months. Start a game development journey with the best Unity courses at Backstage Pass Institute, Hyderabad, India. Learn C#, game design, and build immersive experiences" />
-          <meta property="og:description" name="description" content="Unity game development in 6 months. Start a game development journey with the best Unity courses at Backstage Pass Institute, Hyderabad, India. Learn C#, game design, and build immersive experiences" />
-          <meta property="og:url" content="https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unity/" />
-          <meta name="keywords" content="Unity Game Development Diploma India, Game Development with Unity Course Hyderabad, Unity 3D Game Development Diploma India, Diploma in Game Development using Unity Hyderabad, Unity Training for Game Development India, Unity Programming Diploma India, Unity Scripting Diploma, 2D Game Development with Unity Diploma, 3D Game Development with Unity Diploma, Mobile Game Development with Unity Diploma, Indie Game Development with Unity Diploma, Career in Unity Game Development India, Portfolio Building Unity Course, Game Development Fundamentals with Unity Diploma​"/>
-          <link rel="canonical" href="https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unity/" />
-        </Helmet>
+        </script>
+
+        <title>Best Unity Game Development Diploma Courses with Backstage Pass Institute of Gaming</title>
+        <meta property="og:title" content="Best Unity Game Development Diploma Courses with Backstage Pass Institute of Gaming" />
+        <meta name="description" content="Unity game development in 6 months. Start a game development journey with the best Unity courses at Backstage Pass Institute, Hyderabad, India. Learn C#, game design, and build immersive experiences" />
+        <meta property="og:description" name="description" content="Unity game development in 6 months. Start a game development journey with the best Unity courses at Backstage Pass Institute, Hyderabad, India. Learn C#, game design, and build immersive experiences" />
+        <meta property="og:url" content="https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unity/" />
+        <meta name="keywords" content="Unity Game Development Diploma India, Game Development with Unity Course Hyderabad, Unity 3D Game Development Diploma India, Diploma in Game Development using Unity Hyderabad, Unity Training for Game Development India, Unity Programming Diploma India, Unity Scripting Diploma, 2D Game Development with Unity Diploma, 3D Game Development with Unity Diploma, Mobile Game Development with Unity Diploma, Indie Game Development with Unity Diploma, Career in Unity Game Development India, Portfolio Building Unity Course, Game Development Fundamentals with Unity Diploma​" />
+        <link rel="canonical" href="https://www.backstagepass.co.in/courses/diploma-in-game-development-with-unity/" />
+      </Helmet>
 
 
 
@@ -170,7 +170,7 @@ function Courses(props) {
           {/* Info Card */}
           <div className="info-card slanted-info">
             <div className="info-item">
-            <span className="info-subtitle">Course Duration</span>
+              <span className="info-subtitle">Course Duration</span>
               <span className="info-title">6 months</span>
             </div>
             <div className="info-item">
@@ -186,8 +186,8 @@ function Courses(props) {
               <span className="info-title">Lincoln
 
 
-</span>
-              
+              </span>
+
             </div>
           </div>
         </div>
@@ -196,23 +196,23 @@ function Courses(props) {
       {/* Course Overview */}
       <div className="overviewsection">
         <h2 className='courseHeading'>Course Overview</h2>
-         <div className="brname"></div>
+        <div className="brname"></div>
         <p>
-         The Diploma in Game Development with Unity is an intensive program designed to provide students with the foundational skills and advanced techniques necessary to excel in game development using the Unity game engine.
-</p>
-<p>
-The curriculum covers core programming languages like C++ and C#, in-depth training in Unity's game engine, and advanced graphics programming.
+          The Diploma in Game Development with Unity is an intensive program designed to provide students with the foundational skills and advanced techniques necessary to excel in <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/courses/bachelors-in-computer-science-and-game-development/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}> game development</a></b> using the Unity game engine.
+        </p>
+        <p>
+          The curriculum covers core programming languages like C++ and C#, in-depth training in Unity's game engine, and advanced graphics programming.
         </p>
       </div>
 
       {/* Course Objectives / Curriculum */}
       <div className="curriculum-section" style={{ marginTop: "24px" }}>
         <h2 className='courseHeading'>Course Objectives</h2>
-         <div className="brname"></div>
+        <div className="brname"></div>
         <div className="">
           <ul style={{ listStyle: "none", padding: 0 }}>
             {items.map((item, index) => (
-              <li key={index} style={{ display: "flex", marginBottom: "14px", fontSize:"16px",gap:"10px", alignItems:"flex-start", justifyContent:"flex-start", lineHeight:"1.6"}}>
+              <li key={index} style={{ display: "flex", marginBottom: "14px", fontSize: "16px", gap: "10px", alignItems: "flex-start", justifyContent: "flex-start", lineHeight: "1.6" }}>
                 <CheckBoxIcon style={{ color: "#ec1923", marginRight: "12px", fontSize: "22px", marginTop: "3px" }} />
                 {item}
               </li>
@@ -230,7 +230,7 @@ The curriculum covers core programming languages like C++ and C#, in-depth train
               // Start a new row every 3 semesters
               if (index % 3 === 0) {
                 return (
-                  <div className="curriculum-row" key={index} style={{gridTemplateColumns:"repeat(2, 1fr)"}}>
+                  <div className="curriculum-row" key={index} style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
                     {semesters.slice(index, index + 1).map((s, i) => (
                       <div key={i} className="semester-card">
                         <h4 className="semester-title">{s.title}</h4>
@@ -240,7 +240,7 @@ The curriculum covers core programming languages like C++ and C#, in-depth train
                           ))}
                         </ul>
 
-                      
+
                       </div>
                     ))}
                   </div>
@@ -250,14 +250,14 @@ The curriculum covers core programming languages like C++ and C#, in-depth train
             })}
           </div>
         </section>
-     
+
 
 
       </div>
       <div id="Beyond-The-Course" backgroundColor="blue" height="180vh" style={{ padding: "0px 0px", marginBottom: "20px" }}>
         <h2 className='courseHeading' style={{ color: "#ec1923", marginTop: "0px" }}>Beyond The Course</h2>
- <div className="brname"></div>
-        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At Backstage Pass, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.
+        <div className="brname"></div>
+        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://backstagepass.co.in/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}>Backstage Pass</a></b>, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.
 
 
         </p>
@@ -266,17 +266,17 @@ The curriculum covers core programming languages like C++ and C#, in-depth train
           <ul style={{ width: "80%", margin: "0px auto", paddingTop: "10px" }}>
             <li>
               <div className='BeyondLeft'>
-                <img src={m5} alt="m5"/>
+                <img src={m5} alt="m5" />
               </div>
               <div className='BeyondRight'>
-               <h4 className='lsh'>Studio Visits</h4>
+                <h4 className='lsh'>Studio Visits</h4>
                 <p>Visits to game studios allow students to witness how a game company truly works
                 </p>
               </div>
             </li>
             <li>
               <div className='BeyondLeft'>
-                <img src={m6} alt="m6"/>
+                <img src={m6} alt="m6" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Jams & Conferences</h4>
@@ -288,7 +288,7 @@ The curriculum covers core programming languages like C++ and C#, in-depth train
 
             <li>
               <div className='BeyondLeft'>
-                <img src={m8} alt="m8"/>
+                <img src={m8} alt="m8" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Networking Opportunities</h4>
@@ -300,7 +300,7 @@ The curriculum covers core programming languages like C++ and C#, in-depth train
 
             <li>
               <div className='BeyondLeft'>
-                <img src={m7} alt="m7"/>
+                <img src={m7} alt="m7" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Make Your Own Game</h4>
@@ -326,10 +326,10 @@ The curriculum covers core programming languages like C++ and C#, in-depth train
             {/* Tabs */}
 
 
-            <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
-              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"100%" }}>Career Opportunities</h2>
- <div className="brname"></div>
-              <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
+            <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width: isMobileState ? "100%" : "80%", margin: "0px" }}>
+              <h2 className='courseHeading' style={{ textAlign: "left", width: isMobileState ? "100%" : "100%" }}>Career Opportunities</h2>
+              <div className="brname"></div>
+              <div className="border rounded-lg bg-white" style={{ marginTop: "30px" }}>
                 {faqs.map((faq, index) => (
                   <div
                     key={index}
@@ -366,7 +366,7 @@ The curriculum covers core programming languages like C++ and C#, in-depth train
                         paddingLeft: "20px",
                         textAlign: "justify",
                         lineHeight: "24px",
-                        fontSize:"16px"
+                        fontSize: "16px"
                       }}>
                         {faq.question}
                       </span>
@@ -377,7 +377,7 @@ The curriculum covers core programming languages like C++ and C#, in-depth train
                     {openIndex === index && (
                       <ul style={{ paddingLeft: "6.5rem", lineHeight: "1.9" }}>
                         {faq.answer.map((point, i) => (
-                          <li key={i} style={{ listStyle: "disc", fontSize:"14px" }}>{point}</li>
+                          <li key={i} style={{ listStyle: "disc", fontSize: "14px" }}>{point}</li>
                         ))}
                       </ul>
                     )}
@@ -395,7 +395,7 @@ The curriculum covers core programming languages like C++ and C#, in-depth train
 
 
 
-      <div id="Enquire-Now" style={{marginTop:"30px"}}>
+      <div id="Enquire-Now" style={{ marginTop: "30px" }}>
         <HomeContentForm />
       </div>
 

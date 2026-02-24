@@ -242,7 +242,7 @@ function Courses(props) {
         <h2 className='courseHeading'>Course Overview</h2>
         <div className="brname"></div>
         <p>
-          The Diploma in VR Application Development is an intensive, hands-on program crafted to prepare students for the fast-growing field of Virtual Reality. It integrates strong foundations in programming, 3D engines, and immersive application design using Unity and Unreal Engine.</p>
+          The Diploma in VR Application Development is an intensive, hands-on program crafted to prepare students for the fast-growing field of Virtual Reality. It integrates strong foundations in programming, 3D engines, and immersive application design using Unity and <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/courses/diploma-in-game-development-with-unreal/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}> Unreal Engine</a></b>.</p>
         <p>
           Learners will explore VR development principles, user interaction, optimization for headsets, and content creation workflows—culminating in a professional portfolio showcasing real-world VR projects.
         </p>

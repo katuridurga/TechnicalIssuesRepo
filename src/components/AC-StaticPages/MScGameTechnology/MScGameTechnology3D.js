@@ -128,6 +128,21 @@ function Courses(props) {
       subjects: [
 
         "Learn what studios demand—master asset creation, design workflows, environment building, and integration with industry-standard engines like Unity and Unreal Engine",
+
+
+
+         <span>
+    Learn what studios demand—master asset creation, design workflows, environment building, and integration with industry-standard engines like Unity and {" "}
+    <a
+      href="/courses/diploma-in-game-development-with-unreal/"
+      className="slu"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ fontSize: "16px", color: "#ed1925", fontWeight: "bold" }}
+    >
+      Unreal engine
+    </a>,{" "}
+  </span>
       ],
     },
     {

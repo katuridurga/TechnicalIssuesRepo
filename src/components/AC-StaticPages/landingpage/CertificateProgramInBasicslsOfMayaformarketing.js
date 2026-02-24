@@ -28,10 +28,6 @@ import r14 from "../../../assets/img/partners/GSNgames.webp";
 import wtwh from "../../../assets/img/banners/afterwtwillhappen.webp";
 import advdip from '../../../assets/img/banners/Thumbnailformaya.png';
 import { FaLinkedin } from "react-icons/fa";
-import icon1 from "../../../assets/img/Icons/Career_Counselling.webp";
-import icon2 from "../../../assets/img/Icons/Industry_Led.webp";
-import icon3 from "../../../assets/img/Icons/Placement.webp";
-import icon4 from "../../../assets/img/Icons/learning_Modules.webp";
 import icon5 from "../../../assets/img/Icons/Beginner.webp";
 import icon6 from "../../../assets/img/Icons/Practical.webp";
 import icon7 from "../../../assets/img/Icons/learning_Modules.webp";
@@ -51,7 +47,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
   );
 
   const [isButtonVisible, setIsButtonVisible] = useState(true);
-  
+
 
   useEffect(() => {
     const container = document.getElementById("scroll-container");
@@ -124,24 +120,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
       </div>
     );
   }
-  function Featurecarrer({ title, subtitle, img }) {
-    return (
-      <div className="feature-boxcar">
 
-        <div>
-          <div
-            className="feature-titlecar"
-            style={{ fontSize: isMobileState ? "14px" : "15px" }}
-          > <img className="feature-iconcercar"
-            style={{ fontWeight: "bold", marginRight: "20px", objectFit: "contain" }} src={img} alt={title} />
-            {title}
-          </div>
-
-          {subtitle && <p className="feature-subtitlecar">{subtitle}</p>}
-        </div>
-      </div>
-    );
-  }
   function Featurecarrer1({ title, subtitle }) {
     return (
       <div className="feature-boxcar" style={{ padding: "8px", flexDirection: "column", backgroundColor: "#faebd7" }}>
@@ -288,20 +267,20 @@ function DiplomaAndAdvancedDiplomaCourses() {
 
 
 
- const handleEnrollNow = () => {
-  localStorage.removeItem("stickyFormData");
-  setEnableStorage(true);
+  const handleEnrollNow = () => {
+    localStorage.removeItem("stickyFormData");
+    setEnableStorage(true);
 
-  // 🔥 Copy sticky form data into popup form
-  setFormData((prev) => ({
-    ...prev,
-    fullname: formData1.name || "",
-    email: formData1.email || "",
-    PhoneNumber: formData1.phone || "",
-  }));
+    // 🔥 Copy sticky form data into popup form
+    setFormData((prev) => ({
+      ...prev,
+      fullname: formData1.name || "",
+      email: formData1.email || "",
+      PhoneNumber: formData1.phone || "",
+    }));
 
-  setOpenFormModal(true);
-};
+    setOpenFormModal(true);
+  };
 
 
   const handleChange = (e) => {
@@ -322,11 +301,11 @@ function DiplomaAndAdvancedDiplomaCourses() {
     }
   };
 
- const [alreadyEnrolled, setAlreadyEnrolled] = useState(false);
+  const [alreadyEnrolled, setAlreadyEnrolled] = useState(false);
   const [courses, setCourses] = useState([]);
   const formRef = useRef();
-    const [couponRemarks, setCouponRemarks] = useState("");
-  
+  const [couponRemarks, setCouponRemarks] = useState("");
+
   const [formData, setFormData] = useState({
     fullname: "",
     dob: "",
@@ -339,7 +318,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
     declaration: false,
     url: window.location.href,
   });
- const [paymentDetails, setPaymentDetails] = useState({
+  const [paymentDetails, setPaymentDetails] = useState({
     originalPayment: "",
     discountValue: "",
     finalAmount: "",
@@ -376,21 +355,21 @@ function DiplomaAndAdvancedDiplomaCourses() {
   }, []);
 
   const checkAlreadyEnrolled = async (email, course) => {
-  const res = await fetch(
-    "https://www.backstagepass.co.in/reactapi/check_enrollment.php",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Cache-Control": "no-cache",
-      },
-      cache: "no-store",
-      body: JSON.stringify({ email, course }),
-    }
-  );
+    const res = await fetch(
+      "https://www.backstagepass.co.in/reactapi/check_enrollment.php",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Cache-Control": "no-cache",
+        },
+        cache: "no-store",
+        body: JSON.stringify({ email, course }),
+      }
+    );
 
-  return res.json();
-};
+    return res.json();
+  };
 
   const handleInputChange = async (e) => {
     const { name, type, value, checked, files } = e.target;
@@ -404,15 +383,15 @@ function DiplomaAndAdvancedDiplomaCourses() {
         return;
       }
       if (!formData.email) {
-    alert("Please enter email first");
-    return;
-  }
-       const enrollment = await checkAlreadyEnrolled(formData.email, formData.course);
-console.log('enrolled',enrollment?.alreadyEnrolled);
-  if (enrollment?.alreadyEnrolled) {
-    setCouponRemarks("You are already enrolled in this course");
-    return;
-  }
+        alert("Please enter email first");
+        return;
+      }
+      const enrollment = await checkAlreadyEnrolled(formData.email, formData.course);
+      console.log('enrolled', enrollment?.alreadyEnrolled);
+      if (enrollment?.alreadyEnrolled) {
+        setCouponRemarks("You are already enrolled in this course");
+        return;
+      }
 
 
       try {
@@ -457,16 +436,8 @@ console.log('enrolled',enrollment?.alreadyEnrolled);
         type === "checkbox" ? checked : type === "file" ? files[0] : value,
     }));
   };
-  const handleEnrollClick = () => {
-    setFormData((prev) => ({
-      ...prev,
-      fullname: "",
-      email: "",
-      PhoneNumber: "",
-    }));
-    setOpenFormModal(true);
-  };
-const handleMainCategoryChange = (e) => {
+
+  const handleMainCategoryChange = (e) => {
 
     const selectedCourse = e.target.value;
     const selectedOption = courses.find((course) => course.value === selectedCourse);
@@ -487,52 +458,52 @@ const handleMainCategoryChange = (e) => {
       });
     }
   };
- useEffect(() => {
-  const autoCheckEnrollment = async () => {
+  useEffect(() => {
+    const autoCheckEnrollment = async () => {
+      if (!formData.email || !isValidEmail(formData.email)) return;
+      if (!formData.course) return;
+
+      try {
+        const enrollment = await checkAlreadyEnrolled(
+          formData.email,
+          formData.course
+        );
+
+        if (enrollment?.alreadyEnrolled) {
+          setAlreadyEnrolled(true);
+          setCouponRemarks("You are already enrolled in this course");
+        } else {
+          setAlreadyEnrolled(false);
+          setCouponRemarks("");
+        }
+      } catch (error) {
+        console.error("Enrollment check failed:", error);
+      }
+    };
+
+    autoCheckEnrollment();
+  }, [formData.email, formData.course]);
+
+  const isValidEmail = (email) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const handleEmailBlur = async () => {
+
     if (!formData.email || !isValidEmail(formData.email)) return;
     if (!formData.course) return;
 
-    try {
-      const enrollment = await checkAlreadyEnrolled(
-        formData.email,
-        formData.course
-      );
+    const enrollment = await checkAlreadyEnrolled(
+      formData.email,
+      formData.course
+    );
 
-      if (enrollment?.alreadyEnrolled) {
-        setAlreadyEnrolled(true);
-        setCouponRemarks("You are already enrolled in this course");
-      } else {
-        setAlreadyEnrolled(false);
-        setCouponRemarks("");
-      }
-    } catch (error) {
-      console.error("Enrollment check failed:", error);
+    if (enrollment.alreadyEnrolled) {
+      setAlreadyEnrolled(true);
+      setCouponRemarks("You are already enrolled in this course");
+    } else {
+      setAlreadyEnrolled(false);
+      setCouponRemarks("");
     }
   };
-
-  autoCheckEnrollment();
-}, [formData.email, formData.course]);
-
-  const isValidEmail = (email) =>
-  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-const handleEmailBlur = async () => {
- 
-  if (!formData.email || !isValidEmail(formData.email)) return;
-  if (!formData.course) return;
-
-  const enrollment = await checkAlreadyEnrolled(
-    formData.email,
-    formData.course
-  );
-
- if (enrollment.alreadyEnrolled) {
-  setAlreadyEnrolled(true);
-  setCouponRemarks("You are already enrolled in this course");
-} else {
-  setAlreadyEnrolled(false);
-  setCouponRemarks("");
-}
-};
 
 
 
@@ -541,10 +512,10 @@ const handleEmailBlur = async () => {
     <>
       <Helmet>
         <title>
-          Basics of Maya Course for Beginners | Learn Maya 2024 Online
+          Basics of Maya Course for Beginners | Learn Maya Online
         </title>
 
-        <meta name="description" content="Learn Autodesk Maya 2024 from scratch. Beginner-friendly online course covering 3D modeling, UV mapping & texturing. Certificate included." />
+        <meta name="description" content="Learn Autodesk Maya from scratch. Beginner-friendly online course covering 3D modeling, UV mapping & texturing. Certificate included." />
         <link rel="canonical" href="https://www.backstagepass.co.in/landingpage/basics-of-maya-online-certification/" />
       </Helmet>
 
@@ -569,9 +540,9 @@ const handleEmailBlur = async () => {
               <p className="discountpanel">Buy this Course @</p>
 
               <div className="disdvi">
-<del style={{ color: "#fff", textDecorationColor: "#fff", fontSize:"25px", fontWeight:"600" }}>
-  ₹4999
-</del>
+                <del style={{ color: "#fff", textDecorationColor: "#fff", fontSize: "25px", fontWeight: "600" }}>
+                  ₹4999
+                </del>
                 <span className="discountprice">₹799</span>
                 <span className="savingamt">84% Disc.</span>
               </div>
@@ -629,10 +600,10 @@ const handleEmailBlur = async () => {
             {/* MOBILE FORM ONLY (UNCHANGED) */}
             {isMobileState && (
               <div className="" style={{ marginTop: "30px", backgroundColor: "#ffffff", borderRadius: "10px", padding: "10px" }}>
-                <h3 className="previewcon1" style={{ textAlign: "center", padding: "0px", margin: "0px", fontSize:"22px" }}>
-                  Get this Course @ <del style={{ color: "#000", textDecorationColor: "#000", fontSize:"22px", fontWeight:"600" }}>
-  ₹4999
-</del> <span style={{color:"#e42929", fontSize:"25px"}}>₹799</span>
+                <h3 className="previewcon1" style={{ textAlign: "center", padding: "0px", margin: "0px", fontSize: "22px" }}>
+                  Get this Course @ <del style={{ color: "#000", textDecorationColor: "#000", fontSize: "22px", fontWeight: "600" }}>
+                    ₹4999
+                  </del> <span style={{ color: "#e42929", fontSize: "25px" }}>₹799</span>
                 </h3>
                 <form className="mble-form">
                   <input
@@ -660,13 +631,13 @@ const handleEmailBlur = async () => {
                     onChange={handleChange}
                   />
 
-                <PaymentC
+                  <PaymentC
                     className="my-custom-class"
                     open={openFormModal}
                     onClose={() => setOpenFormModal(false)}
                     onClick={handleEnrollNow}
                   />
-                  
+
 
                 </form>
 
@@ -721,7 +692,7 @@ const handleEmailBlur = async () => {
               </h2>
 
               <p className="previewconp">
-                Ever wanted to bring your ideas to life in 3D? This beginner-friendly course introduces Autodesk Maya 2024 step by step.
+                Ever wanted to bring your ideas to life in 3D? This beginner-friendly course introduces Autodesk Maya step by step.
                 Learn the interface, basic modeling, UV unwrapping, and simple texturing to create your own 3D assets from scratch—no prior
                 3D experience needed, just curiosity and creativity.
               </p>
@@ -734,7 +705,7 @@ const handleEmailBlur = async () => {
             </div>
           </section> */}
 
-          <section className="" style={{ marginBottom: "40px", backgroundColor: "",marginTop:"40px" }}>
+          <section className="" style={{ marginBottom: "40px", backgroundColor: "", marginTop: "40px" }}>
             <div className="section-wrappercer">
 
               <h3 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px", paddingTop: "0px", marginTop: "0px" }}>Key Features</h3>
@@ -1107,9 +1078,9 @@ const handleEmailBlur = async () => {
           <aside className="right-sticky">
             <div className="sticky-form">
               <h3 className="previewcon1" style={{ textAlign: "center" }}>
-                Get this Course@ <del style={{ color: "#000", textDecorationColor: "#000", fontSize:"25px", fontWeight:"600" }}>
-  ₹4999
-</del>  <span style={{color:"#e42929", fontSize:"25px"}}>₹799</span>
+                Get this Course @ <del style={{ color: "#000", textDecorationColor: "#000", fontSize: "25px", fontWeight: "600" }}>
+                  ₹4999
+                </del>  <span style={{ color: "#e42929", fontSize: "25px" }}>₹799</span>
               </h3>
 
               <input
@@ -1150,50 +1121,50 @@ const handleEmailBlur = async () => {
       </section>
 
 
-<section className="bancer">
-  <div className="small-banner1 ftbaner1">
-    <div className="banner-wrapper">
+      <section className="bancer">
+        <div className="small-banner1 ftbaner1">
+          <div className="banner-wrapper">
 
-      <div className="foot-ban">
-        <p className="didYouKnow">
-          Enroll in the Basics of Maya Course and Earn Certification @
-        </p>
+            <div className="foot-ban">
+              <p className="didYouKnow">
+                Enroll in the Basics of Maya Course and Earn Certification @
+              </p>
 
-        <div className="disdvi">
-          <span
-  style={{
-    color: "#fff",
-    textDecoration: "line-through",
-    textDecorationColor: "#fff",
-    fontSize: "25px",
-    fontWeight: "600"
-  }}
->
-  ₹4999
-</span>
+              <div className="disdvi">
+                <span
+                  style={{
+                    color: "#fff",
+                    textDecoration: "line-through",
+                    textDecorationColor: "#fff",
+                    fontSize: "25px",
+                    fontWeight: "600"
+                  }}
+                >
+                  ₹4999
+                </span>
 
-        
-          <span className="discountprice">
-            ₹799
-          </span>
 
-          <span className="savingamt">
-            84% Disc.
-          </span>
+                <span className="discountprice">
+                  ₹799
+                </span>
+
+                <span className="savingamt">
+                  84% Disc.
+                </span>
+              </div>
+
+              <div className="pricetags">
+                *Price inclusive of all applicable taxes (GST)
+              </div>
+
+              <div className="savingamto">
+                Limited Time Offer!
+              </div>
+            </div>
+
+          </div>
         </div>
-
-        <div className="pricetags">
-          *Price inclusive of all applicable taxes (GST)
-        </div>
-
-        <div className="savingamto">
-          Limited Time Offer!
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+      </section>
 
 
       {isButtonVisible && (
@@ -1203,7 +1174,7 @@ const handleEmailBlur = async () => {
           style={{ marginBottom: "0px", backgroundColor: "#ffffff", border: "1px solid#e4d8d8", boxShadow: "rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px" }}
           onClick={scrollToBottom}
         >
- {/* <PaymentC
+          {/* <PaymentC
                 className="my-custom-class"
                 open={openFormModal}
                 onClose={() => setOpenFormModal(false)}
@@ -1211,58 +1182,58 @@ const handleEmailBlur = async () => {
               /> */}
 
 
-      <Dialog
-        open={openFormModal}
-        onClose={handleFormClose}
-        disableScrollLock
-        fullWidth
-        maxWidth={false}
-        PaperProps={{
-          sx: {
-            width: isMobileState ? "95%" : "750px",
-            maxWidth: "95%",
-            margin: "0 auto",
-          },
-        }}
-      >
-
-        <DialogActions style={{ backgroundColor: "#fa9f42" }}>
-          <p className="mainHeadingTotall-2" style={{ fontSize: isMobileState ? "20px" : "30px", color: "#fff", margin: "16px auto" }}>ENROLLMENT FORM</p>
-          <Button onClick={handleFormClose} className="hvcls" style={{ fontSize: "35px", color: "#fff", fontWeight: "bold" }}> &times;</Button>
-
-        </DialogActions>
-
-        <DialogContent dividers>
-          <form
-            ref={formRef} className="formMain"
-            method="POST"
-            action="https://www.backstagepass.co.in/payment_process.php"
-            encType="multipart/form-data"
-          // onSubmit={handlePayNow}
+          <Dialog
+            open={openFormModal}
+            onClose={handleFormClose}
+            disableScrollLock
+            fullWidth
+            maxWidth={false}
+            PaperProps={{
+              sx: {
+                width: isMobileState ? "95%" : "750px",
+                maxWidth: "95%",
+                margin: "0 auto",
+              },
+            }}
           >
 
+            <DialogActions style={{ backgroundColor: "#fa9f42" }}>
+              <p className="mainHeadingTotall-2" style={{ fontSize: isMobileState ? "20px" : "30px", color: "#fff", margin: "16px auto" }}>ENROLLMENT FORM</p>
+              <Button onClick={handleFormClose} className="hvcls" style={{ fontSize: "35px", color: "#fff", fontWeight: "bold" }}> &times;</Button>
+
+            </DialogActions>
+
+            <DialogContent dividers>
+              <form
+                ref={formRef} className="formMain"
+                method="POST"
+                action="https://www.backstagepass.co.in/payment_process.php"
+                encType="multipart/form-data"
+              // onSubmit={handlePayNow}
+              >
 
 
-            <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container" style={{
-              gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(1, 1fr)"
-            }}>
-              <div className="">
-                <label className="" for="fullname">Full Name (as per official documents)</label>
-                <input
-                  className=""
-                  placeholder="Full Name"
-                  id="fullname"
-                  name="fullname"
-                  type="text"
-                  value={formData.fullname}
-                  onChange={handleInputChange}
-                  required
-                />
-                <input type="hidden" name="url" value={formData.url} />
-                <input type="hidden" name="course_ttl" value={formData.course_ttl} />
-              </div>
 
-              {/* <div className="">
+                <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container" style={{
+                  gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(1, 1fr)"
+                }}>
+                  <div className="">
+                    <label className="" for="fullname">Full Name (as per official documents)</label>
+                    <input
+                      className=""
+                      placeholder="Full Name"
+                      id="fullname"
+                      name="fullname"
+                      type="text"
+                      value={formData.fullname}
+                      onChange={handleInputChange}
+                      required
+                    />
+                    <input type="hidden" name="url" value={formData.url} />
+                    <input type="hidden" name="course_ttl" value={formData.course_ttl} />
+                  </div>
+
+                  {/* <div className="">
                 <label className="" for="dob">Date of Birth (as per official documents)</label>
                
                 <Controller
@@ -1319,72 +1290,72 @@ const handleEmailBlur = async () => {
                   )}
                 />
               </div> */}
-            </div>
+                </div>
 
-            <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container" style={{
-              gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(2, 1fr)"
-            }}>
-              <div className="">
-                <label className="" htmlFor="email">Email Address</label>
-                <input
-                  className=""
-                  placeholder="Email Address"
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                     onBlur={handleEmailBlur}
-             required={!alreadyEnrolled}
-                  
-                />
-              </div>
+                <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container" style={{
+                  gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(2, 1fr)"
+                }}>
+                  <div className="">
+                    <label className="" htmlFor="email">Email Address</label>
+                    <input
+                      className=""
+                      placeholder="Email Address"
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      onBlur={handleEmailBlur}
+                      required={!alreadyEnrolled}
 
-              <div className="">
-                <label className="" for="PhoneNumber">Mobile Number</label>
-                <input
-                  className=""
-                  placeholder="Mobile Number"
-                  id="PhoneNumber"
-                  name="PhoneNumber"
-                  type="tel"
-                  pattern="[6-9][0-9]{9}"
-                  minlength="10"
-                  maxlength="10"
-                  value={formData.PhoneNumber}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-            </div>
+                    />
+                  </div>
 
-            <div className="formGrid-c" data-form-id="need-guidance" data-form="step1-container">
-              <div className="" style={{ width: isMobileState ? "100%" : "100%" }}>
-                <label className="" htmlFor="course">Course <span style={{ color: "red", marginLeft: "4px", marginTop: "2px" }}>*</span></label>
-                <select
-                  onChange={handleMainCategoryChange}
-                  name="course"
-                  id="course"
-                  value={formData.course}
-                  style={{ width: "100%", marginBottom: "20px" }}
-                  required
-                >
-                  <option value="" disabled>
-                    Select Course
-                  </option>
-                  {courses.map((course) => (
-                    <option
-                      key={course.id}
-                      value={course.value}
-                      data-original-payment={course.orignialpayment} // Store original payment in data attribute
-                      data-gst-payment={course.gstpayment} // Store GST payment in data attribute
+                  <div className="">
+                    <label className="" for="PhoneNumber">Mobile Number</label>
+                    <input
+                      className=""
+                      placeholder="Mobile Number"
+                      id="PhoneNumber"
+                      name="PhoneNumber"
+                      type="tel"
+                      pattern="[6-9][0-9]{9}"
+                      minlength="10"
+                      maxlength="10"
+                      value={formData.PhoneNumber}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="formGrid-c" data-form-id="need-guidance" data-form="step1-container">
+                  <div className="" style={{ width: isMobileState ? "100%" : "100%" }}>
+                    <label className="" htmlFor="course">Course <span style={{ color: "red", marginLeft: "4px", marginTop: "2px" }}>*</span></label>
+                    <select
+                      onChange={handleMainCategoryChange}
+                      name="course"
+                      id="course"
+                      value={formData.course}
+                      style={{ width: "100%", marginBottom: "20px" }}
+                      required
                     >
-                      {course.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              {/* 
+                      <option value="" disabled>
+                        Select Course
+                      </option>
+                      {courses.map((course) => (
+                        <option
+                          key={course.id}
+                          value={course.value}
+                          data-original-payment={course.orignialpayment} // Store original payment in data attribute
+                          data-gst-payment={course.gstpayment} // Store GST payment in data attribute
+                        >
+                          {course.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  {/* 
               <div className="">
                 <label className="" for="school">Last School/ College Attended</label>
                 <input
@@ -1403,7 +1374,7 @@ const handleEmailBlur = async () => {
                 <input className="" placeholder="Location" id="city" name="city" type="text" value={formData.city} onChange={handleInputChange} required />
               </div> */}
 
-              {/* <div className="">
+                  {/* <div className="">
                 <label className="" for="document">Upload Document (Marksheet/ Certificate)</label>
                 <input
                   className=""
@@ -1415,94 +1386,93 @@ const handleEmailBlur = async () => {
                 />
               </div> */}
 
-              <div className="">
-                <label className="" for="coupon">Coupon Code</label>
-                <input
-                  className=""
-                  placeholder="Coupon Code (Optional)"
-                  id="coupon"
-                  name="coupon"
-                  type="text"
-                  value={formData.coupon}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <p style={{ color: "#f52525" }}><span>{couponRemarks}</span></p>
-              {paymentDetails.originalPayment && (
+                  <div className="">
+                    <label className="" for="coupon">Coupon Code</label>
+                    <input
+                      className=""
+                      placeholder="Coupon Code (Optional)"
+                      id="coupon"
+                      name="coupon"
+                      type="text"
+                      value={formData.coupon}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <p style={{ color: "#f52525" }}><span>{couponRemarks}</span></p>
+                  {paymentDetails.originalPayment && (
 
-                <div className='paymentShortCourse'>
+                    <div className='paymentShortCourse'>
 
-                  <div style={{ color: "#000" }}>Payment (INR):  <span><span className="actprice" style={{color:"#000"}}><del>₹4999</del></span> ₹{paymentDetails.originalPayment}</span></div>
-                  {paymentDetails.discountValue > 0 && (
-                    <div style={{ color: "#000" }}>
-                      Discount (INR): <span>-₹{paymentDetails.discountValue}</span>
+                      <div style={{ color: "#000" }}>Payment (INR):  <span><span className="actprice" style={{ color: "#000" }}><del>₹4999</del></span> ₹{paymentDetails.originalPayment}</span></div>
+                      {paymentDetails.discountValue > 0 && (
+                        <div style={{ color: "#000" }}>
+                          Discount (INR): <span>-₹{paymentDetails.discountValue}</span>
+                        </div>
+                      )}
+
+                      <div style={{ color: "#000" }}>Total Payment (INR): <span>₹{paymentDetails.finalAmount}</span></div>
+
+
                     </div>
                   )}
-
-                  <div style={{ color: "#000" }}>Total Payment (INR): <span>₹{paymentDetails.finalAmount}</span></div>
-
-
+                  <div className="checkbox-container" >
+                    <label className="checkbox-label" style={{ fontSize: "14px" }}>
+                      <input
+                        type="checkbox"
+                        name="declaration"
+                        checked={formData.declaration}
+                        onChange={handleInputChange}
+                        required
+                        style={{
+                          marginTop: '4px',
+                          marginRight: '100px !important',
+                          display: 'inline-block',
+                          width: '16px',
+                          height: '16px',
+                          opacity: 1,
+                          position: "relative"
+                        }}
+                      />
+                      I hereby declare that all the information provided above is true to the best of my knowledge. I understand that submitting false documents or details may result in cancellation of my enrollment.
+                    </label>
+                  </div>
                 </div>
-              )}
-              <div className="checkbox-container" >
-                <label className="checkbox-label" style={{ fontSize: "14px" }}>
-                  <input
-                    type="checkbox"
-                    name="declaration"
-                    checked={formData.declaration}
-                    onChange={handleInputChange}
-                    required
-                    style={{
-                      marginTop: '4px',
-                      marginRight: '100px !important',
-                      display: 'inline-block',
-                      width: '16px',
-                      height: '16px',
-                      opacity: 1,
-                      position: "relative"
-                    }}
-                  />
-                  I hereby declare that all the information provided above is true to the best of my knowledge. I understand that submitting false documents or details may result in cancellation of my enrollment.
-                </label>
-              </div>
-            </div>
-            <div style={{ padding: "20px" }}>
-              {/* <button
+                <div style={{ padding: "20px" }}>
+                  {/* <button
                 type="submit"
                 className="three button brand size200 w-full sm:w-auto"
               // onClick={handlePayNow}
               >
                 Pay Now
               </button> */}
-              <button
-  type="submit"
-  disabled={alreadyEnrolled}
-  className={`w-full py-3 rounded-xl font-semibold transition
-    ${
-      alreadyEnrolled
-        ? "bg-gray-400 cursor-not-allowed"
-        : "bg-black text-white hover:bg-gray-800"
-    }
+                  <button
+                    type="submit"
+                    disabled={alreadyEnrolled}
+                    className={`w-full py-3 rounded-xl font-semibold transition
+    ${alreadyEnrolled
+                        ? "bg-gray-400 cursor-not-allowed"
+                        : "bg-black text-white hover:bg-gray-800"
+                      }
   `}
->
-  {alreadyEnrolled ? "Already Enrolled" : "Proceed to Payment"}
-</button>
+                  >
+                    {alreadyEnrolled ? "Already Enrolled" : "Proceed to Payment"}
+                  </button>
 
 
-            </div>
-          </form>
+                </div>
+              </form>
 
 
-        </DialogContent>
-      </Dialog>
-  
-    <button
-  type="button"
-  className="alt-enroll-btn1"
-  onClick={handleEnrollNow}
->
-  ENROLL NOW  @ <span className="actprice1" ><del>₹4999</del></span> <span className="discountprice1">₹799</span>
-</button>
+            </DialogContent>
+          </Dialog>
+
+          <button
+            type="button"
+            className="alt-enroll-btn1"
+            onClick={handleEnrollNow}
+          >
+            ENROLL NOW  @ <span className="actprice1" ><del>₹4999</del></span> <span className="discountprice1">₹799</span>
+          </button>
 
 
         </div>

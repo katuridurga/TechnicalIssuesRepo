@@ -202,7 +202,7 @@ function Courses(props) {
 
           Students will learn both C++ scripting and Unreal Blueprints, ensuring a versatile skill set. Advanced gameplay programming techniques, AI systems, and UI development will be explored in-depth.<br />
 
-          The course culminates in a final portfolio project, where students create a polished game prototype. Graduates will be well-prepared for careers in game development, interactive media, and emerging fields like VR and AR development.
+          The course culminates in a final portfolio project, where students create a polished game prototype. Graduates will be well-prepared for careers in game development, interactive media, and emerging fields like <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/courses/diploma-in-vr-application-development/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}>VR and AR development</a></b>.
         </p>
       </div>
 
@@ -261,7 +261,7 @@ function Courses(props) {
       <div id="Beyond-The-Course" backgroundColor="blue" height="180vh" style={{ padding: "0px 0px", marginBottom: "20px" }}>
         <h2 className='courseHeading' style={{ color: "#ec1923", marginTop: "0px" }}>Beyond The Course</h2>
         <div className="brname"></div>
-        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At Backstage Pass, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.
+        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://backstagepass.co.in/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}>Backstage Pass</a></b>, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.
 
 
         </p>

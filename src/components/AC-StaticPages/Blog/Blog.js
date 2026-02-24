@@ -152,6 +152,7 @@ function Blog() {
                     {totalPages > 1 && (
                       <div className="pagination-container">
                         {[...Array(totalPages)].map((_, i) => (
+                         
                           <button
                             key={i}
                             className={`page-btn ${currentPage === i + 1 ? "active" : ""}`}
@@ -159,7 +160,9 @@ function Blog() {
                           >
                             {i + 1}
                           </button>
+                          
                         ))}
+                         
                       </div>
                     )}
 

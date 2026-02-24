@@ -313,7 +313,9 @@ const semsecond = [
         <p>
     The BA (Hons) in Augmented Reality and Virtual Reality curriculum is designed to equip students with the essential principles of art, design, and programming, specifically tailored for the development of AR and VR applications. Ideal for innovators eager to lead the future, this program combines computer science with hands-on AR/VR creation, making it one of the best AR VR courses in India for those who want to master these transformative technologies.</p>
 <p>
-The course explores a wide range of topics, including Augmented Reality and Virtual Reality, Game Design, 3D Art, and immersive AR/VR application development. Students also learn the difference between AR and VR, gaining clarity on how each technology shapes modern digital experiences.</p>
+The course explores a wide range of topics, including Augmented Reality and Virtual Reality, <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/courses/bachelors-in-game-art-and-design/
+" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}> Game Design</a></b>, 3D Art, and immersive AR and <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/courses/diploma-in-vr-application-development/
+" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}>VR application development</a></b>. Students also learn the difference between AR and VR, gaining clarity on how each technology shapes modern digital experiences.</p>
 <p>
 Through practical learning methods, such as case studies and assignments, this program ensures that learners in AR VR courses gain both the theoretical foundation and the technical skills required to thrive in the rapidly evolving world of AR/VR technology.
 
@@ -417,7 +419,7 @@ Through practical learning methods, such as case studies and assignments, this p
       <div id="Beyond-The-Course" backgroundColor="blue" height="180vh" style={{ padding: "0px 0px", marginBottom: "20px" }}>
         <h2 className='courseHeading' style={{ color: "#ec1923", marginTop: "0px" }}>Beyond The Course</h2>
  <div className="brname"></div>
-        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At Backstage Pass Institute of Gaming, we believe learning extends beyond the classroom. We provide students with numerous activities and opportunities to enter the real world and gain first-hand experience of how things work in the gaming industry. As one of the best game development colleges in India, Backstage Pass offers unparalleled opportunities for students interested in pursuing a career in Augmented Reality and Virtual Reality, from education to game development and beyond.
+        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://backstagepass.co.in/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}> Backstage Pass Institute of Gaming</a></b>, we believe learning extends beyond the classroom. We provide students with numerous activities and opportunities to enter the real world and gain first-hand experience of how things work in the gaming industry. As one of the best game development colleges in India, Backstage Pass offers unparalleled opportunities for students interested in pursuing a career in Augmented Reality and Virtual Reality, from education to game development and beyond.
         </p>
 
         <div className='courseUpdates1'>

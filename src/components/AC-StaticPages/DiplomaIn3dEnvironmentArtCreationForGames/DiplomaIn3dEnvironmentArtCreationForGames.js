@@ -202,7 +202,7 @@ function Courses(props) {
         <p>
           The Diploma in 3D Environment Art For Games is a specialized program designed to equip students with the skills needed to create stunning and immersive environments for video games.</p>
         <p>
-          The curriculum covers the entire 3D art pipeline, from basic modeling and texturing to advanced digital sculpting and 3D environment art creation.
+          The curriculum covers the entire 3D art pipeline, from basic modeling and texturing to <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/courses/advanced-diploma-in-3d-game-art-digital-sculpting/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}>advanced digital sculpting</a></b> and 3D environment art creation.
         </p>
       </div>
 
@@ -261,9 +261,7 @@ function Courses(props) {
       <div id="Beyond-The-Course" backgroundColor="blue" height="180vh" style={{ padding: "0px 0px", marginBottom: "20px" }}>
         <h2 className='courseHeading' style={{ color: "#ec1923", marginTop: "0px" }}>Beyond The Course</h2>
         <div className="brname"></div>
-        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At Backstage Pass, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.
-
-
+        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://backstagepass.co.in/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}>Backstage Pass</a></b>, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.
         </p>
 
         <div className='courseUpdates1'>

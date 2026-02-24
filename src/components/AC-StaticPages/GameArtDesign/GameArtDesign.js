@@ -534,4 +534,3 @@ Courses.propTypes = {
 }
 
 export default Courses;
-
