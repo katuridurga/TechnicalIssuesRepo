@@ -68,19 +68,39 @@ function SkillDiplomaCourses() {
   });
   /* 🔹 Auto-fill popup form from sticky form localStorage */
   useEffect(() => {
-    const savedData = localStorage.getItem("stickyFormData");
+  const savedData = localStorage.getItem("stickyFormData");
 
-    if (savedData) {
-      const parsed = JSON.parse(savedData);
+  if (savedData) {
+    const parsed = JSON.parse(savedData);
 
-      setFormData((prev) => ({
-        ...prev,
-        fullname: prev.fullname || parsed.name || "",
-        email: prev.email || parsed.email || "",
-        PhoneNumber: prev.PhoneNumber || parsed.phone || "",
-      }));
-    }
-  }, [openFormModal]);
+    const leadData = {
+      fullname: parsed.name || "",
+      email: parsed.email || "",
+      phoneNumber: parsed.phone || "",
+      course_id: 23,
+    };
+
+    // Autofill form
+    setFormData((prev) => ({
+      ...prev,
+      fullname: prev.fullname || leadData.fullname,
+      email: prev.email || leadData.email,
+      PhoneNumber: prev.PhoneNumber || leadData.phoneNumber,
+      
+    }));
+
+    // 🔹 Send silently to API (no success message)
+    fetch("https://backstagepass.co.in/reactapi/api/save_course_lead.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(leadData),
+    }).catch((error) => {
+      console.error("Lead capture failed:", error);
+    });
+  }
+}, [openFormModal]);
 
   const [paymentDetails, setPaymentDetails] = useState({
     originalPayment: "",
