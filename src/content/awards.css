@@ -6,7 +6,14 @@
     position: relative;
 }
 
+/* Hide p and show overlay on hover */
+.cardsgawardh:hover p {
+  opacity: 0;
+}
 
+.cardsgawardh:hover .overlaysawardh {
+  opacity: 1;
+}
 
 .content-container {
     width: 80%;
@@ -822,6 +829,18 @@ section#section-16878425631230::before {
 }
 
   @media only screen and (max-width : 1024px) {
+    /* Hide p and show overlay on hover */
+.cardsgawardh:hover p {
+  opacity: 0;
+}
+.overlaysawardh h3 {
+    font-size: 18px !important;
+    font-weight: 900;
+    padding: 6px;
+}
+.cardsgawardh:hover .overlaysawardh {
+  opacity: 1;
+}
   .containergawardh {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;

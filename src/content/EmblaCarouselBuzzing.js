@@ -118,8 +118,8 @@ const slides = [
   { src: bui5, alt: "ET Achievers", text: "ET achievers 2025" },
   { src: bui6, alt: "EduSpark Awards", text: "EduSpark Awards 2023" },
   { src: bui7, alt: "BSP Students", text: "BSP Students at IGDC" },
-  { src: animationexp, alt: "Backstage Pass students at IGDC 2025", text: "Backstage Pass students at IGDC 2025", href: "https://www.animationxpress.com/latest-news/backstage-pass-and-frameboxx-sign-mou-to-launch-diplomas-in-game-development/" },
-  { src: bui1f, alt: "Backstage Pass Collaborated with Frameboxx", text: "Backstage Pass Collaborated with Frameboxx", href: "https://www.animationxpress.com/latest-news/double-win-for-backstage-pass-students-at-igdc-2025/" },
+  { src: animationexp, alt: "Backstage Pass students at IGDC 2025", text: "Backstage Pass students at IGDC 2025", href: "https://www.animationxpress.com/latest-news/double-win-for-backstage-pass-students-at-igdc-2025/" },
+  { src: bui1f, alt: "Backstage Pass Collaborated with Frameboxx", text: "Backstage Pass Collaborated with Frameboxx", href: "https://www.animationxpress.com/latest-news/backstage-pass-and-frameboxx-sign-mou-to-launch-diplomas-in-game-development/" },
   { src: awardfour, alt: "Student Game of the Year IGDC 2025", text: "Student Game of the year at IGDC 2025" },
   { src: awardeight, alt: "Runner-up IGDC 2025", text: "Student Game of the year - runner-up at IGDC 2025" },
   { src: awardseven, alt: "GEM Award 2025", text: "GEM Award 2025 - Best Hyper Casual Game" },
@@ -155,7 +155,7 @@ const Slide = memo(({ slide, index }) => (
     />
     <p className="embla__captionbuzz">
       {slide.href ? (
-        <a href={slide.href} target="_blank" rel="noopener noreferrer">
+        <a href={slide.href} target="_blank" rel="noopener noreferrer" style={{color:"#fff"}}>
           {slide.text}
         </a>
       ) : (
@@ -238,9 +238,12 @@ const EmblaCarousel = ({ options = {} }) => {
     <div className="emblabuzz">
       <div className="embla__viewportbuzz" ref={emblaRef}>
         <div className="embla__containerbuzz">
-          {visibleSlides.map((slide, index) => (
+          {/* {visibleSlides.map((slide, index) => (
             <Slide key={index} slide={slide} index={index} />
-          ))}
+          ))} */}
+          {slides.map((slide, index) => (
+  <Slide key={index} slide={slide} index={index} />
+))}
         </div>
       </div>
 
