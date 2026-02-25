@@ -94,7 +94,7 @@ import speaker76 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/
 import speaker77 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/MehulParakh.webp";
 import speaker78 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AkshatPuri.webp";
 import speaker79 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/PratikBaidya.webp";
-import speaker80 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/N.CharishmaDevi.webp";
+import speaker80 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/CharishmaDevi.webp";
 
 import { useSelector, shallowEqual } from "react-redux";
 
