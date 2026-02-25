@@ -184,7 +184,9 @@ function Courses(props) {
           <h2 className="mainHeadingTotal">The Accelerator Program
           </h2>
 
-          <p className='suprtst' style={{ width: "85%" }}>The Accelerator Program is designed to equip Backstage Pass students with the skills, mentorship, and resources needed to develop industry-ready games. This program enhances students’ game development skills while fostering teamwork, creativity, and innovation.
+          <p className='suprtst' style={{ width: "85%" }}>The Accelerator Program is designed to equip <b style={{ fontSize: "16px", color: '#ed1925' }}>
+                  <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">Backstage Pass</a></b> students with the skills, mentorship, and resources needed to develop industry-ready games. This program enhances students’ <b style={{ fontSize: "16px", color: '#ed1925' }}>
+                  <a href="/courses/bachelors-in-computer-science-and-game-development/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">game development</a></b> skills while fostering teamwork, creativity, and innovation.
           </p>
 
         </div>

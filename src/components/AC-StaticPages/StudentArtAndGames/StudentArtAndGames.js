@@ -317,7 +317,9 @@ function Courses(props) {
 
         <h2 className="mainHeadingTotal">Student Games
         </h2>
-        <p className='suprts'> At Backstage Pass, we celebrate and recognize exceptional achievements in game art, design, and development. Our awards honor students for their innovation, dedication, and talent, distinguishing them as future leaders in the industry. These awards extend beyond internal recognition, encompassing students who excel in external competitions.</p>
+        <p className='suprts'> At <b style={{ fontSize: "16px", color: '#ed1925' }}>
+                  <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">Backstage Pass</a></b>, we celebrate and recognize exceptional achievements in game development, <b style={{ fontSize: "16px", color: '#ed1925' }}>
+                  <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">game art and design</a></b>. Our awards honor students for their innovation, dedication, and talent, distinguishing them as future leaders in the industry. These awards extend beyond internal recognition, encompassing students who excel in external competitions.</p>
         {isMobileState ? (
           /* MOBILE → Show all cards */
           <div className="containerga">

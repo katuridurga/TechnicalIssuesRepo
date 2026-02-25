@@ -109,7 +109,8 @@ function StudentShowcase(props) {
           <div className="CourseesOverViewsh courseover1" style={{ marginTop: isMobileState ? "0px" : "0px" }}>
             <h2 className="mainHeadingTotal">Student Awards</h2>
 
-            <p className="suprtsMobile" style={{ color: "#000", marginBottom: isMobileState ? "0px" : "10px" }}>The Student Showcase is a celebration of excellence, where our brightest minds present their projects, games, and animations. This is a space to highlight the achievements of our students and demonstrate the cutting-edge work being produced at Backstage Pass Institute.
+            <p className="suprtsMobile" style={{ color: "#000", marginBottom: isMobileState ? "0px" : "10px" }}>The Student Showcase is a celebration of excellence, where our brightest minds present their projects, games, and animations. This is a space to highlight the achievements of our students and demonstrate the cutting-edge work being produced at <b style={{ fontSize: "16px", color: '#ed1925' }}>
+                  <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">Backstage Pass Institute</a></b>.
             </p>
 
 

@@ -3,7 +3,6 @@ import "./DiplomaAndAdvancedDiplomaCourses.css";
 import PropTypes from 'prop-types';
 import { emphasize, styled } from '@mui/material/styles';
 import Chip from '@mui/material/Chip';
-
 import Marquee from "react-fast-marquee";
 import r1 from "../../../assets/img/partners/r1.png";
 import r2 from "../../../assets/img/partners/r2.png";
@@ -375,13 +374,11 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     }
   ];
 
-
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
 
   return (
     <>
@@ -428,12 +425,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             <div>
             <div className='fom-ad-21' id="CounsellingOnGamingCareer">
 
-
 <div className='containers-21'>
-
-
-
-
 
   <form onSubmit={handleSubmit} className="formMain">
 

@@ -104,7 +104,10 @@ function Courses(props) {
         <div className="courses-wrapper">
           <h2 className="mainHeadingTotal fadeInUp anime-delay">Admission Process</h2>
 
-          <p className='adminissionPTagad'>At Backstage Pass, we believe that every student’s journey begins with a deliberate choice. Our career-oriented bachelor's programs, including specialised computer science with game development, game art & design, and AR/VR courses, are built on the idea that true learning grows from careful guidance and sincere effort.<br />
+          <p className='adminissionPTagad'>At <b style={{ fontSize: "16px", color: '#ed1925' }}>
+                  <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">Backstage Pass</a></b>, we believe that every student’s journey begins with a deliberate choice. Our career-oriented bachelor's programs, including specialised <b style={{ fontSize: "16px", color: '#ed1925' }}>
+                  <a href="/courses/bachelors-in-computer-science-and-game-development/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">computer science with game development</a></b>, <b style={{ fontSize: "16px", color: '#ed1925' }}>
+                  <a href="/courses/bachelors-in-game-art-and-design/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">game art & design</a></b>, and  <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/courses/bachelors-in-augmented-reality-and-virtual-reality/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">AR/VR courses</a></b>, are built on the idea that true learning grows from careful guidance and sincere effort.<br />
 
             Students joining our college are encouraged to follow a simple and clear process by reviewing the instructions for their chosen course.
 

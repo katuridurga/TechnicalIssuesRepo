@@ -93,7 +93,8 @@ import speaker75 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/
 import speaker76 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/Rishav.webp";
 import speaker77 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/MehulParakh.webp";
 import speaker78 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AkshatPuri.webp";
-
+import speaker79 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/PratikBaidya.webp";
+import speaker80 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/N.CharishmaDevi.webp";
 
 import { useSelector, shallowEqual } from "react-redux";
 
@@ -481,6 +482,13 @@ function Alumni() {
     subtitle: "Mobilityware, USA",
     alt: "Rishi Prakaash S M - Software Developer at Mobilityware, USA"
   },
+  {
+    img: speaker80,
+    name: "N.Charishma Devi",
+    title: "3D Character Artist",
+    subtitle: "Green Gold Animation Pvt Ltd, Hyderabad",
+    alt: "Charishma Devi - 3D Artist at Green Gold Animation Pvt Ltd, Hyderabad"
+  },
     {
     img: speaker74,
     name: "Abhi Astu",
@@ -496,12 +504,20 @@ function Alumni() {
     alt: "Harshal Shinde - Game Developer at Boo Boo Games, Ahemdabad"
   },
   {
+    img: speaker79,
+    name: "Pratik Baidya",
+    title: "3D Character Artist",
+    subtitle: "Aeos Games, Bengaluru",
+    alt: "Pratik Baidya - 3D Character Artist at Aeos Games, Bengaluru"
+  },
+  {
     img: speaker46,
     name: "Rishab Pullancheri",
     title: "3D Artist",
     subtitle: "Street Lamp Games, Hyderabad",
     alt: "Rishab Pullancheri - 3D Artist at Street Lamp Games, Hyderabad"
   },
+   
   {
     img: speaker47,
     name: "Anchit Choudhary",
@@ -793,7 +809,8 @@ const speakersRef = React.useRef(null);
 
         <div className="courses-wrapper">
           <div className="CourseesOverViewA">
-            <p className="suprts mar-t" style={{ marginTop: isMobileState ? "20px" : "30px" }}>Backstage Pass is leaving its mark not only across India but across the globe. Some of the top companies that our alumni are currently working at are:</p>
+            <p className="suprts mar-t" style={{ marginTop: isMobileState ? "20px" : "30px" }}><b style={{ fontSize: "16px", color: '#ed1925' }}>
+                  <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">Backstage Pass</a></b> is leaving its mark not only across India but across the globe. Some of the top companies that our alumni are currently working at are:</p>
 
 
             <Marquee pauseOnHover={true} // ✅ stops scroll on hover

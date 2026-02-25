@@ -248,7 +248,8 @@ function Courses(props) {
         <div className="">
           <h2 className="mainHeadingTotal fadeInUp anime-delay">Financial Assistance</h2>
 
-          <p className='adminissionPTag1' style={{ marginBottom: "20px" }}>Financing your education shouldn't hold you back from achieving your dreams. At Backstage Pass, we're dedicated to providing accessible and affordable student loan options to empower your academic journey.
+          <p className='adminissionPTag1' style={{ marginBottom: "20px" }}>Financing your education shouldn't hold you back from achieving your dreams. At <b style={{ fontSize: "16px", color: '#ed1925' }}>
+                  <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">Backstage Pass</a></b>, we're dedicated to providing accessible and affordable student loan options to empower your academic journey.
           </p>
         </div>
       </div>

@@ -62,8 +62,6 @@ h3.courses-title {
     animation-fill-mode: both;
     animation-delay: .7s;
 } */
-
-
 @media only screen and (max-width: 720px) {
   .courses-container {
     width: 90%;

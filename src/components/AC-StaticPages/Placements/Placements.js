@@ -126,7 +126,8 @@ function Placementsupport(props) {
         <h2 className="courseHeading fadeInUp anime-delay" style={{ textAlign: "center" }}>Placement Record
         </h2>
 
-        <p className='suprt' style={{ width: "86%", color: "#000", marginBottom: isMobileState ? "20px" : "50px" }}>At Backstage Pass, we provide 100% placement support. With a placement record of 90%, our students get placed at top-notch companies.
+        <p className='suprt' style={{ width: "86%", color: "#000", marginBottom: isMobileState ? "20px" : "50px" }}>At <b style={{ fontSize: "16px", color: '#ed1925' }}>
+                  <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">Backstage Pass</a></b>, we provide 100% placement support. With a placement record of 90%, our students get placed at top-notch companies.
         </p>
 
 
