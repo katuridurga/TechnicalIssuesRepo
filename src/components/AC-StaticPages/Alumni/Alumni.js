@@ -131,6 +131,7 @@ function Alumni() {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = isMobileState ? 77 : 15;
+
   const totalPages = Math.ceil(data.length / itemsPerPage);
   const indexOfLast = currentPage * itemsPerPage;
   const indexOfFirst = indexOfLast - itemsPerPage;
@@ -751,7 +752,7 @@ function Alumni() {
     setData(speakers);
   }, [speakers]);
 const speakersRef = React.useRef(null);
-
+ console.log("Speakers count:", speakers.length);
   return (
     <>
       <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'MobileClassass' : 'AssistanceB'}`}>
