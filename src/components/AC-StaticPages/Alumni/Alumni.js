@@ -87,7 +87,7 @@ import speaker69 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/
 import speaker70 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/SushilKonnully.webp";
 import speaker71 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/JatinPandey.webp";
 import speaker72 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/RoushanKumar.webp";
-import speaker30 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/Pratikbaidya.webp";
+import speaker30 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/PratikBaidya.webp";
 import speaker65 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/Charishmadevi.webp";
 import speaker73 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/PalashParate.webp";
 import speaker74 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AbhiA.webp";
