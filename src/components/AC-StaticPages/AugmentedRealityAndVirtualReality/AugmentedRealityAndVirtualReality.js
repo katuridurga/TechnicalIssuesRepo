@@ -226,7 +226,7 @@ const semsecond = [
           <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
             <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
               <div className="et_pb_text_inner"><h1 className="title white-txt">Bachelor's in Augmented Reality
-                <br />& Virtual Reality </h1><a href="#Enquire-Now" class="capplynow">Apply Now</a></div>
+                <br />& Virtual Reality </h1><a href="#Enquire-Now" className="capplynow">Apply Now</a></div>
             </div>
           </div>
         </div>

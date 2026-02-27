@@ -129,14 +129,15 @@ function Alumni() {
     state => state.mainReducer.isMobile,
     shallowEqual
   );
-  const [data, setData] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = isMobileState ? 77 : 15;
+  // const [data, setData] = useState([]);
+  // const [currentPage, setCurrentPage] = useState(1);
+  // const itemsPerPage = isMobileState ? 78 : 15;
 
-  const totalPages = Math.ceil(data.length / itemsPerPage);
-  const indexOfLast = currentPage * itemsPerPage;
-  const indexOfFirst = indexOfLast - itemsPerPage;
-  const currentItems = data.slice(indexOfFirst, indexOfLast);
+  // const totalPages = Math.ceil(data.length / itemsPerPage);
+  // const indexOfLast = currentPage * itemsPerPage;
+  // const indexOfFirst = indexOfLast - itemsPerPage;
+  // const currentItems = data.slice(indexOfFirst, indexOfLast);
+
   const [formData, setFormData] = useState({
     name: '',
     year: '',
@@ -748,7 +749,16 @@ function Alumni() {
     alt: "Rishav Anand - 3D Artist at Lakshya Digital, Pune"
   }
 ];
+  const [data, setData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+const itemsPerPage = isMobileState ? 78 : 15;
 
+const totalPages = Math.ceil(speakers.length / itemsPerPage);
+
+const currentItems = speakers.slice(
+  (currentPage - 1) * itemsPerPage,
+  currentPage * itemsPerPage
+);
   React.useEffect(() => {
     setData(speakers);
   }, [speakers]);

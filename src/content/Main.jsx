@@ -41,13 +41,13 @@ HideOnScroll.propTypes = {
   children: PropTypes.element.isRequired,
   window: PropTypes.func,
 };
- 
+
 function Main({ active, props }) {
   const [showBanner, setShowBanner] = useState(true);
   const [showPreloader, setShowPreloader] = useState(true);
   const [loading, setLoading] = useState(true);
   const [isReady, setIsReady] = useState(false);
- const isMobileState = useSelector(
+  const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
     shallowEqual
   );
@@ -90,7 +90,7 @@ function Main({ active, props }) {
 
         <meta property="og:title" content="India’s Best Game Development college | Backstage Pass Institute of Gaming" />
         <meta property="og:description" name="description" content="Backstage Pass Institute of Gaming, a leading game development college in India, offers Bachelor’s, Master’s, Diploma, and Advanced Diploma programs in Game Development, Game Art & Design, AR/VR, and more. Get gaming industry-ready with our hands-on curriculum and placement support. Apply Now." />
-      <meta name="description" content="Backstage Pass Institute of Gaming, a leading game development college in India, offers Bachelor’s, Master’s, Diploma, and Advanced Diploma programs in Game Development, Game Art & Design, AR/VR, and more. Get gaming industry-ready with our hands-on curriculum and placement support. Apply Now." />
+        <meta name="description" content="Backstage Pass Institute of Gaming, a leading game development college in India, offers Bachelor’s, Master’s, Diploma, and Advanced Diploma programs in Game Development, Game Art & Design, AR/VR, and more. Get gaming industry-ready with our hands-on curriculum and placement support. Apply Now." />
         <meta property="og:url" content="https://www.backstagepass.co.in/" />
         <meta name="keywords" content="game programming, best gaming colleges in india, best game development colleges in india, game development, game art & design, game design courses, unity game development, game development courses, gaming colleges in india, gaming courses in india, game design colleges, bsc gaming colleges​​" />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
@@ -100,15 +100,15 @@ function Main({ active, props }) {
           <a href="#ribbon">
             <div className='scallop animate'>
               <div className='stripd'>
-<div className='adopen'>
-  <p style={{ marginBottom: isMobileState ? "0px" : "0px" }}>
-    Admissions Open!
-    <br />
-    <span style={{ marginTop: "6px", display: "block" }}>
-      Limited seats
-    </span>
-  </p>
-</div>
+                <div className='adopen'>
+                  <p style={{ marginBottom: isMobileState ? "0px" : "0px" }}>
+                    Admissions Open!
+                    <br />
+                    <span style={{ marginTop: "6px", display: "block" }}>
+                      Limited seats
+                    </span>
+                  </p>
+                </div>
                 <div className='mainhdb'>
                   <p><b>Bachelor's/Master's Programs :</b> <strong> Apply now for 2026 intake!</strong></p><br />
                   <p><b>Diploma/Advanced Diploma Programs :</b> <strong>Apply now!</strong> </p>

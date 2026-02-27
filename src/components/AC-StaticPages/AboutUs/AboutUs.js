@@ -23,7 +23,7 @@ function Aboutus(props) {
     state => state.mainReducer.isMobile,
     shallowEqual
   );
-console.log('durga');
+
   return (
     <>
       <Helmet>

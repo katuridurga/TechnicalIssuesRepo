@@ -208,7 +208,7 @@ function Courses(props) {
           <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
             <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
               <div className="et_pb_text_inner"><h1 className="title white-txt">Bachelor's in Computer Science <br />& Game Development</h1>
-                <a href="#Enquire-Now" class="capplynow">Apply Now</a>
+                <a href="#Enquire-Now" className="capplynow">Apply Now</a>
               </div>
             </div>
           </div>
@@ -295,8 +295,8 @@ function Courses(props) {
         <h2 className='courseHeading'>Course Overview</h2>
         <div className="brname"></div>
         <p>
-          The B.Sc (Hons) - Computer Science & Game Development program blends Computer Science, <b style={{ fontSize: "16px", color: '#ed1925' }}><a href=" https://www.backstagepass.co.in/courses/bachelors-in-game-art-and-design/
-" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}> Game Design</a></b>, and Game Programming skills. This course provides students with a strong foundation in core computer science topics, including software development and programming, while also focusing on video game design and game development principles. Students will gain both theoretical knowledge and practical experience, preparing them for careers in both the IT and Game Development industries.</p>
+          The B.Sc (Hons) - Computer Science & Game Development program blends Computer Science, <b style={{ fontSize: "16px", color: '#ed1925' }}>
+            <a href=" https://www.backstagepass.co.in/courses/bachelors-in-game-art-and-design/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}> Game Design</a></b>, and Game Programming skills. This course provides students with a strong foundation in core computer science topics, including software development and programming, while also focusing on video game design and game development principles. Students will gain both theoretical knowledge and practical experience, preparing them for careers in both the IT and Game Development industries.</p>
         <p>
           Whether you are passionate about crafting immersive gaming experiences or advancing in the IT industry, Backstage Pass Institute of Gaming is the ideal choice. As the  <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.backstagepass.co.in/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}> best game development college in India</a></b>, we provide students opportunities to excel and thrive in the gaming and IT industries.
 
@@ -397,7 +397,7 @@ function Courses(props) {
 
 
       </div>
-      <div id="Beyond-The-Course" backgroundColor="blue" height="180vh" style={{ padding: "0px 0px", marginBottom: "20px" }}>
+      <div id="Beyond-The-Course"  style={{ padding: "0px 0px", marginBottom: "20px", backgroundColor: "blue",height:"180vh" }}>
         <h2 className='courseHeading' style={{ color: "#ec1923", marginTop: "0px" }}>Beyond The Course</h2>
         <div className="brname"></div>
         <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At Backstage Pass, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.

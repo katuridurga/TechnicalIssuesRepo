@@ -231,9 +231,9 @@ const showLastChanceStrip =
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Helmet>
+      </Helmet> */}
    
       {/* ===== DESKTOP MENU ===== */}
       {!isMobileState ? (
