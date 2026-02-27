@@ -83,7 +83,7 @@ import speaker62 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/
 import speaker63 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/RiyazAkramShaik.webp";
 import speaker64 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/HarshKarangutkar.webp";
 import speaker65 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/CharishmaDevi.webp";
-import speaker66 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/ManasChhetri.webp";
+//import speaker66 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/ManasChhetri.webp";
 import speaker67 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/NandeeshKhyalappa.webp";
 import speaker68 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/Deepanshusingh.webp";
 import speaker69 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/ArghyaSamanta.webp";
@@ -93,7 +93,7 @@ import speaker72 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/
 import speaker73 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/PalashParate.webp";
 import speaker74 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AbhiA.webp";
 import speaker75 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AdityaSharma.webp";
-import speaker76 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/Rishav.webp";
+//import speaker76 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/Rishav.webp";
 import speaker77 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/MehulParakh.webp";
 import speaker78 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AkshatPuri.webp";
 
@@ -699,13 +699,13 @@ function Alumni() {
     subtitle: "Ayelet Studios, Chennai",
     alt: "Arghya Samanta - Associate 3D Generalist at Ayelet Studios, Chennai"
   },
-  {
-    img: speaker66,
-    name: "Manas Chhetri",
-    title: "Game designer",
-    subtitle: "Street Lamp Games, Hyderabad",
-    alt: "Manas Chhetri - Game Designer at Street Lamp Games, Hyderabad"
-  },
+  // {
+  //   img: speaker66,
+  //   name: "Manas Chhetri",
+  //   title: "Game designer",
+  //   subtitle: "Street Lamp Games, Hyderabad",
+  //   alt: "Manas Chhetri - Game Designer at Street Lamp Games, Hyderabad"
+  // },
   {
     img: speaker67,
     name: "Nandeesh Khyalappa",
@@ -742,13 +742,13 @@ function Alumni() {
     subtitle: "Little Red Zombies Studios Pvt. Ltd, Hyderabad",
     alt: "Aditya Sharma - 3D Character Artist at Little Red Zombies Studios Pvt. Ltd, Hyderabad"
   },
-  {
-    img: speaker76,
-    name: "Rishav Anand",
-    title: "3D Artist",
-    subtitle: "Lakshya Digital, Pune",
-    alt: "Rishav Anand - 3D Artist at Lakshya Digital, Pune"
-  }
+  // {
+  //   img: speaker76,
+  //   name: "Rishav Anand",
+  //   title: "3D Artist",
+  //   subtitle: "Lakshya Digital, Pune",
+  //   alt: "Rishav Anand - 3D Artist at Lakshya Digital, Pune"
+  // }
 ];
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
