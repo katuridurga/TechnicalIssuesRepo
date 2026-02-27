@@ -764,7 +764,7 @@ const currentItems = speakers.slice(
     setData(speakers);
   }, [speakers]);
 const speakersRef = React.useRef(null);
- console.log("Speakers count:", speakers.length);
+ alert(speakers.length);
   return (
     <>
       <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'MobileClassass' : 'AssistanceB'}`}>
