@@ -23,7 +23,7 @@ function Aboutus(props) {
     state => state.mainReducer.isMobile,
     shallowEqual
   );
-
+console.log('durga');
   return (
     <>
       <Helmet>
@@ -190,7 +190,6 @@ function Aboutus(props) {
             </span>
 
           </div>
-
 
           {/* Signature Block — right aligned */}
           <div style={{ textAlign: "right", color: "#000000", alignSelf: "flex-end", flexDirection: "column", marginRight: "120px", marginTop: "-10px" }}>
