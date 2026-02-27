@@ -17,6 +17,13 @@ import r11 from "../../../assets/img/partners/Qualcomm.webp";
 import r12 from "../../../assets/img/partners/Juego.webp";
 import r13 from "../../../assets/img/partners/Gamitronics.webp";
 import r14 from "../../../assets/img/partners/GSNgames.webp";
+
+import speaker1 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AnicsChacko.webp";
+import speaker2 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/DivyanshuSoni.webp";
+import speaker3 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AnshulSoni.webp";
+import speaker4 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/JosephKalathil.webp";
+import speaker5 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AakashParameswaran.webp";
+import speaker6 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AdityaMehta.webp";
 import speaker7 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/DennchenLama.webp";
 import speaker8 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/DevashishTiwari.webp";
 import speaker9 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/DikshaSubba.webp";
@@ -31,12 +38,6 @@ import speaker17 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/
 import speaker18 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/SrutiChekka.webp";
 import speaker19 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/TarunReddi.webp";
 import speaker20 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/VijaySivatejMareedu.webp";
-import speaker1 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AnicsChacko.webp";
-import speaker2 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/DivyanshuSoni.webp";
-import speaker3 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AnshulSoni.webp";
-import speaker4 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/JosephKalathil.webp";
-import speaker5 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AakashParameswaran.webp";
-import speaker6 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AdityaMehta.webp";
 import speaker21 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/Harshiniisvi.webp";
 import speaker22 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/SimbramDas.webp";
 import speaker23 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AnirudhBhandari.webp";
@@ -46,6 +47,7 @@ import speaker26 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/
 import speaker27 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AgnibhaGoswami.webp";
 import speaker28 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/Amitprem.webp";
 import speaker29 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/BadepallyAjay.webp";
+import speaker30 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/PratikBaidya.webp";
 import speaker31 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/MDArsalaan.webp";
 import speaker32 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AnmolNikam.webp";
 import speaker33 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/SravyaReddy.webp";
@@ -80,6 +82,7 @@ import speaker61 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/
 import speaker62 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/RahulHansda.webp";
 import speaker63 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/RiyazAkramShaik.webp";
 import speaker64 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/HarshKarangutkar.webp";
+import speaker65 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/CharishmaDevi.webp";
 import speaker66 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/ManasChhetri.webp";
 import speaker67 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/NandeeshKhyalappa.webp";
 import speaker68 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/Deepanshusingh.webp";
@@ -87,8 +90,6 @@ import speaker69 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/
 import speaker70 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/SushilKonnully.webp";
 import speaker71 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/JatinPandey.webp";
 import speaker72 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/RoushanKumar.webp";
-import speaker30 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/PratikBaidya.webp";
-import speaker65 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/CharishmaDevi.webp";
 import speaker73 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/PalashParate.webp";
 import speaker74 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AbhiA.webp";
 import speaker75 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AdityaSharma.webp";
