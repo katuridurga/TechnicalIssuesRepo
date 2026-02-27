@@ -87,14 +87,15 @@ import speaker69 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/
 import speaker70 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/SushilKonnully.webp";
 import speaker71 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/JatinPandey.webp";
 import speaker72 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/RoushanKumar.webp";
+import speaker30 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/Pratikbaidya.webp";
+import speaker65 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/Charishmadevi.webp";
 import speaker73 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/PalashParate.webp";
 import speaker74 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AbhiA.webp";
 import speaker75 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AdityaSharma.webp";
 import speaker76 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/Rishav.webp";
 import speaker77 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/MehulParakh.webp";
 import speaker78 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AkshatPuri.webp";
-import speaker79 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/PratikBaidya.webp";
-import speaker80 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/CharishmaDevi.webp";
+
 
 import { useSelector, shallowEqual } from "react-redux";
 
@@ -484,7 +485,7 @@ function Alumni() {
     alt: "Rishi Prakaash S M - Software Developer at Mobilityware, USA"
   },
   {
-    img: speaker80,
+    img: speaker65,
     name: "N.Charishma Devi",
     title: "3D Character Artist",
     subtitle: "Green Gold Animation Pvt Ltd, Hyderabad",
@@ -505,7 +506,7 @@ function Alumni() {
     alt: "Harshal Shinde - Game Developer at Boo Boo Games, Ahemdabad"
   },
   {
-    img: speaker79,
+    img: speaker30,
     name: "Pratik Baidya",
     title: "3D Character Artist",
     subtitle: "Aeos Games, Bengaluru",
