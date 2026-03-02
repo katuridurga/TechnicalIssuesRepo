@@ -10,30 +10,61 @@ function BlogDetail({ match }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    console.log('Fetching event with ID:', id);
+  // useEffect(() => {
+  //   console.log('Fetching event with ID:', id);
 
-    // Fetch the event details based on the ID
-    fetch(`https://www.backstagepass.co.in/blog_edit.php?id=${id}`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log('Fetched data:', data);
-        // Assuming the response is an array and taking the first element
+  //   // Fetch the event details based on the ID
+  //   fetch(`https://www.backstagepass.co.in/blog_edit.php?id=${id}`)
+  //     .then(response => {
+  //       if (!response.ok) {
+  //         throw new Error('Network response was not ok');
+  //       }
+  //       return response.json();
+  //     })
+  //     .then(data => {
+  //       console.log('Fetched data:', data);
+  //       // Assuming the response is an array and taking the first element
+  //       setEvent(data[0]);
+  //       setLoading(false);
+  //     })
+  //     .catch(error => {
+  //       console.error('Error fetching event:', error);
+  //       setError(error);
+  //       setLoading(false);
+  //     });
+  // }, [id]);
+useEffect(() => {
+  setEvent(null);      // clear previous data
+  setLoading(true);
+  setError(null);
+
+  fetch(`https://www.backstagepass.co.in/blog_edit.php?id=${id}&t=${Date.now()}`, {
+    method: "GET",
+    cache: "no-store",        // 🔥 prevents browser cache
+    headers: {
+      "Cache-Control": "no-cache"
+    }
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (data && data.length > 0) {
         setEvent(data[0]);
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error('Error fetching event:', error);
-        setError(error);
-        setLoading(false);
-      });
-  }, [id]);
+      } else {
+        setEvent(null);
+      }
+      setLoading(false);
+    })
+    .catch(error => {
+      setError(error);
+      setLoading(false);
+    });
 
+}, [id]);
   const formatDateToDMY = (dateString) => {
     const date = new Date(dateString);
     if (isNaN(date)) return ''; // Return empty string if invalid date

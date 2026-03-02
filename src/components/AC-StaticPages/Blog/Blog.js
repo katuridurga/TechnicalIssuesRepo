@@ -41,17 +41,30 @@ function Blog() {
   const [isLoading, setIsLoading] = useState(true);
   const wordLimit = 14;
 
-  useEffect(() => {
-    // Fetch categories from the API
-    fetch('https://backstagepass.co.in/reactapi/categories_list.php')
-      .then(response => response.json())
-      .then(result => {
-        setCategories(result);
-      })
-      .catch(error => {
-        console.error('Error fetching categories:', error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   // Fetch categories from the API
+  //   fetch('https://backstagepass.co.in/reactapi/categories_list.php')
+  //     .then(response => response.json())
+  //     .then(result => {
+  //       setCategories(result);
+  //     })
+  //     .catch(error => {
+  //       console.error('Error fetching categories:', error);
+  //     });
+  // }, []);
+
+useEffect(() => {
+  fetch(`https://backstagepass.co.in/reactapi/categories_list.php?t=${Date.now()}`, {
+    cache: "no-store"
+  })
+    .then(response => response.json())
+    .then(result => {
+      setCategories(result);
+    })
+    .catch(error => {
+      console.error('Error fetching categories:', error);
+    });
+}, []);
 
   useEffect(() => {
     setIsLoading(true); // Set loading to true before fetch
@@ -76,6 +89,43 @@ function Blog() {
         setIsLoading(false);
       });
   }, [selectedCatId]);
+
+
+//   useEffect(() => {
+//   setIsLoading(true);
+//   setData([]);            // 🔥 clear previous blog list immediately
+//   setCurrentPage(1);      // reset pagination
+
+//   const baseUrl =
+//     selectedCatId === null
+//       ? 'https://www.backstagepass.co.in/blog_list.php'
+//       : `https://www.backstagepass.co.in/blog_list.php?categoryId=${selectedCatId}`;
+
+//   // 🔥 Add timestamp to prevent cache
+//   const url = `${baseUrl}${baseUrl.includes('?') ? '&' : '?'}t=${Date.now()}`;
+
+//   fetch(url, {
+//     method: "GET",
+//     cache: "no-store",              // 🔥 disable browser cache
+//     headers: {
+//       "Cache-Control": "no-cache"
+//     }
+//   })
+//     .then((response) => response.json())
+//     .then((result) => {
+//       if (Array.isArray(result)) {
+//         setData(result);
+//       } else {
+//         setData([]);
+//       }
+//       setIsLoading(false);
+//     })
+//     .catch((err) => {
+//       console.error('Failed to fetch blogs', err);
+//       setIsLoading(false);
+//     });
+
+// }, [selectedCatId]);
 
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,

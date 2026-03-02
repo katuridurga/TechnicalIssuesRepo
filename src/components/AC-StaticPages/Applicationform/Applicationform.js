@@ -22,23 +22,23 @@ function App() {
       [name]: value,
     }));
 
-    if (name === "contactNumber" && /^[0-9]{10}$/.test(value)) {
-      try {
-        const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkmobile.php?contactNumber=${value}`);
-        const result = await response.json();
+    // if (name === "contactNumber" && /^[0-9]{10}$/.test(value)) {
+    //   try {
+    //     const response = await fetch(`https://www.backstagepass.co.in/reactapi/checkmobile.php?contactNumber=${value}`);
+    //     const result = await response.json();
 
-        if (response.status === 200) {
-          alert('This mobile number is already registered.');
-          setFormData((prevData) => ({
-            ...prevData,
-            contactNumber: '',  // Reset the contact number field to an empty string
-          }));
-        }
-      } catch (error) {
-        console.error('Error checking mobile number:', error);
-        alert('Failed to validate mobile number. Please try again.');
-      }
-    }
+    //     if (response.status === 200) {
+    //       alert('This mobile number is already registered.');
+    //       setFormData((prevData) => ({
+    //         ...prevData,
+    //         contactNumber: '',  // Reset the contact number field to an empty string
+    //       }));
+    //     }
+    //   } catch (error) {
+    //     console.error('Error checking mobile number:', error);
+    //     alert('Failed to validate mobile number. Please try again.');
+    //   }
+    // }
   };
   // Handle state change and fetch cities
 
