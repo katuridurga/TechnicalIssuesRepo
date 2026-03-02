@@ -870,3 +870,65 @@ button.extended-background-gradient-linkedin {
 top: 34px;
   margin-bottom: 4px;
 }
+/* 🔹 Maya Footer Row */
+.row.fc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  /* border-top: 1px solid #e5e5e5; */
+  flex-direction: column;
+}
+
+/* Left Side */
+.footer_copyright p {
+  margin: 0;
+  font-size: 14px;
+  color: #000;
+}
+
+/* Right Side Menu */
+.footer_menu {
+  text-align: right;
+}
+
+.footer_menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.footer_menu ul li {
+  display: inline-block;
+}
+
+.footer_menu ul li a {
+  font-size: 14px;
+  color: #777;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer_menu ul li a:hover {
+  color: #000;
+}
+
+/* 🔹 Responsive Fix */
+@media (max-width: 768px) {
+  .row.fc {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer_menu {
+    text-align: center;
+  }
+
+  .footer_menu ul {
+    justify-content: center;
+  }
+}

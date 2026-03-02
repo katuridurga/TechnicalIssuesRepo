@@ -540,57 +540,102 @@ const computedHeight =
 
 
 
-                  {/* 🔹 Compact Contact Info for certain landing pages */}
-                  {isTestFooter && (
-                    <div
-  className={`foot-details lfootdetails ${
-    isMayaPage ? "maya-foot-spacing" : ""
-  }`}
->
+                 {/* 🔹 Compact Contact Info for certain landing pages */}
+{isTestFooter && (
+  <div
+    className={`foot-details lfootdetails ${
+      isMayaPage ? "maya-foot-spacing" : ""
+    }`}
+  >
+    <LazyLoad height={76} offset={100} fadein={true}>
+      <div className="foot-item fadeInUp anime-delay3">
+        <h3 className="footer-title" style={{ textAlign: "center" }}>
+          Contact Info
+        </h3>
 
-                      <LazyLoad height={76} offset={100} fadein={true}>
-                        <div className="foot-item fadeInUp anime-delay3">
-                          <h3 className="footer-title" style={{ textAlign: "center" }}>
-                            Contact Info
-                          </h3>
-                          <div className="contact-wrapper">
-                            <div className="cont1">
-                              <div className="contact-wrapper-inner">
-                                <CiPhone className="iconsmain" />
-                                <div>
-                                  <p>
-                                    <a
-                                      href="tel:+91-8008002794"
-                                      className="phone-number"
-                                      rel="noopener noreferrer"
-                                    >
-                                      +91-8008002794
-                                    </a>
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="cont1">
-                              <div className="contact-wrapper-inner">
-                                <CiPhone className="iconsmain" />
-                                <div>
-                                  <p>
-                                    <a
-                                      href="tel:+91-8008002795"
-                                      className="phone-number"
-                                      rel="noopener noreferrer"
-                                    >
-                                      +91-8008002795
-                                    </a>
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </LazyLoad>
-                    </div>
-                  )}
+        <div className="contact-wrapper">
+
+          {/* 📌 Maya Page Contact */}
+          {isMayaPage ? (
+            <>
+              <div className="cont1">
+                <div className="contact-wrapper-inner" style={{ justifyContent: "center" }}>
+                  <CiPhone className="iconsmain" />
+                  <div>
+                    <p>
+                      <a
+                        href="tel:+918065912040"
+                        className="phone-number"
+                        rel="noopener noreferrer"
+                      >
+                        +91 80659 12040
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="cont1">
+                <div className="contact-wrapper-inner">
+                  <CiMail className="iconsmain" />
+                  <div>
+                    <p>
+                      <a
+                        href="mailto:learning@backstagepass.co.in"
+                        className="phone-number"
+                        rel="noopener noreferrer"
+                      >
+                        learning@backstagepass.co.in
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : (
+            /* 📌 Default Contact (Other Landing Pages) */
+            <>
+              <div className="cont1">
+                <div className="contact-wrapper-inner">
+                  <CiPhone className="iconsmain" />
+                  <div>
+                    <p>
+                      <a
+                        href="tel:+918008002794"
+                        className="phone-number"
+                        rel="noopener noreferrer"
+                      >
+                        +91-8008002794
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="cont1">
+                <div className="contact-wrapper-inner">
+                  <CiPhone className="iconsmain" />
+                  <div>
+                    <p>
+                      <a
+                        href="tel:+918008002795"
+                        className="phone-number"
+                        rel="noopener noreferrer"
+                      >
+                        +91-8008002795
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+
+        </div>
+      </div>
+    </LazyLoad>
+  </div>
+)}
                 </div>
               </div>
             </div>
@@ -683,16 +728,44 @@ const computedHeight =
                 </div>
               </LazyLoad>
 
-              {path !== "/intermediate-board-results/" && (
-                <LazyLoad height={76} offset={100} fadein={true}>
-                  <div
-                    className="text-center foot-content fadeInUp anime-delay2"
-                    style={{ marginBottom: isMobileState ? "5rem" : "0rem" }}
-                  >
-                    © A Subsidiary of PVR Memorial Educational Society 2026. All Rights Reserved
-                  </div>
-                </LazyLoad>
-              )}
+             {path !== "/intermediate-board-results/" && (
+  <LazyLoad height={76} offset={100} fadein={true}>
+    {isMayaPage ? (
+      /* 🔹 Only for Maya Landing Page */
+      <div
+        className="row fc fadeInUp anime-delay2"
+        style={{ marginBottom: isMobileState ? "5rem" : "0rem" }}
+      >
+        <div className="col-lg-6 col-sm-6 col-xs-12">
+          <div className="footer_copyright">
+            <p>© 2026. All Rights Reserved.</p>
+          </div>
+        </div>
+
+        {/* <div className="col-lg-6 col-sm-6 col-xs-12">
+          <div className="footer_menu">
+            <ul>
+              <li>
+                <a href="/terms-of-use">Terms of Use</a>
+              </li>
+              <li>
+                <a href="/privacy-policy">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div> */}
+      </div>
+    ) : (
+      /* 🔹 All Other Pages (Keep Existing) */
+      <div
+        className="text-center foot-content fadeInUp anime-delay2"
+        style={{ marginBottom: isMobileState ? "5rem" : "0rem" }}
+      >
+        © A Subsidiary of PVR Memorial Educational Society 2026. All Rights Reserved
+      </div>
+    )}
+  </LazyLoad>
+)}
             </div>
           </div>
         </div>
