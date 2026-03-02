@@ -135,6 +135,14 @@ white-space: nowrap;
 
 
   @media only screen and (max-width : 1024px){
+    .mdis{
+    padding: 0px;
+    color: #ee1b24;
+    margin-top: 0px !important;
+    margin-left: 3px;
+    font-size: 14px;
+    text-align: center;
+}
     .containerm {
   max-width: 1350px;
   margin: 0 auto;
@@ -1637,7 +1645,7 @@ flex: 0 0 40%;
 /* FORM STYLES */
 .sticky-form h3 {
   margin-bottom: 20px;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 700;
   color: #000;
   text-align: center;
@@ -2178,4 +2186,10 @@ width: 100%;
   .discountprice {
     font-size: 28px;
   }
+}
+.mdis{
+    padding: 0px;
+    color: #ee1b24;
+    margin-top: -15px;
+    margin-left: 3px;
 }

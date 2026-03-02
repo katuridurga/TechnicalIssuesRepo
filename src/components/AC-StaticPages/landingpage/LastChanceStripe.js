@@ -85,8 +85,8 @@ useEffect(() => {
         <canvas id="fireworks-canvas"></canvas>
       <div class="marquee">
         <div class="marquee__track mainhdb1c">
-          <p>Last Chance! Offer Ends Jan 15, 2026</p>
-          <p>Last Chance! Offer Ends Jan 15, 2026</p>
+          <p>Last Chance! Offer Ends March 31, 2026</p>
+          <p>Last Chance! Offer Ends March 31, 2026</p>
         </div>
       </div>
     </div>

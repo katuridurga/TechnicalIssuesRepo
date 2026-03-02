@@ -17,7 +17,6 @@ import r11 from "../../../assets/img/partners/Qualcomm.webp";
 import r12 from "../../../assets/img/partners/Juego.webp";
 import r13 from "../../../assets/img/partners/Gamitronics.webp";
 import r14 from "../../../assets/img/partners/GSNgames.webp";
-
 import speaker1 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AnicsChacko.webp";
 import speaker2 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/DivyanshuSoni.webp";
 import speaker3 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AnshulSoni.webp";
