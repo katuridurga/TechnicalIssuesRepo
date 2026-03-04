@@ -13,7 +13,6 @@ import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 
-
 /* -------------------- UTIL COMPONENTS -------------------- */
 
 function HideOnScroll(props) {
@@ -35,10 +34,6 @@ HideOnScroll.propTypes = {
 };
 
 /* -------------------- ENROLL BUTTON -------------------- */
-
-
-
-
 
 /* -------------------- MAIN COMPONENT -------------------- */
 
@@ -66,7 +61,9 @@ function SkillDiplomaCourses() {
     declaration: false,
     url: window.location.href,
   });
+
   /* 🔹 Auto-fill popup form from sticky form localStorage */
+
   useEffect(() => {
   const savedData = localStorage.getItem("stickyFormData");
 
@@ -78,6 +75,7 @@ function SkillDiplomaCourses() {
       email: parsed.email || "",
       phoneNumber: parsed.phone || "",
       course_id: 23,
+        url: window.location.href,
     };
 
     // Autofill form
@@ -86,6 +84,8 @@ function SkillDiplomaCourses() {
       fullname: prev.fullname || leadData.fullname,
       email: prev.email || leadData.email,
       PhoneNumber: prev.PhoneNumber || leadData.phoneNumber,
+    url: window.location.href,
+
       
     }));
 
@@ -211,8 +211,6 @@ const handleEmailBlur = async () => {
   setCouponRemarks("");
 }
 };
-
-
 
 const EnrollNowButtonBase = ({ onClick, location }) => {
   const isMayaLanding =
