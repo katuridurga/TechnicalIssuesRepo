@@ -699,65 +699,24 @@ function DiplomaAndAdvancedDiplomaCourses() {
             </div>
           </section>
 
-          <section style={{ backgroundColor: "#f6f7f8", marginTop: isMobileState ? "4px" : "40px", borderRadius: "10px", padding: isMobileState ? "10px" : "0px" }}>
-            <div className="section-wrappercer modules-section">
+        <section class="mentor-card">
+  <div class="mentor-image">
+    <img src="https://backstagepass.co.in/studentlms/uploads/mentors/e70e9efab93e20a7f6d60bf3b5dcf91f.jpg"
+         alt="Rahul Bairagya"/>
+  </div>
 
-              <div className='coppertunitiescer'>
-               
-                <div className='left' style={{marginTop:isMobileState?"28px":"0px"}}>
-                  <img src="https://backstagepass.co.in/studentlms/uploads/mentors/e70e9efab93e20a7f6d60bf3b5dcf91f.jpg" alt="careerop" style={{border: "4px solid #ed1923",borderRadius:"10px"
-                  }} />
-
- {isMobileState && (
-                  <h2 className='previewcon1' style={{ textAlign: isMobileState ? "center" : "left", width: isMobileState ? "100%" : "100%", fontSize: isMobileState ? "24px" : "28px" }}>Rahul Bairagya
-                    <p className="mdis">Environment Art Mentor</p>
-</h2>
-                )}
-                  {/* <div className="linkedinicon">
-                    <span style={{ verticalAlign: "bottom" }}>Shareable on</span>
-
-                    <FaLinkedin
-                      size={28}
-                      color="#0A66C2"
-                      style={{ marginLeft: "8px", verticalAlign: "middle" }}
-                    />
-                  </div> */}
-
-                </div>
-
-                <div className="right career-tabs-container">
-                  {/* Tabs */}
-
-
-                  <section className="iconsv"
-  style={{
-    color: "#000",
-    width: "100%",
-    padding: isMobileState ? "10px" : "20px"
-  }}
->
-                    {!isMobileState && (
-                      <h2 className='previewcon1' style={{ textAlign: "left", fontSize: isMobileState ? "24px" : "28px", width: isMobileState ? "100%" : "100%" }}>Rahul Bairagya 
-                      </h2>
-                    
-                    )}
-                     {!isMobileState &&(
-         <p className="mdis">Environment Art Mentor</p>
-                )}
-                       
-                    <section className="certificatedisplay ">
-
-                      <div className="certificate-point">
-                       
-                        <p style={{ fontSize: isMobileState ? "14px" : "15px",paddingLeft:"3px", lineHeight:"27px", marginTop:isMobileState? "-30px" :"-6px"}}>I am a 3D Environment Artist specializing in high-quality, game-ready assets and environments. My expertise includes hard-surface and organic modeling, material creation, and optimized workflows for modern game engines. I focus strongly on realism, storytelling through environments, and industry-standard production pipelines, with a passion for pushing visual quality while maintaining performance efficiency. I also enjoy mentoring artists and sharing practical knowledge to help others grow in the 3D industry.</p>
-                      </div>
-
-                    </section>
-                  </section>
-                </div>
-              </div>
-            </div>
-          </section>
+  <div class="mentor-content">
+    <h3>Rahul Bairagya</h3>
+    <p class="designation">Environment Art Mentor</p>
+    <p class="description">
+      I am a 3D Environment Artist specializing in high-quality, game-ready assets
+      and environments. My expertise includes hard-surface and organic modeling,
+      material creation, and optimized workflows for modern game engines.
+      I focus strongly on realism, storytelling through environments,
+      and industry-standard production pipelines.
+    </p>
+  </div>
+</section>
           {/* <section style={{width:"100%", backgroundColor: "#ffffff", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <div className="scene">
               <h1>Last Chance! Offer Ends Jan 15, 2026</h1>
