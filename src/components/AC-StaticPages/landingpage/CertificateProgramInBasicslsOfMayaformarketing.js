@@ -683,7 +683,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
               )}
             </div>
           </section>
-          <section className="maya-overview-section" style={{ backgroundColor: "#f6f7f8" }}>
+          <section className="maya-overview-section">
             <div className="section-wrappercer" >
               <h2 className="previewcon1" style={{ fontSize: isMobileState ? "24px" : "28px", paddingBottom: "0px", marginTop: isMobileState ? "4px" : "50px", paddingTop: "20px" }}>
                 Basics Of Maya Course Overview
@@ -709,11 +709,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
     <h3>Rahul Bairagya</h3>
     <p class="designation">Environment Art Mentor</p>
     <p class="description">
-      I am a 3D Environment Artist specializing in high-quality, game-ready assets
-      and environments. My expertise includes hard-surface and organic modeling,
-      material creation, and optimized workflows for modern game engines.
-      I focus strongly on realism, storytelling through environments,
-      and industry-standard production pipelines.
+      I am a 3D Environment Artist specializing in high-quality, game-ready assets and environments. My expertise includes hard-surface and organic modeling, material creation, and optimized workflows for modern game engines. I focus strongly on realism, storytelling through environments, and industry-standard production pipelines, with a passion for pushing visual quality while maintaining performance efficiency. I also enjoy mentoring artists and sharing practical knowledge to help others grow in the 3D industry.
     </p>
   </div>
 </section>
