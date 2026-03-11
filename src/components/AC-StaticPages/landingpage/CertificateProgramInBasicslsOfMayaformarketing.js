@@ -505,9 +505,6 @@ function DiplomaAndAdvancedDiplomaCourses() {
     }
   };
 
-
-
-
   return (
     <>
       <Helmet>

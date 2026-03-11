@@ -85,8 +85,6 @@ function SkillDiplomaCourses() {
         email: prev.email || leadData.email,
         PhoneNumber: prev.PhoneNumber || leadData.phoneNumber,
         url: window.location.href,
-
-
       }));
 
       // 🔹 Send silently to API (no success message)
@@ -111,7 +109,6 @@ function SkillDiplomaCourses() {
   /* -------------------- FETCH COURSES -------------------- */
 
   useEffect(() => {
-
     let lastSegment = "certificate-program-in-basics-of-maya";
 
     // if (referrer) {
@@ -119,7 +116,6 @@ function SkillDiplomaCourses() {
     //   lastSegment = parts[parts.length - 1];
     //   if (lastSegment === "short-course") lastSegment = "";
     // }
-
     axios
       .get(
         `https://www.backstagepass.co.in/reactapi/courses_api.php?slug=${lastSegment}`
@@ -215,7 +211,6 @@ function SkillDiplomaCourses() {
   const EnrollNowButtonBase = ({ onClick, location }) => {
     const isMayaLanding =
       location.pathname === "/landingpage/basics-of-maya-online-certification/";
-
     return (
       <button
         type="button"
@@ -233,7 +228,6 @@ function SkillDiplomaCourses() {
     );
   };
   const EnrollNowButton = withRouter(EnrollNowButtonBase);
-
   const checkAlreadyEnrolled = async (email, course) => {
     const res = await fetch(
       "https://www.backstagepass.co.in/reactapi/check_enrollment.php",
@@ -247,10 +241,8 @@ function SkillDiplomaCourses() {
         body: JSON.stringify({ email, course }),
       }
     );
-
     return res.json();
   };
-
   const handleInputChange = async (e) => {
     const { name, type, value, checked, files } = e.target;
 
@@ -272,8 +264,6 @@ function SkillDiplomaCourses() {
         setCouponRemarks("You are already enrolled in this course");
         return;
       }
-
-
       try {
         const res = await fetch(
           "https://www.backstagepass.co.in/reactapi/getpaymentapi.php",
@@ -283,11 +273,8 @@ function SkillDiplomaCourses() {
             body: JSON.stringify({ course: formData.course, coupon: value }),
           }
         );
-
-        const data = await res.json();
+      const data = await res.json();
         if (data?.length) {
-
-
           setPaymentDetails({
             originalPayment: data[0].orignialpayment,
             discountValue: data[0].discountvalue,
@@ -298,18 +285,13 @@ function SkillDiplomaCourses() {
             setCouponRemarks(data?.[0]?.remarkscoupon || "Invalid Coupon Code");
           }
           else {
-
             setCouponRemarks(""); // clear error
-
-
           }
-
         }
       } catch {
         alert("Coupon error");
       }
     }
-
     setFormData((prev) => ({
       ...prev,
       [name]:
@@ -366,10 +348,7 @@ function SkillDiplomaCourses() {
       <Helmet>
         <title> Basics of Maya Course for Beginners | Learn Maya 2024 Online</title>
       </Helmet>
-
       <EnrollNowButton onClick={handleEnrollClick} />
-
-
       <Dialog
         open={openFormModal}
         onClose={handleFormClose}
@@ -399,9 +378,6 @@ function SkillDiplomaCourses() {
             encType="multipart/form-data"
           // onSubmit={handlePayNow}
           >
-
-
-
             <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container" style={{
               gridTemplateColumns: isMobileState ? "repeat(1, 1fr)" : "repeat(1, 1fr)"
             }}>
@@ -588,19 +564,14 @@ function SkillDiplomaCourses() {
               </div>
               <p style={{ color: "#f52525" }}><span>{couponRemarks}</span></p>
               {paymentDetails.originalPayment && (
-
                 <div className='paymentShortCourse'>
-
                   <div style={{ color: "#000" }}>Payment (INR):  <span><span className="actprice" style={{ color: "#000" }}><del>₹4999</del></span> ₹{paymentDetails.originalPayment}</span></div>
                   {paymentDetails.discountValue > 0 && (
                     <div style={{ color: "#000" }}>
                       Discount (INR): <span>-₹{paymentDetails.discountValue}</span>
                     </div>
                   )}
-
                   <div style={{ color: "#000" }}>Total Payment (INR): <span>₹{paymentDetails.finalAmount}</span></div>
-
-
                 </div>
               )}
               <div className="checkbox-container" >
@@ -645,12 +616,8 @@ function SkillDiplomaCourses() {
               >
                 {alreadyEnrolled ? "Already Enrolled" : "ENROLL NOW"}
               </button>
-
-
             </div>
           </form>
-
-
         </DialogContent>
       </Dialog>
     </>
