@@ -157,13 +157,6 @@ function Courses(props) {
       formDataToSend.append(key, value);
     }
 
-    // Append image to FormData if an image is selected
-
-
-    // Append files to FormData if files are selected
-
-
-
     // Send FormData to PHP API
     fetch('https://www.backstagepass.co.in/reactapi/create_loan.php', {
       method: 'POST',
