@@ -10,7 +10,7 @@ import "./assets/css/dk.css";
 export default function App() {
 
   return (
-    
+
     <CacheBuster>
       {({ loading, isLatestVersion, refreshCacheAndReload }) => {
         if (loading) return null;
@@ -69,7 +69,7 @@ export default function App() {
                     <Menu {...routeProps} component="MScGameTechnology" />
                   )}
                 />
-                 <Route
+                <Route
                   exact
                   path={"/courses/masters-in-3d-game-art-design/"}
                   render={routeProps => (
@@ -120,7 +120,7 @@ export default function App() {
                   )}
                 />
 
-                
+
                 <Route
                   exact
                   path={"/courses/diploma-in-3d-environment-art-creation-for-games/"}
@@ -158,7 +158,7 @@ export default function App() {
                     <Menu {...routeProps} component="DiplomaAndAdvancedDiplomaCourses" />
                   )}
                 />
- <Route
+                <Route
                   exact
                   path={"/landingpage/bachelors-degree-courses-in-gaming/"}
                   render={routeProps => (
@@ -247,7 +247,7 @@ export default function App() {
                     <Menu {...routeProps} component="CertificateProgramInEssentialsOfGameDesign" />
                   )}
                 /> */}
-<Route
+                <Route
                   exact
                   path={"/landingpage/certificate-program-in-basics-of-maya/"}
                   render={routeProps => (
@@ -261,7 +261,7 @@ export default function App() {
                     <Menu {...routeProps} component="CertificateProgramInBasicslsOfMayaformarketing" />
                   )}
                 />
-                    <Route
+                <Route
                   exact
                   path={"/landingpage/payment/"}
                   render={routeProps => (
@@ -283,7 +283,7 @@ export default function App() {
                     <Menu {...routeProps} component="CertificateProgramInGameDevelopmentForVR" />
                   )}
                 /> */}
-{/* 
+                {/* 
                 <Route
                   exact
                   path={"/landingpage/certificate-program-in-prototyping-and-game-concept-development/"}
@@ -418,7 +418,7 @@ export default function App() {
                     <Menu {...routeProps} component="StudentShowcase" />
                   )}
                 />
-                 <Route
+                <Route
                   exact
                   path={"/life-at-bsp/student-portfolio/"}
                   render={routeProps => (
@@ -544,7 +544,7 @@ export default function App() {
                     <Menu {...routeProps} component="HomeContentForm" />
                   )}
                 />
-                  
+
               </Switch>
             </Router>
           </>

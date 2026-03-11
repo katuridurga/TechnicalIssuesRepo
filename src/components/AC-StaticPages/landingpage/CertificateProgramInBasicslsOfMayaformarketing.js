@@ -540,7 +540,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
               <p className="discountpanel">Buy this Course @</p>
 
               <div className="disdvi">
-                <del style={{ color: "#fff", textDecorationColor: "#fff", fontSize:isMobileState? "20px": "25px", fontWeight: "600" }}>
+                <del style={{ color: "#fff", textDecorationColor: "#fff", fontSize: isMobileState ? "20px" : "25px", fontWeight: "600" }}>
                   ₹4999
                 </del>
                 <span className="discountprice">₹799</span>
@@ -699,20 +699,20 @@ function DiplomaAndAdvancedDiplomaCourses() {
             </div>
           </section>
 
-        <section class="mentor-card">
-  <div class="mentor-image">
-    <img src="https://backstagepass.co.in/studentlms/uploads/mentors/e70e9efab93e20a7f6d60bf3b5dcf91f.jpg"
-         alt="Rahul Bairagya"/>
-  </div>
+          <section class="mentor-card">
+            <div class="mentor-image">
+              <img src="https://backstagepass.co.in/studentlms/uploads/mentors/e70e9efab93e20a7f6d60bf3b5dcf91f.jpg"
+                alt="Rahul Bairagya" />
+            </div>
 
-  <div class="mentor-content">
-    <h3>Rahul Bairagya</h3>
-    <p class="designation">Environment Art Mentor</p>
-    <p class="description">
-      I am a 3D Environment Artist specializing in high-quality, game-ready assets and environments. My expertise includes hard-surface and organic modeling, material creation, and optimized workflows for modern game engines. I focus strongly on realism, storytelling through environments, and industry-standard production pipelines, with a passion for pushing visual quality while maintaining performance efficiency. I also enjoy mentoring artists and sharing practical knowledge to help others grow in the 3D industry.
-    </p>
-  </div>
-</section>
+            <div class="mentor-content">
+              <h3>Rahul Bairagya</h3>
+              <p class="designation">Environment Art Mentor</p>
+              <p class="description">
+                I am a 3D Environment Artist specializing in high-quality, game-ready assets and environments. My expertise includes hard-surface and organic modeling, material creation, and optimized workflows for modern game engines. I focus strongly on realism, storytelling through environments, and industry-standard production pipelines, with a passion for pushing visual quality while maintaining performance efficiency. I also enjoy mentoring artists and sharing practical knowledge to help others grow in the 3D industry.
+              </p>
+            </div>
+          </section>
           {/* <section style={{width:"100%", backgroundColor: "#ffffff", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <div className="scene">
               <h1>Last Chance! Offer Ends Jan 15, 2026</h1>

@@ -14,7 +14,7 @@ import { FiArrowRight } from "react-icons/fi";
 import awardig from "../assets/img/igdc2024.webp";
 import animationexp from "../assets/img/animationexp.jpg";
 import bui1f from "../assets/img/bspframebox.jpg";
-  
+
 const TWEEN_FACTOR_BASE = 0.2
 
 const EmblaCarousel = (props) => {
@@ -78,293 +78,293 @@ const EmblaCarousel = (props) => {
     })
   }, [])
 
-useEffect(() => {
-  if (!emblaApi) return
+  useEffect(() => {
+    if (!emblaApi) return
 
-  let autoScrollInterval
+    let autoScrollInterval
 
-  const autoScrollLeft = () => {
-    if (emblaApi.canScrollPrev()) {
-      emblaApi.scrollPrev()
-    } else {
-      emblaApi.scrollTo(emblaApi.scrollSnapList().length - 1)
+    const autoScrollLeft = () => {
+      if (emblaApi.canScrollPrev()) {
+        emblaApi.scrollPrev()
+      } else {
+        emblaApi.scrollTo(emblaApi.scrollSnapList().length - 1)
+      }
     }
-  }
 
-  const startAutoScroll = () => {
-    stopAutoScroll()
-    autoScrollInterval = setInterval(autoScrollLeft, 3000)
-  }
-
-  const stopAutoScroll = () => {
-    if (autoScrollInterval) {
-      clearInterval(autoScrollInterval)
-      autoScrollInterval = null
+    const startAutoScroll = () => {
+      stopAutoScroll()
+      autoScrollInterval = setInterval(autoScrollLeft, 3000)
     }
-  }
 
-  // Start scrolling
-  startAutoScroll()
+    const stopAutoScroll = () => {
+      if (autoScrollInterval) {
+        clearInterval(autoScrollInterval)
+        autoScrollInterval = null
+      }
+    }
 
-  // --- Hover logic ---
-  const emblaRoot = emblaApi.rootNode()
+    // Start scrolling
+    startAutoScroll()
 
-  emblaRoot.addEventListener('mouseenter', stopAutoScroll)
-  emblaRoot.addEventListener('mouseleave', startAutoScroll)
+    // --- Hover logic ---
+    const emblaRoot = emblaApi.rootNode()
 
-  // --- Existing logic ---
-  setTweenNodes(emblaApi)
-  setTweenFactor(emblaApi)
-  tweenParallax(emblaApi)
+    emblaRoot.addEventListener('mouseenter', stopAutoScroll)
+    emblaRoot.addEventListener('mouseleave', startAutoScroll)
 
-  emblaApi
-    .on('reInit', setTweenNodes)
-    .on('reInit', setTweenFactor)
-    .on('reInit', tweenParallax)
-    .on('scroll', tweenParallax)
-    .on('slideFocus', tweenParallax)
+    // --- Existing logic ---
+    setTweenNodes(emblaApi)
+    setTweenFactor(emblaApi)
+    tweenParallax(emblaApi)
 
-  return () => {
-    stopAutoScroll()
-    emblaRoot.removeEventListener('mouseenter', stopAutoScroll)
-    emblaRoot.removeEventListener('mouseleave', startAutoScroll)
-  }
-}, [emblaApi, setTweenFactor, setTweenNodes, tweenParallax])
+    emblaApi
+      .on('reInit', setTweenNodes)
+      .on('reInit', setTweenFactor)
+      .on('reInit', tweenParallax)
+      .on('scroll', tweenParallax)
+      .on('slideFocus', tweenParallax)
+
+    return () => {
+      stopAutoScroll()
+      emblaRoot.removeEventListener('mouseenter', stopAutoScroll)
+      emblaRoot.removeEventListener('mouseleave', startAutoScroll)
+    }
+  }, [emblaApi, setTweenFactor, setTweenNodes, tweenParallax])
 
   return (
-   <div className="emblabaM">
-  <div className="embla__viewportbaM" ref={emblaRef}>
-    <div className="embla__containerbaM">
+    <div className="emblabaM">
+      <div className="embla__viewportbaM" ref={emblaRef}>
+        <div className="embla__containerbaM">
 
-      {/* SLIDE 1 */}
-      <div className="embla__slidebaM imgm" key={1}>
-        <div className="embla__parallaxbaM">
-          <div className="embla__parallax__layerbaM incontent1">
+          {/* SLIDE 1 */}
+          <div className="embla__slidebaM imgm" key={1}>
+            <div className="embla__parallaxbaM">
+              <div className="embla__parallax__layerbaM incontent1">
 
-            <div>
-              <img className="embla__slide__imgbaM embla__parallax__imgbaM"
-                src={awardig}
-                alt="Your alt text" />
+                <div>
+                  <img className="embla__slide__imgbaM embla__parallax__imgbaM"
+                    src={awardig}
+                    alt="Your alt text" />
+                </div>
+
+                <div className="incontent">
+                  <p>Hyderabad-based game developers shine at IGDC</p>
+
+                  <a
+                    className="readmore-btn"
+                    href="https://www.thehindu.com/sci-tech/technology/at-india-games-developer-conference-2024-three-hyderabad-based-game-developers-shine/article68913734.ece/amp/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read more <FiArrowRight className="arros" />
+                  </a>
+                </div>
+
+              </div>
             </div>
+          </div>
 
-            <div className="incontent">
-              <p>Hyderabad-based game developers shine at IGDC</p>
+          {/* SLIDE 2 */}
+          <div className="embla__slidebaM imgm" key={6}>
+            <div className="embla__parallaxbaM">
+              <div className="embla__parallax__layerbaM incontent1">
 
-              <a
-                className="readmore-btn"
-                href="https://www.thehindu.com/sci-tech/technology/at-india-games-developer-conference-2024-three-hyderabad-based-game-developers-shine/article68913734.ece/amp/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read more <FiArrowRight className="arros" />
-              </a>
+                <div>
+                  <img className="embla__slide__imgbaM embla__parallax__imgbaM"
+                    src={awardone}
+                    alt="Your alt text" />
+                </div>
+
+                <div className="incontent">
+                  <p>Backstage Pass Students Take Home Awards and Accolades at IGDC 2018</p>
+
+                  <a
+                    className="readmore-btn"
+                    href="https://timesofindia.indiatimes.com/education/news/backstage-pass-students-take-home-awards-and-accolades-at-igdc-2018/articleshow/67140616.cms"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read more <FiArrowRight className="arros" />
+                  </a>
+                </div>
+
+              </div>
             </div>
+          </div>
 
+          {/* SLIDE 3 */}
+          <div className="embla__slidebaM imgm" key={2}>
+            <div className="embla__parallaxbaM">
+              <div className="embla__parallax__layerbaM incontent1">
+
+                <div>
+                  <img className="embla__slide__imgbaM embla__parallax__imgbaM"
+                    src={awardtwo}
+                    alt="Your alt text" />
+                </div>
+
+                <div className="incontent">
+                  <p>Turn your passion for gaming into a rewarding career</p>
+
+                  <a
+                    className="readmore-btn"
+                    href="https://www.thehindu.com/brandhub/turn-your-passion-for-gaming-into-a-rewarding-career/article65665332.ece"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read more <FiArrowRight className="arros" />
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          {/* SLIDE 4 */}
+          <div className="embla__slidebaM imgm" key={3}>
+            <div className="embla__parallaxbaM">
+              <div className="embla__parallax__layerbaM incontent1">
+
+                <div>
+                  <img className="embla__slide__imgbaM embla__parallax__imgbaM"
+                    src={awardfour}
+                    alt="Your alt text" />
+                </div>
+
+                <div className="incontent">
+                  <p>How Backstage Pass Gaming College Prepare Students to Join the Top Game and Technology Companies</p>
+
+                  <a
+                    className="readmore-btn"
+                    href="https://www.dnaindia.com/education/report-how-backstage-pass-gaming-college-prepare-students-to-join-the-top-game-and-technology-companies-2897946"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read more <FiArrowRight className="arros" />
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          {/* SLIDE 5 */}
+          <div className="embla__slidebaM imgm" key={4}>
+            <div className="embla__parallaxbaM">
+              <div className="embla__parallax__layerbaM incontent1">
+
+                <div>
+                  <img className="embla__slide__imgbaM embla__parallax__imgbaM"
+                    src={awardfive}
+                    alt="Your alt text" />
+                </div>
+
+                <div className="incontent">
+                  <p>This gaming college in India is revolutionising gaming education</p>
+
+                  <a
+                    className="readmore-btn"
+                    href="https://www.forbesindia.com/article/brand-connect/this-gaming-college-in-india-is-revolutionising-gaming-education/60133/1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read more <FiArrowRight className="arros" />
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          {/* SLIDE 6 */}
+          <div className="embla__slidebaM imgm" key={5}>
+            <div className="embla__parallaxbaM">
+              <div className="embla__parallax__layerbaM incontent1">
+
+                <div>
+                  <img className="embla__slide__imgbaM embla__parallax__imgbaM"
+                    src={awardthree}
+                    alt="Your alt text" />
+                </div>
+
+                <div className="incontent">
+                  <p>Backstage Pass brings world-class gaming education right to your doorstep</p>
+
+                  <a
+                    className="readmore-btn"
+                    href="https://yourstory.com/2020/06/backstage-world-class-gaming-education"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read more <FiArrowRight className="arros" />
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div className="embla__slidebaM imgm" key={7}>
+            <div className="embla__parallaxbaM">
+              <div className="embla__parallax__layerbaM incontent1">
+
+                <div>
+                  <img className="embla__slide__imgbaM embla__parallax__imgbaM"
+                    src={bui1f}
+                    alt="bui1f" />
+                </div>
+
+                <div className="incontent">
+                  <p> Backstage Pass Collaborated with Frameboxx </p>
+
+                  <a
+                    className="readmore-btn"
+                    href="https://www.animationxpress.com/latest-news/backstage-pass-and-frameboxx-sign-mou-to-launch-diplomas-in-game-development/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read more <FiArrowRight className="arros" />
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div className="embla__slidebaM imgm" key={8}>
+            <div className="embla__parallaxbaM">
+              <div className="embla__parallax__layerbaM incontent1">
+
+                <div>
+                  <img className="embla__slide__imgbaM embla__parallax__imgbaM"
+                    src={animationexp}
+                    alt="animationexp" />
+                </div>
+
+                <div className="incontent">
+
+                  <p> Backstage Pass students at IGDC 2025</p>
+                  <a
+                    className="readmore-btn"
+                    href="https://www.animationxpress.com/latest-news/double-win-for-backstage-pass-students-at-igdc-2025/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read more <FiArrowRight className="arros" />
+                  </a>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* SLIDE 2 */}
-      <div className="embla__slidebaM imgm" key={6}>
-        <div className="embla__parallaxbaM">
-          <div className="embla__parallax__layerbaM incontent1">
-
-            <div>
-              <img className="embla__slide__imgbaM embla__parallax__imgbaM"
-                src={awardone}
-                alt="Your alt text" />
-            </div>
-
-            <div className="incontent">
-              <p>Backstage Pass Students Take Home Awards and Accolades at IGDC 2018</p>
-
-              <a
-                className="readmore-btn"
-                href="https://timesofindia.indiatimes.com/education/news/backstage-pass-students-take-home-awards-and-accolades-at-igdc-2018/articleshow/67140616.cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read more <FiArrowRight className="arros" />
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      {/* SLIDE 3 */}
-      <div className="embla__slidebaM imgm" key={2}>
-        <div className="embla__parallaxbaM">
-          <div className="embla__parallax__layerbaM incontent1">
-
-            <div>
-              <img className="embla__slide__imgbaM embla__parallax__imgbaM"
-                src={awardtwo}
-                alt="Your alt text" />
-            </div>
-
-            <div className="incontent">
-              <p>Turn your passion for gaming into a rewarding career</p>
-
-              <a
-                className="readmore-btn"
-                href="https://www.thehindu.com/brandhub/turn-your-passion-for-gaming-into-a-rewarding-career/article65665332.ece"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read more <FiArrowRight className="arros" />
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      {/* SLIDE 4 */}
-      <div className="embla__slidebaM imgm" key={3}>
-        <div className="embla__parallaxbaM">
-          <div className="embla__parallax__layerbaM incontent1">
-
-            <div>
-              <img className="embla__slide__imgbaM embla__parallax__imgbaM"
-                src={awardfour}
-                alt="Your alt text" />
-            </div>
-
-            <div className="incontent">
-              <p>How Backstage Pass Gaming College Prepare Students to Join the Top Game and Technology Companies</p>
-
-              <a
-                className="readmore-btn"
-                href="https://www.dnaindia.com/education/report-how-backstage-pass-gaming-college-prepare-students-to-join-the-top-game-and-technology-companies-2897946"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read more <FiArrowRight className="arros" />
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      {/* SLIDE 5 */}
-      <div className="embla__slidebaM imgm" key={4}>
-        <div className="embla__parallaxbaM">
-          <div className="embla__parallax__layerbaM incontent1">
-
-            <div>
-              <img className="embla__slide__imgbaM embla__parallax__imgbaM"
-                src={awardfive}
-                alt="Your alt text" />
-            </div>
-
-            <div className="incontent">
-              <p>This gaming college in India is revolutionising gaming education</p>
-
-              <a
-                className="readmore-btn"
-                href="https://www.forbesindia.com/article/brand-connect/this-gaming-college-in-india-is-revolutionising-gaming-education/60133/1"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read more <FiArrowRight className="arros" />
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      {/* SLIDE 6 */}
-      <div className="embla__slidebaM imgm" key={5}>
-        <div className="embla__parallaxbaM">
-          <div className="embla__parallax__layerbaM incontent1">
-
-            <div>
-              <img className="embla__slide__imgbaM embla__parallax__imgbaM"
-                src={awardthree}
-                alt="Your alt text" />
-            </div>
-
-            <div className="incontent">
-              <p>Backstage Pass brings world-class gaming education right to your doorstep</p>
-
-              <a
-                className="readmore-btn"
-                href="https://yourstory.com/2020/06/backstage-world-class-gaming-education"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read more <FiArrowRight className="arros" />
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
- <div className="embla__slidebaM imgm" key={7}>
-        <div className="embla__parallaxbaM">
-          <div className="embla__parallax__layerbaM incontent1">
-
-            <div>
-              <img className="embla__slide__imgbaM embla__parallax__imgbaM"
-                src={bui1f}
-                alt="bui1f" />
-            </div>
-
-            <div className="incontent">
-               <p> Backstage Pass Collaborated with Frameboxx </p>
-
-              <a
-                className="readmore-btn"
-                href="https://www.animationxpress.com/latest-news/backstage-pass-and-frameboxx-sign-mou-to-launch-diplomas-in-game-development/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read more <FiArrowRight className="arros" />
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-       <div className="embla__slidebaM imgm" key={8}>
-        <div className="embla__parallaxbaM">
-          <div className="embla__parallax__layerbaM incontent1">
-
-            <div>
-              <img className="embla__slide__imgbaM embla__parallax__imgbaM"
-                src={animationexp}
-                alt="animationexp" />
-            </div>
-
-            <div className="incontent">
-           
-  <p> Backstage Pass students at IGDC 2025</p>
-              <a
-                className="readmore-btn"
-                href="https://www.animationxpress.com/latest-news/double-win-for-backstage-pass-students-at-igdc-2025/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read more <FiArrowRight className="arros" />
-              </a>
-            </div>
-
-          </div>
+      <div className="embla__controlsbaM">
+        <div className="embla__buttonsbaM">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
       </div>
     </div>
-  </div>
-
-  <div className="embla__controlsbaM">
-    <div className="embla__buttonsbaM">
-      <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-      <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-    </div>
-  </div>
-</div>
 
   )
 }

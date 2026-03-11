@@ -248,7 +248,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     if (name === "PhoneNumber" && /^[0-9]{10}$/.test(value)) {
       try {
         const response = await fetch(`https://www.backstagepass.co.in/reactapi/checklandingpagemobile.php?contactNumber=${value}`);
-      
+
         if (response.status === 200) {
           alert('This mobile number is already registered with in the last 3 months our team will get back to you.');
           setFormData((prevData) => ({
@@ -389,7 +389,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
     <>
       <Helmet>
         <title>Build Your Career in Game Art</title>
-        <meta  name="description" content="Learn 3D modeling, character design, and more. Start from scratch and master game art to create stunning game worlds and characters." />
+        <meta name="description" content="Learn 3D modeling, character design, and more. Start from scratch and master game art to create stunning game worlds and characters." />
         <link rel="canonical" href="https://www.backstagepass.co.in/" />
       </Helmet>
       <div className="row mb0" id="scroll-container" >
@@ -433,7 +433,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   <div className='containers-21'>
                     <form onSubmit={handleSubmit} className="formMain">
 
-                      <p className="suprtsMobiless" style={{color:"#000"}}>Get <b>a Counselling</b> Session on Gaming Career</p>
+                      <p className="suprtsMobiless" style={{ color: "#000" }}>Get <b>a Counselling</b> Session on Gaming Career</p>
                       <div className="formGrid-2" data-form-id="need-guidance" data-form="step1-container">
                         <div className="">
                           <label className="" for="firstname">First Name</label>
@@ -627,21 +627,21 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 >
                   <Tab style={{ color: "#fff", fontSize: isMobileState ? "11px" : "15px", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center", width: isMobileState ? "23%" : "auto" }} label="Bachelor's" />
-<Tab style={{ color: "#fff", fontSize: isMobileState ? "11px" : "15px", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center" }} label="Master's" />
+                  <Tab style={{ color: "#fff", fontSize: isMobileState ? "11px" : "15px", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center" }} label="Master's" />
                   <Tab style={{ color: "#fff", fontSize: isMobileState ? "11px" : "15px", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center" }} label="Advanced Diploma Courses" />
                   <Tab style={{ color: "#fff", fontSize: isMobileState ? "11px" : "15px", fontFamily: "Montserrat, sans-serif", display: "flex", alignItems: "center", justifyContent: "center" }} label="Diploma Courses" />
-                    
+
                 </Tabs>
-               
-           
+
+
 
                 <TabPanel value={value1} index={0} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
                   <div className='courseUpdatesl'>
                     <ul>
-                      <li><img src={m3} alt="Duration icon"/>
-                        <span style={{color:"#000"}}>Duration: 4 Years</span></li>
+                      <li><img src={m3} alt="Duration icon" />
+                        <span style={{ color: "#000" }}>Duration: 4 Years</span></li>
                       <li><img src={m4} alt="Eligibility icon" />
-                        <span style={{color:"#000"}}>Eligibility: 10+2 or Equivalent *</span></li>
+                        <span style={{ color: "#000" }}>Eligibility: 10+2 or Equivalent *</span></li>
 
                     </ul>
                     {/* <p style={{ color: "#fff", textAlign: "center" }}>*The eligibility criteria for each Bachelor's course varies based the curriculum. Please check the criteria for the course you want to opt for before applying.</p> */}
@@ -663,13 +663,13 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 </TabPanel>
 
- <TabPanel value={value1} index={1} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
+                <TabPanel value={value1} index={1} dir={theme.direction} style={{ width: isMobileState ? "100%" : "85%", margin: "0 auto", padding: "0px 8px" }}>
                   <div className='courseUpdatesl'>
                     <ul>
                       <li><img src={m3} alt="Duration icon" />
-                        <span style={{color:"#000"}}>Duration: 2 Years</span></li>
+                        <span style={{ color: "#000" }}>Duration: 2 Years</span></li>
                       <li><img src={m4} alt="Eligibility icon" />
-                        <span style={{color:"#000"}}>Eligibility: Any Graduation</span></li>
+                        <span style={{ color: "#000" }}>Eligibility: Any Graduation</span></li>
 
 
                     </ul>
@@ -694,9 +694,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   <div className='courseUpdatesl'>
                     <ul>
                       <li><img src={m3} alt="Duration icon" />
-                        <span style={{color:"#000"}}>Duration: 1 Year</span></li>
+                        <span style={{ color: "#000" }}>Duration: 1 Year</span></li>
                       <li><img src={m4} alt="Eligibility icon" />
-                        <span style={{color:"#000"}}>Eligibility: 10+2 or Equivalent</span></li>
+                        <span style={{ color: "#000" }}>Eligibility: 10+2 or Equivalent</span></li>
 
 
                     </ul>
@@ -722,9 +722,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   <div className='courseUpdatesl'>
                     <ul>
                       <li><img src={m3} alt="Duration icon" />
-                        <span style={{color:"#000"}}>Duration: 6 months</span></li>
+                        <span style={{ color: "#000" }}>Duration: 6 months</span></li>
                       <li><img src={m4} alt="Eligibility icon" />
-                        <span style={{color:"#000"}}>Eligibility: 10+2 or Equivalent</span></li>
+                        <span style={{ color: "#000" }}>Eligibility: 10+2 or Equivalent</span></li>
 
 
                     </ul>
@@ -745,7 +745,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
                 </TabPanel>
- 
+
 
                 <div className='toolsa'>
                   <h2 className='mainHeadingTotall-2'>Essential concepts you’ll explore:
@@ -892,7 +892,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   </div>
 
                 </div>} */}
-      <StudentArtGalleryS />
+              <StudentArtGalleryS />
             </div>
             <h2 className='mainHeadingTotall-2'>What Our Alumni And Game Companies Say</h2>
 
@@ -1088,9 +1088,9 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             <Marquee speed={100} style={{ Padding: "0px 20px" }} className='recuitersList-20'>
               <img alt="r1" src={r1} height="61"
                 width="210" />
-                 <img alt="superg" src={superg} height="61"
+              <img alt="superg" src={superg} height="61"
                 width="210" />
-                 <img alt="rock" src={rock} height="61"
+              <img alt="rock" src={rock} height="61"
                 width="210" />
               <img alt="r2" src={r2} height="61"
                 width="210" />
@@ -1113,59 +1113,59 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
               <li ><img src={wc1} alt="wc1" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
-                <div className='featuresscon2' style={{color:"#000"}}>16+ Years Experience
+                <div className='featuresscon2' style={{ color: "#000" }}>16+ Years Experience
 
                 </div></li>
               <li><img src={wc2} alt="wc2" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
-                <div className='featuresscon2'style={{color:"#000"}}>Award-Winning Gaming College
+                <div className='featuresscon2' style={{ color: "#000" }}>Award-Winning Gaming College
                 </div></li>
               <li><img src={wc3} alt="wc3" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
-                <div className='featuresscon2' style={{color:"#000"}}>Industry-Aligned Curriculum
+                <div className='featuresscon2' style={{ color: "#000" }}>Industry-Aligned Curriculum
                 </div></li>
               <li><img src={wc4} alt="wc4" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
-                <div className='featuresscon2' style={{color:"#000"}}>Taught by Industry Experienced Professionals
+                <div className='featuresscon2' style={{ color: "#000" }}>Taught by Industry Experienced Professionals
                 </div></li>
 
 
 
               <li><img src={wc5} alt="wc5" />
 
-                <div className='featuresscon2' style={{color:"#000"}}>Hands-on Training
+                <div className='featuresscon2' style={{ color: "#000" }}>Hands-on Training
 
 
                 </div></li>
 
               <li><img src={wc6} alt="wc6" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
-                <div className='featuresscon2' style={{color:"#000"}}>Strong Industry Connections
+                <div className='featuresscon2' style={{ color: "#000" }}>Strong Industry Connections
 
                 </div></li>
               <li><img src={wc7} alt="wc7" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
-                <div className='featuresscon2' style={{color:"#000"}}>100% Placement Assistance
+                <div className='featuresscon2' style={{ color: "#000" }}>100% Placement Assistance
 
                 </div></li>
               <li><img src={wc8} alt="wc8" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
-                <div className='featuresscon2' style={{color:"#000"}}>Access to Free Webinars/Workshops
+                <div className='featuresscon2' style={{ color: "#000" }}>Access to Free Webinars/Workshops
 
 
                 </div></li>
               <li><img src={wc9} alt="wc9" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
-                <div className='featuresscon2' style={{color:"#000"}}>Global Alumni Community
+                <div className='featuresscon2' style={{ color: "#000" }}>Global Alumni Community
 
 
                 </div></li>
             </ul>
-            
+
             <h2 className='mainHeadingTotall-2' style={{ display: "none" }}>FAQ's</h2>
 
             <div className="faq-containerlg">
@@ -1252,7 +1252,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
       </div>
       {isButtonVisible && (
         <div className="CousellingButton" onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer">Enroll Now</a></div>)}
-   <div className="App">
+      <div className="App">
         {/* <a
           countryCode="91"
           phoneNumber="8977945705"
@@ -1261,7 +1261,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             <FaWhatsapp  style={{ color: "#fff", fontSize: "32px" }} />
 </a> */}
 
-   <a
+        <a
           href="https://wa.me/918977945705"
           target="_blank"
           rel="noopener noreferrer"

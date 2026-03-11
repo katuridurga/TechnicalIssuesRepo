@@ -65,42 +65,42 @@ function SkillDiplomaCourses() {
   /* 🔹 Auto-fill popup form from sticky form localStorage */
 
   useEffect(() => {
-  const savedData = localStorage.getItem("stickyFormData");
+    const savedData = localStorage.getItem("stickyFormData");
 
-  if (savedData) {
-    const parsed = JSON.parse(savedData);
+    if (savedData) {
+      const parsed = JSON.parse(savedData);
 
-    const leadData = {
-      fullname: parsed.name || "",
-      email: parsed.email || "",
-      phoneNumber: parsed.phone || "",
-      course_id: 23,
+      const leadData = {
+        fullname: parsed.name || "",
+        email: parsed.email || "",
+        phoneNumber: parsed.phone || "",
+        course_id: 23,
         url: window.location.href,
-    };
+      };
 
-    // Autofill form
-    setFormData((prev) => ({
-      ...prev,
-      fullname: prev.fullname || leadData.fullname,
-      email: prev.email || leadData.email,
-      PhoneNumber: prev.PhoneNumber || leadData.phoneNumber,
-    url: window.location.href,
+      // Autofill form
+      setFormData((prev) => ({
+        ...prev,
+        fullname: prev.fullname || leadData.fullname,
+        email: prev.email || leadData.email,
+        PhoneNumber: prev.PhoneNumber || leadData.phoneNumber,
+        url: window.location.href,
 
-      
-    }));
 
-    // 🔹 Send silently to API (no success message)
-    fetch("https://backstagepass.co.in/reactapi/api/save_course_lead.php", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(leadData),
-    }).catch((error) => {
-      console.error("Lead capture failed:", error);
-    });
-  }
-}, [openFormModal]);
+      }));
+
+      // 🔹 Send silently to API (no success message)
+      fetch("https://backstagepass.co.in/reactapi/api/save_course_lead.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(leadData),
+      }).catch((error) => {
+        console.error("Lead capture failed:", error);
+      });
+    }
+  }, [openFormModal]);
 
   const [paymentDetails, setPaymentDetails] = useState({
     originalPayment: "",
@@ -166,90 +166,90 @@ function SkillDiplomaCourses() {
     }
   };
   useEffect(() => {
-  const autoCheckEnrollment = async () => {
+    const autoCheckEnrollment = async () => {
+      if (!formData.email || !isValidEmail(formData.email)) return;
+      if (!formData.course) return;
+
+      try {
+        const enrollment = await checkAlreadyEnrolled(
+          formData.email,
+          formData.course
+        );
+
+        if (enrollment?.alreadyEnrolled) {
+          setAlreadyEnrolled(true);
+          setCouponRemarks("You are already enrolled in this course");
+        } else {
+          setAlreadyEnrolled(false);
+          setCouponRemarks("");
+        }
+      } catch (error) {
+        console.error("Enrollment check failed:", error);
+      }
+    };
+
+    autoCheckEnrollment();
+  }, [formData.email, formData.course]);
+
+  const isValidEmail = (email) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const handleEmailBlur = async () => {
+
     if (!formData.email || !isValidEmail(formData.email)) return;
     if (!formData.course) return;
 
-    try {
-      const enrollment = await checkAlreadyEnrolled(
-        formData.email,
-        formData.course
-      );
+    const enrollment = await checkAlreadyEnrolled(
+      formData.email,
+      formData.course
+    );
 
-      if (enrollment?.alreadyEnrolled) {
-        setAlreadyEnrolled(true);
-        setCouponRemarks("You are already enrolled in this course");
-      } else {
-        setAlreadyEnrolled(false);
-        setCouponRemarks("");
-      }
-    } catch (error) {
-      console.error("Enrollment check failed:", error);
+    if (enrollment.alreadyEnrolled) {
+      setAlreadyEnrolled(true);
+      setCouponRemarks("You are already enrolled in this course");
+    } else {
+      setAlreadyEnrolled(false);
+      setCouponRemarks("");
     }
   };
 
-  autoCheckEnrollment();
-}, [formData.email, formData.course]);
+  const EnrollNowButtonBase = ({ onClick, location }) => {
+    const isMayaLanding =
+      location.pathname === "/landingpage/basics-of-maya-online-certification/";
 
-  const isValidEmail = (email) =>
-  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-const handleEmailBlur = async () => {
- 
-  if (!formData.email || !isValidEmail(formData.email)) return;
-  if (!formData.course) return;
+    return (
+      <button
+        type="button"
+        onClick={onClick}
+        className={
+          isMayaLanding
+            ? "alt-enroll-btn"
+            : "dwnbtn three w-full sm:w-auto"
+        }
+        style={isMayaLanding ? {} : { width: "450px" }}
+      >
+        ENROLL NOW
 
-  const enrollment = await checkAlreadyEnrolled(
-    formData.email,
-    formData.course
-  );
+      </button>
+    );
+  };
+  const EnrollNowButton = withRouter(EnrollNowButtonBase);
 
- if (enrollment.alreadyEnrolled) {
-  setAlreadyEnrolled(true);
-  setCouponRemarks("You are already enrolled in this course");
-} else {
-  setAlreadyEnrolled(false);
-  setCouponRemarks("");
-}
-};
-
-const EnrollNowButtonBase = ({ onClick, location }) => {
-  const isMayaLanding =
-    location.pathname === "/landingpage/basics-of-maya-online-certification/";
-
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={
-        isMayaLanding
-          ? "alt-enroll-btn"
-          : "dwnbtn three w-full sm:w-auto"
+  const checkAlreadyEnrolled = async (email, course) => {
+    const res = await fetch(
+      "https://www.backstagepass.co.in/reactapi/check_enrollment.php",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Cache-Control": "no-cache",
+        },
+        cache: "no-store",
+        body: JSON.stringify({ email, course }),
       }
-      style={isMayaLanding ? {} : { width: "450px" }}
-    >
-      ENROLL NOW
-      
-    </button>
-  );
-};
-const EnrollNowButton = withRouter(EnrollNowButtonBase);
+    );
 
-const checkAlreadyEnrolled = async (email, course) => {
-  const res = await fetch(
-    "https://www.backstagepass.co.in/reactapi/check_enrollment.php",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Cache-Control": "no-cache",
-      },
-      cache: "no-store",
-      body: JSON.stringify({ email, course }),
-    }
-  );
-
-  return res.json();
-};
+    return res.json();
+  };
 
   const handleInputChange = async (e) => {
     const { name, type, value, checked, files } = e.target;
@@ -263,15 +263,15 @@ const checkAlreadyEnrolled = async (email, course) => {
         return;
       }
       if (!formData.email) {
-    alert("Please enter email first");
-    return;
-  }
-       const enrollment = await checkAlreadyEnrolled(formData.email, formData.course);
-console.log('enrolled',enrollment?.alreadyEnrolled);
-  if (enrollment?.alreadyEnrolled) {
-    setCouponRemarks("You are already enrolled in this course");
-    return;
-  }
+        alert("Please enter email first");
+        return;
+      }
+      const enrollment = await checkAlreadyEnrolled(formData.email, formData.course);
+      console.log('enrolled', enrollment?.alreadyEnrolled);
+      if (enrollment?.alreadyEnrolled) {
+        setCouponRemarks("You are already enrolled in this course");
+        return;
+      }
 
 
       try {
@@ -493,9 +493,9 @@ console.log('enrolled',enrollment?.alreadyEnrolled);
                   type="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                     onBlur={handleEmailBlur}
-             required={!alreadyEnrolled}
-                  
+                  onBlur={handleEmailBlur}
+                  required={!alreadyEnrolled}
+
                 />
               </div>
 
@@ -591,7 +591,7 @@ console.log('enrolled',enrollment?.alreadyEnrolled);
 
                 <div className='paymentShortCourse'>
 
-                  <div style={{ color: "#000" }}>Payment (INR):  <span><span className="actprice" style={{color:"#000"}}><del>₹4999</del></span> ₹{paymentDetails.originalPayment}</span></div>
+                  <div style={{ color: "#000" }}>Payment (INR):  <span><span className="actprice" style={{ color: "#000" }}><del>₹4999</del></span> ₹{paymentDetails.originalPayment}</span></div>
                   {paymentDetails.discountValue > 0 && (
                     <div style={{ color: "#000" }}>
                       Discount (INR): <span>-₹{paymentDetails.discountValue}</span>
@@ -634,18 +634,17 @@ console.log('enrolled',enrollment?.alreadyEnrolled);
                 Pay Now
               </button> */}
               <button
-  type="submit"
-  disabled={alreadyEnrolled}
-  className={`w-full py-3 rounded-xl font-semibold transition
-    ${
-      alreadyEnrolled
-        ? "bg-gray-400 cursor-not-allowed"
-        : "bg-black text-white hover:bg-gray-800"
-    }
+                type="submit"
+                disabled={alreadyEnrolled}
+                className={`w-full py-3 rounded-xl font-semibold transition
+    ${alreadyEnrolled
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-black text-white hover:bg-gray-800"
+                  }
   `}
->
-  {alreadyEnrolled ? "Already Enrolled" : "ENROLL NOW"}
-</button>
+              >
+                {alreadyEnrolled ? "Already Enrolled" : "ENROLL NOW"}
+              </button>
 
 
             </div>

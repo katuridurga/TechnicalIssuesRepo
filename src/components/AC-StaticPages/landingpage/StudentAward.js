@@ -411,7 +411,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
         <meta property="og:title" content="Build Your Career in Game Art" />
         <meta property="og:description" name="description" content="Learn 3D modeling, character design, and more. Start from scratch and master game art to create stunning game worlds and characters." />
-         <meta name="description" content="Learn 3D modeling, character design, and more. Start from scratch and master game art to create stunning game worlds and characters." />
+        <meta name="description" content="Learn 3D modeling, character design, and more. Start from scratch and master game art to create stunning game worlds and characters." />
         <meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/student-awards/" />
         <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/student-awards/" />
       </Helmet>
@@ -779,25 +779,25 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   </ul>
                   <div className="featuress31" style={{ margin: '0px auto', display: "flex", alignItems: "center", padding: isMobileState ? "20px" : null }}>
                     <ul className='CountryLogos21g' style={{ width: isMobileState ? "100%" : "55%", margin: '0px auto', display: "flex", alignItems: "center", justifyContent: "center" }}>
-                      <li><img src={"https://tse2.mm.bing.net/th?id=OIP.atSrendp8pQnMsT3wdwedgAAAA&pid=Api&P=0&h=220"} alt="mamostar"/>
+                      <li><img src={"https://tse2.mm.bing.net/th?id=OIP.atSrendp8pQnMsT3wdwedgAAAA&pid=Api&P=0&h=220"} alt="mamostar" />
 
                       </li>
 
-                      <li><img src={flag7} alt="Flag7"/>
-
-
-                      </li>
-
-                      <li><img src={flag8} alt="Flag8"/>
+                      <li><img src={flag7} alt="Flag7" />
 
 
                       </li>
 
-                      <li><img src={flag9} alt="Flag9"/>
+                      <li><img src={flag8} alt="Flag8" />
 
 
                       </li>
-                      <li><img src={flag10} alt="Flag10"/>
+
+                      <li><img src={flag9} alt="Flag9" />
+
+
+                      </li>
+                      <li><img src={flag10} alt="Flag10" />
                       </li>
                       <li><img src={flag11} style={{ background: "#cccc", padding: "4px" }} alt="Flag11" />
 
@@ -832,34 +832,34 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 </div>
               </div> :
 
-              
+
                 <div className="containerg">
 
 
                   <div className="gallery">
 
                     <div className="gallery-item">
-                      <img className="gallery-image" src={art77} alt="art77"/>
+                      <img className="gallery-image" src={art77} alt="art77" />
                     </div>
 
                     <div className="gallery-item">
-                      <img className="gallery-image" src={art33} alt="art33"/>
+                      <img className="gallery-image" src={art33} alt="art33" />
                     </div>
 
                     <div className="gallery-item">
-                      <img className="gallery-image" src={art55} alt="art55"/>
+                      <img className="gallery-image" src={art55} alt="art55" />
                     </div>
 
                     <div className="gallery-item">
-                      <img className="gallery-image" src={art44} alt="art44"/>
+                      <img className="gallery-image" src={art44} alt="art44" />
                     </div>
 
                     <div className="gallery-item">
-                      <img className="gallery-image" src={art66} alt="art66"/>
+                      <img className="gallery-image" src={art66} alt="art66" />
                     </div>
 
                     <div className="gallery-item">
-                      <img className="gallery-image" src={art22} alt="art22"/>
+                      <img className="gallery-image" src={art22} alt="art22" />
                     </div>
 
                   </div>
@@ -933,7 +933,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 </li>
 
-                <li><img src={B2} alt="B2"/>
+                <li><img src={B2} alt="B2" />
 
                 </li>
 
@@ -941,7 +941,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 </li>
 
-                <li><img style={{ filter: "invert(1)" }} src={B4} alt="B4"/>
+                <li><img style={{ filter: "invert(1)" }} src={B4} alt="B4" />
 
                 </li>
               </ul>}
@@ -1011,25 +1011,25 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
             <div style={{ margin: '0px auto' }}>
               <ul className='CountryLogos2'>
-                <li><img src={Flag1} alt="Flag1"/>
+                <li><img src={Flag1} alt="Flag1" />
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United States</div>}</li>
 
-                <li><img src={Flag2} alt="Flag2"/>
+                <li><img src={Flag2} alt="Flag2" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United Kingdom</div>}</li>
 
-                <li><img src={Flag3} alt="Flag3"/>
+                <li><img src={Flag3} alt="Flag3" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Canada</div>}</li>
 
-                <li><img src={Flag4} alt="Flag4"/>
+                <li><img src={Flag4} alt="Flag4" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Sweden</div>}</li>
-                <li><img src={Flag5} alt="Flag5"/>
+                <li><img src={Flag5} alt="Flag5" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Germany</div>}</li>
