@@ -45,7 +45,6 @@
   font-weight: 500;
   background: #222;
 }
-
 .card__collection {
   position: relative;
   display: block;
@@ -215,7 +214,6 @@
   width: 85%;
     margin: 0px auto;
 }
-
 .photos{
   margin: 5px 0px;
   max-width: 360px;
@@ -250,7 +248,6 @@ justify-content: center;
   width: 100%;
   bottom: 0;
   }
-  
   .cardss {
   border-radius: 0px;
   height: 450px;
@@ -262,7 +259,6 @@ justify-content: center;
   box-shadow: 0 0 50px -10px black;
   overflow: hidden;
   }
-  
   .cardss-blur {
   position: absolute;
   height: 100%;
@@ -271,15 +267,11 @@ justify-content: center;
   opacity: 0;
   transition: opacity 0.15s ease-in;
   }
-  
   .cardss:hover .cardss-blur {
   opacity: 0.6;
   filter: blur(8px);
   -webkit-filter: blur(8px);
   }
-  
-  
-  
   svg#curves {
   position: absolute;
   fill: white;
@@ -296,8 +288,7 @@ justify-content: center;
     right: 0;
     bottom: 100px;
     margin: auto;
-    }
-    
+  }  
     .connection {
     display: inline-block;
     padding: 5px;
