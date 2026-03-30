@@ -9,7 +9,7 @@
   <title>Backstage Pass</title>
   <meta property="og:image" content="https://backstagepass.co.in/newlogo.webp" />
   <meta property="og:type" content="website">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <!-- Font Optimization -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,10 +22,10 @@
 
   <!-- ✅ LCP Image Preloads -->
   <!-- Mobile -->
-  <link rel="preload" as="image" href="/img/mobilebanner/homepagebanner/NewCampus.webp" media="(max-width:768px)"
-    fetchpriority="high" />
+  <link rel="preload" as="image" href="/img/mobilebanner/homepagebanner/NewCampus.webp" media="(max-width: 768px)">
+
   <!-- Desktop -->
-  <link rel="preload" as="image" href="/img/banners/NewCampus.webp" media="(min-width:769px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/img/banners/NewCampus.webp" media="(min-width: 769px)">
 
   <!-- Defer GTM -->
   <!---vijetha gtm code updated-->
@@ -42,23 +42,23 @@
     })(window, document, 'script', 'dataLayer', 'GTM-PSDKPTHZ');
 
   </script> -->
-<script>
-window.addEventListener("load", function () {
-  (function (w, d, s, l, i) {
-    w[l] = w[l] || [];
-    w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+  <script>
+    window.addEventListener("load", function () {
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
 
-    var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
 
-    j.async = true;
-    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-    f.parentNode.insertBefore(j, f);
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
 
-  })(window, document, 'script', 'dataLayer', 'GTM-PSDKPTHZ');
-});
-</script>
+      })(window, document, 'script', 'dataLayer', 'GTM-PSDKPTHZ');
+    });
+  </script>
 
 </head>
 

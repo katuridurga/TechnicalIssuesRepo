@@ -4,6 +4,7 @@ import AnimatedText from "../components/AC-StaticPages/landingpage/AnimatedText"
 import anand84 from "../assets/img/test/AnandDhwale-84w.webp";
 import anand168 from "../assets/img/test/AnandDhwale-168w.webp";
 import anand42 from "../assets/img/test/AnandDhwale-42w.webp";
+import anand60 from "../assets/img/test/AnandDhwale60w.webp";
 
 /* =========================
    TESTIMONIAL DATA
@@ -38,7 +39,7 @@ const testimonials = [
     text: "One of the best aspects of Backstage Pass is that it gives you the option to interact with a lot of individuals who have a strong interest in game development and the freedom to work together with students from other streams, such as design or art, to create incredible outcomes.",
     name: "Anand Dhavle",
     role: "Gameplay Programmer, Tarsier Studios, Sweden",
-   avatar: "https://www.backstagepass.co.in/AnandDhwale-da6efb8f.webp?img=5&w=60&h=70",
+    avatar: "https://www.backstagepass.co.in/AnandDhwale60w.webp?img=5&w=60&h=70",
   },
   {
     text: "Innovation and adaptability are crucial for growth in the modern generation. Therefore, we require a creative and determined workforce. Students from Backstage Pass have excelled in both of these areas. We were very impressed with how they questioned the status quo and developed more effective working methods.",
@@ -283,12 +284,11 @@ const Testimonials = () => {
                     <div className="maintestimonial-profile">
                       {item.avatar === "anand" ? (
                         <img
-                          src={anand42}
-                          srcSet={`${anand42} 42w, ${anand84} 84w, ${anand168} 168w`}
-                          sizes="42px"
-                          width="42"
-                          height="50"
+                          src={anand60}
                           alt="Anand Dhwale"
+                            width="60"
+                            height="70"
+                          loading="lazy"
                         />
                       ) : (
                         <img src={item.avatar} alt={item.name} />

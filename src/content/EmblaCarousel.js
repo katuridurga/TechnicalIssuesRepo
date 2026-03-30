@@ -122,27 +122,30 @@ const EmblaCarousel = (props) => {
                 />
               </picture> */}
               <picture>
-                {/* Mobile banner */}
+                {/* Mobile */}
                 <source
                   srcSet={mbnewban0}
                   media="(max-width: 768px)"
                 />
+
+                {/* Desktop responsive */}
                 <source
                   srcSet={`
-                ${newban1400} 400w,
-                ${newban1800} 800w,
-                ${newban11200} 1200w,
-                ${newban1} 1500w
-              `}
-                  sizes="1340px"
+      ${newban1400} 400w,
+      ${newban1800} 800w,
+      ${newban11200} 1200w,
+      ${newban1} 1500w
+    `}
+                  sizes="100vw"
                 />
 
-                {/* Fallback image */}
+                {/* LCP image */}
                 <img
                   src={newban1800}
                   alt="Backstage Pass New campus"
                   width="1526"
                   height="450"
+                  loading="eager"
                   fetchPriority="high"
                   decoding="async"
                   style={{ width: "100%", height: "auto" }}
@@ -207,7 +210,7 @@ const EmblaCarousel = (props) => {
                   style={{ width: "100%", margin: "0 auto" }}
                 />
               </picture> */}
-                           <picture>
+              <picture>
                 {/* Mobile banner */}
                 <source
                   srcSet={mbnewban3}
