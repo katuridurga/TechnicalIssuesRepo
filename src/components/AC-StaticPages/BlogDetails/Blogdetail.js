@@ -608,6 +608,56 @@ window.addEventListener('beforeunload', function (event) {
     })}
   </script>
 )}
+{Number(event.event_id) === 107 && (
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who earns more: a game developer or a software developer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Software developers have higher average salaries in India right now, but the gap is narrowing and highly context-dependent. At the entry level, salaries are nearly identical (₹3–6 LPA). The gap widens at mid and senior levels, but game developers with AR/VR specialisations, remote global roles, or indie success stories regularly match or exceed software engineering salaries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is game development a high-paying career in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Increasingly, yes. AR/VR and AI game development roles pay ₹10–20 LPA at mid-level and ₹18–30 LPA+ for senior specialists. Remote roles with global AAA studios can push earnings to $50,000–$100,000 per year. The overall market is still maturing, but the ceiling is rising fast, and game developers who specialise early are already earning at the top of the tech salary range."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why are game developer salaries lower than those of software developers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Indian game development market is younger and smaller than the enterprise IT sector, but that’s exactly what makes it such an exciting opportunity. The gap exists because studios historically operated on thin-margin mobile models, and the developer base is relatively small. Both of those conditions are changing rapidly: VC investment is surging, global studios are expanding in India, and the government’s AVGC-XR push is creating institutional support for the industry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can game developers earn like software engineers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and many already do. AR/VR specialists, AI game developers, remote AAA hires, and successful indie developers all earn at or above software engineering levels. The path requires deliberate skill investment and sometimes global job searching, but it is absolutely achievable. Game developers also have the additional upside of indie revenue, which no software engineering salary can replicate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is gaming a stable career option in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with nuance. India’s gaming market is growing at 15% annually toward a $7 billion target, the government has created dedicated policy support through AVGC-XR, and global studios are actively expanding their India presence. Early-stage industries carry more variance than mature ones, but for a developer building the right skills, game development in 2026 offers exceptional long-term upside with a very strong trajectory."
+          }
+        }
+      ]
+    })}
+  </script>
+)}
 
         <title>{event.meta_tittle}</title>
         <meta property="og:title" content={event.meta_tittle} />

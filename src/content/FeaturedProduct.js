@@ -103,13 +103,13 @@ function HomeContent() {
             <h2 className="mainHeadingTotal"> About Us </h2>
 
 
-            <p class="text" style={{ fontSize: "16px", marginBottom: "20px" }}>
+            <p className="text" style={{ fontSize: "16px", marginBottom: "20px" }}>
               Founded in 2010, Backstage Pass Institute of Gaming is recognised as one of the best game development colleges in India. We offer comprehensive <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/courses/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank"> game design and development courses</a></b>, including Bachelor's, Master's, Diploma, and Advanced Diploma programs.
             </p>
-            <p class="text" style={{ fontSize: "16px", marginBottom: "20px" }}>
+            <p className="text" style={{ fontSize: "16px", marginBottom: "20px" }}>
               Our founder and chairman, Mr Surya P, is a visionary and a pioneer in the Indian gaming industry and education. <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/life-at-bsp/alumni-success/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank"> Alumni from Backstage Pass</a></b> now work at top game studios across India and abroad, reflecting the strong industry connections and real-world exposure our students gain.
             </p>
-            <p class="text" style={{ fontSize: "16px" }}>
+            <p className="text" style={{ fontSize: "16px" }}>
               We also offer an  <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="/life-at-bsp/accelerator-program/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank">accelerator program </a></b>to help students build a professional portfolio and gain hands-on experience with real games. As part of our commitment to industry-focused gaming courses, we emphasise practical learning to ensure students develop a deep understanding of both creative and technical aspects of gaming.
             </p>
             <Link style={{ display: "flex", justifyContent: "center" }} to={"/about-us/our-story/"}> <button style={{ width: "fit-content", float: "right", marginTop: isMobileState ? '30px' : "0px", color: "#fff" }} className='three button brand size200 w-full sm:w-auto' type="button">Know More <FiArrowRight style={{ marginLeft: "7px", color: "#fff" }} /></button></Link>

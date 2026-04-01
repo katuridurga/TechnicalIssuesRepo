@@ -21,7 +21,8 @@ import newban31200 from "../assets/img/banners/alumni-1200w.webp";
 import mbnewban0 from "../assets/img/mobilebanner/homepagebanner/igdcbm.webp";
 import mbnewbanF from "../assets/img/mobilebanner/homepagebanner/NewCampus.webp";
 import mbnewban3 from "../assets/img/mobilebanner/homepagebanner/alumni.webp";
-
+import clgband from "../assets/img/banners/Collage-Desktop-Banner.webp";
+import clgbanm from "../assets/img/mobilebanner/homepagebanner/Collage-Mobile-Banner.webp";
 
 const TWEEN_FACTOR_BASE = 0.84
 
@@ -105,10 +106,39 @@ const EmblaCarousel = (props) => {
 
   return (
     <div>
+
       <div className="embla">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
-            <div className="embla__slide" key={0}>
+          
+  <div className="embla__slide" key={0}>
+    <div className="banner-wrapper">
+      <picture>
+        {/* Mobile banner */}
+        <source srcSet={clgbanm} media="(max-width: 768px)" />
+
+        {/* Desktop banner */}
+        <img
+          src={clgband}
+          alt="gaming college"
+          width={1526}
+          height={450}
+          className="banner-img"
+        />
+      </picture>
+ <div className="banner-overlay"></div>
+      {/* Centered Content */}
+      <div className="banner-content">
+        <h1 className="title1 white-txt"><span>India's #1</span> Game Design & Development College</h1>
+        <div >
+           <a className='banenbtn animated-button' href="/courses/" target="_blank">View Courses</a>
+          <a className='banenbtn2 animated-button' href="/enquire-now/">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+            <div className="embla__slide" key={1}>
               {/* <picture>
                 <source srcSet={mbnewban0} media="(max-width: 768px)" />
                 <img
@@ -131,12 +161,12 @@ const EmblaCarousel = (props) => {
                 {/* Desktop responsive */}
                 <source
                   srcSet={`
-      ${newban1400} 400w,
-      ${newban1800} 800w,
-      ${newban11200} 1200w,
-      ${newban1} 1500w
-    `}
-                  sizes="100vw"
+                      ${newban1400} 400w,
+                      ${newban1800} 800w,
+                      ${newban11200} 1200w,
+                      ${newban1} 1500w
+                    `}
+                     sizes="100vw"
                 />
 
                 {/* LCP image */}
@@ -146,7 +176,7 @@ const EmblaCarousel = (props) => {
                   width="1526"
                   height="450"
                   loading="eager"
-                  fetchPriority="high"
+                  fetchpriority="high"
                   decoding="async"
                   style={{ width: "100%", height: "auto" }}
                 />
@@ -172,31 +202,27 @@ const EmblaCarousel = (props) => {
                   srcSet={mbnewbanF}
                   media="(max-width: 768px)"
                 />
-
                 {/* Desktop responsive images */}
                 <source
-                  srcSet={`
-                ${newban400} 400w,
-                ${newban800} 800w,
-                ${newban1200} 1200w,
-                ${newbanF} 1500w
-              `}
+                      srcSet={`
+                    ${newban400} 400w,
+                    ${newban800} 800w,
+                    ${newban1200} 1200w,
+                    ${newbanF} 1500w
+                  `}
                   sizes="1340px"
                 />
-
                 {/* Fallback image */}
                 <img
                   src={newban800}
                   alt="Backstage Pass New campus"
                   width="1526"
                   height="450"
-                  fetchPriority="high"
+                  fetchpriority="high"
                   decoding="async"
                   style={{ width: "100%", height: "auto" }}
                 />
               </picture>
-
-
             </div>
             <div className="embla__slide" key={3}>
               {/* <picture>
@@ -216,7 +242,6 @@ const EmblaCarousel = (props) => {
                   srcSet={mbnewban3}
                   media="(max-width: 768px)"
                 />
-
                 {/* Desktop responsive images */}
                 <source
                   srcSet={`
@@ -227,13 +252,12 @@ const EmblaCarousel = (props) => {
               `}
                   sizes="1340px"
                 />
-
                 <img
                   src={newban3800}
                   alt="Backstage Pass New campus"
                   width="1526"
                   height="450"
-                  fetchPriority="high"
+                  fetchpriority="high"
                   decoding="async"
                   style={{ width: "100%", height: "auto" }}
                 />

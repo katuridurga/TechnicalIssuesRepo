@@ -13,7 +13,7 @@ import Youtube from "../../assets/img/Icons/Youtube.webp";
 import { CiYoutube } from "react-icons/ci";
 import { RiDiscordLine } from "react-icons/ri";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
-import { RiLinkedinLine} from "react-icons/ri";
+import { RiLinkedinLine } from "react-icons/ri";
 import { FaPaperPlane, FaPhone } from "react-icons/fa";
 import { CiPhone, CiMail } from "react-icons/ci";
 import axios from "axios";
@@ -32,8 +32,6 @@ function Footer() {
   const [openForm, setOpenForm] = useState(false);
   const path = window.location.pathname;
 
-
-
   const shortHeightPaths = [
     "/landingpage/diploma-and-advanced-diploma-courses/",
     "/landingpage/diploma-and-advanced-diploma-gaming-courses-test/",
@@ -42,11 +40,11 @@ function Footer() {
     "/landingpage/certificate-program-in-prototyping-and-game-concept-development/"
 
   ];
-const isMayaMobile =
-  path === "/landingpage/basics-of-maya-online-certification/" &&
-  isMobileState;
-const isMayaPage =
-  path === "/landingpage/basics-of-maya-online-certification/";
+  const isMayaMobile =
+    path === "/landingpage/basics-of-maya-online-certification/" &&
+    isMobileState;
+  const isMayaPage =
+    path === "/landingpage/basics-of-maya-online-certification/";
 
   const testFooterPaths = [
     "/landingpage/diploma-and-advanced-diploma-courses/",
@@ -75,7 +73,6 @@ const isMayaPage =
     "/landingpage/certified-diploma-game-design-with-unreal-blueprints/",
     "/landingpage/certified-diploma-unreal-game-development/",
     "/landingpage/certified-diploma-unity-game-development/",
-
   ];
 
   const mobileFooterHidePaths = [
@@ -98,7 +95,6 @@ const isMayaPage =
     "/landingpage/certificate-program-in-basics-of-maya/"
   ];
 
-
   // ✅ Derived booleans for cleaner conditions
   const isShortHeight = shortHeightPaths.includes(path);
   const isTestFooter = testFooterPaths.includes(path);
@@ -112,7 +108,7 @@ const isMayaPage =
     "/landingpage/game-development-with-unity-programs/",
     "/landingpage/game-development-with-unreal-programs/",
     "/landingpage/certificate-program-in-prototyping-and-game-concept-development/",
-"/landingpage/basics-of-maya-online-certification/",
+    "/landingpage/basics-of-maya-online-certification/",
 
   ];
   //   const specialHeightPaths1 = [
@@ -120,26 +116,26 @@ const isMayaPage =
 
   // ];
 
-const computedHeight =
-  path === "/landingpage/basics-of-maya-online-certification/"
-    ? isMobileState
+  const computedHeight =
+    path === "/landingpage/basics-of-maya-online-certification/"
+      ? isMobileState
         ? "250px"       // mobile height (keep as you want)
         : "200px"       // ✅ desktop min-height
-    : path === "/landingpage/certificate-program-in-basics-of-maya/"
-    ? isMobileState
-        ? "750px"
-        : "550px"
-    : specialHeightPaths.includes(path)
-      ? isMobileState
-        ? "250px"
-        : "400px"
-      : isShortHeight
+      : path === "/landingpage/certificate-program-in-basics-of-maya/"
         ? isMobileState
-          ? "250px"
-          : "300px"
-        : isMobileState
-          ? "800px"
-          : "400px";
+          ? "750px"
+          : "550px"
+        : specialHeightPaths.includes(path)
+          ? isMobileState
+            ? "250px"
+            : "400px"
+          : isShortHeight
+            ? isMobileState
+              ? "250px"
+              : "300px"
+            : isMobileState
+              ? "800px"
+              : "400px";
 
   const [formData, setFormData] = useState({
     name: "",
@@ -321,11 +317,10 @@ const computedHeight =
           <div className="sm:max-w-[480px] lg:max-w-[560px]" style={{ maxWidth: "100%" }}>
             <div className="">
               <div className="grid-cols-1 sm:grid-cols-2 gap-3 mt-3 sm:mt-5" style={{ width: "100%" }}>
-              <div
-  className={`${
-    isTestFooter ? "testfooter" : "footer-wrapper"
-  } ${isMayaPage ? "maya-footer-reset" : ""}`}
->
+                <div
+                  className={`${isTestFooter ? "testfooter" : "footer-wrapper"
+                    } ${isMayaPage ? "maya-footer-reset" : ""}`}
+                >
 
 
                   {/* 🔹 Mobile Footer */}
@@ -352,16 +347,16 @@ const computedHeight =
                   {/* 🔹 Floating WhatsApp */}
                   {isMobileState ? (
                     <div className="floatingIcon" style={{
-                               display: hiddenPaths.includes(window.location.pathname) ? "none" : "flex"
-                            }}>
+                      display: hiddenPaths.includes(window.location.pathname) ? "none" : "flex"
+                    }}>
                       <div className="App">
                         <ReactWhatsappButton
-                          countryCode="91"
-                          phoneNumber="8008002795"
+                          countrycode="91"
+                          phonenumber="8008002795"
                           style={{
                             right: "0.6rem !important",
                             bottom: "9rem !important",
-                            position:"fixed !important",
+                            position: "fixed !important",
                           }}
                           className="whatsappsivak"
                         />
@@ -369,17 +364,17 @@ const computedHeight =
                     </div>
                   ) : (
                     <div className="floatingIcon" style={{
-                               display: hiddenPaths.includes(window.location.pathname) ? "none" : "flex"
-                            }}>
+                      display: hiddenPaths.includes(window.location.pathname) ? "none" : "flex"
+                    }}>
                       <div className="floatingIcon enq-fix-strip">
                         <div className="App">
 
                           <a
                             href="tel:+918008002795"
-                            countryCode="91"
+                            countrycode="91"
                             aria-label="Chat with us on WhatsApp durga3"
-                            phoneNumber="8008002795"
-                          
+                            phonenumber="8008002795"
+
                             className="whatsappsivak"
                           >
                             <FaWhatsapp style={{ color: "#fff", fontSize: "28px" }} />
@@ -393,7 +388,7 @@ const computedHeight =
                               backgroundPosition: "center center",
                               backgroundRepeat: "no-repeat",
                               backgroundSize: "40%",
-                             
+
                             }}
                           >
                             <IoIosCall style={{ color: "#fff", fontSize: "28px" }} />
@@ -517,125 +512,124 @@ const computedHeight =
                       </LazyLoad>
                     </div>
                   )}
-{/* 🔹 Download Brochure */}
-{!hideAllFooter &&
-  window.location.pathname !==
-    "/landingpage/certificate-program-in-basics-of-maya/" && (
-  <div className="foot-details brchrbtn">
-    <LazyLoad height={76} offset={100} fadein={true}>
-      <div className="foot-item fadeInUp anime-delay3">
-        <div
-          className="glowing-button1"
-          onClick={() => setOpenForm(true)}
-          style={{ cursor: "pointer" }}
-        >
-          <div className="call-info1">
-            <div className="call-title1">Download Brochure</div>
-          </div>
-        </div>
-      </div>
-    </LazyLoad>
-  </div>
-)}
+                  {/* 🔹 Download Brochure */}
+                  {!hideAllFooter &&
+                    window.location.pathname !==
+                    "/landingpage/certificate-program-in-basics-of-maya/" && (
+                      <div className="foot-details brchrbtn">
+                        <LazyLoad height={76} offset={100} fadein={true}>
+                          <div className="foot-item fadeInUp anime-delay3">
+                            <div
+                              className="glowing-button1"
+                              onClick={() => setOpenForm(true)}
+                              style={{ cursor: "pointer" }}
+                            >
+                              <div className="call-info1">
+                                <div className="call-title1">Download Brochure</div>
+                              </div>
+                            </div>
+                          </div>
+                        </LazyLoad>
+                      </div>
+                    )}
 
 
 
-                 {/* 🔹 Compact Contact Info for certain landing pages */}
-{isTestFooter && (
-  <div
-    className={`foot-details lfootdetails ${
-      isMayaPage ? "maya-foot-spacing" : ""
-    }`}
-  >
-    <LazyLoad height={76} offset={100} fadein={true}>
-      <div className="foot-item fadeInUp anime-delay3">
-        <h3 className="footer-title" style={{ textAlign: "center" }}>
-          Contact Info
-        </h3>
+                  {/* 🔹 Compact Contact Info for certain landing pages */}
+                  {isTestFooter && (
+                    <div
+                      className={`foot-details lfootdetails ${isMayaPage ? "maya-foot-spacing" : ""
+                        }`}
+                    >
+                      <LazyLoad height={76} offset={100} fadein={true}>
+                        <div className="foot-item fadeInUp anime-delay3">
+                          <h3 className="footer-title" style={{ textAlign: "center" }}>
+                            Contact Info
+                          </h3>
 
-        <div className="contact-wrapper">
+                          <div className="contact-wrapper">
 
-          {/* 📌 Maya Page Contact */}
-          {isMayaPage ? (
-            <>
-              <div className="cont1">
-                <div className="contact-wrapper-inner" style={{ justifyContent: "center" }}>
-                  <CiPhone className="iconsmain" />
-                  <div>
-                    <p>
-                      <a
-                        href="tel:+918065912040"
-                        className="phone-number"
-                        rel="noopener noreferrer"
-                      >
-                        +91 80659 12040
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
+                            {/* 📌 Maya Page Contact */}
+                            {isMayaPage ? (
+                              <>
+                                <div className="cont1">
+                                  <div className="contact-wrapper-inner" style={{ justifyContent: "center" }}>
+                                    <CiPhone className="iconsmain" />
+                                    <div>
+                                      <p>
+                                        <a
+                                          href="tel:+918065912040"
+                                          className="phone-number"
+                                          rel="noopener noreferrer"
+                                        >
+                                          +91 80659 12040
+                                        </a>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
 
-              <div className="cont1">
-                <div className="contact-wrapper-inner">
-                  <CiMail className="iconsmain" />
-                  <div>
-                    <p>
-                      <a
-                        href="mailto:learning@backstagepass.co.in"
-                        className="phone-number"
-                        rel="noopener noreferrer"
-                      >
-                        learning@backstagepass.co.in
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </>
-          ) : (
-            /* 📌 Default Contact (Other Landing Pages) */
-            <>
-              <div className="cont1">
-                <div className="contact-wrapper-inner">
-                  <CiPhone className="iconsmain" />
-                  <div>
-                    <p>
-                      <a
-                        href="tel:+918008002794"
-                        className="phone-number"
-                        rel="noopener noreferrer"
-                      >
-                        +91-8008002794
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
+                                <div className="cont1">
+                                  <div className="contact-wrapper-inner">
+                                    <CiMail className="iconsmain" />
+                                    <div>
+                                      <p>
+                                        <a
+                                          href="mailto:learning@backstagepass.co.in"
+                                          className="phone-number"
+                                          rel="noopener noreferrer"
+                                        >
+                                          learning@backstagepass.co.in
+                                        </a>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </>
+                            ) : (
+                              /* 📌 Default Contact (Other Landing Pages) */
+                              <>
+                                <div className="cont1">
+                                  <div className="contact-wrapper-inner">
+                                    <CiPhone className="iconsmain" />
+                                    <div>
+                                      <p>
+                                        <a
+                                          href="tel:+918008002794"
+                                          className="phone-number"
+                                          rel="noopener noreferrer"
+                                        >
+                                          +91-8008002794
+                                        </a>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
 
-              <div className="cont1">
-                <div className="contact-wrapper-inner">
-                  <CiPhone className="iconsmain" />
-                  <div>
-                    <p>
-                      <a
-                        href="tel:+918008002795"
-                        className="phone-number"
-                        rel="noopener noreferrer"
-                      >
-                        +91-8008002795
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </>
-          )}
+                                <div className="cont1">
+                                  <div className="contact-wrapper-inner">
+                                    <CiPhone className="iconsmain" />
+                                    <div>
+                                      <p>
+                                        <a
+                                          href="tel:+918008002795"
+                                          className="phone-number"
+                                          rel="noopener noreferrer"
+                                        >
+                                          +91-8008002795
+                                        </a>
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </>
+                            )}
 
-        </div>
-      </div>
-    </LazyLoad>
-  </div>
-)}
+                          </div>
+                        </div>
+                      </LazyLoad>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -651,11 +645,10 @@ const computedHeight =
 
             <div>
               <LazyLoad height={76} offset={100} fadein={true}>
-                  <div
-  className={`foot-item fadeInUp anime-delay3 ${
-    isMayaMobile ? "socialiconsmt5" : "socialiconsmt20"
-  }`}
->
+                <div
+                  className={`foot-item fadeInUp anime-delay3 ${isMayaMobile ? "socialiconsmt5" : "socialiconsmt20"
+                    }`}
+                >
 
                   {!hideAllFooter && (
                     <div className="contact-wrapper ftr">
@@ -728,21 +721,21 @@ const computedHeight =
                 </div>
               </LazyLoad>
 
-             {path !== "/intermediate-board-results/" && (
-  <LazyLoad height={76} offset={100} fadein={true}>
-    {isMayaPage ? (
-      /* 🔹 Only for Maya Landing Page */
-      <div
-        className="row fc fadeInUp anime-delay2"
-        style={{ marginBottom: isMobileState ? "5rem" : "0rem" }}
-      >
-        <div className="col-lg-6 col-sm-6 col-xs-12">
-          <div className="footer_copyright">
-            <p>© 2026. All Rights Reserved.</p>
-          </div>
-        </div>
+              {path !== "/intermediate-board-results/" && (
+                <LazyLoad height={76} offset={100} fadein={true}>
+                  {isMayaPage ? (
+                    /* 🔹 Only for Maya Landing Page */
+                    <div
+                      className="row fc fadeInUp anime-delay2"
+                      style={{ marginBottom: isMobileState ? "5rem" : "0rem" }}
+                    >
+                      <div className="col-lg-6 col-sm-6 col-xs-12">
+                        <div className="footer_copyright">
+                          <p>© 2026. All Rights Reserved.</p>
+                        </div>
+                      </div>
 
-        {/* <div className="col-lg-6 col-sm-6 col-xs-12">
+                      {/* <div className="col-lg-6 col-sm-6 col-xs-12">
           <div className="footer_menu">
             <ul>
               <li>
@@ -754,18 +747,18 @@ const computedHeight =
             </ul>
           </div>
         </div> */}
-      </div>
-    ) : (
-      /* 🔹 All Other Pages (Keep Existing) */
-      <div
-        className="text-center foot-content fadeInUp anime-delay2"
-        style={{ marginBottom: isMobileState ? "5rem" : "0rem" }}
-      >
-        © A Subsidiary of PVR Memorial Educational Society 2026. All Rights Reserved
-      </div>
-    )}
-  </LazyLoad>
-)}
+                    </div>
+                  ) : (
+                    /* 🔹 All Other Pages (Keep Existing) */
+                    <div
+                      className="text-center foot-content fadeInUp anime-delay2"
+                      style={{ marginBottom: isMobileState ? "5rem" : "0rem" }}
+                    >
+                      © A Subsidiary of PVR Memorial Educational Society 2026. All Rights Reserved
+                    </div>
+                  )}
+                </LazyLoad>
+              )}
             </div>
           </div>
         </div>

@@ -2107,7 +2107,7 @@ width: 100%;
 
 .banner-wrapper {
     width: 100%;
-    max-width: 1364px;
+    /* max-width: 1364px; */
     margin: 0 auto;
     padding-left: 0px;
     padding-right: 0px;
@@ -2180,7 +2180,7 @@ width: 100%;
     padding-left: 0px !important;
 }
   .banner-wrapper {
-    padding-left: 20px;
+    /* padding-left: 20px; */
   }
 
   .discountprice {

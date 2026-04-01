@@ -1226,8 +1226,8 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
         <div className="CousellingButton stickyenq" style={{ background: "#393838f0" }} onClick={scrollToBottom}><a href="#CounsellingOnGamingCareer" style={{ padding: "10px 35px", borderRadius: "0px", background: "linear-gradient(101deg, #ec242d, #ca484d)" }}>Enquire now</a></div>)}
       <div className="App">
         <ReactWhatsappButton
-          countryCode="91"
-          phoneNumber="8977945705"
+          countrycode="91"
+          phonenumber="8977945705"
           style={{ right: isMobileState ? "1.5rem" : "2rem!important", marginBottom: isMobileState ? "3rem" : "-7rem", zIndex: "9999", bottom: "20px !important", position: "fixed", left: "20px" }}
           className="whatsappsivakl"
         />

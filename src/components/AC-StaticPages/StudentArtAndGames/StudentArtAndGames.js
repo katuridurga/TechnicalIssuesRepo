@@ -17,6 +17,10 @@ import art30 from "../../../assets/img/art/Nikhil.png"
 import art31 from "../../../assets/img/art/KhushiNileshPathak-1.png"
 import art32 from "../../../assets/img/art/Mahesh.png"
 import art33 from "../../../assets/img/art/TaniyaDas.png"
+import art34 from "../../../assets/img/art/vijay-sivatej.jpg"
+import art35 from "../../../assets/img/art/soumyadeep.jpg"
+import art36 from "../../../assets/img/art/sudheer.jpg"
+import art37 from "../../../assets/img/art/ishak-mohmmed.jpg"
 import b1 from "../../../assets/img/StudentGames/Student Games/Frame389.webp";
 import b2 from "../../../assets/img/StudentGames/Student Games/Frame390.webp";
 import b3 from "../../../assets/img/StudentGames/Student Games/Frame391.webp";
@@ -56,14 +60,8 @@ import Framew1 from "../../../assets/img/StudentGames/Student Games/Framew.webp"
 import Framet1 from "../../../assets/img/StudentGames/Student Games/Framet.webp";
 import Frame388 from "../../../assets/img/StudentGames/Student Games/Frame388.webp";
 import orbit from "../../../assets/img/StudentGames/Student Games/Frameo.webp";
-
 import { useSelector, shallowEqual } from "react-redux";
-
-
-
 import { Helmet } from "react-helmet";
-
-
 
 function Courses(props) {
   useEffect(() => {
@@ -127,9 +125,7 @@ function Courses(props) {
     { img: b17, title: "Bricker", desc: "Bricker is a quirky voxel action game where you sneak, collect gold, survive as a brick, then activate King Mode for chaotic power." },
     { img: b18, title: "Meteor Strike", desc: "Meteor Strike is an 8-bit space shooter where you blast asteroids, collect coins, fight bosses, dodge patrol ships, and upgrade your craft." },
     { img: b19, title: "Crown Jump", desc: "Crown Jump is a fast, timing-based platformer where a sliding crown must jump perfectly to dodge spikes and reach its throne." },
-
     { img: b21, title: "Squishy", desc: "Squishy is a precision jumping platformer where a jelly leaps upward, aiming perfect jumps or falling back down with no checkpoints." },
-
     { img: b23, title: "Portal Drifters", desc: "Portal Drifters is a powered-up arcade racer where you drift through portals, transition between worlds mid-race, and speed through dynamic dimensions." },
     { img: b24, title: "Last Stand: Wasteland", desc: "Last Stand: Wasteland is a top-down survival shooter where a lone robot battles endless corrupted machines in a post-apocalyptic desert." },
     { img: b25, title: "Lost in the Dungeons", desc: "Lost in the Dungeons is a fantasy puzzle adventure where a brave duck rotates platforms, shifts water, and solves traps to escape a mysterious labyrinth." },
@@ -145,7 +141,6 @@ function Courses(props) {
     { img: b35, title: "Battle M.A.Y.H.E.M", desc: "BATTLE M.A.Y.H.E.M is a chaotic arena brawler packed with lasers, rockets, and wild physics where you outlast friends in explosive battles." },
     { img: Frame61, title: "Chaos Reborn", desc: "Dash, wall-run, slide, and create stylish chaos to earn points, unlock power-ups, control crowds with black holes, and freeze time." },
     { img: Framell, title: "Laser Tanks ", desc: "In Laser Tanks, a pixel roguelike RPG, battle alien forces and eliminate enemies to reclaim Earth’s vital chip and save the world." },
-
     { img: Framet1, title: "Trox", desc: "TROX is a psychological narrative where Marco faces brutal choices and dark truths in a post-World War III world driven by survival." },
     { img: Frame388, title: "Wobble Gobble", desc: "Guide a bouncy jelly cube through colourful isometric levels, using physics-based movement to solve adorable puzzles and explore whimsical worlds." },
   ];
@@ -222,42 +217,42 @@ function Courses(props) {
         <Helmet>
 
           <script type="application/ld+json">
-            {`
-{
-  "@context": "https://schema.org/", 
-  "@type": "BreadcrumbList", 
-  "itemListElement": [{
-    "@type": "ListItem", 
-    "position": 1, 
-    "name": "India’s Best Game Development college | Backstage Pass Institute of Gaming",
-    "item": "https://www.backstagepass.co.in/"  
-  },{
-    "@type": "ListItem", 
-    "position": 2, 
-    "name": "Explore Backstage Pass Institute Students arts and games",
-    "item": "https://www.backstagepass.co.in/life-at-bsp/student-portfolio/"  
-  }]
-}
-`}
+                          {`
+              {
+                "@context": "https://schema.org/", 
+                "@type": "BreadcrumbList", 
+                "itemListElement": [{
+                  "@type": "ListItem", 
+                  "position": 1, 
+                  "name": "India’s Best Game Development college | Backstage Pass Institute of Gaming",
+                  "item": "https://www.backstagepass.co.in/"  
+                },{
+                  "@type": "ListItem", 
+                  "position": 2, 
+                  "name": "Explore Backstage Pass Institute Students arts and games",
+                  "item": "https://www.backstagepass.co.in/life-at-bsp/student-portfolio/"  
+                }]
+              }
+              `}
           </script>
           <script type="application/ld+json">
-            {`
-{
-  "@context": "https://schema.org/",
-  "@type": "WebSite",
-  "name": "Backstage Pass Institute of Gaming",
-  "url": "https://www.backstagepass.co.in/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://www.backstagepass.co.in/life-at-bsp/student-portfolio/{search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-  `}
+                          {`
+              {
+                "@context": "https://schema.org/",
+                "@type": "WebSite",
+                "name": "Backstage Pass Institute of Gaming",
+                "url": "https://www.backstagepass.co.in/",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://www.backstagepass.co.in/life-at-bsp/student-portfolio/{search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              }
+                `}
           </script>
           <title>Explore Backstage Pass Institute Students arts and games</title>
           <meta property="og:title" content="Explore Backstage Pass Institute Students Arts and Games" />
-            <meta name="description" content="See what students at Backstage Pass are building—from concept art to full-fledged games. A creative space where learning turns into real projects." />
+          <meta name="description" content="See what students at Backstage Pass are building—from concept art to full-fledged games. A creative space where learning turns into real projects." />
           <meta property="og:description" name="description" content="See what students at Backstage Pass are building—from concept art to full-fledged games. A creative space where learning turns into real projects." />
           <meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/student-portfolio/" />
           <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/student-portfolio/" />
@@ -273,10 +268,14 @@ function Courses(props) {
 
         </div>
         <section className="photos">
+          {/* <div className="ph" data-type="3D Artwork"><img src={art34} alt="art4" /></div>
+          <div className="ph" data-type="2D Artwork"><img src={art35} alt="art7" /></div>
+           <div className="ph" data-type="3D Artwork"><img src={art37} alt="art5" /></div> */}
           <div className="ph" data-type="3D Artwork"><img src={art17} alt="art4" /></div>
           <div className="ph" data-type="2D Artwork"><img src={art27} alt="art7" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art18} alt="art5" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art19} alt="art7" /></div>
+          {/* <div className="ph" data-type="3D Artwork"><img src={art36} alt="art5" /></div> */}
           <div className="ph" data-type="3D Artwork"><img src={art20} alt="art6" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art21} alt="art8" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art22} alt="art2" /></div>
@@ -285,41 +284,19 @@ function Courses(props) {
           <div className="ph" data-type="3D Artwork"><img src={art24} alt="art9" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art25} alt="art10" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art26} alt="art11" /></div>
-
           <div className="ph" data-type="2D Artwork"><img src={art28} alt="art6" /></div>
           <div className="ph" data-type="2D Artwork"><img src={art29} alt="art8" /></div>
           <div className="ph" data-type="2D Artwork"><img src={art30} alt="art2" /></div>
           <div className="ph" data-type="2D Artwork"><img src={art31} alt="art3" /></div>
           <div className="ph" data-type="2D Artwork"><img src={art32} alt="art9" /></div>
-
-          {/* <div className="ph" data-type="3D Artwork"><img src={art1} alt="art1" /></div>
-  <div className="ph" data-type="2D Artwork"><img src={art4} alt="art4" /></div>
-  <div className="ph" data-type="3D Artwork"><img src={art5} alt="art5" /></div>
-  <div className="ph" data-type="2D Artwork"><img src={art7} alt="art7" /></div>
-  <div className="ph" data-type="3D Artwork"><img src={art6} alt="art6" /></div>
-  <div className="ph" data-type="2D Artwork"><img src={art8} alt="art8" /></div>
-  <div className="ph" data-type="3D Artwork"><img src={art2} alt="art2" /></div>
-  <div className="ph" data-type="2D Artwork"><img src={art3} alt="art3" /></div>
-  <div className="ph" data-type="3D Artwork"><img src={art9} alt="art9" /></div>
-  <div className="ph" data-type="2D Artwork"><img src={art10} alt="art10" /></div>
-  <div className="ph" data-type="3D Artwork"><img src={art11} alt="art11" /></div>
-  <div className="ph" data-type="2D Artwork"><img src={art12} alt="art12" /></div>
-  <div className="ph" data-type="3D Artwork"><img src={art13} alt="art13" /></div>
-  <div className="ph" data-type="2D Artwork"><img src={art14} alt="art14" /></div>
-  <div className="ph" data-type="3D Artwork"><img src={art15} alt="art15" /></div>
-  <div className="ph" data-type="2D Artwork"><img src={art16} alt="art16" /></div> */}
+         
         </section>
-
-
-
-
-
 
         <h2 className="mainHeadingTotal">Student Games
         </h2>
         <p className='suprts'> At <b style={{ fontSize: "16px", color: '#ed1925' }}>
-                  <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">Backstage Pass</a></b>, we celebrate and recognize exceptional achievements in game development, <b style={{ fontSize: "16px", color: '#ed1925' }}>
-                  <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">game art and design</a></b>. Our awards honor students for their innovation, dedication, and talent, distinguishing them as future leaders in the industry. These awards extend beyond internal recognition, encompassing students who excel in external competitions.</p>
+          <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">Backstage Pass</a></b>, we celebrate and recognize exceptional achievements in game development, <b style={{ fontSize: "16px", color: '#ed1925' }}>
+            <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">game art and design</a></b>. Our awards honor students for their innovation, dedication, and talent, distinguishing them as future leaders in the industry. These awards extend beyond internal recognition, encompassing students who excel in external competitions.</p>
         {isMobileState ? (
           /* MOBILE → Show all cards */
           <div className="containerga">

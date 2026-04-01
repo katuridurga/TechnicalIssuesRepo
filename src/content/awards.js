@@ -34,8 +34,8 @@ function Awards() {
                         <div className="">
                             <div className="container grid-cols-1 sm:grid-cols-2 gap-3 mt-3 sm:mt-5 lg:mt-6" style={{ width: "100%" }}>
 
-                                <div class="containergawardh">
-                                    <div class="cardsgawardh">
+                                <div className="containergawardh">
+                                    <div className="cardsgawardh">
                                         {/* <img src={aw25} alt="ET Industry Achievers 2025" width="310" height="298" /> */}
                                         <img
                                             src={aw25310}   // smallest image as default
@@ -52,12 +52,12 @@ function Awards() {
 
 
                                         <p>2025</p>
-                                        <div class="overlaysawardh">
+                                        <div className="overlaysawardh">
                                             <h3>ET Industry Achievers <br /><br /> 2025 </h3>
 
                                         </div>
                                     </div>
-                                    <div class="cardsgawardh">
+                                    <div className="cardsgawardh">
                                         <img
                                             src={aw24310}   // smallest image as default
                                             srcSet={`${aw24310} 310w,${aw24} 365w`}
@@ -71,12 +71,12 @@ function Awards() {
                                             style={{ width: "100%", height: "auto" }}
                                         />
                                         <p>2024</p>
-                                        <div class="overlaysawardh">
+                                        <div className="overlaysawardh">
                                             <h3>Times Education Excellence Award <br /><br />  2024</h3>
 
                                         </div>
                                     </div>
-                                    <div class="cardsgawardh">
+                                    <div className="cardsgawardh">
                                         {/* <img src={bui6} alt="EduSpark Awards 2023" width="365" height="298"/> */}
                                           <img
                                             src={bui6310}   // smallest image as default
@@ -91,12 +91,12 @@ function Awards() {
                                             style={{ width: "100%", height: "auto" }}
                                         />
                                         <p>2023</p>
-                                        <div class="overlaysawardh">
+                                        <div className="overlaysawardh">
                                             <h3>EduSpark Awards  <br /><br />  2023</h3>
 
                                         </div>
                                     </div>
-                                    <div class="cardsgawardh">
+                                    <div className="cardsgawardh">
                                         {/* <img src={aw23} alt="Times Education Award 2023" width="365" height="298"/> */}
                                          <img
                                             src={aw23310}   // smallest image as default
@@ -111,13 +111,13 @@ function Awards() {
                                             style={{ width: "100%", height: "auto" }}
                                         />
                                         <p>2023</p>
-                                        <div class="overlaysawardh">
+                                        <div className="overlaysawardh">
                                             <h3>Times Education Excellence Award <br /><br />  2023</h3>
 
                                         </div>
                                     </div>
 
-                                    <div class="cardsgawardh">
+                                    <div className="cardsgawardh">
                                         {/* <img src={aw22} alt="Times Education Award 2022" width="365" height="298"/> */}
                                         
                                         <img
@@ -133,11 +133,11 @@ function Awards() {
                                             style={{ width: "100%", height: "auto" }}
                                         />
                                         <p>2022</p>
-                                        <div class="overlaysawardh">
+                                        <div className="overlaysawardh">
                                             <h3>Times Education Excellence Award <br /><br />  2022</h3>
                                         </div>
                                     </div>
-                                    <div class="cardsgawardh">
+                                    <div className="cardsgawardh">
                                       
                                         <img
                                             src={aw21310}   // smallest image as default
@@ -152,12 +152,12 @@ function Awards() {
                                             style={{ width: "100%", height: "auto" }}
                                         />
                                         <p>2021</p>
-                                        <div class="overlaysawardh">
+                                        <div className="overlaysawardh">
                                             <h3>Times Education Excellence Award <br /><br />  2021</h3>
 
                                         </div>
                                     </div>
-                                    <div class="cardsgawardh">
+                                    <div className="cardsgawardh">
                                         {/* <img src={aw20} alt="Times Education Award 2020" width="365" height="298"/> */}
                                             <img
                                             src={aw20310}   // smallest image as default
@@ -172,12 +172,12 @@ function Awards() {
                                             style={{ width: "100%", height: "auto" }}
                                         />
                                         <p>2020</p>
-                                        <div class="overlaysawardh">
+                                        <div className="overlaysawardh">
                                             <h3>Times Excellence Award <br /><br />  2020</h3>
 
                                         </div>
                                     </div>
-                                    <div class="cardsgawardh">
+                                    <div className="cardsgawardh">
                                         {/* <img src={aw19} alt="Times Education Award 2019" width="365" height="298"/> */}
                                               <img
                                             src={aw19310}   // smallest image as default
@@ -192,13 +192,13 @@ function Awards() {
                                             style={{ width: "100%", height: "auto" }}
                                         />
                                         <p>2019</p>
-                                        <div class="overlaysawardh">
+                                        <div className="overlaysawardh">
                                             <h3>Times Education Excellence Award <br /><br />  2019</h3>
 
                                         </div>
                                     </div>
 
-                                    <div class="cardsgawardh">
+                                    <div className="cardsgawardh">
                                         {/* <img src={aw18} alt="Best Education Brand Award 2018" width="365" height="298"/> */}
                                             <img
                                             src={aw18310}   // smallest image as default
@@ -213,7 +213,7 @@ function Awards() {
                                             style={{ width: "100%", height: "auto" }}
                                         />
                                         <p>2018</p>
-                                        <div class="overlaysawardh">
+                                        <div className="overlaysawardh">
                                             <h3>Best Education Brand Award Economic Times <br /><br />  2018</h3>
 
                                         </div>

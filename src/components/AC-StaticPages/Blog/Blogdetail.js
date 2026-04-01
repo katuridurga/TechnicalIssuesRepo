@@ -113,7 +113,6 @@ useEffect(() => {
             <p dangerouslySetInnerHTML={{ __html: event.description }} />
           </p>
 
-
         </div>
       </div>
     </div>
