@@ -1,0 +1,97 @@
+.emblavideo {
+  position: relative;
+  padding: 20px;
+}
+
+.embla__viewportvideo {
+  overflow: hidden;
+}
+
+.embla__containervideo {
+  display: flex;
+  gap: 16px;
+}
+
+.embla__slidevideo {
+  flex: 0 0 33.3333%;
+}
+
+@media (max-width: 1024px) {
+  .embla__slidevideo {
+    flex: 0 0 33.33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .embla__slidevideo {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .embla__slidevideo {
+    flex: 0 0 100%;
+  }
+}
+
+/* Card Design */
+.cardvideo {
+  border-radius: 12px;
+  background: linear-gradient(to right, #fa5442, #fa9f42);
+  padding: 6px;
+  border: 1px solid #fff;
+}
+
+.image-wrappervideo {
+  position: relative;
+}
+
+.image-wrappervideo img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.play-btnvideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  color: white;
+  text-decoration: none;
+}
+
+.contentvideo {
+  padding: 10px;
+}
+
+.contentvideo h6 {
+  margin: 10px 0 5px;
+  color: #fff;
+  font-weight: 900;
+}
+
+.contentvideo small {
+  color: #fff;
+}
+
+/* Arrows */
+.embla__prevvideo,
+.embla__nextvideo {
+  position: absolute;
+  top: 40%;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.embla__prevvideo {
+  left: 0;
+}
+
+.embla__nextvideo {
+  right: 0;
+}

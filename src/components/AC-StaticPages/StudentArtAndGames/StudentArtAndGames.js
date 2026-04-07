@@ -201,7 +201,6 @@ function Courses(props) {
 
   return (
     <>
-
       <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'MobileClassstang' : 'starng'}`}>
         <div className="et_pb_row et_pb_row_0">
 
@@ -215,9 +214,8 @@ function Courses(props) {
       </div>
       <div className="courses-container">
         <Helmet>
-
           <script type="application/ld+json">
-                          {`
+            {`
               {
                 "@context": "https://schema.org/", 
                 "@type": "BreadcrumbList", 
@@ -236,7 +234,7 @@ function Courses(props) {
               `}
           </script>
           <script type="application/ld+json">
-                          {`
+            {`
               {
                 "@context": "https://schema.org/",
                 "@type": "WebSite",
@@ -268,14 +266,14 @@ function Courses(props) {
 
         </div>
         <section className="photos">
-          {/* <div className="ph" data-type="3D Artwork"><img src={art34} alt="art4" /></div>
+          <div className="ph" data-type="3D Artwork"><img src={art34} alt="art4" /></div>
           <div className="ph" data-type="2D Artwork"><img src={art35} alt="art7" /></div>
-           <div className="ph" data-type="3D Artwork"><img src={art37} alt="art5" /></div> */}
+          <div className="ph" data-type="3D Artwork"><img src={art37} alt="art5" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art17} alt="art4" /></div>
           <div className="ph" data-type="2D Artwork"><img src={art27} alt="art7" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art18} alt="art5" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art19} alt="art7" /></div>
-          {/* <div className="ph" data-type="3D Artwork"><img src={art36} alt="art5" /></div> */}
+          <div className="ph" data-type="3D Artwork"><img src={art36} alt="art5" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art20} alt="art6" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art21} alt="art8" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art22} alt="art2" /></div>
@@ -289,7 +287,7 @@ function Courses(props) {
           <div className="ph" data-type="2D Artwork"><img src={art30} alt="art2" /></div>
           <div className="ph" data-type="2D Artwork"><img src={art31} alt="art3" /></div>
           <div className="ph" data-type="2D Artwork"><img src={art32} alt="art9" /></div>
-         
+
         </section>
 
         <h2 className="mainHeadingTotal">Student Games
@@ -363,8 +361,6 @@ function Courses(props) {
             </div>
           </>
         )}
-
-
       </div>
 
     </>

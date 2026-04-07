@@ -4,15 +4,7 @@ import EmblaCarouselTestimonilasb from './EmblaCarouselTestimonilasb'
 
 import "./FeaturedProductsb.css"
 
-
-
-
-
 function Testimonials() {
-
-
-
-
 
   const OPTIONS = { loop: true }
   const SLIDE_COUNT = 5
@@ -26,11 +18,8 @@ function Testimonials() {
         <div className="min-h-full h-full w-full  relative z-[3] py-4 md:py-8 rec">
           <div className="sm:max-w-[480px] lg:max-w-[560px]" style={{ maxWidth: "100%" }}>
 
-
-
           <div className='bstesmain'>
            
-
             <div className='right bstesm'> 
 
             <div>

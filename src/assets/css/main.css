@@ -1609,7 +1609,8 @@ nav li a {
   text-align: right;
   color: #fff;
   background: transparent url("../../../../www.codepixar.com/matex/matex/img/loading.html") top left no-repeat;
-  border: none; }
+  border: none; 
+}
 
 .file-object {
   margin: 0 0 -5px 0;
@@ -1628,7 +1629,8 @@ nav li a {
     opacity: 0;
     background: none repeat scroll 0 0 transparent;
     cursor: inherit;
-    display: block; }
+    display: block;
+   }
 
 .file-caption-name {
   display: inline-block;

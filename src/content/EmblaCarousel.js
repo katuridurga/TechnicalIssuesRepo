@@ -132,7 +132,7 @@ const EmblaCarousel = (props) => {
         <h1 className="title1 white-txt"><span>India's #1</span> Game Design & Development College</h1>
         <div >
            <a className='banenbtn animated-button' href="/courses/" target="_blank">View Courses</a>
-          <a className='banenbtn2 animated-button' href="/enquire-now/">Enquire Now</a>
+          <a className='banenbtn2 btn-swipe' href="/enquire-now/">Enquire Now</a>
         </div>
       </div>
     </div>

@@ -1,8 +1,8 @@
 import React from 'react';
-import EmblaCarouselTestimonilas from './EmblaCarouselTestimonilas'
+import EmblaCarouselTestimonilasVideos from './EmblaCarouselTestimonilasVideos'
 
 
-import "./FeaturedProducts.css"
+import "./Youtubevideos.css"
 
 function Testimonials() {
 
@@ -30,7 +30,7 @@ function Testimonials() {
 
             <div className="">
 
-              <EmblaCarouselTestimonilas slides={SLIDES} options={OPTIONS} />
+              <EmblaCarouselTestimonilasVideos slides={SLIDES} options={OPTIONS} />
             </div>
           </div>
         </div>

@@ -2,16 +2,15 @@ import React, { useState, useEffect, lazy, Suspense } from 'react';
 // import preLoaderVideo from "../assets/img/BSPAnimated.mp4";
 // import preLoaderWebm from "../assets/img/BSPAnimated.webm";
 import { useSelector, shallowEqual } from "react-redux";
-
+import popupImg from "../assets/img/qs-ranking-2026.jpg";
 import PropTypes from 'prop-types';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import { Helmet } from "react-helmet";
-
-
 // Lazy-loaded Components
 
 const Buzzing = lazy(() => import("./Buzzing"));
+// const YoutubeVideos = lazy(() => import("./YoutubeVideos"));
 const Awards = lazy(() => import("./awards"));
 const HomeContent = lazy(() => import("./HomeContent"));
 const AboutBsp = lazy(() => import("./AboutBsp"));
@@ -82,6 +81,27 @@ function Main({ active, props }) {
       return () => clearTimeout(timeout);
     }
   }, [showPreloader]);
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const hasVisited = localStorage.getItem("HOME_POPUP_SHOWN");
+
+    if (!hasVisited && window.location.pathname === "/") {
+      setShowPopup(true);
+      localStorage.setItem("HOME_POPUP_SHOWN", "true");
+    }
+  }, []);
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+  const now = new Date().getTime();
+  const lastShown = localStorage.getItem("HOME_POPUP_TIME");
+
+  if (!lastShown || now - lastShown > 86400000) {
+    setShowPopup(true);
+    localStorage.setItem("HOME_POPUP_TIME", now);
+  }
 
   return (
     <>
@@ -131,12 +151,28 @@ function Main({ active, props }) {
               </div>
             )}
           </div>
+          {/*admissions popup code*/}
+          {showPopup && (
+            <div className="popup-overlay">
+              <div className="popup-box">
+
+                <button className="close-btn" onClick={handleClosePopup}>
+                  ✖
+                </button>
+
+                <a href="/enquire-now/" target="_blank" rel="noopener noreferrer">
+                  <img src={popupImg} alt="Admissions Open" className="popup-image" />
+                </a>
+
+              </div>
+            </div>
+          )}
 
           <section id="there's-still-time-to-apply-for-2024" className="banner siva">
             <div className="container1">
-              <h1 className="heading heading--white banner__heading">
+              <h2 className="heading heading--white banner__heading">
                 Trailblazers of gaming education in India since 2010
-              </h1>
+              </h2>
             </div>
           </section>
 

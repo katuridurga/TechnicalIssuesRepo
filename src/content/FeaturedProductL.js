@@ -1,16 +1,9 @@
 import React from 'react';
 import EmblaCarouselTestimonilasLanding from './EmblaCarouselTestimonilasLanding'
 
-
 import "./FeaturedProducts.css"
 
-
-
 function Testimonials() {
-
-
-
-
 
   const OPTIONS = { loop: true }
   const SLIDE_COUNT = 5
