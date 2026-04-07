@@ -152,7 +152,7 @@ function Main({ active, props }) {
             )}
           </div>
           {/*admissions popup code*/}
-          {showPopup && (
+          {/* {showPopup && (
             <div className="popup-overlay">
               <div className="popup-box">
 
@@ -166,7 +166,7 @@ function Main({ active, props }) {
 
               </div>
             </div>
-          )}
+          )} */}
 
           <section id="there's-still-time-to-apply-for-2024" className="banner siva">
             <div className="container1">
