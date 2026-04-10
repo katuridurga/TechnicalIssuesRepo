@@ -213,23 +213,7 @@ function Courses(props) {
             </Paper>
           </Container>
 
-
-
-
-
-
-
-
-
-
-
-
         </div>
-
-
-
-
-
 
       </div >
 

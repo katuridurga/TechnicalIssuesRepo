@@ -233,12 +233,13 @@ const Testimonials = () => {
   const fullPagesOnly = testimonials;
 
   return (
-    <section className="maintestimonial-section">
-      <div className="testimonial-header">
+    <div style={{background: "#ffffff"}}> <div className="testimonial-header" style={{maxWidth:"100%"}}>
         <AnimatedText direction="up" delay={0.2}>
           <h2 className="mainHeadingTotal">Testimonials</h2>
         </AnimatedText>
       </div>
+    <section className="maintestimonial-section">
+     
 
       <div className="maintestimonial-slider-wrapper">
         <div
@@ -318,6 +319,7 @@ const Testimonials = () => {
 
       </div>
     </section>
+    </div>
   );
 };
 

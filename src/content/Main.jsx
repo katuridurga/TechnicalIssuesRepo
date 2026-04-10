@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet";
 // Lazy-loaded Components
 
 const Buzzing = lazy(() => import("./Buzzing"));
-// const YoutubeVideos = lazy(() => import("./YoutubeVideos"));
+const YoutubeVideos = lazy(() => import("./YoutubeVideos"));
 const Awards = lazy(() => import("./awards"));
 const HomeContent = lazy(() => import("./HomeContent"));
 const AboutBsp = lazy(() => import("./AboutBsp"));
@@ -120,19 +120,56 @@ function Main({ active, props }) {
           <a href="#ribbon">
             <div className='scallop animate'>
               <div className='stripd'>
-                <div className='adopen'>
+                {/* <div className='adopenp'>
                   <p style={{ marginBottom: isMobileState ? "0px" : "0px" }}>
-                    Admissions Open!
-                    <br />
-                    <span style={{ marginTop: "6px", display: "block" }}>
-                      Limited seats
+                 
+                    <span style={{ marginTop: "0px", display: "block" }}>
+                        Admissions Open! Limited seats
                     </span>
                   </p>
-                </div>
-                <div className='mainhdb'>
-                  <p><b>Bachelor's/Master's Programs :</b> <strong> Apply now for 2026 intake!</strong></p><br />
-                  <p><b>Diploma/Advanced Diploma Programs :</b> <strong>Apply now!</strong> </p>
-                </div>
+                </div> */}
+                {isMobileState ? <div className="admission-wrapper">
+                  <div className="block">
+                    <h1>
+                      <span className="blinck">Admissions Open!</span>
+                    </h1>
+                  </div>
+                </div> :
+                  <div class="">
+                    <div class="block">
+                      <h1>
+                        <span className='blinck'> Admissions Open!</span>
+
+                      </h1>
+                    </div>
+                  </div>}
+
+                {/* <div className="page">
+                      <h1 className="texta page__text" data-text="Admissions Open!">Admissions Open!</h1>
+                  </div>  */}
+                {isMobileState ? <div className="news-container">
+                  <div className="news-track">
+                    <div className="news-message">
+                      <p><b>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now 2026</strong></p>
+                      <p><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
+
+                      {/* duplicate for seamless scroll */}
+                      <p><b>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now 2026</strong></p>
+                      <p><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
+                    </div>
+                  </div>
+                </div> :
+                  <div className="news-container">
+                    <div className="mainhdb news-message">
+                      <p><b style={{ marginTop: "5px" }}>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now 2026 </strong></p>
+                      <p><b style={{ marginTop: "5px" }}>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
+
+                      {/* duplicate for seamless scroll */}
+                      <p><b style={{ marginTop: "5px" }}>Bachelor's/Master's Programs :</b>  <strong className='menu-item-mine'>Apply now 2026 </strong></p>
+                      <p><b style={{ marginTop: "5px" }}>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
+                    </div>
+                  </div>
+                }
               </div>
             </div>
           </a>
@@ -185,6 +222,7 @@ function Main({ active, props }) {
               <div className='chapter' id="chapter1">
                 {/* <div className="bg-c-gradient300 absolute w-full h-[101%] -top-[1px] -bottom-[1px] left-0 z-[2]"></div> */}
                 <FeaturedProducts />
+                <YoutubeVideos />
                 <Awards />
               </div>
             </Suspense>

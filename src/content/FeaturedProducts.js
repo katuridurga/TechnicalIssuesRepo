@@ -1,5 +1,6 @@
 import React from 'react';
 import EmblaCarouselTestimonilas from './EmblaCarouselTestimonilas'
+import AnimatedText from "../components/AC-StaticPages/landingpage/AnimatedText";
 
 
 import "./FeaturedProducts.css"

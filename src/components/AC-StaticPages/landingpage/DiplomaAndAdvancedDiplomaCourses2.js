@@ -1,11 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react'
 import "./DiplomaAndAdvancedDiplomaCourses.css";
 import PropTypes from 'prop-types';
-
 import { FaWhatsapp } from "react-icons/fa";
-
 import { Helmet } from "react-helmet";
-
 import axios from 'axios';
 import { BsDot } from "react-icons/bs";
 import FeaturedProducts1 from "../../../content/FeaturedProducts1.js";
@@ -54,8 +51,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-
-
 function HideOnScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({
@@ -97,7 +92,6 @@ TabPanel.propTypes = {
 
 HideOnScroll.propTypes = {
   children: PropTypes.element.isRequired,
-
   window: PropTypes.func,
 };
 
@@ -113,29 +107,18 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
     window.localStorage.setItem('MY_APP_STATE', JSON.stringify(showBanner));
   }, [showBanner]);
 
-
-
-
-
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
     shallowEqual
   );
   const [isActives] = useState(true);
   const theme = useTheme();
-
-
-
-
-
   const [value1, setValue1] = React.useState(0);
 
   const handleChange1 = (event, newValue) => {
     setValue1(newValue);
   };
   const [open, setOpen] = React.useState(false);
-
-
 
   const handleClose = () => {
     setOpen(false);
@@ -369,11 +352,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
                         <span style={{color:"#000"}}>Duration :2 Years</span></li>
                       <li><img src={m4} alt="Graduation*" />
                         <span style={{color:"#000"}}>Eligibility : Graduation*
-
-
                         </span></li>
-
-
                     </ul>
                   </div>
                   <Link to={"/courses/advanced-diploma-in-game-development/"}>
@@ -388,7 +367,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
                       </div>
                     </div>
                   </Link>
- <Link to={"/courses/masters-in-3d-game-art-design/"}>
+                 <Link to={"/courses/masters-in-3d-game-art-design/"}>
                     <div className="mainCourse1" style={{ marginBottom: "-14px" }}>
                       <div className="mainCourseLeft1">
                         <img src={MscGameTechnology3d} alt="MASTER’Sin3DGameArt&GameDesign" className="img-circle" />
@@ -403,12 +382,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
                   </Link>
 
                 </TabPanel>
-
- 
-
               </Box>
-
-
 
             </div>
             <div className="mainrec">
@@ -449,58 +423,37 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
                   </ul>
                 </div>
               </div> :
-
                 <div style={{ position: "relative", height: "auto" }}>
                   <div id="pointerss" className={isActives ? 'aboutHeaderPoint' : ' '} >
                     <div className='plu1s'>
                       <div><span>01</span></div><h1>You have a knack for strategy and problem-solving
-
-
                       </h1>
-
                     </div>
-
                   </div>
                   <div id="pointerss" className={isActives ? 'aboutHeaderPoint' : ' '} >
                     <div className='plu1s'>
                       <div><span>02</span></div><h1 className='pdleft'>You are creative, imaginative, and like art problem-solving
-
-
                       </h1>
-
                     </div>
-
                   </div>
                   <div id="pointerss" className={isActives ? 'aboutHeaderPoint' : ' '} >
                     <div className='plu1s'>
                       <div><span>03</span></div> <h1>You like coding & don’t want to opt for software development careers
-
-
                       </h1>
-
                     </div>
-
                   </div>
                   <div id="pointerss" className={isActives ? 'aboutHeaderPoint' : ' '} >
                     <div className='plu1s'>
                       <div><span>04</span></div> <h1>You are a trend-setter and want to choose a unique career
-
                       </h1>
-
                     </div>
-
                   </div>
                   <div id="pointerss" className={isActives ? 'aboutHeaderPoint' : ' '} >
                     <div className='plu1s'>
                       <div><span>05</span></div> <h1>Like gaming and want to make new worlds come to life
-
                       </h1>
-
                     </div>
-
                   </div>
-
-
                 </div>}
             </div>
             <div className='chapters' id="chapterss2">
@@ -631,13 +584,7 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
                     <a href="https://saji002.itch.io/wobblegobble" target="_blank" rel="noopener noreferrer"><img src={artimage8} alt="artimage8" style={{ width: "100%", height: "100%" }} /></a>
                   </div>
 
-
-
-
                 </div>}
-
-
-
               <div className='chapters' id="chapters1">
 
                 <FeaturedProducts1 />
@@ -645,8 +592,6 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
               </div>
               <div className='sidebarview' id="mobileview">
                 <div>
-
-
 
                   <form onSubmit={handleSubmit} className="formMain">
 
@@ -768,21 +713,15 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
 
             </div>
 
-
-
           </div>
           <div className='frmd'>
             {isMobileState ? null : <StickyBox offsetTop={isMobileState ? 0 : 0} offsetBottom={0} style={{ position: isMobileState ? "initial" : "sticky", width: isMobileState ? '100%' : '100%', marginRight: isMobileState ? "0%" : "3%" }}>
               <div className='sidebarview1' id="desview">
                 <div>
 
-
-
                   <div>
 
-
                     <div>
-
 
                       <div className="videomain1">
                         <video ref={videoRef} controls loop>
@@ -802,8 +741,6 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
                       </div>
 
                     </div>
-
-
 
                     <form onSubmit={handleSubmit} className="formMain">
 
@@ -953,6 +890,4 @@ function DiplomaAndAdvancedDiplomaCourses2({ active, props }) {
     </>
   )
 }
-
 export default DiplomaAndAdvancedDiplomaCourses2;
-
