@@ -373,6 +373,9 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .hdmboile{
+    height: 50px;
+  }
   .banenbtn {
     margin-right: 20px;
     background-color: #ec1d1f;
@@ -7810,6 +7813,9 @@ body {
 
 .mainhdb b {
   font-size: 16px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mainhdb strong {
@@ -9354,9 +9360,9 @@ td p {
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
-    grid-gap: 8px;
+    /* grid-gap: 8px;
     gap: 8px;
-    padding: 6px 10px;
+    padding: 6px 10px; */
   }
 
   .adopen p {
@@ -9787,25 +9793,22 @@ td p {
   width: 100%;
 }
 
-/* TRACK (this moves) */
 .news-track {
   display: flex;
   width: max-content;
-  animation: scroll-left 15s linear infinite;
+  will-change: transform;
 }
 
-/* MESSAGE BLOCK */
 .news-message {
   display: flex;
 }
-
 /* TEXT */
 .news-message p {
   white-space: nowrap;
   margin-right: 46px;
   /* spacing */
   font-size: 18px;
-  animation: scroll-left 6s linear infinite;
+  animation: scroll-left 14s linear infinite;
 }
 
 /* ANIMATION */
@@ -9841,7 +9844,7 @@ td p {
   border-top-right-radius: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  font-family: cursive;
+  font-family: sans-serif;
 
 }
 
@@ -9933,17 +9936,14 @@ td p {
   width: 100%;
 }
 
-/* TRACK (only this should animate) */
 .news-track {
   display: flex;
   width: max-content;
-  animation: scroll-left 18s linear infinite;
+  will-change: transform;
 }
 
-/* MESSAGE BLOCK */
 .news-message {
   display: flex;
-  flex-wrap: nowrap;
 }
 
 /* TEXT */
@@ -10006,7 +10006,7 @@ td p {
   border-bottom-left-radius: 8px;
   border-top-right-radius: 8px;
   margin: 0 6px;
-  font-family: cursive;
+  font-family: sans-serif;
   font-size: 12px;
 }
 
@@ -10028,7 +10028,7 @@ td p {
   .news-track {
     display: flex;
     width: max-content;
-    animation: scroll-left 14s linear infinite;
+   /* animation: scroll-left 14s linear infinite; */
   }
 .block h1 span::after {
     bottom: -5px !important;
@@ -10097,7 +10097,7 @@ td p {
 }
 @media (max-width: 600px) {
   .admission-wrapper {
-    width: 60%;
+    width: 75%;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -10111,7 +10111,7 @@ td p {
 
   .block h1 {
     margin: 0;
-    font-size: 12px;
+    font-size: 13px;
     white-space: nowrap; /* 🔥 force single line */
   }
 
@@ -10203,4 +10203,8 @@ td p {
 .testan span {
   font-size: 40px;
   margin-left: 40px;
+}
+.disp{
+ margin-left:40px;
+ margin-right: 40px; 
 }

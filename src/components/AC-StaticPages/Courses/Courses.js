@@ -27,7 +27,13 @@ function Courses(props) {
         { title: "Bachelor’s in Augmented Reality & Virtual Reality", alt: "Augmented Reality & Virtual Reality", description: "A course for bold innovators, uniting art, design, and game engine programming to master the science of augmented and virtual reality. You will learn to transform...", link: "/courses/bachelors-in-augmented-reality-and-virtual-reality/", image: AugmentedRealityandVirtualReality }
       ]
     },
-
+{
+      heading: "Master’s Courses",
+      cards: [
+        { title: "Master’s in Game Technology", alt: "Master’s in Game Technology", description: "The Master’s in Game Technology unites art, logic, and physics, immersing learners in C++ engine development, graphics programming, and Unity & Unreal mastery to craft intelligent, high-performance games...", link: "/courses/masters-in-game-technology/", image: MscGameTechnology },
+        { title: "Master’s in 3D Game Art & Game Design ", alt: "Master’s in Game Art & Game Design", description: "With the Master's in 3D Game Art & Design, students will learn 3D modelling, texturing, and animation so they can develop immersive, meaningful video game worlds that blend art with intelligent design.", link: "/courses/masters-in-3d-game-art-design/", image: MscGameTechnology3d }
+      ]
+    },
     {
       heading: "Advanced Diploma Courses",
       cards: [
@@ -47,13 +53,7 @@ function Courses(props) {
         { title: "Diploma in VR Application Development", alt: "VR Application Development Course", description: "The Diploma in VR Application Development Course unlocks the future of technology, where students master VR programming with Unity and Unreal to design, develop, and innovate...", link: "/courses/diploma-in-vr-application-development/", image: dvrc }
       ]
     },
-    {
-      heading: "Master’s Courses",
-      cards: [
-        { title: "Master’s in Game Technology", alt: "Master’s in Game Technology", description: "The Master’s in Game Technology unites art, logic, and physics, immersing learners in C++ engine development, graphics programming, and Unity & Unreal mastery to craft intelligent, high-performance games...", link: "/courses/masters-in-game-technology/", image: MscGameTechnology },
-        { title: "Master’s in 3D Game Art & Game Design ", alt: "Master’s in Game Art & Game Design", description: "With the Master's in 3D Game Art & Design, students will learn 3D modelling, texturing, and animation so they can develop immersive, meaningful video game worlds that blend art with intelligent design.", link: "/courses/masters-in-3d-game-art-design/", image: MscGameTechnology3d }
-      ]
-    },
+    
   ];
 
   const isMobileState = useSelector(

@@ -8,7 +8,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
 import { Helmet } from "react-helmet";
 // Lazy-loaded Components
-
+import Marquee from "react-fast-marquee";
 const Buzzing = lazy(() => import("./Buzzing"));
 //const YoutubeVideos = lazy(() => import("./YoutubeVideos"));
 const Awards = lazy(() => import("./awards"));
@@ -131,14 +131,14 @@ function Main({ active, props }) {
                 {isMobileState ? <div className="admission-wrapper">
                   <div className="block">
                     <h1>
-                      <span className="blinck">Admissions Open!</span>
+                      <span className="blinck">Admissions 2026</span>
                     </h1>
                   </div>
                 </div> :
                   <div class="">
                     <div class="block">
                       <h1>
-                        <span className='blinck'> Admissions Open!</span>
+                        <span className='blinck'> Admissions 2026</span>
 
                       </h1>
                     </div>
@@ -147,28 +147,39 @@ function Main({ active, props }) {
                 {/* <div className="page">
                       <h1 className="texta page__text" data-text="Admissions Open!">Admissions Open!</h1>
                   </div>  */}
-                {isMobileState ? <div className="news-container">
-                  <div className="news-track">
-                    <div className="news-message">
-                      <p><b>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now 2026</strong></p>
-                      <p><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
+                {isMobileState ? <Marquee pauseOnHover={true} // ✅ stops scroll on hover
+                  speed={50}
+                  style={{
+                    padding: "0px 20px",
+                    marginBottom: isMobileState ? "0px" : "10px",
+                  }} className='recuitersList hdmboile'>
 
-                      {/* duplicate for seamless scroll */}
-                      <p><b>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now 2026</strong></p>
-                      <p><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
-                    </div>
-                  </div>
-                </div> :
-                  <div className="news-container">
-                    <div className="mainhdb news-message">
-                      <p><b style={{ marginTop: "5px" }}>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now 2026 </strong></p>
-                      <p><b style={{ marginTop: "5px" }}>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
 
-                      {/* duplicate for seamless scroll */}
-                      <p><b style={{ marginTop: "5px" }}>Bachelor's/Master's Programs :</b>  <strong className='menu-item-mine'>Apply now 2026 </strong></p>
-                      <p><b style={{ marginTop: "5px" }}>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
-                    </div>
-                  </div>
+                  <p style={{ color: "#fff", fontSize: "14px" }}><b>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
+                  <p style={{ color: "#fff",fontSize: "14px" }}><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
+
+                  <p style={{ color: "#fff", fontSize: "14px" }}><b>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
+                  <p style={{ color: "#fff", fontSize: "14px" }}><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
+
+                </Marquee>
+                  :
+                  <Marquee pauseOnHover={true} // ✅ stops scroll on hover
+                    speed={50}
+                    style={{
+                      padding: "0px 20px",
+                      marginBottom: isMobileState ? "0px" : "10px",
+                    }} className='recuitersList'>
+
+
+                    <p className='disp' style={{ color: "#fff", marginBottom: "4rem", fontSize: "16px" }}><b>Bachelor's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
+                    <p className='disp' style={{ color: "#fff", marginBottom: "4rem", fontSize: "16px" }}><b>Master's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
+                    <p className='disp' style={{ color: "#fff", marginBottom: "4rem", fontSize: "16px" }}><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
+
+                    {/* <p style={{color:"#fff", marginBottom:"4rem", fontSize:"16px"}}><b>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
+                      <p style={{color:"#fff", marginBottom:"4rem", fontSize:"16px"}}><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p> */}
+
+                  </Marquee>
+
                 }
               </div>
             </div>

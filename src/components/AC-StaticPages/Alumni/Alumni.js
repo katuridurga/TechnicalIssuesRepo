@@ -899,9 +899,6 @@ const speakersRef = React.useRef(null);
   )}
 </div>
 
-
-
-
             <h2 className="mainHeadingTotal" style={{ marginBottom: isMobileState ? "0px" : "30px" }}>Get In Touch With Us</h2>
             <p className="suprtsMobile mobilehead">If you have graduated from Backstage Pass, we would love to get in touch with you. Fill the form below to register yourself into our Alumni Database.<br /><br />
               Don’t worry, we will not spam your inbox or call log!
