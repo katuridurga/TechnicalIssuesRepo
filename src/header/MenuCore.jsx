@@ -180,7 +180,19 @@ const showLastChanceStrip =
           <Link to="/courses/bachelors-in-augmented-reality-and-virtual-reality/" style={linkStyles} onClick={toggleDrawer(false)}>Augmented Reality & Virtual Reality</Link>
         </div>
       )}
-
+ {/* Master's */}
+      <div onClick={() => togglePanel("masters")} className="mainc" style={{ fontSize: "13.5px", cursor: "pointer", marginTop: "10px" }}>
+        Master's
+        <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" style={{ marginLeft: "auto", color: "#fff" }}>
+          <polyline points="6 9 12 13.5 18 9"></polyline>
+        </svg>
+      </div>
+      {expandedPanel === "masters" && (
+        <div className="accordion-content">
+          <Link to="/courses/masters-in-game-technology/" style={linkStyles} onClick={toggleDrawer(false)}>Game Technology</Link>
+          <Link to="/courses/masters-in-3d-game-art-design/" style={linkStyles} onClick={toggleDrawer(false)}>3D Game Art & Game Design</Link>
+        </div>
+      )}
       {/* Advanced Diploma */}
       <div onClick={() => togglePanel("advDiploma")} className="mainct" style={{ fontSize: "13.5px", cursor: "pointer", marginTop: "10px" }}>
         Advanced Diploma
@@ -213,19 +225,7 @@ const showLastChanceStrip =
         </div>
       )}
 
-      {/* Master's */}
-      <div onClick={() => togglePanel("masters")} className="mainc" style={{ fontSize: "13.5px", cursor: "pointer", marginTop: "10px" }}>
-        Master's
-        <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" style={{ marginLeft: "auto", color: "#fff" }}>
-          <polyline points="6 9 12 13.5 18 9"></polyline>
-        </svg>
-      </div>
-      {expandedPanel === "masters" && (
-        <div className="accordion-content">
-          <Link to="/courses/masters-in-game-technology/" style={linkStyles} onClick={toggleDrawer(false)}>Game Technology</Link>
-          <Link to="/courses/masters-in-3d-game-art-design/" style={linkStyles} onClick={toggleDrawer(false)}>3D Game Art & Game Design</Link>
-        </div>
-      )}
+     
     </div>
   );
 
@@ -294,7 +294,18 @@ const showLastChanceStrip =
                           </div>
                         </AccordionDetails>
                       </Accordion>
-
+             {/* Master's */}
+                      <Accordion expanded={expanded === "panel5"} onChange={handleChange("panel5")}>
+                        <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
+                          <Typography component="div"><div className="mainct" style={{ fontSize: "13.5px", color: "#000", textTransform: "uppercase" }}>Master’s</div></Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                          <div className="accordion-content">
+                            <Link to={"/courses/masters-in-game-technology/"} onClick={() => setActiveParent(true)} style={linkStyles}>Game Technology</Link>
+                            <Link to={"/courses/masters-in-3d-game-art-design/"} onClick={() => setActiveParent(true)} style={linkStyles}>3D Game Art & Game Design</Link>
+                          </div>
+                        </AccordionDetails>
+                      </Accordion>
                       {/* Advanced Diploma */}
                       <Accordion expanded={expanded === "panela3"} onChange={handleChange("panela3")}>
                         <AccordionSummary aria-controls="panela3d-content" id="panela3d-header">
@@ -325,18 +336,7 @@ const showLastChanceStrip =
                         </AccordionDetails>
                       </Accordion>
 
-                      {/* Master's */}
-                      <Accordion expanded={expanded === "panel5"} onChange={handleChange("panel5")}>
-                        <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
-                          <Typography component="div"><div className="mainct" style={{ fontSize: "13.5px", color: "#000", textTransform: "uppercase" }}>Master’s</div></Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                          <div className="accordion-content">
-                            <Link to={"/courses/masters-in-game-technology/"} onClick={() => setActiveParent(true)} style={linkStyles}>Game Technology</Link>
-                            <Link to={"/courses/masters-in-3d-game-art-design/"} onClick={() => setActiveParent(true)} style={linkStyles}>3D Game Art & Game Design</Link>
-                          </div>
-                        </AccordionDetails>
-                      </Accordion>
+         
                     </ul>
                   </li>
 
@@ -464,7 +464,29 @@ const showLastChanceStrip =
                           </Typography>
                         </AccordionDetails>
                       </Accordion>
+  <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+                        <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
+                          <Typography component="div"><div className="mainc" style={{ fontSize: "13.5px" }}>Master's</div></Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                          <Typography component="div" onClick={() => {
+                            toggleDrawer(false)();
+                            window.scrollTo(0, 0);
+                          }}>
+                            <div className="accordion-content">
+                              <Link onClick={() => {
+                                toggleDrawer(false)();
+                                window.scrollTo(0, 0);
+                              }} to={"/courses/masters-in-game-technology/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "10px", display: "flex", paddingLeft: "40px" }}>Game Technology</Link>
+                              <Link onClick={() => {
+                                toggleDrawer(false)();
+                                window.scrollTo(0, 0);
+                              }} to={"/courses/masters-in-3d-game-art-design/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "0px", display: "flex", paddingLeft: "40px" }}>3D Game Art & Game Design</Link>
 
+                            </div>
+                          </Typography>
+                        </AccordionDetails>
+                      </Accordion>
                       <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
                         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
                           <Typography component="div"><div className="mainc" style={{ fontSize: "13.5px" }}>Advanced Diploma</div></Typography>
@@ -516,29 +538,7 @@ const showLastChanceStrip =
                           </Typography>
                         </AccordionDetails>
                       </Accordion>
-                      <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
-                        <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
-                          <Typography component="div"><div className="mainc" style={{ fontSize: "13.5px" }}>Master's</div></Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                          <Typography component="div" onClick={() => {
-                            toggleDrawer(false)();
-                            window.scrollTo(0, 0);
-                          }}>
-                            <div className="accordion-content">
-                              <Link onClick={() => {
-                                toggleDrawer(false)();
-                                window.scrollTo(0, 0);
-                              }} to={"/courses/masters-in-game-technology/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "10px", display: "flex", paddingLeft: "40px" }}>Game Technology</Link>
-                              <Link onClick={() => {
-                                toggleDrawer(false)();
-                                window.scrollTo(0, 0);
-                              }} to={"/courses/masters-in-3d-game-art-design/"} style={{ fontSize: "13px", height: "35px", lineHeight: "35px", borderBottom: "1px solid #999", fontWeight: "500", fontFamily: "'Montserrat', sans-serif", color: "#000", marginLeft: "0px", textTransform: "uppercase", marginBottom: "0px", display: "flex", paddingLeft: "40px" }}>3D Game Art & Game Design</Link>
-
-                            </div>
-                          </Typography>
-                        </AccordionDetails>
-                      </Accordion>
+                    
 
                     </>)}
 

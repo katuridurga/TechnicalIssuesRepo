@@ -397,7 +397,7 @@ function Courses(props) {
 
 
       </div>
-      <div id="Beyond-The-Course"  style={{ padding: "0px 0px", marginBottom: "20px", backgroundColor: "blue",height:"180vh" }}>
+      <div id="Beyond-The-Course"  style={{ padding: "0px 0px", marginBottom: "20px", backgroundColor: "",height:"" }}>
         <h2 className='courseHeading' style={{ color: "#ec1923", marginTop: "0px" }}>Beyond The Course</h2>
         <div className="brname"></div>
         <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At Backstage Pass, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.

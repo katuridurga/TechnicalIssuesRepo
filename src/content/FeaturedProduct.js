@@ -69,6 +69,11 @@ function HomeContent() {
       { src: f3, title: "Bachelor's in Game Art & Design", link: "/courses/bachelors-in-game-art-and-design/" },
       { src: f4, title: "Bachelor's in Augmented Reality & Virtual Reality", link: "/courses/bachelors-in-augmented-reality-and-virtual-reality/" },
     ],
+    masters: [
+      { src: f5, title: "Master's in Game Technology", link: "/courses/masters-in-game-technology/" },
+      { src: f3d, title: "Master's in 3D Game Art & Design", link: "/courses/masters-in-3d-game-art-design/" },
+    ],
+
     advancedDiploma: [
       { src: f6, title: "Advanced Diploma in Game Development", link: "/courses/advanced-diploma-in-game-development/" },
       { src: f7, title: "Advanced Diploma in 3D Game Art & Digital Sculpting", link: "/courses/advanced-diploma-in-3d-game-art-digital-sculpting/" },
@@ -82,18 +87,14 @@ function HomeContent() {
       { src: f10, title: "Diploma in 3D Environment Art For Games", link: "/courses/diploma-in-3d-environment-art-creation-for-games/" },
       { src: dvr, title: "Diploma in VR Application Development", link: "/courses/diploma-in-vr-application-development/" },
     ],
-    masters: [
-      { src: f5, title: "Master's in Game Technology", link: "/courses/masters-in-game-technology/" },
-      { src: f3d, title: "Master's in 3D Game Art & Design", link: "/courses/masters-in-3d-game-art-design/" },
-    ],
-
+    
   };
   const categories = [
     { id: "bachelors", title: "Bachelor's Degree" },
-
+ { id: "masters", title: "Master's Degree" },
     { id: "advancedDiploma", title: "Advanced Diploma" },
     { id: "diploma", title: "Diploma" },
-    { id: "masters", title: "Master's Degree" },
+   
   ];
   return (
     <>
@@ -202,7 +203,31 @@ function HomeContent() {
                       </figcaption>
                     </figure>
                   </div>
-                  <div className="cardssf maincolltwo">
+                   <div className="cardssf maincolltwo">
+                    <figure className="figures">
+                      <LazyLoadImage effect="blur" src={f5} placeholderSrc={thumbnail} alt="Msc Game Development" style={{ borderRadius: "8px" }} />
+                      <figcaption className="figcaptionss">
+
+
+                        <div className="mainggames"><p>Master's in Game Technology</p><div className="viewc"><a href="/courses/masters-in-game-technology/">View Course</a></div></div>
+                      </figcaption>
+                    </figure>
+                  </div>
+               
+                 
+                </div>
+                <div className="maincoll clear-fix">
+   <div className="cardssf maincolltwo">
+                    <figure className="figures">
+                      <LazyLoadImage effect="blur" src={f3d} placeholderSrc={thumbnail} alt="MA Game Art & Design" style={{ borderRadius: "8px" }} />
+                      <figcaption className="figcaptionss">
+
+
+                        <div className="mainggames"><p>Master's in 3D Game Art & Game Design </p><div className="viewc"><a href="/courses/masters-in-3d-game-art-design/">View Course</a></div></div>
+                      </figcaption>
+                    </figure>
+                  </div>
+ <div className="cardssf maincolltwo">
                     <figure className="figures">
                       <LazyLoadImage effect="blur" src={f6} placeholderSrc={thumbnail} alt="Dip Game Development" style={{ width: "100%", borderRadius: "8px" }} />
                       <figcaption className="figcaptionss">
@@ -212,10 +237,6 @@ function HomeContent() {
                       </figcaption>
                     </figure>
                   </div>
-                </div>
-                <div className="maincoll clear-fix">
-
-
 
                   <div className="cardssf maincolltwo">
                     <figure className="figures">
@@ -246,7 +267,10 @@ function HomeContent() {
                       </figcaption>
                     </figure>
                   </div>
-                  <div className="cardssf maincolltwo">
+                
+                </div>
+                <div className="maincoll clear-fix">
+  <div className="cardssf maincolltwo">
                     <figure className="figures">
                       <LazyLoadImage effect="blur" src={f8} placeholderSrc={thumbnail} alt="Game Development with Unity" style={{ width: "100%", borderRadius: "8px" }} />
                       <figcaption className="figcaptionss">
@@ -264,10 +288,6 @@ function HomeContent() {
                       </figcaption>
                     </figure>
                   </div>
-                </div>
-                <div className="maincoll clear-fix">
-
-
                   <div className="cardssf maincolltwo">
                     <figure className="figures">
                       <LazyLoadImage effect="blur" src={f10} placeholderSrc={thumbnail} alt="3D Environment Art For Games" style={{ width: "100%", borderRadius: "8px" }} />
@@ -289,26 +309,7 @@ function HomeContent() {
                     </figure>
                   </div>
 
-                  <div className="cardssf maincolltwo">
-                    <figure className="figures">
-                      <LazyLoadImage effect="blur" src={f5} placeholderSrc={thumbnail} alt="Msc Game Development" style={{ borderRadius: "8px" }} />
-                      <figcaption className="figcaptionss">
-
-
-                        <div className="mainggames"><p>Master's in Game Technology</p><div className="viewc"><a href="/courses/masters-in-game-technology/">View Course</a></div></div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                  <div className="cardssf maincolltwo">
-                    <figure className="figures">
-                      <LazyLoadImage effect="blur" src={f3d} placeholderSrc={thumbnail} alt="MA Game Art & Design" style={{ borderRadius: "8px" }} />
-                      <figcaption className="figcaptionss">
-
-
-                        <div className="mainggames"><p>Master's in 3D Game Art & Game Design </p><div className="viewc"><a href="/courses/masters-in-3d-game-art-design/">View Course</a></div></div>
-                      </figcaption>
-                    </figure>
-                  </div>
+                 
                 </div>
 
 
