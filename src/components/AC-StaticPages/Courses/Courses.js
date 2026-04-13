@@ -38,7 +38,7 @@ function Courses(props) {
       heading: "Advanced Diploma Courses",
       cards: [
         { title: "Advanced Diploma in Game Development", alt: "Game Development", description: "The Advanced Diploma in Game Development unites the precision of C++, the versatility of C#, and the power of OpenGL. Guiding students to master game...", link: "/courses/advanced-diploma-in-game-development/", image: AdvancedDiplomainGameDevelopment },
-        { title: "Advanced Diploma in 3D Game Art & Digital Sculpting", alt: "3D Game Art & Digital Sculpting", description: "The Advanced Diploma in 3D Game Art & Digital Sculpting trains artists to master environment modelling and craft immersive characters and lifelike worlds for modern...", link: "/courses/bachelors-in-game-art-and-design/", image: AdvancedDiplomain3DGameArtDigitalSculpting },
+        { title: "Advanced Diploma in 3D Game Art & Digital Sculpting", alt: "3D Game Art & Digital Sculpting", description: "The Advanced Diploma in 3D Game Art & Digital Sculpting trains artists to master environment modelling and craft immersive characters and lifelike worlds for modern...", link: "/courses/advanced-diploma-in-3d-game-art-digital-sculpting/", image: AdvancedDiplomain3DGameArtDigitalSculpting },
         // { title: "Advanced Diploma in Traditional & Digital Concept Art", description: "A hands-on 12-month advanced diploma that builds strong fundamentals in advancing to character and environment design.", link: "/courses/advanced-diploma-in-traditional-digital-art/", image: AdvancedDiplomainTraditionalDigitalConceptArt }
       ]
     },
