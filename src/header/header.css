@@ -373,8 +373,9 @@
 }
 
 @media only screen and (max-width: 1024px) {
+
   .hdmboile{
-    height: 50px;
+    height: 45px;
   }
   .banenbtn {
     margin-right: 20px;
@@ -7107,8 +7108,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0px auto;
-    gap: 14px;
-
+    gap: 0px;
   }
 
   .stripdb {
@@ -9387,10 +9387,6 @@ td p {
 
 /* Optional: extra small screens */
 @media (max-width: 480px) {
-  .stripd {
-    gap: 12px;
-  }
-
   .adopen p {
     font-size: 11px;
   }
@@ -10097,7 +10093,7 @@ td p {
 }
 @media (max-width: 600px) {
   .admission-wrapper {
-    width: 75%;
+    width: 95%;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -10106,7 +10102,7 @@ td p {
   .block {
     padding: 6px 0 !important;
     text-align: center;
-    top: -6px;
+    top: -2px;
   }
 
   .block h1 {
@@ -10119,10 +10115,58 @@ td p {
     display: inline-block;
     background: #fa9f42;
     color: #000;
-    padding: 5px 8px;
-    font-size: 12px;
+    padding: 6px 8px;
+    font-size: 14px;
     border-radius: 6px;
     white-space: nowrap; /* 🔥 prevent break */
+  }
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .block h1 span::after {
+    bottom: -4px;
+    right: 2px;
+    border-top: 6px solid #fa9f42;
+    border-right: 6px solid transparent;
+}
+.block h1 span::before {
+    top: -4px;
+    left: 2px;
+    border-bottom: 6px solid #fa9f42;
+    border-left: 6px solid transparent;
+}
+  .admission-wrapper {
+    width: 45%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .block {
+    padding: 8px 0 !important;
+    text-align: center;
+    top: -1px;
+  }
+
+  .block h1 {
+    margin: 0;
+    font-size: 16px;
+    white-space: nowrap; /* keep single line */
+  }
+
+  .block h1 span {
+    display: inline-block;
+    background: #fa9f42;
+    color: #000;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    white-space: nowrap;
   }
 
   @keyframes blinker {

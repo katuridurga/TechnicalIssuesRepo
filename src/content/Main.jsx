@@ -155,11 +155,11 @@ function Main({ active, props }) {
                   }} className='recuitersList hdmboile'>
 
 
-                  <p style={{ color: "#fff", fontSize: "14px" }}><b>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
-                  <p style={{ color: "#fff",fontSize: "14px" }}><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
+                  <p style={{ color: "#fff", fontSize: "14px", marginBottom:"0px" }}><b>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
+                  <p style={{ color: "#fff",fontSize: "14px", marginBottom:"0px" }}><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
 
-                  <p style={{ color: "#fff", fontSize: "14px" }}><b>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
-                  <p style={{ color: "#fff", fontSize: "14px" }}><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
+                  <p style={{ color: "#fff", fontSize: "14px", marginBottom:"0px" }}><b>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
+                  <p style={{ color: "#fff", fontSize: "14px", marginBottom:"0px" }}><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
 
                 </Marquee>
                   :
@@ -171,9 +171,9 @@ function Main({ active, props }) {
                     }} className='recuitersList'>
 
 
-                    <p className='disp' style={{ color: "#fff", marginBottom: "4rem", fontSize: "16px" }}><b>Bachelor's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
-                    <p className='disp' style={{ color: "#fff", marginBottom: "4rem", fontSize: "16px" }}><b>Master's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
-                    <p className='disp' style={{ color: "#fff", marginBottom: "4rem", fontSize: "16px" }}><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
+                    <p className='disp' style={{ color: "#fff", marginBottom: "3.7rem", fontSize: "16px" }}><b>Bachelor's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
+                    <p className='disp' style={{ color: "#fff", marginBottom: "3.7rem", fontSize: "16px" }}><b>Master's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
+                    <p className='disp' style={{ color: "#fff", marginBottom: "3.7rem", fontSize: "16px" }}><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
 
                     {/* <p style={{color:"#fff", marginBottom:"4rem", fontSize:"16px"}}><b>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
                       <p style={{color:"#fff", marginBottom:"4rem", fontSize:"16px"}}><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p> */}
