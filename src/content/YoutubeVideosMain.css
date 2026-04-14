@@ -1,6 +1,8 @@
 .emblavideo {
   position: relative;
   padding: 20px;
+  width:80%;
+  margin: 0px auto;
 }
 
 .embla__viewportvideo {
@@ -11,12 +13,20 @@
   display: flex;
   gap: 16px;
 }
-
+.embla__slidevideo:last-child {
+  margin-right: 16px;   
+}
 .embla__slidevideo {
-  flex: 0 0 33.3333%;
+  flex: 0 0 32.3333%;
 }
 
 @media (max-width: 1024px) {
+  .emblavideo {
+    position: relative;
+    padding: 20px;
+    width: 100%;
+    margin: 0px auto;
+}
   .embla__slidevideo {
     flex: 0 0 33.33%;
   }

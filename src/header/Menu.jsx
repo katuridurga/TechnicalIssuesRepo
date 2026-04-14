@@ -2499,7 +2499,6 @@ const toolbarStyle = {
     </ThemeProvider>
 
 
-  {/* 🔥 Spacer to push page content down */}
   <div className="header-spacer" />
 
 </React.Fragment>

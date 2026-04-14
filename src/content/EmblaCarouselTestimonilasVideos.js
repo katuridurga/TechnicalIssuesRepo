@@ -13,6 +13,9 @@ import webvban4 from "../assets/img/test/ankush.webp";
 import webvban5 from "../assets/img/test/vipul.webp";
 import webvban6 from "../assets/img/test/rajiv.webp";
 import webvban7 from "../assets/img/test/harshit.webp";
+import webvban8 from "../assets/img/test/rishi.webp";
+import webvban9 from "../assets/img/test/Krushna.webp";
+
 const data = [
   {
     name: "Jithin Peter",
@@ -36,7 +39,7 @@ const data = [
   },
   {
     name: "Rishi Prakash",
-    image: webvban1,
+    image: webvban8,
     video: "https://www.youtube.com/shorts/-h33trH8YLU"
   },
   {
@@ -54,6 +57,11 @@ const data = [
     name: "Harshit",
     image: webvban7,
     video: "https://www.youtube.com/watch?v=xi-1AeB7Krg"
+  },
+  {
+    name: "Krushna",
+    image: webvban9,
+    video: "https://www.youtube.com/shorts/dLvatbiLrwM"
   }
 ];
 const TWEEN_FACTOR_BASE = 0.2
@@ -118,10 +126,6 @@ const EmblaCarouselTestimonilasVideos = () => {
             }
           })
         }
-
-        // const translate = diffToTarget * (-1 * tweenFactor.current) * 100
-        // const tweenNode = tweenNodes.current[slideIndex]
-        // tweenNode.style.transform = `translateX(${translate}%)`
       })
     })
   }, [])
@@ -150,16 +154,13 @@ const EmblaCarouselTestimonilasVideos = () => {
       }
     }
 
-    // Start scrolling
     startAutoScroll()
 
-    // --- Hover logic ---
     const emblaRoot = emblaApi.rootNode()
 
     emblaRoot.addEventListener('mouseenter', stopAutoScroll)
     emblaRoot.addEventListener('mouseleave', startAutoScroll)
 
-    // --- Existing logic ---
     setTweenNodes(emblaApi)
     setTweenFactor(emblaApi)
     tweenParallax(emblaApi)
@@ -196,8 +197,6 @@ const EmblaCarouselTestimonilasVideos = () => {
                     ▶
                   </a>
                 </div>
-
-
               </div>
             </div>
           ))}
