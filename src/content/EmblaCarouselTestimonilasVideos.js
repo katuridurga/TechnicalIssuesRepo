@@ -17,52 +17,15 @@ import webvban8 from "../assets/img/test/rishi.webp";
 import webvban9 from "../assets/img/test/Krushna.webp";
 
 const data = [
-  {
-    name: "Jithin Peter",
-    image: webvban1,
-    video: "https://www.youtube.com/embed/gY7TXYWoi5w"
-  },
-  {
-    name: "Sandeep",
-    image: webvban3,
-    video: "https://www.youtube.com/embed/zhir5FxzGFI"
-  },
-  {
-    name: "Ankush",
-    image: webvban4,
-    video: "https://www.youtube.com/embed/BBc74tIWqKk"
-  },
-  {
-    name: "Vipul",
-    image: webvban5,
-    video: "https://www.youtube.com/embed/lmQ0tylpeuw"
-  },
-  {
-    name: "Rishi Prakash",
-    image: webvban8,
-    video: "https://www.youtube.com/embed/-h33trH8YLU"
-  },
-  {
-    name: "Rajiv Chavli",
-    image: webvban6,
-    video: "https://www.youtube.com/embed/8RogLRiFQY8"
-  },
-
-  {
-    name: " Bhanu Verma",
-    image: webvban2,
-    video: "https://www.youtube.com/embed/V-Y3VxFxjys"
-  },
-  {
-    name: "Harshit",
-    image: webvban7,
-    video: "https://www.youtube.com/embed/xi-1AeB7Krg"
-  },
-  {
-    name: "Krushna",
-    image: webvban9,
-    video: "https://www.youtube.com/embed/dLvatbiLrwM"
-  }
+  { name: "Jithin Peter", image: webvban1, videoId: "gY7TXYWoi5w" },
+  { name: "Sandeep", image: webvban3, videoId: "zhir5FxzGFI" },
+  { name: "Ankush", image: webvban4, videoId: "BBc74tIWqKk" },
+  { name: "Vipul", image: webvban5, videoId: "lmQ0tylpeuw" },
+  { name: "Rishi Prakash", image: webvban8, videoId: "-h33trH8YLU" },
+  { name: "Rajiv Chavli", image: webvban6, videoId: "8RogLRiFQY8" },
+  { name: "Bhanu Verma", image: webvban2, videoId: "V-Y3VxFxjys" },
+  { name: "Harshit", image: webvban7, videoId: "xi-1AeB7Krg" },
+  { name: "Krushna", image: webvban9, videoId: "dLvatbiLrwM" }
 ];
 const TWEEN_FACTOR_BASE = 0.2
 
@@ -199,31 +162,29 @@ const EmblaCarouselTestimonilasVideos = () => {
           {data.map((item, index) => (
             <div className="embla__slidevideo" key={index}>
               <div className="cardvideo">
-                <div className="image-wrappervideo">
-                  {activeVideo === index ? (
-                    <iframe
-                      src={
-  getEmbedUrl(item.video) +
-  (item.video.includes("?") ? "&" : "?") +
-  "autoplay=1&mute=1&playsinline=1&rel=0"
-}
-                      title={item.name}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="video-frame"
-                    />
-                  ) : (
-                    <>
-                      <img src={item.image} alt={item.name} />
-                      <div
-                        className="play-btnvideo"
-                        onClick={() => setActiveVideo(index)}
-                      >
-                        ▶
-                      </div>
-                    </>
-                  )}
-                </div>
+              <div className="image-wrappervideo">
+  {activeVideo === index ? (
+    <iframe
+      src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&playsinline=1&controls=1`}
+      title={item.name}
+      className="video-frame"
+      allow="autoplay; encrypted-media"
+      allowFullScreen
+    />
+  ) : (
+    <div
+      className="thumbnail-container"
+      onClick={() => setActiveVideo(index)}
+    >
+      <img src={item.image} alt={item.name} />
+
+      {/* 🔥 CUSTOM PLAY BUTTON */}
+      <div className="custom-play-btn">
+        ▶
+      </div>
+    </div>
+  )}
+</div>
               </div>
             </div>
           ))}
