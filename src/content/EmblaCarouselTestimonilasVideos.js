@@ -162,29 +162,27 @@ const EmblaCarouselTestimonilasVideos = () => {
           {data.map((item, index) => (
             <div className="embla__slidevideo" key={index}>
               <div className="cardvideo">
-              <div className="image-wrappervideo">
-  {activeVideo === index ? (
-    <iframe
-      src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&playsinline=1&controls=1`}
-      title={item.name}
-      className="video-frame"
-      allow="autoplay; encrypted-media"
-      allowFullScreen
-    />
-  ) : (
-    <div
-      className="thumbnail-container"
-      onClick={() => setActiveVideo(index)}
-    >
-      <img src={item.image} alt={item.name} />
-
-      {/* 🔥 CUSTOM PLAY BUTTON */}
-      <div className="custom-play-btn">
-        ▶
-      </div>
-    </div>
-  )}
-</div>
+                <div className="image-wrappervideo">
+                  {activeVideo === index ? (
+  <iframe
+  src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1`}
+  className="video-frame"
+  allow="autoplay; encrypted-media"
+  allowFullScreen
+/>          ) : (
+                    <>
+                      <img src={item.image} alt={item.name} />
+                      <div
+                        className="play-btnvideo"
+                      onClick={() => {
+  setActiveVideo(index);
+}}
+                      >
+                        ▶
+                      </div>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
           ))}
