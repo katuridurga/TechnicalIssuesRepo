@@ -113,3 +113,15 @@
 .embla__nextvideo {
   right: 0;
 }
+.image-wrappervideo {
+  position: relative;
+  width: 100%;
+  height: 220px;   /* 🔥 MUST */
+}
+
+.video-frame {
+  width: 100%;
+  height: 100%;    /* 🔥 MUST */
+  border: none;
+  display: block;
+}

@@ -134,9 +134,9 @@ function Main({ active, props }) {
                       <span className="blinck">Admissions 2026</span>
                     </h1>
                   </div>
-                </div> :
-                  <div class="">
-                    <div class="block">
+                </div> : 
+                  <div className="">
+                    <div className="block">
                       <h1>
                         <span className='blinck'> Admissions 2026</span>
 
@@ -233,7 +233,7 @@ function Main({ active, props }) {
               <div className='chapter' id="chapter1">
                 {/* <div className="bg-c-gradient300 absolute w-full h-[101%] -top-[1px] -bottom-[1px] left-0 z-[2]"></div> */}
                 <FeaturedProducts />
-                {/* <YoutubeVideos /> */}
+                <YoutubeVideos />
                 <Awards />
               </div>
             </Suspense>

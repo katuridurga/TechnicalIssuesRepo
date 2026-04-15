@@ -20,48 +20,48 @@ const data = [
   {
     name: "Jithin Peter",
     image: webvban1,
-    video: "https://www.youtube.com/shorts/gY7TXYWoi5w"
+    video: "https://www.youtube.com/embed/gY7TXYWoi5w?"
   },
   {
     name: "Sandeep",
     image: webvban3,
-    video: "https://www.youtube.com/shorts/zhir5FxzGFI"
+    video: "https://www.youtube.com/embed/zhir5FxzGFI?"
   },
   {
     name: "Ankush",
     image: webvban4,
-    video: "https://www.youtube.com/shorts/BBc74tIWqKk"
+    video: "https://www.youtube.com/embed/BBc74tIWqKk?"
   },
   {
     name: "Vipul",
     image: webvban5,
-    video: "https://www.youtube.com/shorts/lmQ0tylpeuw"
+    video: "https://www.youtube.com/embed/lmQ0tylpeuw?"
   },
   {
     name: "Rishi Prakash",
     image: webvban8,
-    video: "https://www.youtube.com/shorts/-h33trH8YLU"
+    video: "https://www.youtube.com/embed/-h33trH8YLU?"
   },
   {
     name: "Rajiv Chavli",
     image: webvban6,
-    video: "https://www.youtube.com/shorts/8RogLRiFQY8"
+    video: "https://www.youtube.com/embed/8RogLRiFQY8?"
   },
 
   {
     name: " Bhanu Verma",
     image: webvban2,
-    video: "https://www.youtube.com/watch?v=V-Y3VxFxjys"
+    video: "https://www.youtube.com/embed/V-Y3VxFxjys?"
   },
   {
     name: "Harshit",
     image: webvban7,
-    video: "https://www.youtube.com/watch?v=xi-1AeB7Krg"
+    video: "https://www.youtube.com/embed/xi-1AeB7Krg?"
   },
   {
     name: "Krushna",
     image: webvban9,
-    video: "https://www.youtube.com/shorts/dLvatbiLrwM"
+    video: "https://www.youtube.com/embed/dLvatbiLrwM?"
   }
 ];
 const TWEEN_FACTOR_BASE = 0.2
@@ -71,7 +71,20 @@ const EmblaCarouselTestimonilasVideos = () => {
     loop: true,
     align: "start"
   });
+  const [activeVideo, setActiveVideo] = useState(null);
+  const getEmbedUrl = (url) => {
+    let videoId = "";
 
+    if (url.includes("shorts/")) {
+      videoId = url.split("shorts/")[1];
+    } else if (url.includes("watch?v=")) {
+      videoId = url.split("watch?v=")[1];
+    } else if (url.includes("embed/")) {
+      return url;
+    }
+
+    return "https://www.youtube.com/embed/" + videoId;
+  };
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
   }, [emblaApi]);
@@ -187,15 +200,29 @@ const EmblaCarouselTestimonilasVideos = () => {
             <div className="embla__slidevideo" key={index}>
               <div className="cardvideo">
                 <div className="image-wrappervideo">
-                  <img src={item.image} alt={item.name} />
-                  <a
-                    href={item.video}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="play-btnvideo"
-                  >
-                    ▶
-                  </a>
+                  {activeVideo === index ? (
+                    <iframe
+                      src={
+  getEmbedUrl(item.video) +
+  (item.video.includes("?") ? "&" : "?") +
+  "autoplay=1&mute=1&playsinline=1&rel=0"
+}
+                      title={item.name}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="video-frame"
+                    />
+                  ) : (
+                    <>
+                      <img src={item.image} alt={item.name} />
+                      <div
+                        className="play-btnvideo"
+                        onClick={() => setActiveVideo(index)}
+                      >
+                        ▶
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             </div>

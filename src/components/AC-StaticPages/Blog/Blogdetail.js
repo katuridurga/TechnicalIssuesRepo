@@ -33,34 +33,76 @@ function BlogDetail({ match }) {
   //       setLoading(false);
   //     });
   // }, [id]);
-useEffect(() => {
-  setEvent(null);      // clear previous data
-  setLoading(true);
-  setError(null);
+// useEffect(() => {
+//   setEvent(null);      // clear previous data
+//   setLoading(true);
+//   setError(null);
 
-  fetch(`https://www.backstagepass.co.in/blog_edit.php?id=${id}&t=${Date.now()}`, {
-    method: "GET",
-    cache: "no-store",        // 🔥 prevents browser cache
-    headers: {
-      "Cache-Control": "no-cache"
-    }
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    })
+//   fetch(`https://www.backstagepass.co.in/blog_edit.php?id=${id}&t=${Date.now()}`, {
+//     method: "GET",
+//     cache: "no-store",        // 🔥 prevents browser cache
+//     headers: {
+//       "Cache-Control": "no-cache"
+//     }
+//   })
+//     .then(response => {
+//       if (!response.ok) {
+//         throw new Error("Network response was not ok");
+//       }
+//       return response.json();
+//     })
+//     .then(data => {
+//       if (data && data.length > 0) {
+//         setEvent(data[0]);
+//       } else {
+//         setEvent(null);
+//       }
+//       setLoading(false);
+//     })
+//     .catch(error => {
+//       setError(error);
+//       setLoading(false);
+//     });
+
+// }, [id]);
+const CACHE_TIME = 5 * 60 * 1000; // 5 minutes
+
+useEffect(() => {
+  const cacheKey = `blog_${id}`;
+  const cached = JSON.parse(sessionStorage.getItem(cacheKey));
+
+  // ✅ 1. Load from cache instantly
+  if (cached && Date.now() - cached.time < CACHE_TIME) {
+    console.log("Loaded from cache");
+    setEvent(cached.data);
+    setLoading(false);
+  }
+
+  // ✅ 2. Always fetch fresh data in background
+  fetch(`https://www.backstagepass.co.in/blog_edit.php?id=${id}`)
+    .then(res => res.json())
     .then(data => {
+      console.log("API Response:", data);
+
       if (data && data.length > 0) {
         setEvent(data[0]);
+
+        // ✅ Update cache
+        sessionStorage.setItem(
+          cacheKey,
+          JSON.stringify({
+            data: data[0],
+            time: Date.now(),
+          })
+        );
       } else {
-        setEvent(null);
+        console.warn("No blog data found");
       }
+
       setLoading(false);
     })
-    .catch(error => {
-      setError(error);
+    .catch(err => {
+      console.error("API Error:", err);
       setLoading(false);
     });
 

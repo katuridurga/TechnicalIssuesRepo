@@ -63,18 +63,28 @@ function Courses(props) {
 
   return (
     <>
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'MobileClass' : 'CoursesOffered'}`}>
-        <div className="et_pb_row et_pb_row_0">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0 et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner">
-                <h1 className="title white-txt">Courses Offered</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+   
+  <div className={isMobileState ? "MobileClass" : "CoursesOffered"}>
+  {!isMobileState && (
+    <img
+      src="https://www.backstagepass.co.in/courses-ac05838e.webp"
+      alt="Courses offered banner"
+      className="bg-image"
+    />
+  )}
+{isMobileState && (
+   <img
+      src=" https://www.backstagepass.co.in/maincourse-786ef7eb.webp"
+      alt="Courses offered banner"
+      className="bg-image1"
+    />
+)}
+ 
 
+  <div className="et_pb_row">
+    <h1>Courses Offered</h1>
+  </div>
+</div>
       <div className="courses-container">
         <Helmet>
           {/* Structured Data & meta tags */}
