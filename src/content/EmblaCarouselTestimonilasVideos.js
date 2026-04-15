@@ -20,48 +20,48 @@ const data = [
   {
     name: "Jithin Peter",
     image: webvban1,
-    video: "https://www.youtube.com/embed/gY7TXYWoi5w?"
+    video: "https://www.youtube.com/embed/gY7TXYWoi5w"
   },
   {
     name: "Sandeep",
     image: webvban3,
-    video: "https://www.youtube.com/embed/zhir5FxzGFI?"
+    video: "https://www.youtube.com/embed/zhir5FxzGFI"
   },
   {
     name: "Ankush",
     image: webvban4,
-    video: "https://www.youtube.com/embed/BBc74tIWqKk?"
+    video: "https://www.youtube.com/embed/BBc74tIWqKk"
   },
   {
     name: "Vipul",
     image: webvban5,
-    video: "https://www.youtube.com/embed/lmQ0tylpeuw?"
+    video: "https://www.youtube.com/embed/lmQ0tylpeuw"
   },
   {
     name: "Rishi Prakash",
     image: webvban8,
-    video: "https://www.youtube.com/embed/-h33trH8YLU?"
+    video: "https://www.youtube.com/embed/-h33trH8YLU"
   },
   {
     name: "Rajiv Chavli",
     image: webvban6,
-    video: "https://www.youtube.com/embed/8RogLRiFQY8?"
+    video: "https://www.youtube.com/embed/8RogLRiFQY8"
   },
 
   {
     name: " Bhanu Verma",
     image: webvban2,
-    video: "https://www.youtube.com/embed/V-Y3VxFxjys?"
+    video: "https://www.youtube.com/embed/V-Y3VxFxjys"
   },
   {
     name: "Harshit",
     image: webvban7,
-    video: "https://www.youtube.com/embed/xi-1AeB7Krg?"
+    video: "https://www.youtube.com/embed/xi-1AeB7Krg"
   },
   {
     name: "Krushna",
     image: webvban9,
-    video: "https://www.youtube.com/embed/dLvatbiLrwM?"
+    video: "https://www.youtube.com/embed/dLvatbiLrwM"
   }
 ];
 const TWEEN_FACTOR_BASE = 0.2
