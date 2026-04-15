@@ -251,28 +251,36 @@ function BlogDetail({ history,match }) {
   }, [id, startTime, lastTimeSent]); // Run once when the component mounts or when the blog 
 
   useEffect(() => {
-    console.log('Fetching event with ID:', id);
+  console.log('Fetching event with ID:', id);
 
-    // Fetch the event details based on the ID
-    fetch(`https://www.backstagepass.co.in/blog_edit.php?id=${id}`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log('Fetched data:', data);
-        // Assuming the response is an array and taking the first element
+  const url = `https://www.backstagepass.co.in/blog_edit.php?id=${id}&t=${Date.now()}`;
+
+  setLoading(true);
+
+  fetch(url, { cache: "no-store" })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Fetched data:', data);
+
+      if (Array.isArray(data) && data.length > 0) {
         setEvent(data[0]);
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error('Error fetching event:', error);
-        setError(error);
-        setLoading(false);
-      });
-  }, [id]);
+      } else {
+        setEvent(null); // safer fallback
+      }
+
+      setLoading(false);
+    })
+    .catch(error => {
+      console.error('Error fetching event:', error);
+      setError(error);
+      setLoading(false);
+    });
+}, [id]);
 
   const formatDateToDMY = (dateString) => {
     const date = new Date(dateString);

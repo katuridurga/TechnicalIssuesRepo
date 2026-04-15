@@ -66,29 +66,54 @@ useEffect(() => {
     });
 }, []);
 
-  useEffect(() => {
-    setIsLoading(true); // Set loading to true before fetch
-    const url =
-      selectedCatId === null
-        ? 'https://www.backstagepass.co.in/blog_list.php'
-        : `https://www.backstagepass.co.in/blog_list.php?categoryId=${selectedCatId}`;
+  // useEffect(() => {
+  //   setIsLoading(true); // Set loading to true before fetch
+  //   const url =
+  //     selectedCatId === null
+  //       ? 'https://www.backstagepass.co.in/blog_list.php'
+  //       : `https://www.backstagepass.co.in/blog_list.php?categoryId=${selectedCatId}`;
 
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        if (Array.isArray(data)) {
-          setData(data);
-          setCurrentPage(1); // reset page on category change
-        } else if (data.status === "empty") {
-          setData([]); // safe fallback
-        }
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        console.error('Failed to fetch blogs', err);
-        setIsLoading(false);
-      });
-  }, [selectedCatId]);
+  //   fetch(url)
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       if (Array.isArray(data)) {
+  //         setData(data);
+  //         setCurrentPage(1); // reset page on category change
+  //       } else if (data.status === "empty") {
+  //         setData([]); // safe fallback
+  //       }
+  //       setIsLoading(false);
+  //     })
+  //     .catch((err) => {
+  //       console.error('Failed to fetch blogs', err);
+  //       setIsLoading(false);
+  //     });
+  // }, [selectedCatId]);
+
+  useEffect(() => {
+  setIsLoading(true);
+
+  const url =
+    selectedCatId === null
+      ? 'https://www.backstagepass.co.in/blog_list.php'
+      : `https://www.backstagepass.co.in/blog_list.php?categoryId=${selectedCatId}`;
+
+  fetch(url, { cache: "no-store" })
+    .then((response) => response.json())
+    .then((data) => {
+      if (Array.isArray(data)) {
+        setData(data);
+        setCurrentPage(1);
+      } else if (data.status === "empty") {
+        setData([]);
+      }
+      setIsLoading(false);
+    })
+    .catch((err) => {
+      console.error('Failed to fetch blogs', err);
+      setIsLoading(false);
+    });
+}, [selectedCatId]);
 
 
 //   useEffect(() => {
