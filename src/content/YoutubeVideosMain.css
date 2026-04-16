@@ -56,26 +56,36 @@
   border-radius: 10px;
   pointer-events: none; /* ✅ VERY IMPORTANT */
 }
+
+
+/* Play Button */
 .play-btnvideo {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 28px;
-  color: white;
+  
+  width: 62px;
+  height: 40px;
   background-color: #eb1a23;
+  color: #fff;
+  
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 62px;
-  height: 40px; /* ✅ give proper height */
+  
+  font-size: 20px;
   border-radius: 6px;
+  z-index: 2;
+
   cursor: pointer;
 
-  z-index: 2; /* ✅ ensure it's above image */
-
+  /* ✅ iOS FIXES */
   -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation; /* ✅ improves tap */
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
 }
 .video-frame {
   pointer-events: auto;
