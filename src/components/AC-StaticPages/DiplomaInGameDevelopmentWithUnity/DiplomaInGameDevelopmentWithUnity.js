@@ -58,7 +58,7 @@ function Courses(props) {
         "C++ , Adv C++ & STL",
         "Unity 3D Game Engine – Basic & Advanced",
         "Shadder Programming",
-        "Graphic Programming with OpenGL",
+        "Graphic Programming with Shaders",
         "AI Programming",
         "Game Networking",
         "Gameplay Programming",
