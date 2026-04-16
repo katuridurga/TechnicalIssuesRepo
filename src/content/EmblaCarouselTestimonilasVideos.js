@@ -117,38 +117,54 @@ const EmblaCarouselTestimonilasVideos = () => {
               <div className="cardvideo">
 
                 <div className="image-wrappervideo">
-                  {activeVideo === index ? (
-                    isMobileState ? (
-                      // ✅ MOBILE → NO iframe
-                      <iframe
-                        src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&playsinline=1`}
-                        className="video-frame"
-                        allow="autoplay; encrypted-media"
-                        allowFullScreen
-                      />
-                    ) : (
-                      // ✅ DESKTOP → YouTube iframe
-                      <iframe
-                        src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1`}
-                        className="video-frame"
-                        allow="autoplay; encrypted-media"
-                        allowFullScreen
-                      />
-                    )
-                  ) : (
-                    <div
-                      className="video-thumbnail"
-                      onClick={(e) => {
-                        e.stopPropagation();       // ✅ important
-                        setActiveVideo(index);
-                      }}
-                      onTouchStart={(e) => e.stopPropagation()}  // ✅ VERY important for mobile
-                      onPointerDown={(e) => e.stopPropagation()} // ✅ fixes swipe conflict
-                    >
-                      <img src={item.image} alt={item.name} />
-                      <div className="play-btnvideo">▶</div>
-                    </div>
-                  )}
+                 {activeVideo === index ? (
+  isMobileState ? (
+    // ✅ MOBILE → open YouTube instead of iframe
+    <div
+      className="video-thumbnail"
+      onClick={(e) => {
+        e.stopPropagation();
+        window.open(
+          `https://www.youtube.com/watch?v=${item.videoId}`,
+          "_blank"
+        );
+      }}
+    >
+      <img src={item.image} alt={item.name} />
+      <div className="play-btnvideo">▶</div>
+    </div>
+  ) : (
+    // ✅ DESKTOP → iframe autoplay works
+    <iframe
+      src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1`}
+      className="video-frame"
+      allow="autoplay; encrypted-media"
+      allowFullScreen
+    />
+  )
+) : (
+  <div
+    className="video-thumbnail"
+    onClick={(e) => {
+      e.stopPropagation();
+      if (isMobileState) {
+        // ✅ MOBILE → directly open YouTube
+        window.open(
+          `https://www.youtube.com/watch?v=${item.videoId}`,
+          "_blank"
+        );
+      } else {
+        // ✅ DESKTOP → show iframe
+        setActiveVideo(index);
+      }
+    }}
+    onTouchStart={(e) => e.stopPropagation()}
+    onPointerDown={(e) => e.stopPropagation()}
+  >
+    <img src={item.image} alt={item.name} />
+    <div className="play-btnvideo">▶</div>
+  </div>
+)}
                 </div>
 
 
