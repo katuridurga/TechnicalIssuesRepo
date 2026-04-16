@@ -1,11 +1,13 @@
 import React, { useEffect, useCallback, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import { useSelector, shallowEqual } from "react-redux";
 import "./YoutubeVideosMain.css";
 import {
   NextButton,
   PrevButton,
   usePrevNextButtons
 } from './EmblaCarouselArrowButtons'
+
 import webvban1 from "../assets/img/test/WebsiteVideoBanner1.webp";
 import webvban2 from "../assets/img/test/Bhanu.webp";
 import webvban3 from "../assets/img/test/sandeep.webp";
@@ -27,134 +29,69 @@ const data = [
   { name: "Harshit", image: webvban7, videoId: "xi-1AeB7Krg" },
   { name: "Krushna", image: webvban9, videoId: "dLvatbiLrwM" }
 ];
-const TWEEN_FACTOR_BASE = 0.2
 
 const EmblaCarouselTestimonilasVideos = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start"
   });
+
   const [activeVideo, setActiveVideo] = useState(null);
-  const getEmbedUrl = (url) => {
-    let videoId = "";
+  const [isPlaying, setIsPlaying] = useState(false); // ✅ IMPORTANT
 
-    if (url.includes("shorts/")) {
-      videoId = url.split("shorts/")[1];
-    } else if (url.includes("watch?v=")) {
-      videoId = url.split("watch?v=")[1];
-    } else if (url.includes("embed/")) {
-      return url;
-    }
-
-    return "https://www.youtube.com/embed/" + videoId;
-  };
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
-  const tweenFactor = useRef(0)
-  const tweenNodes = useRef([])
   const {
     prevBtnDisabled,
     nextBtnDisabled,
     onPrevButtonClick,
     onNextButtonClick
-  } = usePrevNextButtons(emblaApi)
-  const setTweenNodes = useCallback((emblaApi) => {
-    tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
-      return slideNode.querySelector('.embla__parallax__layerbM')
-    })
-  }, [])
+  } = usePrevNextButtons(emblaApi);
 
-  const setTweenFactor = useCallback((emblaApi) => {
-    tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
-  }, [])
+  const isMobileState = useSelector(
+    state => state.mainReducer.isMobile,
+    shallowEqual
+  );
 
-  const tweenParallax = useCallback((emblaApi, eventName) => {
-    const engine = emblaApi.internalEngine()
-    const scrollProgress = emblaApi.scrollProgress()
-    const slidesInView = emblaApi.slidesInView()
-    const isScrollEvent = eventName === 'scroll'
-
-    emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
-      let diffToTarget = scrollSnap - scrollProgress
-      const slidesInSnap = engine.slideRegistry[snapIndex]
-
-      slidesInSnap.forEach((slideIndex) => {
-        if (isScrollEvent && !slidesInView.includes(slideIndex)) return
-
-        if (engine.options.loop) {
-          engine.slideLooper.loopPoints.forEach((loopItem) => {
-            const target = loopItem.target()
-
-            if (slideIndex === loopItem.index && target !== 0) {
-              const sign = Math.sign(target)
-
-              if (sign === -1) {
-                diffToTarget = scrollSnap - (1 + scrollProgress)
-              }
-              if (sign === 1) {
-                diffToTarget = scrollSnap + (1 - scrollProgress)
-              }
-            }
-          })
-        }
-      })
-    })
-  }, [])
+  // ✅ STOP VIDEO WHEN SLIDE CHANGES
   useEffect(() => {
-    if (!emblaApi) return
+    if (!emblaApi) return;
 
-    let autoScrollInterval
+    const onSelect = () => {
+      setActiveVideo(null);
+      setIsPlaying(false);
+    };
 
-    const autoScrollLeft = () => {
-      if (emblaApi.canScrollPrev()) {
-        emblaApi.scrollPrev()
+    emblaApi.on("select", onSelect);
+    return () => emblaApi.off("select", onSelect);
+  }, [emblaApi]);
+
+  // ✅ AUTO SCROLL (STOP WHEN VIDEO PLAYS)
+  useEffect(() => {
+    if (!emblaApi || isPlaying) return;
+
+    let interval = setInterval(() => {
+      if (emblaApi.canScrollNext()) {
+        emblaApi.scrollNext();
       } else {
-        emblaApi.scrollTo(emblaApi.scrollSnapList().length - 1)
+        emblaApi.scrollTo(0);
       }
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [emblaApi, isPlaying]);
+useEffect(() => {
+  const handleError = (e) => {
+    if (e.message?.includes("reading '1'")) {
+      e.preventDefault(); // ✅ stop error breaking app
+      return true;
     }
+  };
 
-    const startAutoScroll = () => {
-      stopAutoScroll()
-      autoScrollInterval = setInterval(autoScrollLeft, 3000)
-    }
+  window.addEventListener("error", handleError);
 
-    const stopAutoScroll = () => {
-      if (autoScrollInterval) {
-        clearInterval(autoScrollInterval)
-        autoScrollInterval = null
-      }
-    }
-
-    startAutoScroll()
-
-    const emblaRoot = emblaApi.rootNode()
-
-    emblaRoot.addEventListener('mouseenter', stopAutoScroll)
-    emblaRoot.addEventListener('mouseleave', startAutoScroll)
-
-    setTweenNodes(emblaApi)
-    setTweenFactor(emblaApi)
-    tweenParallax(emblaApi)
-
-    emblaApi
-      .on('reInit', setTweenNodes)
-      .on('reInit', setTweenFactor)
-      .on('reInit', tweenParallax)
-      .on('scroll', tweenParallax)
-      .on('slideFocus', tweenParallax)
-
-    return () => {
-      stopAutoScroll()
-      emblaRoot.removeEventListener('mouseenter', stopAutoScroll)
-      emblaRoot.removeEventListener('mouseleave', startAutoScroll)
-    }
-  }, [emblaApi, setTweenFactor, setTweenNodes, tweenParallax])
-
+  return () => {
+    window.removeEventListener("error", handleError);
+  };
+}, []);
   return (
     <div className="emblavideo">
       <div className="embla__viewportvideo" ref={emblaRef}>
@@ -162,61 +99,50 @@ const EmblaCarouselTestimonilasVideos = () => {
           {data.map((item, index) => (
             <div className="embla__slidevideo" key={index}>
               <div className="cardvideo">
-             {/* <div className="image-wrappervideo">
-                  {activeVideo === index ? (
+                <div className="image-wrappervideo">
+
+                {activeVideo === index ? (
   <iframe
-  src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1`}
-  className="video-frame"
-  allow="autoplay; encrypted-media"
-  allowFullScreen
-/>          ) : (
-                    <>
-                      <img src={item.image} alt={item.name} />
-                      <div
-                        className="play-btnvideo"
-                      onClick={() => {
-  setActiveVideo(index);
-}}
-                      >
-                        ▶
-                      </div>
-                    </>
-                  )}
-                </div>  */}
-              <div className="image-wrappervideo">
-  {activeVideo === index ? (
-    <iframe
-      src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&playsinline=1`}
-      className="video-frame"
-      allow="autoplay; fullscreen"
-      allowFullScreen
-      title="YouTube video"
-    />
-  ) : (
-    <>
-      <img src={item.image} alt={item.name} />
-      <div
-       className="play-btnvideo"
-  onClick={() => setActiveVideo(index)}
-  onTouchStart={() => setActiveVideo(index)}
-      >
-        ▶
-      </div>
-    </>
-  )}
-</div>
+    key={item.videoId}
+    src={
+      isMobileState
+        ? `https://www.youtube.com/embed/${item.videoId}?playsinline=1&controls=1`
+        : `https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&playsinline=1`
+    }
+    className="video-frame"
+    allow="autoplay; encrypted-media"
+    allowFullScreen
+    title="YouTube video"
+  />
+) : (
+  <>
+    <img src={item.image} alt={item.name} />
+
+    <div
+      className="play-btnvideo"
+      onClick={() => {
+        setActiveVideo(index);
+        setIsPlaying(true);
+      }}
+    >
+      ▶
+    </div>
+  </>
+)}
+
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
       <div className="embla__controls">
         <div className="embla__buttons">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
       </div>
-
     </div>
   );
 };
