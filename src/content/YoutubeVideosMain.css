@@ -51,12 +51,36 @@
   padding: 6px;
   border: 1px solid #fff;
 }
-
-.image-wrappervideo {
-  position: relative;
-}
-
 .image-wrappervideo img {
+  width: 100%;
+  border-radius: 10px;
+  pointer-events: none; /* ✅ VERY IMPORTANT */
+}
+.play-btnvideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  color: white;
+  background-color: #eb1a23;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 40px; /* ✅ give proper height */
+  border-radius: 6px;
+  cursor: pointer;
+
+  z-index: 2; /* ✅ ensure it's above image */
+
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation; /* ✅ improves tap */
+}
+.video-frame {
+  pointer-events: auto;
+}
+/* .image-wrappervideo img {
   width: 100%;
   border-radius: 10px;
 }
@@ -75,9 +99,9 @@
     justify-content: center;
     width:62px;
     border-radius:6px;
-      -webkit-tap-highlight-color: transparent; /* ✅ remove gray tap */
+      -webkit-tap-highlight-color: transparent; /* ✅ remove gray tap
   outline: none;
-}
+} */
 
 .contentvideo {
   padding: 10px;

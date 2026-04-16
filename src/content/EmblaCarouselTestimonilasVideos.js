@@ -19,15 +19,15 @@ import webvban8 from "../assets/img/test/rishi.webp";
 import webvban9 from "../assets/img/test/Krushna.webp";
 
 const data = [
-  { name: "Jithin Peter", image: webvban1, videoId: "gY7TXYWoi5w" },
-  { name: "Sandeep", image: webvban3, videoId: "zhir5FxzGFI" },
-  { name: "Ankush", image: webvban4, videoId: "BBc74tIWqKk" },
+  { name: "Jithin Peter", image: webvban1, videoId: "gY7TXYWoi5w", videoUrl: "https://www.youtube.com/shorts/gY7TXYWoi5w" },
+  { name: "Sandeep", image: webvban3, videoId: "zhir5FxzGFI", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk" },
+  { name: "Ankush", image: webvban4, videoId: "BBc74tIWqKk", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk" },
   { name: "Vipul", image: webvban5, videoId: "lmQ0tylpeuw" },
-  { name: "Rishi Prakash", image: webvban8, videoId: "-h33trH8YLU" },
-  { name: "Rajiv Chavli", image: webvban6, videoId: "8RogLRiFQY8" },
-  { name: "Bhanu Verma", image: webvban2, videoId: "V-Y3VxFxjys" },
-  { name: "Harshit", image: webvban7, videoId: "xi-1AeB7Krg" },
-  { name: "Krushna", image: webvban9, videoId: "dLvatbiLrwM" }
+  { name: "Rishi Prakash", image: webvban8, videoId: "-h33trH8YLU", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk" },
+  { name: "Rajiv Chavli", image: webvban6, videoId: "8RogLRiFQY8", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk" },
+  { name: "Bhanu Verma", image: webvban2, videoId: "V-Y3VxFxjys", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk" },
+  { name: "Harshit", image: webvban7, videoId: "xi-1AeB7Krg", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk" },
+  { name: "Krushna", image: webvban9, videoId: "dLvatbiLrwM", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk" }
 ];
 
 const EmblaCarouselTestimonilasVideos = () => {
@@ -74,24 +74,40 @@ const EmblaCarouselTestimonilasVideos = () => {
       } else {
         emblaApi.scrollTo(0);
       }
-    }, 3000);
+    }, 40000);
 
     return () => clearInterval(interval);
   }, [emblaApi, isPlaying]);
-useEffect(() => {
-  const handleError = (e) => {
-    if (e.message?.includes("reading '1'")) {
-      e.preventDefault(); // ✅ stop error breaking app
-      return true;
-    }
-  };
+  useEffect(() => {
+    const handleError = (e) => {
+      if (e.message?.includes("reading '1'")) {
+        e.preventDefault(); // ✅ stop error breaking app
+        return true;
+      }
+    };
 
-  window.addEventListener("error", handleError);
+    window.addEventListener("error", handleError);
 
-  return () => {
-    window.removeEventListener("error", handleError);
-  };
-}, []);
+    return () => {
+      window.removeEventListener("error", handleError);
+    };
+  }, []);
+  useEffect(() => {
+    const handleError = (e) => {
+      if (
+        e.message?.includes("reading '1'") ||
+        e.filename?.includes("content.bundle")
+      ) {
+        return true; // ✅ silently ignore extension errors
+      }
+    };
+
+    window.addEventListener("error", handleError);
+
+    return () => {
+      window.removeEventListener("error", handleError);
+    };
+  }, []);
   return (
     <div className="emblavideo">
       <div className="embla__viewportvideo" ref={emblaRef}>
@@ -99,38 +115,43 @@ useEffect(() => {
           {data.map((item, index) => (
             <div className="embla__slidevideo" key={index}>
               <div className="cardvideo">
+
                 <div className="image-wrappervideo">
-
-                {activeVideo === index ? (
-  <iframe
-    key={item.videoId}
-    src={
-      isMobileState
-        ? `https://www.youtube.com/embed/${item.videoId}?playsinline=1&controls=1`
-        : `https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&playsinline=1`
-    }
-    className="video-frame"
-    allow="autoplay; encrypted-media"
-    allowFullScreen
-    title="YouTube video"
-  />
-) : (
-  <>
-    <img src={item.image} alt={item.name} />
-
-    <div
-      className="play-btnvideo"
-      onClick={() => {
-        setActiveVideo(index);
-        setIsPlaying(true);
-      }}
-    >
-      ▶
-    </div>
-  </>
-)}
-
+                  {activeVideo === index ? (
+                    isMobileState ? (
+                      // ✅ MOBILE → NO iframe
+                      <iframe
+                        src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&playsinline=1`}
+                        className="video-frame"
+                        allow="autoplay; encrypted-media"
+                        allowFullScreen
+                      />
+                    ) : (
+                      // ✅ DESKTOP → YouTube iframe
+                      <iframe
+                        src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1`}
+                        className="video-frame"
+                        allow="autoplay; encrypted-media"
+                        allowFullScreen
+                      />
+                    )
+                  ) : (
+                    <div
+                      className="video-thumbnail"
+                      onClick={(e) => {
+                        e.stopPropagation();       // ✅ important
+                        setActiveVideo(index);
+                      }}
+                      onTouchStart={(e) => e.stopPropagation()}  // ✅ VERY important for mobile
+                      onPointerDown={(e) => e.stopPropagation()} // ✅ fixes swipe conflict
+                    >
+                      <img src={item.image} alt={item.name} />
+                      <div className="play-btnvideo">▶</div>
+                    </div>
+                  )}
                 </div>
+
+
               </div>
             </div>
           ))}

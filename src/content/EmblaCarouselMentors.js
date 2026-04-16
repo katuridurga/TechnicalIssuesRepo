@@ -91,169 +91,169 @@ const EmblaCarouselMentors = (props) => {
   }, [emblaApi, setTweenFactor, setTweenNodes, tweenScale])
 
   return (
-    <div className="embla3" style={{position: "relative"}}>
+    <div className="embla3" style={{ position: "relative" }}>
       <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container card__collection clear-fix" style={{ overflow: "visible"}}>
+        <div className="embla__container card__collection clear-fix" style={{ overflow: "visible" }}>
 
-      
+
 
           <div className="embla__slidet" key={1} data-label="In Progress">
             <div className="embla__slide__number">
-            <div className="cards cards--two">
-                          <img src={mentor1} className="img-responsive" alt="Cards" />
-                          <span className="cards--two__rect"></span>
-                          <p>
-                            <ul className="cards__list">
-                              <li style={{ left: "5px" }}><TfiLinkedin /></li>
-                            </ul>
-                          </p><br />
-                          <p>A. Bala Krishna (Principal)</p><br />
-                          <p style={{ lineHeight: "77px" }}>Professor Computer Science</p>
+              <div className="cards cards--two">
+                <img src={mentor1} className="img-responsive" alt="Cards" />
+                <span className="cards--two__rect"></span>
+                <p>
+                  <ul className="cards__list">
+                    <li style={{ left: "5px" }}><TfiLinkedin /></li>
+                  </ul>
+                </p><br />
+                <p>A. Bala Krishna (Principal)</p><br />
+                <p style={{ lineHeight: "77px" }}>Professor Computer Science</p>
 
-                        </div>
+              </div>
             </div>
           </div>
 
           <div className="embla__slidet" key={2}>
             <div className="embla__slide__number">
-            <div className="cards cards--two">
-                          <img src={men2} className="img-responsive" alt="Cards" />
-                          <span className="cards--two__rect"></span>
-                          <p>
-                            <ul className="cards__list">
-                              <li style={{ left: "5px" }}><TfiLinkedin /></li>
-                            </ul>
-                          </p><br />
-                          <p>N. Swapna (Vice Principal)
-                          </p><br />
-                          <p style={{ lineHeight: "77px" }}>Associate Professor
-                            Computer Science
-                          </p>
-                        </div>
+              <div className="cards cards--two">
+                <img src={men2} className="img-responsive" alt="Cards" />
+                <span className="cards--two__rect"></span>
+                <p>
+                  <ul className="cards__list">
+                    <li style={{ left: "5px" }}><TfiLinkedin /></li>
+                  </ul>
+                </p><br />
+                <p>N. Swapna (Vice Principal)
+                </p><br />
+                <p style={{ lineHeight: "77px" }}>Associate Professor
+                  Computer Science
+                </p>
+              </div>
             </div>
           </div>
           <div className="embla__slidet" key={3}>
             <div className="embla__slide__number">
-            <div className="cards cards--two">
-                          <img src={mentor1} className="img-responsive" alt="Cards" />
-                          <span className="cards--two__rect"></span>
-                          <p>
-                            <ul className="cards__list">
-                              <li style={{ left: "5px" }}><TfiLinkedin /></li>
-                            </ul>
-                          </p><br />
-                          <p>Krishna Prasad</p><br />
-                          <p style={{ lineHeight: "77px" }}>Assistant Professor Computer Science
-                          </p>
-                        </div>
+              <div className="cards cards--two">
+                <img src={mentor1} className="img-responsive" alt="Cards" />
+                <span className="cards--two__rect"></span>
+                <p>
+                  <ul className="cards__list">
+                    <li style={{ left: "5px" }}><TfiLinkedin /></li>
+                  </ul>
+                </p><br />
+                <p>Krishna Prasad</p><br />
+                <p style={{ lineHeight: "77px" }}>Assistant Professor Computer Science
+                </p>
+              </div>
             </div>
           </div>
           <div className="embla__slidet" key={4}>
             <div className="embla__slide__number">
-            <div className="cards cards--two">
-                          <img src={mentor1} className="img-responsive" alt="Cards" />
-                          <span className="cards--two__rect"></span>
-                          <p>
-                            <ul className="cards__list">
-                              <li style={{ left: "5px" }}><TfiLinkedin /></li>
-                            </ul>
-                          </p><br />
-                          <p>Sania Arzoo</p><br />
-                          <p style={{ lineHeight: "77px" }}>Assistant Professor Computer Science
-                          </p>
-                        </div>
+              <div className="cards cards--two">
+                <img src={mentor1} className="img-responsive" alt="Cards" />
+                <span className="cards--two__rect"></span>
+                <p>
+                  <ul className="cards__list">
+                    <li style={{ left: "5px" }}><TfiLinkedin /></li>
+                  </ul>
+                </p><br />
+                <p>Sania Arzoo</p><br />
+                <p style={{ lineHeight: "77px" }}>Assistant Professor Computer Science
+                </p>
+              </div>
             </div>
           </div>
 
           <div className="embla__slidet" key={5}>
             <div className="embla__slide__number">
-            <div className="cards cards--two">
-                          <img src={mentor1} className="img-responsive" alt="Cards" />
-                          <span className="cards--two__rect"></span>
-                          <p>
-                            <ul className="cards__list">
-                              <li style={{ left: "5px" }}><TfiLinkedin /></li>
-                            </ul>
-                          </p><br />
-                          <p>Sandeep Salimeda</p><br />
-                          <p style={{ lineHeight: "77px" }}>Senior Instructor <br />Game Programming</p>
-                        </div>
+              <div className="cards cards--two">
+                <img src={mentor1} className="img-responsive" alt="Cards" />
+                <span className="cards--two__rect"></span>
+                <p>
+                  <ul className="cards__list">
+                    <li style={{ left: "5px" }}><TfiLinkedin /></li>
+                  </ul>
+                </p><br />
+                <p>Sandeep Salimeda</p><br />
+                <p style={{ lineHeight: "77px" }}>Senior Instructor <br />Game Programming</p>
+              </div>
             </div>
           </div>
-          
+
           <div className="embla__slidet" key={6}>
             <div className="embla__slide__number">
-            <div className="cards cards--two">
-                          <img src={mentor1} className="img-responsive" alt="Cards" />
-                          <span className="cards--two__rect"></span>
-                          <p>
-                            <ul className="cards__list">
-                              <li style={{ left: "5px" }}><TfiLinkedin /></li>
-                            </ul>
-                          </p><br />
-                          <p>N. D. Sandeep</p><br />
-                          <p style={{ lineHeight: "77px" }}>Senior Instructor <br />Game Programming</p>
-                        </div>
+              <div className="cards cards--two">
+                <img src={mentor1} className="img-responsive" alt="Cards" />
+                <span className="cards--two__rect"></span>
+                <p>
+                  <ul className="cards__list">
+                    <li style={{ left: "5px" }}><TfiLinkedin /></li>
+                  </ul>
+                </p><br />
+                <p>N. D. Sandeep</p><br />
+                <p style={{ lineHeight: "77px" }}>Senior Instructor <br />Game Programming</p>
+              </div>
 
             </div>
           </div>
-          
+
           <div className="embla__slidet" key={7}>
             <div className="embla__slide__number">
-            <div className="cards cards--two">
-                          <img src={mentor1} className="img-responsive" alt="Cards" />
-                          <span className="cards--two__rect"></span>
-                          <p>
-                            <ul className="cards__list">
-                              <li style={{ left: "5px" }}><TfiLinkedin /></li>
-                            </ul>
-                          </p><br />
-                          <p>Niraj Sangani</p><br />
-                          <p style={{ lineHeight: "77px" }}>Master Instructor Game Design</p>
-                        </div>
+              <div className="cards cards--two">
+                <img src={mentor1} className="img-responsive" alt="Cards" />
+                <span className="cards--two__rect"></span>
+                <p>
+                  <ul className="cards__list">
+                    <li style={{ left: "5px" }}><TfiLinkedin /></li>
+                  </ul>
+                </p><br />
+                <p>Niraj Sangani</p><br />
+                <p style={{ lineHeight: "77px" }}>Master Instructor Game Design</p>
+              </div>
             </div>
           </div>
           <div className="embla__slidet" key={8}>
             <div className="embla__slide__number">
-            <div className="cards cards--two">
-                          <img src={mentor1} className="img-responsive" alt="Cards" />
-                          <span className="cards--two__rect"></span>
-                          <p>
-                            <ul className="cards__list">
-                              <li style={{ left: "5px" }}><TfiLinkedin /></li>
-                            </ul>
-                          </p><br />
-                          <p>Sundheep Sambharaju</p><br />
-                          <p style={{ lineHeight: "77px" }}>Senior Instructor Game Design</p>
-                        </div>
+              <div className="cards cards--two">
+                <img src={mentor1} className="img-responsive" alt="Cards" />
+                <span className="cards--two__rect"></span>
+                <p>
+                  <ul className="cards__list">
+                    <li style={{ left: "5px" }}><TfiLinkedin /></li>
+                  </ul>
+                </p><br />
+                <p>Sundheep Sambharaju</p><br />
+                <p style={{ lineHeight: "77px" }}>Senior Instructor Game Design</p>
+              </div>
             </div>
           </div>
 
           <div className="embla__slidet" key={9}>
             <div className="embla__slide__number">
-            <div className="cards cards--two">
-                          <img src={mentor1} className="img-responsive" alt="Cards" />
-                          <span className="cards--two__rect"></span>
-                          <p>
-                            <ul className="cards__list">
-                              <li style={{ left: "5px" }}><TfiLinkedin /></li>
-                            </ul>
-                          </p><br />
-                          <p>Dhruva Mota</p><br />
-                          <p style={{ lineHeight: "77px" }}>Mentor Game Design</p>
-                        </div>
+              <div className="cards cards--two">
+                <img src={mentor1} className="img-responsive" alt="Cards" />
+                <span className="cards--two__rect"></span>
+                <p>
+                  <ul className="cards__list">
+                    <li style={{ left: "5px" }}><TfiLinkedin /></li>
+                  </ul>
+                </p><br />
+                <p>Dhruva Mota</p><br />
+                <p style={{ lineHeight: "77px" }}>Mentor Game Design</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <div className="embla__controlss">
-        <div className="embla__buttonss" style={{top: "45%"}}>
+        <div className="embla__buttonss" style={{ top: "45%" }}>
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
 
-        
+
       </div>
     </div>
   )
