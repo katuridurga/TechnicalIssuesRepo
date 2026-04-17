@@ -2,7 +2,7 @@ import React, { useState, useEffect, lazy, Suspense } from 'react';
 // import preLoaderVideo from "../assets/img/BSPAnimated.mp4";
 // import preLoaderWebm from "../assets/img/BSPAnimated.webm";
 import { useSelector, shallowEqual } from "react-redux";
-import popupImg from "../assets/img/qs-ranking-2026.jpg";
+import popupImg from "../assets/img/qs-ranking-2026.webp";
 import PropTypes from 'prop-types';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
@@ -86,7 +86,7 @@ function Main({ active, props }) {
   useEffect(() => {
     const hasVisited = localStorage.getItem("HOME_POPUP_SHOWN");
 
-    if (!hasVisited && window.location.pathname === "/") {
+    if ( window.location.pathname === "/") {
       setShowPopup(true);
       localStorage.setItem("HOME_POPUP_SHOWN", "true");
     }
@@ -98,10 +98,10 @@ function Main({ active, props }) {
   const now = new Date().getTime();
   const lastShown = localStorage.getItem("HOME_POPUP_TIME");
 
-  if (!lastShown || now - lastShown > 86400000) {
-    setShowPopup(true);
-    localStorage.setItem("HOME_POPUP_TIME", now);
-  }
+  // if (!lastShown || now - lastShown > 86400000) {
+  //   setShowPopup(true);
+  //   localStorage.setItem("HOME_POPUP_TIME", now);
+  // }
 
   return (
     <>
@@ -200,7 +200,7 @@ function Main({ active, props }) {
             )}
           </div>
           {/*admissions popup code*/}
-          {/* {showPopup && (
+         {showPopup && (
             <div className="popup-overlay">
               <div className="popup-box">
 
@@ -214,7 +214,7 @@ function Main({ active, props }) {
 
               </div>
             </div>
-          )} */}
+          )} 
 
           <section id="there's-still-time-to-apply-for-2024" className="banner siva">
             <div className="container1">

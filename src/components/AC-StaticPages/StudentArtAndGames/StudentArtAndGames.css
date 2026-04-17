@@ -510,3 +510,14 @@ transform: scale(1.18);
 .viewmore-btn:hover {
   background: #e56c00;
 }
+.top-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 12px;
+}
+.all-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}

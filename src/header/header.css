@@ -373,7 +373,14 @@
 }
 
 @media only screen and (max-width: 1024px) {
-
+ .popup-image {
+    width: 100%;
+   height: auto !important;
+    border-radius: 12px;
+    display: block;
+  top:0px !important
+   
+}
   .hdmboile {
     height: 45px;
   }
@@ -9714,7 +9721,7 @@ td p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgb(0 0 0 / 59%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9727,11 +9734,6 @@ td p {
   max-height: 90%;
 }
 
-.popup-image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
 
 .close-btn {
   position: absolute;
@@ -9752,19 +9754,22 @@ td p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.75);
+    background: rgb(0 0 0 / 59%);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  padding: 10px;
+ 
 }
 
 .popup-box {
   position: relative;
   width: 100%;
-  max-width: 712px;
+  max-width: 800px;
   animation: zoomIn 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Image responsive */
@@ -9773,6 +9778,8 @@ td p {
   height: 346px;
   border-radius: 12px;
   display: block;
+  top: 0px;
+
 }
 
 .close-btn:hover {
@@ -10212,6 +10219,14 @@ td p {
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
+  .popup-image {
+    width: 100%;
+   height: auto !important;
+    border-radius: 12px;
+    display: block;
+  top:0px !important
+   
+}
   .block h1 span::after {
     bottom: -4px;
     right: 2px;

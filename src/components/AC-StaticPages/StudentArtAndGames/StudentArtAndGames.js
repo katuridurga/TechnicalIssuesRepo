@@ -17,10 +17,15 @@ import art30 from "../../../assets/img/art/Nikhil.png"
 import art31 from "../../../assets/img/art/KhushiNileshPathak-1.png"
 import art32 from "../../../assets/img/art/Mahesh.png"
 import art33 from "../../../assets/img/art/TaniyaDas.png"
-import art34 from "../../../assets/img/art/vijay-sivatej.jpg"
-import art35 from "../../../assets/img/art/soumyadeep.jpg"
-import art36 from "../../../assets/img/art/sudheer.jpg"
-import art37 from "../../../assets/img/art/ishak-mohmmed.jpg"
+import art34 from "../../../assets/img/art/Frame178.webp"
+import art35 from "../../../assets/img/art/Frame179.webp"
+import art36 from "../../../assets/img/art/Frame180.webp"
+import art37 from "../../../assets/img/art/Frame181.webp"
+import art38 from "../../../assets/img/art/Frame182.webp"
+import art39 from "../../../assets/img/art/Frame183.webp"
+import art40 from "../../../assets/img/art/Frame184.webp"
+import art41 from "../../../assets/img/art/Frame185.webp"
+import art42 from "../../../assets/img/art/Frame186.webp"
 import b1 from "../../../assets/img/StudentGames/Student Games/Frame389.webp";
 import b2 from "../../../assets/img/StudentGames/Student Games/Frame390.webp";
 import b3 from "../../../assets/img/StudentGames/Student Games/Frame391.webp";
@@ -266,20 +271,32 @@ function Courses(props) {
 
         </div>
         <section className="photos">
+
           <div className="ph" data-type="3D Artwork"><img src={art34} alt="art4" /></div>
-          <div className="ph" data-type="2D Artwork"><img src={art35} alt="art7" /></div>
+          <div className="ph" data-type="3D Artwork"><img src={art38} alt="art5" /></div>
+          <div className="ph" data-type="3D Artwork"><img src={art36} alt="art5" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art37} alt="art5" /></div>
+          <div className="ph" data-type="3D Artwork"><img src={art40} alt="art5" /></div>
+
+          <div className="ph" data-type="3D Artwork"><img src={art42} alt="art5" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art17} alt="art4" /></div>
           <div className="ph" data-type="2D Artwork"><img src={art27} alt="art7" /></div>
+
           <div className="ph" data-type="3D Artwork"><img src={art18} alt="art5" /></div>
+          <div className="ph" data-type="3D Artwork"><img src={art39} alt="art5" /></div>
+          <div className="ph" data-type="2D Artwork"><img src={art35} alt="art7" /></div>
+      
+
           <div className="ph" data-type="3D Artwork"><img src={art19} alt="art7" /></div>
-          <div className="ph" data-type="3D Artwork"><img src={art36} alt="art5" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art20} alt="art6" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art21} alt="art8" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art22} alt="art2" /></div>
+
           <div className="ph" data-type="3D Artwork"><img src={art23} alt="art3" /></div>
           <div className="ph" data-type="2D Artwork"><img src={art33} alt="art10" /></div>
+                  <div className="ph" data-type="3D Artwork"><img src={art41} alt="art5" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art24} alt="art9" /></div>
+      
           <div className="ph" data-type="3D Artwork"><img src={art25} alt="art10" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art26} alt="art11" /></div>
           <div className="ph" data-type="2D Artwork"><img src={art28} alt="art6" /></div>
