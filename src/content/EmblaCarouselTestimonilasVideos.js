@@ -169,23 +169,29 @@ const EmblaCarouselTestimonilasVideos = () => {
 
 <div className="image-wrappervideo">
   {isMobileState ? (
-    // ✅ MOBILE → NEVER use state, NEVER render iframe
-    <a
-      href={`https://www.youtube.com/watch?v=${item.videoId}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="video-thumbnail"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <img src={item.image} alt={item.name} />
-      <div className="play-btnvideo">
-         <div className="custuom-button">
-         <div className="play-icon1"></div>
-         </div>
+    <>
+      <a
+        href={`https://www.youtube.com/watch?v=${item.videoId}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="video-thumbnail"
+      >
+        <img src={item.image} alt={item.name} />
+      </a>
+
+      {/* 🔥 MOVE BUTTON OUTSIDE */}
+      <div
+        className="play-btnvideo"
+        onClick={() =>
+          window.open(`https://www.youtube.com/watch?v=${item.videoId}`, "_blank")
+        }
+      >
+        <div className="custom-button">
+          <div className="play-icon1"></div>
+        </div>
       </div>
-    </a>
+    </>
   ) : (
-    // ✅ DESKTOP ONLY
     activeVideo === index ? (
       <div className="iframe-container">
         <iframe
@@ -196,21 +202,32 @@ const EmblaCarouselTestimonilasVideos = () => {
         />
       </div>
     ) : (
-      <div
-        className="video-thumbnail"
-        onClick={(e) => {
-          e.stopPropagation();
-          setActiveVideo(index);
-          setIsPlaying(true); // ✅ keep your logic
-        }}
-      >
-        <img src={item.image} alt={item.name} />
-        <div className="play-btnvideo">
-           <div className="custuom-button">
-<div className="play-icon1"></div>
-</div>
+      <>
+        <div
+          className="video-thumbnail"
+          onClick={(e) => {
+            e.stopPropagation();
+            setActiveVideo(index);
+            setIsPlaying(true);
+          }}
+        >
+          <img src={item.image} alt={item.name} />
         </div>
-      </div>
+
+        {/* 🔥 OUTSIDE again */}
+        <div
+          className="play-btnvideo"
+          onClick={(e) => {
+            e.stopPropagation();
+            setActiveVideo(index);
+            setIsPlaying(true);
+          }}
+        >
+          <div className="custom-button">
+            <div className="play-icon1"></div>
+          </div>
+        </div>
+      </>
     )
   )}
 </div>
