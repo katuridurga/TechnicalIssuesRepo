@@ -115,7 +115,7 @@ const EmblaCarouselTestimonilasVideos = () => {
           {data.map((item, index) => (
             <div className="embla__slidevideo" key={index}>
               <div className="cardvideo">
-
+{/* 
                 <div className="image-wrappervideo">
                  {activeVideo === index ? (
   isMobileState ? (
@@ -165,9 +165,47 @@ const EmblaCarouselTestimonilasVideos = () => {
     <div className="play-btnvideo">▶</div>
   </div>
 )}
-                </div>
+                </div> */}
 
-
+<div className="image-wrappervideo">
+  {isMobileState ? (
+    // ✅ MOBILE → NEVER use state, NEVER render iframe
+    <a
+      href={`https://www.youtube.com/watch?v=${item.videoId}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="video-thumbnail"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <img src={item.image} alt={item.name} />
+      <div className="play-btnvideo">▶</div>
+    </a>
+  ) : (
+    // ✅ DESKTOP ONLY
+    activeVideo === index ? (
+      <div className="iframe-container">
+        <iframe
+          src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&playsinline=1`}
+          className="video-frame"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+        />
+      </div>
+    ) : (
+      <div
+        className="video-thumbnail"
+        onClick={(e) => {
+          e.stopPropagation();
+          setActiveVideo(index);
+          setIsPlaying(true); // ✅ keep your logic
+        }}
+      >
+        <img src={item.image} alt={item.name} />
+        <div className="play-btnvideo">▶</div>
+      </div>
+    )
+  )}
+</div>
               </div>
             </div>
           ))}
