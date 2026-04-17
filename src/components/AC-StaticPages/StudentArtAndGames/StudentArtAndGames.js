@@ -277,26 +277,20 @@ function Courses(props) {
           <div className="ph" data-type="3D Artwork"><img src={art36} alt="art5" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art37} alt="art5" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art40} alt="art5" /></div>
-
           <div className="ph" data-type="3D Artwork"><img src={art42} alt="art5" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art17} alt="art4" /></div>
           <div className="ph" data-type="2D Artwork"><img src={art27} alt="art7" /></div>
-
           <div className="ph" data-type="3D Artwork"><img src={art18} alt="art5" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art39} alt="art5" /></div>
           <div className="ph" data-type="2D Artwork"><img src={art35} alt="art7" /></div>
-      
-
           <div className="ph" data-type="3D Artwork"><img src={art19} alt="art7" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art20} alt="art6" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art21} alt="art8" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art22} alt="art2" /></div>
-
           <div className="ph" data-type="3D Artwork"><img src={art23} alt="art3" /></div>
           <div className="ph" data-type="2D Artwork"><img src={art33} alt="art10" /></div>
                   <div className="ph" data-type="3D Artwork"><img src={art41} alt="art5" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art24} alt="art9" /></div>
-      
           <div className="ph" data-type="3D Artwork"><img src={art25} alt="art10" /></div>
           <div className="ph" data-type="3D Artwork"><img src={art26} alt="art11" /></div>
           <div className="ph" data-type="2D Artwork"><img src={art28} alt="art6" /></div>

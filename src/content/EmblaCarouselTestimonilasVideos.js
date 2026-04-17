@@ -179,7 +179,9 @@ const EmblaCarouselTestimonilasVideos = () => {
     >
       <img src={item.image} alt={item.name} />
       <div className="play-btnvideo">
+         <div className="custuom-button">
          <div className="play-icon1"></div>
+         </div>
       </div>
     </a>
   ) : (
@@ -204,7 +206,9 @@ const EmblaCarouselTestimonilasVideos = () => {
       >
         <img src={item.image} alt={item.name} />
         <div className="play-btnvideo">
+           <div className="custuom-button">
 <div className="play-icon1"></div>
+</div>
         </div>
       </div>
     )
