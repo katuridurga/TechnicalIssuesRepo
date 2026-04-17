@@ -178,7 +178,9 @@ const EmblaCarouselTestimonilasVideos = () => {
       onClick={(e) => e.stopPropagation()}
     >
       <img src={item.image} alt={item.name} />
-      <div className="play-btnvideo">▶</div>
+      <div className="play-btnvideo">
+         <div className="play-icon1"></div>
+      </div>
     </a>
   ) : (
     // ✅ DESKTOP ONLY
@@ -201,7 +203,9 @@ const EmblaCarouselTestimonilasVideos = () => {
         }}
       >
         <img src={item.image} alt={item.name} />
-        <div className="play-btnvideo">▶</div>
+        <div className="play-btnvideo">
+<div className="play-icon1"></div>
+        </div>
       </div>
     )
   )}
