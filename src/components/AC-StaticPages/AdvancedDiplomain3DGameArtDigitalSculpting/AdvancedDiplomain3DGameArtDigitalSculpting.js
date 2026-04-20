@@ -278,7 +278,7 @@ function Courses(props) {
       <div id="Beyond-The-Course" backgroundColor="blue" height="180vh" style={{ padding: "0px 0px", marginBottom: "20px" }}>
         <h2 className='courseHeading' style={{ color: "#ec1923", marginTop: "0px" }}>Beyond The Course</h2>
         <div className="brname"></div>
-        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>Backstage Pass Institute of Gaming stands out as a  <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://backstagepass.co.in/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}>top game design college in India </a></b> for its focus on providing students with hands-on, industry-specific experiences. We ensure that learning is limitless and not restricted within the four walls of the classroom.
+        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>Backstage Pass Institute of Gaming stands out as a  <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.backstagepass.co.in/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}>top game design college in India </a></b> for its focus on providing students with hands-on, industry-specific experiences. We ensure that learning is limitless and not restricted within the four walls of the classroom.
         </p>
 
         <div className='courseUpdates1'>

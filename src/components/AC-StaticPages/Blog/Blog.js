@@ -54,7 +54,7 @@ function Blog() {
   // }, []);
 
 useEffect(() => {
-  fetch(`https://backstagepass.co.in/reactapi/categories_list.php?t=${Date.now()}`, {
+  fetch(`https://www.backstagepass.co.in/reactapi/categories_list.php?t=${Date.now()}`, {
     cache: "no-store"
   })
     .then(response => response.json())
@@ -176,8 +176,8 @@ useEffect(() => {
 " />
           <meta name="description" content="Explore game development insights, gaming careers, AR/VR, design trends, and student success stories from Backstage Pass Institute of Gaming." />
           <meta property="og:description" name="description" content="Explore game development insights, gaming careers, AR/VR, design trends, and student success stories from Backstage Pass Institute of Gaming." />
-          <meta property="og:url" content="https://backstagepass.co.in/blogs/" />
-          <link rel="canonical" href="https://backstagepass.co.in/blogs/" />
+          <meta property="og:url" content="https://www.backstagepass.co.in/blogs/" />
+          <link rel="canonical" href="https://www.backstagepass.co.in/blogs/" />
         </Helmet>
 
         <div className="courses-wrapperblog" style={{ flexDirection: isMobileState ? "column" : "row" }}>

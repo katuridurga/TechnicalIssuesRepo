@@ -88,7 +88,7 @@ function SkillDiplomaCourses() {
       }));
 
       // 🔹 Send silently to API (no success message)
-      fetch("https://backstagepass.co.in/reactapi/api/save_course_lead.php", {
+      fetch("https://www.backstagepass.co.in/reactapi/api/save_course_lead.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

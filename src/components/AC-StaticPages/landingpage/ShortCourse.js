@@ -375,88 +375,88 @@ function SkillDiplomaCourses({ active, props }) {
 
   const [isPlaying, setIsPlaying] = useState(false); // To manage the play state
 
-  const payurl = 'https://backstagepass.co.in/landingpage/short-course';
+  const payurl = 'https://www.backstagepass.co.in/landingpage/short-course';
 
   const coursesData = [
     {
       title: '3D Hard Surface Modelling',
-      image: 'https://backstagepass.co.in/mainBanners/3DHardSurface.webp',
+      image: 'https://www.backstagepass.co.in/mainBanners/3DHardSurface.webp',
       duration: '3 months (120 Hours)',
       mode: 'Online & Interactive',
       batch: '',
-      url: 'https://backstagepass.co.in/landingpage/3DHard-surface-modelling-game-art/'
+      url: 'https://www.backstagepass.co.in/landingpage/3DHard-surface-modelling-game-art/'
     },
     {
       title: 'Game Design with Unreal Blueprints',
-      image: 'https://backstagepass.co.in/mainBanners/UnrealBlrueprints.webp',
+      image: 'https://www.backstagepass.co.in/mainBanners/UnrealBlrueprints.webp',
       duration: '3 months (120 Hours)',
       mode: 'Online & Interactive',
       batch: 'July 21, 2025',
-      url: 'https://backstagepass.co.in/landingpage/game-design-with-unreal-blue-prints/'
+      url: 'https://www.backstagepass.co.in/landingpage/game-design-with-unreal-blue-prints/'
     },
     {
       title: 'Game Development with Unity',
-      image: 'https://backstagepass.co.in/mainBanners/Unity.webp',
+      image: 'https://www.backstagepass.co.in/mainBanners/Unity.webp',
       duration: '3 months (120 Hours)',
       mode: 'Online & Interactive',
       batch: 'July 21, 2025',
-      url: 'https://backstagepass.co.in/landingpage/game-development-with-unity/'
+      url: 'https://www.backstagepass.co.in/landingpage/game-development-with-unity/'
     },
     {
       title: 'Game Development with Unreal',
-      image: 'https://backstagepass.co.in/mainBanners/Unreal.webp',
+      image: 'https://www.backstagepass.co.in/mainBanners/Unreal.webp',
       duration: '3 months (120 Hours)',
       mode: 'Online & Interactive',
       batch: '',
-      url: 'https://backstagepass.co.in/landingpage/game-development-with-unreal/'
+      url: 'https://www.backstagepass.co.in/landingpage/game-development-with-unreal/'
     },
     {
       title: 'AI- Powered Game Design and Level Building',
-      image: 'https://backstagepass.co.in/mainBanners/AIPowered.webp',
+      image: 'https://www.backstagepass.co.in/mainBanners/AIPowered.webp',
       duration: '3 months (120 Hours)',
       mode: 'Online & Interactive',
       batch: '',
-      url: 'https://backstagepass.co.in/landingpage/ai-powered-game-design-and-level-building/'
+      url: 'https://www.backstagepass.co.in/landingpage/ai-powered-game-design-and-level-building/'
     },
     {
       title: 'Essentials of Game Design',
-      image: 'https://backstagepass.co.in/mainBanners/4c.webp',
+      image: 'https://www.backstagepass.co.in/mainBanners/4c.webp',
       duration: '20 Hours',
       mode: 'Online & Interactive',
       batch: 'July 28, 2025',
-      url: 'https://backstagepass.co.in/landingpage/certificate-program-in-essentials-of-game-design/'
+      url: 'https://www.backstagepass.co.in/landingpage/certificate-program-in-essentials-of-game-design/'
     },
     {
       title: '3D Game Development with Unity',
-      image: 'https://backstagepass.co.in/mainBanners/5c.webp',
+      image: 'https://www.backstagepass.co.in/mainBanners/5c.webp',
       duration: '20 Hours',
       mode: 'Online & Interactive',
       batch: '',
-      url: 'https://backstagepass.co.in/landingpage/certificate-program-in-3DGame-development-with-unity/'
+      url: 'https://www.backstagepass.co.in/landingpage/certificate-program-in-3DGame-development-with-unity/'
     },
     {
       title: 'Game Development for VR',
-      image: 'https://backstagepass.co.in/mainBanners/3c.webp',
+      image: 'https://www.backstagepass.co.in/mainBanners/3c.webp',
       duration: '20 Hours',
       mode: 'Online & Interactive',
       batch: '',
-      url: 'https://backstagepass.co.in/landingpage/certificate-program-in-game-development-for-VR/'
+      url: 'https://www.backstagepass.co.in/landingpage/certificate-program-in-game-development-for-VR/'
     },
     {
       title: 'Prototyping & Game Concept Development',
-      image: 'https://backstagepass.co.in/mainBanners/2c.webp',
+      image: 'https://www.backstagepass.co.in/mainBanners/2c.webp',
       duration: '20 Hours',
       mode: 'Online & Interactive',
       batch: '',
-      url: 'https://backstagepass.co.in/landingpage/certificate-program-in-prototyping-and-game-concept-development/'
+      url: 'https://www.backstagepass.co.in/landingpage/certificate-program-in-prototyping-and-game-concept-development/'
     },
     {
       title: 'Storytelling & Design Documentation for Games',
-      image: 'https://backstagepass.co.in/mainBanners/1c.webp',
+      image: 'https://www.backstagepass.co.in/mainBanners/1c.webp',
       duration: '20 Hours',
       mode: 'Online & Interactive',
       batch: 'July 28, 2025',
-      url: 'https://backstagepass.co.in/landingpage/certificate-program-in-storytelling-and-design-documentation-for-games/'
+      url: 'https://www.backstagepass.co.in/landingpage/certificate-program-in-storytelling-and-design-documentation-for-games/'
     },
 
     // Add more if needed

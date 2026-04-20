@@ -167,7 +167,7 @@ const [mainCategory, setMainCategory] = useState("");
     <>
  {window.location.pathname === "/enquire-now/" && (
   <Helmet>
-    <link rel="canonical" href="https://backstagepass.co.in/enquire-now/" />
+    <link rel="canonical" href="https://www.backstagepass.co.in/enquire-now/" />
   </Helmet>
 )}
 

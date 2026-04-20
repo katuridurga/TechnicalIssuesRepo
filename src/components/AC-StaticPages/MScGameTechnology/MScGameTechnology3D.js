@@ -13,10 +13,8 @@ import awic2 from '../../../assets/img/banners/medaln.webp';
 import awic3 from '../../../assets/img/banners/mindsetn.webp';
 import { FaPlus, FaMinus } from "react-icons/fa";
 import awic from '../../../assets/img/banners/global-networkn.webp';
-
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-
 import { Helmet } from "react-helmet";
 import HomeContentForm from '../../../content/HomeContentFrom';
 
@@ -63,14 +61,11 @@ function Courses(props) {
         "Props & Vehicles for Games",
         "Environment Art",
         "UI/UX Design for Games",
-
       ],
     },
     {
       title: "Game Design Core",
-
       subjects: [
-
         "History & Genres of Games",
         "Game Design & Production Pipeline",
         "Level Design",
@@ -81,18 +76,14 @@ function Courses(props) {
     },
     {
       title: "Technology Integration",
-
       subjects: [
-
         "Unreal Blueprints",
         "Game Engine Integration for 3D Assets",
       ],
     },
     {
       title: "Specialization in 3D Game Art",
-
       subjects: [
-
         "Advanced Digital Sculpting",
         "Advanced Character Creation for Games",
         "Procedural Material Creation using Node Systems",
@@ -119,18 +110,12 @@ function Courses(props) {
       title: "Dual Specialization in Art & Design:",
       subjects: [
         "Blend creative storytelling and technical excellence. Develop skills in 3D modeling, animation, character art, level design, UI/UX, and game mechanics to work across the development pipeline.",
-
       ],
     },
     {
       title: "Industry-Aligned Curriculum :",
-
       subjects: [
-
         "Learn what studios demand—master asset creation, design workflows, environment building, and integration with industry-standard engines like Unity and Unreal Engine",
-
-
-
          <span>
     Learn what studios demand—master asset creation, design workflows, environment building, and integration with industry-standard engines like Unity and {" "}
     <a
@@ -147,20 +132,16 @@ function Courses(props) {
     },
     {
       title: "Flexible Elective Pairing :",
-
       subjects: [
         "Customize your Semester 3 experience by choosing one elective from Game Design and one from 3D Game Art, allowing you to tailor your education to specific career goals.",
       ],
     },
     {
       title: "Capstone Game Project & Dissertation :",
-
       subjects: [
-
         "Your final semester focuses on a full production cycle—design, art, integration, testing—leading to a comprehensive portfolio, academic dissertation, and a playable game prototype.",
       ],
     },
-
   ];
 
   const faqs = [
@@ -174,9 +155,6 @@ function Courses(props) {
         "Indie Game Developer / Researcher / Educator",
       ],
     },
-
-
-
   ];
 
   const [openIndex, setOpenIndex] = useState(null);
@@ -240,7 +218,7 @@ function Courses(props) {
         <meta property="og:url" content="https://www.backstagepass.co.in/courses/masters-in-3d-game-art-design/" />
 
         <meta name="keywords" content="Master’s in 3D Game Art, Master’s in Game Design, 3D Game Art and Design course, Game Art and Design degree, Game Design Master’s program, Master’s degree in 3D game art and game design in India, masters in 3D game art & design​" />
-        <link rel="canonical" href="https://backstagepass.co.in/courses/masters-in-3d-game-art-design/" />
+        <link rel="canonical" href="https://www.backstagepass.co.in/courses/masters-in-3d-game-art-design/" />
       </Helmet>
 
       <div className="courses-wrapper">
@@ -260,15 +238,11 @@ function Courses(props) {
             <div className="info-item">
               <span className="info-subtitle">Eligibility</span>
               <span className="info-title">Any Graduation
-
-
               </span>
             </div>
             <div className="info-item">
               <span className="info-subtitle">Affiliated</span>
               <span className="info-title">JNAFAU
-
-
               </span>
 
             </div>

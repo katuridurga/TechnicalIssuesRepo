@@ -51,19 +51,19 @@ const testimonials = [
     text: "Backstage Pass is the first of its kind of gaming college in India with some great industry experts. I had the joy of learning from the people who work in the game industry and was taught about the working of the game industry that helped me a lot while working at EA Sports. So, Backstage Pass was a life-changing experience.",
     name: "Anshul Soni",
     role: "Software Engineer, EA Sports, Seattle, USA",
-    avatar: "https://backstagepass.co.in/AnshulSoni-cf9bf58b.webp?img=7",
+    avatar: "https://www.backstagepass.co.in/AnshulSoni-cf9bf58b.webp?img=7",
   },
   {
     text: "Our front-end lead Arsalan is a graduate from Backstage Pass and it is a pleasure to see how passionate he is about gaming. Whenever we interview a candidate from Backstage Pass, we find something unique that they bring in; their focus, understanding and knowledge about gaming even before they start working in a company.",
     name: "Kashyap Reddy",
     role: "Co-Founder, HitWicket",
-    avatar: "https://backstagepass.co.in/kashyapreddy-889e8da6.webp?img=8",
+    avatar: "https://www.backstagepass.co.in/kashyapreddy-889e8da6.webp?img=8",
   },
   {
     text: "While doing my Graduation at Backstage Pass, I started my own Game studio Seven Summits with the help of this gaming college. We learned concepts related to Game Art, Game Design, Level design, etc. from Industry Experts. In order to mark your footprint in the game industry, Backstage Pass is the best place to start.",
     name: "Asar Dhandala",
     role: "Founder/ Game Designer/ Producer, Seven Summits",
-    avatar: "https://backstagepass.co.in/Asar-268f6887.webp?img=9",
+    avatar: "https://www.backstagepass.co.in/Asar-268f6887.webp?img=9",
   },
   {
     text: "When I was searching for colleges that offer Game Art and Design courses, Backstage Pass stood out as the best choice. Once I joined, I discovered the vast opportunities within the gaming industry. In just two years, my skills improved by 60%, thanks to the solid foundation provided. I also worked on a game called Infocus, which was recognized at IGDC. The one-on-one mentorship at Backstage Pass played a crucial role in my learning, as it helped identify and refine the specific skills I needed to develop.",

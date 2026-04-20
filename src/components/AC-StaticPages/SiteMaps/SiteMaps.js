@@ -48,7 +48,7 @@ function Courses(props) {
                <title>Sitemap | Backstage Pass Institute of Gaming - Explore All Pages
                </title>
                <meta  name="description" content="Easily navigate through all the important pages of Backstage Pass Institute of Gaming. Find course details, admissions, alumni success stories, and more." />
-             <link rel="canonical" href="https://backstagepass.co.in/sitemap/"/>
+             <link rel="canonical" href="https://www.backstagepass.co.in/sitemap/"/>
      
      
              </Helmet>

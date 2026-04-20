@@ -93,49 +93,6 @@ function DiplomaAndAdvancedDiplomaCourses() {
     };
   }, []);
 
-  // const awardsData = [
-  //   {
-  //     imgMain: "https://backstagepass.co.in/ET_Achievers_2025-a03e9ae8.webp",
-  //     imgTitle: "https://backstagepass.co.in/Times_Education_Excellence_2024-16ffaa61.webp",
-  //     text: "ET Industry Achievers 2025"
-  //   },
-  //   {
-  //     imgMain: "https://backstagepass.co.in/Times_Education_Excellence_2024-16ffaa61.webp",
-  //     imgTitle: "https://backstagepass.co.in/Times_Education_Excellence_2024-16ffaa61.webp",
-  //     text: "Times Education Excellence Award 2024"
-  //   },
-  //   {
-  //     imgMain: "https://backstagepass.co.in/Times_Education_Excellence_2023-8eaeed8f.webp",
-  //     imgTitle: "https://backstagepass.co.in/Times_Education_Excellence_2023-8eaeed8f.webp",
-  //     text: "Times Education Excellence Award 2023"
-  //   },
-  //   {
-  //     imgMain: "https://backstagepass.co.in/Times_Education_Excellence_2022-2718b806.webp",
-  //     imgTitle: "https://backstagepass.co.in/Times_Education_Excellence_2022-2718b806.webp",
-  //     text: "Times Education Excellence Award 2022"
-  //   },
-  //   {
-  //     imgMain: "https://backstagepass.co.in/Times_Education_Excellence_2021-b7ba6b9f.webp",
-  //     imgTitle: "https://backstagepass.co.in/Times_Education_Excellence_2021-b7ba6b9f.webp",
-  //     text: "Times Education Excellence Award 2021"
-  //   },
-  //   {
-  //     imgMain: "https://backstagepass.co.in/Time_Excellence_Awards_2020-9b0861f1.webp",
-  //     imgTitle: "https://backstagepass.co.in/Time_Excellence_Awards_2020-9b0861f1.webp",
-  //     text: "Times Excellence Award 2020"
-  //   },
-  //   {
-  //     imgMain: "https://backstagepass.co.in/Times_Education_Excellence_2019-c24c65ad.webp",
-  //     imgTitle: "https://backstagepass.co.in/Times_Education_Excellence_2019-c24c65ad.webp",
-  //     text: "Times Education Excellence Award 2019"
-  //   },
-  //   {
-  //     imgMain: "https://backstagepass.co.in/Best_Education_Brand_2018-8ffd3a56.webp",
-  //     imgTitle: "https://backstagepass.co.in/Best_Education_Brand_2018-8ffd3a56.webp",
-  //     text: "Best Education Brand Award Economic Times 2018"
-  //   },
-  // ];
-
   const itemssys = ["Operating System: Windows®, Apple®, Linux®",
     "RAM: 8 GB of RAM (16 GB or more recommended) ",
     "CPU: 64-bit Intel® or AMD® with SSE4.2 instruction set, For macOS, Apple Silicon arm64 or Intel x86",

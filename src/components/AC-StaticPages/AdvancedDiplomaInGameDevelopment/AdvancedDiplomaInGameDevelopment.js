@@ -226,7 +226,7 @@ function Courses(props) {
         <h2 className='courseHeading'>Course Overview</h2>
          <div className="brname"></div>
         <p>
-         The Advanced Diploma in Game Development at <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://backstagepass.co.in/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}>Backstage Pass Institute of Gaming</a></b> is a comprehensive program designed to equip students with the essential skills and knowledge required to excel in the gaming industry.</p>
+         The Advanced Diploma in Game Development at <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.backstagepass.co.in/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}>Backstage Pass Institute of Gaming</a></b> is a comprehensive program designed to equip students with the essential skills and knowledge required to excel in the gaming industry.</p>
 <p>
 The curriculum covers foundational programming, advanced game engine programming, graphics programming, and portfolio development, ensuring that students are well-prepared to create and optimise games across various platforms.
 
@@ -291,7 +291,7 @@ The curriculum covers foundational programming, advanced game engine programming
       <div id="Beyond-The-Course" backgroundColor="blue" height="180vh" style={{ padding: "0px 0px", marginBottom: "20px" }}>
         <h2 className='courseHeading' style={{ color: "#ec1923", marginTop: "0px" }}>Beyond The Course</h2>
  <div className="brname"></div>
-        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>We ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry. This commitment to practical learning and innovation makes Backstage Pass the  <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://backstagepass.co.in/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}> top game development college in India</a></b>.
+        <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>We ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry. This commitment to practical learning and innovation makes Backstage Pass the  <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.backstagepass.co.in/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}> top game development college in India</a></b>.
         </p>
 
         <div className='courseUpdates1'>

@@ -244,7 +244,7 @@ function Courses(props) {
             "url": "https://www.backstagepass.co.in/",
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://backstagepass.co.in/courses/bachelors-in-computer-science-and-game-development{search_term_string}",
+              "target": "https://www.backstagepass.co.in/courses/bachelors-in-computer-science-and-game-development{search_term_string}",
               "query-input": "required name=search_term_string"
             }
           }

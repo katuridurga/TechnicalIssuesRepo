@@ -661,7 +661,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
                 onContextMenu={(e) => e.preventDefault()}
               >
                 <source
-                  src="https://backstagepass.co.in/Marketing-Video.mp4"
+                  src="https://www.backstagepass.co.in/Marketing-Video.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -698,7 +698,7 @@ function DiplomaAndAdvancedDiplomaCourses() {
 
           <section class="mentor-card">
             <div class="mentor-image">
-              <img src="https://backstagepass.co.in/studentlms/uploads/mentors/e70e9efab93e20a7f6d60bf3b5dcf91f.jpg"
+              <img src="https://www.backstagepass.co.in/studentlms/uploads/mentors/e70e9efab93e20a7f6d60bf3b5dcf91f.jpg"
                 alt="Rahul Bairagya" />
             </div>
 

@@ -207,7 +207,7 @@ function Courses(props) {
                 <div id="infinity"><span className="process__number1">01</span></div>
 
                 <h4 className="process__title">Online Application</h4>
-                <span className="process__subtitle">If you match the eligibility criteria for the course of your choice, then fill our application form by <a href="https://backstagepass.co.in/application-form/" rel="noopener noreferrer" target='_blank'><b style={{ fontSize: "16px", textDecoration: "underline", display: "inline-block", color: "#eb1a23" }}>clicking here </b></a><br />(No application fee involved)</span>
+                <span className="process__subtitle">If you match the eligibility criteria for the course of your choice, then fill our application form by <a href="https://www.backstagepass.co.in/application-form/" rel="noopener noreferrer" target='_blank'><b style={{ fontSize: "16px", textDecoration: "underline", display: "inline-block", color: "#eb1a23" }}>clicking here </b></a><br />(No application fee involved)</span>
               </li>
 
               <li className="process__item1">

@@ -96,7 +96,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
   const handleClickss = () => {
     // Redirect to the '/new-page' route
-    window.open('https://backstagepass.co.in/landingpage/short-course/', '_blank');
+    window.open('https://www.backstagepass.co.in/landingpage/short-course/', '_blank');
   };
 
   // Handle scroll event

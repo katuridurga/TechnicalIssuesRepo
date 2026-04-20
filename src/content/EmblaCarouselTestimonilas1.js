@@ -27,7 +27,7 @@ const testimonials = [
     text: "While doing my Graduation at Backstage Pass, I started my own Game studio Seven Summits with the help of this gaming college. We learned concepts related to Game Art, Game Design, Level design, etc. from Industry Experts. In order to mark your footprint in the game industry, Backstage Pass is the best place to start.",
     name: "Asar Dhandala",
     role: "Founder/ Game Designer/ Producer, Seven Summits",
-    avatar: "https://backstagepass.co.in/Asar-268f6887.webp?img=9",
+    avatar: "https://www.backstagepass.co.in/Asar-268f6887.webp?img=9",
   },
 
  
