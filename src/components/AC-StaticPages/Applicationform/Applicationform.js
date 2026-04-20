@@ -2776,8 +2776,10 @@ function App() {
                   </Button>
 
                 </div>
-                <Typography variant="body2" gutterBottom className='discl' style={{ textAlign: 'center', color: "#000" }}>  For quick help, call us on  <a style={{color:"#ee1b24"}} href="tel:+91-8008002794/95" rel="noopener noreferrer"> +91 8008002794 / 95 </a>
-                  Or Email us at  <a style={{color:"#ee1b24"}} href="mailto:admissions@backstagepass.co.in" rel="noopener noreferrer">admissions@backstagepass.co.in</a></Typography>
+                <Typography variant="body2" gutterBottom className='discl' style={{ textAlign: 'center', color: "#000" }}>  For quick help, call us on 
+                <a style={{ color: "#ee1b24" }} href="tel:+918008002794">+91 8008002794</a> / 
+<a style={{ color: "#ee1b24" }} href="tel:+918008002795"> 95 </a>
+                    Or Email us at  <a style={{color:"#ee1b24"}} href="mailto:admissions@backstagepass.co.in" rel="noopener noreferrer">admissions@backstagepass.co.in</a></Typography>
                 {/* <Button
                 variant="contained"
                 type='submit'
