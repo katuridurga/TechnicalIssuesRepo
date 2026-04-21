@@ -23,6 +23,10 @@ import mbnewbanF from "../assets/img/mobilebanner/homepagebanner/NewCampus.webp"
 import mbnewban3 from "../assets/img/mobilebanner/homepagebanner/alumni.webp";
 import clgband from "../assets/img/banners/Collage-Desktop-Banner.webp";
 import clgbanm from "../assets/img/mobilebanner/homepagebanner/Collage-Mobile-Banner.webp";
+// import clgband400 from "../assets/img/banners/Collage-Desktop-Banner-400w.webp";
+// import clgband800 from "../assets/img/banners/Collage-Desktop-Banner-800w.webp";
+// import clgband1200 from "../assets/img/banners/Collage-Desktop-Banner-1200w.webp";
+
 
 const TWEEN_FACTOR_BASE = 0.84
 
@@ -114,10 +118,9 @@ const EmblaCarousel = (props) => {
   <div className="embla__slide" key={0}>
     <div className="banner-wrapper">
       <picture>
-        {/* Mobile banner */}
+    
         <source srcSet={clgbanm} media="(max-width: 768px)" />
 
-        {/* Desktop banner */}
         <img
           src={clgband}
           alt="gaming college"
@@ -125,7 +128,38 @@ const EmblaCarousel = (props) => {
           height={450}
           className="banner-img"
         />
-      </picture>
+        
+      </picture> 
+                {/* <picture>
+
+                <source
+                  srcSet={clgbanm}
+                  media="(max-width: 768px)"
+                />
+
+                <source
+                  srcSet={`
+                      ${clgband1400} 650w,
+                      ${clgband1800} 1370w,
+                      ${clgband1200} 1200w,
+                      ${clgband} 1500w
+                    `}
+                     sizes="100vw"
+                />
+
+   
+                <img
+                  src={newban1800}
+                  alt="Backstage Pass New campus"
+                  width="1526"
+                  height="450"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </picture> */}
+
  <div className="banner-overlay"></div>
       {/* Centered Content */}
       <div className="banner-content">

@@ -3,6 +3,8 @@ import React, { useState, useEffect, lazy, Suspense } from 'react';
 // import preLoaderWebm from "../assets/img/BSPAnimated.webm";
 import { useSelector, shallowEqual } from "react-redux";
 import popupImg from "../assets/img/qs-ranking-2026.webp";
+import popup685 from "../assets/img/qs-ranking-2026-685w.webp";
+import popup1370 from "../assets/img/qs-ranking-2026-1370w.webp";
 import PropTypes from 'prop-types';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
@@ -10,7 +12,7 @@ import { Helmet } from "react-helmet";
 // Lazy-loaded Components
 import Marquee from "react-fast-marquee";
 const Buzzing = lazy(() => import("./Buzzing"));
-const YoutubeVideos = lazy(() => import("./YoutubeVideos"));
+const YoutubeVideos = lazy(() => import("./YoutubeVideos.js"));
 const Awards = lazy(() => import("./awards"));
 const HomeContent = lazy(() => import("./HomeContent"));
 const AboutBsp = lazy(() => import("./AboutBsp"));
@@ -86,7 +88,7 @@ function Main({ active, props }) {
   useEffect(() => {
     const hasVisited = localStorage.getItem("HOME_POPUP_SHOWN");
 
-    if ( window.location.pathname === "/") {
+    if (window.location.pathname === "/") {
       setShowPopup(true);
       localStorage.setItem("HOME_POPUP_SHOWN", "true");
     }
@@ -134,7 +136,7 @@ function Main({ active, props }) {
                       <span className="blinck">Admissions 2026</span>
                     </h1>
                   </div>
-                </div> : 
+                </div> :
                   <div className="">
                     <div className="block">
                       <h1>
@@ -155,11 +157,11 @@ function Main({ active, props }) {
                   }} className='recuitersList hdmboile'>
 
 
-                  <p style={{ color: "#fff", fontSize: "14px", marginBottom:"0px" }}><b>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
-                  <p style={{ color: "#fff",fontSize: "14px", marginBottom:"0px" }}><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
+                  <p style={{ color: "#fff", fontSize: "14px", marginBottom: "0px" }}><b>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
+                  <p style={{ color: "#fff", fontSize: "14px", marginBottom: "0px" }}><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
 
-                  <p style={{ color: "#fff", fontSize: "14px", marginBottom:"0px" }}><b>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
-                  <p style={{ color: "#fff", fontSize: "14px", marginBottom:"0px" }}><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
+                  <p style={{ color: "#fff", fontSize: "14px", marginBottom: "0px" }}><b>Bachelor's/Master's Programs :</b> <strong className='menu-item-mine'>Apply now </strong></p>
+                  <p style={{ color: "#fff", fontSize: "14px", marginBottom: "0px" }}><b>Diploma/Advanced Diploma Programs :</b> <strong className='menu-item-mine'>Apply now!</strong></p>
 
                 </Marquee>
                   :
@@ -200,7 +202,7 @@ function Main({ active, props }) {
             )}
           </div>
           {/*admissions popup code*/}
-         {showPopup && (
+          {showPopup && (
             <div className="popup-overlay">
               <div className="popup-box">
 
@@ -209,12 +211,24 @@ function Main({ active, props }) {
                 </button>
 
                 <a href="/enquire-now/" target="_blank" rel="noopener noreferrer">
-                  <img src={popupImg} alt="Admissions Open" className="popup-image" />
+                  {/* <img src={popupImg} alt="Admissions Open" className="popup-image" /> */}
+                  <img
+                    src={popupImg}
+                    srcSet={`
+                       ${popup685} 685w,
+                       ${popup1370} 1370w
+                      
+                     `}
+                    sizes="(max-width: 768px) 100vw, 685px"
+                    alt="Admissions Open"
+                    class="popup-image"
+                    loading="lazy"
+                  />
                 </a>
 
               </div>
             </div>
-          )} 
+          )}
 
           <section id="there's-still-time-to-apply-for-2024" className="banner siva">
             <div className="container1">
