@@ -142,15 +142,16 @@ Learn more about our courses: https://www.backstagepass.co.in/courses/",
         </script>
         <script type="application/ld+json">
           {`
+{
   "@context": "https://schema.org",
   "@type": "VideoObject",
   "name": "How Sandeep landed a job at Sony PlayStation | Backstage Pass Alumni Stories",
-  "description": "What does it take to go from a "naive" student to a designer at Sony PlayStation? In this video, Sandeep (Class of 2022) shares his experience studying Game Development and Computer Science at Backstage Pass Institute of Gaming.
+  "description": "What does it take to go from a naive student to a designer at Sony PlayStation? In this video, Sandeep (Class of 2022) shares his experience studying Game Development and Computer Science at Backstage Pass Institute of Gaming.
 The transition from a student developer to a professional designer.
-The impact of mentorship from industry veterans like Bala Sir, Swapna Ma’am, and Rahul Sir.
+The impact of mentorship from industry veterans like Bala Sir, Swapna Mam, and Rahul Sir.
 His thoughts on the brand-new Backstage Pass campus.
 Why participating in Game Jams is crucial for your career.
-"The more your passion speaks, that's how you go places."
+The more your passion speaks, that's how you go places.
 Interested in a career in Gaming?
 Visit our website to explore our Bachelor’s and Master’s programs in Game Design, Development, and Art: https://www.backstagepass.co.in/",
   "thumbnailUrl": "https://www.backstagepass.co.in/sandeep-8b26fb3c.webp",
@@ -158,7 +159,7 @@ Visit our website to explore our Bachelor’s and Master’s programs in Game De
   "duration": "PT1M23S",
   "contentUrl": "https://youtu.be/zhir5FxzGFI?si=qro3wE1_OFubAqBz"
 }
-            `}
+        `}
         </script>
 
       </Helmet>

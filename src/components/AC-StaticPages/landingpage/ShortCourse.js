@@ -1,19 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react'
 import "./ShortCourse.css";
 import PropTypes from 'prop-types';
-
 import { Helmet } from "react-helmet";
-
-
-
 import axios from 'axios';
 import { useSelector, shallowEqual } from "react-redux";
 import Box from '@mui/material/Box';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
-
 import Typography from '@mui/material/Typography';
-
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -32,10 +26,6 @@ import wc6 from '../../../assets/img/Icons/WEBSITE-ICON/StrongIndustryConnection
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
-
-
-
-
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -83,11 +73,6 @@ HideOnScroll.propTypes = {
 };
 
 function SkillDiplomaCourses({ active, props }) {
-
-
-
-
-
 
   // const [showBanner, setShowBanner] = useState(true);
 
@@ -162,13 +147,7 @@ function SkillDiplomaCourses({ active, props }) {
       .catch((err) => console.error("Error fetching courses:", err));
   }, []);
 
-
-
-
-
   const [open, setOpen] = React.useState(false);
-
-
 
   const handleClose = () => {
     setOpen(false);

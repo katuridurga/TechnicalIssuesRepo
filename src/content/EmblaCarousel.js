@@ -152,7 +152,7 @@ const EmblaCarousel = (props) => {
                 />
               </picture> */}
               <picture>
-                {/* Mobile */}
+
                 <source
                   srcSet={mbnewban0}
                   media="(max-width: 768px)"
