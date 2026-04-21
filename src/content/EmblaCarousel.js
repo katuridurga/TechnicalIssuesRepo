@@ -98,15 +98,6 @@ const EmblaCarousel = (props) => {
       .on('slideFocus', tweenOpacity)
   }, [emblaApi, setTweenFactor, tweenOpacity]);
 
-  const [isMobile, setIsMobile] = React.useState(null)
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 768)
-    checkMobile()
-    window.addEventListener("resize", checkMobile)
-    return () => window.removeEventListener("resize", checkMobile)
-  }, [])
-
 
   return (
     <div>
@@ -114,22 +105,22 @@ const EmblaCarousel = (props) => {
       <div className="embla">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
-          
-  <div className="embla__slide" key={0}>
-    <div className="banner-wrapper">
-      <picture>
-    
-        <source srcSet={clgbanm} media="(max-width: 768px)" />
 
-        <img
-          src={clgband}
-          alt="gaming college"
-          width={1526}
-          height={450}
-          className="banner-img"
-        />
-        
-      </picture> 
+            <div className="embla__slide" key={0}>
+              <div className="banner-wrapper">
+                <picture>
+
+                  <source srcSet={clgbanm} media="(max-width: 768px)" />
+
+                  <img
+                    src={clgband}
+                    alt="gaming college"
+                    width={1526}
+                    height={450}
+                    className="banner-img"
+                  />
+
+                </picture>
                 {/* <picture>
 
                 <source
@@ -160,17 +151,17 @@ const EmblaCarousel = (props) => {
                 />
               </picture> */}
 
- <div className="banner-overlay"></div>
-      {/* Centered Content */}
-      <div className="banner-content">
-        <h1 className="title1 white-txt"><span>India's #1</span> Game Design & Development College</h1>
-        <div >
-           <a className='banenbtn animated-button' href="/courses/" target="_blank">View Courses</a>
-          <a className='banenbtn2 btn-swipe' href="/enquire-now/">Enquire Now</a>
-        </div>
-      </div>
-    </div>
-  </div>
+                <div className="banner-overlay"></div>
+                {/* Centered Content */}
+                <div className="banner-content">
+                  <h1 className="title1 white-txt"><span>India's #1</span> Game Design & Development College</h1>
+                  <div >
+                    <a className='banenbtn animated-button' href="/courses/" target="_blank">View Courses</a>
+                    <a className='banenbtn2 btn-swipe' href="/enquire-now/">Enquire Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div className="embla__slide" key={1}>
               {/* <picture>
@@ -200,7 +191,7 @@ const EmblaCarousel = (props) => {
                       ${newban11200} 1200w,
                       ${newban1} 1500w
                     `}
-                     sizes="100vw"
+                  sizes="100vw"
                 />
 
                 {/* LCP image */}
@@ -238,7 +229,7 @@ const EmblaCarousel = (props) => {
                 />
                 {/* Desktop responsive images */}
                 <source
-                      srcSet={`
+                  srcSet={`
                     ${newban400} 400w,
                     ${newban800} 800w,
                     ${newban1200} 1200w,

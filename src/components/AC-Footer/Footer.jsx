@@ -211,7 +211,6 @@ function Footer() {
   const part1 = "+91";
   const part2 = "-8008002794";
   const part3 = "-8008002795";
-
   const styles = {
     overlay: {
       position: "fixed",

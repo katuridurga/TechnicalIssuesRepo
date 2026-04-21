@@ -144,10 +144,8 @@ function Courses(props) {
                   <br />
                   3.  <Link className="" to={"/Application-form/"} target="_blank">B.A (Hons) in Augmented Reality & Virtual Reality</Link>
                   <br />
-
                   4.  <Link className="" to={"/Application-form/"} target="_blank">Advanced Diploma in Game Development</Link><br />
                   5.  <Link className="" to={"/Application-form/"} target="_blank">Advanced Diploma in 3D Game Art & Digital Sculpting</Link><br />
-
                   6.  <Link className="" to={"/Application-form/"} target="_blank">Diploma in Game Design & Production</Link><br />
                   7.  <Link className="" to={"/Application-form/"} target="_blank">Diploma in Game Development with Unity</Link><br />
                   8. <Link className="" to={"/Application-form/"} target="_blank">Diploma In Game Development with Unreal</Link><br />
@@ -193,10 +191,7 @@ function Courses(props) {
                   3. Study certificate(s) from class VI to XII, <br />
                   4. Caste certificate, if applicable, Transfer/leaving/migration certificate
                 </Typography>
-
-
               </DialogContent>
-
             </BootstrapDialog>
           </React.Fragment>
 

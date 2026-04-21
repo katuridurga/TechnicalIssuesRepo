@@ -119,7 +119,7 @@ function Main({ active, props }) {
       </Helmet>
       <>
         {isReady && window.location.pathname === '/' && (
-          <a href="#ribbon">
+          <a href="/Application-form/">
             <div className='scallop animate'>
               <div className='stripd'>
                 {/* <div className='adopenp'>
@@ -210,20 +210,19 @@ function Main({ active, props }) {
                   ✖
                 </button>
 
-                <a href="/enquire-now/" target="_blank" rel="noopener noreferrer">
-                  {/* <img src={popupImg} alt="Admissions Open" className="popup-image" /> */}
-                  <img
-                    src={popupImg}
+                <a href="/Application-form/" target="_blank" rel="noopener noreferrer">
+                  <img src={popupImg} alt="Admissions Open" className="popup-image" />
+                  {/* <img
+                    src={popup685}   
                     srcSet={`
-                       ${popup685} 685w,
-                       ${popup1370} 1370w
-                      
-                     `}
+                            ${popup685} 685w,
+                            ${popup1370} 1370w
+                          `}
                     sizes="(max-width: 768px) 100vw, 685px"
                     alt="Admissions Open"
-                    class="popup-image"
-                    loading="lazy"
-                  />
+                    className="popup-image"
+                    loading="eager"
+                  /> */}
                 </a>
 
               </div>

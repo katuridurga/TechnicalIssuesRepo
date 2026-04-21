@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { useSelector, shallowEqual } from "react-redux";
 import "./YoutubeVideosMain.css";
@@ -196,6 +196,7 @@ const EmblaCarouselTestimonilasVideos = () => {
       <div className="iframe-container">
         <iframe
           src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&playsinline=1`}
+           title="YouTube video player"
           className="video-frame"
           allow="autoplay; encrypted-media"
           allowFullScreen
