@@ -272,3 +272,17 @@ border-bottom: 1px solid#ccc;
 .tblespanp{
   color:#fff !important;
 }
+  .glowing-button1 {
+    background-color: #ec1923;
+    color: #fff;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #ffffff, 0 0 40px #ffffff, 0 0 20px #ec1923;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

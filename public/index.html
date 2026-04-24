@@ -22,10 +22,22 @@
   </noscript>
 
   <!-- ✅ LCP Image Preloads -->
+   <link 
+  rel="preload" 
+  as="image" 
+  href="/assets/img/banners/Collage-Desktop-Banner.webp"
+/>
+
+<link 
+  rel="preload" 
+  as="image" 
+  href="/assets/img/mobilebanner/homepagebanner/Collage-Mobile-Banner.webp"
+  media="(max-width: 768px)"
+/>
   <!-- Mobile -->
   <link rel="preload" as="image" href="/img/mobilebanner/homepagebanner/NewCampus.webp" media="(max-width:768px)"
     fetchpriority="high" />
-  <!-- Desktop -->
+
   <link rel="preload" as="image" href="/img/banners/NewCampus.webp" media="(min-width:769px)" fetchpriority="high" />
 
   <!-- Defer GTM -->

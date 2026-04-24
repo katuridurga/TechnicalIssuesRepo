@@ -778,7 +778,7 @@ window.addEventListener('beforeunload', function (event) {
 
                   <div className="">
                     <label className="" for="firstname">Full Name</label>
-                    <input className="" placeholder="Full Name" id="firstname" name="firstname" type="text" value={formData.firstname} onChange={handleInputChange} required />
+                    <input className="" placeholder="Full Name" id="firstname" name="firstname" type="text" value={formData.firstname} onChange={handleInputChange} required   style={{ color: '#5a555a' }} />
                   </div>
 
 
@@ -786,17 +786,17 @@ window.addEventListener('beforeunload', function (event) {
                 <div className="formGrid-blog" data-form-id="need-guidance" data-form="step1-container">
                   <div className="">
                     <label className="" for="PhoneNumber">Phone Number</label>
-                    <input className="" placeholder="Phone Number" id="PhoneNumber" name="PhoneNumber" type="tel" pattern="[6-9][0-9]{9}" minLength="10" maxLength="10" value={formData.PhoneNumber} onChange={handleInputChange} required />
+                    <input className="" placeholder="Phone Number" id="PhoneNumber" name="PhoneNumber" type="tel" pattern="[6-9][0-9]{9}" minLength="10" maxLength="10" value={formData.PhoneNumber} onChange={handleInputChange} required    style={{ color: '#5a555a' }}/>
                   </div>
                   <div className="">
                     <label className="" for="city">City</label>
-                    <input className="" placeholder="City" id="city" name="city" type="text" value={formData.city} onChange={handleInputChange} required />
+                    <input className="" placeholder="City" id="city" name="city" type="text" value={formData.city} onChange={handleInputChange} required   style={{ color: '#5a555a' }}/>
                   </div>
                 </div>
                 <div className="formGrid-blog" data-form-id="need-guidance" data-form="step1-container">
                   <div className="">
                     <label className="" for="email">Email</label>
-                    <input className="" placeholder="Email" id="email" name="email" value={formData.email} onChange={handleInputChange} type="email" required />
+                    <input className="" placeholder="Email" id="email"  name="email" value={formData.email} onChange={handleInputChange} type="email" required   style={{ color: '#5a555a' }}/>
                   </div>
 
                 </div>

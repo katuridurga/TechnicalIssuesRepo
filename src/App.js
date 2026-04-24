@@ -17,10 +17,8 @@ export default function App() {
         if (!loading && !isLatestVersion) {
           refreshCacheAndReload();
         }
-
         return (
           <>
-
             <Router history={history}>
               <Switch>
                 <Route

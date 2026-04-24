@@ -118,38 +118,13 @@ const EmblaCarousel = (props) => {
                     width={1526}
                     height={450}
                     className="banner-img"
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
                   />
 
                 </picture>
-                {/* <picture>
 
-                <source
-                  srcSet={clgbanm}
-                  media="(max-width: 768px)"
-                />
-
-                <source
-                  srcSet={`
-                      ${clgband1400} 650w,
-                      ${clgband1800} 1370w,
-                      ${clgband1200} 1200w,
-                      ${clgband} 1500w
-                    `}
-                     sizes="100vw"
-                />
-
-   
-                <img
-                  src={newban1800}
-                  alt="Backstage Pass New campus"
-                  width="1526"
-                  height="450"
-                  loading="eager"
-                  fetchpriority="high"
-                  decoding="async"
-                  style={{ width: "100%", height: "auto" }}
-                />
-              </picture> */}
 
                 <div className="banner-overlay"></div>
                 {/* Centered Content */}
@@ -200,8 +175,8 @@ const EmblaCarousel = (props) => {
                   alt="Backstage Pass New campus"
                   width="1526"
                   height="450"
-                  loading="eager"
-                  fetchpriority="high"
+                  loading="lazy"
+                  fetchpriority="low"
                   decoding="async"
                   style={{ width: "100%", height: "auto" }}
                 />
@@ -209,18 +184,7 @@ const EmblaCarousel = (props) => {
 
             </div>
             <div className="embla__slide" key={220}>
-              {/* <picture>
-                <source srcSet={mbnewbanF} media="(max-width: 768px)" />
-                <img
-                  src={newbanF}
-                  alt="Backtage Pass New campaus"
-                  width={1526}
-                  height={450}
-                  fetchpriority="high"
-                  decoding="async"
-                  style={{ width: "100%" }}
-                />
-              </picture> */}
+
               <picture>
                 {/* Mobile banner */}
                 <source
@@ -243,24 +207,15 @@ const EmblaCarousel = (props) => {
                   alt="Backstage Pass New campus"
                   width="1526"
                   height="450"
-                  fetchpriority="high"
+                  loading="lazy"
+                  fetchpriority="low"
                   decoding="async"
                   style={{ width: "100%", height: "auto" }}
                 />
               </picture>
             </div>
             <div className="embla__slide" key={3}>
-              {/* <picture>
-                <source srcSet={mbnewban3} media="(max-width: 768px)" />
-                <img
-                  src={newban3}
-                  alt="Alumni Success Stories"
-                  width={1526}
-                  height={450}
-                  loading="lazy"  // ✅ Native lazy loading
-                  style={{ width: "100%", margin: "0 auto" }}
-                />
-              </picture> */}
+
               <picture>
                 {/* Mobile banner */}
                 <source
@@ -282,7 +237,8 @@ const EmblaCarousel = (props) => {
                   alt="Backstage Pass New campus"
                   width="1526"
                   height="450"
-                  fetchpriority="high"
+                  loading="lazy"
+                  fetchpriority="low"
                   decoding="async"
                   style={{ width: "100%", height: "auto" }}
                 />

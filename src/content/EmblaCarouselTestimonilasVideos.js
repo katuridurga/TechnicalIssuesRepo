@@ -17,17 +17,66 @@ import webvban6 from "../assets/img/test/rajiv.webp";
 import webvban7 from "../assets/img/test/harshit.webp";
 import webvban8 from "../assets/img/test/rishi.webp";
 import webvban9 from "../assets/img/test/Krushna.webp";
+import webvban10 from "../assets/img/test/ankush-800w.webp";
+import webvban11 from "../assets/img/test/vipul-800w.webp";
+import webvban12 from "../assets/img/test/rajiv-800w.webp";
+import webvban13 from "../assets/img/test/harshit-800w.webp";
+import webvban14 from "../assets/img/test/rishi-800w.webp";
+import webvban15 from "../assets/img/test/Krushna-800w.webp";
+import webvban16 from "../assets/img/test/WebsiteVideoBanner1-800w.webp";
+import webvban17 from "../assets/img/test/Bhanu-800w.webp";
+import webvban18 from "../assets/img/test/sandeep-800w.webp";
+
+
+import webvban19 from "../assets/img/test/ankush-400w.webp";
+import webvban20 from "../assets/img/test/vipul-400w.webp";
+import webvban21 from "../assets/img/test/rajiv-400w.webp";
+import webvban22 from "../assets/img/test/harshit-400w.webp";
+import webvban23 from "../assets/img/test/rishi-400w.webp";
+import webvban24 from "../assets/img/test/Krushna-400w.webp";
+import webvban25 from "../assets/img/test/WebsiteVideoBanner1-400w.webp";
+import webvban26 from "../assets/img/test/Bhanu-400w.webp";
+import webvban27 from "../assets/img/test/sandeep-400w.webp";
+
 
 const data = [
-  { name: "Jithin Peter", image: webvban1, videoId: "gY7TXYWoi5w", videoUrl: "https://www.youtube.com/shorts/gY7TXYWoi5w" },
-  { name: "Sandeep", image: webvban3, videoId: "zhir5FxzGFI", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk" },
-  { name: "Ankush", image: webvban4, videoId: "BBc74tIWqKk", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk" },
-  { name: "Vipul", image: webvban5, videoId: "lmQ0tylpeuw" },
-  { name: "Rishi Prakash", image: webvban8, videoId: "-h33trH8YLU", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk" },
-  { name: "Rajiv Chavli", image: webvban6, videoId: "8RogLRiFQY8", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk" },
-  { name: "Bhanu Verma", image: webvban2, videoId: "V-Y3VxFxjys", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk" },
-  { name: "Harshit", image: webvban7, videoId: "xi-1AeB7Krg", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk" },
-  { name: "Krushna", image: webvban9, videoId: "dLvatbiLrwM", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk" }
+  {
+    name: "Jithin Peter", img400: webvban25,
+    img800: webvban16, videoId: "gY7TXYWoi5w", videoUrl: "https://www.youtube.com/shorts/gY7TXYWoi5w"
+  },
+  {
+    name: "Sandeep", img400: webvban27,
+    img800: webvban18,
+    videoId: "zhir5FxzGFI", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk"
+  },
+  {
+    name: "Ankush", img400: webvban19,
+    img800: webvban10, videoId: "BBc74tIWqKk", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk"
+  },
+  {
+    name: "Vipul", img400: webvban20,
+    img800: webvban11, videoId: "lmQ0tylpeuw"
+  },
+  {
+    name: "Rishi Prakash", img400: webvban23,
+    img800: webvban14, videoId: "-h33trH8YLU", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk"
+  },
+  {
+    name: "Rajiv Chavli", img400: webvban21,
+    img800: webvban12, videoId: "8RogLRiFQY8", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk"
+  },
+  {
+    name: "Bhanu Verma", img400: webvban17,
+    img800: webvban12, videoId: "V-Y3VxFxjys", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk"
+  },
+  {
+    name: "Harshit", img400: webvban22,
+    img800: webvban13, videoId: "xi-1AeB7Krg", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk"
+  },
+  {
+    name: "Krushna", img400: webvban24,
+    img800: webvban15, videoId: "dLvatbiLrwM", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk"
+  }
 ];
 
 const EmblaCarouselTestimonilasVideos = () => {
@@ -115,7 +164,7 @@ const EmblaCarouselTestimonilasVideos = () => {
           {data.map((item, index) => (
             <div className="embla__slidevideo" key={index}>
               <div className="cardvideo">
-{/* 
+                {/* 
                 <div className="image-wrappervideo">
                  {activeVideo === index ? (
   isMobileState ? (
@@ -167,71 +216,93 @@ const EmblaCarouselTestimonilasVideos = () => {
 )}
                 </div> */}
 
-<div className="image-wrappervideo">
-  {isMobileState ? (
-    <>
-      <a
-        href={`https://www.youtube.com/watch?v=${item.videoId}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="video-thumbnail"
-      >
-        <img src={item.image} alt={item.name} />
-      </a>
+                <div className="image-wrappervideo">
+                  {isMobileState ? (
+                    <>
+                      <a
+                        href={`https://www.youtube.com/watch?v=${item.videoId}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="video-thumbnail"
+                      >
+                        {/* <img src={item.image} alt={item.name} /> */}
+                        <img
+                          src={item.img400}
+                          srcSet={`${item.img400} 400w, ${item.img800} 800w`}
+                          sizes="(max-width: 768px) 90vw, 391px"
+                          alt={item.name}
+                          width="391"
+                          height="220"
+                          loading={index === 0 ? "eager" : "lazy"}
+                          fetchPriority={index === 0 ? "high" : "auto"}
+                          decoding="async"
+                        />
+                      </a>
 
-      {/* 🔥 MOVE BUTTON OUTSIDE */}
-      <div
-        className="play-btnvideo"
-        onClick={() =>
-          window.open(`https://www.youtube.com/watch?v=${item.videoId}`, "_blank")
-        }
-      >
-        <div className="custom-button">
-          <div className="play-icon1"></div>
-        </div>
-      </div>
-    </>
-  ) : (
-    activeVideo === index ? (
-      <div className="iframe-container">
-        <iframe
-          src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&playsinline=1`}
-           title="YouTube video player"
-          className="video-frame"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-        />
-      </div>
-    ) : (
-      <>
-        <div
-          className="video-thumbnail"
-          onClick={(e) => {
-            e.stopPropagation();
-            setActiveVideo(index);
-            setIsPlaying(true);
-          }}
-        >
-          <img src={item.image} alt={item.name} />
-        </div>
+                      {/* 🔥 MOVE BUTTON OUTSIDE */}
+                      <div
+                        className="play-btnvideo"
+                        onClick={() =>
+                          window.open(`https://www.youtube.com/watch?v=${item.videoId}`, "_blank")
+                        }
+                      >
+                        <div className="custom-button">
+                          <div className="play-icon1"></div>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    activeVideo === index ? (
+                      <div className="iframe-container">
+                        <iframe
+                          src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&playsinline=1`}
+                          title="YouTube video player"
+                          className="video-frame"
+                          allow="autoplay; encrypted-media"
+                          allowFullScreen
+                        />
+                      </div>
+                    ) : (
+                      <>
+                        <div
+                          className="video-thumbnail"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveVideo(index);
+                            setIsPlaying(true);
+                          }}
+                        >
+                          {/* <img src={item.image} alt={item.name} /> */}
+                          <img
+                            src={item.img400}
+                            srcSet={`${item.img400} 400w, ${item.img800} 800w`}
+                            sizes="(max-width: 768px) 90vw, 391px"
+                            alt={item.name}
+                            width="391"
+                            height="220"
+                            loading={index === 0 ? "eager" : "lazy"}
+                            fetchPriority={index === 0 ? "high" : "auto"}
+                            decoding="async"
+                          />
+                        </div>
 
-        {/* 🔥 OUTSIDE again */}
-        <div
-          className="play-btnvideo"
-          onClick={(e) => {
-            e.stopPropagation();
-            setActiveVideo(index);
-            setIsPlaying(true);
-          }}
-        >
-          <div className="custom-button">
-            <div className="play-icon1"></div>
-          </div>
-        </div>
-      </>
-    )
-  )}
-</div>
+                        {/* 🔥 OUTSIDE again */}
+                        <div
+                          className="play-btnvideo"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveVideo(index);
+                            setIsPlaying(true);
+                          }}
+                        >
+                          <div className="custom-button">
+                            <div className="play-icon1"></div>
+                          </div>
+                        </div>
+                      </>
+                    )
+                  )}
+                </div>
               </div>
             </div>
           ))}

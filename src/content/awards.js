@@ -174,7 +174,6 @@ function Awards() {
                                         <p>2020</p>
                                         <div className="overlaysawardh">
                                             <h3>Times Excellence Award <br /><br />  2020</h3>
-
                                         </div>
                                     </div>
                                     <div className="cardsgawardh">
