@@ -211,8 +211,8 @@ function Main({ active, props }) {
                 </button>
 
                 <a href="/Application-form/" target="_blank" rel="noopener noreferrer">
-                  <img src={popupImg} alt="Admissions Open" className="popup-image"  loading='lazy'/>
-                  {/* <img
+                  {/* <img src={popupImg} alt="Admissions Open" className="popup-image"  loading='lazy'/> */}
+                  <img
                     src={popup685}   
                     srcSet={`
                             ${popup685} 685w,
@@ -222,7 +222,7 @@ function Main({ active, props }) {
                     alt="Admissions Open"
                     className="popup-image"
                     loading="eager"
-                  /> */}
+                  />
                 </a>
 
               </div>

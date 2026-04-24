@@ -301,7 +301,7 @@ function Courses(props) {
                         <div className="benfitIcon">
                           <img src={cash} alt="voucher icon" />
                         </div>
-                        Voucher worth INR 10,000</div>
+                        Voucher worth upto INR 10,000</div>
                     </li>
                     <li>
                       <div className="benfitContent">
