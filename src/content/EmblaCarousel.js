@@ -23,9 +23,9 @@ import mbnewbanF from "../assets/img/mobilebanner/homepagebanner/NewCampus.webp"
 import mbnewban3 from "../assets/img/mobilebanner/homepagebanner/alumni.webp";
 import clgband from "../assets/img/banners/Collage-Desktop-Banner.webp";
 import clgbanm from "../assets/img/mobilebanner/homepagebanner/Collage-Mobile-Banner.webp";
-// import clgband400 from "../assets/img/banners/Collage-Desktop-Banner-400w.webp";
-// import clgband800 from "../assets/img/banners/Collage-Desktop-Banner-800w.webp";
-// import clgband1200 from "../assets/img/banners/Collage-Desktop-Banner-1200w.webp";
+import clgbanm400 from "../assets/img/banners/Collage-Desktop-Banner-400w.webp";
+import clgbanm800 from "../assets/img/banners/Collage-Desktop-Banner-800w.webp";
+import clgband1526 from "../assets/img/banners/Collage-Desktop-Banner-1526w.webp";
 
 
 const TWEEN_FACTOR_BASE = 0.84
@@ -112,16 +112,26 @@ const EmblaCarousel = (props) => {
 
                   <source srcSet={clgbanm} media="(max-width: 768px)" />
 
+                   <source
+                   srcSet={`
+                  ${clgbanm400} 400w,
+                  ${clgbanm800} 800w,
+                  ${clgband1526} 1526w
+                `}
+                    sizes="(min-width: 769px) 800px"
+                  />
+
                   <img
-                    src={clgband}
+                    src={clgbanm800}
                     alt="gaming college"
-                    width={1526}
-                    height={450}
+                    width="800"
+                    height="235"
                     className="banner-img"
                     loading="eager"
                     fetchpriority="high"
                     decoding="async"
                   />
+
 
                 </picture>
 

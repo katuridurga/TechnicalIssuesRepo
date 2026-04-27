@@ -1,109 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
   <title>Backstage Pass</title>
+
   <meta property="og:image" content="https://www.backstagepass.co.in/newlogo.webp" />
   <meta property="og:type" content="website">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <!-- Font Optimization -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <!-- ✅ FONT OPTIMIZATION -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" media="print"
-    onload="this.media='all'" />
-    
+
+  <link rel="preload"
+        as="style"
+        href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" />
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+        media="print"
+        onload="this.media='all'" />
+
   <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" />
   </noscript>
 
-  <!-- ✅ LCP Image Preloads -->
-   <link 
-  rel="preload" 
-  as="image" 
-  href="/assets/img/banners/Collage-Desktop-Banner.webp"
-/>
+  <!-- ✅ ONLY ONE LCP PRELOAD -->
+  <link rel="preload"
+        as="image"
+        href="/assets/img/banners/Collage-Desktop-Banner.webp" />
 
-<link 
-  rel="preload" 
-  as="image" 
-  href="/assets/img/mobilebanner/homepagebanner/Collage-Mobile-Banner.webp"
-  media="(max-width: 768px)"
-/>
-  <!-- Mobile -->
-  <link rel="preload" as="image" href="/img/mobilebanner/homepagebanner/NewCampus.webp" media="(max-width:768px)"
-    fetchpriority="high" />
-
-  <link rel="preload" as="image" href="/img/banners/NewCampus.webp" media="(min-width:769px)" fetchpriority="high" />
-
-  <!-- Defer GTM -->
-  <!---vijetha gtm code updated-->
-  <!-- Google Tag Manager -->
-  <!-- <script>
-
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-PSDKPTHZ');
-
-  </script> -->
-
- <!-- vijetha code hided for tracking console logs-->
-<!-- <script>
-window.addEventListener("load", function () {
-  (function (w, d, s, l, i) {
-    w[l] = w[l] || [];
-    w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-
-    var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
-
-    j.async = true;
-    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-    f.parentNode.insertBefore(j, f);
-
-  })(window, document, 'script', 'dataLayer', 'GTM-PSDKPTHZ');
-});
-</script> -->
-<!-- Google Tag Manager -->
-<script>
-(function(w,d,s,l,i){
-  w[l]=w[l]||[];
-  w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-  var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),
-      dl=l!='dataLayer'?'&l='+l:'';
-  j.async=true;
-  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-  f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PSDKPTHZ');
-</script>
-<!-- End Google Tag Manager -->
 </head>
 
 <body>
-  <!---vijetha gtm code-->
-  <!---Google Tag Manager (noscript) -->
+
+  <!-- GTM (NON-BLOCKING) -->
+  <script>
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        (function (w,d,s,l,i){
+          w[l]=w[l]||[];
+          w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+
+          var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),
+              dl=l!='dataLayer'?'&l='+l:'';
+
+          j.async=true;
+          j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+          f.parentNode.insertBefore(j,f);
+
+        })(window,document,'script','dataLayer','GTM-PSDKPTHZ');
+      }, 2000);
+    });
+  </script>
+
+  <!-- GTM NOSCRIPT (UNCHANGED) -->
   <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSDKPTHZ" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSDKPTHZ"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"></iframe>
   </noscript>
-  <!-- End Google Tag Manager (noscript)-->
+
+  <!-- APP ROOT -->
   <div id="root"></div>
 
-  <!-- React chunk cache cleanup -->
-  <!-- React chunk cache cleanup -->
+  <!-- React MUST be deferred -->
+  <!-- <script src="/static/js/main.js" defer></script> -->
+
+  <!-- Cache cleanup (OK to keep, non-blocking) -->
   <script>
-    (async function () {
+       (async function () {
       try {
         // Get the current list of React chunks in the document
         const currentChunks = Array.from(
@@ -162,6 +136,6 @@ window.addEventListener("load", function () {
       }
     })();
   </script>
-</body>
 
+</body>
 </html>

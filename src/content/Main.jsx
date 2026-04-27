@@ -2,7 +2,7 @@ import React, { useState, useEffect, lazy, Suspense } from 'react';
 // import preLoaderVideo from "../assets/img/BSPAnimated.mp4";
 // import preLoaderWebm from "../assets/img/BSPAnimated.webm";
 import { useSelector, shallowEqual } from "react-redux";
-import popupImg from "../assets/img/qs-ranking-2026.webp";
+//import popupImg from "../assets/img/qs-ranking-2026.webp";
 import popup685 from "../assets/img/qs-ranking-2026-685w.webp";
 import popup1370 from "../assets/img/qs-ranking-2026-1370w.webp";
 import PropTypes from 'prop-types';
@@ -212,17 +212,21 @@ function Main({ active, props }) {
 
                 <a href="/Application-form/" target="_blank" rel="noopener noreferrer">
                   {/* <img src={popupImg} alt="Admissions Open" className="popup-image"  loading='lazy'/> */}
-                  <img
-                    src={popup685}   
-                    srcSet={`
-                            ${popup685} 685w,
-                            ${popup1370} 1370w
-                          `}
-                    sizes="(max-width: 768px) 100vw, 685px"
-                    alt="Admissions Open"
-                    className="popup-image"
-                    loading="eager"
-                  />
+                                <img
+                      src={popup685}
+                      srcSet={`
+                        ${popup685} 685w,
+                        ${popup1370} 1370w
+                      `}
+                      sizes="(max-width: 768px) 100vw, 685px"
+                      width="685"
+                      height="286"
+                      alt="Admissions Open"
+                      className="popup-image"
+                      loading="eager"
+                      fetchpriority="high"
+                      decoding="async"
+                    />
                 </a>
 
               </div>

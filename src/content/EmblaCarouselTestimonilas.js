@@ -290,6 +290,7 @@ const Testimonials = () => {
                             width="60"
                             height="70"
                           loading="lazy"
+                          fetchpriority="low"
                         />
                       ) : (
                         <img src={item.avatar} alt={item.name} />

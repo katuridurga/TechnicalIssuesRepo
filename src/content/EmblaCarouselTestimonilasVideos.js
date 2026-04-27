@@ -226,17 +226,17 @@ const EmblaCarouselTestimonilasVideos = () => {
                         className="video-thumbnail"
                       >
                         {/* <img src={item.image} alt={item.name} /> */}
-                        <img
-                          src={item.img400}
-                          srcSet={`${item.img400} 400w, ${item.img800} 800w`}
-                          sizes="(max-width: 768px) 90vw, 391px"
-                          alt={item.name}
-                          width="391"
-                          height="220"
-                          loading={index === 0 ? "eager" : "lazy"}
-                          fetchPriority={index === 0 ? "high" : "auto"}
-                          decoding="async"
-                        />
+                 <img
+  src={item.img400}
+  srcSet={`${item.img400} 400w, ${item.img800} 800w`}
+  sizes="(max-width: 768px) 100vw, 391px"
+  alt={item.name}
+  width="391"
+  height="220"
+  loading={index === 0 ? "eager" : "lazy"}
+  fetchpriority={index === 0 ? "high" : "low"}
+  decoding="async"
+/>
                       </a>
 
                       {/* 🔥 MOVE BUTTON OUTSIDE */}
@@ -273,17 +273,17 @@ const EmblaCarouselTestimonilasVideos = () => {
                           }}
                         >
                           {/* <img src={item.image} alt={item.name} /> */}
-                          <img
-                            src={item.img400}
-                            srcSet={`${item.img400} 400w, ${item.img800} 800w`}
-                            sizes="(max-width: 768px) 90vw, 391px"
-                            alt={item.name}
-                            width="391"
-                            height="220"
-                            loading={index === 0 ? "eager" : "lazy"}
-                            fetchPriority={index === 0 ? "high" : "auto"}
-                            decoding="async"
-                          />
+                         <img
+  src={item.img400}
+  srcSet={`${item.img400} 400w, ${item.img800} 800w`}
+  sizes="(max-width: 768px) 100vw, 391px"
+  alt={item.name}
+  width="391"
+  height="220"
+  loading={index === 0 ? "eager" : "lazy"}
+  fetchpriority={index === 0 ? "high" : "low"}
+  decoding="async"
+/>
                         </div>
 
                         {/* 🔥 OUTSIDE again */}
