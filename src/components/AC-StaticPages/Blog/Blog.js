@@ -54,7 +54,7 @@ function Blog() {
   // }, []);
 
 useEffect(() => {
-  fetch(`https://www.backstagepass.co.in/reactapi/categories_list.php?t=${Date.now()}`, {
+  fetch(`https://www.backstagepass.co.in/categories_list.php?t=${Date.now()}`, {
     cache: "no-store"
   })
     .then(response => response.json())
