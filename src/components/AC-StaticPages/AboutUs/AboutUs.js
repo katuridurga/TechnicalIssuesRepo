@@ -15,8 +15,8 @@ import m2 from "../../../assets/img/Icons/veterans.webp";
 import m3 from "../../../assets/img/Icons/connections.webp";
 import m5 from "../../../assets/img/Icons/experience.webp";
 import linkedin from "../../../assets/img/Icons/linkedin.webp";
-
-
+import abt from "../../../assets/img/banners/aboutus.webp";
+import abtm from "../../../assets/img/mobilebanner/ourstory.webp";
 
 function Aboutus(props) {
   const isMobileState = useSelector(
@@ -26,6 +26,27 @@ function Aboutus(props) {
 
   return (
     <>
+     <div className={isMobileState ? "MobileClassb" : "StoryB"}>
+  {!isMobileState && (
+    <img
+      src={abt}
+      alt="Courses offered banner"
+      className="StoryB"
+    />
+  )}
+{isMobileState && (
+   <img
+      src={abtm}
+      alt="Courses offered banner"
+      className="MobileClassb"
+    />
+)}
+ 
+
+  <div className="et_pb_rowa">
+    <h1>About Us</h1>
+  </div>
+</div>
       <Helmet>
         <script type="application/ld+json">
           {`
@@ -69,20 +90,12 @@ function Aboutus(props) {
         <meta property="og:url" content="https://www.backstagepass.co.in/about-us/our-story/" />
         <link rel="canonical" href="https://www.backstagepass.co.in/about-us/our-story/" />
       </Helmet>
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'MobileClassb' : 'StoryB'}`}>
-        <div className="et_pb_row et_pb_row_0">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt"> About Us</h1></div>
-            </div>
-          </div>
-        </div>
-      </div>
+    
       <div className="main-ban  mainbans sec-title mabanimg"><img src={n1} alt="nemonics" /></div>
 
 
-      <h2 className="mainHeadingTotal fadeInUp anime-delay" style={{ marginTop: "-30px!important", textAlign: "center" }}>Our Story
-      </h2>
+     <h2 className="mainHeadingTotal fadeInUp anime-delay" style={{ marginTop: "-30px!important", textAlign: "center" }}>Our Story
+      </h2> 
       <h3 className='tagline tg1' style={{ color: "#ed1925" }}> To shape the future of global gaming education</h3>
       <div className='courses-container' >
         <div className="main-img" style={{ boxShadow: "none", backgroundColor: "#fff", marginBottom: "28px !important" }}>

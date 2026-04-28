@@ -64,7 +64,7 @@ useEffect(() => {
     .catch(error => {
       console.error('Error fetching categories:', error);
     });
-}, []);
+}, []);  
 
   // useEffect(() => {
   //   setIsLoading(true); // Set loading to true before fetch

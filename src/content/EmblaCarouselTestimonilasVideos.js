@@ -27,7 +27,6 @@ import webvban16 from "../assets/img/test/WebsiteVideoBanner1-800w.webp";
 import webvban17 from "../assets/img/test/Bhanu-800w.webp";
 import webvban18 from "../assets/img/test/sandeep-800w.webp";
 
-
 import webvban19 from "../assets/img/test/ankush-400w.webp";
 import webvban20 from "../assets/img/test/vipul-400w.webp";
 import webvban21 from "../assets/img/test/rajiv-400w.webp";
@@ -66,8 +65,8 @@ const data = [
     img800: webvban12, videoId: "8RogLRiFQY8", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk"
   },
   {
-    name: "Bhanu Verma", img400: webvban17,
-    img800: webvban12, videoId: "V-Y3VxFxjys", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk"
+    name: "Bhanu Verma", img400: webvban26,
+    img800: webvban17, videoId: "V-Y3VxFxjys", videoUrl: "https://www.youtube.com/shorts/BBc74tIWqKk"
   },
   {
     name: "Harshit", img400: webvban22,

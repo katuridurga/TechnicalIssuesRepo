@@ -1422,12 +1422,14 @@
 }
 
 .embla__button--prev {
-  left: 30px;
+  /* left: 30px; */
+  left:14px;
   position: absolute;
 }
 
 .embla__button--next {
-  right: 0px;
+  /* right: 0px; */
+      right: -14px;
   position: absolute;
 }
 
