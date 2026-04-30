@@ -13,6 +13,9 @@ import c1 from "../../../assets/img/partners/InternshipPlacement.webp";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 import HomeContentForm from '../../../content/HomeContentFrom';
+import abtp from "../../../assets/img/banners/jobs.webp";
+import abtpm from "../../../assets/img/mobilebanner/Placementsupport.webp";
+
 
 function Placementsupport(props) {
   const isMobileState = useSelector(
@@ -67,13 +70,25 @@ function Placementsupport(props) {
 
   return (
     <>
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'MobileClasspls' : 'Placement'}`}>
-        <div className="et_pb_row et_pb_row_0">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">Placement Support</h1></div>
-            </div>
-          </div>
+      
+       <div className={isMobileState ? "MobileClasspls" : "Placement"}>
+        {!isMobileState && (
+          <img
+            src={abtp}
+            alt="Placement support at Backstagepass"
+            className="Placement"
+          />
+        )}
+      {isMobileState && (
+         <img
+            src={abtpm}
+            alt="Placement support at Backstagepass"
+            className="MobileClasspls"
+          />
+      )}
+       
+        <div className="et_pb_rowa">
+          <h1>Placement Support</h1>
         </div>
       </div>
       <Helmet>

@@ -25,6 +25,8 @@ const boldStyle = {
   fontSize: '18px',       // Larger font size
 };
 
+  
+
 function Courses(props) {
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,

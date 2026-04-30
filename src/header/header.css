@@ -373,6 +373,12 @@
 }
 
 @media only screen and (max-width: 1024px) {
+.embla__button--next {
+    /* right: 0px; */
+    position: absolute;
+    right: 0 !important;
+    transform: translateX(40%) !important;
+}
  .popup-image {
     width: 100%;
    height: auto !important;
@@ -1423,14 +1429,16 @@
 
 .embla__button--prev {
   /* left: 30px; */
-  left:14px;
-  position: absolute;
+position: absolute;
+    left: 0;
+    transform: translateX(-3%);
 }
 
 .embla__button--next {
   /* right: 0px; */
-      right: -14px;
-  position: absolute;
+   position: absolute;
+    right: 0;
+    transform: translateX(69%);
 }
 
 .embla__button {
@@ -2338,7 +2346,7 @@
   }
 
   .embla__button--prev {
-    left: 10px !important;
+    left: -0px !important;
   }
 
   .scroll-to-top {
@@ -3994,23 +4002,6 @@ div.et_pb_section.et_pb_section_0 {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #0a0a0a 100%), url(./../assets/img/banners/arvr.webp) !important;
 }
 
-.Placement {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #0a0a0a 100%), url(./../assets/img/banners/jobs.webp) !important;
-}
-
-.AdmissionsB {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #0a0a0a 100%), url(./../assets/img/banners/Admissions.webp) !important;
-}
-
-.finaceB {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #0a0a0a 100%), url(./../assets/img/banners/Financialassistance.webp) !important;
-  background-size: cover !important;
-}
-
-.AssistanceB {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #0a0a0a 100%), url(./../assets/img/banners/alumni-success.webp) !important;
-}
-
 .ShowcaseB {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #0a0a0a 100%), url(./../assets/img/banners/student_showcase.webp) !important;
 }
@@ -4036,29 +4027,7 @@ div.et_pb_section.et_pb_section_0 {
   background-size: cover !important;
 }
 
-.MobileClassaff {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 100%, #0a0a0a 100%), url(./../assets/img/mobilebanner/Affiliation.webp) !important;
-  height: 420px;
-  background-size: cover !important;
-}
 
-.MobileClasspls {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #0a0a0a 100%), url(./../assets/img/mobilebanner/Placementsupport.webp) !important;
-  background-position: center;
-  height: 420px;
-  background-size: cover !important;
-}
-
-.MobileClassadmis {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 100%, #0a0a0a 100%), url(./../assets/img/mobilebanner/Admissions.webp) !important;
-  height: 450px;
-  background-size: cover !important;
-}
-
-.MobileClassass {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #0a0a0a 100%), url(./../assets/img/mobilebanner/alumnisuccess.webp) !important;
-  background-size: cover;
-}
 
 .MobileClassshow {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 100%, #0a0a0a 100%), url(./../assets/img/mobilebanner/Studentshowcase.webp) !important;

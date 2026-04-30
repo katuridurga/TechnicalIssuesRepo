@@ -95,7 +95,8 @@ import speaker75 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/
 //import speaker76 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/Rishav.webp";
 import speaker77 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/MehulParakh.webp";
 import speaker78 from "../../../assets/img/alumni-images/WEBSITE-ALUMNI-SUCCESS/AkshatPuri.webp";
-
+import alimg from "../../../assets/img/banners/alumni-success.webp";
+import alimgm from "../../../assets/img/mobilebanner/alumnisuccess.webp";
 
 import { useSelector, shallowEqual } from "react-redux";
 
@@ -765,15 +766,28 @@ const currentItems = speakers.slice(
 const speakersRef = React.useRef(null);
   return (
     <>
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'MobileClassass' : 'AssistanceB'}`}>
-        <div className="et_pb_row et_pb_row_0">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">Alumni Success</h1></div>
-            </div>
-          </div>
+  
+            
+      <div className={isMobileState ? "MobileClassass" : "AssistanceB"}>
+              {!isMobileState && (
+                <img
+                  src={alimg}
+                  alt="Placement support at Backstagepass"
+                  className="AssistanceB"
+                />
+              )}
+            {isMobileState && (
+               <img
+                  src={alimgm}
+                  alt="Placement support at Backstagepass"
+                  className="MobileClassass"
+                />
+            )}
+             
+              <div className="et_pb_rowa">
+                <h1>Alumni Success</h1>
+              </div>
         </div>
-      </div>
       <div className="courses-container">
         <Helmet>
           <script type="application/ld+json">

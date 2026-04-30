@@ -9,7 +9,6 @@
   margin-top: 30px;
 }
 
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -33,14 +32,12 @@
   --_info-top: 0;
   --_info-bottom: auto;
   --_info-translate: -100px;
-
   width: 100%;
   max-width: 77%;
   min-width: 66%;
   display: grid;
   grid-template-columns: var(--_grid-cols);
   grid-template-areas: var(--_grid-areas);
-
   gap: var(--_gap);
   position: relative;
   overflow: hidden;

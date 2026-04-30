@@ -68,14 +68,14 @@ function Courses(props) {
   {!isMobileState && (
     <img
       src="https://www.backstagepass.co.in/courses-ac05838e.webp"
-      alt="Courses offered banner"
+      alt="Game Design and Game Development courses"
       className="bg-image"
     />
   )}
 {isMobileState && (
    <img
       src=" https://www.backstagepass.co.in/maincourse-786ef7eb.webp"
-      alt="Courses offered banner"
+      alt="Game Design and Game Development courses"
       className="bg-image1"
     />
 )}

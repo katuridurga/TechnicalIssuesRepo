@@ -223,6 +223,7 @@ function Courses(props) {
           </div>
         </div>
       </div>
+      
       {/* <div className='courseBanner'><img alt="Courses Banner" title='Courses Banner' src={courseBanner} /></div> */}
       <div className="courses-container">
         <Helmet>

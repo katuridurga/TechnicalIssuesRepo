@@ -30,14 +30,14 @@ function Aboutus(props) {
   {!isMobileState && (
     <img
       src={abt}
-      alt="Courses offered banner"
+      alt="About Backstagepass Institute"
       className="StoryB"
     />
   )}
 {isMobileState && (
    <img
       src={abtm}
-      alt="Courses offered banner"
+      alt="About Backstagepass Institute"
       className="MobileClassb"
     />
 )}

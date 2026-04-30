@@ -9,8 +9,8 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
 import { useSelector, shallowEqual } from "react-redux";
-
-
+import abtad from "../../../assets/img/banners/Admissions.webp";
+import abtadm from "../../../assets/img/mobilebanner/Admissions.webp"
 import { Helmet } from "react-helmet";
 
 function Courses(props) {
@@ -45,15 +45,28 @@ function Courses(props) {
   };
   return (
     <>
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'MobileClassadmis' : 'AdmissionsB'}`}>
-        <div className="et_pb_row et_pb_row_0">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">Admissions</h1></div>
+     
+            
+             <div className={isMobileState ? "MobileClassadmis" : "AdmissionsB"}>
+              {!isMobileState && (
+                <img
+                  src={abtad}
+                  alt="Admissions Process at Backstagepass"
+                  className="AdmissionsB"
+                />
+              )}
+            {isMobileState && (
+               <img
+                  src={abtadm}
+                  alt="Admissions Process at Backstagepass"
+                  className="MobileClassadmis"
+                />
+            )}
+             
+              <div className="et_pb_rowa">
+                <h1>Admissions</h1>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
       {/* <div className='courseBanner'><img alt="Courses Banner" title='Courses Banner' src={courseBanner} /></div> */}
       <div className="courses-container">
         <Helmet>

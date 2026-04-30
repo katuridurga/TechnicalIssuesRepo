@@ -5,6 +5,9 @@ import { Helmet } from "react-helmet";
 import { useSelector, shallowEqual } from "react-redux";
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import framebox from "../../../assets/img/Frameboxxlogo.webp";
+import aff from "../../../assets/img/banners/Affiliation.webp";
+import affm from "../../../assets/img/mobilebanner/Affiliation.webp"
+
 function Affilication() {
   const isMobileState = useSelector(
     (state) => state.mainReducer.isMobile,
@@ -44,6 +47,26 @@ function Affilication() {
     "Advanced Diploma in Game Development"];
   return (
     <>
+    <div className={isMobileState ? "MobileClassaff" : "affilationbanner"}>
+      {!isMobileState && (
+        <img
+          src={aff}
+          alt="Backstagepass affiliated with JNAFAU and LINCOlN University"
+          className="affilationbanner"
+        />
+      )}
+    {isMobileState && (
+       <img
+          src={affm}
+          alt="Backstagepass affiliated with JNAFAU and LINCOlN University"
+          className="MobileClassaff"
+        />
+    )}
+     
+      <div className="et_pb_rowa">
+        <h1>Our Affiliations and Collaborations</h1>
+      </div>
+    </div>
       <Helmet>
         <title>
           Backstage Pass Institute of Gaming is Accredited by JNAFAU & Lincoln University
@@ -72,15 +95,6 @@ function Affilication() {
 
 
 
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular ${isMobileState ? 'MobileClassaff' : 'affilationbanner'}`}>
-        <div className="et_pb_row et_pb_row_0">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt"> Our Affiliations and Collaborations</h1></div>
-            </div>
-          </div>
-        </div>
-      </div>
 
 
 
