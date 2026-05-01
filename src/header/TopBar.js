@@ -17,11 +17,10 @@ export default function TopBar() {
             <div className="top-menu">
               <div className="top-menu-icon">
                 <img className="topbar-icon" alt="Whatsapp" />
-                
               </div>
               <div className="top-menu-icon">
                 <img className="topbar-icon" alt="Whatsapp"/>
-                
+
               </div>
               <div className="top-menu-icon">
                 <img className="topbar-icon" alt="Whatsapp" />

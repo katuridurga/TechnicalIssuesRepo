@@ -67,6 +67,8 @@ import Frame388 from "../../../assets/img/StudentGames/Student Games/Frame388.we
 import orbit from "../../../assets/img/StudentGames/Student Games/Frameo.webp";
 import { useSelector, shallowEqual } from "react-redux";
 import { Helmet } from "react-helmet";
+import stp from "../../../assets/img/banners/startandgamesd.webp";
+import stpm from "../../../assets/img/mobilebanner/stawardsm.webp";
 
 function Courses(props) {
   useEffect(() => {
@@ -206,17 +208,27 @@ function Courses(props) {
 
   return (
     <>
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'MobileClassstang' : 'starng'}`}>
-        <div className="et_pb_row et_pb_row_0">
-
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">Student Portfolio
-              </h1></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
+            <div className={isMobileState ? "MobileClassstang" : "starng"}>
+                    {!isMobileState && (
+                      <img
+                        src={stp}
+                        alt="Game projects portfolio"
+                        className="starng"
+                      />
+                    )}
+                  {isMobileState && (
+                     <img
+                        src={stpm}
+                        alt="Game projects portfolio"
+                        className="MobileClassstang"
+                      />
+                  )}
+                   
+                    <div className="et_pb_rowa">
+                      <h1>Student Portfolio</h1>
+                    </div>
+              </div>
       <div className="courses-container">
         <Helmet>
           <script type="application/ld+json">

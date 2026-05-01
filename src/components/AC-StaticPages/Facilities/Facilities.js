@@ -21,6 +21,7 @@ function Courses(props) {
           </div>
         </div>
       </div>
+      
       <div className="courses-container">
         <Helmet>
           <script type="application/ld+json">

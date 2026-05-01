@@ -1429,16 +1429,16 @@
 
 .embla__button--prev {
   /* left: 30px; */
-position: absolute;
+    position: absolute;
     left: 0;
-    transform: translateX(-3%);
+    transform: translateX(-25%);
 }
 
 .embla__button--next {
   /* right: 0px; */
-   position: absolute;
+    position: absolute;
     right: 0;
-    transform: translateX(69%);
+    transform: translateX(85%);
 }
 
 .embla__button {
@@ -3327,70 +3327,6 @@ div.et_pb_section.et_pb_section_0 {
   height: 600px;
 }
 
-.starng {
-  background-image: url(./../assets/img/banners/startandgamesd.webp) !important;
-  height: 630px;
-  background-size: cover !important;
-  position: relative;
-  background-position: center;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.starng::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  /* black overlay with 50% opacity */
-  z-index: 0;
-}
-
-.starng h1 {
-  position: relative;
-  z-index: 2;
-}
-
-
-.staw {
-  background-image: url(./../assets/img/banners/stawardd.webp) !important;
-  height: 630px;
-  background-size: cover !important;
-  position: relative;
-  background-position: center;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.staw::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  /* black overlay with 50% opacity */
-  z-index: 0;
-}
-
-.staw h1 {
-  position: relative;
-  z-index: 2;
-}
 
 .Diploma-in-Game-Design-Production {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #0a0a0a 100%), url(./../assets/img/banners/Diploma-in-Game-Design-Production.webp) !important;
@@ -4036,31 +3972,8 @@ div.et_pb_section.et_pb_section_0 {
 
 }
 
-.MobileClassstaw {
-  top: 28px;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 100%, #0a0a0a 100%), url(./../assets/img/mobilebanner/startandgamesm.webp) !important;
-  background-size: contain;
-  background-position: top;
-  height: 420px;
-  margin-bottom: 28px !important;
 
-}
 
-.MobileClassstang {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 100%, #0a0a0a 100%), url(./../assets/img/mobilebanner/stawardsm.webp) !important;
-  background-size: cover;
-  background-position: top;
-  height: 483px;
-  top: 44px;
-  margin-bottom: 68px !important;
-}
-
-.MobileClassacctr {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #0a0a0a 100%), url(./../assets/img/mobilebanner/acceleratorprogram.webp) !important;
-  background-position: center;
-  height: 420px;
-  background-size: cover !important;
-}
 
 .MobileClasshstl {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #0a0a0a 100%), url(./../assets/img/mobilebanner/hostel.webp) !important;
@@ -4080,7 +3993,6 @@ div.et_pb_section.et_pb_section_0 {
   background-size: cover !important;
 
 }
-
 
 .ribbon {
   position: absolute;

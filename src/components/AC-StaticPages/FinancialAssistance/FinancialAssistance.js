@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./FinancialAssistance.css";
 import HomeContent from "../../../content/HomeContent";
-
 import partner1 from "../../../assets/img/partners/Edufin.webp";
 import partner2 from "../../../assets/img/partners/Feemonk.webp";
 import insurance from "../../../assets/img/security.webp";
 import cash from "../../../assets/img/coin.webp";
 import time from "../../../assets/img/timing.webp";
-
 import { FiArrowRight } from "react-icons/fi";
 import { CiPhone, CiMail } from "react-icons/ci";
 import { useSelector, shallowEqual } from "react-redux";
@@ -19,8 +17,8 @@ import zero from "../../../assets/img/Icons/ZeroPercent.webp";
 import cost from "../../../assets/img/Icons/NoCostEMI.webp";
 import charge from "../../../assets/img/Icons/NohiddenCharge.webp";
 import collat from "../../../assets/img/Icons/NoCollateral.webp";
-
-
+import finance from "../../../assets/img/banners/Financialassistance.webp";
+import financem from "../../../assets/img/mobilebanner/Financial-assistance.webp";
 import { Helmet } from "react-helmet";
 
 function Courses(props) {
@@ -214,16 +212,28 @@ function Courses(props) {
   }
   return (
     <>
-      <div className="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular finaceB">
-        <div className="et_pb_row et_pb_row_0">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">Financial Assistance</h1></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+              
+           <div className={isMobileState ? "finaceBm" : "finaceB"}>
+                   {!isMobileState && (
+                     <img
+                       src={finance}
+                       alt="Affordable gaming education with scholarships"
+                       className="finaceB"
+                     />
+                   )}
+                 {isMobileState && (
+                    <img
+                       src={financem}
+                       alt="Affordable gaming education with scholarships"
+                       className="finaceBm"
+                     />
+                 )}
+                  
+                   <div className="et_pb_rowa">
+                     <h1>Financial Assistance</h1>
+                   </div>
+             </div>
+    
       {/* <div className='courseBanner'><img alt="Courses Banner" title='Courses Banner' src={courseBanner} /></div> */}
       <div className="courses-container">
         <Helmet>

@@ -772,14 +772,14 @@ const speakersRef = React.useRef(null);
               {!isMobileState && (
                 <img
                   src={alimg}
-                  alt="Placement support at Backstagepass"
+                  alt="Top gaming companies hiring Backstage Pass alumni students"
                   className="AssistanceB"
                 />
               )}
             {isMobileState && (
                <img
                   src={alimgm}
-                  alt="Placement support at Backstagepass"
+                  alt="Top gaming companies hiring Backstage Pass alumni students"
                   className="MobileClassass"
                 />
             )}

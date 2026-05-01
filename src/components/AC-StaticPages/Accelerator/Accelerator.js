@@ -5,6 +5,9 @@ import c2a from "../../../assets/img/Courses/WhyChooseUsImagea.webp";
 import { useSelector, shallowEqual } from "react-redux";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import acclr from "../../../assets/img/banners/acceleratorprogram.webp";
+import acclrm from "../../../assets/img/mobilebanner/acceleratorprogram.webp"
+
 const ulStyle = {
   listStyleType: 'disc',  // Set the bullet point style
   //  paddingLeft: '200px', 
@@ -25,7 +28,7 @@ const boldStyle = {
   fontSize: '18px',       // Larger font size
 };
 
-  
+
 
 function Courses(props) {
   const isMobileState = useSelector(
@@ -48,20 +51,20 @@ function Courses(props) {
         "Career Guidance: Receive advice on navigating the gaming industry and building a successful career.",
       ],
     },
- {
-  question: "Recognition & Opportunities",
-  answer: [
-  "<strong>Award-Winning Projects:</strong> Contribute to games that have received recognition at:",
-  `
+    {
+      question: "Recognition & Opportunities",
+      answer: [
+        "<strong>Award-Winning Projects:</strong> Contribute to games that have received recognition at:",
+        `
   <ol type="a" class="inner-list">
     <li>Shortlisted in Indie 40 Games at IGDC 2024</li>
     <li>Student Game of the Year nominations at IGDC 2024</li>
     <li>Showcased at prestigious Gaming Expos</li>
   </ol>
   `,
-  "<strong>Global Exposure:</strong> Showcase your games on global platforms and connect with industry leaders."
-],
-},
+        "<strong>Global Exposure:</strong> Showcase your games on global platforms and connect with industry leaders."
+      ],
+    },
 
 
     {
@@ -124,14 +127,24 @@ function Courses(props) {
   return (
     <>
 
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'MobileClassacctr' : 'AcceleratorB'}`}>
-        <div className="et_pb_row et_pb_row_0">
+      <div className={isMobileState ? "MobileClassacctr" : "AcceleratorB"}>
+        {!isMobileState && (
+          <img
+            src={acclr}
+            alt="Accelerator program with real-world game projects"
+            className="staw"
+          />
+        )}
+        {isMobileState && (
+          <img
+            src={acclrm}
+            alt="Accelerator program with real-world game projects"
+            className="MobileClassstaw"
+          />
+        )}
 
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">The Accelerator</h1></div>
-            </div>
-          </div>
+        <div className="et_pb_rowa">
+          <h1>The Accelerator</h1>
         </div>
       </div>
       <div className="courses-container">
@@ -175,20 +188,20 @@ function Courses(props) {
           <title>Game Development Accelerator Program | Backstage Pass Institute of Gaming</title>
 
           <meta property="og:title" content="Game Development Accelerator Program | Backstage Pass Institute of Gaming" />
-           <meta name="description" content="With Backstage Pass Gaming Accelerator Program, students have developed & published award-winning games. They also gained global exposure & mentorship to launch their own gaming studios." />
+          <meta name="description" content="With Backstage Pass Gaming Accelerator Program, students have developed & published award-winning games. They also gained global exposure & mentorship to launch their own gaming studios." />
           <meta property="og:description" name="description" content="With Backstage Pass Gaming Accelerator Program, students have developed & published award-winning games. They also gained global exposure & mentorship to launch their own gaming studios." />
           <meta property="og:url" content="https://www.backstagepass.co.in/life-at-bsp/accelerator-program/" />
           <link rel="canonical" href="https://www.backstagepass.co.in/life-at-bsp/accelerator-program/" />
 
         </Helmet>
 
-        <div className="courses-wrapper223" style={{backgroundColor:"#f9fafb",boxShadow:"0 2px 15px 5px rgba(0, 0, 0, 0.1)",padding:"12px"}}>
+        <div className="courses-wrapper223" style={{ backgroundColor: "#f9fafb", boxShadow: "0 2px 15px 5px rgba(0, 0, 0, 0.1)", padding: "12px" }}>
           <h2 className="mainHeadingTotal">The Accelerator Program
           </h2>
 
           <p className='suprtst' style={{ width: "85%" }}>The Accelerator Program is designed to equip <b style={{ fontSize: "16px", color: '#ed1925' }}>
-                  <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">Backstage Pass</a></b> students with the skills, mentorship, and resources needed to develop industry-ready games. This program enhances students’ <b style={{ fontSize: "16px", color: '#ed1925' }}>
-                  <a href="/courses/bachelors-in-computer-science-and-game-development/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">game development</a></b> skills while fostering teamwork, creativity, and innovation.
+            <a href="/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">Backstage Pass</a></b> students with the skills, mentorship, and resources needed to develop industry-ready games. This program enhances students’ <b style={{ fontSize: "16px", color: '#ed1925' }}>
+              <a href="/courses/bachelors-in-computer-science-and-game-development/" style={{ fontSize: "16px", color: '#ed1925' }} target="_blank" rel="noopener noreferrer">game development</a></b> skills while fostering teamwork, creativity, and innovation.
           </p>
 
         </div>
@@ -206,7 +219,7 @@ function Courses(props) {
           </ul>
         </div>
 
-        <div id="Career-Opportunitiesacc" style={{ backgroundColor: "#f9fafb", overflow: "hidden",boxShadow:"0 2px 15px 5px rgba(0, 0, 0, 0.1)" }} >
+        <div id="Career-Opportunitiesacc" style={{ backgroundColor: "#f9fafb", overflow: "hidden", boxShadow: "0 2px 15px 5px rgba(0, 0, 0, 0.1)" }} >
 
           <div className='coppertunitiesacce'>
             <div className='left'>
@@ -227,7 +240,7 @@ function Courses(props) {
 
                 </h2>
                 <div className="brname"></div>
-                <div className="border rounded-lg bg-white" style={{ marginTop:isMobileState?"0px":"30px" }}>
+                <div className="border rounded-lg bg-white" style={{ marginTop: isMobileState ? "0px" : "30px" }}>
                   {faqsac.map((faq, index) => (
                     <div
                       key={index}
@@ -277,18 +290,18 @@ function Courses(props) {
                       {openIndex === index && (
                         <ul style={{ paddingLeft: "6.5rem", lineHeight: "1.9" }}>
                           {faq.answer.map((point, i) => (
- <li
-  key={i}
-  style={{
-    listStyle: point.includes("<ol") ? "none" : "disc",
-    fontSize: "14px",
-    paddingLeft: point.includes("<ol") ? "0" : undefined,
-  }}
-  dangerouslySetInnerHTML={{ __html: point }}
-/>
+                            <li
+                              key={i}
+                              style={{
+                                listStyle: point.includes("<ol") ? "none" : "disc",
+                                fontSize: "14px",
+                                paddingLeft: point.includes("<ol") ? "0" : undefined,
+                              }}
+                              dangerouslySetInnerHTML={{ __html: point }}
+                            />
 
 
-                            
+
                           ))}
                         </ul>
                       )}
@@ -303,7 +316,7 @@ function Courses(props) {
             </div>
           </div>
         </div>
-        <div id="Career-Opportunitiesacc" style={{ backgroundColor: "#fff", overflow: "hidden", marginTop:"12px" }} >
+        <div id="Career-Opportunitiesacc" style={{ backgroundColor: "#fff", overflow: "hidden", marginTop: "12px" }} >
 
           <div className='coppertunitiesacce'>
 
@@ -314,7 +327,7 @@ function Courses(props) {
 
               <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#fff", color: "#000", width: isMobileState ? "100%" : "80%", margin: "0px" }}>
                 <h2 className='courseHeading fadeInUp anime-delay' style={{
-                 textAlign: isMobileState ? "center" : "center",
+                  textAlign: isMobileState ? "center" : "center",
                   width: isMobileState ? "100%" : "80%",
                   lineHeight: isMobileState ? "48px" : "48px",
                   wordWrap: "break-word"
@@ -322,7 +335,7 @@ function Courses(props) {
 
                 </h2>
                 <div className="brname"></div>
-                <div className="border rounded-lg bg-white" style={{ marginTop:isMobileState?"0px":"30px", padding:"10px" }}>
+                <div className="border rounded-lg bg-white" style={{ marginTop: isMobileState ? "0px" : "30px", padding: "10px" }}>
                   {faqswhy.map((faqw, indexw) => (
                     <div
                       key={indexw}
@@ -372,9 +385,9 @@ function Courses(props) {
                       {openIndex1 === indexw && (
                         <ul style={{ paddingLeft: "6.5rem", lineHeight: "1.9" }}>
                           {faqw.answer.map((pointw, p) => (
-                            <li key={p} style={{ listStyle: "disc", fontSize:"14px" }}>{pointw}</li>
+                            <li key={p} style={{ listStyle: "disc", fontSize: "14px" }}>{pointw}</li>
                           ))}
-     
+
 
                         </ul>
                       )}
@@ -392,7 +405,7 @@ function Courses(props) {
             </div>
           </div>
         </div>
-     
+
       </div>
 
     </>

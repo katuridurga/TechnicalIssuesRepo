@@ -11,6 +11,8 @@ import awardsix from "../../../assets/img/awards/IGDC23.webp"
 import awardseven from "../../../assets/img/awards/GEM-AWARDS-2025.webp"
 import awardeight from "../../../assets/img/awards/JayJainAward.webp"
 import { Helmet } from "react-helmet";
+import staw from "../../../assets/img/banners/stawardd.webp";
+import stawm from "../../../assets/img/mobilebanner/startandgamesm.webp";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -35,15 +37,7 @@ CustomTabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-
-
-
-
 function StudentShowcase(props) {
-
-
-
-
 
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
@@ -52,15 +46,27 @@ function StudentShowcase(props) {
 
   return (
     <>
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'MobileClassstaw' : 'staw'}`}>
-        <div className="et_pb_row et_pb_row_0">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">Student Awards</h1></div>
-            </div>
-          </div>
-        </div>
-      </div>
+     
+       <div className={isMobileState ? "MobileClassstaw" : "staw"}>
+                          {!isMobileState && (
+                            <img
+                              src={staw}
+                              alt="Award-winning game projects"
+                              className="staw"
+                            />
+                          )}
+                        {isMobileState && (
+                           <img
+                              src={stawm}
+                              alt="Award-winning game projects"
+                              className="MobileClassstaw"
+                            />
+                        )}
+                         
+                          <div className="et_pb_rowa">
+                            <h1>Student Awards</h1>
+                          </div>
+                    </div>
       <div className="courses-containerss">
         <Helmet>
           <script type="application/ld+json">

@@ -569,3 +569,88 @@ margin-right:10px;
   align-items: flex-start; /* Ensures top alignment */
   flex-wrap: wrap; /* Allows wrapping on small screens */
 }
+.AcceleratorB img {
+position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+.AcceleratorB {
+    position: relative;
+    overflow: hidden;
+    height: 445px;
+}
+/* Content above image */
+.AcceleratorB .et_pb_rowa {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 35%;
+  margin: 0px auto;
+}
+
+.AcceleratorB .et_pb_rowa h1 {
+  font-size: 50px;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+}
+
+.MobileClassacctr {
+position: relative;
+    height: 450px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    width: 100%;}
+
+/* Remove Divi row spacing issues */
+.MobileClassacctr .et_pb_rowa {
+  position: static; /* 🔥 important */
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Center text */
+.MobileClassacctr .et_pb_rowa h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  z-index: 4;
+}
+
+.AcceleratorB::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0) 20%,
+      #0a0a0a 100%);
+  z-index: 1;
+}
+
+
+.MobileClassacctr::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0) 20%,
+      #0a0a0a 100%);
+ 
+}
+

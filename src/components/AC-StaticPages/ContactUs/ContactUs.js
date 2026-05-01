@@ -4,12 +4,11 @@ import "./ContactUs.css";
 import HomeContent from "../../../content/HomeContent";
 import { Helmet } from "react-helmet";
 import { FaPlus, FaMinus } from "react-icons/fa";
-
-
+import contimg from "../../../assets/img/banners/Contactus.webp";
+import contimgm from "../../../assets/img/mobilebanner/Contactus.webp";
 
 
 function ContactUs(props) {
-
 
   const isMobileState = useSelector(
     state => state.mainReducer.isMobile,
@@ -65,16 +64,26 @@ function ContactUs(props) {
   return (
     <>
 
-
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'MobileClasscont' : 'contactUsbanner'}`}>
-        <div className="et_pb_row et_pb_row_0">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">Contact Us</h1></div>
+      <div className={isMobileState ? "MobileClasscont" : "contactUsbanner"}>
+              {!isMobileState && (
+                <img
+                  src={contimg}
+                  alt="Contact Backstage Pass Institute of Gaming for admissions, enquiries, course details and campus information in Hyderabad"
+                  className="contactUsbanner"
+                />
+              )}
+              {isMobileState && (
+                <img
+                  src={contimgm}
+                  alt="Contact Backstage Pass Institute of Gaming for admissions, enquiries, course details and campus information in Hyderabad"
+                  className="MobileClasscont"
+                />
+              )}
+      
+              <div className="et_pb_rowa">
+                <h1>Contact Us</h1>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
       <Helmet>
         <script type="application/ld+json">
           {`
