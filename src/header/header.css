@@ -2347,6 +2347,7 @@
 
   .embla__button--prev {
     left: -0px !important;
+   transform: translateX(0%) !important;
   }
 
   .scroll-to-top {
