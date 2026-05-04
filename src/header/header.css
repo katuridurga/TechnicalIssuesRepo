@@ -6878,6 +6878,20 @@ body {
 }
 
 @media only screen and (max-width : 1024px) {
+  .capplynowcourses {
+ background: #ed1923;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0px auto;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    bottom: 165px;
+}
   .banner-content {
     width: 90% !important;
   }
@@ -9190,7 +9204,29 @@ td p {
   --tw-text-opacity: 1;
   animation: 1.2s ease-in-out 0s infinite normal none running glow-pulse;
 }
+.capplynowcourses {
+ background: #ed1923;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0px auto;
+    padding: 15px;
+    border-radius: 15px;
+  
+}
 
+.capplynowcourses:hover {
+  text-decoration: underline;
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid #ec1923;
+  background-color: #ec1923;
+  --tw-text-opacity: 1;
+  animation: 1.2s ease-in-out 0s infinite normal none running glow-pulse;
+}
 .enlarge {
   width: 20%;
   float: left;

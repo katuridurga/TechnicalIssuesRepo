@@ -1137,7 +1137,7 @@ button:focus {
 .career-tabs-container{
   cursor: context-menu;
 }
-.Bachelors-in-Computer-Science-Game-Developmentnew img {
+.bcsgdd img {
 position: absolute;
     top: 0;
     left: 0;
@@ -1146,23 +1146,30 @@ position: absolute;
     object-fit: cover;
     z-index: 0;
 }
-.Bachelors-in-Computer-Science-Game-Developmentnew {
-    position: relative;
-    overflow: hidden;
-    height: 600px;
+.bcsgdd {
+  height: 630px;
+  background-size: cover !important;
+  position: relative;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
 }
 /* Content above image */
-.Bachelors-in-Computer-Science-Game-Developmentnew .et_pb_rowa {
+.bcsgdd .et_pb_rowa {
   position: relative;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 35%;
   margin: 0px auto;
 }
 
-.Bachelors-in-Computer-Science-Game-Developmentnew .et_pb_rowa h1 {
+.bcsgdd .et_pb_rowa h1 {
   font-size: 50px;
   text-align: center;
   font-weight: 600;
@@ -1192,23 +1199,23 @@ position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 90%;
   margin: 0;
-
   font-size: 26px;
   font-weight: 600;
   color: #fff;
   text-align: center;
 }
 
-.Bachelors-in-Computer-Science-Game-Developmentnew::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg,
-      rgba(0, 0, 0, 0) 50%,
-      #0a0a0a 100%);
-  z-index: 1;
+.bcsgdd::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 0;
 }
+
 
