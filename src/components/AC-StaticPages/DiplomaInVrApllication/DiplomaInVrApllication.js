@@ -4,10 +4,10 @@ import "../BachelorsInComputerScienceGameDevelopment/BachelorsInComputerScienceG
 import PropTypes from 'prop-types';
 import c1 from "../../../assets/img/Courses/careeroprt.webp";
 import { FaPlus, FaMinus } from "react-icons/fa";
-
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-
+import dvr from "../../../assets/img/banners/Diplomavrapplication.webp";
+import dvrm from "../../../assets/img/mobilebanner/MobileClassvrApp.webp";
 import { Helmet } from "react-helmet";
 import HomeContentForm from '../../../content/HomeContentFrom';
 
@@ -37,9 +37,6 @@ TabPanel.propTypes = {
   index: PropTypes.number.isRequired,
   value: PropTypes.number.isRequired,
 };
-
-
-
 
 function Courses(props) {
 
@@ -89,13 +86,29 @@ function Courses(props) {
 
   return (
     <>
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'MobileClassvrApp' : 'Diplomavrapplication'}`}>
-        <div className="et_pb_row et_pb_row_0">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">Diploma in  <br />VR Application Development </h1></div>
-            </div>
-          </div>
+
+      <div className={isMobileState ? "MobileClassbsc" : "bcsgdd"}>
+        {!isMobileState && (
+          <img
+            src={dvr}
+            alt="Virtual reality application course – Unity VR and interactive design"
+
+            className="bcsgdd"
+          />
+        )}
+        {isMobileState && (
+          <img
+            src={dvrm}
+            alt="Virtual reality application course – Unity VR and interactive design"
+            className="MobileClassbsc"
+          />
+        )}
+        <div className="et_pb_rowa" style={{ flexDirection: 'column' }}>
+          <h1 className="title white-txt">Diploma in 3D Environment <br />Art Creation For Games </h1>
+          <a href="#Enquire-Now" className="capplynowcourses">Apply Now</a>
+        </div>
+        <div>
+
         </div>
       </div>
       <div className="courses-container">
@@ -204,11 +217,6 @@ function Courses(props) {
           <meta name="keywords" content="3D Environment Art Diploma India, Game Environment Art Course Hyderabad, Diploma in 3D Game Environment Art India, Environment Design for Games Diploma Hyderabad, 3D Art for Games Environment Training India, 3D Level Design Diploma,  Unreal Engine Environment Art Diploma, Career in 3D Environment Art India, Advanced 3D Environment Art Techniques​" />
           <link rel="canonical" href="https://www.backstagepass.co.in/courses/diploma-in-vr-application-development/" />
         </Helmet>
-
-
-
-
-
 
         <div className="course-page">
           {/* Info Card */}

@@ -11,7 +11,8 @@ import m8 from "../../../assets/img/Icons/team-work.webp";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-
+import artdimg from "../../../assets/img/banners/Advanced-Diploma-in-3D-Game-Art-Digital-Sculpting.webp";
+import artdimgm from "../../../assets/img/mobilebanner/AdvancedDiplomaDigitalSculpting.webp";
 import { Helmet } from "react-helmet";
 import HomeContentForm from '../../../content/HomeContentFrom';
 
@@ -118,15 +119,31 @@ function Courses(props) {
 
   return (
     <>
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'Advanced-Diploma-in-3D-Game-Art-Digital-Sculptingm' : 'Advanced-Diploma-in-3D-Game-Art-Digital-Sculpting'}`}>
-        <div className="et_pb_row et_pb_row_0">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">Advanced Diploma in  <br />3D Game Art & Digital Sculpting</h1><a href="#Enquire-Now" className="capplynow">Apply Now</a></div>
+      
+        <div className={isMobileState ? "MobileClassbsc" : "bcsgdd"}>
+              {!isMobileState && (
+                <img
+                  src={artdimg}
+                  alt="3D game art course – digital sculpting and character design training"
+      
+                  className="bcsgdd"
+                />
+              )}
+              {isMobileState && (
+                <img
+                  src={artdimgm}
+                  alt="3D game art course – digital sculpting and character design training"
+                  className="MobileClassbsc"
+                />
+              )}
+              <div className="et_pb_rowa" style={{ flexDirection: 'column' }}>
+                <h1 className="title white-txt">Advanced Diploma in  <br />3D Game Art & Digital Sculpting</h1>
+                <a href="#Enquire-Now" className="capplynowcourses">Apply Now</a>
+              </div>
+              <div>
+      
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
       <script type="application/ld+json">
         {`
           {

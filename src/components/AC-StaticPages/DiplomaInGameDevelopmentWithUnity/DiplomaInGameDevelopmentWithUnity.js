@@ -9,7 +9,8 @@ import m6 from "../../../assets/img/Icons/jams.webp";
 import m7 from "../../../assets/img/Icons/gameconsole.webp";
 import m8 from "../../../assets/img/Icons/team-work.webp";
 import { FaPlus, FaMinus } from "react-icons/fa";
-
+import gadunit from "../../../assets/img/banners/Diploma-in-Game-Development-with-Unity.webp";
+import gadunitm from "../../../assets/img/mobilebanner/Diploma_in_Game_Development_with_Unreal_mobile.webp"; 
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
@@ -104,17 +105,31 @@ function Courses(props) {
 
   return (
     <>
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'Diploma-in-Game-Development-with-Unitymm' : 'Diploma-in-Game-Development-with-Unity'}`}>
-        <div className="et_pb_row et_pb_row_0">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">Diploma in Game Development with Unity</h1><a href="#Enquire-Now" className="capplynow">Apply Now</a></div>
+  
+  <div className={isMobileState ? "MobileClassbsc" : "bcsgdd"}>
+              {!isMobileState && (
+                <img
+                  src={gadunit}
+                  alt="Learn Unity game engine – game development course in Hyderabad"
+      
+                  className="bcsgdd"
+                />
+              )}
+              {isMobileState && (
+                <img
+                  src={gadunitm}
+                  alt="Learn Unity game engine – game development course in Hyderabad"
+                  className="MobileClassbsc"
+                />
+              )}
+              <div className="et_pb_rowa" style={{ flexDirection: 'column' }}>
+                <h1 className="title white-txt">Diploma in Game Development with Unity</h1>
+                <a href="#Enquire-Now" className="capplynowcourses">Apply Now</a>
+              </div>
+              <div>
+      
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-
       <Helmet>
         <script type="application/ld+json">
           {`

@@ -1147,7 +1147,7 @@ position: absolute;
     z-index: 0;
 }
 .bcsgdd {
-  height: 630px;
+  height: 560px;
   background-size: cover !important;
   position: relative;
   background-position: center;
@@ -1214,7 +1214,7 @@ position: relative;
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 18%);
     z-index: 0;
 }
 

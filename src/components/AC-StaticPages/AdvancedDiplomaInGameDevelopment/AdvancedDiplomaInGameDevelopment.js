@@ -11,7 +11,8 @@ import m8 from "../../../assets/img/Icons/team-work.webp";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-
+import gadm from "../../../assets/img/mobilebanner/AdvancedDiplomainGameDevelopment.webp";
+import gadd from "../../../assets/img/banners/Advanced-Diploma-in-Game-Development.webp";
 import { Helmet } from "react-helmet";
 import HomeContentForm from '../../../content/HomeContentFrom';
 
@@ -54,74 +55,74 @@ function Courses(props) {
       title: "CS & Game Programming",
       subjects: [
         "C++ | Adv C++ & STL",
-"Unity 3D Game Engine – Basic & Advanced",
-"Unreal Game Engine - Blue Prints & Programming with C++",
-"Graphic Programming with Shaders",
-"AI Programming",
-"Game Networking",
-"Gameplay Programming",
-"Code Optimization",
+        "Unity 3D Game Engine – Basic & Advanced",
+        "Unreal Game Engine - Blue Prints & Programming with C++",
+        "Graphic Programming with Shaders",
+        "AI Programming",
+        "Game Networking",
+        "Gameplay Programming",
+        "Code Optimization",
       ],
     },
     {
       title: "ADD-ON",
-         
-       subcategories: [
+
+      subcategories: [
         {
           title: "*Free 50 teaching hours of Fundamentals Of Game Design & Production add-on",
-          
+
         },
       ],
       subjects: [
         "History of Games & Genres",
-"Game Analysis & Deconstruction",
-"Conceptualization & Design thinking",
-"Pitch Deck & Presentation",
-"Design & Production Pipeline",
+        "Game Analysis & Deconstruction",
+        "Conceptualization & Design thinking",
+        "Pitch Deck & Presentation",
+        "Design & Production Pipeline",
       ],
     },
   ];
 
   const items = ["Develop proficiency in C++ and C#, focusing on object-oriented programming, advanced concepts, and the essential features required for game development.",
-   <span>
-    Learn both basic and advanced aspects of Unity and{" "}
-    <a
-      href="/courses/diploma-in-game-development-with-unreal/"
-      className="slu"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{ fontSize: "16px", color: "#ed1925", fontWeight: "bold" }}
-    >
-      Unreal game engines
-    </a>{" "}
-    including UI components, animation systems, physics, AI navigation,
-    optimization techniques, etc.
-  </span>,
-"Master version management strategies for efficient project tracking, ensuring smooth development processes and the ability to manage multiple game versions effectively.",
-"Engage in practical, hands-on projects that mimic real-world game development scenarios, enhancing your problem-solving abilities.",
-"Stay ahead of the curve by mastering cutting edge technologies like AI programming, graphic programming with Shaders, and game optimization techniques.",
-"Apply your skills by developing games on topics of your choice thus creating an impressive portfolio for the job market.",
-"Learn and apply optimization techniques to enhance game performance, and understand the end-to-end processes of developing a game.",
-"Learn from industry experts and build a professional network that will support your career growth and development.",
-"Build a strong portfolio showcasing your unique style and technical skills, making you a competitive candidate in the job market."];
+    <span>
+      Learn both basic and advanced aspects of Unity and{" "}
+      <a
+        href="/courses/diploma-in-game-development-with-unreal/"
+        className="slu"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ fontSize: "16px", color: "#ed1925", fontWeight: "bold" }}
+      >
+        Unreal game engines
+      </a>{" "}
+      including UI components, animation systems, physics, AI navigation,
+      optimization techniques, etc.
+    </span>,
+    "Master version management strategies for efficient project tracking, ensuring smooth development processes and the ability to manage multiple game versions effectively.",
+    "Engage in practical, hands-on projects that mimic real-world game development scenarios, enhancing your problem-solving abilities.",
+    "Stay ahead of the curve by mastering cutting edge technologies like AI programming, graphic programming with Shaders, and game optimization techniques.",
+    "Apply your skills by developing games on topics of your choice thus creating an impressive portfolio for the job market.",
+    "Learn and apply optimization techniques to enhance game performance, and understand the end-to-end processes of developing a game.",
+    "Learn from industry experts and build a professional network that will support your career growth and development.",
+    "Build a strong portfolio showcasing your unique style and technical skills, making you a competitive candidate in the job market."];
 
   const faqs = [
     {
       question: "Game Development",
       answer: [
 
-"Game Programmer",
-"Unity Developer",
-"Unreal Developer",
-"Gameplay Programmer",
-"Graphic Programmer",
-"AI Programmer",
-"Game Engine Programmer",
-"AR-VR Developer",
-"Game Designer",
+        "Game Programmer",
+        "Unity Developer",
+        "Unreal Developer",
+        "Gameplay Programmer",
+        "Graphic Programmer",
+        "AI Programmer",
+        "Game Engine Programmer",
+        "AR-VR Developer",
+        "Game Designer",
       ],
     },
-  
+
 
   ];
 
@@ -133,18 +134,33 @@ function Courses(props) {
 
   return (
     <>
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'Advanced-Diploma-in-Game-Developmentm' : 'Advanced-Diploma-in-Game-Development'}`}>
-        <div className="et_pb_row et_pb_row_0">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">Advanced Diploma in <br />Game Development</h1><a href="#Enquire-Now" className="capplynow">Apply Now</a></div>
-            </div>
-          </div>
+      <div className={isMobileState ? "MobileClassbsc" : "bcsgdd"}>
+        {!isMobileState && (
+          <img
+            src={gadd}
+            alt="Advanced diploma in game development – C++, Unity and Unreal training"
+
+            className="bcsgdd"
+          />
+        )}
+        {isMobileState && (
+          <img
+            src={gadm}
+            alt="Advanced diploma in game development – C++, Unity and Unreal training"
+            className="MobileClassbsc"
+          />
+        )}
+        <div className="et_pb_rowa" style={{ flexDirection: 'column' }}>
+          <h1 className="title white-txt">Advanced Diploma in <br />Game Development</h1>
+          <a href="#Enquire-Now" className="capplynowcourses">Apply Now</a>
+        </div>
+        <div>
+
         </div>
       </div>
-        <Helmet>
-          <script type="application/ld+json">
-            {`
+      <Helmet>
+        <script type="application/ld+json">
+          {`
       {
         "@context": "https://schema.org/", 
         "@type": "BreadcrumbList", 
@@ -161,9 +177,9 @@ function Courses(props) {
         }]
       }
         `}
-          </script>
-          <script type="application/ld+json">
-            {`
+        </script>
+        <script type="application/ld+json">
+          {`
             {
               "@context": "https://schema.org/",
               "@type": "WebSite",
@@ -176,18 +192,18 @@ function Courses(props) {
               }
             }
               `}
-          </script>
-          <title>Advanced Diploma in Game Development | Backstage Pass Institute of Gaming
+        </script>
+        <title>Advanced Diploma in Game Development | Backstage Pass Institute of Gaming
 
-          </title>
+        </title>
 
-          <meta property="og:title" content="Advanced Diploma in Game Development | Backstage Pass Institute of Gaming" />
-           <meta name="description" content="Launch your game development career in India with Backstage Pass Institute of Gaming. Our 1-Year Advanced Diploma covers design, art, programming & more. Apply  now!" />
-          <meta property="og:description" name="description" content="Launch your game development career in India with Backstage Pass Institute of Gaming. Our 1-Year Advanced Diploma covers design, art, programming & more. Apply  now!" />
-          <meta property="og:url" content="https://www.backstagepass.co.in/courses/advanced-diploma-in-game-development/" />
-          <meta name="keywords" content="Advanced diploma in game development, Game development courses in advanced diploma, Advanced Game Development Diploma India, Game Development Course Advanced Hyderabad, Professional Game Development Training India, Advanced Game Programming Courses India, Advanced Level Game Development Training, Learn Advanced Game Development Hyderabad, Game Development with C++ Advanced India​" />
-          <link rel="canonical" href="https://www.backstagepass.co.in/courses/advanced-diploma-in-game-development/" />
-        </Helmet>
+        <meta property="og:title" content="Advanced Diploma in Game Development | Backstage Pass Institute of Gaming" />
+        <meta name="description" content="Launch your game development career in India with Backstage Pass Institute of Gaming. Our 1-Year Advanced Diploma covers design, art, programming & more. Apply  now!" />
+        <meta property="og:description" name="description" content="Launch your game development career in India with Backstage Pass Institute of Gaming. Our 1-Year Advanced Diploma covers design, art, programming & more. Apply  now!" />
+        <meta property="og:url" content="https://www.backstagepass.co.in/courses/advanced-diploma-in-game-development/" />
+        <meta name="keywords" content="Advanced diploma in game development, Game development courses in advanced diploma, Advanced Game Development Diploma India, Game Development Course Advanced Hyderabad, Professional Game Development Training India, Advanced Game Programming Courses India, Advanced Level Game Development Training, Learn Advanced Game Development Hyderabad, Game Development with C++ Advanced India​" />
+        <link rel="canonical" href="https://www.backstagepass.co.in/courses/advanced-diploma-in-game-development/" />
+      </Helmet>
 
 
 
@@ -198,7 +214,7 @@ function Courses(props) {
           {/* Info Card */}
           <div className="info-card slanted-info">
             <div className="info-item">
-            <span className="info-subtitle">Course Duration</span>
+              <span className="info-subtitle">Course Duration</span>
               <span className="info-title">1 Year</span>
             </div>
             <div className="info-item">
@@ -214,8 +230,8 @@ function Courses(props) {
               <span className="info-title">Lincoln
 
 
-</span>
-              
+              </span>
+
             </div>
           </div>
         </div>
@@ -224,11 +240,11 @@ function Courses(props) {
       {/* Course Overview */}
       <div className="overviewsection">
         <h2 className='courseHeading'>Course Overview</h2>
-         <div className="brname"></div>
+        <div className="brname"></div>
         <p>
-         The Advanced Diploma in Game Development at <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.backstagepass.co.in/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}>Backstage Pass Institute of Gaming</a></b> is a comprehensive program designed to equip students with the essential skills and knowledge required to excel in the gaming industry.</p>
-<p>
-The curriculum covers foundational programming, advanced game engine programming, graphics programming, and portfolio development, ensuring that students are well-prepared to create and optimise games across various platforms.
+          The Advanced Diploma in Game Development at <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.backstagepass.co.in/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}>Backstage Pass Institute of Gaming</a></b> is a comprehensive program designed to equip students with the essential skills and knowledge required to excel in the gaming industry.</p>
+        <p>
+          The curriculum covers foundational programming, advanced game engine programming, graphics programming, and portfolio development, ensuring that students are well-prepared to create and optimise games across various platforms.
 
         </p>
       </div>
@@ -236,11 +252,11 @@ The curriculum covers foundational programming, advanced game engine programming
       {/* Course Objectives / Curriculum */}
       <div className="curriculum-section" style={{ marginTop: "24px" }}>
         <h2 className='courseHeading'>Course Objectives</h2>
-         <div className="brname"></div>
+        <div className="brname"></div>
         <div className="">
           <ul style={{ listStyle: "none", padding: 0 }}>
             {items.map((item, index) => (
-              <li key={index} style={{ display: "flex", marginBottom: "14px", fontSize:"16px",gap:"10px", alignItems:"flex-start", justifyContent:"flex-start", lineHeight:"1.6"}}>
+              <li key={index} style={{ display: "flex", marginBottom: "14px", fontSize: "16px", gap: "10px", alignItems: "flex-start", justifyContent: "flex-start", lineHeight: "1.6" }}>
                 <CheckBoxIcon style={{ color: "#ec1923", marginRight: "12px", fontSize: "22px", marginTop: "3px" }} />
                 {item}
               </li>
@@ -258,7 +274,7 @@ The curriculum covers foundational programming, advanced game engine programming
               // Start a new row every 3 semesters
               if (index % 3 === 0) {
                 return (
-                  <div className="curriculum-row" key={index} style={{gridTemplateColumns:"repeat(2, 1fr)"}} >
+                  <div className="curriculum-row" key={index} style={{ gridTemplateColumns: "repeat(2, 1fr)" }} >
                     {semesters.slice(index, index + 2).map((s, i) => (
                       <div key={i} className="semester-card">
                         <h4 className="semester-title">{s.title}</h4>
@@ -271,8 +287,8 @@ The curriculum covers foundational programming, advanced game engine programming
                         {/* 👇 Add this part for subcategories like Art Courses */}
                         {s.subcategories?.map((sub, k) => (
                           <div key={k} className="subcategory">
-                            <h5 className="subcategory-title" style={{fontSize:"15px",lineHeight:"26px",textAlign:"justify",fontWeight:"bold",margin:"0px 10px 16px"}}>{sub.title}</h5>
-                           
+                            <h5 className="subcategory-title" style={{ fontSize: "15px", lineHeight: "26px", textAlign: "justify", fontWeight: "bold", margin: "0px 10px 16px" }}>{sub.title}</h5>
+
                           </div>
                         ))}
                       </div>
@@ -284,13 +300,13 @@ The curriculum covers foundational programming, advanced game engine programming
             })}
           </div>
         </section>
-     
+
 
 
       </div>
       <div id="Beyond-The-Course" backgroundColor="blue" height="180vh" style={{ padding: "0px 0px", marginBottom: "20px" }}>
         <h2 className='courseHeading' style={{ color: "#ec1923", marginTop: "0px" }}>Beyond The Course</h2>
- <div className="brname"></div>
+        <div className="brname"></div>
         <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>We ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry. This commitment to practical learning and innovation makes Backstage Pass the  <b style={{ fontSize: "16px", color: '#ed1925' }}><a href="https://www.backstagepass.co.in/" className="slu" target='_blank' rel="noopener noreferrer" style={{ color: '#ed1925' }}> top game development college in India</a></b>.
         </p>
 
@@ -301,7 +317,7 @@ The curriculum covers foundational programming, advanced game engine programming
                 <img src={m5} alt="m5" />
               </div>
               <div className='BeyondRight'>
-               <h4 className='lsh'>Studio Visits</h4>
+                <h4 className='lsh'>Studio Visits</h4>
                 <p>Visits to game studios allow students to witness how a game company truly works
                 </p>
               </div>
@@ -332,7 +348,7 @@ The curriculum covers foundational programming, advanced game engine programming
 
             <li>
               <div className='BeyondLeft'>
-                <img src={m7} alt="m7"/>
+                <img src={m7} alt="m7" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Make Your Own Game</h4>
@@ -358,10 +374,10 @@ The curriculum covers foundational programming, advanced game engine programming
             {/* Tabs */}
 
 
-            <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width:isMobileState?"100%":"80%", margin:"0px" }}>
-              <h2 className='courseHeading' style={{ textAlign: "left", width:isMobileState?"100%":"100%" }}>Career Opportunities</h2>
- <div className="brname"></div>
-              <div className="border rounded-lg bg-white" style={{marginTop:"30px"}}>
+            <section className="max-w-3xl mx-auto p-6 iconsv" style={{ background: "#f9fafb", color: "#000", width: isMobileState ? "100%" : "80%", margin: "0px" }}>
+              <h2 className='courseHeading' style={{ textAlign: "left", width: isMobileState ? "100%" : "100%" }}>Career Opportunities</h2>
+              <div className="brname"></div>
+              <div className="border rounded-lg bg-white" style={{ marginTop: "30px" }}>
                 {faqs.map((faq, index) => (
                   <div
                     key={index}
@@ -398,7 +414,7 @@ The curriculum covers foundational programming, advanced game engine programming
                         paddingLeft: "20px",
                         textAlign: "justify",
                         lineHeight: "24px",
-                        fontSize:"16px"
+                        fontSize: "16px"
                       }}>
                         {faq.question}
                       </span>
@@ -409,7 +425,7 @@ The curriculum covers foundational programming, advanced game engine programming
                     {openIndex === index && (
                       <ul style={{ paddingLeft: "6.5rem", lineHeight: "1.9" }}>
                         {faq.answer.map((point, i) => (
-                          <li key={i} style={{ listStyle: "disc", fontSize:"14px" }}>{point}</li>
+                          <li key={i} style={{ listStyle: "disc", fontSize: "14px" }}>{point}</li>
                         ))}
                       </ul>
                     )}
@@ -427,7 +443,7 @@ The curriculum covers foundational programming, advanced game engine programming
 
 
 
-      <div id="Enquire-Now" style={{marginTop:"30px"}}>
+      <div id="Enquire-Now" style={{ marginTop: "30px" }}>
         <HomeContentForm />
       </div>
 

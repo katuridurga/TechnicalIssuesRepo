@@ -211,20 +211,20 @@ function Courses(props) {
                           {!isMobileState && (
                             <img
                               src={bachd}
-                              alt=""
+                              alt="BSc game development course in Hyderabad"
                               className="bcsgdd"
                             />
                           )}
                         {isMobileState && (
                            <img
                               src={bachm}
-                              alt=""
+                              alt="BSc game development course in Hyderabad"
                               className="MobileClassbsc"
                             />
                         )}
                          
                           <div className="et_pb_rowa" style={{flexDirection:'column'}}>
-                            <h1>Bachelor's in Computer Science <br />& Game Development</h1>
+                            <h1 className="title white-txt">Bachelor's in Computer Science <br />& Game Development</h1>
                              <a href="#Enquire-Now" className="capplynowcourses">Apply Now</a>
                           </div>
                           <div>

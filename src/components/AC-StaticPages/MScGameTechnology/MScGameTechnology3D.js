@@ -17,7 +17,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { Helmet } from "react-helmet";
 import HomeContentForm from '../../../content/HomeContentFrom';
-
+import mscst3dm from "../../../assets/img/mobilebanner/mobilemaster3d.webp";
+import mscst3d from "../../../assets/img/banners/desktopmaster3d.webp";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -165,15 +166,31 @@ function Courses(props) {
 
   return (
     <>
-      <div className={`et_pb_section et_pb_section_0 et_pb_with_background et_section_regular  ${isMobileState ? 'Mmaster3d' : 'master3d'}`}>
-        <div className="et_pb_row et_pb_row_0">
-          <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
-            <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner"><h1 className="title white-txt">Master’s in 3D Game Art and Game Design</h1>  <a href="#Enquire-Now" className="capplynow">Apply Now</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+      <div className={isMobileState ? "MobileClassbsc" : "bcsgdd"}>
+                    {!isMobileState && (
+                      <img
+                        src={mscst3d}
+                        alt="Game art master’s course – character design, sculpting and texturing"
+            
+                        className="bcsgdd"
+                      />
+                    )}
+                    {isMobileState && (
+                      <img
+                        src={mscst3dm}
+                        alt="Game art master’s course – character design, sculpting and texturing"
+                        className="MobileClassbsc"
+                      />
+                    )}
+                    <div className="et_pb_rowa" style={{ flexDirection: 'column' }}>
+                      <h1 className="title white-txt">Master’s in 3D Game Art and Game Design</h1>
+                      <a href="#Enquire-Now" className="capplynowcourses">Apply Now</a>
+                    </div>
+                    <div>
+            
+                    </div>
+                  </div>
       <Helmet>
 
         <script type="application/ld+json">
