@@ -144,7 +144,7 @@ const EmblaCarousel = (props) => {
                 <div>
                   <img className="embla__slide__imgbaM embla__parallax__imgbaM"
                     src={awardig}
-                    alt="Your alt text" />
+                    alt="IGDC" />
                 </div>
 
                 <div className="incontent">
@@ -172,7 +172,7 @@ const EmblaCarousel = (props) => {
                 <div>
                   <img className="embla__slide__imgbaM embla__parallax__imgbaM"
                     src={awardone}
-                    alt="Your alt text" />
+                    alt="IGDC 2018" />
                 </div>
 
                 <div className="incontent">
@@ -200,7 +200,7 @@ const EmblaCarousel = (props) => {
                 <div>
                   <img className="embla__slide__imgbaM embla__parallax__imgbaM"
                     src={awardtwo}
-                    alt="Your alt text" />
+                    alt="rewarding career" />
                 </div>
 
                 <div className="incontent">
@@ -228,7 +228,7 @@ const EmblaCarousel = (props) => {
                 <div>
                   <img className="embla__slide__imgbaM embla__parallax__imgbaM"
                     src={awardfour}
-                    alt="Your alt text" />
+                    alt="Join the Top Game and Technology Companies" />
                 </div>
 
                 <div className="incontent">
@@ -256,7 +256,7 @@ const EmblaCarousel = (props) => {
                 <div>
                   <img className="embla__slide__imgbaM embla__parallax__imgbaM"
                     src={awardfive}
-                    alt="Your alt text" />
+                    alt="revolutionising gaming education" />
                 </div>
 
                 <div className="incontent">
@@ -284,7 +284,7 @@ const EmblaCarousel = (props) => {
                 <div>
                   <img className="embla__slide__imgbaM embla__parallax__imgbaM"
                     src={awardthree}
-                    alt="Your alt text" />
+                    alt="world-class gaming" />
                 </div>
 
                 <div className="incontent">
@@ -310,7 +310,7 @@ const EmblaCarousel = (props) => {
                 <div>
                   <img className="embla__slide__imgbaM embla__parallax__imgbaM"
                     src={bui1f}
-                    alt="bui1f" />
+                    alt="bspframebox" />
                 </div>
 
                 <div className="incontent">

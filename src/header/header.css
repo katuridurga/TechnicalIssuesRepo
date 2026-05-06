@@ -3333,20 +3333,6 @@ div.et_pb_section.et_pb_section_0 {
   height: 600px;
 }
 
-.master3d {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #0a0a0a 100%), url(./../assets/img/banners/desktopmaster3d.webp) !important;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  width: 100%;
-  height: 600px;
-}
-
-.Mmaster3d {
-  background-image: url(./../assets/img/mobilebanner/mobilemaster3d.webp) !important;
-  height: 430px;
-}
 
 .master1 {
   background-image: url(./../assets/img/banners/masterd.webp) !important;

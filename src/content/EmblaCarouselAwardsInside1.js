@@ -106,7 +106,7 @@ const EmblaCarousel = (props) => {
                   <img
                     className="embla__slide__imgba embla__parallax__imgba"
                     src={awardone}
-                    alt="Your alt text"
+                    alt="Student Achievements"
                   />
                   <div className="buzzdiv">
                     <h1>Student Achievements 1
@@ -123,7 +123,7 @@ const EmblaCarousel = (props) => {
                   <img
                     className="embla__slide__imgba embla__parallax__imgba"
                     src={awardtwo}
-                    alt="Your alt text"
+                    alt="Student Achievements"
                   />
                    <div className="buzzdiv">
                     <h1>Student Achievements 2</h1>
@@ -138,7 +138,7 @@ const EmblaCarousel = (props) => {
                   <img
                     className="embla__slide__imgba embla__parallax__imgba"
                     src={awardthree}
-                    alt="Your alt text"
+                    alt="Student Achievements"
                   />
                    <div className="buzzdiv">
                     <h1>Student Achievements 3</h1>
@@ -153,7 +153,7 @@ const EmblaCarousel = (props) => {
                   <img
                     className="embla__slide__imgba embla__parallax__imgba"
                     src={awardfour}
-                    alt="Your alt text"
+                    alt="Student Achievements"
                   />
                   <div className="buzzdiv">
                     <h1>Student Achievements 4</h1>
@@ -169,7 +169,7 @@ const EmblaCarousel = (props) => {
                   <img
                     className="embla__slide__imgba embla__parallax__imgba"
                     src={awardfive}
-                    alt="Your alt text"
+                    alt="Student Achievements"
                   />
                    <div className="buzzdiv">
                     <h1>Student Achievements 5</h1>
@@ -184,7 +184,7 @@ const EmblaCarousel = (props) => {
                   <img
                     className="embla__slide__imgba embla__parallax__imgba"
                     src={awardfour}
-                    alt="Your alt text"
+                    alt="Student Achievements"
                   />
                    <div className="buzzdiv">
                     <h1>Student Achievements 6</h1>

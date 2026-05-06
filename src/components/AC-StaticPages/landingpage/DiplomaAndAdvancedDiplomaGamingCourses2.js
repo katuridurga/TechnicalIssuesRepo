@@ -408,27 +408,27 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             <h2 className='mainHeadingTotall-2'>You are Eligible for a Gaming Career if you are:</h2>
 
             <ul className='featuress2'>
-              <li><img src={ic1} alt="ic1" />
+              <li><img src={ic1} alt="Pass" />
 
                 <div className='featuresscon2'>12th Pass</div></li>
               {/* <li><img src={ic2} alt="ic1" />
 
                 <div className='featuresscon2'>Pursuing Engineering
                 </div></li> */}
-              <li><img src={icg} alt="ic1" style={{ height: isMobileState ? "30px" : "50px", width: isMobileState ? "30px" : "50px" }} />
+              <li><img src={icg} alt="gaming career" style={{ height: isMobileState ? "30px" : "50px", width: isMobileState ? "30px" : "50px" }} />
 
                 <div className='featuresscon2'>Elevate your gaming career
 
                 </div></li>
-              <li><img src={ic4} alt="ic1" />
+              <li><img src={ic4} alt="coding" />
 
                 <div className='featuresscon2'>Do/Don’t know how to code
                 </div></li>
-              <li><img src={ic5} alt="ic1" />
+              <li><img src={ic5} alt="art career" />
 
                 <div className='featuresscon2'>Want to pursue an art career
                 </div></li>
-              <li><img src={ic6} alt="ic1" />
+              <li><img src={ic6} alt="switch careers" />
 
                 <div className='featuresscon2'>Looking to switch careers
                 </div></li>
@@ -445,19 +445,19 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             {isMobileState ? <MIntheMedia /> :
 
               <ul className='CountryLogoss'>
-                <li><img alt="B1" src={B1} />
+                <li><img alt="business-standard-logo" src={B1} />
 
                 </li>
 
-                <li><img alt="B2" src={B2} />
+                <li><img alt="forbes-logo" src={B2} />
 
                 </li>
 
-                <li><img alt="B3" style={{ filter: "invert(1)" }} src={B3} />
+                <li><img alt="et-logo" style={{ filter: "invert(1)" }} src={B3} />
 
                 </li>
 
-                <li><img alt="B4" style={{ filter: "invert(1)" }} src={B4} />
+                <li><img alt="thehindu-logo" style={{ filter: "invert(1)" }} src={B4} />
 
                 </li>
               </ul>}
@@ -466,38 +466,38 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             <h2 className='mainHeadingTotall-2'>This course is for you if you…</h2>
 
             <ul className='featuress3'>
-              <li><img src={ic7} alt="ic1" />
+              <li><img src={ic7} alt="gaming career" />
 
                 <div className='featuresscon2'>Want to elevate your existing gaming career
 
                 </div></li>
-              <li><img src={ic13} alt="ic1" />
+              <li><img src={ic13} alt="game development curriculum" />
                 <div className='featuresscon2'>Want a specialized game development curriculum
 
 
                 </div></li>
-              <li><img src={ic9} alt="ic1" />
+              <li><img src={ic9} alt="confused" />
 
                 <div className='featuresscon2'>Are confused about which career to opt for
 
 
                 </div></li>
-              <li><img src={ic8} alt="ic1" />
+              <li><img src={ic8} alt="gaming career" />
                 <div className='featuresscon2'>Want to switch to a gaming career
 
 
                 </div></li>
 
-              <li><img src={ic10} alt="ic1" />
+              <li><img src={ic10} alt="abroad opportunities" />
 
                 <div className='featuresscon2'>Are looking for abroad opportunities
 
                 </div></li>
-              <li><img src={ic11} alt="ic1" />
+              <li><img src={ic11} alt="job security" />
                 <div className='featuresscon2'>Want a great income & job security
 
                 </div></li>
-              <li><img src={ic12} alt="ic1" />
+              <li><img src={ic12} alt="hands-on education" />
 
                 <div className='featuresscon2'>Like hands-on education, not just theory
 
@@ -505,7 +505,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
 
-              <li><img src={ic14} alt="ic1" />
+              <li><img src={ic14} alt="career" />
 
                 <div className='featuresscon2'>Want a career which is actually fun
 
@@ -647,21 +647,21 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
             <div style={{ margin: '0px auto' }}>
               <ul className='CountryLogos'>
-                <li><img src={Flag1} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag1" />
+                <li><img src={Flag1} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="United States" />
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United States</div>}</li>
 
-                <li><img src={Flag2} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag2" />
+                <li><img src={Flag2} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="United Kingdom" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United Kingdom</div>}</li>
 
-                <li><img src={Flag3} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag3" />
+                <li><img src={Flag3} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Canada" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Canada</div>}</li>
 
-                <li><img src={Flag4} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag4" />
+                <li><img src={Flag4} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Sweden" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Sweden</div>}</li>

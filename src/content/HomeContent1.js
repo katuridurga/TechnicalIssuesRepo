@@ -87,7 +87,7 @@ function HomeContent() {
                     <div style={{
                       border: "1px solid#fff", height: "40px", display: "flex",
                       justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
-                    }}><img width="30" height="30" src={awic2} alt="icons" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
+                    }}><img width="30" height="30" src={awic2} alt="Gaming Institute" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
                     <div className="mainic" style={{ marginLeft: "5px", width: "90%" }}>
                       <p className="suprts">#1 Gaming Institute</p>
                       Specialized education in gaming with industry-aligned curriculum
@@ -97,7 +97,7 @@ function HomeContent() {
                     <div style={{
                       border: "1px solid#fff", height: "40px", display: "flex",
                       justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
-                    }}><img width="30" height="30" src={awic} alt="icons" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
+                    }}><img width="30" height="30" src={awic} alt="Industry Exposure" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
                     <div className="mainic" style={{ marginLeft: "5px", width: "90%" }}>
                       <p className="suprts">Industry Exposure</p>
 
@@ -109,7 +109,7 @@ function HomeContent() {
                     <div style={{
                       border: "1px solid#fff", height: "40px", display: "flex",
                       justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
-                    }}><img width="30" height="30" src={awic1} alt="icons" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
+                    }}><img width="30" height="30" src={awic1} alt="Industry-experienced" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
                     <div className="mainic" style={{ marginLeft: "5px", width: "90%" }}>
                       <p className="suprts">Industry-experienced Mentors</p>
 
@@ -119,7 +119,7 @@ function HomeContent() {
                     <div style={{
                       border: "1px solid#fff", height: "40px", display: "flex",
                       justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
-                    }}><img width="30" height="30" src={awic3} alt="icons" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
+                    }}><img width="30" height="30" src={awic3} alt="Hands-on Learning" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
                     <div className="mainic" style={{ marginLeft: "5px", width: "90%" }}>
                       <p className="suprts">Hands-on Learning</p>
 
@@ -131,7 +131,7 @@ function HomeContent() {
                     <div style={{
                       border: "1px solid#fff", height: "40px", display: "flex",
                       justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
-                    }}><img width="30" height="30" src={awic4} alt="icons" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
+                    }}><img width="30" height="30" src={awic4} alt="Financial Aid" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
                     <div className="mainic" style={{ marginLeft: "5px", width: "90%" }}>
                       <p className="suprts">Financial Aid</p>
 
@@ -142,7 +142,7 @@ function HomeContent() {
                     <div style={{
                       border: "1px solid#fff", height: "40px", display: "flex",
                       justifyContent: "center", alignItems: "center", borderRadius: "50%", width: "40px", background: "#fff"
-                    }}><img width="30" height="30" src={awic5} alt="icons" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
+                    }}><img width="30" height="30" src={awic5} alt="Professional Readiness" style={{ width: "80%", objectFit: "contain", objectPosition: "center" }} /></div>
                     <div className="mainic" style={{ marginLeft: "5px", width: "90%" }}>
                       <p className="suprts">Professional Readiness</p>
 

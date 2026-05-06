@@ -408,29 +408,29 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             </h2>
 
             <ul className='featuress2'>
-              <li><img src={ic1} alt="ic1" />
+              <li><img src={ic1} alt="Pass" />
 
                 <div className='featuresscon2'>10th or 12th Pass</div></li>
-              <li><img src={ic2} alt="ic1" />
+              <li><img src={ic2} alt="Graduation" />
 
                 <div className='featuresscon2'>Pursuing Graduation
                 </div></li>
-              <li><img src={icg} alt="ic1" style={{ height: isMobileState ? "30px" : "50px", width: isMobileState ? "30px" : "50px" }} />
+              <li><img src={icg} alt="Did not take Math in 12th" style={{ height: isMobileState ? "30px" : "50px", width: isMobileState ? "30px" : "50px" }} />
 
                 <div className='featuresscon2'>Did not take Math in 12th
 
                 </div></li>
-              <li><img src={ic4} alt="ic1" />
+              <li><img src={ic4} alt="coding" />
 
                 <div className='featuresscon2'>Do not know how to code
 
                 </div></li>
-              <li><img src={ic5} alt="ic1" />
+              <li><img src={ic5} alt="Art career" />
 
                 <div className='featuresscon2'>Want to pursue an Art career
 
                 </div></li>
-              <li><img src={ic6} alt="ic1" />
+              <li><img src={ic6} alt="switch careers" />
 
                 <div className='featuresscon2'>Looking to switch careers
 
@@ -459,19 +459,19 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             {isMobileState ? <MIntheMedia /> :
 
               <ul className='CountryLogoss'>
-                <li><img src={B1} alt="B1"/>
+                <li><img src={B1} alt="business-standard-logo"/>
 
                 </li>
 
-                <li><img src={B2} alt="B2"/>
+                <li><img src={B2} alt="forbes-logo"/>
 
                 </li>
 
-                <li><img style={{ filter: "invert(1)" }} src={B3} alt="B3" />
+                <li><img style={{ filter: "invert(1)" }} src={B3} alt="et-logo" />
 
                 </li>
 
-                <li><img style={{ filter: "invert(1)" }} src={B4} alt="B4"/>
+                <li><img style={{ filter: "invert(1)" }} src={B4} alt="thehindu-logo"/>
 
                 </li>
               </ul>}
@@ -481,33 +481,33 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             </h2>
 
             <ul className='featuress3g'>
-              <li><img src={ic7} alt="ic1" />
+              <li><img src={ic7} alt="3D Modeler" />
 
                 <div className='featuresscon2'>3D Modeler
 
                 </div></li>
-              <li><img src={ic13} alt="ic1" />
+              <li><img src={ic13} alt="Props Artist" />
                 <div className='featuresscon2'>Props Artist
 
                 </div></li>
-              <li><img src={ic9} alt="ic1" />
+              <li><img src={ic9} alt="Environment Artist" />
 
                 <div className='featuresscon2'>Environment Artist
                 </div></li>
-              <li><img src={ic8} alt="ic1" />
+              <li><img src={ic8} alt="Character Artist" />
                 <div className='featuresscon2'>Character Artist
                 </div></li>
 
-              <li><img src={ic10} alt="ic1" />
+              <li><img src={ic10} alt="Character Designer" />
 
                 <div className='featuresscon2'>Character Designer
 
                 </div></li>
-              <li><img src={ic11} alt="ic1" />
+              <li><img src={ic11} alt="Digital Sculptor" />
                 <div className='featuresscon2'>Digital Sculptor
 
                 </div></li>
-              <li><img src={ic12} alt="ic1" />
+              <li><img src={ic12} alt="Animator" />
 
                 <div className='featuresscon2'>Animator
 
@@ -515,7 +515,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
 
 
-              <li><img src={ic14} alt="ic1" />
+              <li><img src={ic14} alt="Illustrator" />
 
                 <div className='featuresscon2'>Illustrator
                 </div></li>
@@ -555,28 +555,28 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   </h2>
                 <ul className='featuress3'>
                   
-              <li><img src={ic7} alt="ic1" />
+              <li><img src={ic7} alt="art techniques" />
 
                 <div className='featuresscon2'>Traditional and digital art techniques
 
 
                 </div></li>
-              <li><img src={ic13} alt="ic1" />
+              <li><img src={ic13} alt="3D Modeling & Texturing" />
                 <div className='featuresscon2'>3D Modeling & Texturing Techniques
 
 
                 </div></li>
-              <li><img src={ic9} alt="ic1" />
+              <li><img src={ic9} alt="Environment Design & Optimization" />
 
                 <div className='featuresscon2'>Environment Design & Optimization
 
                 </div></li>
-              <li><img src={ic8} alt="ic1" />
+              <li><img src={ic8} alt="Lighting and Shading" />
                 <div className='featuresscon2'>Lighting and Shading Fundamentals
 
                 </div></li>
 
-              <li><img src={ic10} alt="ic1" />
+              <li><img src={ic10} alt="Industry-standard tools" />
 
                 <div className='featuresscon2'>Industry-standard tools like Maya, ZBrush, Photoshop, etc.
 
@@ -600,21 +600,21 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
             <div style={{ margin: '0px auto' }}>
               <ul className='CountryLogos'>
-                <li><img src={Flag1} alt="Flag1" />
+                <li><img src={Flag1} alt="United States" />
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United States</div>}</li>
 
-                <li><img src={Flag2} alt="Flag2"/>
+                <li><img src={Flag2} alt="United Kingdom"/>
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United Kingdom</div>}</li>
 
-                <li><img src={Flag3} alt="Flag3"/>
+                <li><img src={Flag3} alt="Canada"/>
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Canada</div>}</li>
 
-                <li><img src={Flag4} alt="Flag4"/>
+                <li><img src={Flag4} alt="Sweden"/>
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Sweden</div>}</li>

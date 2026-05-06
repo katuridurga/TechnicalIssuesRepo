@@ -108,7 +108,7 @@ const DiplomaInGameDevelopmentWithUnity = () => < Async load={import("../compone
 const DiplomaInGameDevelopmentWithUnreal = () => < Async load={import("../components/AC-StaticPages/DiplomaInGameDevelopmentWithUnreal/DiplomaInGameDevelopmentWithUnreal")} />;
 
 const AdvancedDiplomainTraditionalDigitalConceptArt = () => < Async load={import("../components/AC-StaticPages/AdvancedDiplomainTraditionalDigitalConceptArt/AdvancedDiplomainTraditionalDigitalConceptArt")} />;
-
+const WorkshopYearly  = () => < Async load={import("../components/AC-StaticPages/Workshop/WorkshopYearly")}/>;
 
 
 
@@ -1345,7 +1345,36 @@ const toolbarStyle = {
       </>
     );
   }
+  else if (props.component === "WorkshopYearly") {
+    return (
+      <>
 
+        <React.Fragment>
+          <CssBaseline />
+          <ThemeProvider theme={darkTheme}>
+            <ElevationScroll  {...props}>
+
+              <AppBar>
+                <Toolbar style={toolbarStyle}>
+                  <MenuCore />
+                </Toolbar>
+              </AppBar>
+
+            </ElevationScroll >
+          </ThemeProvider>
+          <Toolbar />
+
+        </React.Fragment>
+        <WorkshopYearly />
+        <Footer />
+        <ScrollToTop
+          smooth
+          top={100}
+        />
+      </>
+    );
+  }
+ 
   else if (props.component === "GameDevelopmentWithUnreal") {
     return (
       <>

@@ -335,16 +335,13 @@ function Courses(props) {
         <div className="brname"></div>
         <p className='normaltext' style={{ width: "75%", margin: "0px auto" }}>At Backstage Pass, we ensure that learning is limitless and not restricted within the four walls of the classroom. Therefore, we provide students with activities and opportunities where they get to enter the real world and get firsthand experience of how things work in the gaming industry.
 
-
-
-
         </p>
 
         <div className='courseUpdates1'>
           <ul style={{ width: "80%", margin: "0px auto", paddingTop: "10px" }}>
             <li>
               <div className='BeyondLeft'>
-                <img src={m5} alt="m5" />
+                <img src={m5} alt="Studio Visits" />
               </div>
               <div className='BeyondRight'>
                 <p className='lsh'>Final Game Project</p>
@@ -354,7 +351,7 @@ function Courses(props) {
             </li>
             <li>
               <div className='BeyondLeft' style={{ width: "60px" }}>
-                <img src={m6} alt="m6" />
+                <img src={m6} alt="Professional Portfolio" />
               </div>
               <div className='BeyondRight'>
                 <p className='lsh'>Professional Portfolio</p>
@@ -366,7 +363,7 @@ function Courses(props) {
 
             <li>
               <div className='BeyondLeft'>
-                <img src={m8} alt="m8" />
+                <img src={m8} alt="Dissertation" />
               </div>
               <div className='BeyondRight'>
                 <p className='lsh'>Dissertation</p>
@@ -387,7 +384,7 @@ function Courses(props) {
 
         <div className='coppertunities'>
           <div className='left'>
-            <img src={c1} alt="careerop" />
+            <img src={c1} alt="Career-Opportunities" />
           </div>
 
           <div className="right career-tabs-container">

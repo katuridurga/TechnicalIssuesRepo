@@ -301,7 +301,7 @@ function HomeContent() {
     boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
                   }}><LazyLoadImage effect="blur"
                     src={awic2}
-                    alt="icon"
+                    alt="Gaming Institute"
                     style={{
                       width: "100%",
                       height: "100%",
@@ -328,7 +328,7 @@ function HomeContent() {
     width: "40px",
     height: "40px",
     boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
-                  }}><LazyLoadImage effect="blur" width="30" height="30" src={awic} alt="icons" style={{
+                  }}><LazyLoadImage effect="blur" width="30" height="30" src={awic} alt="Industry Exposure" style={{
                     width: "100%",
                     height: "100%",
                     maxWidth: "30px",
@@ -356,7 +356,7 @@ function HomeContent() {
     width: "40px",
     height: "40px",
     boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
-                  }}><LazyLoadImage effect="blur" width="30" height="30" src={awic1} alt="icons" style={{
+                  }}><LazyLoadImage effect="blur" width="30" height="30" src={awic1} alt="Industry-experienced" style={{
                     width: "100%",
                     height: "100%",
                     maxWidth: "30px",
@@ -382,7 +382,7 @@ function HomeContent() {
     width: "40px",
     height: "40px",
     boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
-                  }}><LazyLoadImage effect="blur" width="30" height="30" src={awic3} alt="icons" style={{
+                  }}><LazyLoadImage effect="blur" width="30" height="30" src={awic3} alt="Hands-on Learning" style={{
                     width: "100%",
                     height: "100%",
                     maxWidth: "30px",
@@ -410,7 +410,7 @@ function HomeContent() {
     width: "40px",
     height: "40px",
     boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
-                  }}><LazyLoadImage effect="blur" width="30" height="30" src={awic4} alt="icons" style={{
+                  }}><LazyLoadImage effect="blur" width="30" height="30" src={awic4} alt="Financial Aid" style={{
                     width: "100%",
                     height: "100%",
                     maxWidth: "30px",
@@ -437,7 +437,7 @@ function HomeContent() {
     width: "40px",
     height: "40px",
     boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
-                  }}><LazyLoadImage effect="blur" width="30" height="30" src={awic5} alt="icons" style={{
+                  }}><LazyLoadImage effect="blur" width="30" height="30" src={awic5} alt="Professional Readiness" style={{
                     width: "100%",
                     height: "100%",
                     maxWidth: "30px",

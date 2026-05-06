@@ -411,27 +411,27 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             <h2 className='mainHeadingTotall-2' style={{ color: "#000" }}>You are Eligible for a Gaming Career if you are:</h2>
 
             <ul className='featuress2'>
-              <li><img src={ic1} alt="ic1" />
+              <li><img src={ic1} alt="Pass" />
 
                 <div className='featuresscon2'>10th or 12th Pass</div></li>
-              <li><img src={ic2} alt="ic1" />
+              <li><img src={ic2} alt="Pursuing" />
 
                 <div className='featuresscon2'>Pursuing Engineering
                 </div></li>
-              <li><img src={ic3} alt="ic1" />
+              <li><img src={ic3} alt="Math" />
 
                 <div className='featuresscon2'>Did not take Math in 12th
 
                 </div></li>
-              <li><img src={ic4} alt="ic1" />
+              <li><img src={ic4} alt="coding" />
 
                 <div className='featuresscon2'>Do/Don’t know how to code
                 </div></li>
-              <li><img src={ic5} alt="ic1" />
+              <li><img src={ic5} alt="art career" />
 
                 <div className='featuresscon2'>Want to pursue an art career
                 </div></li>
-              <li><img src={ic6} alt="ic1" />
+              <li><img src={ic6} alt="switch careers" />
 
                 <div className='featuresscon2'>Looking to switch careers
                 </div></li>
@@ -644,19 +644,19 @@ VR Application Development" className="img-circle" />
             {isMobileState ? <MIntheMedia /> :
 
               <ul className='CountryLogoss'>
-                <li><img src={B1} alt="b1" />
+                <li><img src={B1} alt="business-standard-logo" />
 
                 </li>
 
-                <li><img src={B2} alt="b2" />
+                <li><img src={B2} alt="forbes-logo" />
 
                 </li>
 
-                <li><img style={{ filter: "invert(1)" }} src={B3} alt="b3" />
+                <li><img style={{ filter: "invert(1)" }} src={B3} alt="et-logo" />
 
                 </li>
 
-                <li><img style={{ filter: "invert(1)" }} src={B4} alt="b4" />
+                <li><img style={{ filter: "invert(1)" }} src={B4} alt="thehindu-logo" />
 
                 </li>
               </ul>}
@@ -665,38 +665,38 @@ VR Application Development" className="img-circle" />
             <h2 className='mainHeadingTotall-2' style={{ color: "#000" }}>This course is for you if you…</h2>
 
             <ul className='featuress3'>
-              <li><img src={ic7} alt="ic1" />
+              <li><img src={ic7} alt="elevate your existing gaming career" />
 
                 <div className='featuresscon2'>Want to elevate your existing gaming career
 
                 </div></li>
-              <li><img src={ic13} alt="ic1" />
+              <li><img src={ic13} alt="short-term courses" />
                 <div className='featuresscon2'>Want short-term courses to jumpstart your career
 
 
                 </div></li>
-              <li><img src={ic9} alt="ic1" />
+              <li><img src={ic9} alt="confused about which career" />
 
                 <div className='featuresscon2'>Are confused about which career to opt for
 
 
                 </div></li>
-              <li><img src={ic8} alt="ic1" />
+              <li><img src={ic8} alt="gaming career" />
                 <div className='featuresscon2'>Want to switch to a gaming career
 
 
                 </div></li>
 
-              <li><img src={ic10} alt="ic1" />
+              <li><img src={ic10} alt="abroad opportunities" />
 
                 <div className='featuresscon2'>Are looking for abroad opportunities
 
                 </div></li>
-              <li><img src={ic11} alt="ic1" />
+              <li><img src={ic11} alt="great income & job security" />
                 <div className='featuresscon2'>Want a great income & job security
 
                 </div></li>
-              <li><img src={ic12} alt="ic1" />
+              <li><img src={ic12} alt="hands-on education" />
 
                 <div className='featuresscon2'>Like hands-on education, not just theory
 
@@ -704,7 +704,7 @@ VR Application Development" className="img-circle" />
 
 
 
-              <li><img src={ic14} alt="ic1" />
+              <li><img src={ic14} alt="career" />
 
                 <div className='featuresscon2'>Want a career which is actually fun
 
@@ -727,21 +727,21 @@ VR Application Development" className="img-circle" />
 
             <div style={{ margin: '0px auto' }}>
               <ul className='CountryLogos'>
-                <li><img src={Flag1} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag1" />
+                <li><img src={Flag1} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="United States" />
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United States</div>}</li>
 
-                <li><img src={Flag2} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag2" />
+                <li><img src={Flag2} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="United Kingdom" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United Kingdom</div>}</li>
 
-                <li><img src={Flag3} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag3" />
+                <li><img src={Flag3} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Canada" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Canada</div>}</li>
 
-                <li><img src={Flag4} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Flag4" />
+                <li><img src={Flag4} style={{ width: "100%", height: isMobileState ? "100%" : "130px" }} alt="Sweden" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Sweden</div>}</li>
@@ -756,8 +756,8 @@ VR Application Development" className="img-circle" />
               <img alt="rec2" src={r2} width={"300"} height={"81"} />
               <img alt="rec4" src={r4} width={"300"} height={"81"} />
               <img alt="rec5" src={r5} width={"300"} height={"81"} />
-              <img alt="rec9" src={r6} width={"300"} height={"81"} />
-              <img alt="rec10" src={r7} width={"300"} height={"81"} />
+              <img alt="rec6" src={r6} width={"300"} height={"81"} />
+              <img alt="rec7" src={r7} width={"300"} height={"81"} />
 
             </Marquee>
 

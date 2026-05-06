@@ -488,9 +488,16 @@ export default function App() {
                 /> */}
                 <Route
                   exact
-                  path={"/life-at-bsp/events-workshops/"}
+                  path={"/life-at-bsp/events-celebrations/"}
                   render={routeProps => (
                     <Menu {...routeProps} component="Workshop" />
+                  )}
+                />
+                 <Route
+                  exact
+                  path={"/life-at-bsp/events-celebrations-1/:year"}
+                  render={routeProps => (
+                    <Menu {...routeProps} component="WorkshopYearly" />
                   )}
                 />
                 {/* <Route

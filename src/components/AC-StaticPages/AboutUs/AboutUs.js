@@ -111,7 +111,7 @@ function Aboutus(props) {
                   <div className="inner-column inner-column1 wow fadeInLeft">
                     <div className="image-1">
                       <a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images">
-                        <img src={hwst} alt="hwst" />
+                        <img src={hwst} alt="How It Started" />
                       </a>
                     </div>
                   </div>
@@ -153,7 +153,7 @@ function Aboutus(props) {
               <div className="main-img2 brtopleft" style={{ boxShadow: "none", background: "none", padding: "0px" }} >
                 <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%" }}>
                   <div className="inner-column inner-column1 wow fadeInLeft" style={{}}>
-                    <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={hwst} alt="hwst" /></a></div>
+                    <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={hwst} alt="How It Started" /></a></div>
 
                   </div></div>
               </div>
@@ -234,7 +234,7 @@ function Aboutus(props) {
 
                       <div className="image-1">
                         <a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images">
-                          <img src={suryasir} alt="suryasir" style={{height:"auto"}} />
+                          <img src={suryasir} alt="about director" style={{height:"auto"}} />
                         </a>
                       </div>
 
@@ -281,8 +281,6 @@ function Aboutus(props) {
                         can succeed on the global stage.
                       </div>
 
-                      {/* ⭐ ADDING LINKEDIN HERE — NOTHING ELSE CHANGED */}
-
                       <a
                         href="https://www.linkedin.com/in/bala-krishna-annaluri-ba08321a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                         className="linkdinpv"
@@ -290,7 +288,7 @@ function Aboutus(props) {
                         rel="noopener noreferrer"
                       >
                         <span>Linkedin Profile :</span>
-                        <img src={linkedin} alt="linkedin" />
+                        <img src={linkedin} alt="linkedin icon" />
                       </a>
 
                     </div>
@@ -307,7 +305,7 @@ function Aboutus(props) {
                 <div className="main-img2 brtopleft" style={{ boxShadow: "none", background: "none", padding: "0px" }} >
                   <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%" }}>
                     <div className="inner-column inner-column1 wow fadeInLeft" style={{}}>
-                      <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={suryasir} alt="suryasir" style={{height:"auto"}} /></a></div>
+                      <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={suryasir} alt="about story" style={{height:"auto"}} /></a></div>
 
                     </div></div>
                 </div>
@@ -330,7 +328,7 @@ function Aboutus(props) {
                       <div className="text">He strongly believes that with the right
                         mentorship and tools, Indian game developers
                         can succeed on the global stage.</div>
-                      <a href="https://www.linkedin.com/in/surya-prakash-patallapalli-99413b6/" className='linkdinp'><span>Linkedin Profile :</span> <img src={linkedin} alt="linkedin"/></a>
+                      <a href="https://www.linkedin.com/in/surya-prakash-patallapalli-99413b6/" className='linkdinp'><span>Linkedin Profile :</span> <img src={linkedin} alt="linkedinb icon"/></a>
                     </div></div>
                 </div>
 
@@ -368,13 +366,13 @@ function Aboutus(props) {
                   standards. Serving on the Boards of Studies for
                   JNAFAU and Osmania University, Dr. Annaluri
                   continues to advance gaming education nationally.</div>
-                <a href="https://www.linkedin.com/in/dr-bala-krishna-annaluri-ba08321a/" className='linkdinp'><span>Linkedin Profile :</span> <img src={linkedin} alt="linkedin"/></a>
+                <a href="https://www.linkedin.com/in/dr-bala-krishna-annaluri-ba08321a/" className='linkdinp'><span>Linkedin Profile :</span> <img src={linkedin} alt="linkedin icon"/></a>
               </div></div>
           </div>
           <div className="main-img2 brtopleft" style={{ boxShadow: "none", background: "none", padding: "0px" }} >
             <div style={{ boxShadow: "none", background: "none", padding: "16px", width: "100%" }}>
               <div className="inner-column inner-column1 wow fadeInLeft" style={{ paddingBottom: isMobileState ? "0px" : "20px" }}>
-                <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={balasir} alt="balasir" style={{height:"auto"}}  /></a></div>
+                <div className="image-1"><a href="/about-us/our-story/" className="lightbox-image" data-fancybox="images"><img src={balasir} alt="about Dr. Bala Krishna Annaluri" style={{height:"auto"}}  /></a></div>
 
               </div></div>
           </div>
@@ -418,8 +416,8 @@ function Aboutus(props) {
               <ul className="makes-different-list">
                 <li>
                   <div className="inner">
-                    <img src={m1} alt="Malleable Study Time" width={40} height={40} style={{ marginLeft: "-8px" }} />
-                    <h2>Passion For Gaming</h2>
+                    <img src={m1} alt="Passion For Gaming" width={40} height={40} style={{ marginLeft: "-8px" }} />
+                    <h2></h2>
                   </div>
 
                   <p>At Backstage Pass, we pride ourselves on hosting students from across India with different cultures, backgrounds, and mindsets and uniting them through their passion for gaming</p>

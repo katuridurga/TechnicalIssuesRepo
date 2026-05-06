@@ -281,7 +281,7 @@ function Courses(props) {
           <ul style={{ width: "80%", margin: "0px auto", paddingTop: "10px" }}>
             <li>
               <div className='BeyondLeft'>
-                <img src={m5} alt="m5" />
+                <img src={m5} alt="Studio Visits" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Studio Visits</h4>
@@ -291,7 +291,7 @@ function Courses(props) {
             </li>
             <li>
               <div className='BeyondLeft'>
-                <img src={m6} alt="m6" />
+                <img src={m6} alt="Jams & Conferences" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Jams & Conferences</h4>
@@ -303,7 +303,7 @@ function Courses(props) {
 
             <li>
               <div className='BeyondLeft'>
-                <img src={m8} alt="m8" />
+                <img src={m8} alt="Networking Opportunities" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Networking Opportunities</h4>
@@ -315,7 +315,7 @@ function Courses(props) {
 
             <li>
               <div className='BeyondLeft'>
-                <img src={m7} alt="m7" />
+                <img src={m7} alt="Make Your Own Game" />
               </div>
               <div className='BeyondRight'>
                 <h4 className='lsh'>Make Your Own Game</h4>
@@ -334,7 +334,7 @@ function Courses(props) {
 
         <div className='coppertunities'>
           <div className='left'>
-            <img src={c1} alt="careerop" />
+            <img src={c1} alt="Career-Opportunities" />
           </div>
 
           <div className="right career-tabs-container">

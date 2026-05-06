@@ -557,44 +557,44 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             <h2 className='mainHeadingTotall-2'>Who is This Course for?
             </h2>
             <ul className='featuress2'>
-              <li><img src={ic1} alt="ic1" height={isMobileState ? "30" : "50"}
+              <li><img src={ic1} alt="Pass" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
                 <div className='featuresscon2'>10th or 12th Pass</div></li>
-              <li><img src={ic2} alt="ic2" height={isMobileState ? "30" : "50"}
+              <li><img src={ic2} alt="Graduation" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
                 <div className='featuresscon2'>Pursuing Graduation
                 </div></li>
-              <li><img src={GAIMG2} alt="GAIMG2" height={isMobileState ? "30" : "50"}
+              <li><img src={GAIMG2} alt="Art Enthusiast" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
                 <div className='featuresscon2'>An Art Enthusiast
                 </div></li>
-              <li><img src={GAIMG1} alt="GAIMG1" height={isMobileState ? "30" : "50"}
+              <li><img src={GAIMG1} alt="Fine Arts student" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
                 <div className='featuresscon2'>A Fine Arts student
                 </div></li>
-              <li><img src={icg} alt="icg" height={isMobileState ? "30" : "50"}
+              <li><img src={icg} alt="Gamer" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
                 <div className='featuresscon2'>A Gamer
                 </div></li>
-              <li><img src={ic6} alt="ic6" height={isMobileState ? "30" : "50"}
+              <li><img src={ic6} alt="switch careers" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
                 <div className='featuresscon2'>Looking to switch careers
 
                 </div></li>
-              <li><img src={GAIMG3} alt="GAIMG3" height={isMobileState ? "30" : "50"}
+              <li><img src={GAIMG3} alt="VFX enthusiast" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
                 <div className='featuresscon2'>Animation & VFX enthusiast
                 </div></li>
-              <li><img src={GAIMG} alt="GAIMG" height={isMobileState ? "30" : "50"}
+              <li><img src={GAIMG} alt="3D Modeling" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
                 <div className='featuresscon2'>3D Modeling enthusiast
 
 
                 </div></li>
-              <li><img src={GAIMG6} alt="GAIMG6" height={isMobileState ? "30" : "50"}
+              <li><img src={GAIMG6} alt="game worlds" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
                 <div className='featuresscon2'>Passionate to create immersive game worlds
@@ -752,39 +752,39 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                   </h2>
                   <ul className='featuress3'>
 
-                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={ic7} alt="ic7" height={isMobileState ? "30" : "50"}
+                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={ic7} alt="Traditional and digital art" height={isMobileState ? "30" : "50"}
                       width={isMobileState ? "30" : "50"} />
 
                       <div className='featuresscon22'>Traditional and digital art techniques
 
 
                       </div></li>
-                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={ic13} alt="ic13" height={isMobileState ? "30" : "50"}
+                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={ic13} alt="3D Modeling" height={isMobileState ? "30" : "50"}
                       width={isMobileState ? "30" : "50"} />
                       <div className='featuresscon22'>3D Modeling & Texturing Techniques
 
 
                       </div></li>
-                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={ic9} alt="ic9" height={isMobileState ? "30" : "50"}
+                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={ic9} alt="Environment Art" height={isMobileState ? "30" : "50"}
                       width={isMobileState ? "30" : "50"} />
 
                       <div className='featuresscon22'>Environment Art & Optimization
 
 
                       </div></li>
-                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={GAIMG4} alt="GAIMG4" height={isMobileState ? "30" : "50"}
+                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={GAIMG4} alt="Character Art" height={isMobileState ? "30" : "50"}
                       width={isMobileState ? "30" : "50"} />
 
                       <div className='featuresscon22'>Character Art & Digital Sculpting
 
                       </div></li>
-                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={ic8} alt="ic8" height={isMobileState ? "30" : "50"}
+                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={ic8} alt="Lighting and Shading" height={isMobileState ? "30" : "50"}
                       width={isMobileState ? "30" : "50"} />
                       <div className='featuresscon22'>Lighting and Shading Fundamentals
 
                       </div></li>
 
-                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={ic10} alt="ic10" height={isMobileState ? "30" : "50"}
+                    <li style={{ paddingBottom: isMobileState ? "10px" : null, paddingTop: isMobileState ? "10px" : null }}><img src={ic10} alt="Industry-standard" height={isMobileState ? "30" : "50"}
                       width={isMobileState ? "30" : "50"} />
 
                       <div className='featuresscon22'>Industry-standard tools like Maya, ZBrush, Substance Painter, Marmoset toolbag, Photoshop, Unreal Engine etc.
@@ -802,27 +802,27 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                       </li>
 
-                      <li><img src={flag7} alt="flag7" height={isMobileState ? "43" : "95"}
+                      <li><img src={flag7} alt="Maya" height={isMobileState ? "43" : "95"}
                         width={isMobileState ? "42" : "94"} />
 
 
                       </li>
 
-                      <li><img src={flag8} alt="flag8" height={isMobileState ? "43" : "95"}
+                      <li><img src={flag8} alt="Photoshop" height={isMobileState ? "43" : "95"}
                         width={isMobileState ? "42" : "94"} />
 
 
                       </li>
 
-                      <li><img src={flag9} alt="flag9" height={isMobileState ? "43" : "95"}
+                      <li><img src={flag9} alt="Substance-Painter" height={isMobileState ? "43" : "95"}
                         width={isMobileState ? "42" : "94"} />
 
 
                       </li>
-                      <li><img src={flag10} alt="flag10" height={isMobileState ? "43" : "95"}
+                      <li><img src={flag10} alt="Unreal-Engine" height={isMobileState ? "43" : "95"}
                         width={isMobileState ? "42" : "94"} />
                       </li>
-                      <li><img src={flag11} alt="flag11" height={isMobileState ? "43" : "95"}
+                      <li><img src={flag11} alt="ZBrush" height={isMobileState ? "43" : "95"}
                         width={isMobileState ? "42" : "94"} style={{ background: "#cccc", padding: "4px" }} />
 
 
@@ -960,23 +960,23 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             {isMobileState ? <MIntheMedia /> :
 
               <ul className='CountryLogoss'>
-                <li><img src={B1} alt="B1" height={isMobileState ? "36" : "78"}
+                <li><img src={B1} alt="business-standard-logo" height={isMobileState ? "36" : "78"}
                   width={isMobileState ? "291" : "282"} />
 
                 </li>
 
-                <li><img src={B2} alt="B2" height={isMobileState ? "36" : "78"}
+                <li><img src={B2} alt="forbes-logo" height={isMobileState ? "36" : "78"}
                   width={isMobileState ? "291" : "282"} />
 
                 </li>
 
                 <li><img style={{ filter: "invert(1)" }} height={isMobileState ? "36" : "78"}
-                  width={isMobileState ? "291" : "282"} src={B3} alt="B3" />
+                  width={isMobileState ? "291" : "282"} src={B3} alt="et-logo" />
 
                 </li>
 
                 <li><img style={{ filter: "invert(1)" }} height={isMobileState ? "36" : "78"}
-                  width={isMobileState ? "291" : "282"} src={B4} alt="B4" />
+                  width={isMobileState ? "291" : "282"} src={B4} alt="  thehindu-logo" />
 
                 </li>
               </ul>}
@@ -986,30 +986,30 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             </h2>
 
             <ul className='featuress3g'>
-              <li ><img src={ic7} alt="ic7" height={isMobileState ? "30" : "50"}
+              <li ><img src={ic7} alt="3D Modeler" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
                 <div className='featuresscon2'>3D Modeler
 
                 </div></li>
-              <li><img src={ic13} alt="ic13" height={isMobileState ? "30" : "50"}
+              <li><img src={ic13} alt="Concept Artist" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
                 <div className='featuresscon2'>Concept Artist
 
                 </div></li>
-              <li><img src={ic9} alt="ic9" height={isMobileState ? "30" : "50"}
+              <li><img src={ic9} alt="Environment Artist" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
                 <div className='featuresscon2'>Environment Artist
                 </div></li>
-              <li><img src={ic8} alt="ic8" height={isMobileState ? "30" : "50"}
+              <li><img src={ic8} alt="Character Artist" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
                 <div className='featuresscon2'>3D Character Artist
                 </div></li>
 
 
 
-              <li><img src={GAIMG5} alt="GAIMG5" height={isMobileState ? "30" : "50"}
+              <li><img src={GAIMG5} alt="Hard Surface Modeler" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
                 <div className='featuresscon2'>Hard Surface Modeler
@@ -1017,18 +1017,18 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
 
                 </div></li>
 
-              <li><img src={ic11} alt="ic11" height={isMobileState ? "30" : "50"}
+              <li><img src={ic11} alt="Digital Sculptor" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
                 <div className='featuresscon2'>Digital Sculptor
 
                 </div></li>
-              <li><img src={ic10} alt="ic10" height={isMobileState ? "30" : "50"}
+              <li><img src={ic10} alt="Character Designer" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
                 <div className='featuresscon2'>Character Designer
 
                 </div></li>
-              <li><img src={ic12} alt="ic12" height={isMobileState ? "30" : "50"}
+              <li><img src={ic12} alt="Game Designer" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
                 <div className='featuresscon2'>Game Designer
@@ -1055,29 +1055,29 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             <div style={{ margin: '0px auto' }}>
               <ul className='CountryLogos2'>
                 <li><img src={Flag1} height={isMobileState ? "171" : "130"}
-                  width={isMobileState ? "312" : "246"} alt="Flag1" />
+                  width={isMobileState ? "312" : "246"} alt="United States" />
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United States</div>}</li>
 
                 <li><img src={Flag2} height={isMobileState ? "171" : "130"}
-                  width={isMobileState ? "312" : "246"} alt="Flag2" />
+                  width={isMobileState ? "312" : "246"} alt="United Kingdom" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>United Kingdom</div>}</li>
 
                 <li><img src={Flag3} height={isMobileState ? "171" : "130"}
-                  width={isMobileState ? "312" : "246"} alt="Flag3" />
+                  width={isMobileState ? "312" : "246"} alt="Canada" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Canada</div>}</li>
 
                 <li><img src={Flag4} height={isMobileState ? "171" : "130"}
-                  width={isMobileState ? "312" : "246"} alt="Flag4" />
+                  width={isMobileState ? "312" : "246"} alt="Sweden" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Sweden</div>}</li>
                 <li><img src={Flag5} height={isMobileState ? "171" : "130"}
-                  width={isMobileState ? "312" : "246"} alt="Flag5" />
+                  width={isMobileState ? "312" : "246"} alt="Germany" />
 
 
                   {isMobileState ? '' : <div className='CountryLogos-2'>Germany</div>}</li>
@@ -1110,54 +1110,54 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
             </h2>
 
             <ul className='featuress3gl'>
-              <li ><img src={wc1} alt="wc1" height={isMobileState ? "30" : "50"}
+              <li ><img src={wc1} alt="16+ Years" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
                 <div className='featuresscon2' style={{ color: "#000" }}>16+ Years Experience
 
                 </div></li>
-              <li><img src={wc2} alt="wc2" height={isMobileState ? "30" : "50"}
+              <li><img src={wc2} alt="Gaming College" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
                 <div className='featuresscon2' style={{ color: "#000" }}>Award-Winning Gaming College
                 </div></li>
-              <li><img src={wc3} alt="wc3" height={isMobileState ? "30" : "50"}
+              <li><img src={wc3} alt="Curriculum" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
                 <div className='featuresscon2' style={{ color: "#000" }}>Industry-Aligned Curriculum
                 </div></li>
-              <li><img src={wc4} alt="wc4" height={isMobileState ? "30" : "50"}
+              <li><img src={wc4} alt="Experienced Professionals" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
                 <div className='featuresscon2' style={{ color: "#000" }}>Taught by Industry Experienced Professionals
                 </div></li>
 
 
 
-              <li><img src={wc5} alt="wc5" />
+              <li><img src={wc5} alt="Hands-on Training" />
 
                 <div className='featuresscon2' style={{ color: "#000" }}>Hands-on Training
 
 
                 </div></li>
 
-              <li><img src={wc6} alt="wc6" height={isMobileState ? "30" : "50"}
+              <li><img src={wc6} alt="Strong Industry Connections" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
                 <div className='featuresscon2' style={{ color: "#000" }}>Strong Industry Connections
 
                 </div></li>
-              <li><img src={wc7} alt="wc7" height={isMobileState ? "30" : "50"}
+              <li><img src={wc7} alt="100% Placement Assistance" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
                 <div className='featuresscon2' style={{ color: "#000" }}>100% Placement Assistance
 
                 </div></li>
-              <li><img src={wc8} alt="wc8" height={isMobileState ? "30" : "50"}
+              <li><img src={wc8} alt="Free Webinars/Workshops" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
                 <div className='featuresscon2' style={{ color: "#000" }}>Access to Free Webinars/Workshops
 
 
                 </div></li>
-              <li><img src={wc9} alt="wc9" height={isMobileState ? "30" : "50"}
+              <li><img src={wc9} alt="Alumni Community" height={isMobileState ? "30" : "50"}
                 width={isMobileState ? "30" : "50"} />
 
                 <div className='featuresscon2' style={{ color: "#000" }}>Global Alumni Community

@@ -90,7 +90,7 @@ const EmblaCarousel = (props) => {
                 <img
                   className="embla__slide__imgba-22g embla__parallax__imgba-2"
                   src={ig1}
-                  alt="ig1"
+                  alt="3D Environment Artist"
                   style={{ width: isMobileState ? "100%" : "100%", height: isMobileState ? "250px" : "270px" }}
                 />
                 <div className="buzzdiv-2" style={{ padding: "8px 30px" }}>
@@ -109,7 +109,7 @@ const EmblaCarousel = (props) => {
                   className="embla__slide__imgba-22g embla__parallax__imgba-2"
 
                   src={ig}
-                  alt="ig"
+                  alt="Senior Game Designer"
                   style={{ width: isMobileState ? "100%" : "100%", height: isMobileState ? "250px" : "270px" }}
                 />
                 <div className="buzzdiv-2" style={{ padding: "8px 30px" }}>
@@ -128,7 +128,7 @@ const EmblaCarousel = (props) => {
                 <img
                   className="embla__slide__imgba-22g embla__parallax__imgba-2"
                   src={ig2}
-                  alt="ig2"
+                  alt="Concept Artist"
                   style={{ width: isMobileState ? "100%" : "100%", height: isMobileState ? "250px" : "270px" }}
                 />
                 <div className="buzzdiv-2" style={{ padding: "8px 30px" }}>

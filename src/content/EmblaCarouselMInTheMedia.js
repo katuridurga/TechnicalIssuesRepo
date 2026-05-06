@@ -97,7 +97,7 @@ const EmblaCarousel = (props) => {
 
                   className="embla__slide__imgba-26 embla__parallax__imgba-2"
                   src={B1}
-                  alt="Your alt text"
+                  alt="business-standard-logo"
                 />
                 {/* <div className="buzzdiv-2">
                     <h1>Dota Game</h1>
@@ -112,7 +112,7 @@ const EmblaCarousel = (props) => {
                 <img
                   className="embla__slide__imgba-26 embla__parallax__imgba-2"
                   src={B2}
-                  alt="Your alt text"
+                  alt="forbes-logo"
                 />
                 {/* <div className="buzzdiv-2">
                     <h1>Pacman Game</h1>
@@ -127,7 +127,7 @@ const EmblaCarousel = (props) => {
 
                   className="embla__slide__imgba-26 embla__parallax__imgba-2"
                   src={B3}
-                  alt="Your alt text"
+                  alt="et-logo"
                 />
                 {/* <div className="buzzdiv-2">
                     <h1>Minecraft Game</h1>
@@ -142,7 +142,7 @@ const EmblaCarousel = (props) => {
 
                   className="embla__slide__imgba-26 embla__parallax__imgba-2"
                   src={B4}
-                  alt="Your alt text"
+                  alt="thehindu-logo"
                 />
                 {/* <div className="buzzdiv-2">
                     <h1>Pacman Game</h1>

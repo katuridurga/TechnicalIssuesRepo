@@ -104,7 +104,7 @@ const EmblaCarousel = (props) => {
                 <img
                   className="embla__slide__imgba embla__parallax__imgba"
                   src={awardone}
-                  alt="Your alt text"
+                  alt="Casual connect 2015"
                 />
                 <div className="buzzdiva">
                   {/* <p>NGDC 2015
@@ -122,7 +122,7 @@ const EmblaCarousel = (props) => {
                 <img
                   className="embla__slide__imgba embla__parallax__imgba"
                   src={awardtwo}
-                  alt="Your alt text"
+                  alt="Upcoming Game of the year"
                 />
                 <div className="buzzdiva">
                   <p>Upcoming Game of the year at IGDC 2019</p>
@@ -137,7 +137,7 @@ const EmblaCarousel = (props) => {
                 <img
                   className="embla__slide__imgba embla__parallax__imgba"
                   src={awardthree}
-                  alt="Your alt text"
+                  alt="IGDC 2019"
                 />
                 <div className="buzzdiva">
                   <p>Student game of the year at IGDC 2019</p>
@@ -152,7 +152,7 @@ const EmblaCarousel = (props) => {
                 <img
                   className="embla__slide__imgba embla__parallax__imgba"
                   src={awardfour}
-                  alt="Your alt text"
+                  alt=" IGDC 2022"
                 />
                 <div className="buzzdiva">
                   <p>Hyper casual Game of the year- Student Game of the year at IGDC 2022</p>
@@ -168,7 +168,7 @@ const EmblaCarousel = (props) => {
                 <img
                   className="embla__slide__imgba embla__parallax__imgba"
                   src={awardfive}
-                  alt="Your alt text"
+                  alt="Game development competition 2023"
                 />
                 <div className="buzzdiva">
                   <p>In house Game development competition 2023 </p>
@@ -183,7 +183,7 @@ const EmblaCarousel = (props) => {
                 <img
                   className="embla__slide__imgba embla__parallax__imgba"
                   src={awardsix}
-                  alt="Your alt text"
+                  alt="IGDC 2023"
                 />
                 <div className="buzzdiva">
                   <p>Student Game of the Year at IGDC 2023</p>

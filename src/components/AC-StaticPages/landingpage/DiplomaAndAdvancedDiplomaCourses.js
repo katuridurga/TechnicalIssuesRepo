@@ -535,7 +535,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
                     }}><LazyLoadImage effect="blur"
                       src={awic2}
-                      alt="icon"
+                      alt="Gaming Institute"
                       style={{
                         width: "100%",
                         height: "100%",
@@ -562,7 +562,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       width: "40px",
                       height: "40px",
                       boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
-                    }}><LazyLoadImage effect="blur" width="30" height="30" src={awic} alt="icons" style={{
+                    }}><LazyLoadImage effect="blur" width="30" height="30" src={awic} alt="Industry Exposure" style={{
                       width: "100%",
                       height: "100%",
                       maxWidth: "30px",
@@ -590,7 +590,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       width: "40px",
                       height: "40px",
                       boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
-                    }}><LazyLoadImage effect="blur" width="30" height="30" src={awic1} alt="icons" style={{
+                    }}><LazyLoadImage effect="blur" width="30" height="30" src={awic1} alt="Industry-experienced Mentors" style={{
                       width: "100%",
                       height: "100%",
                       maxWidth: "30px",
@@ -616,7 +616,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       width: "40px",
                       height: "40px",
                       boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
-                    }}><LazyLoadImage effect="blur" width="30" height="30" src={awic3} alt="icons" style={{
+                    }}><LazyLoadImage effect="blur" width="30" height="30" src={awic3} alt="Hands-on Learning" style={{
                       width: "100%",
                       height: "100%",
                       maxWidth: "30px",
@@ -644,7 +644,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       width: "40px",
                       height: "40px",
                       boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
-                    }}><LazyLoadImage effect="blur" width="30" height="30" src={awic4} alt="icons" style={{
+                    }}><LazyLoadImage effect="blur" width="30" height="30" src={awic4} alt="Financial Aid" style={{
                       width: "100%",
                       height: "100%",
                       maxWidth: "30px",
@@ -671,7 +671,7 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                       width: "40px",
                       height: "40px",
                       boxShadow: "0 2px 15px 0px rgba(0, 0, 0, 0.1)"
-                    }}><LazyLoadImage effect="blur" width="30" height="30" src={awic5} alt="icons" style={{
+                    }}><LazyLoadImage effect="blur" width="30" height="30" src={awic5} alt="Professional Readiness" style={{
                       width: "100%",
                       height: "100%",
                       maxWidth: "30px",
@@ -712,30 +712,30 @@ function DiplomaAndAdvancedDiplomaCourses({ active, props }) {
                 <div className="gllart">
 
                   <div className="gart">
-                    <a href="https://ram-manohar.itch.io/slunkey" target="_blank" rel="noopener noreferrer"><img src={artimage1} alt="artimage1" style={{ objectPosition: "left", width: "100%", height: "100%" }} /></a>
+                    <a href="https://ram-manohar.itch.io/slunkey" target="_blank" rel="noopener noreferrer"><img src={artimage1} alt="slunkey" style={{ objectPosition: "left", width: "100%", height: "100%" }} /></a>
                   </div>
                   <div className="gart">
                     <a href="https://vicvijay2129.itch.io/gravitality" target="_blank" rel="noopener noreferrer">
-                      <img src={artimage2} alt="artimage2" style={{ width: "100%", height: "100%" }} /></a>
+                      <img src={artimage2} alt="gravitality" style={{ width: "100%", height: "100%" }} /></a>
                   </div>
                   <div className="gart">
                     <a href="https://anoushmistry.itch.io/byte-the-cyber-dog" target="_blank" rel="noopener noreferrer">
-                      <img src={artimage3} alt="artimage3" className='lngartimg' style={{ width: "100%", height: "100%" }} /></a>
+                      <img src={artimage3} alt="byte-the-cyber-dog" className='lngartimg' style={{ width: "100%", height: "100%" }} /></a>
                   </div>
                   <div className="gart">
-                    <a href="https://unknown-coder.itch.io/battle-mayhem" target="_blank" rel="noopener noreferrer"><img src={artimage4} alt="artimage4" style={{ objectPosition: "left", width: "100%", height: "100%" }} /></a>
+                    <a href="https://unknown-coder.itch.io/battle-mayhem" target="_blank" rel="noopener noreferrer"><img src={artimage4} alt="battle-mayhem" style={{ objectPosition: "left", width: "100%", height: "100%" }} /></a>
                   </div>
                   <div className="gart">
-                    <a href="https://rishikesh-1.itch.io/chaos-reborn" target="_blank" rel="noopener noreferrer"><img src={artimage5} alt="artimage5" style={{ width: "100%", height: "100%" }} /></a>
+                    <a href="https://rishikesh-1.itch.io/chaos-reborn" target="_blank" rel="noopener noreferrer"><img src={artimage5} alt="chaos-reborn" style={{ width: "100%", height: "100%" }} /></a>
                   </div>
                   <div className="gart">
-                    <a href="https://luckylikii.itch.io/stellar-wings" target="_blank" rel="noopener noreferrer"><img src={artimage6} alt="artimage6" className='martimg' style={{ width: "100%", height: "100%" }} /></a>
+                    <a href="https://luckylikii.itch.io/stellar-wings" target="_blank" rel="noopener noreferrer"><img src={artimage6} alt="stellar-wings" className='martimg' style={{ width: "100%", height: "100%" }} /></a>
                   </div>
                   <div className="gart">
-                    <a href="https://dynamicv.itch.io/lost-souls-the-console-rift" target="_blank" rel="noopener noreferrer"><img src={artimage7} alt="artimage7" style={{ width: "100%", height: "100%" }} /></a>
+                    <a href="https://dynamicv.itch.io/lost-souls-the-console-rift" target="_blank" rel="noopener noreferrer"><img src={artimage7} alt="lost-souls-the-console-rift" style={{ width: "100%", height: "100%" }} /></a>
                   </div>
                   <div className="gart">
-                    <a href="https://saji002.itch.io/wobblegobble" target="_blank" rel="noopener noreferrer"><img src={artimage8} alt="artimage8" style={{ width: "100%", height: "100%" }} /></a>
+                    <a href="https://saji002.itch.io/wobblegobble" target="_blank" rel="noopener noreferrer"><img src={artimage8} alt="wobblegobble" style={{ width: "100%", height: "100%" }} /></a>
                   </div>
 
 

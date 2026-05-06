@@ -1,0 +1,151 @@
+
+
+.sliderPage {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.sliderPage h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 900;
+  color: #ee1b22;
+}
+
+
+
+.courseBanner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+.emblaworkshop {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.embla__viewportworkshop {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+
+.embla__containerworkshop {
+  display: flex;
+}
+
+.awardItem {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.emblaworkshop button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background:none;
+  color: #fff;
+
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+
+  border-radius: 50%;
+  font-size: 14px;
+  z-index: 10;
+}
+
+.emblaworkshop button:first-of-type {
+  left: -40px;
+}
+
+.emblaworkshop button:last-of-type {
+  right: -40px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  .emblaworkshop {
+    max-width: 100%;
+  }
+
+  .emblaworkshop button:first-of-type {
+    left: -32px !important;
+  }
+
+  .emblaworkshop button:last-of-type {
+    right: -32px !important;
+  }
+
+  .awardItem img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .awardItem img {
+    height: 220px;
+  }
+
+  .awardItem h2 {
+    font-size: 24px;
+  }
+}
+.awardItem {
+  position: relative;
+  width: 100%;
+}
+
+.awardItem img {
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.awardTitle {
+     position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background: rgba(0, 0, 0, 0.6); */
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+@media only screen and (max-width: 1024px) {
+  
+.awardItem img {
+  width: 100%;
+  max-width: 1200px;
+  height: 200px!important;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+}

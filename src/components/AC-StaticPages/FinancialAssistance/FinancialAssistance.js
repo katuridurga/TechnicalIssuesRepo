@@ -307,13 +307,13 @@ function Courses(props) {
                         Accidental insurance coverage of INR 5L
                       </div>
                     </li>
-                    <li>
+                    {/* <li>
                       <div className="benfitContent">
                         <div className="benfitIcon">
                           <img src={cash} alt="voucher icon" />
                         </div>
                         Voucher worth upto INR 10,000</div>
-                    </li>
+                    </li> */}
                     <li>
                       <div className="benfitContent">
                         <div className="benfitIcon">

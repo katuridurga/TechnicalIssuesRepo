@@ -299,7 +299,7 @@ function Courses(props) {
 
         <div className='coppertunities'>
           <div className='left'>
-            <img src={c1} alt="careerop" />
+            <img src={c1} alt="coppertunities" />
           </div>
 
           <div className="right career-tabs-container">

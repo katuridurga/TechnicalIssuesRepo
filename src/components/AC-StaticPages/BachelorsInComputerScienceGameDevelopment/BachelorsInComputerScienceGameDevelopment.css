@@ -1217,5 +1217,38 @@ position: relative;
     background-color: rgba(0, 0, 0, 18%);
     z-index: 0;
 }
+.titlesectiond {
+  position: relative;
+  padding: 7.1px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #7f828a;
+    text-transform: uppercase;
+}
 
+/* LEFT triangle */
+.titlesectiond.dark::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+ border-bottom: 37px solid rgb(127 130 138);
+}
+
+/* RIGHT triangle */
+.titlesectiond.dark::after {
+ content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-right: 20px solid transparent;
+    border-top: 36px solid rgb(127 130 138);
+}
 

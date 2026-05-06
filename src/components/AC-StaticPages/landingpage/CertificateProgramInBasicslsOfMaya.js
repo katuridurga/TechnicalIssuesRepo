@@ -654,23 +654,23 @@ const handleFormClose = () => {
                 <h3 className="previewcon">Our Learners Work Across Top Companies</h3>
 
                 <div className="logo-grid-4">
-                    <img src={r6} alt="" width="85" />
-                      <img src={rc2} alt="" width="85" />
-                        <img src={su} alt="" width="85" />
-                  <img src={r1} alt="" width="85" />
-                  <img src={r2} alt="" width="90" />
-                  <img src={r11} alt="" width="80" />
-                  <img src={r10} alt="" width="80" />
+                    <img src={r6} alt="logor6" width="85" />
+                      <img src={rc2} alt="logorc2" width="85" />
+                        <img src={su} alt="super gaming" width="85" />
+                  <img src={r1} alt="logor1" width="85" />
+                  <img src={r2} alt="logor2" width="90" />
+                  <img src={r11} alt="logor11" width="80" />
+                  <img src={r10} alt="logor10" width="80" />
 
-                  <img src={r4} alt="" width="85" />
-                  <img src={r5} alt="" width="90" />
-                  <img src={r7} alt="" width="85" />
-                  <img src={r8} alt="" width="90" />
+                  <img src={r4} alt="logor4" width="85" />
+                  <img src={r5} alt="logor5" width="90" />
+                  <img src={r7} alt="logor7" width="85" />
+                  <img src={r8} alt="logor8" width="90" />
 
-                  <img src={r12} alt="" width="85" />
+                  <img src={r12} alt="logor12" width="85" />
                   {/* <img src={r13} alt="" width="90" /> */}
-                  <img src={r9} alt="" width="80" />
-                  <img src={r14} alt="" width="80" />
+                  <img src={r9} alt="logor9" width="80" />
+                  <img src={r14} alt="logor14" width="80" />
                 </div>
               </div>
             </section>

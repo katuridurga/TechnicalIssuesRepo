@@ -50,7 +50,7 @@ const EmblaCarousel = (props) => {
               <div className="inner">
                 <div className="thumbnail">
                   <a className="course-thumb" href="#">
-                    <img decoding="async" className="w-100" src={course1} width="363px" height="264px" alt="course-32" />
+                    <img decoding="async" className="w-100" src={course1} width="363px" height="264px" alt="expert" />
                   </a>
                   <div className="top-position status-group left-top">
                     <span className="eduvibe-status status-01 bg-secondary-color">17% Off</span>
@@ -71,7 +71,7 @@ const EmblaCarousel = (props) => {
               <div className="inner">
                 <div className="thumbnail">
                   <a className="course-thumb" href="#">
-                    <img decoding="async" className="w-100" src={course2} width="363px" height="264px" alt="course-32" />
+                    <img decoding="async" className="w-100" src={course2} width="363px" height="264px" alt="expert" />
                   </a>
                   <div className="top-position status-group left-top">
                     <span className="eduvibe-status status-01 bg-secondary-color">17% Off</span>
@@ -93,7 +93,7 @@ const EmblaCarousel = (props) => {
               <div className="inner">
                 <div className="thumbnail">
                   <a className="course-thumb" href="#">
-                    <img decoding="async" className="w-100" src={course3} width="363px" height="264px" alt="course-32" />
+                    <img decoding="async" className="w-100" src={course3} width="363px" height="264px" alt="expert" />
                   </a>
                   <div className="top-position status-group left-top">
                     <span className="eduvibe-status status-01 bg-secondary-color">17% Off</span>
@@ -114,7 +114,7 @@ const EmblaCarousel = (props) => {
               <div className="inner">
                 <div className="thumbnail">
                   <a className="course-thumb" href="#">
-                    <img decoding="async" className="w-100" src={course1} width="363px" height="264px" alt="course-32" />
+                    <img decoding="async" className="w-100" src={course1} width="363px" height="264px" alt="expert" />
                   </a>
                   <div className="top-position status-group left-top">
                     <span className="eduvibe-status status-01 bg-secondary-color">17% Off</span>

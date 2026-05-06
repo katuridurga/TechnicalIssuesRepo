@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "./Workshop.css";
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
@@ -9,7 +11,31 @@ import b3 from "../../../assets/img/games/3.webp";
 import b4 from "../../../assets/img/games/4.webp";
 
 import { Helmet } from "react-helmet";
+import aw25310 from "../../../assets/img/awards/ET_Achievers_2025-310w.webp";
+import aw24310 from "../../../assets/img/awards/Times_Education_Excellence_2024-310w.webp";
 
+const awardsData = [
+  {
+    year: "2025",
+    title: "ET Industry Achievers 2025",
+    img: aw25310
+  },
+  {
+    year: "2024",
+    title: "Times Award 2024",
+    img: aw24310
+  },
+  {
+    year: "2025",
+    title: "industry awards",
+    img: aw25310
+  },
+  {
+    year: "2024",
+    title: "Times Education Excellence Award 2024",
+    img: aw24310
+  },
+];
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -33,151 +59,67 @@ CustomTabPanel.propTypes = {
 };
 
 
-function Workshop(props) {
+
+
+function Workshop() {
+  const [selectedYear, setSelectedYear] = useState(null);
+
+  const filteredData = selectedYear
+    ? awardsData.filter(item => item.year === selectedYear)
+    : awardsData;
 
   return (
     <>
-      <div className='courseBanner'><img alt="Courses Banner" title='Courses Banner' src={courseBanner} /></div>
-      <div className="courses-container">
-        <Helmet>
-          <title>Alumni</title>
-          <meta  name="description" content="Alumni" />
-        </Helmet>
+      <div className='courseBanner'>
+        <img alt="Courses Banner" title='Courses Banner' src={courseBanner} />
+      </div>
+      <Helmet>
+        <title>Alumni</title>
+        <meta name="description" content="Alumni" />
+      </Helmet>
+       <div class="courses-wrapper"><h2 class="mainHeadingTotal">Events & Celebrations</h2>
+                      
+                    </div>
+      <div className="emblaaward">
+        <div className="embla__viewportaward">
+          <div className="embla__containeraward">
 
-        <div className="courses-wrapper">
+            {filteredData.map((item, index) => (
+              <div className="embla__slideaward" key={index}>
 
+             <div
+  className="cardsgawardh"
+  onClick={() => setSelectedYear(item.year)}
+>
 
+  <img
+    src={item.img}
+    alt={item.title}
+  />
 
+  {!selectedYear ? (
+    <p>{item.year}</p>
+  ) : (
+    <span className="titleTextw" onClick={(e) => {
+      e.stopPropagation();
+      window.location.href = `/life-at-bsp/events-celebrations-1/${item.year}`;
+    }}>{item.title}</span>
+  )}
 
-
-          <div className="CourseesOverVieww">
-            <div className="courses-wrapper">
-              <div className="CourseesOverVieww">
-
-                <p className="suprts">At Backstage Pass, we are firm believers of knowledge beyond academics. Which is why we ensure our students get to participate in every event, workshop, webinar and more such events to keep their creative juices flooding.
-                </p>
-                <h3 className="mainHeadingTotal">EVENTS ON THE CAMPUS
-                </h3>
-
-                <div className="gll">
-
-                  <div className="g1">
-
-                    <img src={b1} alt="" />
-
-
-
-                  </div>
-
-                  <div className="g1">
-
-                    <img src={b1} alt="" />
-
-
-
-                  </div>
-
-                  <div className="g1">
-
-                    <img src={b3} alt="" className='lngimg' />
-
-
-
-                  </div>
-                  <div className="g1">
-
-                    <img src={b11} alt="" />
-
-
-
-                  </div>
-                  <div className="g1">
-
-                    <img src={b4} alt="" />
-
-
-
-                  </div>
-               
-                 
-                  
-
-
-
-                </div>
-                <h3 className="mainHeadingTotal">WORKSHOPS & WEBINARS</h3>
-
-                <div className="gll">
-
-                  <div className="g1">
-
-                    <img src={b3} alt="" />
-
-
-
-                  </div>
-
-                  <div className="g1">
-
-                    <img src={b11} alt="" />
-
-
-
-                  </div>
-
-                  <div className="g1">
-
-                    <img src={b4} alt="" className='lngimg' />
-
-
-
-                  </div>
-                  <div className="g1">
-
-                    <img src={b11} alt="" />
-
-
-
-                  </div>
-                  <div className="g1">
-
-                    <img src={b3} alt="" />
-
-
-
-                  </div>
-
-
-
-
-                </div>
+</div>
               </div>
-
-
-
-
-
-
-
-            </div>
+            ))}
 
           </div>
-
-
-
-
         </div>
-
-
-
-
-
-
       </div>
-
+      {/* {selectedYear && (
+        <button onClick={() => setSelectedYear(null)} className="showllbtn">
+          Show All
+        </button>
+      )} */}
     </>
-  )
+  );
 }
-
 export default Workshop;
 
