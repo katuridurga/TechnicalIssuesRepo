@@ -164,4 +164,25 @@
     border-radius: 12px;
     z-index: 1;
 }
-
+.breadcrumbswork__list {
+    list-style: none;
+    display: flex;
+    grid-gap: 10px;
+    gap: 10px;
+    padding: 0;
+    margin: 20px 0 0;
+}
+.breadcrumbswork, .breadcrumbswork__list a, .breadcrumbswork__list li {
+    display: flex;
+    align-items: center;
+}
+.breadcrumbswork__list a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+.breadcrumbswork__list .icon {
+    margin-right: 5px;
+    color: #999;
+    font-size: 13px;
+}

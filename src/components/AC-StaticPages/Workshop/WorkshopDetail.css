@@ -32,6 +32,7 @@
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0px 0px 18px 0px;
 }
 
 
@@ -161,4 +162,26 @@
   border-radius: 12px;
   display: block;
 }
+}
+.breadcrumbswork__list {
+    list-style: none;
+    display: flex;
+    grid-gap: 10px;
+    gap: 10px;
+    padding: 0;
+    margin: 20px 0 0;
+}
+.breadcrumbswork, .breadcrumbswork__list a, .breadcrumbswork__list li {
+    display: flex;
+    align-items: center;
+}
+.breadcrumbswork__list a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+.breadcrumbswork__list .icon {
+    margin-right: 5px;
+    color: #999;
+    font-size: 13px;
 }

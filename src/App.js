@@ -500,12 +500,12 @@ export default function App() {
                     <Menu {...routeProps} component="Workshop" />
                   )}
                 /> */}
-                <Route
+                {/* <Route
   path="/life-at-bsp/events-celebrations-:year"
   render={(routeProps) => (
     <Menu {...routeProps} component="Workshop" />
   )}
-/>
+/> */}
 
 <Route
   exact
@@ -515,13 +515,13 @@ export default function App() {
   )}
 />
 
-{/* <Route
+<Route
   exact
-  path="/life-at-bsp/events-celebrations/:slug"
+  path="/life-at-bsp/events-celebrations-:slug"
   render={(routeProps) => (
-    <Menu {...routeProps} component="WorkshopYearly" />
+    <Menu {...routeProps} component="WorkshopOnlyYears" />
   )}
-/> */}
+/>
 <Route
   exact
   path="/life-at-bsp/events-celebrations/:slug"

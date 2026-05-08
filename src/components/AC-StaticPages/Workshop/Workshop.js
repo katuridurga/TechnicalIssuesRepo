@@ -137,7 +137,7 @@ const getYearImage = (year) => {
     </div>
   ))}
   
-      {selectedYear &&
+      {/* {selectedYear &&
         yearWiseEvents.map((item, index) => (
           <div className="embla__slideaward" key={index}>
            
@@ -158,7 +158,7 @@ const getYearImage = (year) => {
 
             </div>
           </div>
-        ))}
+        ))} */}
 
     </div>
   </div>
