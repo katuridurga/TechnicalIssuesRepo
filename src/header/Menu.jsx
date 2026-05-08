@@ -1365,7 +1365,8 @@ const toolbarStyle = {
           <Toolbar />
 
         </React.Fragment>
-        <WorkshopYearly />
+        {/* <WorkshopYearly /> */}
+        <WorkshopYearly {...props} />
         <Footer />
         <ScrollToTop
           smooth

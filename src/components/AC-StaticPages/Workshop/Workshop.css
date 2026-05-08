@@ -1,9 +1,9 @@
 
-.emblaaward {
+.emblaawardworkshop {
   overflow: hidden;
   width: 80%;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 0px 0px 20px 0px;
 }
 
 .embla__viewportaward {
@@ -102,7 +102,7 @@
 
 
 @media (max-width: 1024px) {
-  .emblaaward {
+  .emblaawardworkshop {
     width: 90%;
   }
 
@@ -112,7 +112,7 @@
 }
 
 @media (max-width: 600px) {
-  .emblaaward {
+  .emblaawardworkshop {
     width: 95%;
   }
 
@@ -160,8 +160,7 @@
     content: "";
     position: absolute;
     inset: 0;
-
-    background: rgba(0, 0, 0, 0.2);
+    background: rgb(0 0 0 / 36%);
     border-radius: 12px;
     z-index: 1;
 }

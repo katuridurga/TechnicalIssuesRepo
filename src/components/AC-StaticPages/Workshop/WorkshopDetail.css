@@ -2,15 +2,20 @@
 
 .sliderPage {
   width: 90%;
-  margin: 40px auto;
+  margin: 0px auto;
   text-align: center;
 }
 
 .sliderPage h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  font-weight: 900;
-  color: #ee1b22;
+    font-size: 46px;
+    color: #ec1923;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 
@@ -46,7 +51,14 @@
   justify-content: center;
   align-items: center;
 }
-
+.awardItem::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    z-index: 1;
+}
 
 
 
@@ -130,13 +142,14 @@
     color: #fff;
     padding: 10px 16px;
     border-radius: 8px;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 900;
     text-align: center;
     width: 80%;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    z-index: 2;
 }
 @media only screen and (max-width: 1024px) {
   

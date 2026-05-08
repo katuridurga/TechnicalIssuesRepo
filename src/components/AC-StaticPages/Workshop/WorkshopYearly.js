@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { withRouter } from "react-router-dom";
 import { useParams } from "react-router";
 import useEmblaCarousel from "embla-carousel-react";
 import "./WorkshopDetail.css";
@@ -10,48 +11,36 @@ import img4 from "../../../assets/img/awards/BSP03777.jpg";
 import img5 from "../../../assets/img/awards/BSP03792.jpg";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-const allAwards = {
-  "2025": [
-    { img:img1,
-       title: "Achievers 2025",
-    },
-    { img:img2,
-       title: "ET Industry",
-    },
-    { img:img3,
-       title: "ET Industry Achievers 2025",
-    }
-  ],
-  "2024": [
-    { img:img4,
-       title: "ET Industry Achievers 2025",
 
-     },
-    { img:img5,
-       title: "ET Industry Achievers 2025",
-     }
-  ]
-};
+
 
 function WorkshopYearly(props) {
-  const year = props.match?.params?.year|| "2025";
+  const slug = props.match?.params?.slug;
 
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true
-  });
+  console.log("MATCH:", props.match);
+  console.log("SLUG:", slug);
 
-  useEffect(() => {
-    if (!emblaApi) return;
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [slides, setSlides] = useState([]);
+  const [title, setTitle] = useState("");
 
-    const interval = setInterval(() => {
-      emblaApi.scrollNext();
-    }, 2500);
+ useEffect(() => {
+  if (!slug) return;
 
-    return () => clearInterval(interval);
-  }, [emblaApi]);
+  fetch(`https://www.backstagepass.co.in/reactapi/eventapi/event_slides.php?slug=${slug}`)
+    .then(res => res.json())
+    .then(result => {
+      if (result.status && result.data) {
+        setSlides(result.data);
+        setTitle(result.slug); // ✅ save title
+      } else {
+        setSlides([]);
+      }
+    });
+}, [slug]);
 
-  const data = allAwards[year] || [];
-  const title = data[0]?.title || "";
+  const data = slides || [];
+//const title = result?.slug || "Event Gallery";
 
   return (
       <>
@@ -60,8 +49,10 @@ function WorkshopYearly(props) {
           </div>
                
     <div className="sliderPage">
-
-      <h2>{title}</h2>
+  <div class="courses-wrapper"><h2 class="mainHeadingTotal">{title}</h2>
+                      
+                    </div>
+ 
 
       <div className="emblaworkshop">
         <div className="embla__viewportworkshop" ref={emblaRef}>
@@ -73,10 +64,10 @@ function WorkshopYearly(props) {
 ) : (
   data.map((item, index) => (
     <div className="awardItem" key={index}>
-      <img src={item.img} alt={item.title} />
+      <img src={item.image} alt={item.alt} />
 
       <div className="awardTitle">
-        {item.title}
+        {item.alt}
       </div>
     </div>
   ))
@@ -102,5 +93,4 @@ function WorkshopYearly(props) {
     </>
   );
 }
-
-export default WorkshopYearly;
+export default withRouter(WorkshopYearly);

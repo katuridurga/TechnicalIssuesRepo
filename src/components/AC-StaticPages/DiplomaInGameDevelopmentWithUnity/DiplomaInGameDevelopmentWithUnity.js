@@ -123,7 +123,7 @@ function Courses(props) {
                 />
               )}
               <div className="et_pb_rowa" style={{ flexDirection: 'column' }}>
-                {/* <span className='titlesectiond dark'>Diploma in</span> */}
+                <span className='titlesectiond dark'>Diploma in</span>
                 <h1 className="title white-txt">Diploma in Game Development with Unity</h1>
                 <a href="#Enquire-Now" className="capplynowcourses">Apply Now</a>
               </div>

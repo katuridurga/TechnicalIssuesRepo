@@ -486,7 +486,7 @@ export default function App() {
                     <Menu {...routeProps} component="BlogDetails" />
                   )}
                 /> */}
-                <Route
+                {/* <Route
                   exact
                   path={"/life-at-bsp/events-celebrations/"}
                   render={routeProps => (
@@ -495,11 +495,48 @@ export default function App() {
                 />
                  <Route
                   exact
+                  path={"/life-at-bsp/events-celebrations-:year"}
+                  render={routeProps => (
+                    <Menu {...routeProps} component="Workshop" />
+                  )}
+                /> */}
+                <Route
+  path="/life-at-bsp/events-celebrations-:year"
+  render={(routeProps) => (
+    <Menu {...routeProps} component="Workshop" />
+  )}
+/>
+
+<Route
+  exact
+  path="/life-at-bsp/events-celebrations"
+  render={(routeProps) => (
+    <Menu {...routeProps} component="Workshop" />
+  )}
+/>
+
+{/* <Route
+  exact
+  path="/life-at-bsp/events-celebrations/:slug"
+  render={(routeProps) => (
+    <Menu {...routeProps} component="WorkshopYearly" />
+  )}
+/> */}
+<Route
+  exact
+  path="/life-at-bsp/events-celebrations/:slug"
+  render={(routeProps) => (
+    <Menu {...routeProps} component="WorkshopYearly" />
+  )}
+/>
+            
+                 {/* <Route
+                  exact
                   path={"/life-at-bsp/events-celebrations-1/:year"}
                   render={routeProps => (
                     <Menu {...routeProps} component="WorkshopYearly" />
                   )}
-                />
+                /> */}
                 {/* <Route
                   exact
                   path={"/scholarships/"}
