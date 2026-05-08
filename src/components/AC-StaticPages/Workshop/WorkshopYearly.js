@@ -32,7 +32,7 @@ function WorkshopYearly(props) {
       .then(result => {
         if (result.status && result.data) {
           setSlides(result.data);
-          setTitle(result.slug);
+          setTitle(result.title);
           setYear(result.year);
         } else {
           setSlides([]);
@@ -69,9 +69,9 @@ function WorkshopYearly(props) {
                 }}
               ><FaArrowRight className="icon" />Events-Celebrations-{year}</a>
             </li>
-            <li>
+            {/* <li>
               <a><FaArrowRight className="icon" />{title}</a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

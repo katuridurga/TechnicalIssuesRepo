@@ -90,7 +90,7 @@ useEffect(() => {
                <li>
                  <a href={`/life-at-bsp/events-celebrations`}><FaArrowRight className="icon" />Events & Celebrations</a>
                </li>
-               <li>
+               {/* <li>
                  <a
                    href="#"
                    onClick={(e) => {
@@ -98,7 +98,7 @@ useEffect(() => {
                      props.history.goBack();
                    }}
                  ><FaArrowRight className="icon" />Events-Celebrations-{slug}</a>
-               </li>
+               </li> */}
               
              </ul>
            </div>
@@ -115,16 +115,16 @@ useEffect(() => {
     <div className="embla__containeraward">
 {eventsData.map((item, index) => (
   <div className="embla__slideaward" key={index}>
-    <div className="cardsgawardh">
+    <div className="cardsgawardh"  onClick={() =>
+          props.history.push(
+            `/life-at-bsp/events-celebrations/${item.slug}`
+          )
+        }>
       <img src={item.banner_image} alt={item.title} />
 
       <span
         className="titleTextw"
-        onClick={() =>
-          props.history.push(
-            `/life-at-bsp/events-celebrations/${item.slug}`
-          )
-        }
+       
       >
         {item.title}
       </span>

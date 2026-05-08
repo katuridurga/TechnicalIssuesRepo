@@ -24,7 +24,7 @@
 }
 
 
-.cardsgawardh {
+.cardsgawardhw {
   position: relative;
   overflow: hidden;
   height: 250px;
@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-.cardsgawardh img {
+.cardsgawardhw img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -45,7 +45,7 @@
 
 
 
-.cardsgawardh p {
+.cardsgawardhw p {
       position: absolute;
     top: 111px;
     left: 50%;
@@ -58,7 +58,7 @@
     z-index: 2;
     margin: 0;
 }
-.cardsgawardh span {
+.cardsgawardhw span {
       position: absolute;
    
     left: 50%;
@@ -71,7 +71,7 @@
     z-index: 2;
     margin: 0;
 }
-/* .cardsgawardh:hover p {
+/* .cardsgawardhw:hover p {
   opacity: 0;
   transition: opacity 0.3s ease;
 } */
@@ -134,7 +134,7 @@
     flex: 0 0 100%;
   }
 
-  .cardsgawardh {
+  .cardsgawardhw {
     height: 280px;
   }
 
@@ -170,7 +170,7 @@
   text-align: center;
   width: 90%;
 }
-.cardsgawardh::after {
+.cardsgawardhw::after {
     content: "";
     position: absolute;
     inset: 0;

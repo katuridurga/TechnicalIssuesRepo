@@ -121,7 +121,7 @@ const getYearImage = (year) => {
   years.map((year) => (
     <div className="embla__slideaward" key={year}>
       <div
-        className="cardsgawardh"
+        className="cardsgawardhw"
         //onClick={() => setSelectedYear(year)}
         onClick={() => {
   setSelectedYear(year);
@@ -141,7 +141,7 @@ const getYearImage = (year) => {
         yearWiseEvents.map((item, index) => (
           <div className="embla__slideaward" key={index}>
            
-            <div className="cardsgawardh">
+            <div className="cardsgawardhw">
 
               <img
                 src={item.banner_image}
@@ -171,7 +171,7 @@ const getYearImage = (year) => {
               <div className="embla__slideaward" key={index}>
 
                 <div
-                  className="cardsgawardh"
+                  className="cardsgawardhw"
                   onClick={() => setSelectedYear(item.year)}
                 >
                   <img
