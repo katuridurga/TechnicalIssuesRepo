@@ -115,7 +115,7 @@ useEffect(() => {
     <div className="embla__containeraward">
 {eventsData.map((item, index) => (
   <div className="embla__slideaward" key={index}>
-    <div className="cardsgawardh"  onClick={() =>
+    <div className="cardsgawardhw"  onClick={() =>
           props.history.push(
             `/life-at-bsp/events-celebrations/${item.slug}`
           )
