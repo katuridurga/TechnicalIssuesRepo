@@ -1,7 +1,7 @@
 
 .emblaawardworkshop {
   overflow: hidden;
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   padding: 0px 0px 20px 0px;
 }
@@ -15,6 +15,7 @@
  display: flex;
   flex-wrap: wrap;   
   gap: 20px;
+  width:75%;
 }
 
 
@@ -102,7 +103,32 @@
 
 
 @media (max-width: 1024px) {
-
+.maincondiv {
+    display: flex;
+    width: 100%;
+    grid-gap: 30px;
+    gap: 10px !important;
+    flex-direction: column;
+}
+.embla__containeraward {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+    gap: 20px;
+    width: 100% !important;
+    order: 2 !important;
+        z-index: 1;
+        margin-top: 20px;
+}
+.workshoprightside {
+    flex: 1.6 1;
+    padding: 0px 20px;
+    border-radius: 8px;
+    position: sticky;
+    top: 60px;
+    align-self: start;
+    width: 100% !important;
+}
   .emblaawardworkshop {
     width: 90%;
   }
@@ -200,3 +226,65 @@
     color: #999;
     font-size: 13px;
 }
+.maincondiv{
+  display: flex;
+  width: 100%;
+  gap:30px;
+
+}
+.eventsegments{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0px auto;
+}
+.workshoptc {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    background: #c40d0d;
+    padding: 7px 15px;
+    text-align: center;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+.workshoprightside{
+      flex: 1.6 1;
+    padding: 0px 20px;
+    border-radius: 8px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px;
+    align-self: start;
+}
+.worksopost{
+    padding: 0;
+    width: 100%;
+    height: auto !important;
+    margin-top: 0px;
+    }
+    .worksopost li {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    align-items: flex-start;
+    justify-content: center;
+ background-color: #cccccc2b;
+    border: 0px;
+    margin-bottom: 15px;
+    cursor: default;
+}
+.workshopc {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.workshopc p {
+    padding: 0;
+    margin: 10px 0;
+}
+.segmentworkshop{
+  margin: 0px;
+}
+

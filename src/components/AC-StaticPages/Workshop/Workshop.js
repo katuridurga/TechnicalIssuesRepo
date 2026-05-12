@@ -14,6 +14,8 @@ import { Helmet } from "react-helmet";
 import aw25310 from "../../../assets/img/awards/ET_Achievers_2025-310w.webp";
 import aw24310 from "../../../assets/img/awards/Times_Education_Excellence_2024-310w.webp";
 import { withRouter } from "react-router-dom";
+import { set } from "react-hook-form";
+import { error } from "jquery";
 
 
 function CustomTabPanel(props) {
@@ -44,54 +46,75 @@ CustomTabPanel.propTypes = {
 function Workshop(props) {
   const [eventsData, setEventsData] = useState([]);
   const [selectedYear, setSelectedYear] = useState(null);
+  const [categories, setCategories] = useState(null);
+  const [selectedCatId, setSelectedCatId] = useState(null);
   //const years = [...new Set(eventsData.map(item => item.year))];
   const years = Object.keys(
-  eventsData.reduce((acc, item) => {
-    acc[item.year] = true;
-    return acc;
-  }, {})
-).sort((a, b) => b - a); // descending: 2026 first
-useEffect(() => {
-  fetch("https://www.backstagepass.co.in/reactapi/eventapi/events.php", {
-    cache: "no-store",
-  })
-    .then((response) => response.json())
-    .then((result) => {
-      console.log("API RESULT:", result);
+    eventsData.reduce((acc, item) => {
+      acc[item.year] = true;
+      return acc;
+    }, {})
+  ).sort((a, b) => b - a); // descending: 2026 first
+  useEffect(() => {
 
-      if (result.status && result.data) {
-        const formattedData = Object.keys(result.data).flatMap((year) =>
-          result.data[year].map((event) => ({
-            ...event,
-            year,
-          }))
-        );
+    const url =
+      selectedCatId === null
+        ?
+        "https://www.backstagepass.co.in/reactapi/eventapi/events.php"
+        : `https://www.backstagepass.co.in/reactapi/eventapi/events.php?categoryId=${selectedCatId}`;
 
-        console.log("FORMATTED:", formattedData);
+    fetch(url, { cache: "no-store" })
 
-        setEventsData(formattedData);
-      }
+      .then((response) => response.json())
+      .then((result) => {
+        console.log("API RESULT:", result);
+
+        if (result.status && result.data) {
+          const formattedData = Object.keys(result.data).flatMap((year) =>
+            result.data[year].map((event) => ({
+              ...event,
+              year,
+            }))
+          );
+
+          console.log("FORMATTED:", formattedData);
+
+          setEventsData(formattedData);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching events:", error);
+      });
+  }, [selectedCatId]);
+
+  useEffect(() => {
+    fetch("https://www.backstagepass.co.in/reactapi/eventapi/eventscategories_list.php", {
+      cache: "no-store",
     })
-    .catch((error) => {
-      console.error("Error fetching events:", error);
-    });
-}, []);
+      .then(response => response.json())
+      .then(result => {
+        setCategories(result);
+      })
+      .catch(error => {
+        console.error('Error Fetching Categories:', error)
+      });
+  }, []);
 
   const filteredData = Array.isArray(eventsData) ? selectedYear
     ? eventsData.filter(item => item.year === selectedYear)
     : eventsData : [];
-const yearWiseEvents = selectedYear
-  ? eventsData.filter(item => item.year === selectedYear)
-  : [];
+  const yearWiseEvents = selectedYear
+    ? eventsData.filter(item => item.year === selectedYear)
+    : [];
   const groupedData = eventsData.reduce((acc, item) => {
-  if (!acc[item.year]) acc[item.year] = [];
-  acc[item.year].push(item);
-  return acc;
-}, {});
- 
-const getYearImage = (year) => {
-  return groupedData[year]?.[0]?.banner_image;
-};
+    if (!acc[item.year]) acc[item.year] = [];
+    acc[item.year].push(item);
+    return acc;
+  }, {});
+
+  const getYearImage = (year) => {
+    return groupedData[year]?.[0]?.banner_image;
+  };
 
   return (
     <>
@@ -99,45 +122,56 @@ const getYearImage = (year) => {
         <img alt="Courses Banner" title='Courses Banner' src={courseBanner} />
       </div>
       <Helmet>
-        <title>Alumni</title>
-        <meta name="description" content="Alumni" />
+        <title>Events & WorkShops</title>
+        <meta name="description" content="Events & WorkShops" />
       </Helmet>
-     
-      
-<div className="emblaawardworkshop">
-   
-  <div className="embla__viewportaward">
 
-    <div className="courses-wrapper">
-      <h2 className="mainHeadingTotal">
-        {selectedYear
-          ? `${selectedYear} Events & Celebrations`
-          : "Events & Celebrations"}
-      </h2>
-    </div>
-    <div className="embla__containeraward">
 
-     {!selectedYear &&
-  years.map((year) => (
-    <div className="embla__slideaward" key={year}>
-      <div
-        className="cardsgawardhw"
-        //onClick={() => setSelectedYear(year)}
-        onClick={() => {
-  setSelectedYear(year);
-   props.history.push(`/life-at-bsp/events-celebrations-${year}`);
-}}
-      >
-        <img
-          src={getYearImage(year)}
-          alt={year}
-        />
-        <p>{year}</p>
-      </div>
-    </div>
-  ))}
-  
-      {/* {selectedYear &&
+      <div className="emblaawardworkshop">
+
+        <div className="embla__viewportaward">
+
+          <div className="courses-wrapper">
+            <h2 className="mainHeadingTotal">
+              {selectedYear
+                ? `${selectedYear} Events & WorkShops`
+                : "Events & WorkShops"}
+            </h2>
+          </div>
+          <div className="maincondiv">
+            <div className="embla__containeraward">
+
+              {!selectedYear &&
+                years.map((year) => (
+                  <div className="embla__slideaward" key={year}>
+                    <div
+                      className="cardsgawardhw"
+                      //onClick={() => setSelectedYear(year)}
+                      //         onClick={() => {
+                      //   setSelectedYear(year);
+                      //    props.history.push(`/life-at-bsp/events-celebrations-${year}`);
+                      // }}
+                      onClick={() => {
+                        setSelectedYear(year);
+
+                        props.history.push({
+                          pathname: `/life-at-bsp/events-celebrations-${year}`,
+                          state: {
+                            selectedCatId: selectedCatId,
+                          },
+                        });
+                      }}
+                    >
+                      <img
+                        src={getYearImage(year)}
+                        alt={year}
+                      />
+                      <p>{year}</p>
+                    </div>
+                  </div>
+                ))}
+
+              {/* {selectedYear &&
         yearWiseEvents.map((item, index) => (
           <div className="embla__slideaward" key={index}>
            
@@ -160,40 +194,58 @@ const getYearImage = (year) => {
           </div>
         ))} */}
 
-    </div>
-  </div>
-</div>
-      {/* <div className="emblaaward">
-        <div className="embla__viewportaward">
-          <div className="embla__containeraward">
+            </div>
 
-            {filteredData.map((item, index) => (
-              <div className="embla__slideaward" key={index}>
+            <div className='workshoprightside'>
+              <div className='worksopost'>
+                <div className='workshoptc'> Life @ BSP</div>
 
-                <div
-                  className="cardsgawardhw"
-                  onClick={() => setSelectedYear(item.year)}
-                >
-                  <img
-                    src={item.banner_image}
-                    alt={item.title}
-                  />
-                  {!selectedYear ? (
-                    <p>{item.year}</p>
-                  ) : (
-                    <span className="titleTextw" onClick={(e) => {
-                      e.stopPropagation();
-                      window.location.href = `/life-at-bsp/events-celebrations-1/${item.year}`;
-                    }}>{item.title}</span>
-                  )}
+                <ul className='segmentworkshop'>
+                  {categories?.map((category) => (
 
-                </div>
+                    <li key={category.id}>
+                      <div className='workshopc'>
+                        <p onClick={() =>
+                          setSelectedCatId(
+                            selectedCatId === category.id ? null : category.id
+                          )
+                        }
+                          className={selectedCatId === category.id ? 'selected' : ''}
+                          style={{ userSelect: 'none', cursor: 'pointer' }}>
+                          {category.category_name}
+                        </p>
+                      </div>
+                    </li>
+
+
+                  ))}
+                </ul>
               </div>
-            ))}
-
+            </div>
+            {/* <div className="eventsegments">
+      <ul>
+        <li>
+            <a href="" >
+        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+    Global Game Jam
+      </a>
+        
+        </li>
+        <li>
+          Celebrations 
+        </li>
+        <li>
+          Workshops
+        </li>
+        <li>
+          Studio Visits
+        </li>
+      </ul>
+    </div> */}
           </div>
         </div>
-      </div> */}
+      </div>
+
 
       {/* {selectedYear && (
         <button onClick={() => setSelectedYear(null)} className="showllbtn">

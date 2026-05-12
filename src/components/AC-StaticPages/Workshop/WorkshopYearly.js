@@ -49,36 +49,35 @@ function WorkshopYearly(props) {
       <div className='courseBanner'>
         <img alt="Courses Banner" title='Courses Banner' src={courseBanner} />
       </div>
-  
+
       <div className="sliderPage">
-            <div className="breadcrumbswork">
-        <div className="container">
-          <ul className="breadcrumbswork__list">
-<li>
-              <a href="/"><FaHome className="icon" /> Home</a>
-            </li>
-            <li>
-              <a href={`/life-at-bsp/events-celebrations`}><FaArrowRight className="icon" />Events & Celebrations</a>
-            </li>
-            <li>
-              <a
-                href="#"
-                onClick={(e) => {
-                  e.preventDefault();
-                  props.history.goBack();
-                }}
-              ><FaArrowRight className="icon" />Events-Celebrations-{year}</a>
-            </li>
-            {/* <li>
+        <div className="breadcrumbswork">
+          <div className="container">
+            <ul className="breadcrumbswork__list">
+              <li>
+                <a href="/"><FaHome className="icon" /> Home</a>
+              </li>
+              <li>
+                <a href={`/life-at-bsp/events-celebrations`}><FaArrowRight className="icon" />Events & Celebrations</a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    props.history.goBack();
+                  }}
+                ><FaArrowRight className="icon" />Events & WorkShops-{slug}</a>
+              </li>
+              {/* <li>
               <a><FaArrowRight className="icon" />{title}</a>
             </li> */}
-          </ul>
+            </ul>
+          </div>
         </div>
-      </div>
         <div class="courses-wrapper"><h2 class="mainHeadingTotal">{title}</h2>
 
         </div>
-
 
         <div className="emblaworkshop">
           <div className="embla__viewportworkshop" ref={emblaRef}>
@@ -115,6 +114,7 @@ function WorkshopYearly(props) {
             <ArrowForwardIosIcon />
           </button>
         </div>
+
       </div>
     </>
   );

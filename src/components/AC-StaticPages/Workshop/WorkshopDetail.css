@@ -7,7 +7,7 @@
 }
 
 .sliderPage h2 {
-    font-size: 46px;
+    font-size: 36px;
     color: #ec1923;
     text-transform: capitalize;
     font-weight: 600;
@@ -30,7 +30,7 @@
 
 .emblaworkshop {
   position: relative;
-  max-width: 1200px;
+ width:75%;
   margin: 0 auto;
   padding: 0px 0px 18px 0px;
 }
@@ -153,6 +153,26 @@
     z-index: 2;
 }
 @media only screen and (max-width: 1024px) {
+  .emblaworkshop {
+    position: relative;
+    width: 90% !important;
+    margin: 0 auto;
+    padding: 0px 0px 18px 0px;
+}
+  .yearlyworkshoprightside {
+    flex: 1.6 1;
+    padding: 0px 20px;
+    border-radius: 8px;
+    top: 60px;
+    align-self: start;
+    width: 100% !important;
+}
+  .yearlymain {
+    display: flex;
+    width: 100%;
+    gap: 10px !important;
+    flex-direction: column-reverse !important;
+}
   .courseBanner img {
     width: 100%;
     height: auto;
@@ -217,3 +237,4 @@
     color: #999;
     font-size: 13px;
 }
+

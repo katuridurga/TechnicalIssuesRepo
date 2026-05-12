@@ -42,31 +42,41 @@ CustomTabPanel.propTypes = {
 
 function WorkshopOnlyYears(props) {
   const { slug } = props.match.params;
+  const selectedCatId = props.location.state?.selectedCatId;
+
 
   const [eventsData, setEventsData] = useState([]);
   const [selectedYear, setSelectedYear] = useState(null);
- const [title, setTitle] = useState("");
+  const [title, setTitle] = useState("");
 
-useEffect(() => {
-  fetch(`https://www.backstagepass.co.in/reactapi/eventapi/events_by_year.php?year=${slug}`, {
-    cache: "no-store",
-  })
-    .then(res => res.json())
-    .then(result => {
-      console.log("API RESULT:", result);
+  useEffect(() => {
 
-      if (result.status && Array.isArray(result.data)) {
-        setEventsData(result.data);
-            setTitle(result.title);
-      }
+    const url = selectedCatId
+      ? `https://www.backstagepass.co.in/reactapi/eventapi/events_by_year.php?year=${slug}&categoryId=${selectedCatId}`
+      : `https://www.backstagepass.co.in/reactapi/eventapi/events_by_year.php?year=${slug}`;
+
+    fetch(url, {
+      cache: "no-store",
     })
-    .catch(error => {
-      console.error("Error fetching events:", error);
-    });
-}, [slug]);
+      .then((res) => res.json())
+      .then((result) => {
+
+        console.log("API RESULT:", result);
+
+        if (result.status && Array.isArray(result.data)) {
+
+          setEventsData(result.data);
+          setTitle(result.title);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching events:", error);
+      });
+
+  }, [slug, selectedCatId]);
 
 
- 
+
 
 
   return (
@@ -78,19 +88,19 @@ useEffect(() => {
         <title>Alumni</title>
         <meta name="description" content="Alumni" />
       </Helmet>
-     
-      
-<div className="emblaawardworkshop">
-    <div className="breadcrumbswork">
-           <div className="container">
-             <ul className="breadcrumbswork__list">
-   <li>
-                 <a href="/"><FaHome className="icon" /> Home</a>
-               </li>
-               <li>
-                 <a href={`/life-at-bsp/events-celebrations`}><FaArrowRight className="icon" />Events & Celebrations</a>
-               </li>
-               {/* <li>
+
+
+      <div className="emblaawardworkshop">
+        <div className="breadcrumbswork">
+          <div className="container">
+            <ul className="breadcrumbswork__list">
+              <li>
+                <a href="/"><FaHome className="icon" /> Home</a>
+              </li>
+              <li>
+                <a href={`/life-at-bsp/events-celebrations`}><FaArrowRight className="icon" />Events & WorkShops</a>
+              </li>
+              {/* <li>
                  <a
                    href="#"
                    onClick={(e) => {
@@ -99,43 +109,44 @@ useEffect(() => {
                    }}
                  ><FaArrowRight className="icon" />Events-Celebrations-{slug}</a>
                </li> */}
-              
-             </ul>
-           </div>
-         </div>
-  <div className="embla__viewportaward">
 
-    <div className="courses-wrapper">
-      <h2 className="mainHeadingTotal">
-        {selectedYear
-          ? `${selectedYear} Events & Celebrations`
-          : "Events & Celebrations"}
-      </h2>
-    </div>
-    <div className="embla__containeraward">
-{eventsData.map((item, index) => (
-  <div className="embla__slideaward" key={index}>
-    <div className="cardsgawardhw"  onClick={() =>
-          props.history.push(
-            `/life-at-bsp/events-celebrations/${item.slug}`
-          )
-        }>
-      <img src={item.banner_image} alt={item.title} />
+            </ul>
+          </div>
+        </div>
+        <div className="embla__viewportaward">
 
-      <span
-        className="titleTextw"
-       
-      >
-        {item.title}
-      </span>
-    </div>
-  </div>
-))}
-</div>
-   
-  </div>
-</div>
-     
+          <div className="courses-wrapper">
+            <h2 className="mainHeadingTotal">
+              {slug
+                ? ` Events & Celebrations ${slug}`
+                : "Events & Celebrations"}
+            </h2>
+          </div>
+          <div className="embla__containeraward" style={{width:"100%"}}>
+            {eventsData.map((item, index) => (
+              <div className="embla__slideaward" key={index}>
+                <div className="cardsgawardhw" onClick={() =>
+                  props.history.push(
+                    `/life-at-bsp/events-celebrations/${item.slug}`
+                  )
+                }>
+                  <img src={item.banner_image} alt={item.title} />
+
+                  <span
+                    className="titleTextw"
+
+                  >
+                    {item.title}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+
+        </div>
+      </div>
+
     </>
   );
 }
