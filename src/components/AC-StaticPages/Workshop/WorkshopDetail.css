@@ -1,5 +1,3 @@
-
-
 .sliderPage {
   width: 90%;
   margin: 0px auto;
@@ -17,16 +15,11 @@
     letter-spacing: 1px;
     text-align: center;
 }
-
-
-
 .courseBanner img {
   width: 100%;
   height: auto;
   display: block;
 }
-
-
 
 .emblaworkshop {
   position: relative;
@@ -34,7 +27,6 @@
   margin: 0 auto;
   padding: 0px 0px 18px 0px;
 }
-
 
 .embla__viewportworkshop {
   overflow: hidden;

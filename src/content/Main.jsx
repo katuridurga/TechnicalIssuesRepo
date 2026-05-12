@@ -5,6 +5,9 @@ import { useSelector, shallowEqual } from "react-redux";
 //import popupImg from "../assets/img/qs-ranking-2026.webp";
 import popup685 from "../assets/img/qs-ranking-2026-685w.webp";
 import popup1370 from "../assets/img/qs-ranking-2026-1370w.webp";
+import popup320 from "../assets/img/qs-ranking-2026-320w.webp";
+import popup500 from "../assets/img/qs-ranking-2026-500w.webp";
+import popup900 from "../assets/img/qs-ranking-2026-900w.webp";
 import PropTypes from 'prop-types';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Slide from '@mui/material/Slide';
@@ -211,14 +214,30 @@ function Main({ active, props }) {
                 </button>
 
                 <a href="/Application-form/?utm_source=seasonalpopout" target="_blank" rel="noopener noreferrer">
-                  {/* <img src={popupImg} alt="Admissions Open" className="popup-image"  loading='lazy'/> */}
-                                <img
+                  <img
+                    src={popup685}
+                    srcSet={`
+                    ${popup320} 320w,
+                    ${popup500} 500w,
+                    ${popup685} 685w,
+                    ${popup900} 900w
+                  `}
+                                    sizes="(max-width: 768px) 100vw, 489px"
+                    width="685"
+                    height="286"
+                    alt="Admissions Open"
+                    className="popup-image"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                  />
+                  {/* <img
                       src={popup685}
                       srcSet={`
                         ${popup685} 685w,
                         ${popup1370} 1370w
                       `}
-                      sizes="(max-width: 768px) 100vw, 685px"
+                    sizes="(max-width: 768px) 100vw, 489px"
                       width="685"
                       height="286"
                       alt="Admissions Open"
@@ -226,7 +245,7 @@ function Main({ active, props }) {
                       loading="eager"
                       fetchpriority="high"
                       decoding="async"
-                    />
+                    /> */}
                 </a>
 
               </div>

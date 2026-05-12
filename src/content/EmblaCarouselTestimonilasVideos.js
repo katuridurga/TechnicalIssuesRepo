@@ -24,6 +24,7 @@ import webvban13 from "../assets/img/test/harshit-800w.webp";
 import webvban14 from "../assets/img/test/rishi-800w.webp";
 import webvban15 from "../assets/img/test/Krushna-800w.webp";
 import webvban16 from "../assets/img/test/WebsiteVideoBanner1-800w.webp";
+import webvban28 from "../assets/img/test/WebsiteVideoBanner1-500w.webp";
 import webvban17 from "../assets/img/test/Bhanu-800w.webp";
 import webvban18 from "../assets/img/test/sandeep-800w.webp";
 
@@ -41,7 +42,7 @@ import webvban27 from "../assets/img/test/sandeep-400w.webp";
 const data = [
   {
     name: "Jithin Peter", img400: webvban25,
-    img800: webvban16, videoId: "gY7TXYWoi5w", videoUrl: "https://www.youtube.com/shorts/gY7TXYWoi5w"
+    img800: webvban16,img500: webvban28,  videoId: "gY7TXYWoi5w", videoUrl: "https://www.youtube.com/shorts/gY7TXYWoi5w"
   },
   {
     name: "Sandeep", img400: webvban27,
@@ -227,14 +228,18 @@ const EmblaCarouselTestimonilasVideos = () => {
                         {/* <img src={item.image} alt={item.name} /> */}
                  <img
   src={item.img400}
-  srcSet={`${item.img400} 400w, ${item.img800} 800w`}
-  sizes="(max-width: 768px) 100vw, 391px"
+  srcSet={`${item.img400} 400w, ${item.img800} 800w, ${item.img500} 500w`}
+  sizes="(max-width: 768px) 100vw, 489px"
   alt={item.name}
-  width="391"
-  height="220"
+  width="489"
+  height="204"
   loading={index === 0 ? "eager" : "lazy"}
   fetchpriority={index === 0 ? "high" : "low"}
   decoding="async"
+  style={{
+    width:"489",
+    height:"auto"
+  }}
 />
                       </a>
 
@@ -272,16 +277,20 @@ const EmblaCarouselTestimonilasVideos = () => {
                           }}
                         >
                           {/* <img src={item.image} alt={item.name} /> */}
-                         <img
+          <img
   src={item.img400}
-  srcSet={`${item.img400} 400w, ${item.img800} 800w`}
-  sizes="(max-width: 768px) 100vw, 391px"
+  srcSet={`${item.img400} 400w, ${item.img800} 800w, ${item.img500} 500w`}
+  sizes="(max-width: 768px) 100vw, 489px"
   alt={item.name}
-  width="391"
-  height="220"
+  width="489"
+  height="204"
   loading={index === 0 ? "eager" : "lazy"}
   fetchpriority={index === 0 ? "high" : "low"}
   decoding="async"
+  style={{
+    width:"489",
+    height:"auto"
+  }}
 />
                         </div>
 

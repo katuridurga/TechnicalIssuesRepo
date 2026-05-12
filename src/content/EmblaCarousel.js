@@ -108,7 +108,7 @@ const EmblaCarousel = (props) => {
 
             <div className="embla__slide" key={0}>
               <div className="banner-wrapper">
-                <picture>
+                {/* <picture>
 
                   <source srcSet={clgbanm} media="(max-width: 768px)" />
 
@@ -133,8 +133,47 @@ const EmblaCarousel = (props) => {
                   />
 
 
-                </picture>
+                </picture> */}
+<picture>
 
+  {/* Mobile */}
+  <source
+    media="(max-width: 768px)"
+    srcSet={`
+      ${clgbanm400} 400w,
+      ${clgbanm800} 800w
+    `}
+    sizes="100vw"
+  />
+
+  {/* Desktop */}
+  <source
+    media="(min-width: 769px)"
+    srcSet={`
+      ${clgbanm400} 400w,
+      ${clgbanm800} 800w,
+      ${clgband1526} 1526w
+    `}
+    sizes="(max-width: 1200px) 800px, 1526px"
+  />
+
+  <img
+    src={clgbanm800}
+    alt="gaming college"
+    width="448"
+    height="252"
+    className="banner-img"
+    loading="eager"
+    fetchPriority="high"
+    decoding="async"
+    style={{
+      width: "100%",
+      height: "auto",
+      display: "block",
+    }}
+  />
+
+</picture>
 
                 <div className="banner-overlay"></div>
                 {/* Centered Content */}

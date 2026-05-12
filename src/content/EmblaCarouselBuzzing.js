@@ -13,10 +13,6 @@ import {
 } from "./EmblaCarouselArrowButtonsInTheMedia";
 import "../assets/css/EmblaCarousel.css";
 
-/* =========================
-   IMAGE IMPORTS (UNCHANGED)
-========================= */
-
 import b3400 from "../assets/img/global-400w.webp";
 import b3600 from "../assets/img/global-600w.webp";
 import b3693 from "../assets/img/global-693w.webp";
@@ -65,9 +61,6 @@ import awardfivea400 from "../assets/img/PR5-400w.webp";
 import awardfivea700 from "../assets/img/PR5-700w.webp";
 import awardthreea from "../assets/img/PR3.webp";
 
-/* =========================
-   SLIDES ARRAY
-========================= */
 
 const slides = [
   {
@@ -136,9 +129,6 @@ const slides = [
   { src: bui3, srcSet: `${bui3_400} 400w, ${bui3_800} 800w, ${bui3} 1200w`, sizes: "(max-width: 768px) 90vw, 730px", alt: "Nazara Technologies Studio Visit", text: "Nazara Technologies Studio Visit" },
 ];
 
-/* =========================
-   MEMOIZED SLIDE
-========================= */
 
 const Slide = memo(({ slide, index }) => (
   <div className="embla__slidebuzz">
@@ -165,9 +155,7 @@ const Slide = memo(({ slide, index }) => (
   </div>
 ));
 
-/* =========================
-   CAROUSEL COMPONENT
-========================= */
+
 
 const EmblaCarousel = ({ options = {} }) => {
   const emblaOptions = useMemo(
