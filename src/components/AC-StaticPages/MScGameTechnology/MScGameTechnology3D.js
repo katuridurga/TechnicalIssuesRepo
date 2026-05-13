@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector, shallowEqual } from "react-redux";
 import "../BachelorsInComputerScienceGameDevelopment/BachelorsInComputerScienceGameDevelopment.css";
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import CheckBoxIcon from '@material-ui/icons/CheckBox';
 import PropTypes from 'prop-types';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import m5 from "../../../assets/img/Icons/flags.webp";
@@ -13,8 +13,8 @@ import awic2 from '../../../assets/img/banners/medaln.webp';
 import awic3 from '../../../assets/img/banners/mindsetn.webp';
 import { FaPlus, FaMinus } from "react-icons/fa";
 import awic from '../../../assets/img/banners/global-networkn.webp';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 import { Helmet } from "react-helmet";
 import HomeContentForm from '../../../content/HomeContentFrom';
 import mscst3dm from "../../../assets/img/mobilebanner/mobilemaster3d.webp";

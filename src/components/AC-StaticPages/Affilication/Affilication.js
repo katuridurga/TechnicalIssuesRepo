@@ -3,7 +3,7 @@ import "./Affilication.css";
 import HomeContentForm from "../../../content/HomeContentFrom";
 import { Helmet } from "react-helmet";
 import { useSelector, shallowEqual } from "react-redux";
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import CheckBoxIcon from '@material-ui/icons/CheckBox';
 import framebox from "../../../assets/img/Frameboxxlogo.webp";
 import aff from "../../../assets/img/banners/Affiliation.webp";
 import affm from "../../../assets/img/mobilebanner/Affiliation.webp"

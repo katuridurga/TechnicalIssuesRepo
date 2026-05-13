@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import "./SkillDiploma.css";
 import { useForm } from 'react-hook-form';
-import { TextField, Button, MenuItem, Container, Typography, Paper, Modal, Box } from '@mui/material';
+import { TextField, Button, MenuItem, Container, Typography, Paper, Modal, Box } from '@material-ui/core';
 import { useSelector, shallowEqual } from "react-redux";
 import { Helmet } from "react-helmet";
 function Courses(props) {

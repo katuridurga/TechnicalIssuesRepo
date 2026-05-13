@@ -8,7 +8,7 @@ import { BsDot } from "react-icons/bs";
 import FeaturedProducts1 from "../../../content/FeaturedProducts1.js";
 import { useSelector, shallowEqual } from "react-redux";
 import StickyBox from "react-sticky-box";
-import { useTheme } from '@mui/material/styles';
+import { useTheme } from '@material-ui/core/styles';
 import AdvancedDiplomainGameDevelopment from "../../../assets/img/Courses/AdvancedDiplomainGameDevelopment.webp"
 import AdvancedDiplomain3DGameArtDigitalSculpting from "../../../assets/img/Courses/AdvancedDiplomain3DGameArtDigitalSculpting.webp"
 import DiplomainGameDesignProduction from "../../../assets/img/Courses/DiplomainGameDesignProduction.webp"
@@ -16,11 +16,11 @@ import DiplomainGameDevelopmentwithUnity from "../../../assets/img/Courses/Diplo
 import Diplomain3DEnvironmentArtCreationforGames from "../../../assets/img/Courses/Diplomain3DEnvironmentArtCreationforGames.webp"
 // import AdvancedDiplomainTraditionalDigitalConceptArt from "../../../assets/img/Courses/AdvancedDiplomainTraditionalDigitalConceptArt.webp"
 import Diploma_in_Game_Development_with_Unreal from "../../../assets/img/Courses/Diploma_in_Game_Development_with_Unreal.webp";
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
-import Slide from '@mui/material/Slide';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Box from '@material-ui/core/Box';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Slide from '@material-ui/core/Slide';
 import artimage1 from "../../../assets/img/art/sluncky.webp";
 import artimage2 from "../../../assets/img/art/gravitity.webp";
 import artimage3 from "../../../assets/img/art/cyberdog.webp";
@@ -30,16 +30,16 @@ import artimage6 from "../../../assets/img/art/stellar.webp";
 import artimage7 from "../../../assets/img/art/rift.webp";
 import artimage8 from "../../../assets/img/art/gobble.webp";
 import recimg from '../../../assets/img/banners/Times-Award.webp';
-import Typography from '@mui/material/Typography';
+import Typography from '@material-ui/core/Typography';
 import { Link } from "react-router-dom";
 import m3 from "../../../assets/img/test/d1.webp";
 import m4 from "../../../assets/img/test/eli.webp";
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import infog from '../../../assets/img/banners/info.webp';
 import advdip from '../../../assets/img/banners/advdip.webp';
 import gade from "../../../assets/img/art/gad.webp";

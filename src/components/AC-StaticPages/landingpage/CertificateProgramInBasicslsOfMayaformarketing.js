@@ -34,10 +34,10 @@ import icon7 from "../../../assets/img/Icons/learning_Modules.webp";
 import icon8 from "../../../assets/img/Icons/6_Hours.webp";
 import icon9 from "../../../assets/img/Icons/onlinetotal.webp";
 import icon10 from "../../../assets/img/Icons/Certificate.webp";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
 
 const EXPIRY_TIME = 5 * 60 * 1000;
 function DiplomaAndAdvancedDiplomaCourses() {

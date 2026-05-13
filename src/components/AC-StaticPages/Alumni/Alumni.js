@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import "./Alumni.css";
 import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
+import Box from '@material-ui/core/Box';
 import Marquee from "react-fast-marquee";
 import r1 from "../../../assets/img/partners/r1.webp";
 import r2 from "../../../assets/img/partners/r2.webp";

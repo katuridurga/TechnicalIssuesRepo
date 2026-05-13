@@ -2,7 +2,7 @@ import React from 'react'
 import "./Mentors.css";
 import HomeContent from "../../../content/HomeContent";
 import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
+import Box from '@material-ui/core/Box';
 import courseBanner from "../../../assets/img/banners/CSGD.webp";
 import ScrollSpy from "react-ui-scrollspy";
 import { TfiFacebook, TfiLinkedin } from "react-icons/tfi";

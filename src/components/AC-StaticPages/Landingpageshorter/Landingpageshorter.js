@@ -7,7 +7,7 @@ import { useSelector, shallowEqual } from "react-redux";
 
 
 import n1 from "../../../assets/img/banners/nemonics.webp";
-import { styled } from '@mui/material/styles';
+import { styled } from '@material-ui/core/styles';
 import Paper from '@mui/material/Paper';
 import hwst from "../../../assets/img/test/howstrt.webp";
 import suryasir from "../../../assets/img/test/suryasir.webp";

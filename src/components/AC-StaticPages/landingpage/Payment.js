@@ -6,12 +6,12 @@ import { Helmet } from "react-helmet";
 import axios from "axios";
 import { useSelector, shallowEqual } from "react-redux";
 import { useForm } from 'react-hook-form';
-import useScrollTrigger from "@mui/material/useScrollTrigger";
-import Slide from "@mui/material/Slide";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Slide from '@material-ui/core/Slide';
+import Button from "@material-ui/core/Button";
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
 
 /* -------------------- UTIL COMPONENTS -------------------- */
 

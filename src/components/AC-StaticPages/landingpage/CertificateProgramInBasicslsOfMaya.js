@@ -20,7 +20,7 @@ import r10 from "../../../assets/img/partners/Sony.webp";
 import r11 from "../../../assets/img/partners/Qualcomm.webp";
 import r12 from "../../../assets/img/partners/Juego.webp";
 import r14 from "../../../assets/img/partners/GSNgames.webp";
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import CheckBoxIcon from '@material-ui/icons/CheckBox';
 import wtwh from "../../../assets/img/banners/afterwtwillhappen.webp";
 import wtaln from "../../../assets/img/banners/allyouneed.webp";
 import { FaLinkedin } from "react-icons/fa";

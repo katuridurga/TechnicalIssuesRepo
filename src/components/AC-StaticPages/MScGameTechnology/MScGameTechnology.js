@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector, shallowEqual } from "react-redux";
 import "../BachelorsInComputerScienceGameDevelopment/BachelorsInComputerScienceGameDevelopment.css";
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import CheckBoxIcon from '@material-ui/icons/CheckBox';
 import PropTypes from 'prop-types';
 import m5 from "../../../assets/img/Icons/flags.webp";
 import c1 from "../../../assets/img/Courses/careeroprt.webp";
@@ -11,8 +11,8 @@ import m8 from "../../../assets/img/Icons/team-work.webp";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import mscgt from "../../../assets/img/banners/Masters-in-Game-Technology.webp"
 import mscgtm from "../../../assets/img/mobilebanner/MastersGameTechnology.webp";
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 
 import { Helmet } from "react-helmet";
 import HomeContentForm from '../../../content/HomeContentFrom';
@@ -386,7 +386,7 @@ function Courses(props) {
 
         <div className='coppertunities'>
           <div className='left'>
-            <img src={c1} alt="careerop" />
+            <img src={c1} alt="Career-Opportunities" />
           </div>
 
           <div className="right career-tabs-container">

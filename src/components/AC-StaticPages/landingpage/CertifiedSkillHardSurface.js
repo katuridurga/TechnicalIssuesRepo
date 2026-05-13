@@ -2,7 +2,7 @@
 // import "./DiplomaAndAdvancedDiplomaCourses.css";
 // import PropTypes from 'prop-types';
 
-// import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+// import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 // import { FaWhatsapp } from "react-icons/fa";
 // import Marquee from "react-fast-marquee";
 // import r1 from "../../../assets/img/partners/r1.png";
@@ -16,8 +16,8 @@
 // import B3 from "../../../assets/img/banners/et-logo.webp";
 // import B4 from "../../../assets/img/banners/thehindu-logo.svg";
 // import { Helmet } from "react-helmet";
-// import Box from '@mui/material/Box';
-// import Dialog from '@mui/material/Dialog';
+// import Box from'@material-ui/core/Box';
+// import Dialog from '@material-ui/core/Dialog';
 // import MIntheMedia from "../../../content/MIntheMedia";
 // import Flag1 from "../../../assets/img/banners/usa.webp";
 // import Flag2 from "../../../assets/img/banners/uk.webp";
@@ -26,13 +26,13 @@
 // import axios from 'axios';
 // import FeaturedProductL from "../../../content/FeaturedProductL.js";
 // import { useSelector, shallowEqual } from "react-redux";
-// import { useTheme } from '@mui/material/styles';
-// import useScrollTrigger from '@mui/material/useScrollTrigger';
-// import Slide from '@mui/material/Slide';
+// import { useTheme } from '@material-ui/core/styles';
+// import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+// import Slide from '@material-ui/core/Slide';
 // import recimg from '../../../assets/img/banners/Times-Award.webp';
-// import Typography from '@mui/material/Typography';
-// import DialogContent from '@mui/material/DialogContent';
-// import DialogContentText from '@mui/material/DialogContentText';
+// import Typography from '@material-ui/core/Typography';
+// import DialogContent from '@material-ui/core/DialogContent';
+// import DialogContentText from '@material-ui/core/DialogContentText';
 // import ic1 from '../../../assets/img/Icons/WEBSITE-ICON/pass.webp';
 // import ic2 from '../../../assets/img/Icons/WEBSITE-ICON/Pursuingengi.webp';
 // import ic4 from '../../../assets/img/Icons/WEBSITE-ICON/how-code.webp';

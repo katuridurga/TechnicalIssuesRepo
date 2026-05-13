@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector, shallowEqual } from "react-redux";
 import "./StudentShowcase.css";
 import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
+import Box from '@material-ui/core/Box';
 import awardthree from "../../../assets/img/awards/IGDC19.webp"
 import awardone from "../../../assets/img/awards/NGDC.webp"
 import awardfive from "../../../assets/img/awards/competition.webp"

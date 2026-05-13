@@ -3,7 +3,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "./Workshop.css";
 import PropTypes from 'prop-types';
-import Box from '@mui/material/Box';
+import Box from '@material-ui/core/Box';
 import courseBanner from "../../../assets/img/banners/CSGD.webp";
 import b1 from "../../../assets/img/games/1.webp";
 import b11 from "../../../assets/img/games/11.webp";

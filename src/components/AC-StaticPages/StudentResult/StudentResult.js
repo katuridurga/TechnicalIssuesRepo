@@ -3,11 +3,11 @@
 // import axios from 'axios';
 // import { Helmet } from "react-helmet";
 // import { useSelector, shallowEqual} from "react-redux";
-// import HighlightOffIcon from '@mui/icons-material/HighlightOff';
-// import Dialog from '@mui/material/Dialog';
-// import DialogContent from '@mui/material/DialogContent';
-// import DialogContentText from '@mui/material/DialogContentText';
-// import Slide from '@mui/material/Slide';
+// import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+// import Dialog from '@material-ui/core/Dialog';
+// import DialogContent from '@material-ui/core/DialogContent';
+// import DialogContentText from '@material-ui/core/DialogContentText';
+// import Slide from '@material-ui/core/Slide';
 // import { useForm } from 'react-hook-form';
 
 

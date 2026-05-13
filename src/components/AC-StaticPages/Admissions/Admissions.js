@@ -2,12 +2,12 @@ import React from 'react'
 import "./Admissions.css";
 import HomeContent from "../../../content/HomeContent";
 import { Link } from "react-router-dom";
-import { styled } from '@mui/material/styles';
-import Dialog from '@mui/material/Dialog';
-import DialogContent from '@mui/material/DialogContent';
-import IconButton from '@mui/material/IconButton';
-import CloseIcon from '@mui/icons-material/Close';
-import Typography from '@mui/material/Typography';
+import { styled } from '@material-ui/core/styles';
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+import Typography from '@material-ui/core/Typography';
 import { useSelector, shallowEqual } from "react-redux";
 import abtad from "../../../assets/img/banners/Admissions.webp";
 import abtadm from "../../../assets/img/mobilebanner/Admissions.webp"

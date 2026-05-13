@@ -4,8 +4,8 @@ import "../BachelorsInComputerScienceGameDevelopment/BachelorsInComputerScienceG
 import PropTypes from 'prop-types';
 import c1 from "../../../assets/img/Courses/careeroprt.webp";
 import { FaPlus, FaMinus } from "react-icons/fa";
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 import dvr from "../../../assets/img/banners/Diplomavrapplication.webp";
 import dvrm from "../../../assets/img/mobilebanner/MobileClassvrApp.webp";
 import { Helmet } from "react-helmet";

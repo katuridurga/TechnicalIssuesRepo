@@ -27,28 +27,28 @@ import MIntheMedia from "../../../content/MIntheMedia";
 import axios from 'axios';
 import FeaturedProductL from "../../../content/FeaturedProductL.js";
 import { useSelector, shallowEqual } from "react-redux";
-import { useTheme } from '@mui/material/styles';
+import { useTheme } from '@material-ui/core/styles';
 import AdvancedDiplomainGameDevelopment from "../../../assets/img/Courses/AdvancedDiplomainGameDevelopment.webp"
 import AdvancedDiplomain3DGameArtDigitalSculpting from "../../../assets/img/Courses/AdvancedDiplomain3DGameArtDigitalSculpting.webp"
 import DiplomainGameDesignProduction from "../../../assets/img/Courses/DiplomainGameDesignProduction.webp"
 import DiplomainGameDevelopmentwithUnity from "../../../assets/img/Courses/DiplomainGameDevelopmentwithUnity.webp"
 import Diplomain3DEnvironmentArtCreationforGames from "../../../assets/img/Courses/Diplomain3DEnvironmentArtCreationforGames.webp"
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
-import Slide from '@mui/material/Slide';
-import Typography from '@mui/material/Typography';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Box from '@material-ui/core/Box';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Slide from '@material-ui/core/Slide';
+import Typography from '@material-ui/core/Typography';
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import m3 from "../../../assets/img/test/d1.webp";
 import m4 from "../../../assets/img/test/eli.webp";
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import ic1 from '../../../assets/img/Icons/WEBSITE-ICON/pass.webp';
 import ic2 from '../../../assets/img/Icons/WEBSITE-ICON/Pursuingengi.webp';
 import ic3 from '../../../assets/img/Icons/WEBSITE-ICON/Did-not.webp';

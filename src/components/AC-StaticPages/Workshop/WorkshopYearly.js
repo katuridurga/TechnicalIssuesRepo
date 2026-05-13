@@ -9,8 +9,8 @@ import img2 from "../../../assets/img/awards/DSC05136.jpg";
 import img3 from "../../../assets/img/awards/DSC05120.jpg";
 import img4 from "../../../assets/img/awards/BSP03777.jpg";
 import img5 from "../../../assets/img/awards/BSP03792.jpg";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import { FaHome, FaArrowRight } from 'react-icons/fa';
 
 
@@ -104,7 +104,7 @@ function WorkshopYearly(props) {
             className="emblaPrev"
             onClick={() => emblaApi && emblaApi.scrollPrev()}
           >
-            <ArrowBackIosNewIcon />
+         <ArrowBackIosIcon />
           </button>
 
           <button

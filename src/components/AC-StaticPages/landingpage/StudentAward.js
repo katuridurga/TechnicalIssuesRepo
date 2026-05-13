@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import "./DiplomaAndAdvancedDiplomaCourses.css";
 import PropTypes from 'prop-types';
-import { emphasize, styled } from '@mui/material/styles';
+import { emphasize, styled } from '@material-ui/core/styles';
 import Chip from '@mui/material/Chip';
 
 import Marquee from "react-fast-marquee";
@@ -55,28 +55,28 @@ import flag11 from "../../../assets/img/partners/software-logo/ZBrush.webp";
 import axios from 'axios';
 import FeaturedProductL from "../../../content/FeaturedProductL.js";
 import { useSelector, shallowEqual, useDispatch } from "react-redux";
-import { useTheme } from '@mui/material/styles';
+import { useTheme } from '@material-ui/core/styles';
 import AdvancedDiplomain3DGameArtDigitalSculpting from "../../../assets/img/Courses/AdvancedDiplomain3DGameArtDigitalSculpting.webp"
 import DiplomainGameDesignProduction from "../../../assets/img/Courses/DiplomainGameDesignProduction.webp"
-import Tabs, { tabsClasses } from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
-import Slide from '@mui/material/Slide';
+import Tabs, { tabsClasses } from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Box from'@material-ui/core/Box';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Slide from '@material-ui/core/Slide';
 
 import recimg from '../../../assets/img/banners/Times-Award.webp';
-import Typography from '@mui/material/Typography';
+import Typography from '@material-ui/core/Typography';
 
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import m1 from "../../../assets/img/test/1.webp";
 import m2 from "../../../assets/img/test/2.webp";
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import advdip from '../../../assets/img/banners/ThumbnailofGameArt.webp';
 import advdip1v from '../../../assets/img/banners/advdip1.webp';
 import advdip2s from '../../../assets/img/banners/advdip2.webp';

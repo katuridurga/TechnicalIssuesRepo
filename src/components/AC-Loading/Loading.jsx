@@ -1,6 +1,6 @@
 import React from "react";
 //import loader from "../../assets/img/loading.gif";
-import LinearProgress from '@material-ui/core/LinearProgress';
+import LinearProgress from '@mui/material/LinearProgress';
 
 export default function Loading() {
   const [completed, setCompleted] = React.useState(0);

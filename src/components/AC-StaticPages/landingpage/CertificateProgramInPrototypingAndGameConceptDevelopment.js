@@ -3,12 +3,12 @@
 // import PropTypes from 'prop-types';
 // import { Helmet } from "react-helmet";
 // import ic13 from '../../../assets/img/Icons/WEBSITE-ICON/short-term.webp';
-// import Box from '@mui/material/Box';
+// import Box from'@material-ui/core/Box';
 // import axios from 'axios';
 // import { useSelector, shallowEqual } from "react-redux";
-// import useScrollTrigger from '@mui/material/useScrollTrigger';
-// import Slide from '@mui/material/Slide';
-// import Typography from '@mui/material/Typography';
+// import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+// import Slide from '@material-ui/core/Slide';
+// import Typography from '@material-ui/core/Typography';
 
 // import ic7 from '../../../assets/img/Icons/WEBSITE-ICON/gaming-career.webp';
 // import ic8 from '../../../assets/img/Icons/WEBSITE-ICON/switch-gaming-career.webp';

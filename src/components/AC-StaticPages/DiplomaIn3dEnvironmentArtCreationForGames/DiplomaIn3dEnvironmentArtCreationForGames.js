@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector, shallowEqual } from "react-redux";
 import "../BachelorsInComputerScienceGameDevelopment/BachelorsInComputerScienceGameDevelopment.css";
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
+import CheckBoxIcon from '@material-ui/icons/CheckBox';
 import PropTypes from 'prop-types';
 import m5 from "../../../assets/img/Icons/flags.webp";
 import c1 from "../../../assets/img/Courses/careeroprt.webp";
@@ -11,9 +11,8 @@ import m8 from "../../../assets/img/Icons/team-work.webp";
 import envart from "../../../assets/img/banners/Diploma-In-3d-Environment-Art-Creation-For-Games.webp"
 import { FaPlus, FaMinus } from "react-icons/fa";
 import envartm from "../../../assets/img/mobilebanner/Diplomadrtenv.webp"
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 import { Helmet } from "react-helmet";
 import HomeContentForm from '../../../content/HomeContentFrom';
 

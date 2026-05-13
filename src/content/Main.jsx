@@ -9,8 +9,8 @@ import popup320 from "../assets/img/qs-ranking-2026-320w.webp";
 import popup500 from "../assets/img/qs-ranking-2026-500w.webp";
 import popup900 from "../assets/img/qs-ranking-2026-900w.webp";
 import PropTypes from 'prop-types';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
-import Slide from '@mui/material/Slide';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Slide from '@material-ui/core/Slide';
 import { Helmet } from "react-helmet";
 // Lazy-loaded Components
 import Marquee from "react-fast-marquee";

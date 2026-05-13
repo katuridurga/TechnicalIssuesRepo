@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import withStyles from "@material-ui/core/styles/withStyles";
+import { withStyles } from "@material-ui/core/styles";
 import footerStyle from "../../assets/jss/material-dashboard-react/components/footerStyle.jsx";
 import LazyLoad from "react-lazyload";
 import { useSelector, shallowEqual } from "react-redux";
@@ -12,13 +12,13 @@ import linkedin from "../../assets/img/Icons/linkedin.webp";
 import Youtube from "../../assets/img/Icons/Youtube.webp";
 import { CiYoutube } from "react-icons/ci";
 import { RiDiscordLine } from "react-icons/ri";
-import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
+import FacebookIcon from "@material-ui/icons/Facebook";
 import { RiLinkedinLine } from "react-icons/ri";
 import { FaPaperPlane, FaPhone } from "react-icons/fa";
 import { CiPhone, CiMail } from "react-icons/ci";
 import axios from "axios";
-import Snackbar from "@mui/material/Snackbar";
-import MuiAlert from "@mui/material/Alert";
+import Snackbar from "@material-ui/core/Snackbar";
+import MuiAlert from "@material-ui/lab/Alert";
 import "./Footer.css";
 import { BiSolidPencil } from "react-icons/bi";
 import { FaInstagram } from "react-icons/fa";
@@ -685,7 +685,7 @@ function Footer() {
                           rel="noopener noreferrer"
                           className="icon-box"
                         >
-                          <FacebookRoundedIcon className="default-icon" />
+                          <FacebookIcon className="default-icon" />
                           <img src={facebook} alt="facebook" className="hover-icon" />
                         </a>
                       </div>
